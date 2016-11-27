@@ -1,0 +1,28 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del 
+# archivo .kv.
+
+<MenuFallasInformadas>:
+    GridLayout:
+
+        id: layout_principal
+        orientation: 'vertical'
+        cols: 1
+        rows: 3
+
+        Button:
+        	id: bt_capturar_fallas
+        	text: "Capturar falla nuevas"
+        	on_press: root.menu_falla_nueva()
+        	#background_color: (255,255,255)
+
+        Button:
+        	id: bt_subir_archivos
+        	text: "Capturar fallas informados"
+        	on_press: root.menu_fallas_informadas()
+
+        Button:	
+        	id: bt_salir
+        	on_press: root.manager.current = 'menutiposfalla'
+        	text: "Volver"

@@ -1,0 +1,32 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del 
+# archivo .kv.
+
+<MenuScreen>:
+    GridLayout:
+        #Propiedades de Controller (heredadas de BoxLayout)
+        id: layout_principal
+        orientation: 'vertical'
+        cols: 1
+        rows: 3
+        btn_capturar_fallas: bt_capturar_fallas
+        btn_subir_archivos: bt_subir_archivos
+        btn_salir: bt_salir
+
+        Button:
+        	id: bt_capturar_fallas
+        	text: "Capturar fallas"
+        	on_press: root.menu_fallas()
+        	#background_color: (255,255,255)
+
+        Button:
+        	id: bt_subir_archivos
+        	text: "Subir archivos"
+        	on_press: root.menu_subidas_servidor()
+
+
+        Button:	
+        	id: bt_salir
+        	on_press: root.salir()
+        	text: "Salir"
