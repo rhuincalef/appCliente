@@ -1,4 +1,4 @@
-from menufallasinformadas import MenuTiposFallaScreen
-__all__ = [MenuTiposFallaScreen]
+from settingscreen import SettingScreen
+__all__ = [SettingScreen]
 
 

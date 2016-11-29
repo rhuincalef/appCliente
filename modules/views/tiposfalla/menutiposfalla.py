@@ -5,17 +5,12 @@ kivy.require('1.0.5')
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import Screen
-# from kivy.uix.floatlayout import FloatLayout
-
 
 class MenuTiposFallaScreen(Screen):
-    '''Create a controller that receives a custom widget from the kv lang file.
-
-    Add an action to be called from the kv lang file.
-    '''
-
+    #Menu para seleccionar las fallas que se traeran del servidor
     def menu_fallas_informadas(self):
-    	print "Menu fallas"
+    	print "Menu fallas informadas del servidor"
+    	self.manager.current = 'settingscreen' 
 
     def menu_falla_nueva(self):
     	self.manager.current = 'capturaKinect' 

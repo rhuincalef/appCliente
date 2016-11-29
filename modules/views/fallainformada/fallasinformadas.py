@@ -6,8 +6,9 @@ from kivy.app import App
 from kivy.adapters.dictadapter import DictAdapter
 from kivy.uix.listview import ListItemButton, ListItemLabel, ListView
 from kivy.uix.listview import CompositeListItem
-
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.screenmanager import Screen
+# from kivy.uix.floatlayout import FloatLayout
 
 
 
@@ -46,12 +47,15 @@ def solicitar_valores_servidor():
   }
 
 
-class MainView(GridLayout):
+class FallasInformadasScreen(Screen):
     '''Uses :class:`CompositeListItem` for list item views comprised by two
     :class:`ListItemButton`s and one :class:`ListItemLabel`. Illustrates how
     to construct the fairly involved args_converter used with
     :class:`CompositeListItem`.
     '''
+
+    
+
     def __init__(self, **kwargs):
       # item_strings = ["{0}".format(index) for index in range(100)]
       #self.item_strings = self.cargar_ids_fallas()
@@ -59,7 +63,7 @@ class MainView(GridLayout):
 
       # self.integers_dict = {str(i): {'text': str(i), 'is_selected': False} for i in range(100)}
       # # Se parsea el .kv de la clase cuando se llama al constructor de la superclase.
-      super(MainView, self).__init__(**kwargs)
+      super(Screen, self).__init__(**kwargs)
 
 
     def get_adapter(self):
@@ -91,12 +95,12 @@ class MainView(GridLayout):
                            'kwargs': { 'text': "{0}".format(an_obj["altura"]) }}]}
 
 
-class MainViewApp(App):
-    def build(self):
-        self.title = "Selector de fallas del servidor"
-        return MainView()
+# class MainViewApp(App):
+#     def build(self):
+#         self.title = "Selector de fallas del servidor"
+#         return MainView()
 
 
-if __name__ == '__main__':
-    MainViewApp().run()
+# if __name__ == '__main__':
+#     MainViewApp().run()
 
