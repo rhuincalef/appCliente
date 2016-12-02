@@ -24,7 +24,6 @@ Clases software aplicacion de cliente -->
 		-Formato
 		+convertir() //Se utilizara json para el envio al servidor.
 
-
 	+Vista
 		-ventanas...
 		+actualizar()

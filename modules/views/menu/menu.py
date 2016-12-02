@@ -15,10 +15,12 @@ def agregar_vistas(listaVistas):
         path_local = '../' + vista
         sys.path.append(os.path.join(os.path.dirname('__file__'), path_local  ))
 
+#Configuracion y carpetas de las vistas de la app.
 agregar_vistas(['config',
                 'tiposfalla',
                 'fallanueva',
-                'fallainformada'
+                'fallainformada',
+                'subircapturas'
                 ])
 
 from menutiposfalla import MenuTiposFallaScreen
@@ -47,6 +49,7 @@ class MenuScreen(Screen):
     # Opcion para subir las fallas capturadas(informadas y nuevas) al servidor
     def menu_subidas_servidor(self):
     	print "Menu subidas"
+        self.manager.current = "subircapturasservidor"
 
 
 
@@ -57,30 +60,13 @@ class MenuScreen(Screen):
 class MenuApp(App):
 
     def cargar_vistas(self,sm,listaVistas):
-        print "En cargar_vistas -->"
-        print listaVistas
-        print ""
         for kev,tupla in listaVistas.iteritems():
             Builder.load_file(tupla["ruta_kv"])
-            print "tupla -->"
-            print tupla
-            print ""
             MyClass = getattr(importlib.import_module(tupla["modulo"]), 
                                 tupla["clase"])
-            print ""
             instance = MyClass()
-            print "Instancia actual-->"
-            print instance.__class__.__name__
-            print "---------------------------------------------->"
-            print ""
             screen = MyClass(name=tupla["nombre_menu"])
-            print "Agregado modulo :"
-            print tupla["nombre_menu"]
             sm.add_widget(screen)
-            print sm.screen_names
-
-        print "Screens totales -->"
-        print sm.screen_names
 
     def inicializar(self,sm):
         conf = leer_configuracion('../config/confViews.cfg')

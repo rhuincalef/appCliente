@@ -9,92 +9,113 @@ from kivy.uix.listview import CompositeListItem
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
-# from kivy.uix.floatlayout import FloatLayout
+from kivy.graphics import *
+
+from kivy.uix.label import Label
+from kivy.adapters.models import SelectableDataItem
+
+from listitemcoloured import *
 
 
 
+   
+class ItemFalla(SelectableDataItem):
+  def __init__(self,id_falla,calle,altura, is_selected=False, **kwargs):
+     super(ItemFalla, self).__init__(is_selected=is_selected, **kwargs)
+     self.id = id_falla
+     self.calle = calle
+     self.altura = altura
+     self.is_selected = False
 
-
-# NOTA: Libreria para hacer las peticiones en ajax
-# http://docs.python-requests.org/en/master
-#TODO: Hacer un parser de json para los datos del servidor.
-# Se obtienen del servidor las fallas
-
-
-class ExcepcionAjax(Exception):
-    pass
-
-
-
-class ServidorAPI:
-	def __init__(self):
-		pass
-	# def parsear_json(self,file_json):
-	# 	import json
-	# 	with open(file_json) as data_file:    
-	# 		data = json.load(data_file)
-	# 	return data
-
-	# Este metodo obtiene de una URL remota un json, que luego retorna como un
-	# diccionario. 
-	def obtener_baches(self,url_servidor):
-		r = requests.get(url_servidor)
-		if r.status_code != 200:
-			msg_error = 'Error en la peticion: '+r.text
-			raise ExcepcionAjax(msg_error)
-		return r.json()
+  def __cmp__(self,other):
+    if self.id > other.id:
+      return 0
+    elif self.id == other.id:
+      return 0
+    else:
+      return -1
 
 
 
+class CapturadorInformados:
 
+  def __init__(self):
+    self.colBachesInformados = []
+    self.url_servidor = ""
 
-# Se solicitan los valores al servidor
-def solicitar_valores_servidor():
-  #TODO: Completar esta URL
-  url_servidor = ""
-  return {
-      "0":{ "id": 1,
-          "calle": "Belgrano",
-          "altura": 200},
-      "1":{ "id": 2,
-          "calle": "Irigoyen",
-          "altura": 200},
-      "2":{ "id": 3,
-          "calle": "Ameguino",
-          "altura": 200},
-      "3":{ "id": 4,
-          "calle": "Pellegrini",
-          "altura": 200},
-      "4":{ "id": 5,
-          "calle": "9 de Julio",
-          "altura": 200},
-      "5":{ "id": 6,
-          "calle": "Aedo",
-          "altura": 200},
-      "6":{ "id": 7,
-          "calle": "Callao",
-          "altura": 200}
-  }
-
+  def solicitar_informados(self):
+    dic_json= {
+        "1":{ "id": 1,
+            "calle": "Belgrano",
+            "altura": 200},
+        "2":{ "id": 2,
+            "calle": "Irigoyen",
+            "altura": 200},
+        "3":{ "id": 3,
+            "calle": "Ameguino",
+            "altura": 200},
+        "4":{ "id": 4,
+            "calle": "Pellegrini",
+            "altura": 200},
+        "5":{ "id": 5,
+            "calle": "9 de Julio",
+            "altura": 200},
+        "6":{ "id": 6,
+            "calle": "Aedo",
+            "altura": 200},
+        "7":{ "id": 7,
+            "calle": "Callao",
+            "altura": 200}
+    } 
+    for key,tupla in dic_json.iteritems():
+      falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
+      self.colBachesInformados.append(falla)
+    self.colBachesInformados = sorted(self.colBachesInformados)
+    return self.colBachesInformados
 
 
 class SettingScreen(Screen):
    
     def __init__(self, **kwargs):
-      # item_strings = ["{0}".format(index) for index in range(100)]
-      #self.item_strings = self.cargar_ids_fallas()
-      self.integers_dict = solicitar_valores_servidor()  
-
-      # self.integers_dict = {str(i): {'text': str(i), 'is_selected': False} for i in range(100)}
-      # # Se parsea el .kv de la clase cuando se llama al constructor de la superclase.
+      cap = CapturadorInformados()
+      self.fallas_dict = cap.solicitar_informados()
       super(Screen, self).__init__(**kwargs)
 
+      # self.listado1.adapter.bind(on_selection_change=self.on_change)
+      # Se inicializan todas las fallas
+      self.inicializar_fallas()
 
-    def get_adapter(self):
-      return self.adaptador
 
-    # def cargar_ids_fallas(self):
-    #   return ["0","1","2"]
+    def inicializar_fallas(self):
+      for obj in self.fallas_dict:
+        obj.is_selected = False
+      print "Fallas inicializadas ..."
+
+
+    # def on_change(self,adapter,**kwargs):
+    #   print "SELECCION REALIZADA!!!!!!!!!!!!!"
+    #   print "self.fallas_dict -->"
+    #   print type(self.fallas_dict)
+    #   for obj in self.fallas_dict:
+    #     if obj.is_selected == True:
+    #       print "falla:",obj.id
+    #     print "obj.id = ",obj.id," - is_selected?: ",obj.is_selected
+    #     print ""
+
+
+    def obtener_fallas(self):
+      print "self.fallas_dict -->"
+      print self.fallas_dict
+      print ""
+      seleccionados = []
+      for obj in self.fallas_dict:
+        if obj.is_selected == True:
+          print "falla:",obj.id
+          seleccionados.append(obj)
+      if len(seleccionados) == 0:
+        print "Sin fallas seleccionadas"
+      return seleccionados
+
 
    # This is quite an involved args_converter, so we should go through the
     # details. A CompositeListItem instance is made with the args
@@ -103,18 +124,28 @@ class SettingScreen(Screen):
     # contains argument sets for each of the member widgets for this
     # composite: ListItemButton and ListItemLabel.
     def args_converter(self,row_index, an_obj):
+      print "row_index actual: ",row_index
+      print ""
       return {
-        'text': an_obj['id'],
+        # 'text': an_obj.id,
         'size_hint_y': None,
         'height': 25,
-        'cls_dicts': [{'cls': ListItemLabel,
-                       'kwargs': {'text': "{0}".format(an_obj["id"]) }},
-                       {
-                           'cls': ListItemLabel,
+        'cls_dicts': [{'cls': ListItemButton,
+                       'kwargs': {'text': "{0}".format(an_obj.id)
+                                  #'deselected_color': [0.,0,1,1]
+                                  }
+                      }
+                      ,{
+                           'cls': ListItemButton,
                            'kwargs': {
-                               'text': "{0}".format(an_obj["calle"]),
-                               'is_representing_cls': True}},
-                       {
-                           'cls': ListItemLabel,
-                           'kwargs': { 'text': "{0}".format(an_obj["altura"]) }}]}
-
+                               'text': "{0}".format(an_obj.calle),
+                               #'deselected_color': [0.,0,1,1],
+                               'background_color': [0,1,0,1]
+                                }
+                      },
+                      {
+                           'cls': ListItemButton,
+                           'kwargs': { 'text': "{0}".format(an_obj.altura)
+                                    }
+                      }]
+            }
