@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+import kivy
+kivy.require('1.0.5')
+
+from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+import sys,os
+
+
+
+from constantes import *
+# Agrega las vistas al path de Python
+def agregar_vistas(listaVistas):
+    for vista in listaVistas:
+        path_local = vista
+        sys.path.append(os.path.join( os.getcwd(), path_local  ))
+        # sys.path.append(os.path.join(os.path.dirname('__file__'), path_local  ))
+
+#Configuracion y carpetas de las vistas de la app.
+agregar_vistas(LISTADO_MODULOS)
+
+
+#Configuracion de los paths de las views en archivo .cfg
+from utilscfg import *
+
+from kinectviewer import KinectScreen
+import importlib
+from menu import *
+from settingscreen import *
+from kinectviewer import *
+from subircapturasservidor import *
+from apiclient1 import *
+from capturador import *
+from captura import *
+
+class MainApp(App):
+	def __init__(self,**kwargs):
+		super(MainApp,self).__init__()
+		self.capturador = Capturador()
+		self.capturadorInformados = CapturadorInformados()
+
+	def getCapturador(self):
+		return self.capturador
+
+	def obtenerInformados(self,calle,altura):
+		return self.capturadorInformados.solicitarInformados(calle,altura)
+
+
+	def getCapturadorInformados(self):
+		return self.capturadorInformados
+
+
+	def inicializar(self,sm):
+		conf = leer_configuracion(PATH_ARCHIVO_CONFIGURACION)
+		print "Configuracion leida..."
+		self.cargar_vistas(sm,conf)
+    
+	def cargar_vistas(self,sm,listaVistas):
+		for kev,tupla in listaVistas.iteritems():
+			Builder.load_file(tupla["ruta_kv"])
+			MyClass = getattr(importlib.import_module(tupla["modulo"]), 
+			tupla["clase"])
+			instance = MyClass()
+			screen = MyClass(name=tupla["nombre_menu"])
+			sm.add_widget(screen)
+
+
+	#Construir aca las instancias del modelo que son usadas por la App.
+	# NOTA: Emplear el metodo App.get_running_app() para obtener la instancia
+	# actual de MainAPP.
+	def build(self):
+		sm = ScreenManager()
+		self.title = TITULO_APP
+		self.inicializar(sm)
+		sm.current = SCREEN_PRINCIPAL
+		return sm
+   
+if __name__ == '__main__':
+    MainApp().run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

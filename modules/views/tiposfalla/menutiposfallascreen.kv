@@ -9,7 +9,7 @@
         id: layout_principal
         orientation: 'vertical'
         cols: 1
-        rows: 3
+        rows: 4
         btn_capturar_fallas: bt_capturar_fallas
         btn_subir_archivos: bt_subir_archivos
         btn_salir: bt_salir
@@ -17,13 +17,18 @@
         Button:
         	id: bt_capturar_fallas
         	text: "Capturar falla nuevas"
-        	on_press: root.menu_falla_nueva()
+        	on_press: root.manager.current = 'capturaKinect'
         	#background_color: (255,255,255)
 
         Button:
         	id: bt_subir_archivos
         	text: "Obtener fallas del servidor"
-        	on_press: root.menu_fallas_informadas()
+        	on_press: root.manager.current = "obtenerinformadas"
+
+        Button:
+            id: bt_subir_archivos
+            text: "Capturar falla informada"
+            on_press: root.manager.current = 'settingscreen'
 
         Button:	
         	id: bt_salir

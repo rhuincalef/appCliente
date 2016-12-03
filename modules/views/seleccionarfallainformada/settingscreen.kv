@@ -5,6 +5,7 @@
   
 <SettingScreen>:
 	listado1: listado
+	titulo1: titulo
 
     GridLayout:
 		id: layout_principal
@@ -14,7 +15,7 @@
 
 	    Label:
 	    	id: titulo
-	    	text: "Seleccione las fallas que desea traer del servidor"
+	    	text: "Ingrese el nombre de la calle/altura de la que desea traer las fallas"
 	    	size_hint:(1,0.05)
 	    	color: 0,0,0,1
 			canvas.before:
@@ -80,7 +81,7 @@
 		    	size_hint:(1,0.9)
 		      
 		    GridLayout:
-		    	id: btn_layouts
+		    	id: layout_botones
 		    	orientation: 'horizontal'
 		    	cols: 2
 		    	rows: 1

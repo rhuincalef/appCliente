@@ -12,73 +12,69 @@ from kivy.lang import Builder
 from kivy.graphics import *
 
 from kivy.uix.label import Label
-from kivy.adapters.models import SelectableDataItem
-
-from listitemcoloured import *
-
-
-
+from capturador import CapturadorInformados
    
-class ItemFalla(SelectableDataItem):
-  def __init__(self,id_falla,calle,altura, is_selected=False, **kwargs):
-     super(ItemFalla, self).__init__(is_selected=is_selected, **kwargs)
-     self.id = id_falla
-     self.calle = calle
-     self.altura = altura
-     self.is_selected = False
+# class ItemFalla(SelectableDataItem):
+#   def __init__(self,id_falla,calle,altura, is_selected=False, **kwargs):
+#      super(ItemFalla, self).__init__(is_selected=is_selected, **kwargs)
+#      self.id = id_falla
+#      self.calle = calle
+#      self.altura = altura
+#      self.is_selected = False
 
-  def __cmp__(self,other):
-    if self.id > other.id:
-      return 0
-    elif self.id == other.id:
-      return 0
-    else:
-      return -1
+#   def __cmp__(self,other):
+#     if self.id > other.id:
+#       return 0
+#     elif self.id == other.id:
+#       return 0
+#     else:
+#       return -1
 
 
 
-class CapturadorInformados:
+# class CapturadorInformados:
 
-  def __init__(self):
-    self.colBachesInformados = []
-    self.url_servidor = ""
+#   def __init__(self):
+#     self.colBachesInformados = []
+#     self.url_servidor = ""
 
-  def solicitar_informados(self):
-    dic_json= {
-        "1":{ "id": 1,
-            "calle": "Belgrano",
-            "altura": 200},
-        "2":{ "id": 2,
-            "calle": "Irigoyen",
-            "altura": 200},
-        "3":{ "id": 3,
-            "calle": "Ameguino",
-            "altura": 200},
-        "4":{ "id": 4,
-            "calle": "Pellegrini",
-            "altura": 200},
-        "5":{ "id": 5,
-            "calle": "9 de Julio",
-            "altura": 200},
-        "6":{ "id": 6,
-            "calle": "Aedo",
-            "altura": 200},
-        "7":{ "id": 7,
-            "calle": "Callao",
-            "altura": 200}
-    } 
-    for key,tupla in dic_json.iteritems():
-      falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
-      self.colBachesInformados.append(falla)
-    self.colBachesInformados = sorted(self.colBachesInformados)
-    return self.colBachesInformados
+#   def solicitar_informados(self):
+#     dic_json= {
+#         "1":{ "id": 1,
+#             "calle": "Belgrano",
+#             "altura": 200},
+#         "2":{ "id": 2,
+#             "calle": "Irigoyen",
+#             "altura": 200},
+#         "3":{ "id": 3,
+#             "calle": "Ameguino",
+#             "altura": 200},
+#         "4":{ "id": 4,
+#             "calle": "Pellegrini",
+#             "altura": 200},
+#         "5":{ "id": 5,
+#             "calle": "9 de Julio",
+#             "altura": 200},
+#         "6":{ "id": 6,
+#             "calle": "Aedo",
+#             "altura": 200},
+#         "7":{ "id": 7,
+#             "calle": "Callao",
+#             "altura": 200}
+#     } 
+#     for key,tupla in dic_json.iteritems():
+#       falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
+#       self.colBachesInformados.append(falla)
+#     self.colBachesInformados = sorted(self.colBachesInformados)
+#     return self.colBachesInformados
 
 
 class SettingScreen(Screen):
    
     def __init__(self, **kwargs):
       cap = CapturadorInformados()
-      self.fallas_dict = cap.solicitar_informados()
+      self.fallas_dict = cap.solicitarInformados()
+      # self.fallas_dict = cap.solicitar_informados()
       super(Screen, self).__init__(**kwargs)
 
       # self.listado1.adapter.bind(on_selection_change=self.on_change)

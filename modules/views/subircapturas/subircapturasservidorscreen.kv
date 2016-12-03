@@ -42,8 +42,11 @@
 		FileChooserIconView:
 		    id: filechooser
 		    multiselect: True
-		    size_hint:(1,0.6)
-		    
+		    size_hint:(1,0.7)
+
+		    #Filtros para los archivos que se mostraran en el filechooser
+		    filters: ['*.pcd','*.py']
+			
 			#dirselect: True
 			canvas.before:
 				Color:
@@ -52,36 +55,34 @@
 					pos: self.pos
 					size: self.size
 
-			#1 tap sobre el archivo
-		    on_selection: root.select(filechooser.path, filechooser.selection)
-		    
+			
 		    #Cambio de directorio
 		    on_entries_cleared: root.refrescar_directorio()
+		    #1 tap sobre el archivo
+		    #on_selection: root.select(filechooser.path, filechooser.selection)
+		    
 
-		    #2 taps sobre el archivo/directorio
-		    #on_submit: root.refrescar_directorio()
+		    
+	#Barra de opciones abajo
+	GridLayout:
+		id: layout_principal
+		orientation: 'horizontal'
+		cols: 3
+		rows: 1
+		size_hint:(1,0.05)
+		
+		Button:
+        	id: bt_subir_archivos
+        	text: "Seleccionar todo"
+        	on_press: root.seleccionar_todo()
+        
+	    Button:
+        	id: bt_subir_archivos
+        	text: "Enviar capturas"
+        	on_press: root.enviar_capturas()
 
-
-
-		GridLayout:
-			id: layout_principal
-			orientation: 'horizontal'
-			cols: 3
-			rows: 1
-			size_hint:(1,0.3)
-			
-			Button:
-	        	id: bt_subir_archivos
-	        	text: "Seleccionar todo"
-	        	on_press: root.seleccionar_todo()
-	        
-		    Button:
-	        	id: bt_subir_archivos
-	        	text: "Seleccionar archivos"
-	        	on_press: root.enviar_capturas()
-
-	        Button:	
-	        	id: bt_salir
-	        	on_press: root.volver()
-	        	text: "Volver"
+        Button:	
+        	id: bt_salir
+        	on_press: root.volver()
+        	text: "Volver"
 
