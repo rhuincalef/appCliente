@@ -23,7 +23,7 @@ class Captura(object):
 		# self.almacenar()
 
 	# Usado por convertir(). Almacena el .pcd en disco.
-	def almacenar(self,capturador):
+	def almacenar(self,data,capturador):
 		p = pcl.PointCloud(data)
 		# Se obtiene la cantidad de archivos con un nombre dentro
 		# en un dir. de prueba dado

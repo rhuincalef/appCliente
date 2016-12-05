@@ -47,6 +47,7 @@ COLOR_HEADERS_TABLA = 0.458, 0.458, 0.458,1
 # DIR_TRABAJO_PRUEBA = "/home/rodrigo/TESINA-2016-KINECT/aplicacionCliente/modules/views/kinectView"
 
 EXTENSION_ARCHIVO = ".pcd"
+FORMATO_CAPTURA = "pcd"
 SUBFIJO = "_"
 
 

@@ -11,6 +11,7 @@ from apiclient1 import ApiClientApp,ExcepcionAjax
 from kivy.adapters.models import SelectableDataItem
 from constantes import *
 from utils import mostrarDialogo
+from captura import *
 
 class Capturador(object):
 
@@ -73,11 +74,11 @@ class Capturador(object):
 
 
 
-  def capturar(dataSensor, dir_trabajo, nombre_captura):
+  def capturar(self,dataSensor, dir_trabajo, nombre_captura):
     # Se instancia la captura(con los valores de la view anterior),
     # se almacena en disco y se se agrega a la lista de capturas del 
     # capturador.
-    cap = Captura(nombre_captura,dir_trabajo, EXTENSION_ARCHIVO)
+    cap = Captura(nombre_captura,dir_trabajo,FORMATO_CAPTURA, EXTENSION_ARCHIVO)
     cap.almacenar(dataSensor,self)
     # TODO: SI es necesario agregar aca la parte de asociar una falla con una captura.
     self.colCapturasTotales.append(cap)
