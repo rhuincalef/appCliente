@@ -35,9 +35,8 @@ from apiclient1 import *
 from capturador import *
 from captura import *
 
-from kivy.uix.gridlayout import GridLayout
-from  kivy.uix.popup import Popup
-from kivy.uix.label import Label
+import utils
+from utils import *
 
 class MainApp(App):
 	def __init__(self,**kwargs):
@@ -49,15 +48,9 @@ class MainApp(App):
 
 	#Metodo para el chequeo del estado de la aplicacion.
 	def instanciada_app(self,app):
-		import freenect
-		if freenect.sync_get_depth() is None:
-			popup = Popup(title='Error de conexion',
-			content=Label(text='El sensor no se encuentra conectado.\nConecte el sensor antes de realizar una nueva captura.'),
-							size_hint=(None, None), 
-							size=(400, 400),
-							auto_dismiss=True)
-			popup.open()
-
+		if not conexionSensorEstablecida():
+			mostrarDialogo(titulo='Error de conexion',
+						content='El sensor no se encuentra conectado.\nConecte el sensor antes de realizar una nueva captura.')
 
 
 	def getCapturador(self):

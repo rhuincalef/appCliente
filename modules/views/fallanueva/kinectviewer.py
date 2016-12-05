@@ -52,7 +52,7 @@ from string import rfind
 import re
 import time
 
-
+from utils import *
 
 from kivy.uix.screenmanager import Screen
 
@@ -203,6 +203,10 @@ class KinectScreen(Screen):
 
 
     def capturar(self):
+        if not conexionSensorEstablecida():
+            mostrarDialogo(titulo="Error de conexion con el sensor",
+                            content="Debe conectar el sensor antes de\nintentar realizar una captura.")
+            return
         print "Realizando captura..."
         print type(self.imagen_kv)
         print ""

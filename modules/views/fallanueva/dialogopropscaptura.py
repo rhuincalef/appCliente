@@ -25,10 +25,9 @@ class DialogoPropsCapturaScreen(Screen):
 	def cambio_dir(self):
 		self.dir_chooser.selection = []
 		self.dir_chooser.selection.append(self.dir_chooser.path)
+		self.dir_label.text = self.dir_chooser.path
 		print "Seleccion actual -->"
 		print self.dir_chooser.selection
-
-
 
 
 	#Se leen los datos ingresados por el usuario y se envian a la sigueinte
