@@ -4,8 +4,11 @@
 # el sist. de archivos
 ROOT_PCD_FOLDER = "../"
 
+
 # URL donde el usuario subira las capturas en .pcd
 URL_UPLOAD_SERVER = ""
+# URL para obtener los baches informados
+URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
 
 TITULO_APP = "Capturador de fallas"
 
@@ -40,11 +43,12 @@ COLOR_HEADERS_TABLA = 0.458, 0.458, 0.458,1
 # archivos en disco.
 # NOTA: Estas variables seran enviadas por la vista que genere una instancia de
 # controller
+# NOMBRE_ARCHIVO = "archivoSalida"
+# DIR_TRABAJO_PRUEBA = "/home/rodrigo/TESINA-2016-KINECT/aplicacionCliente/modules/views/kinectView"
 
-NOMBRE_ARCHIVO = "archivoSalida"
 EXTENSION_ARCHIVO = ".pcd"
 SUBFIJO = "_"
-# DIR_TRABAJO_PRUEBA = "/home/rodrigo/TESINA-2016-KINECT/aplicacionCliente/modules/views/kinectView"
+
 
 
 

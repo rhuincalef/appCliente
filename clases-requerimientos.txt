@@ -13,7 +13,8 @@ Clases software aplicacion de cliente -->
 		+enviarCapturas(apiClient)
 
 	+ApiClient
-		-ConexionServer 
+		-ConexionServer
+		+getInformados() 
 
 
 	//Representa los objetos fallas traidos desde el servidor.Se mantienen en la colBachesInformados.
@@ -33,9 +34,9 @@ FALLA INFORMADA ????
 		+solicitarInformados()
 
 	+Captura
-		-NombreCaptura
-		-DirLocal (path en maquina con Kinect) 
-		-Formato
+		-nombreCaptura
+		-dirLocal (path en maquina con Kinect) 
+		-formato
 		+convertir() //Se utilizara json para el envio al servidor.
 		+almacenar()
 

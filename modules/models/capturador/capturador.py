@@ -7,9 +7,10 @@
 # 		+enviarCapturas(apiClient)
 
 import sys,os
-from apiclient1 import ApiClientApp
+from apiclient1 import ApiClientApp,ExcepcionAjax
 from kivy.adapters.models import SelectableDataItem
 from constantes import *
+from utils import mostrarDialogo
 
 class Capturador(object):
 
@@ -22,32 +23,53 @@ class Capturador(object):
   # Retorna la cantidad de archivos que tienen un nombre dado
   # en el directorio de trabajo especificado. Se detecta la
   # extension desde la derecha del archivo.
-  def getCantidadCapturas(archivo_a_buscar,dirTrabajo):
-    cantActual = 0
-    patron = NOMBRE_ARCHIVO + "[0-9]" + "\\" + EXTENSION_ARCHIVO
-    print "El patron es: ", patron
-    expr = re.compile(patron)
-    #Obtiene una lista de nombres de archivos ordenada
-    listado = sorted(os.listdir(dirTrabajo))
-    print "listado -->"
-    print listado
+  def getCantidadCapturas(self,archivo_a_buscar,dirTrabajo,extensionArchivo):
+    dir_actual = os.getcwd()
+    os.chdir(dirTrabajo)
+    print "Cambiando a dirTrabajo: "+ dirTrabajo
     print ""
-    for file in listado:
-        res = expr.search(file)
-        print "examinando ",file
-        if res != None:
-          print "Archivo encontrado!"    
-          #Si es un .pcd se
-          index_extension = rfind(file,".pcd")
-          cad_archivo = file[:index_extension]
-          print "cad_archivo encontrado es: ",cad_archivo
-          print "archivo_a_buscar encontrado es: ",archivo_a_buscar+ str(cantActual)
-          if (archivo_a_buscar+ str(cantActual)) == cad_archivo:
-            cantActual += 1
-    print "Cantidad de archivos .pcd con el nombre ",archivo_a_buscar, "es : ",cantActual
+    contador_arch = 1
+    plantilla_archivo = archivo_a_buscar + SUBFIJO + "%s" + extensionArchivo
+    print "La plantilla de la captura es: " + plantilla_archivo
     print ""
-    #Se retorna el siguiente
-    return cantActual
+    while os.path.exists( plantilla_archivo % contador_arch):
+        contador_arch += 1
+    print "Cantidad de archivos .pcd con el nombre ",archivo_a_buscar, "es : ",contador_arch
+    print ""
+    os.chdir(dir_actual)
+    return contador_arch
+    
+
+
+  # Retorna la cantidad de archivos que tienen un nombre dado
+  # en el directorio de trabajo especificado. Se detecta la
+  # extension desde la derecha del archivo.
+  # def getCantidadCapturas(archivo_a_buscar,dirTrabajo):
+  #   cantActual = 0
+  #   patron = NOMBRE_ARCHIVO + "[0-9]" + "\\" + EXTENSION_ARCHIVO
+  #   print "El patron es: ", patron
+  #   expr = re.compile(patron)
+  #   #Obtiene una lista de nombres de archivos ordenada
+  #   listado = sorted(os.listdir(dirTrabajo))
+  #   print "listado -->"
+  #   print listado
+  #   print ""
+  #   for file in listado:
+  #       res = expr.search(file)
+  #       print "examinando ",file
+  #       if res != None:
+  #         print "Archivo encontrado!"    
+  #         #Si es un .pcd se
+  #         index_extension = rfind(file,".pcd")
+  #         cad_archivo = file[:index_extension]
+  #         print "cad_archivo encontrado es: ",cad_archivo
+  #         print "archivo_a_buscar encontrado es: ",archivo_a_buscar+ str(cantActual)
+  #         if (archivo_a_buscar+ str(cantActual)) == cad_archivo:
+  #           cantActual += 1
+  #   print "Cantidad de archivos .pcd con el nombre ",archivo_a_buscar, "es : ",cantActual
+  #   print ""
+  #   #Se retorna el siguiente
+  #   return cantActual
 
 
 
@@ -133,38 +155,47 @@ class CapturadorInformados(Capturador):
   def solicitarInformados(self,calle):
     #TODO: Este diccionario se obtiene a partir del metodo de apiClient que realiza
     # las peticiones al servidor.
-    dic_json= {
-    "1":{ "id": 1,
-        "calle": "Belgrano",
-        "altura": 200},
-    "2":{ "id": 2,
-        "calle": "Irigoyen",
-        "altura": 200},
-    "3":{ "id": 3,
-        "calle": "Ameguino",
-        "altura": 200},
-    "4":{ "id": 4,
-        "calle": "Pellegrini",
-        "altura": 200},
-    "5":{ "id": 5,
-        "calle": "9 de Julio",
-        "altura": 200},
-    "6":{ "id": 6,
-        "calle": "Aedo",
-        "altura": 200},
-    "7":{ "id": 7,
-        "calle": "Callao",
-        "altura": 200}
-    }
+    # dic_json= {
+    # "1":{ "id": 1,
+    #     "calle": "Belgrano",
+    #     "altura": 200},
+    # "2":{ "id": 2,
+    #     "calle": "Irigoyen",
+    #     "altura": 200},
+    # "3":{ "id": 3,
+    #     "calle": "Ameguino",
+    #     "altura": 200},
+    # "4":{ "id": 4,
+    #     "calle": "Pellegrini",
+    #     "altura": 200},
+    # "5":{ "id": 5,
+    #     "calle": "9 de Julio",
+    #     "altura": 200},
+    # "6":{ "id": 6,
+    #     "calle": "Aedo",
+    #     "altura": 200},
+    # "7":{ "id": 7,
+    #     "calle": "Callao",
+    #     "altura": 200}
+    # }
+    try:
+      # Hace un GET al servidor para obtener todos los baches en una calle
+      # Para probar esta parte ejecutar apiclient/servidor_json.py.
+      dic_json = self.apiClient.getInformados(calle)
 
-    for key,tupla in dic_json.iteritems():
-        falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
-        if falla not in self.colBachesInformados:
-          self.colBachesInformados.append(falla)
+      for key,tupla in dic_json.iteritems():
+          falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
+          if falla not in self.colBachesInformados:
+            self.colBachesInformados.append(falla)
 
-    self.colBachesInformados = sorted(self.colBachesInformados)
-    self.inicializar_fallas()
-    self.mostrar_coleccion()
+      self.colBachesInformados = sorted(self.colBachesInformados)
+      self.inicializar_fallas()
+      self.mostrar_coleccion()
+
+    except ExcepcionAjax, e:
+      mostrarDialogo(titulo="Error en solicitud al servidor",
+                      content= e.message)
+
     return self.colBachesInformados
 
   def mostrar_coleccion(self):

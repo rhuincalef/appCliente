@@ -8,10 +8,11 @@ import pcl
 from constantes import *
 
 class Captura(object):
-	def __init__(self,nombre,dirLocal,formatoArchivo):
+	def __init__(self,nombre,dirLocal,formatoArchivo,extensionArchivo):
 		self.nombreCaptura = nombre
 		self.dirLocal = dirLocal
-		self.formato = formatoArchivo 
+		self.formato = formatoArchivo
+		self.extension = extensionArchivo 
 
 	def __repr__(self):
 		return "Captura:" + str(self.dirLocal)+str(self.dirLocal)
@@ -27,10 +28,10 @@ class Captura(object):
 		# Se obtiene la cantidad de archivos con un nombre dentro
 		# en un dir. de prueba dado
 		try:
-		  cant_archivos_actuales = capturador.getCantidadCapturas(NOMBRE_ARCHIVO,
-		                                                DIR_TRABAJO_PRUEBA)
-		  archivo_salida = NOMBRE_ARCHIVO + str(cant_archivos_actuales) \
-		                    + EXTENSION_ARCHIVO
+		  cant_archivos_actuales = capturador.getCantidadCapturas(self.nombreCaptura,
+		                                                self.dirLocal,self.extension)
+		  archivo_salida = self.nombreCaptura + SUBFIJO + str(cant_archivos_actuales) \
+		                    + self.extension
 		  pcl.save(p, archivo_salida)
 		  print "Archivo "+ archivo_salida +" guardado!"
 		  print ""
