@@ -1,46 +1,54 @@
 #:kivy 1.0
 
 <KinectScreen>:
-    FloatLayout:
-        #ID's de los atributos llamables por Python.
-        label_wid: my_label
-        main_layout: layout_principal
-        imagen_kv: my_img
+    id: kinect_screen
 
-        #Propiedades de Controller (heredadas de BoxLayout)
+    #Atributos llamables por Python.
+    label_wid: my_label
+    main_layout: layout_principal
+    imagen_kv: my_img
+    nombre_captura: ""
+    dir_trabajo: ""
+
+    GridLayout:
         id: layout_principal
         orientation: 'vertical'
-        #padding: [15,-150,15,10]
-
+        cols: 1
+        rows: 3
+        
         Label:
             id: my_label
+            size_hint: (1,0.05)
             text: 'Captura de baches'
-            pos: (300,400)
-            size_hint: (.20,.5)
 
         KinectViewer:
             id: my_img
-            #source: "mylogo.jpg"
+            size_hint: (1,0.9)
             
             #keep_ratio: False
             #allow_stretch: True
             
-            BoxLayout:
-                orientation: 'horizontal'
-                size: 400,50
-                size_hint: .8, .1
-                padding: [150,0,0,20]
-                spacing: 70
+        GridLayout:
+            cols:2
+            rows:1
+            orientation: 'horizontal'
+            size_hint: (1,0.05)
+            spacing: [root.width / 3,0]
+            #Forzar el ancho de los botones (pixeles)
+            col_force_default: True
+            col_default_width: root.width / 6
 
-                Button:
-                    id: boton_capturar
-                    text: "Capturar"
-                    on_press: my_img.realizar_captura()
+            #Padding izquierdo de botones(pixeles)
+            padding: [root.width / 7,0,0,0]
+            Button:
+                id: boton_capturar
+                text: "Capturar"
+                on_press: root.capturar()
 
-                Button:
-                    id: boton_cancelar
-                    text: "Volver"
-                    on_press: root.manager.current = 'menutiposfalla'
-                    
+            Button:
+                id: boton_cancelar
+                text: "Volver"
+                on_press: root.manager.current = 'dialogopropscaptura'
+                
 
 

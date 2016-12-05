@@ -4,6 +4,7 @@
 # archivo .kv.
 
 #:import sist_op os
+#:import const constantes
 
 <SubirCapturasServidorScreen>:
 	file_chooser: filechooser
@@ -22,7 +23,8 @@
 			color: 0,0,0,1
 			canvas.before:
 				Color:
-					rgba: 0,0.7,0, 1
+					#rgba: 0,0.7,0, 1
+					rgba: const.COLOR_LABELS_RGBA
 				Rectangle:
 					pos: self.pos
 					size: self.size
@@ -34,7 +36,8 @@
 			color: 0,0,0,1
 			canvas.before:
 				Color:
-					rgba: 0,0.7,0, 1
+					#rgba: 0,0.7,0, 1
+					rgba:const.COLOR_LABELS_RGBA
 				Rectangle:
 					pos: self.pos
 					size: self.size

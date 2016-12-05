@@ -27,6 +27,7 @@ from kivy.lang import Builder
 #import the necessary modules
 import freenect
 import cv2
+#import cv2.cv as cv
 import numpy as np
 
 from calibkinect import depth2xyzuv
@@ -93,6 +94,16 @@ depths = None
 frames = None
 grayscale_frame = None
 
+# Variables globales respecto del almacenamiento de los
+# archivos en disco.
+# NOTA: Estas variables seran enviadas por la vista que
+# genere una instancia de controller
+
+nombre_archivo = "archivoSalida"
+extension_archivo = ".pcd"
+subfijo = "_"
+dir_trabajo_prueba = "/home/rodrigo/TESINA-2016-KINECT/aplicacionCliente/modules/views/kinectView"
+        
 
 # Retorna el arreglo de la imagen en RGB
 def get_video2():
@@ -104,6 +115,44 @@ def get_video2():
 def get_depth():
     array,_ = freenect.sync_get_depth()
     return array
+
+
+
+# Retorna la cantidad de archivos que tienen un nombre dado
+# en el directorio de trabajo especificado. Se detecta la
+# extension desde la derecha del archivo.
+def get_cantidad_archivos(archivo_a_buscar,dirTrabajo):
+    cantActual = 0
+    # time.sleep (2)
+    patron = nombre_archivo + "[0-9]" + "\\" + extension_archivo
+    print "El patron es: ", patron
+    expr = re.compile(patron)
+    
+    #Obtiene una lista de nombres de archivos ordenada
+    listado = sorted(os.listdir(dirTrabajo))
+
+    print "listado -->"
+    print listado
+    print ""
+    for file in listado:
+        # if file.endswith(".pcd"):
+        res = expr.search(file)
+        print "examinando ",file
+        if res != None:
+            print "Archivo encontrado!"    
+            #Si es un .pcd se
+            index_extension = rfind(file,".pcd")
+            cad_archivo = file[:index_extension]
+            print "cad_archivo encontrado es: ",cad_archivo
+            print "archivo_a_buscar encontrado es: ",archivo_a_buscar+ str(cantActual)
+            if (archivo_a_buscar+ str(cantActual)) == cad_archivo:
+                cantActual += 1
+    print "Cantidad de archivos .pcd con el nombre ",archivo_a_buscar, "es : ",cantActual
+    print ""
+    #Se retorna el siguiente
+    return cantActual
+
+
 
 def showHelp():
     print 'Ayuda: '
@@ -122,7 +171,6 @@ class KinectDepth(Thread):
         self.index = 0
         self.depths = None
 
-        
     def run(self):
         q = self.queue
         while not self.quit:
@@ -136,7 +184,6 @@ class KinectDepth(Thread):
             except TypeError, e:
                 print "Error: Problema de conexion con el sensor. Esta conectado?"
                 sys.exit(1)
-
 
                  
     def pop(self):
@@ -181,7 +228,7 @@ class KinectViewer(Image):
         self.texture = texture1
         
 
-    def getDatosSensor(self):
+    def realizar_captura(self):
         print "capture!!"
         print "depths es -->"
         print self.kinect.get_depths()
@@ -189,23 +236,38 @@ class KinectViewer(Image):
         print ""
         xyz, uv = depth2xyzuv(self.kinect.get_depths())
         data = xyz.astype(np.float32)
-        return data
+        self.capturar(data)
 
-        
+
+    # TODO: Llamar al capturador para almacenar los datos actuales
+    # captados por el sensor.
+    def capturar(self,data):
+        print data
+        p = pcl.PointCloud(data)
+        # Se obtiene la cantidad de archivos con un nombre dentro
+        # en un dir. de prueba dado
+        try:
+            cant_archivos_actuales = get_cantidad_archivos(nombre_archivo,
+                                                            dir_trabajo_prueba)
+            archivo_salida = nombre_archivo + str(cant_archivos_actuales) \
+                                + extension_archivo
+            pcl.save(p, archivo_salida)
+            print "Archivo "+ archivo_salida +" guardado!"
+            print ""
+        except OSError as e:
+            print "Error al listar archivos en directorio ",dir_trabajo_prueba
+            sys.exit(1)
+            
 
 class KinectScreen(Screen):
-    nombre_captura = StringProperty()
-    dir_trabajo = StringProperty()
-    
-    def setDatosCaptura(self,nombre_captura,dir_trabajo):
-        self.nombre_captura = nombre_captura 
-        self.dir_trabajo = dir_trabajo 
+    pass
 
 
-    def capturar(self):
-        print "Realizando captura..."
-        print type(self.imagen_kv)
-        print ""
-        data = self.imagen_kv.getDatosSensor()
-        controlador = App.get_running_app()
-        controlador.capturar(data,self.dir_trabajo,self.nombre_captura)
+# class ControllerApp(App):
+
+#     def build(self):
+#         self.title = "Captura de fallas"
+#         return Controller(logo_path='mylogo.jpg', width_img = 640,
+#                             height_img = 480) 
+# if __name__ == '__main__':
+#     ControllerApp().run()

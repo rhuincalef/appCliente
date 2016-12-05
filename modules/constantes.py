@@ -27,9 +27,24 @@ LISTADO_MODULOS = ['views/config',
 
 PATH_ARCHIVO_CONFIGURACION = 'views/config/confViews.cfg'
 
+COLOR_LABELS_RGBA = 0,0.7,0, 1
+COLOR_HEADERS_TABLA = 0.458, 0.458, 0.458,1
 
 
 
+#####################################################################################
+############### VARIABLES GLOBALES USADAS POR KinectViewer ##########################
+#####################################################################################
+#####################################################################################
+# Variables globales respecto del almacenamiento de los
+# archivos en disco.
+# NOTA: Estas variables seran enviadas por la vista que genere una instancia de
+# controller
+
+NOMBRE_ARCHIVO = "archivoSalida"
+EXTENSION_ARCHIVO = ".pcd"
+SUBFIJO = "_"
+# DIR_TRABAJO_PRUEBA = "/home/rodrigo/TESINA-2016-KINECT/aplicacionCliente/modules/views/kinectView"
 
 
 

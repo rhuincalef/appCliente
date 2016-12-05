@@ -5,24 +5,39 @@ Clases software aplicacion de cliente -->
 		-CapturadorInformado
 
 	+Capturador
-		-ColCapturasTotales
-		-ColCapturasConfirmadas(Capturas que se van a subir al servidor)
+		-colCapturasTotales (capturas informadas+capturas nuevas realizadas)
+		-colCapturasConfirmadas(Capturas que se van a subir al servidor)
 		-apiClient
-		+filtrarCapturas(colCapturasTotales)
+		+capturar(datosSensor)
+		+filtrarCapturas(colCapturasTotales) //Filtra entre las capturas informadas-nuevas que se subiran, y se agregan a la coleccion colCapturasConfirmadas 
 		+enviarCapturas(apiClient)
 
 	+ApiClient
 		-ConexionServer 
 
+
+	//Representa los objetos fallas traidos desde el servidor.Se mantienen en la colBachesInformados.
+	+FallaItem
+		-id (falla)
+		-calle
+		-altura
+		-colCapturas (Captura) TODO: VER ESTE ATRIBUTO!!!  
+
+	-PREGUNAS:
+		1. ASOCIAR A FALLAITEM LA COLECCION DE CAPTURAS DE UNA
+FALLA INFORMADA ????
+		2. PARA ASOCIAR LAS CAPTURAS DE FALLAS NUEVAS CON LA CALLE/ALTURA, SE DEBE CREAR UN ITEM FALLA IGUAL QUE CON LAS FALLAS INFORMADAS?? ESTO IBA  A SER CON EL GPS?  
+
 	+ Capturador > CapturadorInformado
-		-ColBachesInformados (Se envian la calle y/o altura y envia los informados en ese rango)
+		-colBachesInformados (Se envian la calle y/o altura y envia los informados en ese rango)
 		+solicitarInformados()
 
 	+Captura
 		-NombreCaptura
-		-DirLocal
+		-DirLocal (path en maquina con Kinect) 
 		-Formato
 		+convertir() //Se utilizara json para el envio al servidor.
+		+almacenar()
 
 	+Vista
 		-ventanas...

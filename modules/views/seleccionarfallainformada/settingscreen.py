@@ -13,104 +13,38 @@ from kivy.graphics import *
 
 from kivy.uix.label import Label
 from capturador import CapturadorInformados
-   
-# class ItemFalla(SelectableDataItem):
-#   def __init__(self,id_falla,calle,altura, is_selected=False, **kwargs):
-#      super(ItemFalla, self).__init__(is_selected=is_selected, **kwargs)
-#      self.id = id_falla
-#      self.calle = calle
-#      self.altura = altura
-#      self.is_selected = False
-
-#   def __cmp__(self,other):
-#     if self.id > other.id:
-#       return 0
-#     elif self.id == other.id:
-#       return 0
-#     else:
-#       return -1
-
-
-
-# class CapturadorInformados:
-
-#   def __init__(self):
-#     self.colBachesInformados = []
-#     self.url_servidor = ""
-
-#   def solicitar_informados(self):
-#     dic_json= {
-#         "1":{ "id": 1,
-#             "calle": "Belgrano",
-#             "altura": 200},
-#         "2":{ "id": 2,
-#             "calle": "Irigoyen",
-#             "altura": 200},
-#         "3":{ "id": 3,
-#             "calle": "Ameguino",
-#             "altura": 200},
-#         "4":{ "id": 4,
-#             "calle": "Pellegrini",
-#             "altura": 200},
-#         "5":{ "id": 5,
-#             "calle": "9 de Julio",
-#             "altura": 200},
-#         "6":{ "id": 6,
-#             "calle": "Aedo",
-#             "altura": 200},
-#         "7":{ "id": 7,
-#             "calle": "Callao",
-#             "altura": 200}
-#     } 
-#     for key,tupla in dic_json.iteritems():
-#       falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
-#       self.colBachesInformados.append(falla)
-#     self.colBachesInformados = sorted(self.colBachesInformados)
-#     return self.colBachesInformados
-
 
 class SettingScreen(Screen):
    
     def __init__(self, **kwargs):
-      cap = CapturadorInformados()
-      self.fallas_dict = cap.solicitarInformados()
-      # self.fallas_dict = cap.solicitar_informados()
       super(Screen, self).__init__(**kwargs)
-
-      # self.listado1.adapter.bind(on_selection_change=self.on_change)
-      # Se inicializan todas las fallas
-      self.inicializar_fallas()
-
-
-    def inicializar_fallas(self):
-      for obj in self.fallas_dict:
-        obj.is_selected = False
-      print "Fallas inicializadas ..."
-
-
-    # def on_change(self,adapter,**kwargs):
-    #   print "SELECCION REALIZADA!!!!!!!!!!!!!"
-    #   print "self.fallas_dict -->"
-    #   print type(self.fallas_dict)
-    #   for obj in self.fallas_dict:
-    #     if obj.is_selected == True:
-    #       print "falla:",obj.id
-    #     print "obj.id = ",obj.id," - is_selected?: ",obj.is_selected
-    #     print ""
-
+      self.bind(on_enter=self.refrescar_vista)
 
     def obtener_fallas(self):
-      print "self.fallas_dict -->"
-      print self.fallas_dict
+      controlador = App.get_running_app()
+      # Diccionario de objetos ItemFalla(mostrados en el listview cuando se 
+      # seleccionan los baches).
+      fallas_dic = controlador.getCapturadorInformados().getColBachesInformados()
+      print "fallas_dict -->"
+      print fallas_dict
       print ""
       seleccionados = []
-      for obj in self.fallas_dict:
+      for obj in fallas_dict:
         if obj.is_selected == True:
           print "falla:",obj.id
           seleccionados.append(obj)
       if len(seleccionados) == 0:
         print "Sin fallas seleccionadas"
       return seleccionados
+
+    # Cuando se carga el screen se actualiza el listao de fallas seleccionadas
+    def refrescar_vista(self,settignscreen):
+      print "Actualizando listado de fallas..."
+      print "tipo: ", str(type(settignscreen))
+      controlador = App.get_running_app()
+      fallas_dic = controlador.getCapturadorInformados().getColBachesInformados()
+      self.listado1.adapter.data = fallas_dic
+      print "Actualizado listado!"
 
 
    # This is quite an involved args_converter, so we should go through the

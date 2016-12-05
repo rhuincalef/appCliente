@@ -33,8 +33,12 @@ class SubirCapturasServidorScreen(Screen):
 			print "Enviando capturas -->"
 			print list(set(rutas))
 			return list(set(rutas))
+		else:
+			print "Nada que enviar!"
 
 	def volver(self):
+		#Limpiar la seleccion y cambiar screen
+		self.file_chooser.selection = []
 		self.manager.current = 'menu'
 
 	# def select(self,path,filenames_selected):

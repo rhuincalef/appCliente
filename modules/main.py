@@ -35,17 +35,40 @@ from apiclient1 import *
 from capturador import *
 from captura import *
 
+from kivy.uix.gridlayout import GridLayout
+from  kivy.uix.popup import Popup
+from kivy.uix.label import Label
+
 class MainApp(App):
 	def __init__(self,**kwargs):
 		super(MainApp,self).__init__()
 		self.capturador = Capturador()
 		self.capturadorInformados = CapturadorInformados()
+		self.bind(on_start=self.instanciada_app)
+
+
+	#Metodo para el chequeo del estado de la aplicacion.
+	def instanciada_app(self,app):
+		import freenect
+		if freenect.sync_get_depth() is None:
+			popup = Popup(title='Error de conexion',
+			content=Label(text='El sensor no se encuentra conectado.\nConecte el sensor antes de realizar una nueva captura.'),
+							size_hint=(None, None), 
+							size=(400, 400),
+							auto_dismiss=True)
+			popup.open()
+
+
 
 	def getCapturador(self):
 		return self.capturador
 
-	def obtenerInformados(self,calle,altura):
-		return self.capturadorInformados.solicitarInformados(calle,altura)
+	def obtenerInformados(self,calle):
+		return self.capturadorInformados.solicitarInformados(calle)
+
+	#Captura de nuevos baches(no informados)
+	def capturar(data,dir_trabajo,nombre_captura):
+		self.capturador.capturar(data, dir_trabajo, nombre_captura)
 
 
 	def getCapturadorInformados(self):
@@ -54,7 +77,6 @@ class MainApp(App):
 
 	def inicializar(self,sm):
 		conf = leer_configuracion(PATH_ARCHIVO_CONFIGURACION)
-		print "Configuracion leida..."
 		self.cargar_vistas(sm,conf)
     
 	def cargar_vistas(self,sm,listaVistas):
