@@ -55,6 +55,8 @@ import time
 from utils import *
 
 from kivy.uix.screenmanager import Screen
+from constantes import FALLA_NO_ESTABLECIDA
+from kivy.properties import NumericProperty
 
 
 fragment_header = '''
@@ -196,10 +198,12 @@ class KinectViewer(Image):
 class KinectScreen(Screen):
     nombre_captura = StringProperty()
     dir_trabajo = StringProperty()
+    idFalla = NumericProperty(FALLA_NO_ESTABLECIDA)
     
-    def setDatosCaptura(self,nombre_captura,dir_trabajo):
+    def setDatosCaptura(self,nombre_captura,dir_trabajo,id_falla):
         self.nombre_captura = nombre_captura 
-        self.dir_trabajo = dir_trabajo 
+        self.dir_trabajo = dir_trabajo
+        self.idFalla = id_falla 
 
 
     def capturar(self):
@@ -208,8 +212,8 @@ class KinectScreen(Screen):
                             content="Debe conectar el sensor antes de\nintentar realizar una captura.")
             return
         print "Realizando captura..."
-        print type(self.imagen_kv)
         print ""
         data = self.imagen_kv.getDatosSensor()
         controlador = App.get_running_app()
-        controlador.capturar(data,self.dir_trabajo,self.nombre_captura)
+        controlador.capturar(data,self.dir_trabajo,self.nombre_captura,
+                                id_falla=self.idFalla)

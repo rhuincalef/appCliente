@@ -5,12 +5,16 @@ Clases software aplicacion de cliente -->
 		-CapturadorInformado
 
 	+Capturador
-		-colCapturasTotales (capturas informadas+capturas nuevas realizadas)
-		-colCapturasConfirmadas(Capturas que se van a subir al servidor)
+		-colCapturasTotales (colecc. de FallaItems con capturas realizadas por Capturador o CapturadorInformado)
+		-colCapturasConfirmadas(colecc. de FallaItems con capturas que se van a subir al servidor)
 		-apiClient
 		+capturar(datosSensor)
+		
 		+filtrarCapturas(colCapturasTotales) //Filtra entre las capturas informadas-nuevas que se subiran, y se agregan a la coleccion colCapturasConfirmadas 
-		+enviarCapturas(apiClient)
+		
+		+enviarCapturas(apiClient) //Envia capturas filtradas
+		+asociarFalla() //Asocia el objeto ItemFalla con la captura(s) realizadas
+
 
 	+ApiClient
 		-ConexionServer
@@ -19,19 +23,29 @@ Clases software aplicacion de cliente -->
 
 	//Representa los objetos fallas traidos desde el servidor.Se mantienen en la colBachesInformados.
 	+FallaItem
-		-id (falla)
+		-estado
+		-colCapturas (Se asocian en el momento que se selecciona la falla informada)
+		-enviar()
+
+	-Confirmada (estado FallaItem)
+	// La latitud y longitud se obtienen en el momento de kinectscreen.capturar() 
+		-latitud
+		-longitud
+		-registrar() // Agrega la falla a Capturador.colCapturasTotales.
+
+
+	-Informada (estado FallaItem)
+		-id (fallaInformada)
 		-calle
 		-altura
-		-colCapturas (Captura) TODO: VER ESTE ATRIBUTO!!!  
-
-	-PREGUNAS:
-		1. ASOCIAR A FALLAITEM LA COLECCION DE CAPTURAS DE UNA
-FALLA INFORMADA ????
-		2. PARA ASOCIAR LAS CAPTURAS DE FALLAS NUEVAS CON LA CALLE/ALTURA, SE DEBE CREAR UN ITEM FALLA IGUAL QUE CON LAS FALLAS INFORMADAS?? ESTO IBA  A SER CON EL GPS?  
+		-registrar() // Recorre colBachesInformados, obtiene la falla, le asigna
+					// la colCapturas, remueve la falla de esa coleccion y 
+					// la agrega a CapturadorInformado.colCapturasTotales.
 
 	+ Capturador > CapturadorInformado
 		-colBachesInformados (Se envian la calle y/o altura y envia los informados en ese rango)
 		+solicitarInformados()
+		+asociarFalla() //Asocia el objeto ItemFalla con la captura(s) realizadas
 
 	+Captura
 		-nombreCaptura

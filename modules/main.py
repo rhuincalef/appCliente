@@ -60,8 +60,11 @@ class MainApp(App):
 		return self.capturadorInformados.solicitarInformados(calle)
 
 	#Captura de nuevos baches(no informados)
-	def capturar(self,data,dir_trabajo,nombre_captura):
-		self.capturador.capturar(data, dir_trabajo, nombre_captura)
+	def capturar(self,data,dir_trabajo,nombre_captura,id_falla):
+		capturador_a_usar = self.capturador
+		if id_falla != FALLA_NO_ESTABLECIDA:
+			capturador_a_usar = self.capturadorInformados
+		capturador_a_usar.asociarFalla(data, dir_trabajo, nombre_captura,id_falla)
 
 
 	def getCapturadorInformados(self):

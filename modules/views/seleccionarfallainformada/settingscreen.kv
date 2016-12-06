@@ -77,7 +77,7 @@
 		    ListView:
 		    	id:listado
 
-		    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().getCapturadorInformados().getColBachesInformados(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
+		    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().getCapturadorInformados().getColBachesInformados(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)
 
 		    	
 		    	# Tamanio en porcentajes con respecto al widget anterior
@@ -102,7 +102,7 @@
 
 			    Button:
 			    	id: bt_capturar_fallas
-			    	text: "Almacenar fallas localmente"
+			    	text: "Realizar captura"
 			    	on_press: root.obtener_fallas()
 
 				Button:	

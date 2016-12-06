@@ -25,7 +25,8 @@ LISTADO_MODULOS = ['views/config',
 	                'views/subircapturas',
 	                'models/captura',
 	                'models/apiclient',
-	                'models/capturador'
+	                'models/capturador',
+	                'models/estadofalla'
 	              ]
 
 PATH_ARCHIVO_CONFIGURACION = 'views/config/confViews.cfg'
@@ -51,8 +52,12 @@ FORMATO_CAPTURA = "pcd"
 SUBFIJO = "_"
 
 
+# Valor usado para verificar si la vista fue cargada desde la opcion de 
+# seleccionar fallas informadas o, si no esta seteado, si es una falla nueva
+# con informacion de geoposicionamiento.
+FALLA_NO_ESTABLECIDA = -1
 
 
-
-
+LAT_PRUEBA = 30.0000
+LONG_PRUEBA = -10.000
 

@@ -7,13 +7,25 @@ import os,sys
 from constantes import *
 from string import strip
 
+from kivy.properties import NumericProperty
+from constantes import FALLA_NO_ESTABLECIDA
+
+
+# TODO: AGREGAR EVENTO ON_SCREEN_LOAD que agregue el dir. actual a la 
+# dir_chooser.selection.
+
 class DialogoPropsCapturaScreen(Screen):
+
+	idFalla = NumericProperty(FALLA_NO_ESTABLECIDA)
 
 	def __init__(self,**kwargs):
 		super(DialogoPropsCapturaScreen, self).__init__(**kwargs)
 		self.dir_chooser.path = os.getcwd()
 		self.dir_chooser.rootpath = ROOT_PCD_FOLDER
 
+
+	def set_id_falla_informada(self,id_falla):
+		self.idFalla = id_falla 
 
 	def validar(self):
 		pass
@@ -52,7 +64,7 @@ class DialogoPropsCapturaScreen(Screen):
 		if es_nombre_valido and es_dir_valido:
 			kinect_screen = self.manager.get_screen('capturaKinect')
 			kinect_screen.setDatosCaptura(self.nombre_cap.text,
-				self.dir_chooser.selection[0])
+				self.dir_chooser.selection[0],self.idFalla)
 			print "Data SETEADA!!! con: nombre_cap = ",self.nombre_cap.text,"; dir_trabajo = ",self.dir_chooser.selection[0]
 			self.manager.current = 'capturaKinect'
 
@@ -60,7 +72,13 @@ class DialogoPropsCapturaScreen(Screen):
 		#Limpiar la seleccion y cambiar screen
 		self.dir_chooser.selection = []
 		self.nombre_cap.text = ""
-		self.manager.current = 'menutiposfalla'
+		#Si es una fallainformada se regresa al menu de 
+		# seleccion de fallas informadas, sino al principal. 
+		menu_cambio = 'menutiposfalla'
+		if self.idFalla == FALLA_NO_ESTABLECIDA:
+			menu_cambio = 'settingscreen' 
+		self.idFalla = FALLA_NO_ESTABLECIDA
+		self.manager.current = menu_cambio
 
 
 

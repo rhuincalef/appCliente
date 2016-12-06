@@ -12,7 +12,12 @@ class Captura(object):
 		self.nombreCaptura = nombre
 		self.dirLocal = dirLocal
 		self.formato = formatoArchivo
-		self.extension = extensionArchivo 
+		self.extension = extensionArchivo
+		self.colCapturas = [] 
+		self.estado = None
+
+	def setEstado(self,estado):
+		self.estado = estado
 
 	def __repr__(self):
 		return "Captura:" + str(self.dirLocal)+str(self.dirLocal)
@@ -20,10 +25,10 @@ class Captura(object):
 	#Conversion a json para enviar al servidor
 	def convertir(self):
 		pass
-		# self.almacenar()
+		# self.almacenarLocalmente()
 
 	# Usado por convertir(). Almacena el .pcd en disco.
-	def almacenar(self,data,capturador):
+	def almacenarLocalmente(self,data,capturador):
 		p = pcl.PointCloud(data)
 		# Se obtiene la cantidad de archivos con un nombre dentro
 		# en un dir. de prueba dado
