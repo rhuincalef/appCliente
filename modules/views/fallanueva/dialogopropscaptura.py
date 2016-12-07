@@ -31,18 +31,45 @@ class DialogoPropsCapturaScreen(Screen):
 	def validar(self):
 		pass
 
+
+
 	# NOTA: Por defecto el filechooser carga la seleccion con el directorio
 	# de trabajo actual.
 	def on_enter(self):
 		print "Entre al filechooser"
 		print "El directorio actual seleccionado es: ",self.dir_chooser.selection
 		print ""
+		print "PRE-ENTER!!"
+		# print "Los archivos actuales en el directorio son: "
+		# print ""
+		# list_archs = self.dir_chooser.file_system.listdir(self.dir_chooser.path)
+		# # self.dir_chooser.canvas.ask_update()
+		# # self.dir_chooser.view_list = []
+		# # self.dir_chooser.view_list.append(list_archs)
+		# print "Actualizados archivos!!!!!!!!!!!!!"
+		# print ""
+
+
+
+
 
 	def seleccionado(self, seleccion):
 		print "La seleccion es: ",seleccion
 		print ""
+		# Si no es un dir actualiza self.dir_label.text, se remueve la entrada
+		# en la coleccion selection y se agrega el directorio actual.
+		if (len(seleccion) > 0) and not self.dir_chooser.file_system.is_dir(seleccion[0]):
+			print "No es dir!"
+			self.dir_label.text = "Archivo: " + seleccion[0]
+			self.dir_chooser.selection.pop()
+			self.dir_chooser.selection.append(self.dir_chooser.path)
+			print "Actualizado! self.dir_chooser.selection: %s" % self.dir_chooser.selection
+			print ""
 
 	def cambio_dir(self):
+		print "CAMBIO DE DIRECTORIO!"
+		print "selection : %s" % self.dir_chooser.selection
+		print "" 
 		self.dir_chooser.selection = []
 		self.dir_chooser.selection.append(self.dir_chooser.path)
 		self.dir_label.text = self.dir_chooser.path
@@ -57,17 +84,21 @@ class DialogoPropsCapturaScreen(Screen):
 		es_nombre_valido = es_dir_valido = False
 		print "Archivo captura seleccionado: ", nombre_captura
 		print strip(nombre_captura)
-		if strip(nombre_captura):
+		if (nombre_captura != None) and strip(nombre_captura):
 			es_nombre_valido = True 
+
 
 		nombre_dir = self.dir_chooser.selection[0] 
 		print "Dir. seleccionado: ", nombre_dir
-		if (nombre_dir!= None) and (strip(nombre_dir)):
+		#Si no es cadena vacia y es un directorio valido
+		if (nombre_dir!= None) and (strip(nombre_dir)) and \
+									self.dir_chooser.file_system.is_dir(nombre_dir):
 			es_dir_valido = True
 
 		print "es_nombre_valido: ",str(es_nombre_valido)
 		print "es_dir_valido: ",str(es_dir_valido)
 		print ""
+
 
 		if es_nombre_valido and es_dir_valido:
 			kinect_screen = self.manager.get_screen('capturaKinect')
