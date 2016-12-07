@@ -13,11 +13,26 @@ class Captura(object):
 		self.dirLocal = dirLocal
 		self.formato = formatoArchivo
 		self.extension = extensionArchivo
-		self.colCapturas = [] 
-		self.estado = None
+		self.colCapturas = []
+		self.nombreArchivoCaptura = None
 
-	def setEstado(self,estado):
-		self.estado = estado
+	
+
+	def getNombreArchivo(self):
+		return self.nombreCaptura
+
+	def getNombreArchivoCaptura(self):
+		return self.nombreArchivoCaptura
+
+	def getDirLocal(self):
+		return self.dirLocal
+
+	def getFormato(self):
+		return self.formato
+
+	def getExtension(self):
+		return self.extension
+
 
 	def __repr__(self):
 		return "Captura:" + str(self.dirLocal)+str(self.dirLocal)
@@ -38,8 +53,8 @@ class Captura(object):
 		  archivo_salida = self.nombreCaptura + SUBFIJO + str(cant_archivos_actuales) \
 		                    + self.extension
 		  pcl.save(p, archivo_salida)
-		  print "Archivo "+ archivo_salida +" guardado!"
-		  print ""
+		  self.nombreArchivoCaptura = archivo_salida
+		  return archivo_salida
 		except OSError as e:
 		  print "Error al listar archivos en directorio ",DIR_TRABAJO_PRUEBA
 		  sys.exit(1)

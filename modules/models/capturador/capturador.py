@@ -60,6 +60,7 @@ class ItemFalla(SelectableDataItem):
   def registrarCaptura(self,dataSensor,item_falla,cap,capturador):
     self.estado.registrar(self,capturador,cap)
     cap.almacenarLocalmente(dataSensor,capturador)
+    item_falla.getEstado().mostrar_capturas_asociadas(item_falla)
 
   def __cmp__(self,other):
     self_id = self.getEstado().getId()  
@@ -158,11 +159,9 @@ class CapturadorInformados(Capturador):
       dic_json = self.apiClient.getInformados(calle)
 
       for key,tupla in dic_json.iteritems():
-          # falla = ItemFalla(tupla["id"],tupla["calle"],tupla["altura"])
           falla = ItemFalla()
           estado = Informada(tupla["id"],tupla["calle"],tupla["altura"])
           estado.cambiar(falla)
-
           if falla not in self.colBachesInformados:
             self.colBachesInformados.append(falla)
 
@@ -179,16 +178,17 @@ class CapturadorInformados(Capturador):
 
   # Asocia la falla con la captura recien realizada.
   def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla):
-    estado = Informada(LAT_PRUEBA,LONG_PRUEBA).cambiar(falla)
+    print "Inicio asociarFalla() para id_falla: ",id_falla
+    print ""
     itemFalla = None
-    for e in self.colBachesInformados:
-      if id_falla == e.id:
-        print "Encontrado ItemFalla: ",itemFalla
+    for b in self.colBachesInformados:
+      if id_falla == b.getEstado().getId():
+        itemFalla = b
+        print "Encontrado ItemFalla(%s): ",id_falla
         break
-    estado.cambiar(itemFalla)
-    print "Cambiado el estado!"
-    self.capturar(data, dir_trabajo, nombre_captura,itemFalla)
-
+    if itemFalla is not None:
+      self.capturar(data, dir_trabajo, nombre_captura,itemFalla)
+      print "Fin de asociarFalla()"
 
 
   def mostrar_coleccion(self):

@@ -216,4 +216,4 @@ class KinectScreen(Screen):
         data = self.imagen_kv.getDatosSensor()
         controlador = App.get_running_app()
         controlador.capturar(data,self.dir_trabajo,self.nombre_captura,
-                                id_falla=self.idFalla)
+                                self.idFalla)
