@@ -25,7 +25,9 @@ Clases software aplicacion de cliente -->
 	+FallaItem
 		-estado
 		-colCapturas (Se asocian en el momento que se selecciona la falla informada)
-		-enviar()
+		-enviar(URL_SERVIDOR,apiClient) //Envio remoto al server
+
+
 
 	-Confirmada (estado FallaItem)
 	// La latitud y longitud se obtienen en el momento de kinectscreen.capturar() 

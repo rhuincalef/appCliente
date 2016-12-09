@@ -29,10 +29,16 @@ class SettingScreen(Screen):
         print "Existen fallas seleccionadas"
         # Se carga el dialogopropsscreen con el id_falla de la falla seleccionada
         # en el listview.
+        id_falla_seleccionada = -1 
+        for falla in fallas_dict:
+          if falla.estaSeleccionado():
+            id_falla_seleccionada = falla.getEstado().getId()
+            break
+
         print "Agregando falla informada para ser capturada: "
-        print "Id: ",fallas_dict[0].getEstado().getId()
+        print "Id: ",id_falla_seleccionada
         print ""
-        self.manager.get_screen('dialogopropscaptura').set_id_falla_informada(fallas_dict[0].getEstado().getId())
+        self.manager.get_screen('dialogopropscaptura').set_id_falla_informada(id_falla_seleccionada)
         self.manager.current = 'dialogopropscaptura'
         print "Cambie el screen!"
       else:
@@ -47,7 +53,7 @@ class SettingScreen(Screen):
       self.listado1.adapter.data = fallas_dic
       print "Actualizado listado!"
 
-   # This is quite an involved args_converter, so we should go through the
+    # This is quite an involved args_converter, so we should go through the
     # details. A CompositeListItem instance is made with the args
     # returned by this converter. The first three, text, size_hint_y,
     # height are arguments for CompositeListItem. The cls_dicts list

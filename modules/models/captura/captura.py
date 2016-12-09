@@ -5,7 +5,9 @@
 # 		+convertir() //Se utilizara json para el envio al servidor.
 
 import pcl
+import numpy as np
 from constantes import *
+from utils import generarDataCsv
 
 class Captura(object):
 	def __init__(self,nombre,dirLocal,formatoArchivo,extensionArchivo):
@@ -37,10 +39,13 @@ class Captura(object):
 	def __repr__(self):
 		return "Captura:" + str(self.dirLocal)+str(self.dirLocal)
 
-	#Conversion a json para enviar al servidor
+
+	#Conversion a de los archivos .pcd a csv para enviar dentro del json de la falla
 	def convertir(self):
-		pass
-		# self.almacenarLocalmente()
+		csvNube = generarDataCsv(pcl,self.archivoCaptura,self.dirLocal)
+		return csvNube
+
+
 
 	# Usado por convertir(). Almacena el .pcd en disco.
 	def almacenarLocalmente(self,data,capturador):

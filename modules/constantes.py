@@ -26,7 +26,9 @@ LISTADO_MODULOS = ['views/config',
 	                'models/captura',
 	                'models/apiclient',
 	                'models/capturador',
-	                'models/estadofalla'
+	                'models/estadofalla',
+	                'models/geofencing',
+	                'models/estrategia'
 	              ]
 
 PATH_ARCHIVO_CONFIGURACION = 'views/config/confViews.cfg'

@@ -1,3 +1,17 @@
+# -*- coding: utf-8 -*-
+import kivy
+kivy.require('1.0.5')
+
+from kivy.app import App
+from kivy.adapters.dictadapter import DictAdapter
+from kivy.uix.listview import ListItemButton, ListItemLabel, ListView
+from kivy.uix.listview import CompositeListItem
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.screenmanager import Screen
+from kivy.lang import Builder
+from kivy.graphics import *
+
+from kivy.uix.label import Label
 from kivy.uix.screenmanager import Screen
 from kivy.uix.popup import Popup
 import os
@@ -9,40 +23,62 @@ class SubirCapturasServidorScreen(Screen):
 	
 	def __init__(self,**kwargs):
 		super(SubirCapturasServidorScreen, self).__init__(**kwargs)
-		self.file_chooser.path = os.getcwd()
-		self.file_chooser.rootpath = ROOT_PCD_FOLDER
-
-	def refrescar_directorio(self):
-		self.ruta_fs.text = self.file_chooser.path 
-
-	#Metodo para seleccionar todos los archivos en el dir. de trabajo actual.
-	def seleccionar_todo(self):
-		for arch in self.file_chooser.files:
-			if not self.file_chooser.file_system.is_dir(arch):
-				print "archivo: ",arch," no es un dir."
-				self.file_chooser.selection.append(arch)
+		self.bind(on_enter=self.refrescar_vista)		
 
 
-	# TODO: Este metodo retorna una lista de archivos seleccionada para subir al servidor.
-	# Esta lista es usado en el metodo enviarCapturas(apiClient) de Capturador.
+	#Actualiza la lista de fallas confirmadas
+	def refrescar_vista(self,listview):
+		print "Refrescando vista!!!! "
+		controlador = App.get_running_app()
+		fallas_dic = controlador.filtrarCapturas()
+		if len(fallas_dic) > 0:
+			print "Objeto: %s" % fallas_dic[0]
+			print "Tipo de objeto: %s" % type(fallas_dic[0].getEstado())
+			print ""
+		self.listado_capturas.adapter.data = fallas_dic
+
+	#Envia las capturas adaptadas para el envio al servidor
 	def enviar_capturas(self):
-		rutas = []
-		if len(self.file_chooser.selection)>0:
-			for archivo in self.file_chooser.selection:
-				rutas.append(archivo)
-			print "Enviando capturas -->"
-			print list(set(rutas))
-			return list(set(rutas))
-		else:
-			print "Nada que enviar!"
+		controlador = App.get_running_app()
+		controlador.subir_capturas(self.listado_capturas.adapter.data)
 
+		
 	def volver(self):
-		#Limpiar la seleccion y cambiar screen
-		self.file_chooser.selection = []
+		#Limpiar el ListView y volver
+		print "Vaciadas capturas!"
+		self.listado_capturas.adapter.data = []
 		self.manager.current = 'menu'
 
-	# def select(self,path,filenames_selected):
-	# 	print "El archivo seleccionado es -->"
-	# 	print filenames_selected
-	# print os.path.join(path,filenames_selected[0])
-   
+	# This is quite an involved args_converter, so we should go through the
+    # details. A CompositeListItem instance is made with the args
+    # returned by this converter. The first three, text, size_hint_y,
+    # height are arguments for CompositeListItem. The cls_dicts list
+    # contains argument sets for each of the member widgets for this
+    # composite: ListItemButton and ListItemLabel.
+	def args_converter(self,row_index, an_obj):
+		print "row_index actual: ",row_index
+		print ""
+		print "tipo: %s" % type(an_obj)
+		print ""
+		return {
+		'size_hint_y': None,
+		'height': 25,
+		'cls_dicts': [{'cls': ListItemButton,
+		               'kwargs': {'text': "{0}".format(an_obj.getEstado().getId())
+		                          #'deselected_color': [0.,0,1,1]
+		                          }
+		              }
+		              ,{
+		                   'cls': ListItemButton,
+		                   'kwargs': {
+		                       'text': "{0}".format(an_obj.getEstado().getCalle()),
+		                       #'deselected_color': [0.,0,1,1],
+		                       'background_color': [0,1,0,1]
+		                        }
+		              },
+		              {
+		                   'cls': ListItemButton,
+		                   'kwargs': { 'text': "{0}".format(an_obj.getEstado().getAltura())
+		                            }
+		              }]
+		    }

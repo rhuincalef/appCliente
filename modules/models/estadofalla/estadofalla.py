@@ -23,6 +23,11 @@ class Confirmada(Estado):
 	def getLongitud(self):
 		return self.longitud
 
+	def __repr__(self):
+		return "Confirmada; latitud: %s - longitud: %s " % \
+			(self.latitud,self.longitud)
+
+
 	# // Agrega la falla a Capturador.colCapturasTotales.
 	def registrar(self,item_falla,capturador,captura):
 		col_caps_item_falla = item_falla.getColCapturas()
@@ -50,6 +55,10 @@ class Informada(Estado):
 		self.altura = altura
 		self.calle = calle
 
+
+	def __repr__(self):
+		return "Informada; id: %s - calle: %s - altura: %s " % \
+			(self.id,self.calle,self.altura)
 
 	def getId(self):
 		return self.id

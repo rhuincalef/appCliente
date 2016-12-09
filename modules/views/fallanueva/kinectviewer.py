@@ -184,11 +184,6 @@ class KinectViewer(Image):
         
 
     def getDatosSensor(self):
-        print "capture!!"
-        print "depths es -->"
-        print self.kinect.get_depths()
-        print "----------------------------------------------"
-        print ""
         xyz, uv = depth2xyzuv(self.kinect.get_depths())
         data = xyz.astype(np.float32)
         return data
@@ -211,8 +206,6 @@ class KinectScreen(Screen):
             mostrarDialogo(titulo="Error de conexion con el sensor",
                             content="Debe conectar el sensor antes de\nintentar realizar una captura.")
             return
-        print "Realizando captura..."
-        print ""
         data = self.imagen_kv.getDatosSensor()
         controlador = App.get_running_app()
         controlador.capturar(data,self.dir_trabajo,self.nombre_captura,

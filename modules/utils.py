@@ -2,6 +2,9 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from  kivy.uix.popup import Popup
+import numpy
+import pcl
+
 
 def conexionSensorEstablecida():
 		import freenect
@@ -29,7 +32,29 @@ def mostrarDialogo(titulo="",content="",contiene_boton=True):
 	popup.open()
 
 
+#Crea un csv para enviar al servidor.
+# def generarDataCsv(self,pcl,nombreArchivoCaptura,dirLocal):
+def generarDataCsv(nombreArchivoCaptura,dirLocal):
+	pathFile = dirLocal + "/" + nombreArchivoCaptura
+	print "Convirtiendo archivo %s" % pathFile
+	print ""
+	nube_numpy1 = pcl.load(pathFile).to_array()
+	rows_originales = nube_numpy1.shape[0]
+	cols_originales = nube_numpy1.shape[1]
+	nube_aplanada = nube_numpy1.flatten()
+	nube_numpy = numpy.asarray(map(lambda x: round(x,8),nube_aplanada))
+	print "nube_numpy : "
+	print nube_numpy
+	nube_dimension_ajustada = nube_numpy.reshape(rows_originales,cols_originales)
+	return nube_dimension_ajustada
+	# print "nube_dimension_ajustada : "
+	# print nube_dimension_ajustada
+	# arch_salida = "foo1.csv"
+	# numpy.savetxt(arch_salida, nube_dimension_ajustada , delimiter=",")
+	# print "CSV Data generada correctamente"
 
+
+# generarDataCsv("bacheProfundo.pcd",".")
 
 
 

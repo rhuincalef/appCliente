@@ -13,7 +13,10 @@ from constantes import *
 from utils import mostrarDialogo
 from captura import *
 from estadofalla import *
+from geofencing import *
+from estrategia import *
 
+from json import JSONEncoder
 
 
 class ListadoFallas(list):  
@@ -48,8 +51,19 @@ class ItemFalla(SelectableDataItem):
     return self.estado
 
 
+  def cambiarEstado(self,idfalla,altura,calle):
+    estado_nuevo = Informada(idfalla,altura,calle)
+    self.estado = estado_nuevo
+
+
+  def estaSeleccionado(self):
+    return self.is_selected
+
+
   def setEstado(self,estado):
     self.estado = estado
+    print "Cambiado el estado de la falla a : %s" % (estado)
+    print ""
 
   # Retorna la lista de capturas asociadas a una falla
   def getColCapturas(self):
@@ -72,6 +86,32 @@ class ItemFalla(SelectableDataItem):
     else:
       return -1
 
+  # Si la falla esta seleccionada,se convierte y se
+  # envia al servidor en formato json.
+  # TODO: CONTINUAR POR ACA!!!
+  def enviar(self,url_server,api_client):
+    print "Inicio ItemFalla "
+    if self.is_selected:
+      # Se convierte cada captura en un csv y luego se envia la falla en 
+      # formato JSON al servidor.
+      capturas_dic = {}
+      for cap in self.colCapturas:
+        data_cap = cap.convertir()
+        #Se indexa la data por el nombre del archivo de la captura
+        capturas_dic[cap.getNombreArchivoCaptura()] = data_cap
+
+      falla_formateada = {
+                          "id": self.getEstado().getId(),    
+                          "calle": self.getEstado().getCalle(),    
+                          "altura": self.getEstado().getAltura(),    
+                          "data_capturas": capturas_dic
+                          }
+      falla_json = JSONEncoder.encode(falla_formateada)
+      print "falla_json tiene los siguientes datos -->\n %s" % falla_json
+      print ""
+      print "Enviando captura ...\n"
+      api_client.post(falla_json)
+
 
 class Capturador(object):
 
@@ -79,6 +119,7 @@ class Capturador(object):
     self.colCapturasTotales = []
     self.colCapturasConfirmadas = []
     self.apiClient = ApiClientApp()
+    self.estrategia = EstrategiaConfirmados()
     print "Inicializado Capturador"
 
   def getColCapturasTotales(self):
@@ -106,7 +147,10 @@ class Capturador(object):
   # Asocia la falla con la captura recien realizada.
   def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla):
     falla = ItemFalla()
-    estado = Confirmada(LAT_PRUEBA,LONG_PRUEBA).cambiar(falla)
+    api_geo = GeofencingAPI()
+    latitud_prueba,longitud_prueba = api_geo.getLatLong()
+    estado = Confirmada(latitud_prueba,longitud_prueba).cambiar(falla)
+    # estado = Confirmada(LAT_PRUEBA,LONG_PRUEBA).cambiar(falla)
     self.capturar(data, dir_trabajo, nombre_captura,falla)
 
 
@@ -114,8 +158,7 @@ class Capturador(object):
     # Se instancia la captura(con los valores de la view anterior),
     # se almacena en disco y se se agrega a la lista de capturas del 
     # capturador.
-    cap = Captura(nombre_captura,dir_trabajo,FORMATO_CAPTURA, EXTENSION_ARCHIVO)  
-    
+    cap = Captura(nombre_captura,dir_trabajo,FORMATO_CAPTURA, EXTENSION_ARCHIVO)
     # Se indica a la falla que registre su captura, la alamcene en disco y
     # la agregue a su colCapturas .
     # def registrarCaptura(self,dataSensor,item_falla,cap,capturador):
@@ -123,14 +166,20 @@ class Capturador(object):
     print "Captura realizada con exito! Agregada: ",str(cap)
     print ""
 
-
-
-  # Filtra las colCapturasTotales y solamente deja en capturas
+  # Filtra las colCapturasTotales y agrega solamente las capturas confirmadas
+  # a la colCapturasConfirmadas
   def filtrarCapturas(self):
-    pass
+    # Se vacian la coleccion de capturas confirmadas
+    self.colCapturasConfirmadas = []
+    self.estrategia.filtrar(self.colCapturasConfirmadas,self.colCapturasTotales)
 
-  def enviarCapturas(self):
-    pass
+
+
+  # Envia las fallas que capturo el capturador.
+  def enviarCapturas(self,url_server):
+    for falla in self.capturador.getColCapturasConfirmadas():
+      falla.enviar(URL_UPLOAD_SERVER,self.apiClient)
+    
 
   
 # + Capturador > CapturadorInformado
@@ -141,6 +190,7 @@ class CapturadorInformados(Capturador):
   def __init__(self):
     super(CapturadorInformados,self).__init__()
     self.colBachesInformados = ListadoFallas()
+    self.estrategia = EstrategiaInformados()
     print "Inicializado CapturadorInformado"
 
   def getColBachesInformados(self):
@@ -150,7 +200,6 @@ class CapturadorInformados(Capturador):
   def inicializar_fallas(self):
     for obj in self.colBachesInformados:
       obj.is_selected = False
-    print "ItemFallas inicializadas ..."
 
   def solicitarInformados(self,calle):
     try:

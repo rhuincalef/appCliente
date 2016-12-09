@@ -5,16 +5,17 @@
 
 #:import sist_op os
 #:import const constantes
+#:import dictAdapter kivy.adapters.dictadapter
+#:import appModule kivy.app
 
 <SubirCapturasServidorScreen>:
-	file_chooser: filechooser
-	ruta_fs: ruta_en_fs
+	listado_capturas: listado
 
     GridLayout:
 		id: layout_principal
 		orientation: 'vertical'
 		cols: 1
-		rows: 4
+		rows: 2
 
 		Label:
 			id: titulo
@@ -23,47 +24,20 @@
 			color: 0,0,0,1
 			canvas.before:
 				Color:
-					#rgba: 0,0.7,0, 1
 					rgba: const.COLOR_LABELS_RGBA
 				Rectangle:
 					pos: self.pos
 					size: self.size
 
-		Label:
-			id: ruta_en_fs
-			text: sist_op.getcwd()
-			size_hint:(1,0.05)
-			color: 0,0,0,1
-			canvas.before:
-				Color:
-					#rgba: 0,0.7,0, 1
-					rgba:const.COLOR_LABELS_RGBA
-				Rectangle:
-					pos: self.pos
-					size: self.size
 		
-		FileChooserIconView:
-		    id: filechooser
-		    multiselect: True
-		    size_hint:(1,0.7)
+		### ListView para seleccion de las fallas
+	    ListView:
+	    	id:listado
 
-		    #Filtros para los archivos que se mostraran en el filechooser
-		    filters: ['*.pcd','*.py']
-			
-			#dirselect: True
-			canvas.before:
-				Color:
-					rgba: 0,0,0,1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-
-			
-		    #Cambio de directorio
-		    on_entries_cleared: root.refrescar_directorio()
-		    #1 tap sobre el archivo
-		    #on_selection: root.select(filechooser.path, filechooser.selection)
-		    
+	    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().filtrarCapturas(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
+	    	
+	    	# Tamanio en porcentajes con respecto al widget anterior
+	    	size_hint:(1,0.9)
 
 		    
 	#Barra de opciones abajo
@@ -74,14 +48,14 @@
 		rows: 1
 		size_hint:(1,0.05)
 		
-		Button:
-        	id: bt_subir_archivos
-        	text: "Seleccionar todo"
-        	on_press: root.seleccionar_todo()
+		#Button:
+        #	id: bt_subir_archivos
+        #	text: "Seleccionar todo"
+        #	on_press: root.seleccionar_todo()
         
 	    Button:
         	id: bt_subir_archivos
-        	text: "Enviar capturas"
+        	text: "Enviar fallas"
         	on_press: root.enviar_capturas()
 
         Button:	

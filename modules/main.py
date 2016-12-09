@@ -59,8 +59,30 @@ class MainApp(App):
 	def obtenerInformados(self,calle):
 		return self.capturadorInformados.solicitarInformados(calle)
 
+
+	# Retorna la coleccion de fallas informadas + confirmadas(registradas en la calle)
+	# Usado para obtener una coleccion de ItemFalla para mostrar en el listview.
+	def filtrarCapturas(self):
+		self.capturador.filtrarCapturas()
+		self.capturadorInformados.filtrarCapturas()
+		colCapturas = []
+		colCapturas = self.capturador.getColCapturasConfirmadas() + \
+						self.capturadorInformados.getColCapturasConfirmadas()
+		return colCapturas
+
+
+	#Envia las capturas filtradas al servidor con POST
+	def subir_capturas(self):
+		print "Enviando fallas nuevas ..."
+		self.capturador.enviarCapturas(URL_UPLOAD_SERVER)
+		print "Enviando fallas Informadas ..."
+		self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER)
+
+
 	#Captura de nuevos baches(no informados)
 	def capturar(self,data,dir_trabajo,nombre_captura,id_falla):
+		print "Asociando falla con id_falla %s" % id_falla
+		print ""
 		capturador_a_usar = self.capturador
 		if id_falla != FALLA_NO_ESTABLECIDA:
 			capturador_a_usar = self.capturadorInformados
