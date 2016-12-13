@@ -17,7 +17,8 @@
 
 	-application/config/autoload.php //Agregar FallaMultimedia y  FallaMultimediaModelo al array "model".
 	-index.php // Suprimir notice y warnings modificando la funcion error_reporting() por error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
-	-/etc/php5/apache2/php.ini //Modificar el valor de post_max_size a 20M o upload_max_filesize a un valor de 20M (toma el tamaño de archivo mas pequeño).
+	-/etc/php5/apache2/php.ini //Modificar el valor de post_max_size a 20M, upload_max_filesize a un valor de 20M (toma el tamaño de archivo mas pequeño como limte). Adicionalmente modificar la directiva post_max_size = 30M,ya que
+	si este valor es muy pequeño, se descartan los datos del $_POST (Problema al realizar la subida con varios archivos multipart/form-data pesados). 
 	-application/config/mimes.php // Agregar a la clave 'csv' el tipo mime "text/plain".
 	-
 	
