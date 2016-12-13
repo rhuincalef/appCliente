@@ -89,7 +89,7 @@ class ItemFalla(SelectableDataItem):
   # Si la falla esta seleccionada,se convierte y se
   # envia al servidor en formato json.
   # TODO: CONTINUAR POR ACA!!!
-  def enviar(self,url_server,api_client):
+  def enviar(self,url_server,api_client,cantidad_fallas):
     print "Inicio ItemFalla "
     if self.is_selected:
       # Se convierte cada captura en un csv y luego se envia la falla en 
@@ -97,7 +97,8 @@ class ItemFalla(SelectableDataItem):
       capturas_dic = {}
       for cap in self.colCapturas:
         data_cap = cap.convertir()
-        #Se indexa la data por el nombre del archivo de la captura
+        #Se indexa la data por el nombre del archivo de la captura.
+        # {"nombre_archivo_csv.csv"," CONTENIDO DE LA NUBE DE PUNTOS"}
         capturas_dic[cap.getNombreArchivoCaptura()] = data_cap
 
       falla_formateada = {
@@ -110,7 +111,7 @@ class ItemFalla(SelectableDataItem):
       print "falla_json tiene los siguientes datos -->\n %s" % falla_json
       print ""
       print "Enviando captura ...\n"
-      api_client.post(falla_json)
+      api_client.postCapturas(falla_json,cantidad_fallas)
 
 
 class Capturador(object):
@@ -176,11 +177,14 @@ class Capturador(object):
 
 
   # Envia las fallas que capturo el capturador.
-  def enviarCapturas(self,url_server):
+  def enviarCapturas(self,url_server,total_fallas_confirmadas,cant_actual_enviada):
+    controlador = App.get_running_app()
     for falla in self.capturador.getColCapturasConfirmadas():
       falla.enviar(URL_UPLOAD_SERVER,self.apiClient)
-    
-
+      # Actualizacion grafica del porcentaje de fallas enviadas
+      cant_actual_enviada = cant_actual_enviada + 1
+      controlador.actualizar_porcentaje_envio(total_fallas_confirmadas,
+                                              cant_actual_enviada)
   
 # + Capturador > CapturadorInformado
 #     -ColBachesInformados (Se envian la calle y/o altura y envia los informados en ese rango)

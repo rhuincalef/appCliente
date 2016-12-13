@@ -8,6 +8,10 @@ class ExcepcionAjax(Exception):
 	pass
 
 
+
+# Instalar requests con pip y toolbelt request
+# sudo pip install requests-toolbelt
+
 class ApiClientApp(object):
 	def __init__(self):
 		self.conexionServer = requests
@@ -32,6 +36,20 @@ class ApiClientApp(object):
 			raise ExcepcionAjax(msg)
 
 		return results_json
+
+	def postCapturas(self,url,dic_fallas):
+		dic_archivos_csv = dic_fallas["data_capturas"]
+		for archivo,datos in dic_archivos_csv.iteritems():
+			# files = {'file': ('report.csv', 'some,data,to,send\nanother,row,to,send\n')}
+			files = {'file': (archivo, datos) }
+			# "data" tiene el valor separado por comas, 
+			# "files" es el nombre del archivo+contenido de este.
+			r = requests.post(url, files=files,data=dic_fallas, headers=)
+			if r.status_code != 200:
+				raise ExcepcionAjax("Error en el envio de captura al servidor.")
+
+
+
 
 
 

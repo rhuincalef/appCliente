@@ -43,18 +43,19 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal):
 	cols_originales = nube_numpy1.shape[1]
 	nube_aplanada = nube_numpy1.flatten()
 	nube_numpy = numpy.asarray(map(lambda x: round(x,8),nube_aplanada))
-	print "nube_numpy : "
-	print nube_numpy
+	print "dksamdkamsdkma"
+	# print "nube_numpy : " 
+	# print nube_numpy
 	nube_dimension_ajustada = nube_numpy.reshape(rows_originales,cols_originales)
-	return nube_dimension_ajustada
-	# print "nube_dimension_ajustada : "
-	# print nube_dimension_ajustada
-	# arch_salida = "foo1.csv"
-	# numpy.savetxt(arch_salida, nube_dimension_ajustada , delimiter=",")
-	# print "CSV Data generada correctamente"
+	print "nube_dimension_ajustada : "
+	print nube_dimension_ajustada
+	arch_salida = "foo1.csv"
+	numpy.savetxt(arch_salida, nube_dimension_ajustada , delimiter=",")
+	print "CSV Data generada correctamente"
+	# return nube_dimension_ajustada
 
 
-# generarDataCsv("bacheProfundo.pcd",".")
+generarDataCsv("falla_nueva_1.pcd",".")
 
 
 

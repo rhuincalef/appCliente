@@ -1,0 +1,63 @@
+
+-Archivos que se deben modificar para configurar el servicio rest en CodeIgniter:
+	-index.php // Establecer el entorno de desarrollo como de produccion.
+	-publico.php //Agregar el controlador api_rest.php al _remap() que rutea la
+					//invocacion al metodo.
+	-routes.php // Agregar la url para rutear la aplicacion.
+	-rest.php  // Copiar en application/config
+	-Rest_controller.php // Copiar en  application/libraries.
+	-api_rest.php //Agregar a application/controllers
+	-pcd_upload_model.php //Agregar el modelo que realiza la subida de los archivos
+							// enviados por AppCliente.
+	-multimedia.php //TODO: Completar el metodo accion() para guardar el .csv
+					// en esta clase y no en upload_pcd_model.php.
+
+	-fallaMultimediaModelo.php // Se usa para asociar el objeto multimedia 
+								// a una falla existente.
+
+	-application/config/autoload.php //Agregar FallaMultimedia y  FallaMultimediaModelo al array "model".
+	-index.php // Suprimir notice y warnings modificando la funcion error_reporting() por error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+	-/etc/php5/apache2/php.ini //Modificar el valor de post_max_size a 20M o upload_max_filesize a un valor de 20M (toma el tamaño de archivo mas pequeño).
+	-application/config/mimes.php // Agregar a la clave 'csv' el tipo mime "text/plain".
+	-
+	
+	
+-Pasos para configurar CodeIgniter para que funcione con query_string:
+
+	1-Abrir el archivo de configuracion application/config.php y modificar las siguientes lineas:
+		$config['uri_protocol'] = 'REQUEST_URI';
+		$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-?';
+		$config['enable_query_strings'] = TRUE;
+	2- Reiniciar apache2.
+
+
+
+Instalar curl y probar con el siguiente comando las peticiones -->
+
+//Peticion por GET (prueba del controlador)
+//Funcion ok desde navegador --> http://localhost/repoProyectoBacheo/web/restapi/upload_pcd?id=99&nombre=Rodrigo&archivo_captura_1=00000022221111 
+
+//Funcion desde linea de comandos -->
+curl -X GET -v -H "Accept:application/json" -H "Content-Type:application/json"  "http://localhost/repoProyectoBacheo/web/restapi/upload_pcd?id=99&nombre=rodrigo"
+
+
+
+
+//Peticion por POST
+//Sin JSON 
+curl -X POST -H "Accept:application/json" -H "Content-Type:multipart/form-data" -d "id=99&nombre=Rodrigo&archivo_captura_1=00000022221111" -v http://localhost/repoProyectoBacheo/web/restapi/upload_pcd 
+
+
+//Sin JSON -->OK!
+curl -X POST   -d "id=99&nombre=Rodrigo" -v http://localhost/repoProyectoBacheo/web/restapi/upload_pcd
+
+
+
+
+
+
+
+
+
+
+

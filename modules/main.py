@@ -74,9 +74,28 @@ class MainApp(App):
 	#Envia las capturas filtradas al servidor con POST
 	def subir_capturas(self):
 		print "Enviando fallas nuevas ..."
-		self.capturador.enviarCapturas(URL_UPLOAD_SERVER)
+		cant_total_fallas_conf = len(self.capturador.getColCapturasConfirmadas() + \
+									self.capturadorInformados.getColCapturasConfirmadas())
+
+		cant_actual_enviada = 0
+		cant_actual_enviada = self.capturador.enviarCapturas(URL_UPLOAD_SERVER,
+															cant_total_fallas_conf,
+															cant_enviada)
 		print "Enviando fallas Informadas ..."
-		self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER)
+		cant_actual_enviada = self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER,
+																		cant_total_fallas_conf,
+																		cant_actual_enviada)
+		print "-------------------------->Enviado %s %% de las capturas" % \
+																cant_actual_enviada
+
+	# Este metodo se emplea para actualizar el porcentaje enviado al servidor
+	# en una ProgressBar.
+	# TODO: TERMINAR DEPSUES DE FINALIZADO EL SERVIDOR!!!
+	def actualizar_porcentaje_envio(self,total_fallas_confirmadas,cant_fallas_enviadas):
+		print "------------------------->Enviado %s %% de capturas al sevidor..." % \
+            (cant_fallas_enviadas/total_fallas_confirmadas)
+      	print ""
+
 
 
 	#Captura de nuevos baches(no informados)
