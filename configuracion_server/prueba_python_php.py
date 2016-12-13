@@ -147,4 +147,7 @@ if __name__ == '__main__':
 	print('\nUpload finished! (Returned status {0} {1})'.format(
 		r.status_code, r.reason
 	))
+	print "LONGITUD TOTAL DEL ENCODER: %s" % encoder.len
+	print "================================================="
+	print ""
 

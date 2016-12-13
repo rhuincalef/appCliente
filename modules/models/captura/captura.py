@@ -42,8 +42,9 @@ class Captura(object):
 
 	#Conversion a de los archivos .pcd a csv para enviar dentro del json de la falla
 	def convertir(self):
-		csvNube = generarDataCsv(pcl,self.archivoCaptura,self.dirLocal)
-		return csvNube
+		nombreArchCsvNube = generarDataCsv(pcl,self.archivoCaptura,
+									self.dirLocal,self.nombreCaptura)
+		return nombreArchCsvNube
 
 
 

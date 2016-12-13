@@ -1,10 +1,8 @@
+# -*- coding: utf-8 -*-
+import kivy
+kivy.require('1.0.5')
 
-# +Capturador
-# 		-ColCapturasTotales
-# 		-ColCapturasConfirmadas(Capturas que se van a subir al servidor)
-# 		-apiClient
-# 		+filtrarCapturas(colCapturasTotales)
-# 		+enviarCapturas(apiClient)
+from kivy.app import App
 
 import sys,os
 from apiclient1 import ApiClientApp,ExcepcionAjax
@@ -88,30 +86,30 @@ class ItemFalla(SelectableDataItem):
 
   # Si la falla esta seleccionada,se convierte y se
   # envia al servidor en formato json.
-  # TODO: CONTINUAR POR ACA!!!
-  def enviar(self,url_server,api_client,cantidad_fallas):
+  def enviar(self,url_server,api_client):
     print "Inicio ItemFalla "
     if self.is_selected:
       # Se convierte cada captura en un csv y luego se envia la falla en 
       # formato JSON al servidor.
-      capturas_dic = {}
+      capturasConvertidas = []
       for cap in self.colCapturas:
-        data_cap = cap.convertir()
-        #Se indexa la data por el nombre del archivo de la captura.
-        # {"nombre_archivo_csv.csv"," CONTENIDO DE LA NUBE DE PUNTOS"}
-        capturas_dic[cap.getNombreArchivoCaptura()] = data_cap
+        nombreArchCsv = cap.convertir()
+        capturasConvertidas.append(nombreArchCsv)
+        print "Archivo %s generado " % nombreArchCsv
+        print ""
 
       falla_formateada = {
                           "id": self.getEstado().getId(),    
                           "calle": self.getEstado().getCalle(),    
                           "altura": self.getEstado().getAltura(),    
-                          "data_capturas": capturas_dic
+                          "data_capturas": capturasConvertidas
                           }
-      falla_json = JSONEncoder.encode(falla_formateada)
-      print "falla_json tiene los siguientes datos -->\n %s" % falla_json
-      print ""
-      print "Enviando captura ...\n"
-      api_client.postCapturas(falla_json,cantidad_fallas)
+      # falla_json = JSONEncoder.encode(falla_formateada)
+      # print "falla_json tiene los siguientes datos -->\n %s" % falla_json
+      # print ""
+      # print "Enviando captura ...\n"
+      # api_client.postCapturas(falla_json,cantidad_fallas)
+      api_client.postCapturas(url_server,falla_formateada)
 
 
 class Capturador(object):
@@ -179,13 +177,16 @@ class Capturador(object):
   # Envia las fallas que capturo el capturador.
   def enviarCapturas(self,url_server,total_fallas_confirmadas,cant_actual_enviada):
     controlador = App.get_running_app()
-    for falla in self.capturador.getColCapturasConfirmadas():
+    for falla in self.getColCapturasConfirmadas():
       falla.enviar(URL_UPLOAD_SERVER,self.apiClient)
       # Actualizacion grafica del porcentaje de fallas enviadas
       cant_actual_enviada = cant_actual_enviada + 1
-      controlador.actualizar_porcentaje_envio(total_fallas_confirmadas,
+      controlador.actualizar_barra_progreso(total_fallas_confirmadas,
                                               cant_actual_enviada)
   
+
+
+
 # + Capturador > CapturadorInformado
 #     -ColBachesInformados (Se envian la calle y/o altura y envia los informados en ese rango)
 #     +solicitarInformados()

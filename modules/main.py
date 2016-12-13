@@ -44,6 +44,8 @@ class MainApp(App):
 		self.capturador = Capturador()
 		self.capturadorInformados = CapturadorInformados()
 		self.bind(on_start=self.instanciada_app)
+		self.screen_manager = None
+		print "Inicializado MainApp!"
 
 
 	#Metodo para el chequeo del estado de la aplicacion.
@@ -80,7 +82,7 @@ class MainApp(App):
 		cant_actual_enviada = 0
 		cant_actual_enviada = self.capturador.enviarCapturas(URL_UPLOAD_SERVER,
 															cant_total_fallas_conf,
-															cant_enviada)
+															cant_actual_enviada)
 		print "Enviando fallas Informadas ..."
 		cant_actual_enviada = self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER,
 																		cant_total_fallas_conf,
@@ -90,11 +92,16 @@ class MainApp(App):
 
 	# Este metodo se emplea para actualizar el porcentaje enviado al servidor
 	# en una ProgressBar.
-	# TODO: TERMINAR DEPSUES DE FINALIZADO EL SERVIDOR!!!
-	def actualizar_porcentaje_envio(self,total_fallas_confirmadas,cant_fallas_enviadas):
+    #TODO: CONTINUAR POR ACA!!!
+	def actualizar_barra_progreso(s,total_fallas_confirmadas,cant_fallas_enviadas):
 		print "------------------------->Enviado %s %% de capturas al sevidor..." % \
-            (cant_fallas_enviadas/total_fallas_confirmadas)
-      	print ""
+		(cant_fallas_enviadas/float(total_fallas_confirmadas))
+		print "type()"
+		print "%s" % type(s)
+      	#Obtener screenmanager y hacer que se actualice la barra de progreso.
+		screen_upload = s.screen_manager.get_screen('enviocapturasserver')
+		screen_upload.actualizar_progress_bar(cant_fallas_enviadas,
+				total_fallas_confirmadas)
 
 
 
@@ -134,6 +141,8 @@ class MainApp(App):
 		self.title = TITULO_APP
 		self.inicializar(sm)
 		sm.current = SCREEN_PRINCIPAL
+		print "En build()"
+		self.screen_manager = sm
 		return sm
    
 if __name__ == '__main__':

@@ -33,8 +33,7 @@ def mostrarDialogo(titulo="",content="",contiene_boton=True):
 
 
 #Crea un csv para enviar al servidor.
-# def generarDataCsv(self,pcl,nombreArchivoCaptura,dirLocal):
-def generarDataCsv(nombreArchivoCaptura,dirLocal):
+def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 	pathFile = dirLocal + "/" + nombreArchivoCaptura
 	print "Convirtiendo archivo %s" % pathFile
 	print ""
@@ -43,19 +42,18 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal):
 	cols_originales = nube_numpy1.shape[1]
 	nube_aplanada = nube_numpy1.flatten()
 	nube_numpy = numpy.asarray(map(lambda x: round(x,8),nube_aplanada))
-	print "dksamdkamsdkma"
-	# print "nube_numpy : " 
-	# print nube_numpy
 	nube_dimension_ajustada = nube_numpy.reshape(rows_originales,cols_originales)
 	print "nube_dimension_ajustada : "
 	print nube_dimension_ajustada
-	arch_salida = "foo1.csv"
+	print "Archivo csv: %s" % nombreCaptura
+	print ""
+	arch_salida = nombreCaptura
 	numpy.savetxt(arch_salida, nube_dimension_ajustada , delimiter=",")
 	print "CSV Data generada correctamente"
-	# return nube_dimension_ajustada
+	return arch_salida
+	
 
-
-generarDataCsv("falla_nueva_1.pcd",".")
+# generarDataCsv("falla_nueva_1.pcd",".")
 
 
 

@@ -37,10 +37,12 @@ class SubirCapturasServidorScreen(Screen):
 			print ""
 		self.listado_capturas.adapter.data = fallas_dic
 
-	#Envia las capturas adaptadas para el envio al servidor
+	#Envia las capturas adaptadas para el envio al servidor,
+	#
 	def enviar_capturas(self):
 		controlador = App.get_running_app()
 		controlador.subir_capturas()
+		self.manager.current = 'enviocapturasserver'
 
 		
 	def volver(self):
@@ -82,3 +84,5 @@ class SubirCapturasServidorScreen(Screen):
 		                            }
 		              }]
 		    }
+
+

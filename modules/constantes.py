@@ -4,12 +4,6 @@
 # el sist. de archivos
 ROOT_PCD_FOLDER = "../"
 
-
-# URL donde el usuario subira las capturas en .pcd
-URL_UPLOAD_SERVER = ""
-# URL para obtener los baches informados
-URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
-
 TITULO_APP = "Capturador de fallas"
 
 SCREEN_PRINCIPAL = 'menu'
@@ -62,4 +56,25 @@ FALLA_NO_ESTABLECIDA = -1
 
 LAT_PRUEBA = 30.0000
 LONG_PRUEBA = -10.000
+
+
+
+############################################################################
+########################## Constantes del servidor##########################
+############################################################################
+
+#URL donde se verificara si la falla se encuentra dada de alta, si es asi se da el
+# ok(200) retornando el $id. Sino, se da de alta la falla y se retorna su id, para
+# subirla al servidor. 
+URL_CHECK_FALLA = "http://localhost/repoProyectoBacheo/web/restapi/verificar_falla"
+
+# URL donde el usuario subira las capturas en .pcd
+URL_UPLOAD_SERVER = "http://localhost/repoProyectoBacheo/web/restapi/upload_pcd"
+
+# URL para obtener los baches informados
+URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
+
+DIVISOR_EN_MB = 1000000.0
+
+
 

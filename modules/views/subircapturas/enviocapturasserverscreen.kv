@@ -1,0 +1,79 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del 
+# archivo .kv.
+
+<SubirCapturasServidorScreen>:
+	archivo_actual: archivo_actual_subido
+	bytes_subidos: cant_bytes_subidos
+	barra_progreso: progress_bar
+
+	
+    GridLayout:
+		id: layout_principal
+		orientation: 'vertical'
+		cols: 1
+		rows: 5
+
+		Label:
+			id: texto_indicador
+			text: "Enviando los archivos al servidor..."
+			size_hint:(1,0.05)
+			color: 0,0,0,1
+			canvas.before:
+				Color:
+					rgba: const.COLOR_LABELS_RGBA
+				Rectangle:
+					pos: self.pos
+					size: self.size
+
+		#Se actualiza el porcentaje de archivos subidos al servidor.
+		# Ej. "Subiendo captura: foo0.csv "
+		Label:
+			id: archivo_actual_subido
+			text: ""
+			size_hint:(1,0.05)
+			color: 0,0,0,1
+			canvas.before:
+				Color:
+					rgba: const.COLOR_LABELS_RGBA
+				Rectangle:
+					pos: self.pos
+					size: self.size
+		
+		#Se muestra la cantidad de bytes subidos actualmente al servidor.
+		# Ej. " 7.5MB/100MB subidos al servidor "
+		Label:
+			id: cant_bytes_subidos
+			text: ""
+			size_hint:(1,0.05)
+			color: 0,0,0,1
+			canvas.before:
+				Color:
+					rgba: const.COLOR_LABELS_RGBA
+				Rectangle:
+					pos: self.pos
+					size: self.size
+		
+		ProgressBar:
+			id: progress_bar
+			#El valor maximo de la barra es del 100%
+			max: 100
+			size_hint:(1,0.8)
+
+		GridLayout:
+			id: layout_btn
+			orientation: 'horizontal'
+			cols: 1
+			rows: 1
+			size_hint: (0.8,0.05)
+
+	        Button:	
+	        	id: bt_salir
+	        	on_press: root.cancelar_subida()
+	        	text: "Cancelar"
+
+
+
+
+
