@@ -76,8 +76,7 @@ URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
 
 DIVISOR_EN_MB = 1000000.0
 
-
-#Tamanio maximo de peticion en POST
+#Tamanio maximo de peticion en POST (en bytes)
 MAX_POST_SIZE = 20000000
 
 

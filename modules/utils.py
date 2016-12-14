@@ -33,6 +33,9 @@ def mostrarDialogo(titulo="",content="",contiene_boton=True):
 
 
 #Crea un csv para enviar al servidor.
+import pcl
+import numpy
+
 def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 	pathFile = dirLocal + "/" + nombreArchivoCaptura
 	print "Convirtiendo archivo %s" % pathFile
@@ -41,19 +44,20 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 	rows_originales = nube_numpy1.shape[0]
 	cols_originales = nube_numpy1.shape[1]
 	nube_aplanada = nube_numpy1.flatten()
-	nube_numpy = numpy.asarray(map(lambda x: round(x,8),nube_aplanada))
+	# nube_numpy = numpy.asarray(map(lambda x: round(x,2),nube_aplanada))
+	my_array = map(lambda x: round(x,2),nube_aplanada)
+	nube_numpy = numpy.array(map(lambda x: float(round(x,2)),nube_aplanada))
 	nube_dimension_ajustada = nube_numpy.reshape(rows_originales,cols_originales)
 	print "nube_dimension_ajustada : "
 	print nube_dimension_ajustada
 	print "Archivo csv: %s" % nombreCaptura
 	print ""
 	arch_salida = nombreCaptura + ".csv"
-	numpy.savetxt(arch_salida, nube_dimension_ajustada , delimiter=",")
+	numpy.savetxt(arch_salida, nube_dimension_ajustada ,fmt="%4.6f", delimiter=",")
 	print "CSV Data generada correctamente: %s" % arch_salida
 	return arch_salida
 	
-
-# generarDataCsv("falla_nueva_1.pcd",".")
+# generarDataCsv("nueva_1.pcd",".","nueva_1")
 
 
 

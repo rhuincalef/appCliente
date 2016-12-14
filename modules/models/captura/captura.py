@@ -46,6 +46,10 @@ class Captura(object):
 		# nombreArchCsvNube = generarDataCsv(self.nombreArchivoCaptura,
 		# 							self.dirLocal,archivo_csv_salida)
 		# return nombreArchCsvNube
+
+		# TODO: DIVIDIR LAS PETICIONES POST PARA AQUELLOS CSV QUE TENGAN UN
+		# TAMANIO MUCHO MAYOR AL PERMITIDO.
+		# round(float(os.path.getsize("nueva_1.pcd"))/1000000.0,2)	
 		return self.nombreArchivoCaptura
 
 
