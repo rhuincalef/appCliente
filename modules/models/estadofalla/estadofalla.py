@@ -75,6 +75,10 @@ class Informada(Estado):
 		# Se obtienen las fallas agregadas a capturadorInformadas.colCapturasTotales()
 		# si item_falla ya existe se le appendea la captura, sino
 		# se agrega item_falla con la captura actual seteada. 
+		print "En registrar fallaInformada!"
+		print "item_falla: %s" % type(item_falla)
+		print "capturador: %s" % type(capturador)
+		print "captura: %s" % type(captura)
 		fallas_totales = capturador.getColCapturasTotales()
 		falla = None
 		for f in fallas_totales:
@@ -85,23 +89,33 @@ class Informada(Estado):
 			if f_id == item_falla_id:
 				falla = f
 				break
+
+		# Si no existe la falla se agrega a la coleccion de fallas totales del 
+		# capturador, y se le agrega la captura. Si existe, simplemente se 
+		# le agrega la captura a su coleccion de capturas.
 		if falla is None:
 			print "ItemFalla no encontrado: id= ",item_falla.getEstado().getId()
 			fallas_totales.append(item_falla)
 		else:
-			col_falla = falla.getColCapturas()
-			col_falla.append(captura)
 			print "Encontrado item_falla (%s)" % item_falla.getEstado().getId()
 			print ""
-			#self.mostrar_capturas_asociadas(falla)
+
+		col_falla = item_falla.getColCapturas()
+		col_falla.append(captura)
+		print "Agregada captura a falla!"
+		self.mostrar_capturas_asociadas(item_falla)
 
 	def mostrar_capturas_asociadas(self,falla):
 		print "Falla (%s) tiene las capturas:  " % falla.getEstado().getId() 
-		for cap in falla.getColCapturas():
-			print "Captura: nombreAchivo(%s) - dirLocal(%s) - formato(%s) - extension(%s)" %\
-					(cap.getNombreArchivoCaptura(),cap.getDirLocal(),cap.getFormato(),cap.getExtension())
-			print ""
-		
+		if len(falla.getColCapturas()) > 0:
+			print "Item_falla no tiene capturas!!!!"
+		else:
+			print "Item_falla agregado con capturas!"
+			for cap in falla.getColCapturas():
+				print "Captura: nombreAchivo(%s) - dirLocal(%s) - formato(%s) - extension(%s)" %\
+						(cap.getNombreArchivoCaptura(),cap.getDirLocal(),cap.getFormato(),cap.getExtension())
+				print ""
+			
 
 
 

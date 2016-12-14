@@ -8,6 +8,7 @@ import pcl
 import numpy as np
 from constantes import *
 from utils import generarDataCsv
+import os
 
 class Captura(object):
 	def __init__(self,nombre,dirLocal,formatoArchivo,extensionArchivo):
@@ -15,10 +16,8 @@ class Captura(object):
 		self.dirLocal = dirLocal
 		self.formato = formatoArchivo
 		self.extension = extensionArchivo
-		self.colCapturas = []
 		self.nombreArchivoCaptura = None
 
-	
 
 	def getNombreArchivo(self):
 		return self.nombreCaptura
@@ -37,14 +36,17 @@ class Captura(object):
 
 
 	def __repr__(self):
-		return "Captura:" + str(self.dirLocal)+str(self.dirLocal)
+		return "Captura: nombreArchivoCaptura=%s ;dirLocal = %s ; nombreCaptura= %s\n" %\
+					(self.nombreArchivoCaptura,self.dirLocal,self.nombreCaptura)
 
 
 	#Conversion a de los archivos .pcd a csv para enviar dentro del json de la falla
 	def convertir(self):
-		nombreArchCsvNube = generarDataCsv(pcl,self.archivoCaptura,
-									self.dirLocal,self.nombreCaptura)
-		return nombreArchCsvNube
+		# archivo_csv_salida = os.path.splitext(self.nombreArchivoCaptura)[0] 
+		# nombreArchCsvNube = generarDataCsv(self.nombreArchivoCaptura,
+		# 							self.dirLocal,archivo_csv_salida)
+		# return nombreArchCsvNube
+		return self.nombreArchivoCaptura
 
 
 

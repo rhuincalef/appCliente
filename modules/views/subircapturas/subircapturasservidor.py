@@ -40,10 +40,8 @@ class SubirCapturasServidorScreen(Screen):
 	#Envia las capturas adaptadas para el envio al servidor,
 	#
 	def enviar_capturas(self):
-		controlador = App.get_running_app()
-		controlador.subir_capturas()
 		self.manager.current = 'enviocapturasserver'
-
+		
 		
 	def volver(self):
 		#Limpiar el ListView y volver

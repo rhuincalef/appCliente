@@ -1,11 +1,16 @@
 # Clase que realiza la comunicacion con el servidor para obtener los baches
 #  y subir archivos al servidor
-from constantes import URL_INFORMADOS,URL_UPLOAD_SERVER
+# -*- coding: utf-8 -*-
+import kivy
+kivy.require('1.0.5')
+
+from kivy.app import App
+from constantes import *
 import requests
 from requests.exceptions import ConnectionError
 import requests
 from json import JSONDecoder	
-from requests_toolbelt.multipart.encoder import MultipartEncoder
+from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncoderMonitor
 from clint.textui.progress import Bar as ProgressBar
 from constantes import *
 
@@ -53,29 +58,32 @@ class ApiClientApp(object):
 		m = MultipartEncoder(fields={'id': str(8).encode("utf-8") })
 		request_verificar_bache = requests.post(URL_CHECK_FALLA, data=m,
 			headers={'Content-Type': m.content_type})
-		if request_verificar_bache.status_code != 200:
+
+		if request_verificar_bache.status_code != requests.codes.ok:
 			raise ExcepcionAjax("Error comprobando la existencia de la falla en el sistema")
 
 		#Crea el objeto encoder para el multipart/form-data con el dic_falla de la 
 		# falla actual.
 		encoder = self.create_upload(dic_falla)
 		self.long_total_bytes = encoder.len
-		self.nombre_archivo_actual = archivo
+		# self.nombre_archivo_actual = archivo
 
 		monitor = MultipartEncoderMonitor(encoder, self.actualizar_datos)
 		r = requests.post(url, data=monitor,headers={'Content-Type': monitor.content_type})
 		print('\nUpload finished! (Returned status {0} {1})'.format(
 			r.status_code, r.reason
 		))
+		if r.status_code != requests.codes.ok:
+			raise ExcepcionAjax("Error subiendo las capturas de la falla en calle %s y altura %s .Respuesta del servidor: %s" %\
+									(dic_falla["calle"],dic_falla["altura"],r.reason) )
 
 
 	# Actualiza los datos que se muestran respecto del nombre del archivo actual
 	#  y la cantidad de bytes enviados/cantidad bytes totales.
-	def actualizar_datos(monitor):
+	def actualizar_datos(self,monitor):
 		controlador = App.get_running_app()
 		controlador.actualizar_datos(monitor.bytes_read,
-										self.long_total_bytes,
-										self.nombre_archivo_actual)
+										self.long_total_bytes)
 		print "Actualizado progress_bar"
 		print ""
 		
@@ -96,6 +104,10 @@ class ApiClientApp(object):
 		for capturaCsv in dic_falla["data_capturas"]:
 			dic_envio[capturaCsv] = (capturaCsv,open(capturaCsv,'rb'),'csv')
 
+
+		print "dic_falla contiene -->"
+		print dic_falla["data_capturas"]
+		print "++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 		print "dic_envio contiene la siguiente data -->"
 		print dic_envio
 		print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++"

@@ -210,3 +210,6 @@ class KinectScreen(Screen):
         controlador = App.get_running_app()
         controlador.capturar(data,self.dir_trabajo,self.nombre_captura,
                                 self.idFalla)
+        mostrarDialogo(titulo="Captura de falla",
+                        content="Falla capturada corectamente!")
+        

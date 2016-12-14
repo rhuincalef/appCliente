@@ -59,9 +59,9 @@ LONG_PRUEBA = -10.000
 
 
 
-############################################################################
-########################## Constantes del servidor##########################
-############################################################################
+#############################################################################################
+#################### Constantes para comunicacion con el  servidor ##########################
+#############################################################################################
 
 #URL donde se verificara si la falla se encuentra dada de alta, si es asi se da el
 # ok(200) retornando el $id. Sino, se da de alta la falla y se retorna su id, para
@@ -76,5 +76,8 @@ URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
 
 DIVISOR_EN_MB = 1000000.0
 
+
+#Tamanio maximo de peticion en POST
+MAX_POST_SIZE = 20000000
 
 

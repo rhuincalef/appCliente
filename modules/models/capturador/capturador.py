@@ -84,8 +84,8 @@ class ItemFalla(SelectableDataItem):
     else:
       return -1
 
-  # Si la falla esta seleccionada,se convierte y se
-  # envia al servidor en formato json.
+  # Si la falla esta seleccionada,se convierte y se envia al servidor con todas sus capturas
+  # asociadas como un POST de tipo mime: multipart/form-data.
   def enviar(self,url_server,api_client):
     print "Inicio ItemFalla "
     if self.is_selected:
@@ -93,6 +93,7 @@ class ItemFalla(SelectableDataItem):
       # formato JSON al servidor.
       capturasConvertidas = []
       for cap in self.colCapturas:
+        print "Convirtiendo captura de la falla: %s" % cap
         nombreArchCsv = cap.convertir()
         capturasConvertidas.append(nombreArchCsv)
         print "Archivo %s generado " % nombreArchCsv
@@ -183,7 +184,7 @@ class Capturador(object):
       cant_actual_enviada = cant_actual_enviada + 1
       controlador.actualizar_barra_progreso(total_fallas_confirmadas,
                                               cant_actual_enviada)
-  
+    return cant_actual_enviada
 
 
 

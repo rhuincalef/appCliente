@@ -76,23 +76,29 @@ class MainApp(App):
 	#Envia las capturas filtradas al servidor con POST
 	def subir_capturas(self):
 		print "Enviando fallas nuevas ..."
-		cant_total_fallas_conf = len(self.capturador.getColCapturasConfirmadas() + \
-									self.capturadorInformados.getColCapturasConfirmadas())
+		try:
+			cant_total_fallas_conf = len(self.capturador.getColCapturasConfirmadas() + \
+							self.capturadorInformados.getColCapturasConfirmadas())
 
-		cant_actual_enviada = 0
-		cant_actual_enviada = self.capturador.enviarCapturas(URL_UPLOAD_SERVER,
-															cant_total_fallas_conf,
-															cant_actual_enviada)
-		print "Enviando fallas Informadas ..."
-		cant_actual_enviada = self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER,
-																		cant_total_fallas_conf,
-																		cant_actual_enviada)
-		print "-------------------------->Enviado %s %% de las capturas" % \
-																cant_actual_enviada
+			cant_actual_enviada = 0
+			cant_actual_enviada = self.capturador.enviarCapturas(URL_UPLOAD_SERVER,
+													cant_total_fallas_conf,
+													cant_actual_enviada)
+			print "Enviando fallas Informadas ..."
+			cant_actual_enviada = self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER,
+																cant_total_fallas_conf,
+																cant_actual_enviada)
+			print "-------------------------->Enviado %s %% de las capturas" % \
+														cant_actual_enviada
+			mostrarDialogo(titulo="Subida de capturas",
+				content="La carga de capturas en el servidor se ha realizado con exito!")
 
+		except ExcepcionAjax, e:
+			mostrarDialogo(titulo="Error en la subida de archivos",
+				content=e.message)
+			
 	# Este metodo se emplea para actualizar el porcentaje enviado al servidor
 	# en una ProgressBar.
-    #TODO: CONTINUAR POR ACA!!!
 	def actualizar_barra_progreso(s,total_fallas_confirmadas,cant_fallas_enviadas):
 		print "------------------------->Enviado %s %% de capturas al sevidor..." % \
 		(cant_fallas_enviadas/float(total_fallas_confirmadas))
@@ -100,10 +106,17 @@ class MainApp(App):
 		print "%s" % type(s)
       	#Obtener screenmanager y hacer que se actualice la barra de progreso.
 		screen_upload = s.screen_manager.get_screen('enviocapturasserver')
-		screen_upload.actualizar_progress_bar(cant_fallas_enviadas,
+		screen_upload.actualizar_barra_progreso(cant_fallas_enviadas,
 				total_fallas_confirmadas)
 
 
+
+	# Actualiza los labels de cantidad de bytes subidos
+	# en la pantalla enviocapturasservidor
+	def actualizar_datos(self,bytes_read,total_bytes):
+		screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+		screen_upload.actualizar_datos(bytes_read,total_bytes)
+	
 
 	#Captura de nuevos baches(no informados)
 	def capturar(self,data,dir_trabajo,nombre_captura,id_falla):

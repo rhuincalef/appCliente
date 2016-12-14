@@ -47,9 +47,9 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 	print nube_dimension_ajustada
 	print "Archivo csv: %s" % nombreCaptura
 	print ""
-	arch_salida = nombreCaptura
+	arch_salida = nombreCaptura + ".csv"
 	numpy.savetxt(arch_salida, nube_dimension_ajustada , delimiter=",")
-	print "CSV Data generada correctamente"
+	print "CSV Data generada correctamente: %s" % arch_salida
 	return arch_salida
 	
 
