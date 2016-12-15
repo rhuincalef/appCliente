@@ -39,6 +39,12 @@ class Captura(object):
 		return "Captura: nombreArchivoCaptura=%s ;dirLocal = %s ; nombreCaptura= %s\n" %\
 					(self.nombreArchivoCaptura,self.dirLocal,self.nombreCaptura)
 
+	#Usado para el almacenamiento en formato json
+	def __str__(self):
+		cadena = ""
+		if self.nombreArchivoCaptura is not None:
+			cadena = self.nombreArchivoCaptura
+		return cadena
 
 	#Conversion a de los archivos .pcd a csv para enviar dentro del json de la falla
 	def convertir(self):

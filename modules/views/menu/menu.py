@@ -5,35 +5,21 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.gridlayout import GridLayout
-# from kivy.lang import Builder
+from kivy.uix.floatlayout import FloatLayout
+from loadsavedialog import *
+from kivy.uix.popup import Popup
 
+from utils import mostrarDialogo
+import os
 
-# import sys,os
-# # Agrega las vistas al path de Python
-# def agregar_vistas(listaVistas):
-#     for vista in listaVistas:
-#         path_local = '../' + vista
-#         sys.path.append(os.path.join(os.path.dirname('__file__'), path_local  ))
-
-# #Configuracion y carpetas de las vistas de la app.
-# agregar_vistas(['config',
-#                 'tiposfalla',
-#                 'fallanueva',
-#                 'fallainformada',
-#                 'subircapturas',
-#                 '../models'
-#                 ])
-
-# from menutiposfalla import MenuTiposFallaScreen
-# from kinectviewer import KinectScreen
-# import importlib
-# from utilscfg import *
 
 class MenuScreen(Screen):
     '''Create a controller that receives a custom widget from the kv lang file.
 
     Add an action to be called from the kv lang file.
     '''
+
+
     def salir(self):
     	App.get_running_app().stop()
 
@@ -43,6 +29,56 @@ class MenuScreen(Screen):
         self.manager.current = "menutiposfalla"
         print "cambie!"
         print self.manager.current
+
+
+    def guardar_fallas_json(self):
+        print "Cargado dialogo guardado de fallas"
+        content = SaveDialog(save=self.guardar, cancel=self.dismiss_popup)
+        self._popup = Popup(title="Guardar fallas capturadas", content=content,
+                    size_hint=(0.9, 0.9))
+        self._popup.open()
+        
+    def cargar_fallas_json(self):
+        print "Cargado dialogo carga de fallas"        
+        content = LoadDialog(load=self.cargar, cancel=self.dismiss_popup)
+        self._popup = Popup(title="Cargar fallas capturadas", content=content,
+                        size_hint=(0.9, 0.9))
+        self._popup.open()
+
+    def dismiss_popup(self):
+        self._popup.dismiss()
+
+    # Carga los capturadores con las fallas leidas de disco.
+    def cargar(self, path, filename):
+        try:
+            with open(os.path.join(path, filename[0])) as stream:
+                # self.text_input.text = stream.read()
+                controlador = App.get_running_app()
+                controlador.leerFallas(stream)
+        except IOError, e:
+            mostrarDialogo(titulo="Error al leer el archivo de  fallas de disco",
+                content=e.message)
+        except Exception, e:
+            mostrarDialogo(titulo="Error en el proceso de lectura de fallas",
+                content=e.message)
+
+        self.dismiss_popup()
+
+    #Guarda serializa las capturas en un json y lo guarda a disco
+    def guardar(self, path, filename):
+        try:
+            with open(os.path.join(path, filename), 'w') as stream:
+                # stream.write(self.text_input.text)
+                controlador = App.get_running_app()
+                controlador.guardarFallas(stream)
+        except IOError, e:
+            mostrarDialogo(titulo="Error al guardar el archivo de fallas en disco",
+                content=e.message)
+        except Exception, e:
+            mostrarDialogo(titulo="Error en el proceso de guardado de fallas",
+                content=e.message)
+
+        self.dismiss_popup()
 
 
     # Opcion para subir las fallas capturadas(informadas y nuevas) al servidor

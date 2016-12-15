@@ -7,6 +7,7 @@ import pcl
 import utils
 import os
 
+from capturador import ItemFalla
 
 def conexionSensorEstablecida():
 		import freenect
@@ -64,22 +65,35 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 #Retorna el tamanio en bytes de un arreglo de archivos.
 def calcularTamanio(archivosCaptura):
 	bytes = 0
-	# round(float(os.path.getsize("nueva_1.pcd"))/1000000.0,2)	
 	for arch in archivosCaptura:
 		bytes += os.path.getsize(arch)
 	print "Tamanio con capturas: %s es: %s \n" % (archivosCaptura,bytes)
 	return bytes
 
+# class Falla(object):
+# 	def __init__(self,idFalla=0,calle="",altura="",data_capturas=[]):
+# 		self.idFalla = idFalla
+# 		self.calle = calle
+# 		self.altura = altura
+# 		self.data_capturas = data_capturas
 
-# Se persisten las capturas realizadas y las fallas a las que corresponden
-# en un archivo JSON.
-def persistirCapturas(itemsFalla):
-	pass
+# 	def __repr__(self):
+# 		return "(idFalla:%s; calle:%s; altura:%s; data_capturas:%s ); " %\
+# 				(str(self.idFalla),self.calle,self.altura,self.data_capturas)
+
+# Retorna un listado de objetos de itemFallas configuradas correctamente, y 
+# recibe por parametro cada entrada del diccionario.
+def parser_fallas(parsed_dict):
+    return ItemFalla(idFalla=parsed_dict['idFalla'],
+                   calle=parsed_dict['calle'],
+                   altura=parsed_dict['altura'],
+                   data_capturas=parsed_dict['data_capturas'])
 
 
-# Retorna la coleccion de fallas
-def leerCapturas(archivoJson):
-	pass
+
+
+
+
 
 
 

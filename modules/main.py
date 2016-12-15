@@ -62,6 +62,20 @@ class MainApp(App):
 		return self.capturadorInformados.solicitarInformados(calle)
 
 
+	#Lee el archivo .json a partir del stream
+	def leerFallas(self,stream):
+		self.capturador.leerFallas(stream)
+		self.capturadorInformados.leerFallas(stream)
+
+
+	#Guarda el archivo .json a partir del stream
+	def guardarFallas(self,stream):
+		self.capturador.guardarFallas(stream)
+		self.capturadorInformados.guardarFallas(stream)
+
+
+
+
 	# Retorna la coleccion de fallas informadas + confirmadas(registradas en la calle)
 	# Usado para obtener una coleccion de ItemFalla para mostrar en el listview.
 	def filtrarCapturas(self):

@@ -8,13 +8,14 @@ import sys,os
 from apiclient1 import ApiClientApp,ExcepcionAjax
 from kivy.adapters.models import SelectableDataItem
 from constantes import *
-from utils import mostrarDialogo,calcularTamanio
+from utils import mostrarDialogo,calcularTamanio,parser_fallas
 from captura import *
 from estadofalla import *
 from geofencing import *
 from estrategia import *
 
-from json import JSONEncoder
+
+from json import JSONEncoder,JSONDecoder
 
 
 class ListadoFallas(list):  
@@ -84,6 +85,22 @@ class ItemFalla(SelectableDataItem):
     else:
       return -1
 
+
+  def __str__(self):
+    representacion_string = "{}"
+    # Segun el tipo de estado se retorna una representacion distinta.
+    if type(self.estado) is Informada:
+      representacion_string = '{ "idFalla": %s, "calle": %s, "altura": %s, "data_capturas": %s }' %\
+        (self.estado.getId(),self.estado.getCalle(),self.estado.getAltura(),
+          str(self.colCapturas) )
+    else:
+      representacion_string = '{ "idFalla": %s, "calle": %s, "altura": %s, "data_capturas": %s }' %\
+        (99,"Unknown","Unknown",
+          str(self.colCapturas))
+    return representacion_string
+
+
+
   # Si la falla esta seleccionada,se convierte y se envia al servidor con todas sus capturas
   # asociadas como un POST de tipo mime: multipart/form-data.
   def enviar(self,url_server,api_client):
@@ -104,7 +121,6 @@ class ItemFalla(SelectableDataItem):
         cantCapturasAEnviar -= 1 
         print "Archivo %s generado " % nombreArchCsv
         print ""
-
         bytes_actuales_col = calcularTamanio(capturasConvertidas) 
         bytes_actuales_cap = calcularTamanio([cap.getNombreArchivoCaptura()])
         if (bytes_actuales_col + bytes_actuales_cap) >= MAX_POST_REQUEST_SIZE or \
@@ -127,10 +143,8 @@ class ItemFalla(SelectableDataItem):
           print "Enviando la peticion: %s " % falla_formateada
           print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
           capturasConvertidas = []
-        
-        
 
-
+  
 
 class Capturador(object):
 
@@ -161,7 +175,36 @@ class Capturador(object):
     print ""
     os.chdir(dir_actual)
     return contador_arch
-    
+  
+
+  #Lee el archivo json especificado de disco.
+  def leerFallas(self,stream):
+    try:
+      content = stream.read()
+      #TODO: Terminar de configurar PARSER FALLAS PARA QUE INSTANCIE LAS FALLAS
+      # COMPLETAS CON SU ESTADO, LOS OBJETOS CAPTURA Y DEMAS.
+      # CONTINUAR POR ACA!!!
+
+      lista = JSONDecoder(object_hook=parser_fallas).decode(content)
+      print "El listado de objetos json parseados tiene: %s" % lista
+      self.colCapturasTotales = lista
+    except Exception, e:
+      raise Exception("Error leyendo el archivo de fallas desde disco")
+
+
+  #Guarda el archivo json especificado de disco.
+  def guardarFallas(self,stream):
+      json_str = ""
+      try:
+        for captura in self.colCapturasTotales:
+          json_str = json_str +" "+ str(captura) 
+
+        print "El json_str a guardar es: %s " % json_str
+        stream.write(json_str)
+      except Exception, e:
+        raise Exception("Error escribiendo el archivo de fallas en disco")
+      
+
 
   # Asocia la falla con la captura recien realizada.
   def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla):

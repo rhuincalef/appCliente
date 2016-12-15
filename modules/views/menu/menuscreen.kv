@@ -9,7 +9,7 @@
         id: layout_principal
         orientation: 'vertical'
         cols: 1
-        rows: 3
+        rows: 5
         btn_capturar_fallas: bt_capturar_fallas
         btn_subir_archivos: bt_subir_archivos
         btn_salir: bt_salir
@@ -20,12 +20,24 @@
         	on_press: root.menu_fallas()
         	#background_color: (255,255,255)
 
+        #Guarda las fallas en un archivo .json
+        Button:
+            id: bt_guardar_fallas
+            text: "Guardar fallas capturadas"
+            on_press: root.guardar_fallas_json()
+        
+        #Carga los capturadores con las fallas leidas de un archivo json
+        Button:
+            id: bt_cargar_fallas
+            text: "Guardar fallas capturadas"
+            on_press: root.cargar_fallas_json()
+            #background_color: (255,255,255)
+        
         Button:
         	id: bt_subir_archivos
         	text: "Subir archivos"
         	on_press: root.menu_subidas_servidor()
-
-
+            
         Button:	
         	id: bt_salir
         	on_press: root.salir()
