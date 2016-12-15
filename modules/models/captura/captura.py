@@ -42,15 +42,11 @@ class Captura(object):
 
 	#Conversion a de los archivos .pcd a csv para enviar dentro del json de la falla
 	def convertir(self):
-		# archivo_csv_salida = os.path.splitext(self.nombreArchivoCaptura)[0] 
-		# nombreArchCsvNube = generarDataCsv(self.nombreArchivoCaptura,
-		# 							self.dirLocal,archivo_csv_salida)
-		# return nombreArchCsvNube
-
-		# TODO: DIVIDIR LAS PETICIONES POST PARA AQUELLOS CSV QUE TENGAN UN
-		# TAMANIO MUCHO MAYOR AL PERMITIDO.
-		# round(float(os.path.getsize("nueva_1.pcd"))/1000000.0,2)	
-		return self.nombreArchivoCaptura
+		archivo_csv_salida = os.path.splitext(self.nombreArchivoCaptura)[0] 
+		nombreArchCsvNube = generarDataCsv(self.nombreArchivoCaptura,
+									self.dirLocal,archivo_csv_salida)
+		return nombreArchCsvNube
+		# return self.nombreArchivoCaptura
 
 
 

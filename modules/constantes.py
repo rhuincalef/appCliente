@@ -76,7 +76,16 @@ URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
 
 DIVISOR_EN_MB = 1000000.0
 
-#Tamanio maximo de peticion en POST (en bytes)
-MAX_POST_SIZE = 20000000
+# Tamanio maximo de peticion en POST (en bytes)
+# post_max_size en /etc/php5/apache2/php.ini tiene un valor de 30M.
+#
+# ; Maximum allowed size for uploaded files.
+# ; http://php.net/upload-max-filesize
+# upload_max_filesize = 25M
+#
+# ; Maximum number of files that can be uploaded via a single request
+# max_file_uploads = 20
 
+MAX_POST_REQUEST_SIZE = 20000000
+MAX_FILE_UPLOADS_FOR_REQUEST = 20
 

@@ -8,7 +8,7 @@ import sys,os
 from apiclient1 import ApiClientApp,ExcepcionAjax
 from kivy.adapters.models import SelectableDataItem
 from constantes import *
-from utils import mostrarDialogo
+from utils import mostrarDialogo,calcularTamanio
 from captura import *
 from estadofalla import *
 from geofencing import *
@@ -92,25 +92,44 @@ class ItemFalla(SelectableDataItem):
       # Se convierte cada captura en un csv y luego se envia la falla en 
       # formato JSON al servidor.
       capturasConvertidas = []
+      cantCapturasAEnviar = len(self.colCapturas)
       for cap in self.colCapturas:
+        #Si se supera el tamanio maximo de una peticion POST o si se supera
+        # la cantidad de archivos permitida por peticion, se envia la peticion 
+        # con la cant. actual de archivos y se vacia capturasConvertidas 
+        # para seguir preparando las proximas peticiones.
         print "Convirtiendo captura de la falla: %s" % cap
         nombreArchCsv = cap.convertir()
         capturasConvertidas.append(nombreArchCsv)
+        cantCapturasAEnviar -= 1 
         print "Archivo %s generado " % nombreArchCsv
         print ""
 
-      falla_formateada = {
+        bytes_actuales_col = calcularTamanio(capturasConvertidas) 
+        bytes_actuales_cap = calcularTamanio([cap.getNombreArchivoCaptura()])
+        if (bytes_actuales_col + bytes_actuales_cap) >= MAX_POST_REQUEST_SIZE or \
+                    len(capturasConvertidas) == MAX_FILE_UPLOADS_FOR_REQUEST or \
+                      cantCapturasAEnviar == 0:
+          print "bytes_actuales_col: %s -MAX_POST_SIZE: %s" %\
+              (bytes_actuales_col,MAX_POST_REQUEST_SIZE)
+          print ""
+          print "len(capturasConvertidas)= %s ; MAX_FILE_UPLOADS_FOR_REQUEST= %s" %\
+            (len(capturasConvertidas),MAX_FILE_UPLOADS_FOR_REQUEST)
+          print "cantCapturasAEnviar = %s" % cantCapturasAEnviar
+          print ""
+          falla_formateada = {
                           "id": self.getEstado().getId(),    
                           "calle": self.getEstado().getCalle(),    
                           "altura": self.getEstado().getAltura(),    
                           "data_capturas": capturasConvertidas
                           }
-      # falla_json = JSONEncoder.encode(falla_formateada)
-      # print "falla_json tiene los siguientes datos -->\n %s" % falla_json
-      # print ""
-      # print "Enviando captura ...\n"
-      # api_client.postCapturas(falla_json,cantidad_fallas)
-      api_client.postCapturas(url_server,falla_formateada)
+          api_client.postCapturas(url_server,falla_formateada)
+          print "Enviando la peticion: %s " % falla_formateada
+          print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+          capturasConvertidas = []
+        
+        
+
 
 
 class Capturador(object):

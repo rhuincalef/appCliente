@@ -8,6 +8,7 @@ from kivy.uix.screenmanager import Screen
 from constantes import DIVISOR_EN_MB
 import time
 from time import time
+import os
 
 # Screen que contiene la pantalla de envio de datos al sevidor
 class EnvioCapturasServerScreen(Screen):
@@ -29,18 +30,13 @@ class EnvioCapturasServerScreen(Screen):
 	#Actualiza los labels con la data actual.
 	def actualizar_datos(self,cant_bytes,total_bytes):		
 		print "Actualizando labels de datos..."
-		print "%s - %s"
-		self.t2 = time()
-		if self.t2 - self.t1 >= 1:
-			self.t1 = self.t2
-			print "El texto en bytes_subidos es: %s\n" % self.bytes_subidos.text
-			self.bytes_subidos.text =  "%s MB/%s MB subidos al servidor... "%\
-										( (cant_bytes/DIVISOR_EN_MB),
-											(total_bytes / DIVISOR_EN_MB))
+		print "bytes_enviados: %s - bytes_totales: %s" % (cant_bytes,total_bytes)
+		self.bytes_subidos.text =  "%s MB/%s MB subidos al servidor... "%\
+									( (cant_bytes/DIVISOR_EN_MB),
+										(total_bytes / DIVISOR_EN_MB))
+		print "El texto en bytes_subidos es: %s\n" % self.bytes_subidos.text
+		print ""
 
-
-		# self.archivo_actual.text = str(self.archivo_actual.text) + ".csv"
-		
 
 	# Actualiza la barra de progreso con un porcentaje deducido del total
 	# de las capturas a subir.

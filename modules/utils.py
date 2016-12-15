@@ -4,6 +4,8 @@ from kivy.uix.label import Label
 from  kivy.uix.popup import Popup
 import numpy
 import pcl
+import utils
+import os
 
 
 def conexionSensorEstablecida():
@@ -33,8 +35,8 @@ def mostrarDialogo(titulo="",content="",contiene_boton=True):
 
 
 #Crea un csv para enviar al servidor.
-import pcl
-import numpy
+#import pcl
+#import numpy
 
 def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 	pathFile = dirLocal + "/" + nombreArchivoCaptura
@@ -55,9 +57,30 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 	arch_salida = nombreCaptura + ".csv"
 	numpy.savetxt(arch_salida, nube_dimension_ajustada ,fmt="%4.6f", delimiter=",")
 	print "CSV Data generada correctamente: %s" % arch_salida
-	return arch_salida
-	
+	return arch_salida	
 # generarDataCsv("nueva_1.pcd",".","nueva_1")
+
+
+#Retorna el tamanio en bytes de un arreglo de archivos.
+def calcularTamanio(archivosCaptura):
+	bytes = 0
+	# round(float(os.path.getsize("nueva_1.pcd"))/1000000.0,2)	
+	for arch in archivosCaptura:
+		bytes += os.path.getsize(arch)
+	print "Tamanio con capturas: %s es: %s \n" % (archivosCaptura,bytes)
+	return bytes
+
+
+# Se persisten las capturas realizadas y las fallas a las que corresponden
+# en un archivo JSON.
+def persistirCapturas(itemsFalla):
+	pass
+
+
+# Retorna la coleccion de fallas
+def leerCapturas(archivoJson):
+	pass
+
 
 
 
