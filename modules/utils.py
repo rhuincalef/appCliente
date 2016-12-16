@@ -7,8 +7,6 @@ import pcl
 import utils
 import os
 
-from capturador import ItemFalla
-
 def conexionSensorEstablecida():
 		import freenect
 		if freenect.sync_get_depth() is None:
@@ -31,7 +29,6 @@ def mostrarDialogo(titulo="",content="",contiene_boton=True):
 		btn = Button(text="Aceptar",size_hint=(1,0.1))
 		layout.add_widget(btn)
 		btn.bind(on_press=popup.dismiss)
-
 	popup.open()
 
 
@@ -62,7 +59,8 @@ def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
 # generarDataCsv("nueva_1.pcd",".","nueva_1")
 
 
-#Retorna el tamanio en bytes de un arreglo de archivos.
+# Retorna el tamanio en bytes de un arreglo de archivos.
+# Ej. ["1.pcd","2.pcd"]
 def calcularTamanio(archivosCaptura):
 	bytes = 0
 	for arch in archivosCaptura:
@@ -81,17 +79,20 @@ def calcularTamanio(archivosCaptura):
 # 		return "(idFalla:%s; calle:%s; altura:%s; data_capturas:%s ); " %\
 # 				(str(self.idFalla),self.calle,self.altura,self.data_capturas)
 
+from capturador import ItemFalla
 # Retorna un listado de objetos de itemFallas configuradas correctamente, y 
 # recibe por parametro cada entrada del diccionario.
 def parser_fallas(parsed_dict):
-    return ItemFalla(idFalla=parsed_dict['idFalla'],
-                   calle=parsed_dict['calle'],
-                   altura=parsed_dict['altura'],
-                   data_capturas=parsed_dict['data_capturas'])
-
-
-
-
+	f = estado = None
+	if parsed_dict["tipo"] == "informada":
+		estado = Informada(parsed_dict["idFalla"],parsed_dict["calle"],
+							parsed_dict["altura"])
+		f = ItemFalla()
+	else:
+		estado = Confirmada(parsed_dict["latitud"],parsed_dict["longitud"])
+		f = ItemFalla()
+	f.setEstado(estado)
+	return f
 
 
 

@@ -23,13 +23,13 @@ class ExcepcionAjax(Exception):
 # Instalar requests con pip y toolbelt request
 # sudo pip install requests-toolbelt
 
+
+import threading
+
 class ApiClientApp(object):
 	def __init__(self):
 		self.conexionServer = requests
-		# Cantidad total de bytes a subir por peticion POST. 
-		self.long_total_bytes = 0
-		# Nombre de la captura actual subiendo
-		self.nombre_archivo_actual = ""
+
 
 	def getInformados(self,calle):
 		print "Obteniendo baches sobre calle: ",calle
@@ -63,12 +63,11 @@ class ApiClientApp(object):
 			raise ExcepcionAjax("Error comprobando la existencia de la falla en el sistema")
 
 		#Crea el objeto encoder para el multipart/form-data con el dic_falla de la 
-		# falla actual.
+		# peticion correspondiente a la falla actual.
 		encoder = self.create_upload(dic_falla)
-		self.long_total_bytes = encoder.len
-		# self.nombre_archivo_actual = archivo
-
-		monitor = MultipartEncoderMonitor(encoder, self.actualizar_datos)
+		# self.long_total_bytes = encoder.len
+		
+		monitor = MultipartEncoderMonitor(encoder, self.actualizar_datos_callback)
 		r = requests.post(url, data=monitor,headers={'Content-Type': monitor.content_type})
 		print('\nUpload finished! (Returned status {0} {1})'.format(
 			r.status_code, r.reason
@@ -76,15 +75,23 @@ class ApiClientApp(object):
 		if r.status_code != requests.codes.ok:
 			raise ExcepcionAjax("Error subiendo las capturas de la falla en calle %s y altura %s .Respuesta del servidor: %s" %\
 									(dic_falla["calle"],dic_falla["altura"],r.reason) )
-
+		
 
 	# Actualiza los datos que se muestran respecto del nombre del archivo actual
 	#  y la cantidad de bytes enviados/cantidad bytes totales.
-	def actualizar_datos(self,monitor):
+	def actualizar_datos_callback(self,monitor):
 		controlador = App.get_running_app()
-		controlador.actualizar_datos(monitor.bytes_read,
-										self.long_total_bytes)
-		print "Actualizado progress_bar"
+
+		# NOTA: monitor.encoder.finished es llamado cada vez que un archivo termina
+		# de subirse y monitor.encoder.len para conocer cuantos bytes se enviaron 
+		# en la peticion con ese archivo!
+
+		print "monitor.encoder.len: %s and monitor.encoder.finished: %s and monitor.bytes_read: %s" %\
+				(monitor.encoder.len,monitor.encoder.finished,monitor.bytes_read)
+		print ""
+		# controlador.actualizar_datos(monitor.bytes_read)
+		controlador.actualizar_datos(monitor.bytes_read,monitor.encoder.len,monitor.encoder.finished)
+		print "Actualizado progress_bar y datos!"
 		print ""
 		
 

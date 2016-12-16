@@ -32,7 +32,7 @@ import time
 class ObtenerInformadasScreen(Screen):
    
     def __init__(self, **kwargs):
-      cap = CapturadorInformados()      
+      # cap = CapturadorInformados()      
       #TODO: Agregar a cap.solicitarInformados() la calle y la altura
       # para traer la falla desde el servidor.
       # self.fallas_dict = cap.solicitarInformados()

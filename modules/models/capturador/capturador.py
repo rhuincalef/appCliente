@@ -8,7 +8,8 @@ import sys,os
 from apiclient1 import ApiClientApp,ExcepcionAjax
 from kivy.adapters.models import SelectableDataItem
 from constantes import *
-from utils import mostrarDialogo,calcularTamanio,parser_fallas
+from utils import *
+# from utils import mostrarDialogo,calcularTamanio
 from captura import *
 from estadofalla import *
 from geofencing import *
@@ -86,19 +87,20 @@ class ItemFalla(SelectableDataItem):
       return -1
 
 
+  # Se llama cuando se necesita la representacion compatible con json
+  # para guardar en disco
   def __str__(self):
     representacion_string = "{}"
     # Segun el tipo de estado se retorna una representacion distinta.
     if type(self.estado) is Informada:
-      representacion_string = '{ "idFalla": %s, "calle": %s, "altura": %s, "data_capturas": %s }' %\
+      representacion_string = '{ "idFalla": %s, "calle": %s, "altura": %s, "tipo": "informada", "data_capturas": %s }' %\
         (self.estado.getId(),self.estado.getCalle(),self.estado.getAltura(),
           str(self.colCapturas) )
     else:
-      representacion_string = '{ "idFalla": %s, "calle": %s, "altura": %s, "data_capturas": %s }' %\
-        (99,"Unknown","Unknown",
+      representacion_string = '{ "idFalla": %s, "calle": %s, "altura": %s, "tipo": "confirmada","latitud": %s,"longitud": %s,"data_capturas": %s }' %\
+        (99,"Unknown","Unknown",str(self.estado.getLatitud()),str(self.estado.getLongitud()),
           str(self.colCapturas))
     return representacion_string
-
 
 
   # Si la falla esta seleccionada,se convierte y se envia al servidor con todas sus capturas
@@ -144,16 +146,42 @@ class ItemFalla(SelectableDataItem):
           print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
           capturasConvertidas = []
 
-  
+
+  # Retorna el tamanio en bytes de los .pcd asociados a una captura.
+  # Se invoca para actualizacion de la progressbar y el label con 
+  # los bytes enviados/totales
+  def calcularTamanio(self):
+    bytes = 0
+    nombres_capturas = []
+    for captura in self.colCapturas:
+      arch_pcd = captura.getFullPathCaptura()
+      nombres_capturas.append(arch_pcd)
+    bytes = calcularTamanio(nombres_capturas)
+    print "Los bytes totales calculados que se enviaran son: %s" %\
+        bytes
+    print ""
+    return bytes
+
 
 class Capturador(object):
 
-  def __init__(self):
+  def __init__(self,apiclientComun):
     self.colCapturasTotales = []
     self.colCapturasConfirmadas = []
-    self.apiClient = ApiClientApp()
+    self.apiClient = apiclientComun
+    # self.apiClient = ApiClientApp()
     self.estrategia = EstrategiaConfirmados()
     print "Inicializado Capturador"
+
+
+  #Reestablece el contador de bytes totales a enviar a cero
+  def reestablecerApiClient(self):
+    self.apiClient.reestablecerApiClient()
+
+  # Se delega el metodo de apiClient que mantiene este atributo
+  def setCantBytesTotales(self,bytes_totales_a_enviar):
+    self.apiClient.setCantBytesTotales(bytes_totales_a_enviar)
+
 
   def getColCapturasTotales(self):
     return self.colCapturasTotales
@@ -185,9 +213,9 @@ class Capturador(object):
       # COMPLETAS CON SU ESTADO, LOS OBJETOS CAPTURA Y DEMAS.
       # CONTINUAR POR ACA!!!
 
-      lista = JSONDecoder(object_hook=parser_fallas).decode(content)
-      print "El listado de objetos json parseados tiene: %s" % lista
-      self.colCapturasTotales = lista
+      lista_fallas = JSONDecoder(object_hook=parser_fallas).decode(content)
+      print "El listado de objetos json parseados tiene: %s" % lista_fallas
+      self.colCapturasTotales = lista_fallas
     except Exception, e:
       raise Exception("Error leyendo el archivo de fallas desde disco")
 
@@ -238,15 +266,24 @@ class Capturador(object):
 
 
   # Envia las fallas que capturo el capturador.
-  def enviarCapturas(self,url_server,total_fallas_confirmadas,cant_actual_enviada):
+  def enviarCapturas(self,url_server):
     controlador = App.get_running_app()
     for falla in self.getColCapturasConfirmadas():
       falla.enviar(URL_UPLOAD_SERVER,self.apiClient)
       # Actualizacion grafica del porcentaje de fallas enviadas
-      cant_actual_enviada = cant_actual_enviada + 1
-      controlador.actualizar_barra_progreso(total_fallas_confirmadas,
-                                              cant_actual_enviada)
-    return cant_actual_enviada
+      # cant_actual_enviada = cant_actual_enviada + 1
+      # controlador.actualizar_barra_progreso(total_fallas_confirmadas,
+      #                                         cant_actual_enviada)
+    # return cant_actual_enviada
+
+
+  # Calcula el tamanio de las capturas asociadas a cada una de las fallas
+  # confirmadas para envio al server.
+  def calcularTamanioCapturas(self):
+    bytes = 0
+    for falla in self.getColCapturasConfirmadas():
+      bytes += falla.calcularTamanio()
+    return bytes
 
 
 
@@ -255,8 +292,9 @@ class Capturador(object):
 #     +solicitarInformados()
 
 class CapturadorInformados(Capturador):
-  def __init__(self):
-    super(CapturadorInformados,self).__init__()
+  def __init__(self,apiclientComun):
+    Capturador.__init__(self,apiclientComun)
+    # super(CapturadorInformados,self).__init__()
     self.colBachesInformados = ListadoFallas()
     self.estrategia = EstrategiaInformados()
     print "Inicializado CapturadorInformado"

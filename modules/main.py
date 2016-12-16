@@ -41,8 +41,11 @@ from utils import *
 class MainApp(App):
 	def __init__(self,**kwargs):
 		super(MainApp,self).__init__()
-		self.capturador = Capturador()
-		self.capturadorInformados = CapturadorInformados()
+		# Los capturadores comparten el mismo apiClient, que lleva la cantidad
+		# comun de bytes enviados y bytes totales a enviar, de ambos capturadores.
+		apiClientComun = ApiClientApp()
+		self.capturador = Capturador(apiClientComun)
+		self.capturadorInformados = CapturadorInformados(apiClientComun)
 		self.bind(on_start=self.instanciada_app)
 		self.screen_manager = None
 		print "Inicializado MainApp!"
@@ -89,47 +92,83 @@ class MainApp(App):
 
 	#Envia las capturas filtradas al servidor con POST
 	def subir_capturas(self):
-		print "Enviando fallas nuevas ..."
+		print "Enviando fallas nuevas ..."	
+		# cant_total_fallas_conf = len(self.capturador.getColCapturasConfirmadas() + \
+		# 				self.capturadorInformados.getColCapturasConfirmadas())
+
+		bytes_totales_a_enviar = 0
+		bytes_totales_a_enviar = self.capturador.calcularTamanioCapturas()+\
+							self.capturadorInformados.calcularTamanioCapturas()
+
+		print "Los bytes_totales_a_enviar son : %s" % bytes_totales_a_enviar
+		print ""
+		lista_capturadores = [self.capturador,self.capturadorInformados]
+		t = threading.Thread(target=self.iniciar_threads_capturas, 
+								args=(bytes_totales_a_enviar,lista_capturadores,))
+
+		#Se configura el envio de los archivos como un proceso demonio.
+		t.setDaemon(True)
+		t.start()
+		# cant_actual_enviada = self.capturador.enviarCapturas(URL_UPLOAD_SERVER,
+		# 										cant_total_fallas_conf,
+		# 										cant_actual_enviada)
+		# print "Enviando fallas Informadas ..."
+		# cant_actual_enviada = self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER,
+		# 													cant_total_fallas_conf,
+		# 													cant_actual_enviada)
+		# print "-------------------------->Enviado %s %% de las capturas" % \
+		# 											cant_actual_enviada
+		# mostrarDialogo(titulo="Subida de capturas",
+		# 	content="La carga de capturas en el servidor se ha realizado con exito!")
+
+		
+
+	# Metodo que paraleliza el envio al servidor de los objetos
+	def iniciar_threads_capturas(self,bytes_totales_a_enviar,lista_capturadores):
+		# Se actualiza el valor maximo de la progressbar con los bytes totales
+		# de la peticion
+		screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+		screen_upload.setMaxBarraProgreso(bytes_totales_a_enviar)
+		print "En iniciar_threads_capturas..."
+		print "Los bytes_totales_a_enviar recibidos son: %s" % bytes_totales_a_enviar
+		print ""
 		try:
-			cant_total_fallas_conf = len(self.capturador.getColCapturasConfirmadas() + \
-							self.capturadorInformados.getColCapturasConfirmadas())
-
-			cant_actual_enviada = 0
-			cant_actual_enviada = self.capturador.enviarCapturas(URL_UPLOAD_SERVER,
-													cant_total_fallas_conf,
-													cant_actual_enviada)
-			print "Enviando fallas Informadas ..."
-			cant_actual_enviada = self.capturadorInformados.enviarCapturas(URL_UPLOAD_SERVER,
-																cant_total_fallas_conf,
-																cant_actual_enviada)
-			print "-------------------------->Enviado %s %% de las capturas" % \
-														cant_actual_enviada
+			print "Por enviar capturas!"
+			for capturador in lista_capturadores:
+				capturador.enviarCapturas(URL_UPLOAD_SERVER)
+			
+			#Completa el remanente que falte de la barra de progreso
+			screen_upload.completarBarraProg()
 			mostrarDialogo(titulo="Subida de capturas",
-				content="La carga de capturas en el servidor se ha realizado con exito!")
-
+			content="La carga de capturas en el servidor se ha realizado con exito!")
+		
 		except ExcepcionAjax, e:
 			mostrarDialogo(titulo="Error en la subida de archivos",
 				content=e.message)
-			
+
+
+
+
 	# Este metodo se emplea para actualizar el porcentaje enviado al servidor
 	# en una ProgressBar.
-	def actualizar_barra_progreso(s,total_fallas_confirmadas,cant_fallas_enviadas):
-		print "------------------------->Enviado %s %% de capturas al sevidor..." % \
-		(cant_fallas_enviadas/float(total_fallas_confirmadas))
-		print "type()"
-		print "%s" % type(s)
-      	#Obtener screenmanager y hacer que se actualice la barra de progreso.
-		screen_upload = s.screen_manager.get_screen('enviocapturasserver')
-		screen_upload.actualizar_barra_progreso(cant_fallas_enviadas,
-				total_fallas_confirmadas)
-
+	# def actualizar_barra_progreso(self,bytes_actuales_enviados):
+ #      	#Obtener screenmanager y hacer que se actualice la barra de progreso.
+	# 	screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+	# 	screen_upload.actualizar_barra_progreso(bytes_actuales_enviados)
+	# 	print "------------------------->Enviado %s bytes al sevidor...\n" % \
+	# 		screen_upload.getBytesActualesEnviados()
 
 
 	# Actualiza los labels de cantidad de bytes subidos
 	# en la pantalla enviocapturasservidor
-	def actualizar_datos(self,bytes_read,total_bytes):
+	def actualizar_datos(self,bytes_read,encoder_len,finished):
+		print "Actualizando data y barra_progreso ..."
+		print ""
 		screen_upload = self.screen_manager.get_screen('enviocapturasserver')
-		screen_upload.actualizar_datos(bytes_read,total_bytes)
+		screen_upload.actualizar_datos(bytes_read,encoder_len,finished)
+		print "------------------------->Enviado %s bytes al sevidor...\n" % \
+										screen_upload.getBytesActualesEnviados()
+
 	
 
 	#Captura de nuevos baches(no informados)

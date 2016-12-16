@@ -2,52 +2,78 @@
 #:import my_const constantes
 
 <LoadDialog>:
-    BoxLayout:
-        size: root.size
-        pos: root.pos
-        orientation: "vertical"
-        FileChooserIconView:
-            id: filechooser
-            filters: ['*.txt']
-            rootpath: my_const.ROOT_PCD_FOLDER 
+    orientation: "vertical"
+    cols:1
+    rows:2
+    #Label:
+    #    text: "HOLSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
-        BoxLayout:
-            size_hint_y: None
-            height: 30
-            Button:
-                text: "Cancel"
-                on_release: root.cancel()
+    FileChooserIconView:
+        id: filechooser
+        size_hint: (1,.95)
+        filters: ['*.txt']
+        rootpath: my_const.ROOT_PCD_FOLDER 
 
-            Button:
-                text: "Load"
-                on_release: root.load(filechooser.path, filechooser.selection)
+    GridLayout:
+        orientation: "horizontal"
+        cols: 2
+        rows: 1
+        size_hint: (1,.05)
+        padding:[root.width/5,0,0.5,0]
+        spacing: [root.width/6,0]
+        col_default_width: root.width/6
+
+        Button:
+            text: "Cargar"
+            on_release: root.load(filechooser.path, filechooser.selection)
+
+        Button:
+            text: "Cancel"
+            on_release: root.cancel()
+
 
 <SaveDialog>:
     text_input: text_input
-    BoxLayout:
-        size: root.size
-        pos: root.pos
-        orientation: "vertical"
-        FileChooserIconView:
-            id: filechooser
-            filters: ['*.txt']
-            rootpath: my_const.ROOT_PCD_FOLDER
-            on_selection: text_input.text = self.selection and self.selection[0] or ''
+    orientation: "vertical"
+    cols:1
+    rows:4
 
-        TextInput:
-            id: text_input
-            size_hint_y: None
-            height: 30
-            multiline: False
+#    Label:
+#        text: "TEXTO DE PRUEBA DE GUARDADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
 
-        BoxLayout:
-            size_hint_y: None
-            height: 30
-            Button:
-                text: "Cancel"
-                on_release: root.cancel()
+    Label:
+        text: "Ingrese el nombre del archivo de captura"
+        size_hint: (1,0.05)
 
-            Button:
-                text: "Save"
-                on_release: root.save(filechooser.path, text_input.text)
+    TextInput:
+        id: text_input
+        size_hint: (1,0.05)
+        multiline: False
+
+    FileChooserIconView:
+        id: filechooser
+        size_hint: (1,0.85)
+        filters: ['*.txt']
+        rootpath: my_const.ROOT_PCD_FOLDER
+        on_selection: text_input.text = self.selection and self.selection[0] or ''
+
+
+    GridLayout:
+        orientation: "horizontal"
+        cols:2
+        rows:1
+        size_hint: (1,0.05)        
+        padding:[root.width/5,0,0.5,0]
+        spacing: [root.width/6,0]
+        col_default_width: root.width/6
+
+        Button:
+            text: "Save"
+            on_release: root.save(filechooser.path, text_input.text)
+
+        Button:
+            text: "Cancel"
+            on_release: root.cancel()
+
+
 

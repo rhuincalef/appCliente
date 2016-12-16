@@ -19,6 +19,10 @@ class Captura(object):
 		self.nombreArchivoCaptura = None
 
 
+	#Retorna la ruta completa al archivo asociado con la captura
+	def getFullPathCaptura(self):
+		return self.dirLocal + "/" + self.nombreArchivoCaptura 
+
 	def getNombreArchivo(self):
 		return self.nombreCaptura
 
@@ -77,7 +81,6 @@ class Captura(object):
 	# Descarta las capturas que no se confirmaron.
 	def descartar(self):
 		pass
-
 
 
 
