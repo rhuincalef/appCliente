@@ -45,6 +45,7 @@ class EnvioCapturasServerScreen(Screen):
 	# STREAM ACUMULADA, por lo que simplemente se tiene que pisar con
 	# el valor de progress_bar y el valor del label
 	def actualizar_datos(self,cant_bytes):
+		# self.cant_bytes_actuales = cant_bytes
 		self.cant_bytes_actuales = cant_bytes
 		print "bytes_enviados: %s - bytes_totales: %s" % (self.cant_bytes_actuales,
 														self.barra_progreso.max)

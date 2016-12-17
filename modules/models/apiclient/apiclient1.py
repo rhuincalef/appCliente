@@ -30,6 +30,7 @@ class ApiClientApp(object):
 	def __init__(self):
 		self.conexionServer = requests
 		self.bytes_leidos = 0
+		self.ya_actualizado = False
 
 
 	def getInformados(self,calle):
@@ -88,15 +89,35 @@ class ApiClientApp(object):
 		controlador = App.get_running_app()
 		#Se acumula la cantidad de bytes leidos para el multipart/form-data 
 		# La primera vez se asigna y las siguientes se incrementa
-		if self.bytes_leidos == 0:
-			self.bytes_leidos = monitor.bytes_read
-		else:
-			self.bytes_leidos += monitor.bytes_read
+		print "Inicio actualizar_datos_callback() ..."
+		print ""
+		print "self.bytes_leidos: %s ; monitor.bytes_read: %s " %\
+					(self.bytes_leidos,monitor.bytes_read)
+		print ""
+		print "self.bytes_leidos + monitor.bytes_read= %s " %\
+					(self.bytes_leidos + monitor.bytes_read)
+		print ""
+		# Se incrementa el contador solamente si termino y no se actualizo
+		# previamente.
+		if monitor.encoder.finished and not self.ya_actualizado:
+			self.bytes_leidos = self.bytes_leidos + monitor.bytes_read
+			self.ya_actualizado = True
+			print "monitor.encoder.finished: %s" % monitor.encoder.finished
+			print "Retornando!!"
+			return
+
+		#Se resetea el flag si termino y ya estaba actualizado
+		if monitor.encoder.finished and self.ya_actualizado:
+			print "monitor.encoder.finished=True y ya estaba actualizado "
+			self.ya_actualizado = False
+			return
 
 		# NOTA: monitor.encoder.finished es llamado cada vez que un archivo termina
 		# de subirse.
-		# controlador.actualizar_datos(monitor.bytes_read)
-		controlador.actualizar_datos(self.bytes_leidos)
+		# controlador.actualizar_datos(self.bytes_leidos)
+		controlador.actualizar_datos(self.bytes_leidos + monitor.bytes_read)
+		print "Fin actualizar_datos_callback() ..."
+		print ""
 
 		print "Actualizado progress_bar y datos!"
 		print ""
