@@ -18,7 +18,8 @@ class EnvioCapturasServerScreen(Screen):
 		self.t1 = time()
 		self.t2 = 0
 		self.barra_progreso.value = 0
-		self.bytes_acumulados = 0
+		self.cant_bytes_actuales = 0
+		# self.bytes_acumulados = 0
 
 	def completarBarraProg(self):
 		self.barra_progreso.value = self.barra_progreso.max
@@ -43,15 +44,8 @@ class EnvioCapturasServerScreen(Screen):
 	# NOTA IMPORTANTE: cant_bytes ES LA CANTIDAD DE BYTES QUE VA LEYENDO DEL
 	# STREAM ACUMULADA, por lo que simplemente se tiene que pisar con
 	# el valor de progress_bar y el valor del label
-	def actualizar_datos(self,cant_bytes,encoder_len,finished):
-		print "Actualizando labels de datos..."
-		# self.cant_bytes_actuales += cant_bytes
-		if finished and self.bytes_acumulados != cant_bytes:
-			self.bytes_acumulados += cant_bytes
-			print "Modificado self.bytes_acumulados a %s bytes" % self.bytes_acumulados
-			print ""
-			
-		self.cant_bytes_actuales = self.bytes_acumulados + cant_bytes
+	def actualizar_datos(self,cant_bytes):
+		self.cant_bytes_actuales = cant_bytes
 		print "bytes_enviados: %s - bytes_totales: %s" % (self.cant_bytes_actuales,
 														self.barra_progreso.max)
 		self.bytes_subidos.text =  "%s MB/%s MB subidos al servidor... "%\
@@ -59,7 +53,6 @@ class EnvioCapturasServerScreen(Screen):
 									(self.barra_progreso.max / DIVISOR_EN_MB))
 		print "El texto en bytes_subidos es: %s\n" % self.bytes_subidos.text
 		print ""
-		# self.barra_progreso.value += cant_bytes
 		self.barra_progreso.value = cant_bytes
 		print "Actualizada progress_bar! con bytes_actuales_enviados: %s valor actual: %s" %\
 			(self.cant_bytes_actuales,self.barra_progreso.value)

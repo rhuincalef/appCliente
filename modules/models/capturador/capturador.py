@@ -112,6 +112,10 @@ class ItemFalla(SelectableDataItem):
       # formato JSON al servidor.
       capturasConvertidas = []
       cantCapturasAEnviar = len(self.colCapturas)
+
+      #Usado para la progress_bar
+      bytes_leidos = 0
+
       for cap in self.colCapturas:
         #Si se supera el tamanio maximo de una peticion POST o si se supera
         # la cantidad de archivos permitida por peticion, se envia la peticion 
@@ -141,7 +145,7 @@ class ItemFalla(SelectableDataItem):
                           "altura": self.getEstado().getAltura(),    
                           "data_capturas": capturasConvertidas
                           }
-          api_client.postCapturas(url_server,falla_formateada)
+          bytes_leidos = api_client.postCapturas(url_server,falla_formateada,bytes_leidos)
           print "Enviando la peticion: %s " % falla_formateada
           print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
           capturasConvertidas = []

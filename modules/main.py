@@ -148,24 +148,13 @@ class MainApp(App):
 
 
 
-
-	# Este metodo se emplea para actualizar el porcentaje enviado al servidor
-	# en una ProgressBar.
-	# def actualizar_barra_progreso(self,bytes_actuales_enviados):
- #      	#Obtener screenmanager y hacer que se actualice la barra de progreso.
-	# 	screen_upload = self.screen_manager.get_screen('enviocapturasserver')
-	# 	screen_upload.actualizar_barra_progreso(bytes_actuales_enviados)
-	# 	print "------------------------->Enviado %s bytes al sevidor...\n" % \
-	# 		screen_upload.getBytesActualesEnviados()
-
-
 	# Actualiza los labels de cantidad de bytes subidos
 	# en la pantalla enviocapturasservidor
-	def actualizar_datos(self,bytes_read,encoder_len,finished):
+	def actualizar_datos(self,bytes_read):
 		print "Actualizando data y barra_progreso ..."
 		print ""
 		screen_upload = self.screen_manager.get_screen('enviocapturasserver')
-		screen_upload.actualizar_datos(bytes_read,encoder_len,finished)
+		screen_upload.actualizar_datos(bytes_read)
 		print "------------------------->Enviado %s bytes al sevidor...\n" % \
 										screen_upload.getBytesActualesEnviados()
 

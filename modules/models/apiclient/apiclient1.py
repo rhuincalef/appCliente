@@ -29,6 +29,7 @@ import threading
 class ApiClientApp(object):
 	def __init__(self):
 		self.conexionServer = requests
+		self.bytes_leidos = 0
 
 
 	def getInformados(self,calle):
@@ -53,7 +54,9 @@ class ApiClientApp(object):
 		return results_json
 
 
-	def postCapturas(self,url,dic_falla):
+	def postCapturas(self,url,dic_falla,bytes_leidos):
+
+		self.bytes_leidos =  bytes_leidos
 		#TODO: CAMBIAR ESTO POR LA FALLA QUE CORRESPONDA, CUANDO ESTE SUBIDA AL SERVER!!
 		m = MultipartEncoder(fields={'id': str(8).encode("utf-8") })
 		request_verificar_bache = requests.post(URL_CHECK_FALLA, data=m,
@@ -77,20 +80,24 @@ class ApiClientApp(object):
 									(dic_falla["calle"],dic_falla["altura"],r.reason) )
 		
 
+		return self.bytes_leidos
+
 	# Actualiza los datos que se muestran respecto del nombre del archivo actual
 	#  y la cantidad de bytes enviados/cantidad bytes totales.
 	def actualizar_datos_callback(self,monitor):
 		controlador = App.get_running_app()
+		#Se acumula la cantidad de bytes leidos para el multipart/form-data 
+		# La primera vez se asigna y las siguientes se incrementa
+		if self.bytes_leidos == 0:
+			self.bytes_leidos = monitor.bytes_read
+		else:
+			self.bytes_leidos += monitor.bytes_read
 
 		# NOTA: monitor.encoder.finished es llamado cada vez que un archivo termina
-		# de subirse y monitor.encoder.len para conocer cuantos bytes se enviaron 
-		# en la peticion con ese archivo!
-
-		print "monitor.encoder.len: %s and monitor.encoder.finished: %s and monitor.bytes_read: %s" %\
-				(monitor.encoder.len,monitor.encoder.finished,monitor.bytes_read)
-		print ""
+		# de subirse.
 		# controlador.actualizar_datos(monitor.bytes_read)
-		controlador.actualizar_datos(monitor.bytes_read,monitor.encoder.len,monitor.encoder.finished)
+		controlador.actualizar_datos(self.bytes_leidos)
+
 		print "Actualizado progress_bar y datos!"
 		print ""
 		
