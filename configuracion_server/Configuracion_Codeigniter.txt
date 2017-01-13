@@ -44,6 +44,12 @@
 			$this->request->method = $this->_detect_method();
 		... 
 	
+	-Agregar el metodo getAltura a application/models/direccion.php:
+		public function getAltura()
+		{
+			return $this->altura;
+		}
+
 	-
 
 

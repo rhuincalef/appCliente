@@ -97,6 +97,8 @@ $route['obtenerDatosVisualizacion/(\d+)'] = "publico/obtenerDatosVisualizacion/$
 // $route['restapi/upload_pcd/id/(\d+)/nombre/(:any)'] = "publico/subir_pcd/id/$1/nombre/$2/format/json";
 $route['restapi/verificar_falla'] = "publico/verificar_falla/format/json";
 $route['restapi/upload_pcd'] = "publico/subir_pcd/format/json";
+#$route['restapi/obtener_informados/id/(\d+)'] = "publico/obtener_informados/id/$1/format/json";
+$route['restapi/obtener_informados/calle/([\w]+)'] = "publico/obtener_informados/calle/$1/format/json";
 
 
 

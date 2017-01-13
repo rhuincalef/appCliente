@@ -73,8 +73,8 @@ URL_CHECK_FALLA = "http://localhost/repoProyectoBacheo/web/restapi/verificar_fal
 URL_UPLOAD_SERVER = "http://localhost/repoProyectoBacheo/web/restapi/upload_pcd"
 
 # URL para obtener los baches informados
-URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
-#URL_INFORMADOS  = "http://localhost/repoProyectoBacheo/web/restapi/get_informados"
+#URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
+URL_INFORMADOS  = "http://localhost/repoProyectoBacheo/web/restapi/obtener_informados"
 
 
 DIVISOR_EN_MB = 1000000.0

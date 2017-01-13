@@ -105,5 +105,29 @@ class Pcd_upload_model extends CI_Model
         return $res;
     }
 
+
+    public function obtener_informados(){
+        $fallas = Falla::getAll();
+        $codigo = 300;
+        $mensaje = "No hay elementos para mostrar";
+        $data = array();
+        if(count($fallas) != 0)
+        {
+            $codigo = 200;
+            foreach ($fallas as $f) {
+                $array_falla = array();
+               $array_falla["id"] = $f->getId();
+                $array_falla["calle"] = $f->direccion->getNombre();
+                $array_falla["altura"] = $f->direccion->getAltura();
+                $data[$f->getId()] = $array_falla;
+            }
+        }
+        $respuesta = array('codigo' => $codigo, 'datos' => $data);
+        return $data;
+    }
+
+
+
+
 }
 ?>

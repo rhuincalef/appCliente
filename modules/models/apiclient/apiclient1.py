@@ -35,11 +35,12 @@ class ApiClientApp(object):
 
 	def getInformados(self,calle):
 		print "Obteniendo baches sobre calle: ",calle
-		print ""
 		try:
 			results_json = {}
-			peticion = URL_INFORMADOS+ "/" + calle
-			response = self.conexionServer.get(URL_INFORMADOS)
+			peticion = URL_INFORMADOS+ "/calle/" + calle 
+			response = self.conexionServer.get(peticion)
+			print "peticion"
+			print peticion
 			if response.status_code == 200:
 				results_json = response.json()
 				print "La respuesta en formato json es: "
@@ -52,7 +53,7 @@ class ApiClientApp(object):
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
 			raise ExcepcionAjax(msg)
 
-		return results_json
+		return results_json["datos"]
 
 
 	def postCapturas(self,url,dic_falla,bytes_leidos):

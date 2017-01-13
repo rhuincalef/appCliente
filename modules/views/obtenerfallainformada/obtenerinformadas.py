@@ -37,12 +37,13 @@ class ObtenerInformadasScreen(Screen):
       # para traer la falla desde el servidor.
       # self.fallas_dict = cap.solicitarInformados()
       super(Screen, self).__init__(**kwargs)
+      self.calle = None
 
 
     def enviar_peticion(self,calle):
       print "Enviada peticion al servidor"
       print "Calle ",calle
-      
+      self.calle = calle
       popup = Popup(title='Peticion al servidor',
               content=Label(text='Cargando fallas...'),
               size_hint=(None, None), 
@@ -54,10 +55,11 @@ class ObtenerInformadasScreen(Screen):
       print "Termine!"
 
 
+    #Llamado al abrir el pop_up en enviar_peticion().
     def popup_abierto(self,popup):
       calle = self.calle_input_txt.text
       controlador = App.get_running_app()
-      controlador.obtenerInformados(calle)
+      controlador.obtenerInformados(self.calle)
       #TODO: Borrar este delay de prueba
       time.sleep(3)
       popup.dismiss()

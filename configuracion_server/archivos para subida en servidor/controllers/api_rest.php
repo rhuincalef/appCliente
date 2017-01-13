@@ -86,43 +86,63 @@ class Api_rest extends REST_Controller {
     }
 
 
-    // BACKUP DEL GET RESTFUL!
-    // public function subir_pcd_get()
-    //     {
-    //         $firephp = FirePHP::getInstance(True);
-    //         $firephp->log("En subir_pcd()  ");
-    //         $firephp->log("id con input: ".$this->input->get('id'));
-    //         $firephp->log("nombre con input: ".$this->input->get('nombre'));
-    //         $firephp->log("archivo_captura_1 con input: ".$this->input->get('archivo_captura_1'));
-            
-    //         // Se carga el modelo de subida de archivos.
-    //         $this->load->model('pcd_upload_model');
-    //         $result = $this->pcd_upload_model->subir_falla($this->post('id'),
-    //                                                         $this->post('nombre'),
-    //                                                         $this->post('archivo_captura_1') );
-    //         $firephp->log("Configurando respuesta en formato json...  ");
-    //         $firephp->log("");
+    //Obtiene las fallas informadas y las retorna en un array asociativo
+    //TODO: Modificar appCliente para que si el codigo de respuesta es 
+    // 300, se muestre un mensaje que indique "No existen baches informados en el servidor".
 
-    //         $this->load->library("input");
-            
-    //         $result = FALSE;
-    //         if ($result == FALSE) {
-    //             $message = [
-    //                 'id' => $this->input->get('id'),
-    //                 'nombre' => $this->input->get('nombre'),
-    //                 'archivo_captura_1' => $this->input->get('archivo_captura_1'),
-    //                 'respuesta' => 'Subida captura correctamente al servidor'
-    //             ];
-    //             $firephp->log($message);
-    //             $this->response($message,200); //OK (200) being the HTTP response code
-    //         }else{
-    //             $message = [
-    //                 'respuesta' => 'Error de subida de archivos al servidor'
-    //             ];
-    //             $firephp->log($message);
-    //             $this->response($message,500); // 500 ERROR INTERNO DEL SERVIDOR.
-    //         }
-    //     }
+    public function obtener_informados_get(){
+        $firephp = FirePHP::getInstance(True);
+        $firephp->log("En obtener_informados_get() ...");
+        //$firephp->log("id enviado: ".$this->get('id'));
+        $firephp->log("calle enviada: ".$this->get('calle'));
+        //TODO: Mover este metodo a un rest_model.php que se encargue
+        // de la logica de abajo.
+        try {
+            $fallas = Falla::getAll();
+            $codigo = 300;
+            $mensaje = "No hay elementos para mostrar";
+            $data = array();
+            if(count($fallas) != 0)
+            {
+                $codigo = 200;
+                foreach ($fallas as $f) {
+                    $array_falla = array();
+                   $array_falla["id"] = $f->getId();
+                    $array_falla["calle"] = $f->direccion->getNombre();
+                    $array_falla["altura"] = $f->direccion->getAltura();
+                    $data[$f->getId()] = $array_falla;
+                }
+            }
+            $respuesta = array('codigo' => $codigo, 'datos' => $data);
+            echo json_encode($respuesta);
+        } catch (MY_BdExcepcion $e) {
+            $msg = 'Error Interno de servidor: '.$mensaje;
+            echo json_encode(array('codigo' => 400, 'mensaje' =>$msg , 'valor' =>json_encode('')));            
+        }
+    }
+
+    //Hace uso de la api Geocoder https://github.com/geocoder-php/Geocoder en PHP, y a partir de la latitud y la longitud retorna un dic. asociativo con la calle y altura proporcionada por Google.
+    //
+    //TODO: TERMINAR DE INSTALAR Y PROBAR Geocoder.
+    public function obtener_datos_direccion_get(){
+        $lat = $this->get('latitud');
+        $long = $this->get('longitud');
+
+        $adapter  = new \Http\Adapter\Guzzle6\Client();
+        $geocoder = new \Geocoder\Provider\GoogleMaps($adapter);
+        $geocoder->reverse($lat, $long);
+        $data = array(
+                    'calle' =>$geocoder->getStreetName() ,
+                    'altura' =>$geocoder->getStreetNumber() 
+                 );
+        echo json_encode($data);
+    }
+
+
+    //Da de alta una falla capturada en la calle por medio de appCliente
+    public function crear_falla_nueva_get(){
+
+    }
 
 
     public function prueba(){
