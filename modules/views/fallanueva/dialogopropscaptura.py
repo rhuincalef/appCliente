@@ -32,7 +32,6 @@ class DialogoPropsCapturaScreen(Screen):
 		pass
 
 
-
 	# NOTA: Por defecto el filechooser carga la seleccion con el directorio
 	# de trabajo actual.
 	def on_enter(self):
@@ -48,8 +47,6 @@ class DialogoPropsCapturaScreen(Screen):
 		# # self.dir_chooser.view_list.append(list_archs)
 		# print "Actualizados archivos!!!!!!!!!!!!!"
 		# print ""
-
-
 
 
 

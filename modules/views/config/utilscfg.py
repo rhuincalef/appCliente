@@ -1,5 +1,7 @@
 # Funciones para la carga de la configuracion
-import configparser,collections
+#import configparser,collections
+import ConfigParser as configparser
+import collections
 
 # Convierte los datos unicode leidos del archivo de configuracion a  
 # un json con strings o int

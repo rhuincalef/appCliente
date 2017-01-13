@@ -1,0 +1,38 @@
+1. Instalar kivy:
+	sudo apt-get install python-kivy
+
+2. Instalar OpenCV:
+	sudo apt-get install python-opencv
+
+
+2.5 Instalar cython y python-distutils:
+	sudo pip install cython
+	sudo apt-get install python-distutils-extra
+
+
+3. Instalar los bindings de Python para PCL https://github.com/strawlab/python-pcl:
+
+	git clone https://github.com/strawlab/python-pcl python-pcl
+	cd python-pcl/
+	sudo python setup.py install
+
+
+3.5 Habilitar la ejecucion de libs de 32bits en OS de 64 bits con el comando:
+	sudo dpkg --add-architecture i386
+	sudo apt-get update
+
+3.6 Instalar libusb-1.0-0 libusb-1.0-0-dev de 32bits con:
+	sudo apt-get install libusb-1.0-0:i386 libusb-1.0-0-dev:i386
+
+
+4.Instalar freenect desde https://github.com/OpenKinect/libfreenect con esas instrucciones.
+
+
+5.Instalar requests:
+
+	sudo pip install requests
+	sudo pip install requests-toolbelt
+
+	
+
+

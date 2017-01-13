@@ -43,7 +43,7 @@ from kivy.graphics.texture import Texture
 from kivy.uix.label import Label
 
 
-
+from dialogopropscaptura import DialogoPropsCapturaScreen
 
 # Imports necesarios para tratamiento de archivos.
 import sys
@@ -213,3 +213,26 @@ class KinectScreen(Screen):
         mostrarDialogo(titulo="Captura de falla",
                         content="Falla capturada corectamente!")
         
+    #Actualiza el screen que tiene el listado de capturas
+    def actualizar_vista_archivos(self,nombre_screen):
+        #Se instancia de vuelta el dialogopropscaptura
+        my_screen = None
+        for s in self.manager.screens:
+            if s.name == nombre_screen:
+                my_screen= s
+                print "Screen encontrada y removida!"
+                break
+        self.manager.remove_widget(my_screen)
+        screen = DialogoPropsCapturaScreen(name="dialogopropscaptura")
+        self.manager.add_widget(screen)
+        print "SCreen agregada al mananger"
+
+    def volver(self):
+        self.actualizar_vista_archivos('dialogopropscaptura')
+        print "Las screens actuales de screenmanager luego de switch_to son: "
+        print self.manager.screen_names
+        self.manager.current = 'dialogopropscaptura'
+
+
+
+

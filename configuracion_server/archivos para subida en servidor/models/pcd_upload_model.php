@@ -40,13 +40,11 @@ class Pcd_upload_model extends CI_Model
         $PCD_UPLOAD_FOLDER = "_/dataMultimedia/".$id;
         //Se obtiene la instancia de la falla en el servidor, y se  
         // $falla = Falla::getInstancia($id);
-
-
-
+        
         // Leer archivos enviados (desde $_FILES) por POST desde CI -->
         // https://www.codeigniter.com/userguide2/libraries/file_uploading.html
         $config['upload_path'] = $_SERVER['DOCUMENT_ROOT']."/repoProyectoBacheo/web/".$PCD_UPLOAD_FOLDER."/";
-        // $config['allowed_types'] = '*';
+        //$config['allowed_types'] = '*';
         $config['allowed_types'] = 'text|txt|csv';
         $config['overwrite'] = FALSE;
         $config['max_size'] = '0';
@@ -55,56 +53,55 @@ class Pcd_upload_model extends CI_Model
         $this->load->library('upload',$config);
         $this->upload->initialize($config);
 
+        log_message('debug', '$config["upload_path"] construido es ...');
+        log_message('debug', $config['upload_path']);
+        log_message('debug','Error asociado --> ');
 
-        if ($this->upload->do_upload("file") ) {
-            $res = TRUE;
-            log_message('debug', 'HECHO EL UPLOAD! ');
-            log_message('debug', 'upload_path tiene: ');
-            log_message('debug', $config["upload_path"]);
-        }else{
-            $res = FALSE;
-            log_message('debug', 'ERROR EN UPLOAD! ');
+        //Se recorre el array de archivos enviados en $_FILES 
+        foreach($_FILES as $nombre_archivo=>$file){
+            log_message('debug','$nombre_archivo -->' );
+            log_message('debug',$nombre_archivo );
+
+            if ($this->upload->do_upload($nombre_archivo) ) {
+                $res = TRUE;
+                log_message('debug', 'HECHO EL UPLOAD! ');
+            }else{
+                $res = FALSE;
+                log_message('debug', 'ERROR EN UPLOAD! ');
+            }
+            log_message('debug', "config.file_name tiene: ");
+            log_message('debug',  $this->upload->data()["file_name"]);
+            log_message('debug', "config.file_type tiene: ");
+            log_message('debug',  $this->upload->data()['file_type'] );
+            log_message('debug', "config.file_size (Kb) tiene: ");
+            log_message('debug',  $this->upload->data()['file_size'] );
+
+            $datos_multmodelo = array(
+                            'idFalla' => $id,
+                            'nombreArchivo' => $nombre_archivo,
+                             );
+            $obj_multmodelo = new stdClass;
+            $obj_multmodelo->idFalla = $datos_multmodelo["idFalla"];
+            $obj_multmodelo->nombreArchivo = $datos_multmodelo["nombreArchivo"];
+
+            $id_nuevo_mult = $CI->MultimediaModelo->save($obj_multmodelo);
+            log_message('debug', 'Despues de guardar objeto MultimediaModelo ...');
+
+            
+            $datos_falla_mult = array(
+                            'idFalla' => $id,
+                            'idMultimedia' => $id_nuevo_mult
+                            );
+
+            $obj_fallamult = FallaMultimedia::getInstancia($datos_falla_mult);
+            log_message('debug', 'Creado el objeto FallaMultimedia...');
+            log_message('debug', 'Tipo de FallaMultimedia: '.gettype($obj_fallamult));
+
+            $obj_fallamult->save();
+            log_message('debug', 'Guardado el objeto FallaMultimedia...');
         }
-
-        // $data = $this->upload->data();
-        log_message('debug', "config.file_name tiene: ");
-        log_message('debug',  $this->upload->data()["file_name"]);
-        log_message('debug', "config.file_type tiene: ");
-        log_message('debug',  $this->upload->data()['file_type'] );
-        log_message('debug', "config.file_size (Kb) tiene: ");
-        log_message('debug',  $this->upload->data()['file_size'] );
+        log_message('debug','fin for');
         
-
-
-        // Se guarda el archivo en disco de la falla.
-        // $res = Pcd_upload_model::generarCsv($PCD_UPLOAD_FOLDER,$nombre_archivo,
-        //                                         $contenido_archivo_csv);
-        log_message('debug', 'Despues de generarCsv() ...');
-        $datos_multmodelo = array(
-                        'idFalla' => $id,
-                        'nombreArchivo' => $nombre_archivo,
-                         );
-        // $falla = Falla::getInstancia($id);        
-
-        $obj_multmodelo = new stdClass;
-        $obj_multmodelo->idFalla = $datos_multmodelo["idFalla"];
-        $obj_multmodelo->nombreArchivo = $datos_multmodelo["nombreArchivo"];
-
-        $id_nuevo_mult = $CI->MultimediaModelo->save($obj_multmodelo);
-        log_message('debug', 'Despues de guardar objeto MultimediaModelo ...');
-
-        $datos_falla_mult = array(
-                        'idFalla' => $id,
-                        'idMultimedia' => $id_nuevo_mult
-                        );
-
-        $obj_fallamult = FallaMultimedia::getInstancia($datos_falla_mult);
-        log_message('debug', 'Creado el objeto FallaMultimedia...');
-        log_message('debug', 'Tipo de FallaMultimedia: '.gettype($obj_fallamult));
-
-        $obj_fallamult->save();
-        log_message('debug', 'Guardado el objeto FallaMultimedia...');
-                
         return $res;
     }
 

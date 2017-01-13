@@ -11,7 +11,7 @@ from requests.exceptions import ConnectionError
 import requests
 from json import JSONDecoder	
 from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncoderMonitor
-from clint.textui.progress import Bar as ProgressBar
+#from clint.textui.progress import Bar as ProgressBar
 from constantes import *
 
 
@@ -59,7 +59,9 @@ class ApiClientApp(object):
 
 		self.bytes_leidos =  bytes_leidos
 		#TODO: CAMBIAR ESTO POR LA FALLA QUE CORRESPONDA, CUANDO ESTE SUBIDA AL SERVER!!
-		m = MultipartEncoder(fields={'id': str(8).encode("utf-8") })
+		# EL DATO SE DEBE SACAR DE dic_falla.
+		#m = MultipartEncoder(fields={'id': str(8).encode("utf-8") })
+		m = MultipartEncoder(fields={'id': str(4).encode("utf-8") })
 		request_verificar_bache = requests.post(URL_CHECK_FALLA, data=m,
 			headers={'Content-Type': m.content_type})
 
@@ -72,6 +74,9 @@ class ApiClientApp(object):
 		# self.long_total_bytes = encoder.len
 		
 		monitor = MultipartEncoderMonitor(encoder, self.actualizar_datos_callback)
+		print "Content-Type:"
+		print monitor.content_type
+		print ""
 		r = requests.post(url, data=monitor,headers={'Content-Type': monitor.content_type})
 		print('\nUpload finished! (Returned status {0} {1})'.format(
 			r.status_code, r.reason
@@ -129,7 +134,8 @@ class ApiClientApp(object):
 		dic_envio = {
 						# 'id': str(dic_falla["id"]).encode("utf-8"),
 						#TODO: Cambiar esto por el idFalla real cuando este subido.
-						'id': str(8).encode("utf-8"),
+						#'id': str(8).encode("utf-8"),
+						'id': str(4).encode("utf-8"),
 						'calle': str(dic_falla["calle"]).encode("utf-8"),
 						'altura': str(dic_falla["altura"]).encode("utf-8")
 					}
