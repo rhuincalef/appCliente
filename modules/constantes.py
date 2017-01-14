@@ -73,8 +73,8 @@ URL_CHECK_FALLA = "http://localhost/repoProyectoBacheo/web/restapi/verificar_fal
 URL_UPLOAD_SERVER = "http://localhost/repoProyectoBacheo/web/restapi/upload_pcd"
 
 # URL para obtener los baches informados
-#URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
-URL_INFORMADOS  = "http://localhost/repoProyectoBacheo/web/restapi/obtener_informados"
+URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
+#URL_INFORMADOS  = "http://localhost/repoProyectoBacheo/web/restapi/obtener_informados"
 
 
 DIVISOR_EN_MB = 1000000.0
@@ -91,4 +91,26 @@ DIVISOR_EN_MB = 1000000.0
 
 MAX_POST_REQUEST_SIZE = 20000000
 MAX_FILE_UPLOADS_FOR_REQUEST = 20
+
+
+####################################################################################
+######################## CONSTANTES PARA FALLAS CONFIRMADAS ########################
+####################################################################################
+ID_TIPO_MATERIAL_DEFECTO = 1
+ID_TIPO_FALLA_DEFECTO = 1
+ID_TIPO_ESTADO_CONFIRMADO = 2
+ID_USUARIO_CALLEJERO = 1 #Se carga en la BD un usuario que sea el usuario recolector
+
+
+####################################################################################
+############################### CONSTANTES PARA LA DB LOCAL DE CAPTURAS ############
+####################################################################################
+LOCAL_DB_JSON_NAME = './DB_MUESTRAS_LOCALES.json'
+#Tiempo maximo de espera en segundos para obtener una latitud y longitud
+MAX_TIMEOUT_SEGS = 6
+INVALID_LAT_LONG = -1
+DEVICE_GPS_DEFAULT = "/dev/rfcomm1"
+
+
+
 

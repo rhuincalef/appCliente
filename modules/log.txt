@@ -1,4 +1,4 @@
-[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-01-13_35.txt
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-01-13_93.txt
 [[1;32mINFO[0m   ] [Kivy        ] v1.9.0
 [[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 19 2016, 06:48:10) 
 [GCC 5.4.0 20160609]
@@ -16,12 +16,22 @@
 [[1;32mINFO[0m   ] [Window      ] auto add sdl2 input provider
 [[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
 [[1;32mINFO[0m   ] [Text        ] Provider: sdl2
-Failed to open camera subdevice or it is not disabled.Failed to open motor subddevice or it is not disabled.Failed to open audio subdevice or it is not disabled.Failed to open camera subdevice or it is not disabled.Failed to open motor subddevice or it is not disabled.Failed to open audio subdevice or it is not disabled.Failed to open camera subdevice or it is not disabled.Failed to open motor subddevice or it is not disabled.Failed to open audio subdevice or it is not disabled.[[1;32mINFO[0m   ] [ProbeSysfs  ] device match: /dev/input/event7
+[Stream 70] Invalid magic 61ff
+[Stream 70] Invalid magic f41e
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
+[[1;32mINFO[0m   ] [ProbeSysfs  ] device match: /dev/input/event7
 [[1;32mINFO[0m   ] [MTD         ] Read event from </dev/input/event7>
 [[1;32mINFO[0m   ] [Base        ] Start application main loop
 [[1;32mINFO[0m   ] [GL          ] NPOT texture support is available
  Exception in thread Thread-3:
  Traceback (most recent call last):
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
    File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
      self.run()
    File "/usr/lib/python2.7/threading.py", line 754, in run
@@ -32,20 +42,39 @@ Failed to open camera subdevice or it is not disabled.Failed to open motor subdd
      self._fd = os.open(filename, os.O_NONBLOCK | os.O_RDONLY)
  OSError: [Errno 13] Permission denied: '/dev/input/event7'
  
-[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 674e
+[Stream 70] Invalid magic 8971
+[Stream 70] Invalid magic ba57
+[Stream 70] Invalid magic 5bcb
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 9d33
+[Stream 70] Invalid magic 9dd3
+[Stream 70] Invalid magic e1dc
+[Stream 70] Invalid magic 0ea1
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic 9d53
+[Stream 70] Invalid magic 81af
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 5eff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
 Hecho el registro de las clases!!
 
 Inicializado Capturador
 Inicializado Capturador
 Inicializado CapturadorInformado
 Inicializado MainApp!
-Error: Invalid index [0]
-Error: Can't open device. 1.) is it plugged in? 2.) Read the README
-Error: Problema de conexion con el sensor. Esta conectado?
-Error: Invalid index [0]
-Error: Can't open device. 1.) is it plugged in? 2.) Read the README
-Inicio de estrategiaConfirmados.filtrar()Error: Problema de conexion con el sensor. Esta conectado?
+Obtenido teclado...
 
+Obtenido teclado...
+
+Inicio de estrategiaConfirmados.filtrar()
 Fin de filtrar!
 Inicio de EstrategiaInformados.filtrar()
 Fin de filtrar!
@@ -54,8 +83,6 @@ Fin de filtrar!
 Inicio de EstrategiaInformados.filtrar()
 Fin de filtrar!
 En build()
-Error: Invalid index [0]
-Error: Can't open device. 1.) is it plugged in? 2.) Read the README
 CAMBIO DE DIRECTORIO!
 selection : []
 
@@ -74,43 +101,166 @@ screen manager -->
 ['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura']
 cambie!
 menutiposfalla
-Enviada peticion al servidor
-Calle  BELGRA
-Termine!
-Cerrado popup!
-Obteniendo baches sobre calle:  BELGRA
-peticion
-http://localhost/repoProyectoBacheo/web/restapi/obtener_informados/calle/BELGRA
-Respuesta del server -->
-{u'codigo': 200, u'datos': {u'1': {u'calle': u'Belgrano', u'id': u'1', u'altura': u'1230'}, u'3': {u'calle': u'Bell A. P.', u'id': u'3', u'altura': u'700'}, u'2': {u'calle': u'Pellegrini', u'id': u'2', u'altura': u'720'}, u'5': {u'calle': u'Ameghino', u'id': u'5', u'altura': u'400'}, u'4': {u'calle': u'Belgrano', u'id': u'4', u'altura': u'900'}}}
-------------------------------
-La respuesta en formato json es: 
-{u'codigo': 200, u'datos': {u'1': {u'calle': u'Belgrano', u'id': u'1', u'altura': u'1230'}, u'3': {u'calle': u'Bell A. P.', u'id': u'3', u'altura': u'700'}, u'2': {u'calle': u'Pellegrini', u'id': u'2', u'altura': u'720'}, u'5': {u'calle': u'Ameghino', u'id': u'5', u'altura': u'400'}, u'4': {u'calle': u'Belgrano', u'id': u'4', u'altura': u'900'}}}
-Cambiado el estado de la falla a : Informada; id: 1 - calle: 1230 - altura: Belgrano 
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 
-Cambiado el estado de la falla a : Informada; id: 3 - calle: 700 - altura: Bell A. P. 
+PRE-ENTER!!
+keycode[0] : 301
+keycode[1] : capslock
+keycode[0] : 301
+keycode[1] : capslock
+keycode[0] : 108
+keycode[1] : l
+keycode[0] : 108
+keycode[1] : l
+keycode[0] : 97
+keycode[1] : a
+keycode[0] : 97
+keycode[1] : a
+keycode[0] : 108
+keycode[1] : l
+keycode[0] : 108
+keycode[1] : l
+keycode[0] : 97
+keycode[1] : a
+keycode[0] : 97
+keycode[1] : a
+keycode[0] : 301
+keycode[1] : capslock
+keycode[0] : 301
+keycode[1] : capslock
+Archivo captura seleccionado:  LALA
+LALA
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
+es_nombre_valido:  True
+es_dir_valido:  True
 
-Cambiado el estado de la falla a : Informada; id: 2 - calle: 720 - altura: Pellegrini 
+Data SETEADA!!! con: nombre_cap =  LALA ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
 
-Cambiado el estado de la falla a : Informada; id: 5 - calle: 400 - altura: Ameghino 
+Asociando falla con id_falla -1
 
-Cambiado el estado de la falla a : Informada; id: 4 - calle: 900 - altura: Belgrano 
+Instanciado GPS!
+Abriendo BD json local...
+Fin constructor GeofencingAPI!
+En obtenerLatitudLongitud() con nombre_archivo: test_file_default.pcd
 
-Id falla:  1 ; Calle: 1230 ; Altura:  Belgrano
-Id falla:  2 ; Calle: 720 ; Altura:  Pellegrini
-Id falla:  3 ; Calle: 700 ; Altura:  Bell A. P.
-Id falla:  4 ; Calle: 900 ; Altura:  Belgrano
-Id falla:  5 ; Calle: 400 ; Altura:  Ameghino
-Actualizando listado de fallas...
-tipo:  <class 'settingscreen.SettingScreen'>
-row_index actual:  0
 
-Actualizado listado!
-row_index actual:  1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-row_index actual:  2
+No se pudieron obtener las coordenadas!
 
-row_index actual:  3
+Cambiado el estado de la falla a : Confirmada; latitud: -1 - longitud: -1 
 
-row_index actual:  4
+Cantidad de archivos .pcd con el nombre  LALA es :  1
 
+Falla (lat:-1,long:-1) tiene las capturas:  
+Captura: nombreAchivo(LALA_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  LALA_1.pcd
+
+Instanciado GPS!
+Abriendo BD json local...
+Fin constructor GeofencingAPI!
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': 4315.6434, u'nombrePcd': u'LLLLL', u'longitud': 6517.9341}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9357}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9358}, {u'latitud': 4315.6424, u'nombrePcd': u'BELGRA', u'longitud': 6517.9346}, {u'latitud': 4315.6408, u'nombrePcd': u'BELGRA', u'longitud': 6517.9322}, {u'latitud': 4315.6404, u'nombrePcd': u'BELGRA', u'longitud': 6517.9334}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_4.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/F_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/ffafa_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_1.pcd', u'longitud': -1}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+Asociando falla con id_falla -1
+
+Instanciado GPS!
+Abriendo BD json local...
+Fin constructor GeofencingAPI!
+En obtenerLatitudLongitud() con nombre_archivo: test_file_default.pcd
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+No se pudieron obtener las coordenadas!
+
+Cambiado el estado de la falla a : Confirmada; latitud: -1 - longitud: -1 
+
+Cantidad de archivos .pcd con el nombre  LALA es :  2
+
+Falla (lat:-1,long:-1) tiene las capturas:  
+Captura: nombreAchivo(LALA_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  LALA_2.pcd
+
+Instanciado GPS!
+Abriendo BD json local...
+Fin constructor GeofencingAPI!
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': 4315.6434, u'nombrePcd': u'LLLLL', u'longitud': 6517.9341}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9357}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9358}, {u'latitud': 4315.6424, u'nombrePcd': u'BELGRA', u'longitud': 6517.9346}, {u'latitud': 4315.6408, u'nombrePcd': u'BELGRA', u'longitud': 6517.9322}, {u'latitud': 4315.6404, u'nombrePcd': u'BELGRA', u'longitud': 6517.9334}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_4.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/F_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/ffafa_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_2.pcd', u'longitud': -1}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+Asociando falla con id_falla -1
+
+Instanciado GPS!
+Abriendo BD json local...
+Fin constructor[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+ GeofencingAPI!
+En obtenerLatitudLongitud() con nombre_archivo: test_file_default.pcd
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+No se pudieron obtener las coordenadas!
+
+Cambiado el estado de la falla a : Confirmada; latitud: -1 - longitud: -1 
+
+Cantidad de archivos .pcd con el nombre  LALA es :  3
+
+Falla (lat:-1,long:-1) tiene las capturas:  
+Captura: nombreAchivo(LALA_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  LALA_3.pcd
+
+Instanciado GPS!
+Abriendo BD json local...
+Fin constructor GeofencingAPI!
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': 4315.6434, u'nombrePcd': u'LLLLL', u'longitud': 6517.9341}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9357}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9358}, {u'latitud': 4315.6424, u'nombrePcd': u'BELGRA', u'longitud': 6517.9346}, {u'latitud': 4315.6408, u'nombrePcd': u'BELGRA', u'longitud': 6517.9322}, {u'latitud': 4315.6404, u'nombrePcd': u'BELGRA', u'longitud': 6517.9334}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_4.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/F_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/ffafa_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_3.pcd', u'longitud': -1}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+keycode[0] : 27
+keycode[1] : escape
+keycode[0] : 27
+keycode[1] : escape

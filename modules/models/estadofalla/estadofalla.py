@@ -1,3 +1,6 @@
+from constantes import *
+import datetime
+import time
 class Estado(object):
 	def cambiar(self,fallaItem):
 		fallaItem.setEstado(self)
@@ -8,6 +11,10 @@ class Estado(object):
 
 	def mostrar_capturas_asociadas(self,falla):
 		raise Exception("Error este metodo debe implementarse en subclases")
+
+
+	def completarDataFalla(self,api_client):
+		raise Exception("Error este metodo debe implementarse en subclases")		
 
 
 class Confirmada(Estado):
@@ -45,6 +52,30 @@ class Confirmada(Estado):
 			print "Captura: nombreAchivo(%s) - dirLocal(%s) - formato(%s) - extension(%s)" %\
 					(cap.getNombreArchivoCaptura(),cap.getDirLocal(),cap.getFormato(),cap.getExtension())
 			print ""
+
+	#TODO: TERMINAR!
+	#Este metodo obtiene los datos necesarios para dar de alta la falla
+	#(calle, altura, criticidad?,) con la lat. y long. obtenida del GPS y
+	# retorna un dic con todos los datos.
+	def completarDataFalla(self,api_client):
+		dir_data = self.api_client.obtenerDirServidor(self.latitud,
+													self.longitud)
+		respuesta = {}
+		respuesta["id"] = self.id
+		respuesta["calle"] = dir_data["calle"]
+		respuesta["altura"] = dir_data["altura"]
+		respuesta["idTipoMaterial"] = ID_TIPO_MATERIAL_DEFECTO
+		respuesta["idTipoFalla"] = ID_TIPO_FALLA_DEFECTO
+		#Fecha requerido por FallaEstadoModelo
+		respuesta["fecha"] = fecha_string 
+
+		#Campos para establecer el estado de la falla en el
+		# server como confirmada (FallaEstadoModelo)
+		respuesta["idTipoEstado"] = ID_TIPO_ESTADO_CONFIRMADO
+		respuesta["idUsuario"] = ID_USUARIO_CALLEJERO
+		marcatiempo = time.time()
+		fecha_string = datetime.datetime.fromtimestamp(marcatiempo).strftime('%Y-%m-%d %H:%M:%S')
+		return respuesta
 
 
 class Informada(Estado):
@@ -115,9 +146,14 @@ class Informada(Estado):
 				print "Captura: nombreAchivo(%s) - dirLocal(%s) - formato(%s) - extension(%s)" %\
 						(cap.getNombreArchivoCaptura(),cap.getDirLocal(),cap.getFormato(),cap.getExtension())
 				print ""
-			
-
-
+	
+	#TODO: TERMINAR!
+	# Este metodo solamente retorna un diccionario con la data 
+	# de la falla existente en el servidor.		
+	def completarDataFalla(self,api_client):
+		respuesta = {}
+		respuesta["id"] = self.id
+		return respuesta		
 
 
 

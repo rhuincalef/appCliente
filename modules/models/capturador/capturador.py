@@ -139,6 +139,8 @@ class ItemFalla(SelectableDataItem):
             (len(capturasConvertidas),MAX_FILE_UPLOADS_FOR_REQUEST)
           print "cantCapturasAEnviar = %s" % cantCapturasAEnviar
           print ""
+          #CODIGO TENTATIVO.
+          #falla_formateada = self.getDicFalla(api_client)
           falla_formateada = {
                           "id": self.getEstado().getId(),    
                           "calle": self.getEstado().getCalle(),    
@@ -165,6 +167,18 @@ class ItemFalla(SelectableDataItem):
         bytes
     print ""
     return bytes
+
+
+
+
+  #TODO: TERMINAR!!!
+  #Obtiene el diccionario completo para enviar cada falla al servidor.
+  # Es invocado desde enviar, y retorna el diccionario "falla_formateada"
+  # que se usa en ese metodo
+  def getDicFalla(self,api_client):
+    dic_envio = {}
+    dic_envio = self.estado.completarDataFalla(api_client)
+    return dic_envio
 
 
 class Capturador(object):
@@ -238,17 +252,23 @@ class Capturador(object):
       
 
 
-  # Asocia la falla con la captura recien realizada.
+  # Asocia el ItemFalla con la captura recien realizada,
+  # se cambia el estado de la falla a Confirmada, y se utiliza
+  # API_GEO (Obtener LATITUD y LONGITUD del GPS).
+  #
   def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla):
     falla = ItemFalla()
+    #TODO: MODIFICADO ACA!!!!
+    #latitud_prueba,longitud_prueba = api_geo.getLatLong()
     api_geo = GeofencingAPI()
-    latitud_prueba,longitud_prueba = api_geo.getLatLong()
+    latitud_prueba,longitud_prueba = api_geo.obtenerLatitudLongitud()
     estado = Confirmada(latitud_prueba,longitud_prueba).cambiar(falla)
-    # estado = Confirmada(LAT_PRUEBA,LONG_PRUEBA).cambiar(falla)
-    self.capturar(data, dir_trabajo, nombre_captura,falla)
+    self.capturar(data, dir_trabajo, nombre_captura,falla,latitud_prueba,
+                    longitud_prueba)
 
 
-  def capturar(self,dataSensor, dir_trabajo, nombre_captura,item_falla):
+
+  def capturar(self,dataSensor, dir_trabajo, nombre_captura,item_falla,latitud,longitud):
     # Se instancia la captura(con los valores de la view anterior),
     # se almacena en disco y se se agrega a la lista de capturas del 
     # capturador.
@@ -259,6 +279,11 @@ class Capturador(object):
     item_falla.registrarCaptura(dataSensor,item_falla,cap,self)
     print "Captura realizada con exito! Agregada: ",str(cap)
     print ""
+    api_geo = GeofencingAPI()
+    api_geo.almacenarCapturaLocal(latitud,longitud,cap.getFullPathCaptura())
+    print "Guardado archivo .pcd en BD_JSON!"
+    print ""
+
 
   # Filtra las colCapturasTotales y agrega solamente las capturas confirmadas
   # a la colCapturasConfirmadas

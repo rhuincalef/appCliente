@@ -189,12 +189,29 @@ class KinectViewer(Image):
         return data
 
         
+from kivy.core.window import Window
 
 class KinectScreen(Screen):
     nombre_captura = StringProperty()
     dir_trabajo = StringProperty()
     idFalla = NumericProperty(FALLA_NO_ESTABLECIDA)
-    
+
+    #AGREGADO RODRIGO
+    def __init__(self,**kwargs):
+        super(KinectScreen, self).__init__(**kwargs)
+        self._keyboard = Window.request_keyboard(None,self)
+        print "Obtenido teclado...\n"
+        self._keyboard.bind(on_key_down=self.tecla_presionada)
+
+    def tecla_presionada(self,keyboard,keycode,text,modifiers):
+        print "keycode[0] : %s" % keycode[0]
+        print "keycode[1] : %s" % keycode[1]
+        if keycode[0] == 32:
+            print "Presione SPACE!!!!\n"
+            self.capturar()
+            return True
+        return False
+
     def setDatosCaptura(self,nombre_captura,dir_trabajo,id_falla):
         self.nombre_captura = nombre_captura 
         self.dir_trabajo = dir_trabajo

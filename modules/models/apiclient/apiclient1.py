@@ -53,22 +53,15 @@ class ApiClientApp(object):
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
 			raise ExcepcionAjax(msg)
 
-		return results_json["datos"]
+		#RETURN para el servidor remoto
+		#return results_json["datos"]
+		#RETURN para el servidor local
+		return results_json
 
 
 	def postCapturas(self,url,dic_falla,bytes_leidos):
-
 		self.bytes_leidos =  bytes_leidos
-		#TODO: CAMBIAR ESTO POR LA FALLA QUE CORRESPONDA, CUANDO ESTE SUBIDA AL SERVER!!
-		# EL DATO SE DEBE SACAR DE dic_falla.
-		#m = MultipartEncoder(fields={'id': str(8).encode("utf-8") })
-		m = MultipartEncoder(fields={'id': str(4).encode("utf-8") })
-		request_verificar_bache = requests.post(URL_CHECK_FALLA, data=m,
-			headers={'Content-Type': m.content_type})
-
-		if request_verificar_bache.status_code != requests.codes.ok:
-			raise ExcepcionAjax("Error comprobando la existencia de la falla en el sistema")
-
+		
 		#Crea el objeto encoder para el multipart/form-data con el dic_falla de la 
 		# peticion correspondiente a la falla actual.
 		encoder = self.create_upload(dic_falla)
@@ -86,7 +79,6 @@ class ApiClientApp(object):
 			raise ExcepcionAjax("Error subiendo las capturas de la falla en calle %s y altura %s .Respuesta del servidor: %s" %\
 									(dic_falla["calle"],dic_falla["altura"],r.reason) )
 		
-
 		return self.bytes_leidos
 
 	# Actualiza los datos que se muestran respecto del nombre del archivo actual
@@ -157,6 +149,10 @@ class ApiClientApp(object):
 		encoder = MultipartEncoder(dic_envio)
 		return encoder
 
+
+	#Invocado desde ItemFallas con Estado "Nuevo"
+	def obtenerDirServidor(self,lat,long):
+		pass
 
 
 
