@@ -81,6 +81,22 @@ def depth2xyzuv(depth, u=None, v=None):
   return xyz, uv
 
 
+def xyz_complete_matrix(depth, u=None, v=None):
+  if u is None or v is None:
+    u,v = np.mgrid[:480,:640]
+  
+  # Build a 3xN matrix of the d,u,v data
+  C = np.vstack((u.flatten(), v.flatten(), depth.flatten(), 0*u.flatten()+1))
+
+  # Project the duv matrix into xyz using xyz_matrix()
+  X,Y,Z,W = np.dot(xyz_matrix(),C)
+  X,Y,Z = X/W, Y/W, Z/W
+  xyz = np.vstack((X,Y,Z)).transpose()
+  print "La forma de la matriz xyz antes de filtrar en calibkinect es:"
+  print "alto:%s ; ancho:%s\n" % (xyz.shape[0],xyz.shape[1])
+  return xyz
+
+
 
 def uv_matrix():
   """

@@ -14,7 +14,11 @@ from kivy.uix.popup import Popup
 
 from utils import mostrarDialogo
 import os
+from os import path
+from os.path import expanduser
+from file import XFileOpen, XFileSave
 
+from capturador import ExcepcionRecorridoVacio
 
 class ArchivoExisteExcepcion(Exception):
     pass
@@ -28,9 +32,6 @@ class MenuScreen(Screen):
         super(MenuScreen, self).__init__(**kwargs)
         self._popup = None
         
-
-
-
     def salir(self):
     	App.get_running_app().stop()
 
@@ -42,25 +43,83 @@ class MenuScreen(Screen):
         print self.manager.current
 
 
-    def guardar_fallas_json(self):
-        print "Cargado dialogo guardado de fallas"
-        content = SaveDialog(save=self.guardar, cancel=self.dismiss_popup)
-        if type(content) is None:
-            print "Content es None!!!!!\n"
+    def guardarRecorrido(self):
+        print "Cargado dialogo guardado de fallas...\n"
+        controlador = App.get_running_app()
+        if not controlador.existenFallasCargadas():
+            controlador.mostrarDialogoMensaje( title= "Guardado de recorrido",
+                                        text=  "No existen fallas cargadas en memoria!")
+            return
         else:
-            print "Content NO es None!!!!!\n"
-        # content = Label(text= "HOLA MUNDODOOOOOOOOOOOOODDDDDDDDDDDDDDDDDDDDDD")
-        self._popup = Popup(title="Guardar fallas capturadas", content=content)
-        self._popup.open()
+            XFileSave(on_dismiss=self._fileSaveCallback,
+                        title = "Guardar recorrido con fallas",
+                        #path=expanduser(u'~'))
+                        path=os.getcwd())
         
+    def _fileSaveCallback(self, instance):
+        if instance.is_canceled():
+            return
+        #Retorna el path completo a la BD
+        nameBD = instance.get_full_name()
+        if path.isfile(nameBD):
+            controlador = App.get_running_app()
+            print "tipo filename: %s; filename: %s\n" % (type(instance.filename),
+                                                        instance.filename)
+            msg = "¿Desea sobreescribir el archivo %s?" % str(instance.filename)
+            controlador.mostrarDialogoConfirmacion( title = "Sobreescritura de fallas",
+                                        content = msg,
+                                        callback = self._callbackDialogoSobreescribir,
+                                        args = [ nameBD ] )
+        else:
+            self._crearArchivoRecorrido(nameBD)            
 
-    def cargar_fallas_json(self):
-        print "Cargado dialogo carga de fallas"        
-        content = LoadDialog(load=self.cargar, cancel=self.dismiss_popup)
-        self._popup = Popup(title="Cargar fallas capturadas", content=content)
-        # self._popup = Popup(title="Cargar fallas capturadas", content=content,
-        #                 size_hint=(0.9, 0.9))
-        self._popup.open()
+    def _callbackDialogoSobreescribir(self,instance):
+        print "LLamada _callbackDialogoSobreescribir() con %s\n" % instance.args[0]
+        if not instance.is_confirmed():
+            return
+        self._crearArchivoRecorrido(instance.args[0])
+
+
+    def _crearArchivoRecorrido(self,nameBD):
+        controlador = App.get_running_app()
+        print "nameBD ingresado es: %s\n" % nameBD
+        controlador.persistirFallas(nameBD)
+        print "Persistidas las fallas!\n"
+
+
+    #Carga los objetos itemFalla en su respectivo capturador
+    def cargarRecorrido(self):
+        print "Cargado dialogo carga de fallas\n"        
+        XFileOpen(on_dismiss=self._callbackCargarRecorrido,
+                    title = "Cargar recorrido en memoria",
+                    #path=expanduser(u'~'),
+                    path=os.getcwd(),
+                    multiselect=False)
+
+
+    def _callbackCargarRecorrido(self,instance):
+        if instance.is_canceled():
+            print "Cancelo la carga del recorrido en memoria!\n"
+            return
+        msg = title = ""
+        controlador = App.get_running_app()
+        try:
+            archivo = instance.selection[0]
+            print "Cargando recorrido en archivo: %s\n" % archivo 
+            controlador.cargarRecorrido(archivo)
+            title = "Carga de recorrido"
+            msg = "Se cargo correctamente el archivo con las capturas"
+        except ExcepcionRecorridoVacio as e:
+            title = "Carga de recorrido"
+            msg = "No existen fallas registradas en el archivo cargado"
+        except Exception as e:
+            title = "Error en carga de fallas"
+            msg = "Error cargando BD con itemfallas.\n(%s)" % e
+        finally:
+            print "%s\n" % msg
+            controlador.mostrarDialogoMensaje(title = title,
+                                        text = msg)
+
 
     def dismiss_popup(self):
         print "Cerrando dialog..."

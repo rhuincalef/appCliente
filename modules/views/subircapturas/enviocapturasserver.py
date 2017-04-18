@@ -26,7 +26,7 @@ class EnvioCapturasServerScreen(Screen):
 
 	#Al cargarse este screens se comienza la carga de los archivos.
 	def on_enter(self):
-		print "Cargada screen envio!"
+		#print "Cargada screen envio!"
 		controlador = App.get_running_app()
 		controlador.subir_capturas()
 
@@ -35,9 +35,8 @@ class EnvioCapturasServerScreen(Screen):
 
 
 	def setMaxBarraProgreso(self,bytes_totales_a_enviar):
+		#print "Seteado el maximo de la barra de progreso a: %s\n" % bytes_totales_a_enviar
 		self.barra_progreso.max = bytes_totales_a_enviar
-		print "Cambiado el valor maximo de barra_progreso a: %s " %\
-					self.barra_progreso.max
 
 
 	#Actualiza los labels con la data actual.
@@ -45,19 +44,15 @@ class EnvioCapturasServerScreen(Screen):
 	# STREAM ACUMULADA, por lo que simplemente se tiene que pisar con
 	# el valor de progress_bar y el valor del label
 	def actualizar_datos(self,cant_bytes):
-		# self.cant_bytes_actuales = cant_bytes
 		self.cant_bytes_actuales = cant_bytes
-		print "bytes_enviados: %s - bytes_totales: %s" % (self.cant_bytes_actuales,
-														self.barra_progreso.max)
-		self.bytes_subidos.text =  "%s MB/%s MB subidos al servidor... "%\
-								( (self.cant_bytes_actuales/DIVISOR_EN_MB),
-									(self.barra_progreso.max / DIVISOR_EN_MB))
-		print "El texto en bytes_subidos es: %s\n" % self.bytes_subidos.text
-		print ""
+		#print "Desde enviocapturasservidor.actualizar_datos()\n"
+		#print "bytes_enviados: %s - bytes_totales: %s" % (self.cant_bytes_actuales,
+														#self.barra_progreso.max)
 		self.barra_progreso.value = cant_bytes
-		print "Actualizada progress_bar! con bytes_actuales_enviados: %s valor actual: %s" %\
-			(self.cant_bytes_actuales,self.barra_progreso.value)
-		print ""
+		self.bytes_subidos.text =  "%s MB/%s MB subidos al servidor... "%\
+								( (self.barra_progreso.value/DIVISOR_EN_MB),
+									(self.barra_progreso.max / DIVISOR_EN_MB))
+		#print "self.barra_progreso.value actualizado tiene: %s\n" % self.barra_progreso.value 
 
 
 	# Actualiza la barra de progreso con un porcentaje deducido del total
@@ -68,13 +63,16 @@ class EnvioCapturasServerScreen(Screen):
 	# 			(bytes_actuales_enviados,self.barra_progreso.value)
 	# 	print ""
 
-	# TODO: Terminar la cancelacion de los archivos que se subiran al server.
 	def cancelar_subida(self):
 		print "Cancelado subida al servidor!"
 		print ""
 		self.barra_progreso.max = self.barra_progreso.value = 0
 		self.bytes_subidos.text = ""
 		self.cant_bytes_actuales = 0
+		#Se notifica al controlador la finalizacion de subidas de archivos
+		# por cancelacion del usuario.
+		controlador = App.get_running_app()
+		controlador.canceladaSubidaArchivos = True
 		self.manager.current = 'subircapturasservidor'
 
 

@@ -13,6 +13,7 @@ from kivy.graphics import *
 
 from kivy.uix.label import Label
 from capturador import CapturadorInformados
+from constantes import FALLA_NO_ESTABLECIDA
 
 class SettingScreen(Screen):
    
@@ -38,7 +39,13 @@ class SettingScreen(Screen):
         print "Agregando falla informada para ser capturada: "
         print "Id: ",id_falla_seleccionada
         print ""
-        self.manager.get_screen('dialogopropscaptura').set_id_falla_informada(id_falla_seleccionada)
+        #self.manager.get_screen('dialogopropscaptura').set_id_falla_informada(id_falla_seleccionada)
+        #print "get_id_falla_informada() retorno: %s\n" %\
+        #    self.manager.get_screen('dialogopropscaptura').get_id_falla_informada()
+        controlador = App.get_running_app()
+        controlador.agregarData("idFalla",id_falla_seleccionada)
+        print "id_falla_seleccionada: %s\n" % controlador.getData("idFalla")
+        
         self.manager.current = 'dialogopropscaptura'
         print "Cambie el screen!"
       else:
@@ -49,6 +56,7 @@ class SettingScreen(Screen):
       print "Actualizando listado de fallas..."
       print "tipo: ", str(type(settignscreen))
       controlador = App.get_running_app()
+      
       fallas_dic = controlador.getCapturadorInformados().getColBachesInformados()
       self.listado1.adapter.data = fallas_dic
       print "Actualizado listado!"
@@ -85,3 +93,12 @@ class SettingScreen(Screen):
                                     }
                       }]
             }
+
+    #Se regresa a menutiposfalla, y se reestablece el valor de
+    #idFalla a su valor original
+    def volver(self):
+      controlador = App.get_running_app()
+      controlador.agregarData("idFalla",FALLA_NO_ESTABLECIDA)
+      #controlador.desSeleccionarFallas()
+      controlador.desSeleccionarInformados()
+      self.manager.current = 'menutiposfalla'

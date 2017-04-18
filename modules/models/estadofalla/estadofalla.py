@@ -1,7 +1,10 @@
 from constantes import *
 import datetime
 import time
-class Estado(object):
+
+from persistent import Persistent
+#class Estado(object):
+class Estado(Persistent):
 	def cambiar(self,fallaItem):
 		fallaItem.setEstado(self)
 
@@ -16,13 +19,52 @@ class Estado(object):
 	def completarDataFalla(self,api_client):
 		raise Exception("Error este metodo debe implementarse en subclases")		
 
+	# Retorna un listado ordenado con los atributos del itemFalla
+	def getAttributos(self):
+		raise Exception("Error este metodo se debe implementar en subclases")
+
+
+	# Retorna un listado con los nombres de los atributos del dominio
+	# que encapsula cada estado.
+	def getNombreAtributos(self):
+		atributos = [i for i in dir(self) if not inspect.ismethod(i) and not(i.startswith('__') and i.endswith('__') )]
+		return atributos
+
+	#Retorna el dicc de la falla codificado en utf-8
+	def getDicFallaEncoded(self):
+		raise Exception("Error este metodo se debe implementar en subclases")
+
+
 
 class Confirmada(Estado):
 	""" Estado para las fallas que se capturaron sobre la calle"""
 	
 	def __init__(self,lat,lon):
+		self.id = "No asignado"
 		self.latitud = lat
 		self.longitud = lon
+		#
+		self.calleEstimada = self.alturaEstimada = None
+		self.tipoReparacion = self.tipoMaterial = self.tipoFalla = None
+
+
+	def setCalleEstimada(self,c):
+		self.calleEstimada = c
+		
+	def setAlturaEstimada(self,a):
+		self.alturaEstimada = a
+
+	def setTipoFalla(self,f):
+		self.tipoFalla = f
+		
+	def setTipoReparacion(self,r):
+		self.tipoReparacion = r
+
+	def setTipoMaterial(self,m):
+		self.tipoMaterial = m
+
+	def getId(self):
+		return self.id
 
 	def getLatitud(self):
 		return self.latitud
@@ -34,26 +76,51 @@ class Confirmada(Estado):
 		return "Confirmada; latitud: %s - longitud: %s " % \
 			(self.latitud,self.longitud)
 
-
+	#Backup!
 	# // Agrega la falla a Capturador.colCapturasTotales.
+	#def registrar(self,item_falla,capturador,captura):
+	#	print "En capturador.registrar()...\n"
+	#	col_caps_item_falla = item_falla.getColCapturas()
+	#	col_caps_item_falla.append(captura)
+	#	print "Appeandeada la captura!\n"
+		#NOTA: Agrega el itemFalla actual a la col. de itemFalla del
+		#capturador al que pertenece esta.
+	#	col_item_falla_capturadas = capturador.getColCapturasTotales()
+	#	col_item_falla_capturadas.append(item_falla)
+		# Comentar despues esta linea!
+	#	print "En estado.registrar()"
+	#	self.mostrar_capturas_asociadas(item_falla)
+	
+
+	#NOTA: -Para las fallas nuevas, si estas no tienen al menos
+	# una captura asociada se deben descartar de la colCapturas del 
+	# capturador.
+	# -Si es una falla informada, esta se conserva aun si no tiene
+	# capturas asociadas.
 	def registrar(self,item_falla,capturador,captura):
+		print "En capturador.registrar()...\n"
 		col_caps_item_falla = item_falla.getColCapturas()
 		col_caps_item_falla.append(captura)
-		col_capturas_realizadas = capturador.getColCapturasTotales()
-		col_capturas_realizadas.append(item_falla)
+		print "Appeandeada la captura!\n"
+		#NOTA: Agrega el itemFalla actual a la col. de itemFalla del
+		#capturador al que pertenece esta.
+		col_item_falla_capturadas = capturador.getColCapturasTotales()
+		col_item_falla_capturadas.append(item_falla)
 		# Comentar despues esta linea!
-		#self.mostrar_capturas_asociadas(item_falla)
+		print "En estado.registrar()"
+		self.mostrar_capturas_asociadas(item_falla)
 	
+
 
 	def mostrar_capturas_asociadas(self,falla):
 		print "Falla (lat:%s,long:%s) tiene las capturas:  " %\
 					(falla.getEstado().getLatitud(),falla.getEstado().getLongitud())
 		for cap in falla.getColCapturas():
 			print "Captura: nombreAchivo(%s) - dirLocal(%s) - formato(%s) - extension(%s)" %\
-					(cap.getNombreArchivoCaptura(),cap.getDirLocal(),cap.getFormato(),cap.getExtension())
+					(cap.getFullPathCaptura(),cap.getDirLocal(),cap.getFormato(),cap.getExtension())
 			print ""
 
-	#TODO: TERMINAR!
+	
 	#Este metodo obtiene los datos necesarios para dar de alta la falla
 	#(calle, altura, criticidad?,) con la lat. y long. obtenida del GPS y
 	# retorna un dic con todos los datos.
@@ -77,6 +144,36 @@ class Confirmada(Estado):
 		fecha_string = datetime.datetime.fromtimestamp(marcatiempo).strftime('%Y-%m-%d %H:%M:%S')
 		return respuesta
 
+
+	# Retorna un listado ordenado con los atributos del itemFalla
+	def getAttributos(self):
+		calle = self.calleEstimada + "("+str(self.latitud)+")"
+		altura = str(self.alturaEstimada) + "("+str(self.longitud)+")" 
+		return list([self.id, calle, altura ])
+		#return list([self.id, self.latitud, self.longitud])
+
+
+	#Retorna el dicc de la falla codificado en utf-8 para enviar al server
+	def getDicFallaEncoded(self):
+		return {
+			'id': str(self.id).encode("utf-8"),
+			'latitud':str(self.latitud).encode("utf-8"),
+			'longitud': str(self.longitud).encode("utf-8"),
+
+			#TODO: Campos agregados para que el servidor los reciba
+			# y registre una falla consistente en el sistema. 
+			#'nombreTipoMaterial':str("Cemento").encode("utf-8"),
+			#'nombreTipoFalla':str("Bache").encode("utf-8"),
+			#'tipoReparacion': str("Cementar").encode("utf-8")
+			'nombreTipoMaterial':str(self.tipoMaterial).encode("utf-8"),
+			'nombreTipoFalla':str(self.tipoFalla).encode("utf-8"),
+			'tipoReparacion':str(self.tipoReparacion).encode("utf-8"),
+
+			'nombreCriticidad':str("Media").encode("utf-8"),
+			'observacion':str("Falla recolectada por personal de municipalidad en la calle").encode("utf-8"),
+			'tipoEstado':str("Confirmado").encode("utf-8")
+		}
+		
 
 class Informada(Estado):
 
@@ -156,6 +253,20 @@ class Informada(Estado):
 		return respuesta		
 
 
+	# Retorna un listado ordenado con los atributos del itemFalla
+	def getAttributos(self):
+		l = list([self.id, self.calle, self.altura])
+		print "lista informado.getAttributos() es: %s\n" % l
+		return l
+
+
+	#Retorna el dicc de la falla codificado en utf-8 para enviar al server
+	def getDicFallaEncoded(self):
+		return {
+			'id': str(self.id).encode("utf-8"),
+			'calle':str(self.calle).encode("utf-8"),
+			'altura': str(self.altura).encode("utf-8")
+		}
 
 
 

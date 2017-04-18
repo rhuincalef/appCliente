@@ -1,0 +1,25 @@
+Unhandled exception in thread started by <bound method KinectDepth.__bootstrap of <KinectDepth(Thread-2, stopped daemon 139842229827328)>>
+Error: Problema de conexion con el sensor. Esta conectado?
+Traceback (most recent call last):
+
+
+##########################################################################################################################################################
+
+[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebita/capRodrigo_2.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+ERROR: In /build/vtk6-YpT4yb/vtk6-6.2.0+dfsg1/Rendering/OpenGL/vtkOpenGLTexture.cxx, line 200
+vtkOpenGLTexture (0x2814300): No scalar values found for texture input!
+
+[0;m[done, [0;36m101[0;m[0;m ms : [0;36m281077[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;m[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+Unhandled exception in thread started by <bound method KinectDepth.__bootstrap of <KinectDepth(Thread-2, stopped daemon 140581607823104)>>
+
+Error: Problema de conexion con el sensor. Esta conectado?
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 774, in __bootstrap
+    self.__bootstrap_inner()
+  File "/usr/lib/python2.7/threading.py", line 814, in __bootstrap_inner
+    (self.name, _format_exc()))
+  File "/usr/lib/python2.7/traceback.py", line 241, in format_exc
+    etype, value, tb = sys.exc_info()
+AttributeError: 'NoneType' object has no attribute 'exc_info'

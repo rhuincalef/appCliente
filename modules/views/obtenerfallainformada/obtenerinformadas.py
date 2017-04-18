@@ -18,15 +18,11 @@ from capturador import CapturadorInformados
 from kivy.uix.textinput import TextInput
 import time
 
-# class TextInputNumerica(TextInput):
+from utils import mostrarDialogo
+import threading
 
-#   def insert_text(self, substring, from_undo=False):
-#     try:
-#       valid_number = int(substring)
-#       return super(TextInputNumerica, self).insert_text(valid_number,
-#                                                   from_undo=from_undo)
-#     except ValueError, e:
-#       print "Error numero no valido!"
+from constantes import PATH_ICONO_LUPA
+import re
 
 
 class ObtenerInformadasScreen(Screen):
@@ -39,35 +35,66 @@ class ObtenerInformadasScreen(Screen):
       super(Screen, self).__init__(**kwargs)
       self.calle = None
 
+    
+    def limpiar(self,cad):
+      cad2 = cad.strip()
+      cadnueva = ""
+      for word in cad2.split(" "):
+        if word != " ":
+          cadnueva += word
+      return cadnueva
+
+    # Valida que el string tenga solo caracteres alfanumericos y 
+    # underscore.
+    def esValida(self,calle):
+      if re.search('^(\w+)$',calle) is None:
+        return False
+      return True
 
     def enviar_peticion(self,calle):
-      print "Enviada peticion al servidor"
+      print "Enviando peticion al servidor"
       print "Calle ",calle
       self.calle = calle
-      popup = Popup(title='Peticion al servidor',
-              content=Label(text='Cargando fallas...'),
-              size_hint=(None, None), 
-              size=(400, 400),
-              auto_dismiss=False)
-      popup.bind(on_open=self.popup_abierto)
-      popup.bind(on_open=self.pop_up_cerrado)
-      popup.open()
-      print "Termine!"
-
-
-    #Llamado al abrir el pop_up en enviar_peticion().
-    def popup_abierto(self,popup):
-      calle = self.calle_input_txt.text
       controlador = App.get_running_app()
-      controlador.obtenerInformados(self.calle)
-      #TODO: Borrar este delay de prueba
-      time.sleep(3)
-      popup.dismiss()
-
+      popup = controlador.mostrarDialogoEspera(
+                              title="Peticion al servidor",
+                              content="Cargando fallas...",
+                              gif = PATH_ICONO_LUPA
+        )
+      popup.bind(on_dismiss = self.pop_up_cerrado)
+      #Se configura el envio de los archivos como un proceso demonio.
+      t = threading.Thread(name = "thread-obtenerInformadas",
+                  target = self.threadObtenerInformadas, 
+                  args = (popup,) 
+                )
+      t.setDaemon(True)
+      t.start()
 
     def pop_up_cerrado(self,popup):
       print "Cerrado popup!"
+      time.sleep(1)
       self.volver()
+
+    #Llamado al abrir el pop_up en enviar_peticion().
+    def threadObtenerInformadas(self,popup):
+      calle = self.calle_input_txt.text
+      print "En threadObtenerInformadas() con self.calle: %s\n" % self.calle
+      print "calle: %s\n" % calle
+      controlador = App.get_running_app()
+      #controlador.obtenerInformados(self.calle)
+      #Se limpia la calle de espacios!
+      calleSaneada = self.limpiar(self.calle)
+      if self.esValida(calleSaneada):
+        controlador.obtenerInformados(calleSaneada)
+        #TODO: Borrar este delay de prueba
+        #time.sleep(3)
+      else:
+        controlador.mostrarDialogoMensaje(title = "Calle invalida",
+                                          text = "Ingrese una calle valida e intentelo nuevamente"
+                                          )
+      popup.dismiss()
+      
+
 
     def volver(self):
       self.calle_input_txt.text = ""

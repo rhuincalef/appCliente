@@ -1,0 +1,16 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del 
+# archivo .kv.
+
+<PropsFallaConfirmadaScreen>:
+	# Los dropdowns para los tipos de falla se cargan de forma dinamica 
+	layout_principal: main_layout
+
+	GridLayout:
+		id: main_layout
+		cols:1
+		rows:8
+		#rows:7
+		orientation: 'vertical'
+		

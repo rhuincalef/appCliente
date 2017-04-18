@@ -1,11 +1,10 @@
-[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-01-13_93.txt
-[[1;32mINFO[0m   ] [Kivy        ] v1.9.0
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-04-18_1.txt
+[[1;32mINFO[0m   ] [Kivy        ] v1.9.1
 [[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 19 2016, 06:48:10) 
 [GCC 5.4.0 20160609]
-[[1;32mINFO[0m   ] [Factory     ] 173 symbols loaded
-[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_sdl2 (img_pil, img_ffpyplayer ignored)
-[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
-[[1;32mINFO[0m   ] [Window      ] Provider: sdl2(['window_egl_rpi'] ignored)
+[[1;32mINFO[0m   ] [Factory     ] 179 symbols loaded
+[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_pygame, img_pil (img_ffpyplayer ignored)
+[[1;32mINFO[0m   ] [Window      ] Provider: pygame(['window_egl_rpi'] ignored)
 [[1;32mINFO[0m   ] [GL          ] OpenGL version <3.0 Mesa 11.2.0>
 [[1;32mINFO[0m   ] [GL          ] OpenGL vendor <Intel Open Source Technology Center>
 [[1;32mINFO[0m   ] [GL          ] OpenGL renderer <Mesa DRI Intel(R) Ivybridge Mobile >
@@ -13,254 +12,617 @@
 [[1;32mINFO[0m   ] [GL          ] Shading version <1.30>
 [[1;32mINFO[0m   ] [GL          ] Texture max size <8192>
 [[1;32mINFO[0m   ] [GL          ] Texture max units <16>
-[[1;32mINFO[0m   ] [Window      ] auto add sdl2 input provider
 [[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
-[[1;32mINFO[0m   ] [Text        ] Provider: sdl2
-[Stream 70] Invalid magic 61ff
-[Stream 70] Invalid magic f41e
-[Stream 70] Invalid magic ffff
-[Stream 70] Lost too many packets, resyncing...
-[[1;32mINFO[0m   ] [ProbeSysfs  ] device match: /dev/input/event7
-[[1;32mINFO[0m   ] [MTD         ] Read event from </dev/input/event7>
-[[1;32mINFO[0m   ] [Base        ] Start application main loop
+[[1;32mINFO[0m   ] [Text        ] Provider: pygame
+[[1;33mWARNING[0m] [IOError     ] [Errno 2] No such file or directory: '/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/resource/libs/xpopup.mo'. Switch to the defaults.
 [[1;32mINFO[0m   ] [GL          ] NPOT texture support is available
- Exception in thread Thread-3:
- Traceback (most recent call last):
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Lost too many packets, resyncing...
-   File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
-     self.run()
-   File "/usr/lib/python2.7/threading.py", line 754, in run
-     self.__target(*self.__args, **self.__kwargs)
-   File "/usr/lib/python2.7/dist-packages/kivy/input/providers/mtdev.py", line 197, in _thread_run
-     _device = Device(_fn)
-   File "/usr/lib/python2.7/dist-packages/kivy/lib/mtdev.py", line 131, in __init__
-     self._fd = os.open(filename, os.O_NONBLOCK | os.O_RDONLY)
- OSError: [Errno 13] Permission denied: '/dev/input/event7'
- 
+ /usr/local/lib/python2.7/dist-packages/kivy/core/clipboard/clipboard_gtk3.py:14: PyGIWarning: Gtk was imported without specifying a version first. Use gi.require_version('Gtk', '3.0') before import to ensure that the right version gets loaded.
+   from gi.repository import Gtk, Gdk
+[[1;32mINFO[0m   ] [Clipboard   ] Provider: gtk3(['clipboard_dbusklipper'] ignored)
+[[1;31mCRITICAL[0m] [Cutbuffer   ] Unable to find any valuable Cutbuffer provider at all!
+xclip - OSError: [Errno 2] No existe el archivo o el directorio
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    fromlist=[modulename], level=0)
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/clipboard/clipboard_xclip.py", line 17, in <module>
+    p = subprocess.Popen(['xclip', '-version'], stdout=subprocess.PIPE)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+
+xsel - OSError: [Errno 2] No existe el archivo o el directorio
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    fromlist=[modulename], level=0)
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/clipboard/clipboard_xsel.py", line 15, in <module>
+    p = subprocess.Popen(['xsel'], stdout=subprocess.PIPE)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+
+[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
 [Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
-[Stream 70] Invalid magic 674e
-[Stream 70] Invalid magic 8971
-[Stream 70] Invalid magic ba57
-[Stream 70] Invalid magic 5bcb
 [Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic 9d33
-[Stream 70] Invalid magic 9dd3
-[Stream 70] Invalid magic e1dc
-[Stream 70] Invalid magic 0ea1
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
 [Stream 70] Invalid magic ffff
 [Stream 70] Lost too many packets, resyncing...
-[Stream 70] Invalid magic 9d53
-[Stream 70] Invalid magic 81af
 [Stream 70] Invalid magic ffff
 [Stream 70] Invalid magic ffff
 [Stream 70] Invalid magic ffff
 [Stream 70] Invalid magic ffff
 [Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic 5eff
 [Stream 70] Invalid magic ffff
 [Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[[1;32mINFO[0m   ] [Base        ] Start application main loop
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
 Hecho el registro de las clases!!
 
+Los argumentos enviados por consola son: Namespace(gps='fakegps', tipoCaptura='xyz_rgb')
+
+Abriendo BD json local ./DB_MUESTRAS_LOCALES_18-04-2017.json...
+
 Inicializado Capturador
+Abriendo BD json local ./DB_MUESTRAS_LOCALES_18-04-2017.json...
+
 Inicializado Capturador
-Inicializado CapturadorInformado
 Inicializado MainApp!
-Obtenido teclado...
-
-Obtenido teclado...
-
-Inicio de estrategiaConfirmados.filtrar()
-Fin de filtrar!
-Inicio de EstrategiaInformados.filtrar()
-Fin de filtrar!
-Inicio de estrategiaConfirmados.filtrar()
-Fin de filtrar!
-Inicio de EstrategiaInformados.filtrar()
-Fin de filtrar!
+Registrando elemento default_font
 En build()
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+En KinectScreen!!
+Inicializado el depthThread!
+
+El tamanio de la ventana es: 800,600 
+
+En inicializar_imagenes_kinect() ...
+
+Obtenido teclado...
+
+En KinectScreen!!
+Inicializado el depthThread!
+
+El tamanio de la ventana es: 800,600 
+
+En inicializar_imagenes_kinect() ...
+
+Obtenido teclado...
+
+Bindeados elementos en subircapturasservidor!
+
+Bindeados elementos en subircapturasservidor!
+
+Despues de capturador.obtenerPropsConfirmadas()
+
+Creado un resplado de las propiedades de las fallas confirmadas!
+
+Tipos de falla obtenidos correctamente
+ desde servidor!
+SE DESVANECIO EL POPUPCONFIRMADAS!
+
 CAMBIO DE DIRECTORIO!
 selection : []
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
 
 Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
 CAMBIO DE DIRECTORIO!
 selection : []
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
 
 Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+MOSTRANDO EL RESULTADO DE LA PETICION...
+
 screen manager -->
-['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura']
+['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura', 'propsFallaConfirmada']
 cambie!
 menutiposfalla
+type(dropdown): <class 'kivy.uix.dropdown.DropDown'>; type(button): <type 'str'>
+
+button.text: Bache
+
+Atributos obtenidos: [{'clave': 'tipoReparacion', 'colPropsAsociadas': [], 'valor': 'Cementar'}, {'clave': 'tipoReparacion', 'colPropsAsociadas': [], 'valor': 'Sellar'}, {'clave': 'tipoMaterial', 'colPropsAsociadas': [], 'valor': 'Cemento'}]
+
+Iterando elemento.getClave(): tipoReparacion
+
+Iterando elemento.getClave(): tipoReparacion
+
+Iterando elemento.getClave(): tipoMaterial
+
+Cambiados attrs de tiposFalla...
+
+En actualizar_btn_mat() con Cementar
+
+En actualizar_btn_mat() con Cemento
+
+Validando atributos:
+
+tipoFalla: Bache
+
+tipoReparacion: Cementar
+
+tipoMaterial: Cemento
+
 Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-PRE-ENTER!!
-keycode[0] : 301
-keycode[1] : capslock
-keycode[0] : 301
-keycode[1] : capslock
-keycode[0] : 108
-keycode[1] : l
-keycode[0] : 108
-keycode[1] : l
-keycode[0] : 97
-keycode[1] : a
-keycode[0] : 97
-keycode[1] : a
-keycode[0] : 108
-keycode[1] : l
-keycode[0] : 108
-keycode[1] : l
-keycode[0] : 97
-keycode[1] : a
-keycode[0] : 97
-keycode[1] : a
-keycode[0] : 301
-keycode[1] : capslock
-keycode[0] : 301
-keycode[1] : capslock
-Archivo captura seleccionado:  LALA
-LALA
-Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-es_nombre_valido:  True
-es_dir_valido:  True
-
-Data SETEADA!!! con: nombre_cap =  LALA ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-Asociando falla con id_falla -1
-
-Instanciado GPS!
-Abriendo BD json local...
-Fin constructor GeofencingAPI!
-En obtenerLatitudLongitud() con nombre_archivo: test_file_default.pcd
-
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-No se pudieron obtener las coordenadas!
-
-Cambiado el estado de la falla a : Confirmada; latitud: -1 - longitud: -1 
-
-Cantidad de archivos .pcd con el nombre  LALA es :  1
-
-Falla (lat:-1,long:-1) tiene las capturas:  
-Captura: nombreAchivo(LALA_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules) - formato(pcd) - extension(.pcd)
-
-Captura realizada con exito! Agregada:  LALA_1.pcd
-
-Instanciado GPS!
-Abriendo BD json local...
-Fin constructor GeofencingAPI!
-En alamcenarCapturaLocal() ...
-BD actualizada con elementos: 
-[{u'latitud': 4315.6434, u'nombrePcd': u'LLLLL', u'longitud': 6517.9341}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9357}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9358}, {u'latitud': 4315.6424, u'nombrePcd': u'BELGRA', u'longitud': 6517.9346}, {u'latitud': 4315.6408, u'nombrePcd': u'BELGRA', u'longitud': 6517.9322}, {u'latitud': 4315.6404, u'nombrePcd': u'BELGRA', u'longitud': 6517.9334}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_4.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/F_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/ffafa_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_1.pcd', u'longitud': -1}]
------------------------------------------------------
-Guardado archivo .pcd en BD_JSON!
-
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-Asociando falla con id_falla -1
-
-Instanciado GPS!
-Abriendo BD json local...
-Fin constructor GeofencingAPI!
-En obtenerLatitudLongitud() con nombre_archivo: test_file_default.pcd
-
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-No se pudieron obtener las coordenadas!
-
-Cambiado el estado de la falla a : Confirmada; latitud: -1 - longitud: -1 
-
-Cantidad de archivos .pcd con el nombre  LALA es :  2
-
-Falla (lat:-1,long:-1) tiene las capturas:  
-Captura: nombreAchivo(LALA_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules) - formato(pcd) - extension(.pcd)
-
-Captura realizada con exito! Agregada:  LALA_2.pcd
-
-Instanciado GPS!
-Abriendo BD json local...
-Fin constructor GeofencingAPI!
-En alamcenarCapturaLocal() ...
-BD actualizada con elementos: 
-[{u'latitud': 4315.6434, u'nombrePcd': u'LLLLL', u'longitud': 6517.9341}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9357}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9358}, {u'latitud': 4315.6424, u'nombrePcd': u'BELGRA', u'longitud': 6517.9346}, {u'latitud': 4315.6408, u'nombrePcd': u'BELGRA', u'longitud': 6517.9322}, {u'latitud': 4315.6404, u'nombrePcd': u'BELGRA', u'longitud': 6517.9334}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_4.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/F_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/ffafa_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_2.pcd', u'longitud': -1}]
------------------------------------------------------
-Guardado archivo .pcd en BD_JSON!
-
-Asociando falla con id_falla -1
-
-Instanciado GPS!
-Abriendo BD json local...
-Fin constructor[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
- GeofencingAPI!
-En obtenerLatitudLongitud() con nombre_archivo: test_file_default.pcd
-
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-No se pudieron obtener las coordenadas!
-
-Cambiado el estado de la falla a : Confirmada; latitud: -1 - longitud: -1 
-
-Cantidad de archivos .pcd con el nombre  LALA es :  3
-
-Falla (lat:-1,long:-1) tiene las capturas:  
-Captura: nombreAchivo(LALA_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules) - formato(pcd) - extension(.pcd)
-
-Captura realizada con exito! Agregada:  LALA_3.pcd
-
-Instanciado GPS!
-Abriendo BD json local...
-Fin constructor GeofencingAPI!
-En alamcenarCapturaLocal() ...
-BD actualizada con elementos: 
-[{u'latitud': 4315.6434, u'nombrePcd': u'LLLLL', u'longitud': 6517.9341}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9357}, {u'latitud': 4315.6445, u'nombrePcd': u'LLLLL', u'longitud': 6517.9358}, {u'latitud': 4315.6424, u'nombrePcd': u'BELGRA', u'longitud': 6517.9346}, {u'latitud': 4315.6408, u'nombrePcd': u'BELGRA', u'longitud': 6517.9322}, {u'latitud': 4315.6404, u'nombrePcd': u'BELGRA', u'longitud': 6517.9334}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/GPS_TEST_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/tt_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_3.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RR_4.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/F_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/ffafa_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_1.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_2.pcd', u'longitud': -1}, {u'latitud': -1, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/LALA_3.pcd', u'longitud': -1}]
------------------------------------------------------
-Guardado archivo .pcd en BD_JSON!
-
-Screen encontrada y removida!
-SCreen agregada al mananger
-Las screens actuales de screenmanager luego de switch_to son: 
-['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura']
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
 
 PRE-ENTER!!
 La seleccion es:  []
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+CAMBIO DE DIRECTORIO!
+selection : []
 
-keycode[0] : 27
-keycode[1] : escape
-keycode[0] : 27
-keycode[1] : escape
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas']
+Archivo captura seleccionado:  dsa
+dsa
+NOMBRE dsa VALIDO PARA UNA CAPTURA!
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+
+Data SETEADA!!! con: nombre_cap =  dsa ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+Bindeado SPACEBAR!!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+len(self.queueVideo) = 0
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! tipo: float32 
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturaInvocando a pcl_viewer con parametro /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd
+[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+ERROR: In /build/vtk6-YpT4yb/vtk6-6.2.0+dfsg1/Rendering/OpenGL/vtkOpenGLTexture.cxx, line 200
+vtkOpenGLTexture (0x1ef8690): No scalar values found for texture input!
+
+[0;m[done, [0;36m50[0;m[0;m ms : [0;36m3334[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;mdor: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.264148 - longitud: -65.290654 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Bache; tipoReparacion: Cementar; tipoMaterial: Cemento
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas ; nombre_captura: dsa
+
+Cantidad de archivos .pcd con el nombre  dsa es :  1
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas) - formato(pcd) - extension(.pcd)
+
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/dsa_1.csv 
+
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  dsa_1.pcd
+
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd', u'longitud': -65.290654}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/dsa_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/dsa_1.csv'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd'}
+
+Abierto visualizador
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/dsa_1.csv'}] en disco!
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'propsFallaConfirmada', 'dialogopropscaptura']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+
+PRE-ENTER!!
+DesBindeada SPACEBAR!!
+
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas']
+Archivo captura seleccionado:  asa
+asa
+NOMBRE asa VALIDO PARA UNA CAPTURA!
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+
+Data SETEADA!!! con: nombre_cap =  asa ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-201Invocando a pcl_viewer con parametro /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd
+[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+ERROR: In /build/vtk6-YpT4yb/vtk6-6.2.0+dfsg1/Rendering/OpenGL/vtkOpenGLTexture.cxx, line 200
+vtkOpenGLTexture (0x1d67c40): No scalar values found for texture input!
+
+[0;m[done, [0;36m52[0;m[0;m ms : [0;36m4976[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;m7/pruebas
+Bindeado SPACEBAR!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+len(self.queueVideo) = 0
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! tipo: float32 
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.264148 - longitud: -65.290654 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Bache; tipoReparacion: Cementar; tipoMaterial: Cemento
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas ; nombre_captura: asa
+
+Cantidad de archivos .pcd con el nombre  asa es :  1
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas) - formato(pcd) - extension(.pcd)
+
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv 
+
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  asa_1.pcd
+
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd', u'longitud': -65.290654}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd'}
+
+Abierto visualizador
+
+NO desea conservar la captura
+
+En descartar()...
+Las capturas recibidas son :[u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd', u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv']
+
+Inicio de capturador.descartar()
+
+Captura encontrada! en: [u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd', u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv'] 
+
+Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd
+
+Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv
+
+Eliminando captura de memoria...
+
+Mostrando la coleccionInvocando a pcl_viewer con parametro /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd
+[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+ERROR: In /build/vtk6-YpT4yb/vtk6-6.2.0+dfsg1/Rendering/OpenGL/vtkOpenGLTexture.cxx, line 200
+vtkOpenGLTexture (0x1692550): No scalar values found for texture input!
+
+[0;m[done, [0;36m88[0;m[0;m ms : [0;36m264414[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;m desde captura
+
+En mostrarCapturas()
+
+Fin mostrarCapturas()
+
+Descartada correctamente! 
+
+En mostrarCapturas()
+
+Fin mostrarCapturas()
+
+Fin de capturador.descartar()
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+len(self.queueVideo) = 1
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! tipo: float32 
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.264148 - longitud: -65.290654 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Bache; tipoReparacion: Cementar; tipoMaterial: Cemento
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas ; nombre_captura: asa
+
+Cantidad de archivos .pcd con el nombre  asa es :  1
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas) - formato(pcd) - extension(.pcd)
+
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv 
+
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  asa_1.pcd
+
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/dsa_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd', u'longitud': -65.290654}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd'}
+
+Abierto visualizador
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/asa_1.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017/pruebas/csv/asa_1.csv'}] en disco!
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['menutiposfalla', 'menu', 'settingscreen', 'capturaKi[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+Unhandled exception in thread started by <bound method KinectDepth.__bootstrap of <KinectDepth(Thread-2, stopped daemon 139971226900224)>>
+nect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'propsFallaConfirmada', 'dialogopropscaptura']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+
+PRE-ENTER!!
+DesBindeada SPACEBAR!!
+
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente-RGB-FUNCIONAL-27-03-2017']
+
+En dialogopropscaptura.getData(): -1
+
+controlador.getData('idFalla') > 0 ? False
+
+Excepcion typeError en thread KinectDepth!!!
+
+Excepcion typeError en thread KinectDepth!!!
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+'NoneType' object is not callable
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+'NoneType' object is not callable
+Error: Problema de conexion con el sensor. Esta conectado?
+
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 774, in __bootstrap
+    Unhandled exception in thread started by <bound method KinectDepth.__bootstrap of <KinectDepth(Thread-1, stopped daemon 139971244209920)>>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Error: Problema de conexion con el sensor. Esta conectado?
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 774, in __bootstrap
+    self.__bootstrap_inner()
+self.__bootstrap_inner()
+  File "/usr/lib/python2.7/threading.py", line 814, in __bootstrap_inner
+    (self.name, _format_exc()))
+  File "/usr/lib/python2.7/threading.py", line 814, in __bootstrap_inner
+  File "/usr/lib/python2.7/traceback.py", line 241, in format_exc

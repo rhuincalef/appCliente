@@ -15,7 +15,8 @@
 		id: layout_principal
 		orientation: 'vertical'
 		cols: 1
-		rows: 2
+		rows: 3
+		#rows: 2
 
 		Label:
 			id: titulo
@@ -29,14 +30,57 @@
 					pos: self.pos
 					size: self.size
 
-		
+		GridLayout:
+			id: layout_labels
+			orientation: 'horizontal'
+			cols: 3
+			rows: 1
+			size_hint:(1,0.05)
+			Label:
+				id: id_falla_col
+				text: "Id Falla"
+				size_hint:(0.33,1)
+				color: 0,0,0,1
+				canvas.before:
+					Color:
+						rgba: const.COLOR_LABELS_RGBA
+					Rectangle:
+						pos: self.pos
+						size: self.size
+
+			Label:
+				id: calle_falla_col
+				text: "Calle/Latitud"
+				size_hint:(0.34,1)
+				color: 0,0,0,1
+				canvas.before:
+					Color:
+						rgba: const.COLOR_LABELS_RGBA
+					Rectangle:
+						pos: self.pos
+						size: self.size
+
+			Label:
+				id: altura_falla_col
+				text: "Altura/Longitud"
+				size_hint:(0.33,1)
+				color: 0,0,0,1
+				canvas.before:
+					Color:
+						rgba: const.COLOR_LABELS_RGBA
+					Rectangle:
+						pos: self.pos
+						size: self.size
+
 		### ListView para seleccion de las fallas
 	    ListView:
 	    	id:listado
 
-	    	# Popula el ListView con el listado de objetos obtenidos del filtrado
-	    	# de capturas del capturador y capturadorInformado
-	    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().filtrarCapturas(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
+	    	# Popula el ListView con el listado de objetos obtenidos del filtrado de capturas del capturador y capturadorInformado
+	    	#adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().filtrarCapturas(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
+	    	
+	    	adapter: dictAdapter.ListAdapter(data =[] ,propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
+	    	
 	    	
 	    	# Tamanio en porcentajes con respecto al widget anterior
 	    	size_hint:(1,0.9)

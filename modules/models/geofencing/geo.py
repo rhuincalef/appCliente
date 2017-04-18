@@ -15,11 +15,11 @@ import serial
 import string
 import sys
 
-if len (sys.argv) < 3:
-        print "Usage: ge.py [serial-port] [kml-file]"
-        sys.exit();
+#if len (sys.argv) < 3:
+#	print "Usage: ge.py [serial-port] [kml-file]"
+#	sys.exit();
 
-gps = serial.Serial(sys.argv[1], 9600, timeout=1)
+gps = serial.Serial(sys.argv[1], timeout=1)
 #gps = serial.Serial(sys.argv[1], 2593, timeout=1)
 file = sys.argv[2]
 

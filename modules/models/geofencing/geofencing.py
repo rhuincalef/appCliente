@@ -4,6 +4,11 @@ from serial import SerialException
 import time
 import string
 
+import gps
+
+#MODIFICADO ACA!!!
+#from utils import mostrarDialogo
+
 # Tutoriales compartir GPS con USB
 # http://www.jillybunch.com/sharegps/user.html
 # http://www.jillybunch.com/sharegps/nmea-bluetooth-linux.html
@@ -21,13 +26,21 @@ import string
 #DEVICE_GPS_DEFAULT = "/dev/rfcomm1"
 
 
-class GeofencingAPI(object):
+class GeofencingAPI1(object):
 	""" API para obtener la calle y altura de una falla confirmada,
 		dada su latitud y longitud. """
 
 	def __init__(self):
-		self.gps = serial.Serial(DEVICE_GPS_DEFAULT, 9600, timeout=1)
-		print "Instanciado GPS!"
+		self.gps = None
+		#MODIFICADO ACA!!!
+		try:
+			self.gps = serial.Serial(DEVICE_GPS_DEFAULT, 9600, timeout=1)
+			print "Instanciado GPS!\n"
+		except SerialException as e:
+			#mostrarDialogo(titulo="Error GPS ",content="Dispositivo GPS no detectado!",contiene_boton=True)
+			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+			print "+++++++++++++++++++++++++++ Error dispositivo GPS no detectado! ++++++++++++++++++++++++++"
+			print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 		self.bd_json = BDLocal()
 		print "Fin constructor GeofencingAPI!"
 
@@ -71,8 +84,6 @@ class GeofencingAPI(object):
 						print "Espera sin conseguir lat y longitud: %s" % (t2-t1)
 						break
 					t1 = t2
-
-
 		except SerialException as se:
 			print "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 			print "++++++++++++ Error ubicacion en GPS no disponible(Dispositivo GPS no conectado). ++++++++++++"
@@ -89,10 +100,63 @@ class GeofencingAPI(object):
 		return (latitude,longitude)
 
 
+
+
 	def almacenarCapturaLocal(self,lat,long,nombre_archivo):
 		print "En alamcenarCapturaLocal() ..."
 		self.bd_json.agregar(lat,long,nombre_archivo)
 
+
+class GeofencingAPI(object):
+	""" API para obtener la calle y altura de una falla confirmada,
+		dada su latitud y longitud. """
+
+	def __init__(self):
+		self.session = gps.gps()
+		self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
+		self.bd_json = BDLocal()
+		'''
+		for x in xrange(1,100):
+			report = self.session.next()
+			print report
+		'''
+
+	def obtenerLatitudLongitud(self,nombre_archivo="test_file_default.pcd"):
+		t1 = time.time()
+		latitude = longitude = INVALID_LAT_LONG
+		estanObtenidas = False
+		tiempo_transcurrido = 0
+		print "En obtenerLatitudLongitud() con nombre_archivo: %s" % nombre_archivo
+		print ""
+		#Se prueba obtener la lat. y long por una cant. de segundos.
+		while 1:
+			latitude = longitude = INVALID_LAT_LONG
+			report = self.session.next()
+			print report
+			if report['class'] == 'TPV':
+				#if not 'lat' in gpsd_report.keys():
+				#        continue
+				latitude =  report['lat']
+				longitude = report['lon']
+				t2 = time.time()
+				tiempo_transcurrido += t2-t1
+				print "Tiempo transcurrido: %s seg." % tiempo_transcurrido
+				print ""
+				if tiempo_transcurrido >= MAX_TIMEOUT_SEGS:
+					print "Espera sin conseguir lat y longitud: %s" % (t2-t1)
+					break
+				t1 = t2
+			
+		return (latitude,longitude)
+
+	
+	# TODO: Obtiene la latidud y longitud del GPS.
+	def getLatLong(self):
+		return (LAT_PRUEBA,LONG_PRUEBA)
+
+	def almacenarCapturaLocal(self,lat,long,nombre_archivo):
+		print "En alamcenarCapturaLocal() ..."
+		self.bd_json.agregar(lat,long,nombre_archivo)
 
 # Clase que almacena en una TinyBD la latidud, longitud,
 # y el nombre del archivo de captura .pcd.
@@ -102,8 +166,11 @@ from tinydb import TinyDB, Query
 class BDLocal(object):
 
 	def __init__(self):
-		self.bd_json = TinyDB(LOCAL_DB_JSON_NAME)
-		print "Abriendo BD json local..."
+		MY_JSON_BD = LOCAL_DB_JSON_NAME +time.strftime("%d-%m-%Y")+\
+						EXTENSION_LOCAL_BD_JSON_NAME
+
+		self.bd_json = TinyDB(MY_JSON_BD)
+		print "Abriendo BD json local %s...\n" % MY_JSON_BD
 
 	def agregar(self,latitud,longitud,nombrePcd):
 		my_dic = {

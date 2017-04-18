@@ -2,6 +2,9 @@
 
 # NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del 
 # archivo .kv.
+#:import icon iconfonts.icon
+#:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
+#:import COLOR_SPINNER constantes.COLOR_SPINNER
 
 <MenuTiposFallaScreen>:
     GridLayout:
@@ -11,27 +14,32 @@
         cols: 1
         rows: 4
         btn_capturar_fallas: bt_capturar_fallas
-        btn_subir_archivos: bt_subir_archivos
+        btn_obtener_informadas_server: bt_obtener_inf
+        btn_capturar_informadas: bt_capturar_inf
         btn_salir: bt_salir
 
         Button:
         	id: bt_capturar_fallas
-        	text: "Capturar falla nuevas"
-            on_press: root.manager.current = 'dialogopropscaptura'
-        	#on_press: root.manager.current = 'capturaKinect'
+            markup: True
+        	text: "%s Capturar falla nuevas" % (icon('fa-camera',TAMANIO_ICONOS))
+            on_press: root.manager.current = 'propsFallaConfirmada'
+            #on_press: root.manager.current = 'dialogopropscaptura'
         	
 
         Button:
-        	id: bt_subir_archivos
-        	text: "Obtener fallas del servidor"
+        	id: bt_obtener_inf
+            markup: True
+        	text: "%s Obtener fallas del servidor" % (icon('fa-cloud-download',TAMANIO_ICONOS))
         	on_press: root.manager.current = "obtenerinformadas"
 
         Button:
-            id: bt_subir_archivos
-            text: "Capturar falla informada"
+            id: bt_capturar_inf
+            markup: True
+            text: "%s Capturar falla informada" % (icon('fa-id-card',TAMANIO_ICONOS))
             on_press: root.manager.current = 'settingscreen'
 
         Button:	
         	id: bt_salir
+            markup: True
         	on_press: root.manager.current = 'menu'
-        	text: "Volver"
+        	text: "%s Volver" % (icon('fa-arrow-circle-o-left',TAMANIO_ICONOS))

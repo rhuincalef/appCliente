@@ -19,23 +19,57 @@ from constantes import *
 
 from os.path import join, isdir
 
+from kivy.adapters.dictadapter import ListAdapter
+from kivy.uix.listview import ListItemButton, ListItemLabel, \
+        CompositeListItem, ListView
+
+from kivy.adapters import dictadapter
+
 class SubirCapturasServidorScreen(Screen):
 	
 	def __init__(self,**kwargs):
 		super(SubirCapturasServidorScreen, self).__init__(**kwargs)
-		self.bind(on_enter=self.refrescar_vista)		
+		self.bind(on_enter=self.refrescar_vista)
+		self.listado_capturas.adapter.bind(on_selection_change=self.cambio_seleccion)
+		print "Bindeados elementos en subircapturasservidor!\n"
 
+	#Se deseleccionan los elementos cunado adapter.selection<2 porque
+	# sino se cambia el estado del primer elemento en la lista a
+	# is_selected = True
+	def cambio_seleccion(self,adapter):
+		print "Cambio la seleccion!\n"
+		#for elem in adapter.selection:
+		#	print "Elemento seleccionado: %s,%s\n" % (type(elem),elem)
+		if len(adapter.selection) < 2:
+			print "DESELECCIONANDO FALLAS!!\N"
+			for falla in self.listado_capturas.adapter.data:
+				falla.desSeleccionar()
+		print "El estado de las fallas es: \n"
+		for falla in self.listado_capturas.adapter.data:
+			print "%s\n" % falla
+		print "\n*****************************************\n"
+		print "Fin de cambio_seleccion"
 
 	#Actualiza la lista de fallas confirmadas
+	#def refrescar_vista(self,listview):
+	#	print "Refrescando vista!!!! "
+	#	controlador = App.get_running_app()
+	#	fallas_dic = controlador.filtrarCapturas()
+	#	if len(fallas_dic) > 0:
+	#		print "Objeto: %s" % fallas_dic[0]
+	#		print "Tipo de objeto: %s" % type(fallas_dic[0].getEstado())
+	#		print ""
+	#	self.listado_capturas.adapter.data = fallas_dic
+
 	def refrescar_vista(self,listview):
 		print "Refrescando vista!!!! "
 		controlador = App.get_running_app()
-		fallas_dic = controlador.filtrarCapturas()
-		if len(fallas_dic) > 0:
-			print "Objeto: %s" % fallas_dic[0]
-			print "Tipo de objeto: %s" % type(fallas_dic[0].getEstado())
-			print ""
-		self.listado_capturas.adapter.data = fallas_dic
+		controlador.filtrarCapturas()
+		
+
+	def actualizarListaCaps(self,fallasFiltradas):
+		self.listado_capturas.adapter.data = fallasFiltradas
+
 
 	#Envia las capturas adaptadas para el envio al servidor,
 	#
@@ -56,31 +90,33 @@ class SubirCapturasServidorScreen(Screen):
     # contains argument sets for each of the member widgets for this
     # composite: ListItemButton and ListItemLabel.
 	def args_converter(self,row_index, an_obj):
-		print "row_index actual: ",row_index
-		print ""
-		print "tipo: %s" % type(an_obj)
-		print ""
+		print "En subircapturasservidor.args_converter()...\n"
+		print "row_index actual: %s\n" % row_index
+		print "falla: %s\n" % an_obj
+		attrEstado = an_obj.getEstado().getAttributos()
+		print "Los attrEstado son: %s\n" % attrEstado
+		print ">...............................................<\n\n"
 		return {
 		'size_hint_y': None,
 		'height': 25,
 		'cls_dicts': [{'cls': ListItemButton,
-		               'kwargs': {'text': "{0}".format(an_obj.getEstado().getId())
+		               'kwargs': {'text': "{0}".format(attrEstado[0])
 		                          #'deselected_color': [0.,0,1,1]
 		                          }
 		              }
 		              ,{
 		                   'cls': ListItemButton,
 		                   'kwargs': {
-		                       'text': "{0}".format(an_obj.getEstado().getCalle()),
+		                       'text': "{0}".format(attrEstado[1]),
 		                       #'deselected_color': [0.,0,1,1],
 		                       'background_color': [0,1,0,1]
 		                        }
 		              },
 		              {
 		                   'cls': ListItemButton,
-		                   'kwargs': { 'text': "{0}".format(an_obj.getEstado().getAltura())
+		                   'kwargs': { 'text': "{0}".format(attrEstado[2])
 		                            }
 		              }]
 		    }
 
-
+	

@@ -7,6 +7,6 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import Screen
 
 class MenuTiposFallaScreen(Screen):
-	pass 
+	pass
 
 

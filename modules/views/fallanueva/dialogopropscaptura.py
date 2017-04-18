@@ -6,30 +6,58 @@ from kivy.uix.screenmanager import Screen
 import os,sys
 from constantes import *
 from string import strip
+import re
 
 from kivy.properties import NumericProperty
 from constantes import FALLA_NO_ESTABLECIDA
 
+
+from os import path, makedirs
+
+
+# Imports de xpopup
+from tools import *
+from xbase import XBase
+from notification import XError
+#from form import XTextInput
+from form import *
+from notification import XNotification, XConfirmation, XError
+
+from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+
+
+from iconfonts import icon
 
 # TODO: DESPUES DE HACER EL volver en kinectviewer.py actualizar el listado
 # de archivos que muestra el filechooser!!.
 # -Cuando se selecciona un archivo que se muestre en el label de navegacion
 # el nombre del archivo seleccionado. 
 
-class DialogoPropsCapturaScreen(Screen):
+#NOTA IMPORTANTE: INSTALAR el paquete xpopup con :
+# $ sudo pip install kivy-garden
+# $ garden install xpopup
 
-	idFalla = NumericProperty(FALLA_NO_ESTABLECIDA)
+import shutil
+from constantes import TAMANIO_ICONOS_CTRL_BAR
+from os import path
+
+class DialogoPropsCapturaScreen(Screen):
 
 	def __init__(self,**kwargs):
 		super(DialogoPropsCapturaScreen, self).__init__(**kwargs)
 		self.dir_chooser.path = os.getcwd()
 		self.dir_chooser.rootpath = ROOT_PCD_FOLDER
 
-	def set_id_falla_informada(self,id_falla):
-		self.idFalla = id_falla 
+
 
 	def validar(self):
 		pass
+
+
+	#Activado cuando se pulsa enter el en Text-Input.
+	def validar1(self,txt):
+		print "VALIDANDO TEXTO de nombre de archivo!!\n"
 
 
 	# NOTA: Por defecto el filechooser carga la seleccion con el directorio
@@ -49,6 +77,12 @@ class DialogoPropsCapturaScreen(Screen):
 		# print ""
 
 
+	def esDirValido(self,dirChooser):
+		if len(dirChooser.selection) > 0:
+			dirName = dirChooser.selection[0]	
+		  	return self.dir_chooser.file_system.is_dir(dirName)
+		return False
+
 
 	def seleccionado(self, seleccion):
 		print "La seleccion es: ",seleccion
@@ -62,6 +96,7 @@ class DialogoPropsCapturaScreen(Screen):
 			self.dir_chooser.selection.append(self.dir_chooser.path)
 			print "Actualizado! self.dir_chooser.selection: %s" % self.dir_chooser.selection
 			print ""
+
 
 	def cambio_dir(self):
 		print "CAMBIO DE DIRECTORIO!"
@@ -81,8 +116,18 @@ class DialogoPropsCapturaScreen(Screen):
 		es_nombre_valido = es_dir_valido = False
 		print "Archivo captura seleccionado: ", nombre_captura
 		print strip(nombre_captura)
-		if (nombre_captura != None) and strip(nombre_captura):
-			es_nombre_valido = True 
+
+		#NOTA: Solo se permiten nombres sin _ y un Numero y sin
+		# extension .PCD
+		PATRON_RE = "(.*\.pcd)|(.*_[0-9].*)"
+		match = None
+		match = re.search(PATRON_RE,nombre_captura)
+		if (nombre_captura != None) and strip(nombre_captura) and \
+			match is None:
+			es_nombre_valido = True
+			print "NOMBRE %s VALIDO PARA UNA CAPTURA!" % nombre_captura
+		else:
+			print "NOMBRE %s INVALIDO PARA UNA CAPTURA!" % nombre_captura
 
 
 		nombre_dir = self.dir_chooser.selection[0] 
@@ -96,25 +141,178 @@ class DialogoPropsCapturaScreen(Screen):
 		print "es_dir_valido: ",str(es_dir_valido)
 		print ""
 
-
+		# Si es un dirvalido se envian los datos a kinect_screen
 		if es_nombre_valido and es_dir_valido:
 			kinect_screen = self.manager.get_screen('capturaKinect')
+			#kinect_screen.setDatosCaptura(self.nombre_cap.text,
+			#	self.dir_chooser.selection[0])
+			print "Dir. de trabajo: %s\n" % self.dir_chooser.path
 			kinect_screen.setDatosCaptura(self.nombre_cap.text,
-				self.dir_chooser.selection[0],self.idFalla)
+				self.dir_chooser.path)
+
+			
 			print "Data SETEADA!!! con: nombre_cap = ",self.nombre_cap.text,"; dir_trabajo = ",self.dir_chooser.selection[0]
 			self.manager.current = 'capturaKinect'
+
+
+	def crearDir(self,componente):
+		print "Creando directorio!!\n"
+		XTextInput(title='Creacion de directorio', text='Ingrese el nombre del nuevo directorio',
+			on_dismiss=self._createDir)
+		#self.instanciarComponente(
+		#								XTextInput,
+		#								callbackFn1 = self._createDir,
+		#								titulo = 'Creacion de directorio',
+		#								texto = 'Nombre carpeta nueva')
+	
+	def _createDir(self, instance):
+		if instance.is_canceled():
+			return
+		new_folder = self.dir_chooser.selection[0] + path.sep + instance.get_value()
+		print "En self._create_dir(): %s\n" % new_folder
+		if path.exists(new_folder):
+			print "La carpeta existe!!!"
+			#XError(text=_('La carpeta "%s" ya existe. Ingrese otro nombre de carpeta') % instance.get_value())
+			XError(text=('La carpeta "%s" ya existe. Ingrese otro nombre de carpeta') % instance.get_value())
+			return
+		makedirs(new_folder)
+		#Se refresca el directorio de trabajo al crear un dir nuevo
+		self.dir_chooser._update_files()
+		return
+		
+
+	def borrarDir(self,componente):
+		dirSeleccionado = self.dir_chooser.selection[0]
+		print "En borrarDir con dirSeleccionado: %s\n" % dirSeleccionado
+		#Se habilita la seleccion de directorios
+		self.dir_chooser.dirselect = True
+		
+		#Se agrega dinamicamente dos botones para borrar y cancelar el borrado
+		self.cargarOpcionesBorrado()
+
+	#Agrega las opciones de "Borrar" y "Cancelar borrado" en donde estan 
+	# las opciones de "Crear carpeta" y "Borrar carpeta".
+	def cargarOpcionesBorrado(self):
+		#Se guardan los elementos que tiene el layout para crear y borrar
+		# carpeta y se agregan los mismos elementos
+		print "En cargarOpcionesBorrado()....\n"
+		self.ctl_bar.clear_widgets()
+		borrar = Button(
+				id="BorrarBtn",
+                text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR)),
+				markup=True,
+                size_hint = (0.20,1),
+                on_press = self._borrarSeleccion                
+			)
+		self.ctl_bar.add_widget(borrar)
+		cancelar = Button(
+                text = "%sCancelar borrado" % (icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+				markup=True,
+                size_hint = (0.20,1),
+                on_press = self._cancelarSeleccion                
+			)
+		self.ctl_bar.add_widget(cancelar)
+
+
+
+	#Borrado de los directorios que se seleccionaron 
+	def _borrarSeleccion(self,componente):
+		print "En _borrarSeleccion()...\n"
+		if self.esDirValido(self.dir_chooser):
+			dirABorrar = self.dir_chooser.selection[0]
+			print "Borrando el dir: %s\n" % dirABorrar
+			shutil.rmtree(dirABorrar,onerror = self.deleteError)
+			print "Borrado correctamente!\n"
+			self._reestablecerGUI()
+
+		
+	#Cancelar la seleccion para borrar
+	def _cancelarSeleccion(self,boton):
+		print "No se borra el dir...%s\n" % type(boton)
+		self._reestablecerGUI()
+
+	#Agrega nuevamente las opciones anteriores para "Crear carpeta"
+	#  y "Borrar carpeta".
+	def _reestablecerGUI(self):
+		print "Reestableciendo GUI! ...\n"
+		self.ctl_bar.clear_widgets()
+		
+		searchBar = TextInput(
+							id= "nombre_captura_txt",
+							size_hint=(0.6,1),
+							write_tab= False,
+							multiline = False)
+		searchBar.bind(on_text_validate=self.validar1)
+		self.ctl_bar.add_widget(searchBar)
+		btn_crear_dir = Button(
+							id="btn_crear_dir",
+							markup = True,
+                			size_hint = (0.20,1),
+                			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR))
+                			)
+
+		btn_crear_dir.bind(on_press = self.crearDir)
+		self.ctl_bar.add_widget(btn_crear_dir)
+		btn_borrar_dir = Button(
+							id = "btn_borrar_dir",
+							markup = True,
+							size_hint = (0.20,1),
+							text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+							 )
+		btn_borrar_dir.bind(on_press = self.borrarDir)
+		self.ctl_bar.add_widget(btn_borrar_dir)
+		
+		#Se refresca el directorio de trabajo al crear un dir nuevo
+		self.dir_chooser.dirselect = False
+		print "Update_files antes\n"
+		self.dir_chooser._update_files()
+		print "Update_files despues!!\n"
+
+
+	def _noBorrarDir(self):
+		print "No se borra el dir"
+
+
+	#Handler por default para errores de borrado.
+	def deleteError(self):
+		print "Error ocurrido al borrar! %s\n" % self.dir_chooser.path + path.sep + self.dir_chooser.selection[0] 
+		XError(text= ("Error borrando el directorio\n %s" % shutil.Error))
+
+
+
+	#def instanciarComponente(self,componente,callbackFn1=None,titulo="",
+	#								texto="",buttons=[]):
+	#	callbackFn = self.default
+	##	if callbackFn1 is not None:
+	#		callbackFn = self.default
+	#	componente(title=titulo,
+	#			text=texto,
+	#			on_dismiss=callbackFn,
+	#			buttons=buttons)
+
+	def default(self,evt):
+		pass
 
 	def volver(self):
 		#Limpiar la seleccion y cambiar screen
 		self.dir_chooser.selection = []
 		self.dir_chooser.selection.append(self.dir_chooser.path)
-		self.nombre_cap.text = ""
+		#Se limpia el textinput en el que el usuario pudo haber ingresado datos
+		for w in self.ctl_bar.children:
+			if isinstance(w,TextInput):
+				w.text = ""
+
 		#Si es una fallainformada se regresa al menu de 
-		# seleccion de fallas informadas, sino al principal. 
-		menu_cambio = 'menutiposfalla'
-		if self.idFalla != FALLA_NO_ESTABLECIDA:
-			menu_cambio = 'settingscreen' 
-		self.idFalla = FALLA_NO_ESTABLECIDA
+		# seleccion de fallas informadas, sino al menu con las
+		# propiedades de las fallas nuevas('propsFallaConfirmada'). 
+		#menu_cambio = 'menutiposfalla'
+		controlador = App.get_running_app()
+		print "En dialogopropscaptura.getData(): %s\n" % controlador.getData("idFalla")
+		menu_cambio = 'propsFallaConfirmada'
+		if controlador.getData("idFalla") > 0:
+			menu_cambio = 'settingscreen'
+
+		print "controlador.getData('idFalla') > 0 ? %s\n" % (controlador.getData("idFalla") > 0)
 		self.manager.current = menu_cambio
 
 

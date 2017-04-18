@@ -4,11 +4,15 @@
     id: kinect_screen
 
     #Atributos llamables por Python.
+    
     label_wid: my_label
     main_layout: layout_principal
-    imagen_kv: my_img
     nombre_captura: ""
     dir_trabajo: ""
+    layout_kinect_images: layout_kinect
+    
+    kinect_rgb: imagen_rgb
+    kinect_grey: imagen_grises
 
     GridLayout:
         id: layout_principal
@@ -19,15 +23,24 @@
         Label:
             id: my_label
             size_hint: (1,0.05)
-            text: 'Captura de baches'
+            text: 'Captura de baches.Presione SPACEBAR para capturar.'
 
-        KinectViewer:
-            id: my_img
-            size_hint: (1,0.9)
+
+        GridLayout:
+            id: layout_kinect
+            orientation: 'horizontal'
+            cols:2
+            rows:1
             
-            #keep_ratio: False
-            #allow_stretch: True
+            KinectViewer:
+                id: imagen_rgb
+                size_hint: (0.5,1)
+
+            KinectViewerGreyScale:
+                id: imagen_grises
+                size_hint: (0.5,1)
             
+
         GridLayout:
             cols:2
             rows:1
