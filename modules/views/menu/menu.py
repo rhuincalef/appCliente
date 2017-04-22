@@ -12,7 +12,6 @@ import loadsavedialog
 from loadsavedialog import *
 from kivy.uix.popup import Popup
 
-from utils import mostrarDialogo
 import os
 from os import path
 from os.path import expanduser
@@ -127,22 +126,24 @@ class MenuScreen(Screen):
 
     # Carga los capturadores con las fallas leidas de disco.
     def cargar(self, path, filename):
+        controlador = App.get_running_app()
         try:
             with open(os.path.join(path, filename[0])) as stream:
                 # self.text_input.text = stream.read()
-                controlador = App.get_running_app()
                 controlador.leerFallas(stream)
         except IOError, e:
-            mostrarDialogo(titulo="Error al leer el archivo de  fallas de disco",
-                content=e.message)
+            controlador.mostrarDialogoMensaje(title="Error al leer el archivo de  fallas de disco",
+                                    text=e.message)
+
         except Exception, e:
-            mostrarDialogo(titulo="Error en el proceso de lectura de fallas",
-                content=e.message)
+            controlador.mostrarDialogoMensaje(title="Error en el proceso de lectura de fallas",
+                                    text=e.message)
 
         self.dismiss_popup()
 
     #Guarda serializa las capturas en un json y lo guarda a disco
     def guardar(self, path, filename):
+        controlador = App.get_running_app()
         try:
             full_path = path + filename
             if os.path.isfile(full_path):
@@ -153,15 +154,16 @@ class MenuScreen(Screen):
                 controlador = App.get_running_app()
                 controlador.guardarFallas(stream)
         except IOError, e:
-            mostrarDialogo(titulo="Error al guardar el archivo de fallas en disco",
-                content=e.message)
+            controlador.mostrarDialogoMensaje(title="Error al guardar el archivo de fallas en disco",
+                                                text=e.message)
 
         except ArchivoExisteExcepcion, e:
-            mostrarDialogo(titulo="Error archivo de capturas existente",
-                content=e.message)
+            controlador.mostrarDialogoMensaje(title="Error archivo de capturas existente",
+                                                text=e.message)
+
         except Exception, e:
-            mostrarDialogo(titulo="Error en el proceso de guardado de fallas",
-                content=e.message)
+            controlador.mostrarDialogoMensaje(title="Error en el proceso de guardado de fallas",
+                                                text=e.message)
 
         self.dismiss_popup()
 
@@ -177,33 +179,7 @@ class MenuScreen(Screen):
 # archivo .kv.
 # La clase que hereda de Screen tiene que tener al final la terminacion "Screen" y si
 # existen .kv asociados, se deben agregar 
-#
-# class MenuApp(App):
 
-#     def cargar_vistas(self,sm,listaVistas):
-#         for kev,tupla in listaVistas.iteritems():
-#             Builder.load_file(tupla["ruta_kv"])
-#             MyClass = getattr(importlib.import_module(tupla["modulo"]), 
-#                                 tupla["clase"])
-#             instance = MyClass()
-#             screen = MyClass(name=tupla["nombre_menu"])
-#             sm.add_widget(screen)
-
-#     def inicializar(self,sm):
-#         conf = leer_configuracion('../config/confViews.cfg')
-#         print "Configuracion leida..."
-#         self.cargar_vistas(sm,conf)
-        
-#     def build(self):
-#         sm = ScreenManager()
-#         self.title = "Capturador de fallas"
-#         self.inicializar(sm)
-#         sm.current = 'menu'
-#         return sm
-
-   
-# if __name__ == '__main__':
-#     MenuApp().run()
 
 
 

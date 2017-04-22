@@ -28,8 +28,9 @@ class PropsFallaConfirmadaScreen(Screen):
 		# Si no existen propiedades para los tipos de falla cargadas se
 		# se vuelve a la pantalla anterior 
 		if not controlador.estanCargadasPropTipoFalla():
-			mostrarDialogo(titulo="Error de propiedades TipoFalla",
-							content="No se pueden capturar fallas nuevas hasta descargar\nlos tipos de propiedades desde el servidor.\nConectese a internet e inicie la aplicacion nuevamente \npara obtener una copia de los \natributos necesarios de los tipos de falla. ")
+			controlador.mostrarDialogoMensaje(title="Error de propiedades TipoFalla",
+												text="No se pueden capturar fallas nuevas hasta descargar\nlos tipos de propiedades desde el servidor.\nConectese a internet e inicie la aplicacion nuevamente \npara obtener una copia de los \natributos necesarios de los tipos de falla."
+											)
 			self.manager.current = 'menutiposfalla'
 			return
 		#Se cargan solamente los tipos de falla en el dropdown
@@ -46,7 +47,8 @@ class PropsFallaConfirmadaScreen(Screen):
 	# en el dropdown y estableciendo el tipo de falla a la falla que
 	# tiene index=0 por defecto.
 	def inicializarDropDown(self,listado):
-		labPrincipal = Label(text='Seleccione los atributos con los que el tipo de falla se subira al servidor')
+		labPrincipal = Label(text='Seleccione los atributos con los que el tipo de falla se subira al servidor',
+							size_hint =(1,0.05) )
 		self.layout_principal.add_widget(labPrincipal)
 
 		myBtn = self.inicializarTipoFalla(listado)
@@ -77,11 +79,13 @@ class PropsFallaConfirmadaScreen(Screen):
 
 	
 	def inicializarTipoFalla(self,listado):
-		labFalla = Label(text='%s Seleccione el tipo de falla' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)),markup=True )
+		labFalla = Label(text='%s Seleccione el tipo de falla' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)),
+						markup=True,
+						size_hint =(1,0.20) )
 		self.layout_principal.add_widget(labFalla)
 		# Inicializacion del boton y dropdown de Tipo de falla
 		listBtns = []
-		self.mainButtonFalla = Button(text='Tipos de falla', size_hint=(None, None))
+		self.mainButtonFalla = Button(text='Tipos de falla', size_hint =(1,0.05))
 		for elem in listado:
 			btn = Button(text = elem.getValor(),size_hint_y=None, height=44)
 			btn.bind(on_release = lambda btn: self.dropdownTipoFalla.select(btn.text))
@@ -92,21 +96,27 @@ class PropsFallaConfirmadaScreen(Screen):
 
 	def inicializarTipoReparacion(self):
 		# Inicializacion del boton y dropdown de Tipo de Reparacion
-		labReparacion = Label(text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,markup=True)
+		labReparacion = Label(text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+							markup=True,
+							size_hint =(1,0.20))
 		self.layout_principal.add_widget(labReparacion)
-		self.mainButtonReparacion = Button(text='Tipos de reparacion', size_hint=(None, None)) 
+		self.mainButtonReparacion = Button(text='Tipos de reparacion',size_hint =(1,0.05)) 
 		self.layout_principal.add_widget(self.mainButtonReparacion)
 
 	def inicializarTipoMaterial(self):
 		# Inicializacion del boton y dropdown de Tipo de Material
-		labMaterial = Label(text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,markup=True )
+		labMaterial = Label(text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
+							markup=True,
+							size_hint =(1,0.20) )
 		self.layout_principal.add_widget(labMaterial)
-		self.mainButtonMaterial = Button(text='Tipos de material', size_hint=(None, None)) 
+		self.mainButtonMaterial = Button(text='Tipos de material', size_hint =(1,0.05)) 
 		self.layout_principal.add_widget(self.mainButtonMaterial)
 
 
 	def inicializarFooter(self):
-		layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal')
+		#layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal')
+		layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal',
+								size_hint= (1,0.05))
 		btnAcept = Button(text = 'Aceptar')
 		btnAcept.bind(on_press = self.aceptar)
 		layout.add_widget(btnAcept)
@@ -117,12 +127,10 @@ class PropsFallaConfirmadaScreen(Screen):
 
 
 	def actualizar_btn_mat(self,drop,btnNombre):
-		print "En actualizar_btn_mat() con %s\n" % btnNombre
 		setattr(self.mainButtonMaterial, 'text', btnNombre)
 
 
 	def actualizar_btn_rep(self,drop,btnNombre):
-		print "En actualizar_btn_mat() con %s\n" % btnNombre
 		setattr(self.mainButtonReparacion, 'text', btnNombre)
 
 
@@ -130,8 +138,6 @@ class PropsFallaConfirmadaScreen(Screen):
 	# y cambia los atributos de los dropdownTipoMaterial y dropdownTipoReparacion
 	#def cambiarAttrTiposFalla(self,dropdown,button):
 	def cambiarAttrTiposFalla(self,dropdown,btnNombre):
-		print "type(dropdown): %s; type(button): %s\n" % (type(dropdown),type(btnNombre))
-		print "button.text: %s\n" % btnNombre
 		#Se limpian los dropdowns antes de cargarlos
 		#Se cambia el valor del boton que contiene al dropdown por el tipo de falla
 		#elegido
@@ -189,16 +195,12 @@ class PropsFallaConfirmadaScreen(Screen):
 		#Se envian los datos de la falla
 		screen = self.manager.get_screen('dialogopropscaptura')
 		controlador = App.get_running_app()
-		print "Validando atributos:\n"
-		print "tipoFalla: %s\n" % self.mainButtonFalla.text
-		print "tipoReparacion: %s\n" % self.mainButtonReparacion.text
-		print "tipoMaterial: %s\n" % self.mainButtonMaterial.text
 		if not controlador.sonPropiedadesValidas(self.mainButtonFalla.text,
 											self.mainButtonReparacion.text,
 											self.mainButtonMaterial.text):
-			mostrarDialogo(titulo="Error de propiedades",
-				content="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
-						)
+			controlador.mostrarDialogoMensaje(title="Error de propiedades",
+												text="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
+												)			
 			return
 		
 		controlador.agregarData("tipoFalla",self.mainButtonFalla.text)

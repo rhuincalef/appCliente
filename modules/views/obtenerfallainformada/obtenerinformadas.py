@@ -18,7 +18,6 @@ from capturador import CapturadorInformados
 from kivy.uix.textinput import TextInput
 import time
 
-from utils import mostrarDialogo
 import threading
 
 from constantes import PATH_ICONO_LUPA

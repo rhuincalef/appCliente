@@ -132,9 +132,11 @@ class Captura(Persistent):
 			print "Borrada captura de disco! %s\n" % self.getFullPathCapturaConv()
 		except Exception as e:
 			err = "Error OS en borrar(%s)\n" % e
-			print err  
-			mostrarDialogo(titulo="Error al borrar captura",
-				content=err)
+			print err
+			controlador = App.get_running_app()
+			controlador.mostrarDialogoMensaje(title='Error de conexion',
+											text=err
+											)
 		finally:
 			print "Eliminando captura de memoria...\n"
 			colCaps.remove(self)

@@ -53,6 +53,18 @@ from kivy.event import EventDispatcher
 from notification import XLoading, XConfirmation, XMessage
 
 
+#Librerias para monitoreo usb asincrono -->
+from pyudev import Context, Monitor, MonitorObserver
+
+from kivy.base import EventLoop
+EventLoop.ensure_window()
+
+#Import agregado para eliminar el warning
+import gi
+gi.require_version('Gtk','3.0')
+
+
+
 class MainApp(App,EventDispatcher):
 	def __init__(self,**kwargs):
 		super(MainApp,self).__init__()
@@ -76,7 +88,46 @@ class MainApp(App,EventDispatcher):
 		self.canceladaSubidaArchivos = False
 		#Se validan los argumentos enviados por linea de comandos.
 		
+		self.id_kinect_viewer = 0
+
+		#Campo para determinar si existe una conexion con el sensor kinect
+		#Este campo es modificado cada vez que se conecta o desconecta el kinect.
+		#La monitorizacion y ejecucion del callback se realiza por medio del thread
+		# daemon que se lanza en inicializarMonitorKinect()
+		self.sensorConectado = estaSensorListo()
+		print "Valor de self.sensorConectado: %s\n" % self.sensorConectado
+		self.inicializarMonitorKinect()
 		print "Inicializado MainApp!"
+
+
+	#controlador.conexionSensorEstablecida()
+	def conexionSensorEstablecida(self):
+		return self.sensorConectado
+
+
+	#Inicializa el thread que monitoriza y llama a handlerSensorConectado()
+	# cuando ocurre un campo de estado en los puertos usb
+	def inicializarMonitorKinect(self):
+		context = Context()
+		monitor = Monitor.from_netlink(context)
+		monitor.filter_by(subsystem = 'usb')
+		observer = MonitorObserver(monitor,
+								event_handler=self.handlerSensorConectado,
+								name='thread-observerMonitor')
+		observer.start()
+		print "INiciado thread de monitorizacion del sensor kinect...\n"
+
+	# Metodo que actualizara el estado del sensor segun la actividad en el
+	# puerto USB.
+	def handlerSensorConectado(self,action,device):
+		print "En handlerSensorConectado()...\n"
+		estaListo = estaSensorListo()
+		self.sensorConectado = estaListo
+		if estaListo:
+			print "Modificado controlador.sensorListo() a True!\n"
+		else:
+			print "Modificado controlador.sensorListo() a False!\n"
+
 
 
 	def agregarData(self,clave,valor):
@@ -107,7 +158,7 @@ class MainApp(App,EventDispatcher):
 	# propiedades para los tipos de falla.
 	#
 	def instanciada_app(self,app):
-		if not conexionSensorEstablecida():
+		if not self.conexionSensorEstablecida():
 			self.mostrarDialogoMensaje( title='Error de conexion',
 										text='El sensor no se encuentra conectado.\nConecte el sensor antes de realizar una nueva captura.'
 										)
@@ -443,9 +494,8 @@ class MainApp(App,EventDispatcher):
 			print "PATH_VIEW_PCD_FILE_SCRIPT: %s\n" % PATH_VIEW_PCD_FILE_SCRIPT
 			print "caps[0]: %s\n" % caps[0]
 			#subprocess.check_call([PATH_VIEW_PCD_FILE_SCRIPT,
-			#		caps[0]])
-			subprocess.check_call([PATH_VIEW_PCD_FILE_SCRIPT,
-					caps[0]["pcdFile"] ])
+			#		caps[0]["pcdFile"] ])
+			subprocess.check_call("pcl_viewer "+ "\"" + caps[0]["pcdFile"] + "\"", shell=True)
 			print "Abierto visualizador\n"
 		except Exception as e:
 			err = "Error OS con pcl_viewer(%s)\n" % e
@@ -637,6 +687,7 @@ class MainApp(App,EventDispatcher):
 			args.tipoCaptura = TIPO_CAPTURA_DEFAULT
 		print "Los argumentos enviados por consola son: %s\n" % args
 		return args
+
 
 
 #Ejemplo de la ejecucion del programa para enviar los comandos parseados por argparse:

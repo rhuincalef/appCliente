@@ -1,0 +1,52 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+#:import icon iconfonts.icon
+#:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
+#:import COLOR_SPINNER constantes.COLOR_SPINNER
+
+<MenuScreen>:
+    GridLayout:
+        #Propiedades de Controller (heredadas de BoxLayout)
+        id: layout_principal
+        orientation: 'vertical'
+        cols: 1
+        rows: 5
+        btn_capturar_fallas: bt_capturar_fallas
+        btn_subir_archivos: bt_subir_archivos
+        btn_salir: bt_salir
+
+        Button:
+        	id: bt_capturar_fallas
+            markup: True
+        	text: "%s Capturar fallas" % (icon('fa-camera',TAMANIO_ICONOS))
+        	on_press: root.menu_fallas()
+        	#background_color: (255,255,255)
+
+        #Guarda las fallas en un archivo .json
+        Button:
+            id: bt_guardar_fallas
+            markup: True
+            text: "%s Guardar fallas capturadas" % (icon('fa-floppy-o',TAMANIO_ICONOS))
+            on_press: root.guardarRecorrido()
+        
+        #Carga los capturadores con las fallas leidas de un archivo json
+        Button:
+            id: bt_cargar_fallas
+            markup: True
+            text: "%s Cargar fallas capturadas" % (icon('fa-file-o',TAMANIO_ICONOS))
+            on_press: root.cargarRecorrido()
+            #background_color: (255,255,255)
+        
+        Button:
+        	id: bt_subir_archivos
+            markup: True
+        	text: "%s Subir archivos" % (icon('fa-cloud-upload',TAMANIO_ICONOS))
+        	on_press: root.menu_subidas_servidor()
+            
+        Button:	
+        	id: bt_salir
+            markup: True
+        	on_press: root.salir()
+            text: "%s Salir" % (icon('fa-power-off',TAMANIO_ICONOS)) 
+            

@@ -1,0 +1,131 @@
+#:kivy 1.0
+
+#:import const constantes
+#:import icon iconfonts.icon
+#:import TAMANIO_ICONOS_CTRL_BAR constantes.TAMANIO_ICONOS_CTRL_BAR
+
+<DialogoPropsCapturaScreen>:
+
+    nombre_cap: nombre_captura_txt
+    dir_chooser: file_chooser
+    dir_label: dir_seleccionado_lbl
+
+    #IDs para el borrado dinamico de carpetas
+    ctl_bar: controls_bar
+    boton_crear_dir: btn_crear_dir 
+    boton_borrar_dir: btn_borrar_dir
+
+
+    GridLayout:
+        id: layout_principal
+        orientation: 'vertical'
+        cols: 1
+        rows: 6
+        
+        Label:
+            id: my_label
+            size_hint: (1,0.05)
+            text: 'Ingrese el nombre del archivo de captura'
+            canvas.before:
+                Color:
+                    rgba: const.COLOR_LABELS_RGBA
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    
+
+        #Barra de herramietas para introducir el nombre del archivo
+        BoxLayout:
+            id: controls_bar
+            orientation: 'horizontal'
+            size_hint: (1,0.05)
+
+            #TextInput para el nombre del archivo de captura        
+            TextInput:
+                id: nombre_captura_txt
+                size_hint:(0.6,1)
+                write_tab: False
+                multiline: False
+                on_text_validate: root.validar1(nombre_captura_txt.text)
+
+            Button:
+                id: btn_crear_dir
+                markup: True
+                size_hint:(0.20,1)
+                text: "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR))
+                on_press: root.crearDir(btn_crear_dir)
+
+            Button:
+                id: btn_borrar_dir
+                markup: True
+                size_hint:(0.20,1)
+                text: "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR))
+                on_press: root.borrarDir(btn_borrar_dir)
+
+
+        Label:
+            id: my_label_1
+            size_hint: (1,0.05)
+            text: 'Seleccione el directorio para almacenar la captura'
+            canvas.before:
+                Color:
+                    rgba: const.COLOR_LABELS_RGBA
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Label:
+            id: dir_seleccionado_lbl
+            size_hint: (1,0.15)
+            text: ''
+            canvas.before:
+                Color:
+                    rgba: const.COLOR_LABELS_RGBA
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+        
+
+        #FileChooser para el nombre del dir de almacenamiento.
+        FileChooserIconView:
+            id: file_chooser
+            size_hint:(1,0.70)
+            #dirselect: True
+            multiselect: False
+
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            #on_submit: root.cambiar_directorio()
+            #1 tap sobre el archivo
+            on_selection: root.seleccionado(file_chooser.selection)
+            on_entries_cleared: root.cambio_dir()
+            
+        GridLayout:
+            cols:2
+            rows:1
+            orientation: 'horizontal'
+            size_hint: (1,0.05)
+            spacing: [root.width / 3,0]
+            #Forzar el ancho de los botones (pixeles)
+            col_force_default: True
+            col_default_width: root.width / 6
+
+            #Padding izquierdo de botones(pixeles)
+            padding: [root.width / 7,0,0,0]
+            Button:
+                id: boton_continuar
+                text: "Continuar"
+                on_press: root.menu_falla_nueva()
+
+            Button:
+                id: boton_cancelar
+                text: "Volver"
+                on_press: root.volver()
+                
+
+

@@ -1,0 +1,6760 @@
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-04-09_91.txt
+[[1;32mINFO[0m   ] [Kivy        ] v1.9.1
+[[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 19 2016, 06:48:10) 
+[GCC 5.4.0 20160609]
+[[1;32mINFO[0m   ] [Factory     ] 179 symbols loaded
+[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_pygame, img_pil (img_ffpyplayer ignored)
+[[1;32mINFO[0m   ] [Text        ] Provider: pygame
+[[1;32mINFO[0m   ] [Window      ] Provider: pygame(['window_egl_rpi'] ignored)
+[[1;32mINFO[0m   ] [GL          ] OpenGL version <3.0 Mesa 11.2.0>
+[[1;32mINFO[0m   ] [GL          ] OpenGL vendor <Intel Open Source Technology Center>
+[[1;32mINFO[0m   ] [GL          ] OpenGL renderer <Mesa DRI Intel(R) Ivybridge Mobile >
+[[1;32mINFO[0m   ] [GL          ] OpenGL parsed version: 3, 0
+[[1;32mINFO[0m   ] [GL          ] Shading version <1.30>
+[[1;32mINFO[0m   ] [GL          ] Texture max size <8192>
+[[1;32mINFO[0m   ] [GL          ] Texture max units <16>
+[[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
+[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
+[[1;32mINFO[0m   ] [ProbeSysfs  ] device match: /dev/input/event7
+[[1;32mINFO[0m   ] [MTD         ] Read event from </dev/input/event7>
+[[1;32mINFO[0m   ] [Base        ] Start application main loop
+ Exception in thread Thread-1:
+ Traceback (most recent call last):
+   File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+     self.run()
+   File "/usr/lib/python2.7/threading.py", line 754, in run
+     self.__target(*self.__args, **self.__kwargs)
+   File "/usr/local/lib/python2.7/dist-packages/kivy/input/providers/mtdev.py", line 219, in _thread_run
+     _device = Device(_fn)
+   File "/usr/local/lib/python2.7/dist-packages/kivy/lib/mtdev.py", line 131, in __init__
+     self._fd = os.open(filename, os.O_NONBLOCK | os.O_RDONLY)
+ OSError: [Errno 13] Permission denied: '/dev/input/event7'
+ 
+instanciada app!
+Iniciado thread...
+
+Modificado self.valorProgress con valor: 8600
+
+Modificado self.valorProgress con valor: 17200
+
+Modificado self.valorProgress con valor: 25800
+
+Modificado self.valorProgress con valor: 34400
+
+Modificado self.valorProgress con valor: 43000
+
+Modificado self.valorProgress con valor: 51600
+
+Modificado self.valorProgress con valor: 60200
+
+Modificado self.valorProgress con valor: 68800
+
+Modificado self.valorProgress con valor: 77400
+
+Modificado self.valorProgress con valor: 86000
+
+Modificado self.valorProgress con valor: 94600
+
+Modificado self.valorProgress con valor: 103200
+
+Modificado self.valorProgress con valor: 111800
+
+Modificado self.valorProgress con valor: 120400
+
+Modificado self.valorProgress con valor: 129000
+
+Modificado self.valorProgress con valor: 137600
+
+Modificado self.valorProgress con valor: 146200
+
+Modificado self.valorProgress con valor: 154800
+
+Modificado self.valorProgress con valor: 163400
+
+Modificado self.valorProgress con valor: 172000
+
+Modificado self.valorProgress con valor: 180600
+
+Modificado self.valorProgress con valor: 189200
+
+Modificado self.valorProgress con valor: 197800
+
+Modificado self.valorProgress con valor: 206400
+
+Modificado self.valorProgress con valor: 215000
+
+Modificado self.valorProgress con valor: 223600
+
+Modificado self.valorProgress con valor: 232200
+
+Modificado self.valorProgress con valor: 240800
+
+Modificado self.valorProgress con valor: 249400
+
+Modificado self.valorProgress con valor: 258000
+
+Modificado self.valorProgress con valor: 266600
+
+Actualizada pb con: 266600
+
+Modificado self.valorProgress con valor: 275200
+
+Modificado self.valorProgress con valor: 283800
+
+Actualizada pb con: 283800
+
+Modificado self.valorProgress con valor: 292400
+
+Modificado self.valorProgress con valor: 301000
+
+Actualizada pb con: 301000
+
+Modificado self.valorProgress con valor: 309600
+
+Modificado self.valorProgress con valor: 318200
+
+Modificado self.valorProgress con valor: 326800
+
+Actualizada pb con: 326800
+
+Modificado self.valorProgress con valor: 335400
+
+Modificado self.valorProgress con valor: 344000
+
+Modificado self.valorProgress con valor: 352600
+
+Actualizada pb con: 352600
+
+Modificado self.valorProgress con valor: 361200
+
+Modificado self.valorProgress con valor: 369800
+
+Actualizada pb con: 369800
+
+Modificado self.valorProgress con valor: 378400
+
+Actualizada pb con: 378400
+
+Modificado self.valorProgress con valor: 387000
+
+Actualizada pb con: 387000
+
+Modificado self.valorProgress con valor: 395600
+
+Actualizada pb con: 395600
+
+Modificado self.valorProgress con valor: 404200
+
+Actualizada pb con: 404200
+
+Modificado self.valorProgress con valor: 412800
+
+Actualizada pb con: 412800
+
+Modificado self.valorProgress con valor: 421400
+
+Actualizada pb con: 421400
+
+Modificado self.valorProgress con valor: 430000
+
+Actualizada pb con: 430000
+
+Modificado self.valorProgress con valor: 438600
+
+Actualizada pb con: 438600
+
+Modificado self.valorProgress con valor: 447200
+
+Actualizada pb con: 447200
+
+Modificado self.valorProgress con valor: 455800
+
+Actualizada pb con: 455800
+
+Modificado self.valorProgress con valor: 464400
+
+Actualizada pb con: 464400
+
+Modificado self.valorProgress con valor: 473000
+
+Actualizada pb con: 473000
+
+Modificado self.valorProgress con valor: 481600
+
+Actualizada pb con: 481600
+
+Modificado self.valorProgress con valor: 490200
+
+Actualizada pb con: 490200
+
+Modificado self.valorProgress con valor: 498800
+
+Actualizada pb con: 498800
+
+Modificado self.valorProgress con valor: 507400
+
+Actualizada pb con: 507400
+
+Modificado self.valorProgress con valor: 516000
+
+Actualizada pb con: 516000
+
+Modificado self.valorProgress con valor: 524600
+
+Actualizada pb con: 524600
+
+Modificado self.valorProgress con valor: 533200
+
+Actualizada pb con: 533200
+
+Modificado self.valorProgress con valor: 541800
+
+Actualizada pb con: 541800
+
+Modificado self.valorProgress con valor: 550400
+
+Actualizada pb con: 550400
+
+Modificado self.valorProgress con valor: 559000
+
+Actualizada pb con: 559000
+
+Modificado self.valorProgress con valor: 567600
+
+Actualizada pb con: 567600
+
+Modificado self.valorProgress con valor: 576200
+
+Actualizada pb con: 576200
+
+Modificado self.valorProgress con valor: 584800
+
+Actualizada pb con: 584800
+
+Modificado self.valorProgress con valor: 593400
+
+Actualizada pb con: 593400
+
+Modificado self.valorProgress con valor: 602000
+
+Actualizada pb con: 602000
+
+Modificado self.valorProgress con valor: 610600
+
+Actualizada pb con: 610600
+
+Modificado self.valorProgress con valor: 619200
+
+Actualizada pb con: 619200
+
+Modificado self.valorProgress con valor: 627800
+
+Actualizada pb con: 627800
+
+Modificado self.valorProgress con valor: 636400
+
+Actualizada pb con: 636400
+
+Modificado self.valorProgress con valor: 645000
+
+Actualizada pb con: 645000
+
+Modificado self.valorProgress con valor: 653600
+
+Actualizada pb con: 653600
+
+Modificado self.valorProgress con valor: 662200
+
+Actualizada pb con: 662200
+
+Modificado self.valorProgress con valor: 670800
+
+Actualizada pb con: 670800
+
+Modificado self.valorProgress con valor: 679400
+
+Actualizada pb con: 679400
+
+Modificado self.valorProgress con valor: 688000
+
+Actualizada pb con: 688000
+
+Modificado self.valorProgress con valor: 696600
+
+Actualizada pb con: 696600
+
+Modificado self.valorProgress con valor: 705200
+
+Actualizada pb con: 705200
+
+Modificado self.valorProgress con valor: 713800
+
+Actualizada pb con: 713800
+
+Modificado self.valorProgress con valor: 722400
+
+Actualizada pb con: 722400
+
+Modificado self.valorProgress con valor: 731000
+
+Actualizada pb con: 731000
+
+Modificado self.valorProgress con valor: 739600
+
+Actualizada pb con: 739600
+
+Modificado self.valorProgress con valor: 748200
+
+Actualizada pb con: 748200
+
+Modificado self.valorProgress con valor: 756800
+
+Actualizada pb con: 756800
+
+Modificado self.valorProgress con valor: 765400
+
+Actualizada pb con: 765400
+
+Modificado self.valorProgress con valor: 774000
+
+Actualizada pb con: 774000
+
+Modificado self.valorProgress con valor: 782600
+
+Actualizada pb con: 782600
+
+Modificado self.valorProgress con valor: 791200
+
+Actualizada pb con: 791200
+
+Modificado self.valorProgress con valor: 799800
+
+Actualizada pb con: 799800
+
+Modificado self.valorProgress con valor: 808400
+
+Actualizada pb con: 808400
+
+Modificado self.valorProgress con valor: 817000
+
+Actualizada pb con: 817000
+
+Modificado self.valorProgress con valor: 825600
+
+Actualizada pb con: 825600
+
+Modificado self.valorProgress con valor: 834200
+
+Actualizada pb con: 834200
+
+Modificado self.valorProgress con valor: 842800
+
+Actualizada pb con: 842800
+
+Modificado self.valorProgress con valor: 851400
+
+Actualizada pb con: 851400
+
+Modificado self.valorProgress con valor: 860000
+
+Actualizada pb con: 860000
+
+Modificado self.valorProgress con valor: 868600
+
+Actualizada pb con: 868600
+
+Modificado self.valorProgress con valor: 877200
+
+Actualizada pb con: 877200
+
+Modificado self.valorProgress con valor: 885800
+
+Actualizada pb con: 885800
+
+Modificado self.valorProgress con valor: 894400
+
+Actualizada pb con: 894400
+
+Modificado self.valorProgress con valor: 903000
+
+Actualizada pb con: 903000
+
+Modificado self.valorProgress con valor: 911600
+
+Actualizada pb con: 911600
+
+Modificado self.valorProgress con valor: 920200
+
+Actualizada pb con: 920200
+
+Modificado self.valorProgress con valor: 928800
+
+Actualizada pb con: 928800
+
+Modificado self.valorProgress con valor: 937400
+
+Actualizada pb con: 937400
+
+Modificado self.valorProgress con valor: 946000
+
+Actualizada pb con: 946000
+
+Modificado self.valorProgress con valor: 954600
+
+Actualizada pb con: 954600
+
+Modificado self.valorProgress con valor: 963200
+
+Actualizada pb con: 963200
+
+Modificado self.valorProgress con valor: 971800
+
+Actualizada pb con: 971800
+
+Modificado self.valorProgress con valor: 980400
+
+Actualizada pb con: 980400
+
+Modificado self.valorProgress con valor: 989000
+
+Actualizada pb con: 989000
+
+Modificado self.valorProgress con valor: 997600
+
+Actualizada pb con: 997600
+
+Modificado self.valorProgress con valor: 1006200
+
+Actualizada pb con: 1006200
+
+Modificado self.valorProgress con valor: 1014800
+
+Actualizada pb con: 1014800
+
+Modificado self.valorProgress con valor: 1023400
+
+Actualizada pb con: 1023400
+
+Modificado self.valorProgress con valor: 1032000
+
+Actualizada pb con: 1032000
+
+Modificado self.valorProgress con valor: 1040600
+
+Actualizada pb con: 1040600
+
+Modificado self.valorProgress con valor: 1049200
+
+Actualizada pb con: 1049200
+
+Modificado self.valorProgress con valor: 1057800
+
+Actualizada pb con: 1057800
+
+Modificado self.valorProgress con valor: 1066400
+
+Actualizada pb con: 1066400
+
+Modificado self.valorProgress con valor: 1075000
+
+Actualizada pb con: 1075000
+
+Modificado self.valorProgress con valor: 1083600
+
+Actualizada pb con: 1083600
+
+Modificado self.valorProgress con valor: 1092200
+
+Actualizada pb con: 1092200
+
+Modificado self.valorProgress con valor: 1100800
+
+Actualizada pb con: 1100800
+
+Modificado self.valorProgress con valor: 1109400
+
+Actualizada pb con: 1109400
+
+Modificado self.valorProgress con valor: 1118000
+
+Actualizada pb con: 1118000
+
+Modificado self.valorProgress con valor: 1126600
+
+Actualizada pb con: 1126600
+
+Modificado self.valorProgress con valor: 1135200
+
+Actualizada pb con: 1135200
+
+Modificado self.valorProgress con valor: 1143800
+
+Actualizada pb con: 1143800
+
+Modificado self.valorProgress con valor: 1152400
+
+Actualizada pb con: 1152400
+
+Modificado self.valorProgress con valor: 1161000
+
+Actualizada pb con: 1161000
+
+Modificado self.valorProgress con valor: 1169600
+
+Actualizada pb con: 1169600
+
+Modificado self.valorProgress con valor: 1178200
+
+Actualizada pb con: 1178200
+
+Modificado self.valorProgress con valor: 1186800
+
+Actualizada pb con: 1186800
+
+Modificado self.valorProgress con valor: 1195400
+
+Actualizada pb con: 1195400
+
+Modificado self.valorProgress con valor: 1204000
+
+Actualizada pb con: 1204000
+
+Modificado self.valorProgress con valor: 1212600
+
+Actualizada pb con: 1212600
+
+Modificado self.valorProgress con valor: 1221200
+
+Actualizada pb con: 1221200
+
+Modificado self.valorProgress con valor: 1229800
+
+Actualizada pb con: 1229800
+
+Modificado self.valorProgress con valor: 1238400
+
+Actualizada pb con: 1238400
+
+Modificado self.valorProgress con valor: 1247000
+
+Actualizada pb con: 1247000
+
+Modificado self.valorProgress con valor: 1255600
+
+Actualizada pb con: 1255600
+
+Modificado self.valorProgress con valor: 1264200
+
+Actualizada pb con: 1264200
+
+Modificado self.valorProgress con valor: 1272800
+
+Actualizada pb con: 1272800
+
+Modificado self.valorProgress con valor: 1281400
+
+Actualizada pb con: 1281400
+
+Modificado self.valorProgress con valor: 1290000
+
+Actualizada pb con: 1290000
+
+Modificado self.valorProgress con valor: 1298600
+
+Actualizada pb con: 1298600
+
+Modificado self.valorProgress con valor: 1307200
+
+Actualizada pb con: 1307200
+
+Modificado self.valorProgress con valor: 1315800
+
+Actualizada pb con: 1315800
+
+Modificado self.valorProgress con valor: 1324400
+
+Actualizada pb con: 1324400
+
+Modificado self.valorProgress con valor: 1333000
+
+Actualizada pb con: 1333000
+
+Modificado self.valorProgress con valor: 1341600
+
+Actualizada pb con: 1341600
+
+Modificado self.valorProgress con valor: 1350200
+
+Actualizada pb con: 1350200
+
+Modificado self.valorProgress con valor: 1358800
+
+Actualizada pb con: 1358800
+
+Modificado self.valorProgress con valor: 1367400
+
+Actualizada pb con: 1367400
+
+Modificado self.valorProgress con valor: 1376000
+
+Actualizada pb con: 1376000
+
+Modificado self.valorProgress con valor: 1384600
+
+Actualizada pb con: 1384600
+
+Modificado self.valorProgress con valor: 1393200
+
+Actualizada pb con: 1393200
+
+Modificado self.valorProgress con valor: 1401800
+
+Actualizada pb con: 1401800
+
+Modificado self.valorProgress con valor: 1410400
+
+Actualizada pb con: 1410400
+
+Modificado self.valorProgress con valor: 1419000
+
+Actualizada pb con: 1419000
+
+Modificado self.valorProgress con valor: 1427600
+
+Actualizada pb con: 1427600
+
+Modificado self.valorProgress con valor: 1436200
+
+Actualizada pb con: 1436200
+
+Modificado self.valorProgress con valor: 1444800
+
+Actualizada pb con: 1444800
+
+Modificado self.valorProgress con valor: 1453400
+
+Actualizada pb con: 1453400
+
+Modificado self.valorProgress con valor: 1462000
+
+Actualizada pb con: 1462000
+
+Modificado self.valorProgress con valor: 1470600
+
+Actualizada pb con: 1470600
+
+Modificado self.valorProgress con valor: 1479200
+
+Actualizada pb con: 1479200
+
+Modificado self.valorProgress con valor: 1487800
+
+Actualizada pb con: 1487800
+
+Modificado self.valorProgress con valor: 1496400
+
+Actualizada pb con: 1496400
+
+Modificado self.valorProgress con valor: 1505000
+
+Actualizada pb con: 1505000
+
+Modificado self.valorProgress con valor: 1513600
+
+Actualizada pb con: 1513600
+
+Modificado self.valorProgress con valor: 1522200
+
+Actualizada pb con: 1522200
+
+Modificado self.valorProgress con valor: 1530800
+
+Actualizada pb con: 1530800
+
+Modificado self.valorProgress con valor: 1539400
+
+Actualizada pb con: 1539400
+
+Modificado self.valorProgress con valor: 1548000
+
+Actualizada pb con: 1548000
+
+Modificado self.valorProgress con valor: 1556600
+
+Actualizada pb con: 1556600
+
+Modificado self.valorProgress con valor: 1565200
+
+Actualizada pb con: 1565200
+
+Modificado self.valorProgress con valor: 1573800
+
+Actualizada pb con: 1573800
+
+Modificado self.valorProgress con valor: 1582400
+
+Actualizada pb con: 1582400
+
+Modificado self.valorProgress con valor: 1591000
+
+Actualizada pb con: 1591000
+
+Modificado self.valorProgress con valor: 1599600
+
+Actualizada pb con: 1599600
+
+Modificado self.valorProgress con valor: 1608200
+
+Actualizada pb con: 1608200
+
+Modificado self.valorProgress con valor: 1616800
+
+Actualizada pb con: 1616800
+
+Modificado self.valorProgress con valor: 1625400
+
+Actualizada pb con: 1625400
+
+Modificado self.valorProgress con valor: 1634000
+
+Actualizada pb con: 1634000
+
+Modificado self.valorProgress con valor: 1642600
+
+Actualizada pb con: 1642600
+
+Modificado self.valorProgress con valor: 1651200
+
+Actualizada pb con: 1651200
+
+Modificado self.valorProgress con valor: 1659800
+
+Actualizada pb con: 1659800
+
+Modificado self.valorProgress con valor: 1668400
+
+Actualizada pb con: 1668400
+
+Modificado self.valorProgress con valor: 1677000
+
+Actualizada pb con: 1677000
+
+Modificado self.valorProgress con valor: 1685600
+
+Actualizada pb con: 1685600
+
+Modificado self.valorProgress con valor: 1694200
+
+Actualizada pb con: 1694200
+
+Modificado self.valorProgress con valor: 1702800
+
+Actualizada pb con: 1702800
+
+Modificado self.valorProgress con valor: 1711400
+
+Actualizada pb con: 1711400
+
+Modificado self.valorProgress con valor: 1720000
+
+Actualizada pb con: 1720000
+
+Modificado self.valorProgress con valor: 1728600
+
+Actualizada pb con: 1728600
+
+Modificado self.valorProgress con valor: 1737200
+
+Actualizada pb con: 1737200
+
+Modificado self.valorProgress con valor: 1745800
+
+Actualizada pb con: 1745800
+
+Modificado self.valorProgress con valor: 1754400
+
+Actualizada pb con: 1754400
+
+Modificado self.valorProgress con valor: 1763000
+
+Actualizada pb con: 1763000
+
+Modificado self.valorProgress con valor: 1771600
+
+Actualizada pb con: 1771600
+
+Modificado self.valorProgress con valor: 1780200
+
+Actualizada pb con: 1780200
+
+Modificado self.valorProgress con valor: 1788800
+
+Actualizada pb con: 1788800
+
+Modificado self.valorProgress con valor: 1797400
+
+Actualizada pb con: 1797400
+
+Modificado self.valorProgress con valor: 1806000
+
+Actualizada pb con: 1806000
+
+Modificado self.valorProgress con valor: 1814600
+
+Actualizada pb con: 1814600
+
+Modificado self.valorProgress con valor: 1823200
+
+Actualizada pb con: 1823200
+
+Modificado self.valorProgress con valor: 1831800
+
+Actualizada pb con: 1831800
+
+Modificado self.valorProgress con valor: 1840400
+
+Actualizada pb con: 1840400
+
+Modificado self.valorProgress con valor: 1849000
+
+Actualizada pb con: 1849000
+
+Modificado self.valorProgress con valor: 1857600
+
+Actualizada pb con: 1857600
+
+Modificado self.valorProgress con valor: 1866200
+
+Actualizada pb con: 1866200
+
+Modificado self.valorProgress con valor: 1874800
+
+Actualizada pb con: 1874800
+
+Modificado self.valorProgress con valor: 1883400
+
+Actualizada pb con: 1883400
+
+Modificado self.valorProgress con valor: 1892000
+
+Actualizada pb con: 1892000
+
+Modificado self.valorProgress con valor: 1900600
+
+Actualizada pb con: 1900600
+
+Modificado self.valorProgress con valor: 1909200
+
+Actualizada pb con: 1909200
+
+Modificado self.valorProgress con valor: 1917800
+
+Actualizada pb con: 1917800
+
+Modificado self.valorProgress con valor: 1926400
+
+Actualizada pb con: 1926400
+
+Modificado self.valorProgress con valor: 1935000
+
+Actualizada pb con: 1935000
+
+Modificado self.valorProgress con valor: 1943600
+
+Actualizada pb con: 1943600
+
+Modificado self.valorProgress con valor: 1952200
+
+Actualizada pb con: 1952200
+
+Modificado self.valorProgress con valor: 1960800
+
+Actualizada pb con: 1960800
+
+Modificado self.valorProgress con valor: 1969400
+
+Actualizada pb con: 1969400
+
+Modificado self.valorProgress con valor: 1978000
+
+Actualizada pb con: 1978000
+
+Modificado self.valorProgress con valor: 1986600
+
+Actualizada pb con: 1986600
+
+Modificado self.valorProgress con valor: 1995200
+
+Actualizada pb con: 1995200
+
+Modificado self.valorProgress con valor: 2003800
+
+Actualizada pb con: 2003800
+
+Modificado self.valorProgress con valor: 2012400
+
+Actualizada pb con: 2012400
+
+Modificado self.valorProgress con valor: 2021000
+
+Actualizada pb con: 2021000
+
+Modificado self.valorProgress con valor: 2029600
+
+Actualizada pb con: 2029600
+
+Modificado self.valorProgress con valor: 2038200
+
+Actualizada pb con: 2038200
+
+Modificado self.valorProgress con valor: 2046800
+
+Actualizada pb con: 2046800
+
+Modificado self.valorProgress con valor: 2055400
+
+Actualizada pb con: 2055400
+
+Modificado self.valorProgress con valor: 2064000
+
+Actualizada pb con: 2064000
+
+Modificado self.valorProgress con valor: 2072600
+
+Actualizada pb con: 2072600
+
+Modificado self.valorProgress con valor: 2081200
+
+Actualizada pb con: 2081200
+
+Modificado self.valorProgress con valor: 2089800
+
+Actualizada pb con: 2089800
+
+Modificado self.valorProgress con valor: 2098400
+
+Actualizada pb con: 2098400
+
+Modificado self.valorProgress con valor: 2107000
+
+Actualizada pb con: 2107000
+
+Modificado self.valorProgress con valor: 2115600
+
+Actualizada pb con: 2115600
+
+Modificado self.valorProgress con valor: 2124200
+
+Actualizada pb con: 2124200
+
+Modificado self.valorProgress con valor: 2132800
+
+Actualizada pb con: 2132800
+
+Modificado self.valorProgress con valor: 2141400
+
+Actualizada pb con: 2141400
+
+Modificado self.valorProgress con valor: 2150000
+
+Actualizada pb con: 2150000
+
+Modificado self.valorProgress con valor: 2158600
+
+Actualizada pb con: 2158600
+
+Modificado self.valorProgress con valor: 2167200
+
+Actualizada pb con: 2167200
+
+Modificado self.valorProgress con valor: 2175800
+
+Actualizada pb con: 2175800
+
+Modificado self.valorProgress con valor: 2184400
+
+Actualizada pb con: 2184400
+
+Modificado self.valorProgress con valor: 2193000
+
+Actualizada pb con: 2193000
+
+Modificado self.valorProgress con valor: 2201600
+
+Actualizada pb con: 2201600
+
+Modificado self.valorProgress con valor: 2210200
+
+Actualizada pb con: 2210200
+
+Modificado self.valorProgress con valor: 2218800
+
+Actualizada pb con: 2218800
+
+Modificado self.valorProgress con valor: 2227400
+
+Actualizada pb con: 2227400
+
+Modificado self.valorProgress con valor: 2236000
+
+Actualizada pb con: 2236000
+
+Modificado self.valorProgress con valor: 2244600
+
+Actualizada pb con: 2244600
+
+Modificado self.valorProgress con valor: 2253200
+
+Actualizada pb con: 2253200
+
+Modificado self.valorProgress con valor: 2261800
+
+Actualizada pb con: 2261800
+
+Modificado self.valorProgress con valor: 2270400
+
+Actualizada pb con: 2270400
+
+Modificado self.valorProgress con valor: 2279000
+
+Actualizada pb con: 2279000
+
+Modificado self.valorProgress con valor: 2287600
+
+Actualizada pb con: 2287600
+
+Modificado self.valorProgress con valor: 2296200
+
+Actualizada pb con: 2296200
+
+Modificado self.valorProgress con valor: 2304800
+
+Actualizada pb con: 2304800
+
+Modificado self.valorProgress con valor: 2313400
+
+Actualizada pb con: 2313400
+
+Modificado self.valorProgress con valor: 2322000
+
+Actualizada pb con: 2322000
+
+Modificado self.valorProgress con valor: 2330600
+
+Actualizada pb con: 2330600
+
+Modificado self.valorProgress con valor: 2339200
+
+Actualizada pb con: 2339200
+
+Modificado self.valorProgress con valor: 2347800
+
+Actualizada pb con: 2347800
+
+Modificado self.valorProgress con valor: 2356400
+
+Actualizada pb con: 2356400
+
+Modificado self.valorProgress con valor: 2365000
+
+Actualizada pb con: 2365000
+
+Modificado self.valorProgress con valor: 2373600
+
+Actualizada pb con: 2373600
+
+Modificado self.valorProgress con valor: 2382200
+
+Actualizada pb con: 2382200
+
+Modificado self.valorProgress con valor: 2390800
+
+Actualizada pb con: 2390800
+
+Modificado self.valorProgress con valor: 2399400
+
+Actualizada pb con: 2399400
+
+Modificado self.valorProgress con valor: 2408000
+
+Actualizada pb con: 2408000
+
+Modificado self.valorProgress con valor: 2416600
+
+Actualizada pb con: 2416600
+
+Modificado self.valorProgress con valor: 2425200
+
+Actualizada pb con: 2425200
+
+Modificado self.valorProgress con valor: 2433800
+
+Actualizada pb con: 2433800
+
+Modificado self.valorProgress con valor: 2442400
+
+Actualizada pb con: 2442400
+
+Modificado self.valorProgress con valor: 2451000
+
+Actualizada pb con: 2451000
+
+Modificado self.valorProgress con valor: 2459600
+
+Actualizada pb con: 2459600
+
+Modificado self.valorProgress con valor: 2468200
+
+Actualizada pb con: 2468200
+
+Modificado self.valorProgress con valor: 2476800
+
+Actualizada pb con: 2476800
+
+Modificado self.valorProgress con valor: 2485400
+
+Actualizada pb con: 2485400
+
+Modificado self.valorProgress con valor: 2494000
+
+Actualizada pb con: 2494000
+
+Modificado self.valorProgress con valor: 2502600
+
+Actualizada pb con: 2502600
+
+Modificado self.valorProgress con valor: 2511200
+
+Actualizada pb con: 2511200
+
+Modificado self.valorProgress con valor: 2519800
+
+Actualizada pb con: 2519800
+
+Modificado self.valorProgress con valor: 2528400
+
+Actualizada pb con: 2528400
+
+Modificado self.valorProgress con valor: 2537000
+
+Actualizada pb con: 2537000
+
+Modificado self.valorProgress con valor: 2545600
+
+Actualizada pb con: 2545600
+
+Modificado self.valorProgress con valor: 2554200
+
+Actualizada pb con: 2554200
+
+Modificado self.valorProgress con valor: 2562800
+
+Actualizada pb con: 2562800
+
+Modificado self.valorProgress con valor: 2571400
+
+Actualizada pb con: 2571400
+
+Modificado self.valorProgress con valor: 2580000
+
+Actualizada pb con: 2580000
+
+Modificado self.valorProgress con valor: 2588600
+
+Actualizada pb con: 2588600
+
+Modificado self.valorProgress con valor: 2597200
+
+Actualizada pb con: 2597200
+
+Modificado self.valorProgress con valor: 2605800
+
+Actualizada pb con: 2605800
+
+Modificado self.valorProgress con valor: 2614400
+
+Actualizada pb con: 2614400
+
+Modificado self.valorProgress con valor: 2623000
+
+Actualizada pb con: 2623000
+
+Modificado self.valorProgress con valor: 2631600
+
+Actualizada pb con: 2631600
+
+Modificado self.valorProgress con valor: 2640200
+
+Actualizada pb con: 2640200
+
+Modificado self.valorProgress con valor: 2648800
+
+Actualizada pb con: 2648800
+
+Modificado self.valorProgress con valor: 2657400
+
+Actualizada pb con: 2657400
+
+Modificado self.valorProgress con valor: 2666000
+
+Actualizada pb con: 2666000
+
+Modificado self.valorProgress con valor: 2674600
+
+Actualizada pb con: 2674600
+
+Modificado self.valorProgress con valor: 2683200
+
+Actualizada pb con: 2683200
+
+Modificado self.valorProgress con valor: 2691800
+
+Actualizada pb con: 2691800
+
+Modificado self.valorProgress con valor: 2700400
+
+Actualizada pb con: 2700400
+
+Modificado self.valorProgress con valor: 2709000
+
+Actualizada pb con: 2709000
+
+Modificado self.valorProgress con valor: 2717600
+
+Actualizada pb con: 2717600
+
+Modificado self.valorProgress con valor: 2726200
+
+Actualizada pb con: 2726200
+
+Modificado self.valorProgress con valor: 2734800
+
+Actualizada pb con: 2734800
+
+Modificado self.valorProgress con valor: 2743400
+
+Actualizada pb con: 2743400
+
+Modificado self.valorProgress con valor: 2752000
+
+Actualizada pb con: 2752000
+
+Modificado self.valorProgress con valor: 2760600
+
+Actualizada pb con: 2760600
+
+Modificado self.valorProgress con valor: 2769200
+
+Actualizada pb con: 2769200
+
+Modificado self.valorProgress con valor: 2777800
+
+Actualizada pb con: 2777800
+
+Modificado self.valorProgress con valor: 2786400
+
+Actualizada pb con: 2786400
+
+Modificado self.valorProgress con valor: 2795000
+
+Actualizada pb con: 2795000
+
+Modificado self.valorProgress con valor: 2803600
+
+Actualizada pb con: 2803600
+
+Modificado self.valorProgress con valor: 2812200
+
+Actualizada pb con: 2812200
+
+Modificado self.valorProgress con valor: 2820800
+
+Actualizada pb con: 2820800
+
+Modificado self.valorProgress con valor: 2829400
+
+Actualizada pb con: 2829400
+
+Modificado self.valorProgress con valor: 2838000
+
+Actualizada pb con: 2838000
+
+Modificado self.valorProgress con valor: 2846600
+
+Actualizada pb con: 2846600
+
+Modificado self.valorProgress con valor: 2855200
+
+Actualizada pb con: 2855200
+
+Modificado self.valorProgress con valor: 2863800
+
+Actualizada pb con: 2863800
+
+Modificado self.valorProgress con valor: 2872400
+
+Actualizada pb con: 2872400
+
+Modificado self.valorProgress con valor: 2881000
+
+Actualizada pb con: 2881000
+
+Modificado self.valorProgress con valor: 2889600
+
+Actualizada pb con: 2889600
+
+Modificado self.valorProgress con valor: 2898200
+
+Actualizada pb con: 2898200
+
+Modificado self.valorProgress con valor: 2906800
+
+Actualizada pb con: 2906800
+
+Modificado self.valorProgress con valor: 2915400
+
+Actualizada pb con: 2915400
+
+Modificado self.valorProgress con valor: 2924000
+
+Actualizada pb con: 2924000
+
+Modificado self.valorProgress con valor: 2932600
+
+Actualizada pb con: 2932600
+
+Modificado self.valorProgress con valor: 2941200
+
+Actualizada pb con: 2941200
+
+Modificado self.valorProgress con valor: 2949800
+
+Actualizada pb con: 2949800
+
+Modificado self.valorProgress con valor: 2958400
+
+Actualizada pb con: 2958400
+
+Modificado self.valorProgress con valor: 2967000
+
+Actualizada pb con: 2967000
+
+Modificado self.valorProgress con valor: 2975600
+
+Actualizada pb con: 2975600
+
+Modificado self.valorProgress con valor: 2984200
+
+Actualizada pb con: 2984200
+
+Modificado self.valorProgress con valor: 2992800
+
+Actualizada pb con: 2992800
+
+Modificado self.valorProgress con valor: 3001400
+
+Actualizada pb con: 3001400
+
+Modificado self.valorProgress con valor: 3010000
+
+Actualizada pb con: 3010000
+
+Modificado self.valorProgress con valor: 3018600
+
+Actualizada pb con: 3018600
+
+Modificado self.valorProgress con valor: 3027200
+
+Actualizada pb con: 3027200
+
+Modificado self.valorProgress con valor: 3035800
+
+Actualizada pb con: 3035800
+
+Modificado self.valorProgress con valor: 3044400
+
+Actualizada pb con: 3044400
+
+Modificado self.valorProgress con valor: 3053000
+
+Actualizada pb con: 3053000
+
+Modificado self.valorProgress con valor: 3061600
+
+Actualizada pb con: 3061600
+
+Modificado self.valorProgress con valor: 3070200
+
+Actualizada pb con: 3070200
+
+Modificado self.valorProgress con valor: 3078800
+
+Actualizada pb con: 3078800
+
+Modificado self.valorProgress con valor: 3087400
+
+Actualizada pb con: 3087400
+
+Modificado self.valorProgress con valor: 3096000
+
+Actualizada pb con: 3096000
+
+Modificado self.valorProgress con valor: 3104600
+
+Actualizada pb con: 3104600
+
+Modificado self.valorProgress con valor: 3113200
+
+Actualizada pb con: 3113200
+
+Modificado self.valorProgress con valor: 3121800
+
+Actualizada pb con: 3121800
+
+Modificado self.valorProgress con valor: 3130400
+
+Actualizada pb con: 3130400
+
+Modificado self.valorProgress con valor: 3139000
+
+Actualizada pb con: 3139000
+
+Modificado self.valorProgress con valor: 3147600
+
+Actualizada pb con: 3147600
+
+Modificado self.valorProgress con valor: 3156200
+
+Actualizada pb con: 3156200
+
+Modificado self.valorProgress con valor: 3164800
+
+Actualizada pb con: 3164800
+
+Modificado self.valorProgress con valor: 3173400
+
+Actualizada pb con: 3173400
+
+Modificado self.valorProgress con valor: 3182000
+
+Actualizada pb con: 3182000
+
+Modificado self.valorProgress con valor: 3190600
+
+Actualizada pb con: 3190600
+
+Modificado self.valorProgress con valor: 3199200
+
+Actualizada pb con: 3199200
+
+Modificado self.valorProgress con valor: 3207800
+
+Actualizada pb con: 3207800
+
+Modificado self.valorProgress con valor: 3216400
+
+Actualizada pb con: 3216400
+
+Modificado self.valorProgress con valor: 3225000
+
+Actualizada pb con: 3225000
+
+Modificado self.valorProgress con valor: 3233600
+
+Actualizada pb con: 3233600
+
+Modificado self.valorProgress con valor: 3242200
+
+Actualizada pb con: 3242200
+
+Modificado self.valorProgress con valor: 3250800
+
+Actualizada pb con: 3250800
+
+Modificado self.valorProgress con valor: 3259400
+
+Actualizada pb con: 3259400
+
+Modificado self.valorProgress con valor: 3268000
+
+Actualizada pb con: 3268000
+
+Modificado self.valorProgress con valor: 3276600
+
+Actualizada pb con: 3276600
+
+Modificado self.valorProgress con valor: 3285200
+
+Actualizada pb con: 3285200
+
+Modificado self.valorProgress con valor: 3293800
+
+Actualizada pb con: 3293800
+
+Modificado self.valorProgress con valor: 3302400
+
+Actualizada pb con: 3302400
+
+Modificado self.valorProgress con valor: 3311000
+
+Actualizada pb con: 3311000
+
+Modificado self.valorProgress con valor: 3319600
+
+Actualizada pb con: 3319600
+
+Modificado self.valorProgress con valor: 3328200
+
+Actualizada pb con: 3328200
+
+Modificado self.valorProgress con valor: 3336800
+
+Actualizada pb con: 3336800
+
+Modificado self.valorProgress con valor: 3345400
+
+Actualizada pb con: 3345400
+
+Modificado self.valorProgress con valor: 3354000
+
+Actualizada pb con: 3354000
+
+Modificado self.valorProgress con valor: 3362600
+
+Actualizada pb con: 3362600
+
+Modificado self.valorProgress con valor: 3371200
+
+Actualizada pb con: 3371200
+
+Modificado self.valorProgress con valor: 3379800
+
+Actualizada pb con: 3379800
+
+Modificado self.valorProgress con valor: 3388400
+
+Actualizada pb con: 3388400
+
+Modificado self.valorProgress con valor: 3397000
+
+Actualizada pb con: 3397000
+
+Modificado self.valorProgress con valor: 3405600
+
+Actualizada pb con: 3405600
+
+Modificado self.valorProgress con valor: 3414200
+
+Actualizada pb con: 3414200
+
+Modificado self.valorProgress con valor: 3422800
+
+Actualizada pb con: 3422800
+
+Modificado self.valorProgress con valor: 3431400
+
+Actualizada pb con: 3431400
+
+Modificado self.valorProgress con valor: 3440000
+
+Actualizada pb con: 3440000
+
+Modificado self.valorProgress con valor: 3448600
+
+Actualizada pb con: 3448600
+
+Modificado self.valorProgress con valor: 3457200
+
+Actualizada pb con: 3457200
+
+Modificado self.valorProgress con valor: 3465800
+
+Actualizada pb con: 3465800
+
+Modificado self.valorProgress con valor: 3474400
+
+Actualizada pb con: 3474400
+
+Modificado self.valorProgress con valor: 3483000
+
+Actualizada pb con: 3483000
+
+Modificado self.valorProgress con valor: 3491600
+
+Actualizada pb con: 3491600
+
+Modificado self.valorProgress con valor: 3500200
+
+Actualizada pb con: 3500200
+
+Modificado self.valorProgress con valor: 3508800
+
+Actualizada pb con: 3508800
+
+Modificado self.valorProgress con valor: 3517400
+
+Actualizada pb con: 3517400
+
+Modificado self.valorProgress con valor: 3526000
+
+Actualizada pb con: 3526000
+
+Modificado self.valorProgress con valor: 3534600
+
+Actualizada pb con: 3534600
+
+Modificado self.valorProgress con valor: 3543200
+
+Actualizada pb con: 3543200
+
+Modificado self.valorProgress con valor: 3551800
+
+Actualizada pb con: 3551800
+
+Modificado self.valorProgress con valor: 3560400
+
+Actualizada pb con: 3560400
+
+Modificado self.valorProgress con valor: 3569000
+
+Actualizada pb con: 3569000
+
+Modificado self.valorProgress con valor: 3577600
+
+Actualizada pb con: 3577600
+
+Modificado self.valorProgress con valor: 3586200
+
+Actualizada pb con: 3586200
+
+Modificado self.valorProgress con valor: 3594800
+
+Actualizada pb con: 3594800
+
+Modificado self.valorProgress con valor: 3603400
+
+Actualizada pb con: 3603400
+
+Modificado self.valorProgress con valor: 3612000
+
+Actualizada pb con: 3612000
+
+Modificado self.valorProgress con valor: 3620600
+
+Actualizada pb con: 3620600
+
+Modificado self.valorProgress con valor: 3629200
+
+Actualizada pb con: 3629200
+
+Modificado self.valorProgress con valor: 3637800
+
+Actualizada pb con: 3637800
+
+Modificado self.valorProgress con valor: 3646400
+
+Actualizada pb con: 3646400
+
+Modificado self.valorProgress con valor: 3655000
+
+Actualizada pb con: 3655000
+
+Modificado self.valorProgress con valor: 3663600
+
+Actualizada pb con: 3663600
+
+Modificado self.valorProgress con valor: 3672200
+
+Actualizada pb con: 3672200
+
+Modificado self.valorProgress con valor: 3680800
+
+Actualizada pb con: 3680800
+
+Modificado self.valorProgress con valor: 3689400
+
+Actualizada pb con: 3689400
+
+Modificado self.valorProgress con valor: 3698000
+
+Actualizada pb con: 3698000
+
+Modificado self.valorProgress con valor: 3706600
+
+Actualizada pb con: 3706600
+
+Modificado self.valorProgress con valor: 3715200
+
+Actualizada pb con: 3715200
+
+Modificado self.valorProgress con valor: 3723800
+
+Actualizada pb con: 3723800
+
+Modificado self.valorProgress con valor: 3732400
+
+Actualizada pb con: 3732400
+
+Modificado self.valorProgress con valor: 3741000
+
+Actualizada pb con: 3741000
+
+Modificado self.valorProgress con valor: 3749600
+
+Actualizada pb con: 3749600
+
+Modificado self.valorProgress con valor: 3758200
+
+Actualizada pb con: 3758200
+
+Modificado self.valorProgress con valor: 3766800
+
+Actualizada pb con: 3766800
+
+Modificado self.valorProgress con valor: 3775400
+
+Actualizada pb con: 3775400
+
+Modificado self.valorProgress con valor: 3784000
+
+Actualizada pb con: 3784000
+
+Modificado self.valorProgress con valor: 3792600
+
+Actualizada pb con: 3792600
+
+Modificado self.valorProgress con valor: 3801200
+
+Actualizada pb con: 3801200
+
+Modificado self.valorProgress con valor: 3809800
+
+Actualizada pb con: 3809800
+
+Modificado self.valorProgress con valor: 3818400
+
+Actualizada pb con: 3818400
+
+Modificado self.valorProgress con valor: 3827000
+
+Actualizada pb con: 3827000
+
+Modificado self.valorProgress con valor: 3835600
+
+Actualizada pb con: 3835600
+
+Modificado self.valorProgress con valor: 3844200
+
+Actualizada pb con: 3844200
+
+Modificado self.valorProgress con valor: 3852800
+
+Actualizada pb con: 3852800
+
+Modificado self.valorProgress con valor: 3861400
+
+Actualizada pb con: 3861400
+
+Modificado self.valorProgress con valor: 3870000
+
+Actualizada pb con: 3870000
+
+Modificado self.valorProgress con valor: 3878600
+
+Actualizada pb con: 3878600
+
+Modificado self.valorProgress con valor: 3887200
+
+Actualizada pb con: 3887200
+
+Modificado self.valorProgress con valor: 3895800
+
+Actualizada pb con: 3895800
+
+Modificado self.valorProgress con valor: 3904400
+
+Actualizada pb con: 3904400
+
+Modificado self.valorProgress con valor: 3913000
+
+Actualizada pb con: 3913000
+
+Modificado self.valorProgress con valor: 3921600
+
+Actualizada pb con: 3921600
+
+Modificado self.valorProgress con valor: 3930200
+
+Actualizada pb con: 3930200
+
+Modificado self.valorProgress con valor: 3938800
+
+Actualizada pb con: 3938800
+
+Modificado self.valorProgress con valor: 3947400
+
+Actualizada pb con: 3947400
+
+Modificado self.valorProgress con valor: 3956000
+
+Actualizada pb con: 3956000
+
+Modificado self.valorProgress con valor: 3964600
+
+Actualizada pb con: 3964600
+
+Modificado self.valorProgress con valor: 3973200
+
+Actualizada pb con: 3973200
+
+Modificado self.valorProgress con valor: 3981800
+
+Actualizada pb con: 3981800
+
+Actualizada pb con: 3981800
+
+Modificado self.valorProgress con valor: 3990400
+
+Modificado self.valorProgress con valor: 3999000
+
+Modificado self.valorProgress con valor: 4007600
+
+Actualizada pb con: 4007600
+
+Modificado self.valorProgress con valor: 4016200
+
+Modificado self.valorProgress con valor: 4024800
+
+Modificado self.valorProgress con valor: 4033400
+
+Actualizada pb con: 4033400
+
+Modificado self.valorProgress con valor: 4042000
+
+Modificado self.valorProgress con valor: 4050600
+
+Actualizada pb con: 4050600
+
+Modificado self.valorProgress con valor: 4059200
+
+Actualizada pb con: 4059200
+
+Modificado self.valorProgress con valor: 4067800
+
+Actualizada pb con: 4067800
+
+Modificado self.valorProgress con valor: 4076400
+
+Actualizada pb con: 4076400
+
+Modificado self.valorProgress con valor: 4085000
+
+Actualizada pb con: 4085000
+
+Modificado self.valorProgress con valor: 4093600
+
+Actualizada pb con: 4093600
+
+Modificado self.valorProgress con valor: 4102200
+
+Actualizada pb con: 4102200
+
+Modificado self.valorProgress con valor: 4110800
+
+Actualizada pb con: 4110800
+
+Modificado self.valorProgress con valor: 4119400
+
+Actualizada pb con: 4119400
+
+Modificado self.valorProgress con valor: 4128000
+
+Actualizada pb con: 4128000
+
+Modificado self.valorProgress con valor: 4136600
+
+Actualizada pb con: 4136600
+
+Modificado self.valorProgress con valor: 4145200
+
+Actualizada pb con: 4145200
+
+Modificado self.valorProgress con valor: 4153800
+
+Actualizada pb con: 4153800
+
+Modificado self.valorProgress con valor: 4162400
+
+Actualizada pb con: 4162400
+
+Modificado self.valorProgress con valor: 4171000
+
+Actualizada pb con: 4171000
+
+Modificado self.valorProgress con valor: 4179600
+
+Actualizada pb con: 4179600
+
+Modificado self.valorProgress con valor: 4188200
+
+Actualizada pb con: 4188200
+
+Modificado self.valorProgress con valor: 4196800
+
+Actualizada pb con: 4196800
+
+Modificado self.valorProgress con valor: 4205400
+
+Actualizada pb con: 4205400
+
+Modificado self.valorProgress con valor: 4214000
+
+Actualizada pb con: 4214000
+
+Modificado self.valorProgress con valor: 4222600
+
+Actualizada pb con: 4222600
+
+Modificado self.valorProgress con valor: 4231200
+
+Actualizada pb con: 4231200
+
+Modificado self.valorProgress con valor: 4239800
+
+Actualizada pb con: 4239800
+
+Modificado self.valorProgress con valor: 4248400
+
+Actualizada pb con: 4248400
+
+Modificado self.valorProgress con valor: 4257000
+
+Actualizada pb con: 4257000
+
+Modificado self.valorProgress con valor: 4265600
+
+Actualizada pb con: 4265600
+
+Modificado self.valorProgress con valor: 4274200
+
+Actualizada pb con: 4274200
+
+Modificado self.valorProgress con valor: 4282800
+
+Actualizada pb con: 4282800
+
+Modificado self.valorProgress con valor: 4291400
+
+Actualizada pb con: 4291400
+
+Modificado self.valorProgress con valor: 4300000
+
+Actualizada pb con: 4300000
+
+Modificado self.valorProgress con valor: 4308600
+
+Actualizada pb con: 4308600
+
+Modificado self.valorProgress con valor: 4317200
+
+Actualizada pb con: 4317200
+
+Modificado self.valorProgress con valor: 4325800
+
+Actualizada pb con: 4325800
+
+Modificado self.valorProgress con valor: 4334400
+
+Actualizada pb con: 4334400
+
+Modificado self.valorProgress con valor: 4343000
+
+Actualizada pb con: 4343000
+
+Modificado self.valorProgress con valor: 4351600
+
+Actualizada pb con: 4351600
+
+Modificado self.valorProgress con valor: 4360200
+
+Actualizada pb con: 4360200
+
+Modificado self.valorProgress con valor: 4368800
+
+Actualizada pb con: 4368800
+
+Modificado self.valorProgress con valor: 4377400
+
+Actualizada pb con: 4377400
+
+Modificado self.valorProgress con valor: 4386000
+
+Actualizada pb con: 4386000
+
+Modificado self.valorProgress con valor: 4394600
+
+Actualizada pb con: 4394600
+
+Modificado self.valorProgress con valor: 4403200
+
+Actualizada pb con: 4403200
+
+Modificado self.valorProgress con valor: 4411800
+
+Actualizada pb con: 4411800
+
+Modificado self.valorProgress con valor: 4420400
+
+Actualizada pb con: 4420400
+
+Modificado self.valorProgress con valor: 4429000
+
+Actualizada pb con: 4429000
+
+Modificado self.valorProgress con valor: 4437600
+
+Actualizada pb con: 4437600
+
+Modificado self.valorProgress con valor: 4446200
+
+Actualizada pb con: 4446200
+
+Modificado self.valorProgress con valor: 4454800
+
+Actualizada pb con: 4454800
+
+Modificado self.valorProgress con valor: 4463400
+
+Actualizada pb con: 4463400
+
+Modificado self.valorProgress con valor: 4472000
+
+Actualizada pb con: 4472000
+
+Modificado self.valorProgress con valor: 4480600
+
+Actualizada pb con: 4480600
+
+Modificado self.valorProgress con valor: 4489200
+
+Actualizada pb con: 4489200
+
+Modificado self.valorProgress con valor: 4497800
+
+Actualizada pb con: 4497800
+
+Modificado self.valorProgress con valor: 4506400
+
+Actualizada pb con: 4506400
+
+Modificado self.valorProgress con valor: 4515000
+
+Actualizada pb con: 4515000
+
+Modificado self.valorProgress con valor: 4523600
+
+Actualizada pb con: 4523600
+
+Modificado self.valorProgress con valor: 4532200
+
+Actualizada pb con: 4532200
+
+Modificado self.valorProgress con valor: 4540800
+
+Actualizada pb con: 4540800
+
+Modificado self.valorProgress con valor: 4549400
+
+Actualizada pb con: 4549400
+
+Modificado self.valorProgress con valor: 4558000
+
+Actualizada pb con: 4558000
+
+Modificado self.valorProgress con valor: 4566600
+
+Actualizada pb con: 4566600
+
+Modificado self.valorProgress con valor: 4575200
+
+Actualizada pb con: 4575200
+
+Modificado self.valorProgress con valor: 4583800
+
+Actualizada pb con: 4583800
+
+Modificado self.valorProgress con valor: 4592400
+
+Actualizada pb con: 4592400
+
+Modificado self.valorProgress con valor: 4601000
+
+Actualizada pb con: 4601000
+
+Modificado self.valorProgress con valor: 4609600
+
+Actualizada pb con: 4609600
+
+Modificado self.valorProgress con valor: 4618200
+
+Actualizada pb con: 4618200
+
+Modificado self.valorProgress con valor: 4626800
+
+Actualizada pb con: 4626800
+
+Modificado self.valorProgress con valor: 4635400
+
+Actualizada pb con: 4635400
+
+Modificado self.valorProgress con valor: 4644000
+
+Actualizada pb con: 4644000
+
+Modificado self.valorProgress con valor: 4652600
+
+Actualizada pb con: 4652600
+
+Modificado self.valorProgress con valor: 4661200
+
+Actualizada pb con: 4661200
+
+Modificado self.valorProgress con valor: 4669800
+
+Actualizada pb con: 4669800
+
+Modificado self.valorProgress con valor: 4678400
+
+Actualizada pb con: 4678400
+
+Modificado self.valorProgress con valor: 4687000
+
+Actualizada pb con: 4687000
+
+Modificado self.valorProgress con valor: 4695600
+
+Actualizada pb con: 4695600
+
+Actualizada pb con: 4695600
+
+Modificado self.valorProgress con valor: 4704200
+
+Modificado self.valorProgress con valor: 4712800
+
+Modificado self.valorProgress con valor: 4721400
+
+Actualizada pb con: 4721400
+
+Modificado self.valorProgress con valor: 4730000
+
+Modificado self.valorProgress con valor: 4738600
+
+Modificado self.valorProgress con valor: 4747200
+
+Modificado self.valorProgress con valor: 4755800
+
+Actualizada pb con: 4755800
+
+Modificado self.valorProgress con valor: 4764400
+
+Modificado self.valorProgress con valor: 4773000
+
+Actualizada pb con: 4773000
+
+Modificado self.valorProgress con valor: 4781600
+
+Actualizada pb con: 4781600
+
+Modificado self.valorProgress con valor: 4790200
+
+Actualizada pb con: 4790200
+
+Modificado self.valorProgress con valor: 4798800
+
+Actualizada pb con: 4798800
+
+Modificado self.valorProgress con valor: 4807400
+
+Actualizada pb con: 4807400
+
+Modificado self.valorProgress con valor: 4816000
+
+Actualizada pb con: 4816000
+
+Modificado self.valorProgress con valor: 4824600
+
+Actualizada pb con: 4824600
+
+Modificado self.valorProgress con valor: 4833200
+
+Actualizada pb con: 4833200
+
+Modificado self.valorProgress con valor: 4841800
+
+Actualizada pb con: 4841800
+
+Modificado self.valorProgress con valor: 4850400
+
+Actualizada pb con: 4850400
+
+Modificado self.valorProgress con valor: 4859000
+
+Actualizada pb con: 4859000
+
+Modificado self.valorProgress con valor: 4867600
+
+Actualizada pb con: 4867600
+
+Modificado self.valorProgress con valor: 4876200
+
+Actualizada pb con: 4876200
+
+Modificado self.valorProgress con valor: 4884800
+
+Actualizada pb con: 4884800
+
+Modificado self.valorProgress con valor: 4893400
+
+Actualizada pb con: 4893400
+
+Modificado self.valorProgress con valor: 4902000
+
+Actualizada pb con: 4902000
+
+Modificado self.valorProgress con valor: 4910600
+
+Actualizada pb con: 4910600
+
+Modificado self.valorProgress con valor: 4919200
+
+Actualizada pb con: 4919200
+
+Modificado self.valorProgress con valor: 4927800
+
+Actualizada pb con: 4927800
+
+Modificado self.valorProgress con valor: 4936400
+
+Actualizada pb con: 4936400
+
+Modificado self.valorProgress con valor: 4945000
+
+Actualizada pb con: 4945000
+
+Modificado self.valorProgress con valor: 4953600
+
+Actualizada pb con: 4953600
+
+Modificado self.valorProgress con valor: 4962200
+
+Actualizada pb con: 4962200
+
+Modificado self.valorProgress con valor: 4970800
+
+Actualizada pb con: 4970800
+
+Modificado self.valorProgress con valor: 4979400
+
+Actualizada pb con: 4979400
+
+Modificado self.valorProgress con valor: 4988000
+
+Actualizada pb con: 4988000
+
+Modificado self.valorProgress con valor: 4996600
+
+Actualizada pb con: 4996600
+
+Modificado self.valorProgress con valor: 5005200
+
+Actualizada pb con: 5005200
+
+Modificado self.valorProgress con valor: 5013800
+
+Actualizada pb con: 5013800
+
+Modificado self.valorProgress con valor: 5022400
+
+Actualizada pb con: 5022400
+
+Modificado self.valorProgress con valor: 5031000
+
+Actualizada pb con: 5031000
+
+Modificado self.valorProgress con valor: 5039600
+
+Actualizada pb con: 5039600
+
+Modificado self.valorProgress con valor: 5048200
+
+Actualizada pb con: 5048200
+
+Modificado self.valorProgress con valor: 5056800
+
+Actualizada pb con: 5056800
+
+Modificado self.valorProgress con valor: 5065400
+
+Actualizada pb con: 5065400
+
+Modificado self.valorProgress con valor: 5074000
+
+Actualizada pb con: 5074000
+
+Modificado self.valorProgress con valor: 5082600
+
+Actualizada pb con: 5082600
+
+Modificado self.valorProgress con valor: 5091200
+
+Actualizada pb con: 5091200
+
+Modificado self.valorProgress con valor: 5099800
+
+Actualizada pb con: 5099800
+
+Modificado self.valorProgress con valor: 5108400
+
+Actualizada pb con: 5108400
+
+Modificado self.valorProgress con valor: 5117000
+
+Actualizada pb con: 5117000
+
+Modificado self.valorProgress con valor: 5125600
+
+Actualizada pb con: 5125600
+
+Modificado self.valorProgress con valor: 5134200
+
+Actualizada pb con: 5134200
+
+Modificado self.valorProgress con valor: 5142800
+
+Actualizada pb con: 5142800
+
+Modificado self.valorProgress con valor: 5151400
+
+Actualizada pb con: 5151400
+
+Modificado self.valorProgress con valor: 5160000
+
+Actualizada pb con: 5160000
+
+Modificado self.valorProgress con valor: 5168600
+
+Actualizada pb con: 5168600
+
+Modificado self.valorProgress con valor: 5177200
+
+Actualizada pb con: 5177200
+
+Modificado self.valorProgress con valor: 5185800
+
+Actualizada pb con: 5185800
+
+Modificado self.valorProgress con valor: 5194400
+
+Actualizada pb con: 5194400
+
+Modificado self.valorProgress con valor: 5203000
+
+Actualizada pb con: 5203000
+
+Modificado self.valorProgress con valor: 5211600
+
+Actualizada pb con: 5211600
+
+Modificado self.valorProgress con valor: 5220200
+
+Actualizada pb con: 5220200
+
+Modificado self.valorProgress con valor: 5228800
+
+Actualizada pb con: 5228800
+
+Modificado self.valorProgress con valor: 5237400
+
+Actualizada pb con: 5237400
+
+Modificado self.valorProgress con valor: 5246000
+
+Actualizada pb con: 5246000
+
+Modificado self.valorProgress con valor: 5254600
+
+Actualizada pb con: 5254600
+
+Modificado self.valorProgress con valor: 5263200
+
+Actualizada pb con: 5263200
+
+Modificado self.valorProgress con valor: 5271800
+
+Actualizada pb con: 5271800
+
+Modificado self.valorProgress con valor: 5280400
+
+Actualizada pb con: 5280400
+
+Modificado self.valorProgress con valor: 5289000
+
+Actualizada pb con: 5289000
+
+Modificado self.valorProgress con valor: 5297600
+
+Actualizada pb con: 5297600
+
+Modificado self.valorProgress con valor: 5306200
+
+Actualizada pb con: 5306200
+
+Modificado self.valorProgress con valor: 5314800
+
+Actualizada pb con: 5314800
+
+Modificado self.valorProgress con valor: 5323400
+
+Actualizada pb con: 5323400
+
+Modificado self.valorProgress con valor: 5332000
+
+Actualizada pb con: 5332000
+
+Modificado self.valorProgress con valor: 5340600
+
+Actualizada pb con: 5340600
+
+Modificado self.valorProgress con valor: 5349200
+
+Actualizada pb con: 5349200
+
+Modificado self.valorProgress con valor: 5357800
+
+Actualizada pb con: 5357800
+
+Modificado self.valorProgress con valor: 5366400
+
+Actualizada pb con: 5366400
+
+Modificado self.valorProgress con valor: 5375000
+
+Actualizada pb con: 5375000
+
+Modificado self.valorProgress con valor: 5383600
+
+Actualizada pb con: 5383600
+
+Actualizada pb con: 5383600
+
+Modificado self.valorProgress con valor: 5392200
+
+Modificado self.valorProgress con valor: 5400800
+
+Modificado self.valorProgress con valor: 5409400
+
+Actualizada pb con: 5409400
+
+Modificado self.valorProgress con valor: 5418000
+
+Modificado self.valorProgress con valor: 5426600
+
+Modificado self.valorProgress con valor: 5435200
+
+Modificado self.valorProgress con valor: 5443800
+
+Actualizada pb con: 5443800
+
+Modificado self.valorProgress con valor: 5452400
+
+Modificado self.valorProgress con valor: 5461000
+
+Actualizada pb con: 5461000
+
+Modificado self.valorProgress con valor: 5469600
+
+Actualizada pb con: 5469600
+
+Modificado self.valorProgress con valor: 5478200
+
+Actualizada pb con: 5478200
+
+Modificado self.valorProgress con valor: 5486800
+
+Actualizada pb con: 5486800
+
+Modificado self.valorProgress con valor: 5495400
+
+Actualizada pb con: 5495400
+
+Modificado self.valorProgress con valor: 5504000
+
+Actualizada pb con: 5504000
+
+Modificado self.valorProgress con valor: 5512600
+
+Actualizada pb con: 5512600
+
+Modificado self.valorProgress con valor: 5521200
+
+Actualizada pb con: 5521200
+
+Modificado self.valorProgress con valor: 5529800
+
+Actualizada pb con: 5529800
+
+Modificado self.valorProgress con valor: 5538400
+
+Actualizada pb con: 5538400
+
+Modificado self.valorProgress con valor: 5547000
+
+Actualizada pb con: 5547000
+
+Modificado self.valorProgress con valor: 5555600
+
+Actualizada pb con: 5555600
+
+Modificado self.valorProgress con valor: 5564200
+
+Actualizada pb con: 5564200
+
+Modificado self.valorProgress con valor: 5572800
+
+Actualizada pb con: 5572800
+
+Modificado self.valorProgress con valor: 5581400
+
+Actualizada pb con: 5581400
+
+Modificado self.valorProgress con valor: 5590000
+
+Actualizada pb con: 5590000
+
+Modificado self.valorProgress con valor: 5598600
+
+Actualizada pb con: 5598600
+
+Modificado self.valorProgress con valor: 5607200
+
+Actualizada pb con: 5607200
+
+Modificado self.valorProgress con valor: 5615800
+
+Actualizada pb con: 5615800
+
+Modificado self.valorProgress con valor: 5624400
+
+Actualizada pb con: 5624400
+
+Modificado self.valorProgress con valor: 5633000
+
+Actualizada pb con: 5633000
+
+Modificado self.valorProgress con valor: 5641600
+
+Actualizada pb con: 5641600
+
+Modificado self.valorProgress con valor: 5650200
+
+Actualizada pb con: 5650200
+
+Modificado self.valorProgress con valor: 5658800
+
+Actualizada pb con: 5658800
+
+Modificado self.valorProgress con valor: 5667400
+
+Actualizada pb con: 5667400
+
+Modificado self.valorProgress con valor: 5676000
+
+Actualizada pb con: 5676000
+
+Modificado self.valorProgress con valor: 5684600
+
+Actualizada pb con: 5684600
+
+Modificado self.valorProgress con valor: 5693200
+
+Actualizada pb con: 5693200
+
+Modificado self.valorProgress con valor: 5701800
+
+Actualizada pb con: 5701800
+
+Modificado self.valorProgress con valor: 5710400
+
+Actualizada pb con: 5710400
+
+Modificado self.valorProgress con valor: 5719000
+
+Actualizada pb con: 5719000
+
+Actualizada pb con: 5719000
+
+Modificado self.valorProgress con valor: 5727600
+
+Modificado self.valorProgress con valor: 5736200
+
+Modificado self.valorProgress con valor: 5744800
+
+Modificado self.valorProgress con valor: 5753400
+
+Actualizada pb con: 5753400
+
+Modificado self.valorProgress con valor: 5762000
+
+Modificado self.valorProgress con valor: 5770600
+
+Modificado self.valorProgress con valor: 5779200
+
+Actualizada pb con: 5779200
+
+Modificado self.valorProgress con valor: 5787800
+
+Modificado self.valorProgress con valor: 5796400
+
+Actualizada pb con: 5796400
+
+Modificado self.valorProgress con valor: 5805000
+
+Actualizada pb con: 5805000
+
+Modificado self.valorProgress con valor: 5813600
+
+Actualizada pb con: 5813600
+
+Modificado self.valorProgress con valor: 5822200
+
+Actualizada pb con: 5822200
+
+Modificado self.valorProgress con valor: 5830800
+
+Actualizada pb con: 5830800
+
+Modificado self.valorProgress con valor: 5839400
+
+Actualizada pb con: 5839400
+
+Modificado self.valorProgress con valor: 5848000
+
+Actualizada pb con: 5848000
+
+Modificado self.valorProgress con valor: 5856600
+
+Actualizada pb con: 5856600
+
+Modificado self.valorProgress con valor: 5865200
+
+Actualizada pb con: 5865200
+
+Modificado self.valorProgress con valor: 5873800
+
+Actualizada pb con: 5873800
+
+Modificado self.valorProgress con valor: 5882400
+
+Actualizada pb con: 5882400
+
+Modificado self.valorProgress con valor: 5891000
+
+Actualizada pb con: 5891000
+
+Modificado self.valorProgress con valor: 5899600
+
+Actualizada pb con: 5899600
+
+Modificado self.valorProgress con valor: 5908200
+
+Actualizada pb con: 5908200
+
+Modificado self.valorProgress con valor: 5916800
+
+Actualizada pb con: 5916800
+
+Modificado self.valorProgress con valor: 5925400
+
+Actualizada pb con: 5925400
+
+Modificado self.valorProgress con valor: 5934000
+
+Actualizada pb con: 5934000
+
+Modificado self.valorProgress con valor: 5942600
+
+Actualizada pb con: 5942600
+
+Modificado self.valorProgress con valor: 5951200
+
+Actualizada pb con: 5951200
+
+Modificado self.valorProgress con valor: 5959800
+
+Actualizada pb con: 5959800
+
+Modificado self.valorProgress con valor: 5968400
+
+Actualizada pb con: 5968400
+
+Modificado self.valorProgress con valor: 5977000
+
+Actualizada pb con: 5977000
+
+Modificado self.valorProgress con valor: 5985600
+
+Actualizada pb con: 5985600
+
+Modificado self.valorProgress con valor: 5994200
+
+Actualizada pb con: 5994200
+
+Modificado self.valorProgress con valor: 6002800
+
+Actualizada pb con: 6002800
+
+Modificado self.valorProgress con valor: 6011400
+
+Actualizada pb con: 6011400
+
+Modificado self.valorProgress con valor: 6020000
+
+Actualizada pb con: 6020000
+
+Modificado self.valorProgress con valor: 6028600
+
+Actualizada pb con: 6028600
+
+Modificado self.valorProgress con valor: 6037200
+
+Actualizada pb con: 6037200
+
+Modificado self.valorProgress con valor: 6045800
+
+Actualizada pb con: 6045800
+
+Modificado self.valorProgress con valor: 6054400
+
+Actualizada pb con: 6054400
+
+Modificado self.valorProgress con valor: 6063000
+
+Actualizada pb con: 6063000
+
+Modificado self.valorProgress con valor: 6071600
+
+Actualizada pb con: 6071600
+
+Modificado self.valorProgress con valor: 6080200
+
+Actualizada pb con: 6080200
+
+Modificado self.valorProgress con valor: 6088800
+
+Actualizada pb con: 6088800
+
+Modificado self.valorProgress con valor: 6097400
+
+Actualizada pb con: 6097400
+
+Modificado self.valorProgress con valor: 6106000
+
+Actualizada pb con: 6106000
+
+Modificado self.valorProgress con valor: 6114600
+
+Actualizada pb con: 6114600
+
+Modificado self.valorProgress con valor: 6123200
+
+Actualizada pb con: 6123200
+
+Modificado self.valorProgress con valor: 6131800
+
+Actualizada pb con: 6131800
+
+Modificado self.valorProgress con valor: 6140400
+
+Actualizada pb con: 6140400
+
+Modificado self.valorProgress con valor: 6149000
+
+Actualizada pb con: 6149000
+
+Modificado self.valorProgress con valor: 6157600
+
+Actualizada pb con: 6157600
+
+Modificado self.valorProgress con valor: 6166200
+
+Actualizada pb con: 6166200
+
+Modificado self.valorProgress con valor: 6174800
+
+Actualizada pb con: 6174800
+
+Modificado self.valorProgress con valor: 6183400
+
+Actualizada pb con: 6183400
+
+Modificado self.valorProgress con valor: 6192000
+
+Actualizada pb con: 6192000
+
+Modificado self.valorProgress con valor: 6200600
+
+Actualizada pb con: 6200600
+
+Modificado self.valorProgress con valor: 6209200
+
+Actualizada pb con: 6209200
+
+Modificado self.valorProgress con valor: 6217800
+
+Actualizada pb con: 6217800
+
+Modificado self.valorProgress con valor: 6226400
+
+Actualizada pb con: 6226400
+
+Modificado self.valorProgress con valor: 6235000
+
+Actualizada pb con: 6235000
+
+Modificado self.valorProgress con valor: 6243600
+
+Actualizada pb con: 6243600
+
+Modificado self.valorProgress con valor: 6252200
+
+Actualizada pb con: 6252200
+
+Modificado self.valorProgress con valor: 6260800
+
+Actualizada pb con: 6260800
+
+Modificado self.valorProgress con valor: 6269400
+
+Actualizada pb con: 6269400
+
+Modificado self.valorProgress con valor: 6278000
+
+Actualizada pb con: 6278000
+
+Modificado self.valorProgress con valor: 6286600
+
+Actualizada pb con: 6286600
+
+Modificado self.valorProgress con valor: 6295200
+
+Actualizada pb con: 6295200
+
+Modificado self.valorProgress con valor: 6303800
+
+Actualizada pb con: 6303800
+
+Modificado self.valorProgress con valor: 6312400
+
+Actualizada pb con: 6312400
+
+Modificado self.valorProgress con valor: 6321000
+
+Actualizada pb con: 6321000
+
+Modificado self.valorProgress con valor: 6329600
+
+Actualizada pb con: 6329600
+
+Modificado self.valorProgress con valor: 6338200
+
+Actualizada pb con: 6338200
+
+Modificado self.valorProgress con valor: 6346800
+
+Actualizada pb con: 6346800
+
+Modificado self.valorProgress con valor: 6355400
+
+Actualizada pb con: 6355400
+
+Modificado self.valorProgress con valor: 6364000
+
+Actualizada pb con: 6364000
+
+Modificado self.valorProgress con valor: 6372600
+
+Actualizada pb con: 6372600
+
+Modificado self.valorProgress con valor: 6381200
+
+Actualizada pb con: 6381200
+
+Modificado self.valorProgress con valor: 6389800
+
+Actualizada pb con: 6389800
+
+Modificado self.valorProgress con valor: 6398400
+
+Actualizada pb con: 6398400
+
+Modificado self.valorProgress con valor: 6407000
+
+Actualizada pb con: 6407000
+
+Modificado self.valorProgress con valor: 6415600
+
+Actualizada pb con: 6415600
+
+Modificado self.valorProgress con valor: 6424200
+
+Actualizada pb con: 6424200
+
+Modificado self.valorProgress con valor: 6432800
+
+Actualizada pb con: 6432800
+
+Modificado self.valorProgress con valor: 6441400
+
+Actualizada pb con: 6441400
+
+Modificado self.valorProgress con valor: 6450000
+
+Actualizada pb con: 6450000
+
+Modificado self.valorProgress con valor: 6458600
+
+Actualizada pb con: 6458600
+
+Modificado self.valorProgress con valor: 6467200
+
+Actualizada pb con: 6467200
+
+Modificado self.valorProgress con valor: 6475800
+
+Actualizada pb con: 6475800
+
+Modificado self.valorProgress con valor: 6484400
+
+Actualizada pb con: 6484400
+
+Modificado self.valorProgress con valor: 6493000
+
+Actualizada pb con: 6493000
+
+Modificado self.valorProgress con valor: 6501600
+
+Actualizada pb con: 6501600
+
+Modificado self.valorProgress con valor: 6510200
+
+Actualizada pb con: 6510200
+
+Modificado self.valorProgress con valor: 6518800
+
+Actualizada pb con: 6518800
+
+Modificado self.valorProgress con valor: 6527400
+
+Actualizada pb con: 6527400
+
+Modificado self.valorProgress con valor: 6536000
+
+Actualizada pb con: 6536000
+
+Modificado self.valorProgress con valor: 6544600
+
+Actualizada pb con: 6544600
+
+Modificado self.valorProgress con valor: 6553200
+
+Actualizada pb con: 6553200
+
+Modificado self.valorProgress con valor: 6561800
+
+Actualizada pb con: 6561800
+
+Modificado self.valorProgress con valor: 6570400
+
+Actualizada pb con: 6570400
+
+Modificado self.valorProgress con valor: 6579000
+
+Actualizada pb con: 6579000
+
+Modificado self.valorProgress con valor: 6587600
+
+Actualizada pb con: 6587600
+
+Modificado self.valorProgress con valor: 6596200
+
+Actualizada pb con: 6596200
+
+Modificado self.valorProgress con valor: 6604800
+
+Actualizada pb con: 6604800
+
+Modificado self.valorProgress con valor: 6613400
+
+Actualizada pb con: 6613400
+
+Modificado self.valorProgress con valor: 6622000
+
+Actualizada pb con: 6622000
+
+Modificado self.valorProgress con valor: 6630600
+
+Actualizada pb con: 6630600
+
+Modificado self.valorProgress con valor: 6639200
+
+Actualizada pb con: 6639200
+
+Modificado self.valorProgress con valor: 6647800
+
+Actualizada pb con: 6647800
+
+Modificado self.valorProgress con valor: 6656400
+
+Actualizada pb con: 6656400
+
+Modificado self.valorProgress con valor: 6665000
+
+Actualizada pb con: 6665000
+
+Modificado self.valorProgress con valor: 6673600
+
+Actualizada pb con: 6673600
+
+Modificado self.valorProgress con valor: 6682200
+
+Actualizada pb con: 6682200
+
+Modificado self.valorProgress con valor: 6690800
+
+Actualizada pb con: 6690800
+
+Modificado self.valorProgress con valor: 6699400
+
+Actualizada pb con: 6699400
+
+Modificado self.valorProgress con valor: 6708000
+
+Actualizada pb con: 6708000
+
+Modificado self.valorProgress con valor: 6716600
+
+Actualizada pb con: 6716600
+
+Modificado self.valorProgress con valor: 6725200
+
+Actualizada pb con: 6725200
+
+Modificado self.valorProgress con valor: 6733800
+
+Actualizada pb con: 6733800
+
+Modificado self.valorProgress con valor: 6742400
+
+Actualizada pb con: 6742400
+
+Modificado self.valorProgress con valor: 6751000
+
+Actualizada pb con: 6751000
+
+Modificado self.valorProgress con valor: 6759600
+
+Actualizada pb con: 6759600
+
+Modificado self.valorProgress con valor: 6768200
+
+Actualizada pb con: 6768200
+
+Modificado self.valorProgress con valor: 6776800
+
+Actualizada pb con: 6776800
+
+Modificado self.valorProgress con valor: 6785400
+
+Actualizada pb con: 6785400
+
+Modificado self.valorProgress con valor: 6794000
+
+Actualizada pb con: 6794000
+
+Modificado self.valorProgress con valor: 6802600
+
+Actualizada pb con: 6802600
+
+Modificado self.valorProgress con valor: 6811200
+
+Actualizada pb con: 6811200
+
+Modificado self.valorProgress con valor: 6819800
+
+Actualizada pb con: 6819800
+
+Modificado self.valorProgress con valor: 6828400
+
+Actualizada pb con: 6828400
+
+Modificado self.valorProgress con valor: 6837000
+
+Actualizada pb con: 6837000
+
+Modificado self.valorProgress con valor: 6845600
+
+Actualizada pb con: 6845600
+
+Modificado self.valorProgress con valor: 6854200
+
+Actualizada pb con: 6854200
+
+Modificado self.valorProgress con valor: 6862800
+
+Actualizada pb con: 6862800
+
+Modificado self.valorProgress con valor: 6871400
+
+Actualizada pb con: 6871400
+
+Modificado self.valorProgress con valor: 6880000
+
+Actualizada pb con: 6880000
+
+Modificado self.valorProgress con valor: 6888600
+
+Actualizada pb con: 6888600
+
+Modificado self.valorProgress con valor: 6897200
+
+Actualizada pb con: 6897200
+
+Modificado self.valorProgress con valor: 6905800
+
+Actualizada pb con: 6905800
+
+Modificado self.valorProgress con valor: 6914400
+
+Actualizada pb con: 6914400
+
+Modificado self.valorProgress con valor: 6923000
+
+Actualizada pb con: 6923000
+
+Modificado self.valorProgress con valor: 6931600
+
+Actualizada pb con: 6931600
+
+Modificado self.valorProgress con valor: 6940200
+
+Actualizada pb con: 6940200
+
+Modificado self.valorProgress con valor: 6948800
+
+Actualizada pb con: 6948800
+
+Modificado self.valorProgress con valor: 6957400
+
+Actualizada pb con: 6957400
+
+Modificado self.valorProgress con valor: 6966000
+
+Actualizada pb con: 6966000
+
+Modificado self.valorProgress con valor: 6974600
+
+Actualizada pb con: 6974600
+
+Modificado self.valorProgress con valor: 6983200
+
+Actualizada pb con: 6983200
+
+Modificado self.valorProgress con valor: 6991800
+
+Actualizada pb con: 6991800
+
+Modificado self.valorProgress con valor: 7000400
+
+Actualizada pb con: 7000400
+
+Modificado self.valorProgress con valor: 7009000
+
+Actualizada pb con: 7009000
+
+Modificado self.valorProgress con valor: 7017600
+
+Actualizada pb con: 7017600
+
+Modificado self.valorProgress con valor: 7026200
+
+Actualizada pb con: 7026200
+
+Modificado self.valorProgress con valor: 7034800
+
+Actualizada pb con: 7034800
+
+Modificado self.valorProgress con valor: 7043400
+
+Actualizada pb con: 7043400
+
+Modificado self.valorProgress con valor: 7052000
+
+Actualizada pb con: 7052000
+
+Modificado self.valorProgress con valor: 7060600
+
+Actualizada pb con: 7060600
+
+Modificado self.valorProgress con valor: 7069200
+
+Actualizada pb con: 7069200
+
+Modificado self.valorProgress con valor: 7077800
+
+Actualizada pb con: 7077800
+
+Modificado self.valorProgress con valor: 7086400
+
+Actualizada pb con: 7086400
+
+Modificado self.valorProgress con valor: 7095000
+
+Actualizada pb con: 7095000
+
+Modificado self.valorProgress con valor: 7103600
+
+Actualizada pb con: 7103600
+
+Modificado self.valorProgress con valor: 7112200
+
+Actualizada pb con: 7112200
+
+Modificado self.valorProgress con valor: 7120800
+
+Actualizada pb con: 7120800
+
+Modificado self.valorProgress con valor: 7129400
+
+Actualizada pb con: 7129400
+
+Modificado self.valorProgress con valor: 7138000
+
+Actualizada pb con: 7138000
+
+Modificado self.valorProgress con valor: 7146600
+
+Actualizada pb con: 7146600
+
+Modificado self.valorProgress con valor: 7155200
+
+Actualizada pb con: 7155200
+
+Modificado self.valorProgress con valor: 7163800
+
+Actualizada pb con: 7163800
+
+Modificado self.valorProgress con valor: 7172400
+
+Actualizada pb con: 7172400
+
+Modificado self.valorProgress con valor: 7181000
+
+Actualizada pb con: 7181000
+
+Modificado self.valorProgress con valor: 7189600
+
+Actualizada pb con: 7189600
+
+Modificado self.valorProgress con valor: 7198200
+
+Actualizada pb con: 7198200
+
+Modificado self.valorProgress con valor: 7206800
+
+Actualizada pb con: 7206800
+
+Modificado self.valorProgress con valor: 7215400
+
+Actualizada pb con: 7215400
+
+Modificado self.valorProgress con valor: 7224000
+
+Actualizada pb con: 7224000
+
+Modificado self.valorProgress con valor: 7232600
+
+Actualizada pb con: 7232600
+
+Modificado self.valorProgress con valor: 7241200
+
+Actualizada pb con: 7241200
+
+Modificado self.valorProgress con valor: 7249800
+
+Actualizada pb con: 7249800
+
+Modificado self.valorProgress con valor: 7258400
+
+Actualizada pb con: 7258400
+
+Modificado self.valorProgress con valor: 7267000
+
+Actualizada pb con: 7267000
+
+Modificado self.valorProgress con valor: 7275600
+
+Actualizada pb con: 7275600
+
+Modificado self.valorProgress con valor: 7284200
+
+Actualizada pb con: 7284200
+
+Modificado self.valorProgress con valor: 7292800
+
+Actualizada pb con: 7292800
+
+Modificado self.valorProgress con valor: 7301400
+
+Actualizada pb con: 7301400
+
+Modificado self.valorProgress con valor: 7310000
+
+Actualizada pb con: 7310000
+
+Modificado self.valorProgress con valor: 7318600
+
+Actualizada pb con: 7318600
+
+Modificado self.valorProgress con valor: 7327200
+
+Actualizada pb con: 7327200
+
+Modificado self.valorProgress con valor: 7335800
+
+Actualizada pb con: 7335800
+
+Modificado self.valorProgress con valor: 7344400
+
+Actualizada pb con: 7344400
+
+Modificado self.valorProgress con valor: 7353000
+
+Actualizada pb con: 7353000
+
+Modificado self.valorProgress con valor: 7361600
+
+Actualizada pb con: 7361600
+
+Modificado self.valorProgress con valor: 7370200
+
+Actualizada pb con: 7370200
+
+Modificado self.valorProgress con valor: 7378800
+
+Actualizada pb con: 7378800
+
+Modificado self.valorProgress con valor: 7387400
+
+Actualizada pb con: 7387400
+
+Modificado self.valorProgress con valor: 7396000
+
+Actualizada pb con: 7396000
+
+Modificado self.valorProgress con valor: 7404600
+
+Actualizada pb con: 7404600
+
+Modificado self.valorProgress con valor: 7413200
+
+Actualizada pb con: 7413200
+
+Modificado self.valorProgress con valor: 7421800
+
+Actualizada pb con: 7421800
+
+Modificado self.valorProgress con valor: 7430400
+
+Actualizada pb con: 7430400
+
+Modificado self.valorProgress con valor: 7439000
+
+Actualizada pb con: 7439000
+
+Modificado self.valorProgress con valor: 7447600
+
+Actualizada pb con: 7447600
+
+Modificado self.valorProgress con valor: 7456200
+
+Actualizada pb con: 7456200
+
+Modificado self.valorProgress con valor: 7464800
+
+Actualizada pb con: 7464800
+
+Modificado self.valorProgress con valor: 7473400
+
+Actualizada pb con: 7473400
+
+Modificado self.valorProgress con valor: 7482000
+
+Actualizada pb con: 7482000
+
+Modificado self.valorProgress con valor: 7490600
+
+Actualizada pb con: 7490600
+
+Modificado self.valorProgress con valor: 7499200
+
+Actualizada pb con: 7499200
+
+Modificado self.valorProgress con valor: 7507800
+
+Actualizada pb con: 7507800
+
+Modificado self.valorProgress con valor: 7516400
+
+Actualizada pb con: 7516400
+
+Modificado self.valorProgress con valor: 7525000
+
+Actualizada pb con: 7525000
+
+Modificado self.valorProgress con valor: 7533600
+
+Actualizada pb con: 7533600
+
+Modificado self.valorProgress con valor: 7542200
+
+Actualizada pb con: 7542200
+
+Modificado self.valorProgress con valor: 7550800
+
+Actualizada pb con: 7550800
+
+Modificado self.valorProgress con valor: 7559400
+
+Actualizada pb con: 7559400
+
+Modificado self.valorProgress con valor: 7568000
+
+Actualizada pb con: 7568000
+
+Modificado self.valorProgress con valor: 7576600
+
+Actualizada pb con: 7576600
+
+Modificado self.valorProgress con valor: 7585200
+
+Actualizada pb con: 7585200
+
+Modificado self.valorProgress con valor: 7593800
+
+Actualizada pb con: 7593800
+
+Modificado self.valorProgress con valor: 7602400
+
+Actualizada pb con: 7602400
+
+Modificado self.valorProgress con valor: 7611000
+
+Actualizada pb con: 7611000
+
+Modificado self.valorProgress con valor: 7619600
+
+Actualizada pb con: 7619600
+
+Modificado self.valorProgress con valor: 7628200
+
+Actualizada pb con: 7628200
+
+Modificado self.valorProgress con valor: 7636800
+
+Actualizada pb con: 7636800
+
+Modificado self.valorProgress con valor: 7645400
+
+Actualizada pb con: 7645400
+
+Modificado self.valorProgress con valor: 7654000
+
+Actualizada pb con: 7654000
+
+Modificado self.valorProgress con valor: 7662600
+
+Actualizada pb con: 7662600
+
+Modificado self.valorProgress con valor: 7671200
+
+Actualizada pb con: 7671200
+
+Modificado self.valorProgress con valor: 7679800
+
+Actualizada pb con: 7679800
+
+Modificado self.valorProgress con valor: 7688400
+
+Actualizada pb con: 7688400
+
+Modificado self.valorProgress con valor: 7697000
+
+Actualizada pb con: 7697000
+
+Modificado self.valorProgress con valor: 7705600
+
+Actualizada pb con: 7705600
+
+Modificado self.valorProgress con valor: 7714200
+
+Actualizada pb con: 7714200
+
+Modificado self.valorProgress con valor: 7722800
+
+Actualizada pb con: 7722800
+
+Modificado self.valorProgress con valor: 7731400
+
+Actualizada pb con: 7731400
+
+Modificado self.valorProgress con valor: 7740000
+
+Actualizada pb con: 7740000
+
+Modificado self.valorProgress con valor: 7748600
+
+Actualizada pb con: 7748600
+
+Modificado self.valorProgress con valor: 7757200
+
+Actualizada pb con: 7757200
+
+Modificado self.valorProgress con valor: 7765800
+
+Actualizada pb con: 7765800
+
+Modificado self.valorProgress con valor: 7774400
+
+Actualizada pb con: 7774400
+
+Modificado self.valorProgress con valor: 7783000
+
+Actualizada pb con: 7783000
+
+Modificado self.valorProgress con valor: 7791600
+
+Actualizada pb con: 7791600
+
+Modificado self.valorProgress con valor: 7800200
+
+Actualizada pb con: 7800200
+
+Modificado self.valorProgress con valor: 7808800
+
+Actualizada pb con: 7808800
+
+Modificado self.valorProgress con valor: 7817400
+
+Actualizada pb con: 7817400
+
+Modificado self.valorProgress con valor: 7826000
+
+Actualizada pb con: 7826000
+
+Modificado self.valorProgress con valor: 7834600
+
+Actualizada pb con: 7834600
+
+Modificado self.valorProgress con valor: 7843200
+
+Actualizada pb con: 7843200
+
+Modificado self.valorProgress con valor: 7851800
+
+Actualizada pb con: 7851800
+
+Modificado self.valorProgress con valor: 7860400
+
+Actualizada pb con: 7860400
+
+Modificado self.valorProgress con valor: 7869000
+
+Actualizada pb con: 7869000
+
+Modificado self.valorProgress con valor: 7877600
+
+Actualizada pb con: 7877600
+
+Modificado self.valorProgress con valor: 7886200
+
+Actualizada pb con: 7886200
+
+Modificado self.valorProgress con valor: 7894800
+
+Actualizada pb con: 7894800
+
+Modificado self.valorProgress con valor: 7903400
+
+Actualizada pb con: 7903400
+
+Modificado self.valorProgress con valor: 7912000
+
+Actualizada pb con: 7912000
+
+Modificado self.valorProgress con valor: 7920600
+
+Actualizada pb con: 7920600
+
+Modificado self.valorProgress con valor: 7929200
+
+Actualizada pb con: 7929200
+
+Modificado self.valorProgress con valor: 7937800
+
+Actualizada pb con: 7937800
+
+Modificado self.valorProgress con valor: 7946400
+
+Actualizada pb con: 7946400
+
+Modificado self.valorProgress con valor: 7955000
+
+Actualizada pb con: 7955000
+
+Modificado self.valorProgress con valor: 7963600
+
+Actualizada pb con: 7963600
+
+Modificado self.valorProgress con valor: 7972200
+
+Actualizada pb con: 7972200
+
+Modificado self.valorProgress con valor: 7980800
+
+Actualizada pb con: 7980800
+
+Modificado self.valorProgress con valor: 7989400
+
+Actualizada pb con: 7989400
+
+Modificado self.valorProgress con valor: 7998000
+
+Actualizada pb con: 7998000
+
+Modificado self.valorProgress con valor: 8006600
+
+Actualizada pb con: 8006600
+
+Modificado self.valorProgress con valor: 8015200
+
+Actualizada pb con: 8015200
+
+Modificado self.valorProgress con valor: 8023800
+
+Actualizada pb con: 8023800
+
+Modificado self.valorProgress con valor: 8032400
+
+Actualizada pb con: 8032400
+
+Modificado self.valorProgress con valor: 8041000
+
+Actualizada pb con: 8041000
+
+Modificado self.valorProgress con valor: 8049600
+
+Actualizada pb con: 8049600
+
+Modificado self.valorProgress con valor: 8058200
+
+Actualizada pb con: 8058200
+
+Modificado self.valorProgress con valor: 8066800
+
+Actualizada pb con: 8066800
+
+Modificado self.valorProgress con valor: 8075400
+
+Actualizada pb con: 8075400
+
+Modificado self.valorProgress con valor: 8084000
+
+Actualizada pb con: 8084000
+
+Modificado self.valorProgress con valor: 8092600
+
+Actualizada pb con: 8092600
+
+Modificado self.valorProgress con valor: 8101200
+
+Actualizada pb con: 8101200
+
+Modificado self.valorProgress con valor: 8109800
+
+Actualizada pb con: 8109800
+
+Modificado self.valorProgress con valor: 8118400
+
+Actualizada pb con: 8118400
+
+Modificado self.valorProgress con valor: 8127000
+
+Actualizada pb con: 8127000
+
+Modificado self.valorProgress con valor: 8135600
+
+Actualizada pb con: 8135600
+
+Modificado self.valorProgress con valor: 8144200
+
+Actualizada pb con: 8144200
+
+Modificado self.valorProgress con valor: 8152800
+
+Actualizada pb con: 8152800
+
+Modificado self.valorProgress con valor: 8161400
+
+Actualizada pb con: 8161400
+
+Modificado self.valorProgress con valor: 8170000
+
+Actualizada pb con: 8170000
+
+Modificado self.valorProgress con valor: 8178600
+
+Actualizada pb con: 8178600
+
+Modificado self.valorProgress con valor: 8187200
+
+Actualizada pb con: 8187200
+
+Modificado self.valorProgress con valor: 8195800
+
+Actualizada pb con: 8195800
+
+Modificado self.valorProgress con valor: 8204400
+
+Actualizada pb con: 8204400
+
+Modificado self.valorProgress con valor: 8213000
+
+Actualizada pb con: 8213000
+
+Modificado self.valorProgress con valor: 8221600
+
+Actualizada pb con: 8221600
+
+Modificado self.valorProgress con valor: 8230200
+
+Actualizada pb con: 8230200
+
+Modificado self.valorProgress con valor: 8238800
+
+Actualizada pb con: 8238800
+
+Modificado self.valorProgress con valor: 8247400
+
+Actualizada pb con: 8247400
+
+Modificado self.valorProgress con valor: 8256000
+
+Actualizada pb con: 8256000
+
+Modificado self.valorProgress con valor: 8264600
+
+Actualizada pb con: 8264600
+
+Modificado self.valorProgress con valor: 8273200
+
+Actualizada pb con: 8273200
+
+Modificado self.valorProgress con valor: 8281800
+
+Actualizada pb con: 8281800
+
+Modificado self.valorProgress con valor: 8290400
+
+Actualizada pb con: 8290400
+
+Modificado self.valorProgress con valor: 8299000
+
+Actualizada pb con: 8299000
+
+Modificado self.valorProgress con valor: 8307600
+
+Actualizada pb con: 8307600
+
+Modificado self.valorProgress con valor: 8316200
+
+Actualizada pb con: 8316200
+
+Modificado self.valorProgress con valor: 8324800
+
+Actualizada pb con: 8324800
+
+Modificado self.valorProgress con valor: 8333400
+
+Actualizada pb con: 8333400
+
+Modificado self.valorProgress con valor: 8342000
+
+Actualizada pb con: 8342000
+
+Modificado self.valorProgress con valor: 8350600
+
+Actualizada pb con: 8350600
+
+Modificado self.valorProgress con valor: 8359200
+
+Actualizada pb con: 8359200
+
+Modificado self.valorProgress con valor: 8367800
+
+Actualizada pb con: 8367800
+
+Modificado self.valorProgress con valor: 8376400
+
+Actualizada pb con: 8376400
+
+Modificado self.valorProgress con valor: 8385000
+
+Actualizada pb con: 8385000
+
+Modificado self.valorProgress con valor: 8393600
+
+Actualizada pb con: 8393600
+
+Modificado self.valorProgress con valor: 8402200
+
+Actualizada pb con: 8402200
+
+Modificado self.valorProgress con valor: 8410800
+
+Actualizada pb con: 8410800
+
+Modificado self.valorProgress con valor: 8419400
+
+Actualizada pb con: 8419400
+
+Modificado self.valorProgress con valor: 8428000
+
+Actualizada pb con: 8428000
+
+Modificado self.valorProgress con valor: 8436600
+
+Actualizada pb con: 8436600
+
+Modificado self.valorProgress con valor: 8445200
+
+Actualizada pb con: 8445200
+
+Modificado self.valorProgress con valor: 8453800
+
+Actualizada pb con: 8453800
+
+Modificado self.valorProgress con valor: 8462400
+
+Actualizada pb con: 8462400
+
+Modificado self.valorProgress con valor: 8471000
+
+Actualizada pb con: 8471000
+
+Modificado self.valorProgress con valor: 8479600
+
+Actualizada pb con: 8479600
+
+Modificado self.valorProgress con valor: 8488200
+
+Actualizada pb con: 8488200
+
+Modificado self.valorProgress con valor: 8496800
+
+Actualizada pb con: 8496800
+
+Modificado self.valorProgress con valor: 8505400
+
+Actualizada pb con: 8505400
+
+Modificado self.valorProgress con valor: 8514000
+
+Actualizada pb con: 8514000
+
+Modificado self.valorProgress con valor: 8522600
+
+Actualizada pb con: 8522600
+
+Modificado self.valorProgress con valor: 8531200
+
+Actualizada pb con: 8531200
+
+Modificado self.valorProgress con valor: 8539800
+
+Actualizada pb con: 8539800
+
+Modificado self.valorProgress con valor: 8548400
+
+Actualizada pb con: 8548400
+
+Modificado self.valorProgress con valor: 8557000
+
+Actualizada pb con: 8557000
+
+Modificado self.valorProgress con valor: 8565600
+
+Actualizada pb con: 8565600
+
+Modificado self.valorProgress con valor: 8574200
+
+Actualizada pb con: 8574200
+
+Modificado self.valorProgress con valor: 8582800
+
+Actualizada pb con: 8582800
+
+Modificado self.valorProgress con valor: 8591400
+
+Actualizada pb con: 8591400
+
+Modificado self.valorProgress con valor: 8600000
+
+Actualizada pb con: 8600000
+
+Modificado self.valorProgress con valor: 8608600
+
+Actualizada pb con: 8608600
+
+Modificado self.valorProgress con valor: 8617200
+
+Actualizada pb con: 8617200
+
+Modificado self.valorProgress con valor: 8625800
+
+Actualizada pb con: 8625800
+
+Modificado self.valorProgress con valor: 8634400
+
+Actualizada pb con: 8634400
+
+Modificado self.valorProgress con valor: 8643000
+
+Actualizada pb con: 8643000
+
+Modificado self.valorProgress con valor: 8651600
+
+Actualizada pb con: 8651600
+
+Modificado self.valorProgress con valor: 8660200
+
+Actualizada pb con: 8660200
+
+Modificado self.valorProgress con valor: 8668800
+
+Actualizada pb con: 8668800
+
+Modificado self.valorProgress con valor: 8677400
+
+Actualizada pb con: 8677400
+
+Modificado self.valorProgress con valor: 8686000
+
+Actualizada pb con: 8686000
+
+Modificado self.valorProgress con valor: 8694600
+
+Actualizada pb con: 8694600
+
+Modificado self.valorProgress con valor: 8703200
+
+Actualizada pb con: 8703200
+
+Modificado self.valorProgress con valor: 8711800
+
+Actualizada pb con: 8711800
+
+Modificado self.valorProgress con valor: 8720400
+
+Actualizada pb con: 8720400
+
+Modificado self.valorProgress con valor: 8729000
+
+Actualizada pb con: 8729000
+
+Modificado self.valorProgress con valor: 8737600
+
+Actualizada pb con: 8737600
+
+Modificado self.valorProgress con valor: 8746200
+
+Actualizada pb con: 8746200
+
+Modificado self.valorProgress con valor: 8754800
+
+Actualizada pb con: 8754800
+
+Modificado self.valorProgress con valor: 8763400
+
+Actualizada pb con: 8763400
+
+Modificado self.valorProgress con valor: 8772000
+
+Actualizada pb con: 8772000
+
+Modificado self.valorProgress con valor: 8780600
+
+Actualizada pb con: 8780600
+
+Modificado self.valorProgress con valor: 8789200
+
+Actualizada pb con: 8789200
+
+Modificado self.valorProgress con valor: 8797800
+
+Actualizada pb con: 8797800
+
+Modificado self.valorProgress con valor: 8806400
+
+Actualizada pb con: 8806400
+
+Modificado self.valorProgress con valor: 8815000
+
+Actualizada pb con: 8815000
+
+Modificado self.valorProgress con valor: 8823600
+
+Actualizada pb con: 8823600
+
+Modificado self.valorProgress con valor: 8832200
+
+Actualizada pb con: 8832200
+
+Modificado self.valorProgress con valor: 8840800
+
+Actualizada pb con: 8840800
+
+Modificado self.valorProgress con valor: 8849400
+
+Actualizada pb con: 8849400
+
+Modificado self.valorProgress con valor: 8858000
+
+Actualizada pb con: 8858000
+
+Modificado self.valorProgress con valor: 8866600
+
+Actualizada pb con: 8866600
+
+Modificado self.valorProgress con valor: 8875200
+
+Actualizada pb con: 8875200
+
+Modificado self.valorProgress con valor: 8883800
+
+Actualizada pb con: 8883800
+
+Modificado self.valorProgress con valor: 8892400
+
+Actualizada pb con: 8892400
+
+Modificado self.valorProgress con valor: 8901000
+
+Actualizada pb con: 8901000
+
+Modificado self.valorProgress con valor: 8909600
+
+Actualizada pb con: 8909600
+
+Modificado self.valorProgress con valor: 8918200
+
+Actualizada pb con: 8918200
+
+Modificado self.valorProgress con valor: 8926800
+
+Actualizada pb con: 8926800
+
+Modificado self.valorProgress con valor: 8935400
+
+Actualizada pb con: 8935400
+
+Modificado self.valorProgress con valor: 8944000
+
+Actualizada pb con: 8944000
+
+Modificado self.valorProgress con valor: 8952600
+
+Actualizada pb con: 8952600
+
+Modificado self.valorProgress con valor: 8961200
+
+Actualizada pb con: 8961200
+
+Modificado self.valorProgress con valor: 8969800
+
+Actualizada pb con: 8969800
+
+Modificado self.valorProgress con valor: 8978400
+
+Actualizada pb con: 8978400
+
+Modificado self.valorProgress con valor: 8987000
+
+Actualizada pb con: 8987000
+
+Modificado self.valorProgress con valor: 8995600
+
+Actualizada pb con: 8995600
+
+Modificado self.valorProgress con valor: 9004200
+
+Actualizada pb con: 9004200
+
+Modificado self.valorProgress con valor: 9012800
+
+Actualizada pb con: 9012800
+
+Modificado self.valorProgress con valor: 9021400
+
+Actualizada pb con: 9021400
+
+Modificado self.valorProgress con valor: 9030000
+
+Actualizada pb con: 9030000
+
+Modificado self.valorProgress con valor: 9038600
+
+Actualizada pb con: 9038600
+
+Modificado self.valorProgress con valor: 9047200
+
+Actualizada pb con: 9047200
+
+Modificado self.valorProgress con valor: 9055800
+
+Actualizada pb con: 9055800
+
+Modificado self.valorProgress con valor: 9064400
+
+Actualizada pb con: 9064400
+
+Modificado self.valorProgress con valor: 9073000
+
+Actualizada pb con: 9073000
+
+Modificado self.valorProgress con valor: 9081600
+
+Actualizada pb con: 9081600
+
+Modificado self.valorProgress con valor: 9090200
+
+Actualizada pb con: 9090200
+
+Modificado self.valorProgress con valor: 9098800
+
+Actualizada pb con: 9098800
+
+Modificado self.valorProgress con valor: 9107400
+
+Actualizada pb con: 9107400
+
+Modificado self.valorProgress con valor: 9116000
+
+Actualizada pb con: 9116000
+
+Modificado self.valorProgress con valor: 9124600
+
+Actualizada pb con: 9124600
+
+Modificado self.valorProgress con valor: 9133200
+
+Actualizada pb con: 9133200
+
+Modificado self.valorProgress con valor: 9141800
+
+Actualizada pb con: 9141800
+
+Modificado self.valorProgress con valor: 9150400
+
+Actualizada pb con: 9150400
+
+Modificado self.valorProgress con valor: 9159000
+
+Actualizada pb con: 9159000
+
+Modificado self.valorProgress con valor: 9167600
+
+Actualizada pb con: 9167600
+
+Modificado self.valorProgress con valor: 9176200
+
+Actualizada pb con: 9176200
+
+Modificado self.valorProgress con valor: 9184800
+
+Actualizada pb con: 9184800
+
+Modificado self.valorProgress con valor: 9193400
+
+Actualizada pb con: 9193400
+
+Modificado self.valorProgress con valor: 9202000
+
+Actualizada pb con: 9202000
+
+Modificado self.valorProgress con valor: 9210600
+
+Actualizada pb con: 9210600
+
+Modificado self.valorProgress con valor: 9219200
+
+Actualizada pb con: 9219200
+
+Modificado self.valorProgress con valor: 9227800
+
+Actualizada pb con: 9227800
+
+Modificado self.valorProgress con valor: 9236400
+
+Actualizada pb con: 9236400
+
+Modificado self.valorProgress con valor: 9245000
+
+Actualizada pb con: 9245000
+
+Modificado self.valorProgress con valor: 9253600
+
+Actualizada pb con: 9253600
+
+Modificado self.valorProgress con valor: 9262200
+
+Actualizada pb con: 9262200
+
+Modificado self.valorProgress con valor: 9270800
+
+Actualizada pb con: 9270800
+
+Modificado self.valorProgress con valor: 9279400
+
+Actualizada pb con: 9279400
+
+Modificado self.valorProgress con valor: 9288000
+
+Actualizada pb con: 9288000
+
+Modificado self.valorProgress con valor: 9296600
+
+Actualizada pb con: 9296600
+
+Modificado self.valorProgress con valor: 9305200
+
+Actualizada pb con: 9305200
+
+Modificado self.valorProgress con valor: 9313800
+
+Actualizada pb con: 9313800
+
+Modificado self.valorProgress con valor: 9322400
+
+Actualizada pb con: 9322400
+
+Modificado self.valorProgress con valor: 9331000
+
+Actualizada pb con: 9331000
+
+Modificado self.valorProgress con valor: 9339600
+
+Actualizada pb con: 9339600
+
+Modificado self.valorProgress con valor: 9348200
+
+Actualizada pb con: 9348200
+
+Modificado self.valorProgress con valor: 9356800
+
+Actualizada pb con: 9356800
+
+Modificado self.valorProgress con valor: 9365400
+
+Actualizada pb con: 9365400
+
+Modificado self.valorProgress con valor: 9374000
+
+Actualizada pb con: 9374000
+
+Modificado self.valorProgress con valor: 9382600
+
+Actualizada pb con: 9382600
+
+Modificado self.valorProgress con valor: 9391200
+
+Actualizada pb con: 9391200
+
+Modificado self.valorProgress con valor: 9399800
+
+Actualizada pb con: 9399800
+
+Modificado self.valorProgress con valor: 9408400
+
+Actualizada pb con: 9408400
+
+Modificado self.valorProgress con valor: 9417000
+
+Actualizada pb con: 9417000
+
+Modificado self.valorProgress con valor: 9425600
+
+Actualizada pb con: 9425600
+
+Modificado self.valorProgress con valor: 9434200
+
+Actualizada pb con: 9434200
+
+Modificado self.valorProgress con valor: 9442800
+
+Actualizada pb con: 9442800
+
+Modificado self.valorProgress con valor: 9451400
+
+Actualizada pb con: 9451400
+
+Modificado self.valorProgress con valor: 9460000
+
+Actualizada pb con: 9460000
+
+Modificado self.valorProgress con valor: 9468600
+
+Actualizada pb con: 9468600
+
+Modificado self.valorProgress con valor: 9477200
+
+Actualizada pb con: 9477200
+
+Modificado self.valorProgress con valor: 9485800
+
+Actualizada pb con: 9485800
+
+Modificado self.valorProgress con valor: 9494400
+
+Actualizada pb con: 9494400
+
+Modificado self.valorProgress con valor: 9503000
+
+Actualizada pb con: 9503000
+
+Modificado self.valorProgress con valor: 9511600
+
+Actualizada pb con: 9511600
+
+Modificado self.valorProgress con valor: 9520200
+
+Actualizada pb con: 9520200
+
+Modificado self.valorProgress con valor: 9528800
+
+Actualizada pb con: 9528800
+
+Modificado self.valorProgress con valor: 9537400
+
+Actualizada pb con: 9537400
+
+Modificado self.valorProgress con valor: 9546000
+
+Actualizada pb con: 9546000
+
+Modificado self.valorProgress con valor: 9554600
+
+Actualizada pb con: 9554600
+
+Modificado self.valorProgress con valor: 9563200
+
+Actualizada pb con: 9563200
+
+Modificado self.valorProgress con valor: 9571800
+
+Actualizada pb con: 9571800
+
+Modificado self.valorProgress con valor: 9580400
+
+Actualizada pb con: 9580400
+
+Modificado self.valorProgress con valor: 9589000
+
+Actualizada pb con: 9589000
+
+Modificado self.valorProgress con valor: 9597600
+
+Actualizada pb con: 9597600
+
+Modificado self.valorProgress con valor: 9606200
+
+Actualizada pb con: 9606200
+
+Modificado self.valorProgress con valor: 9614800
+
+Actualizada pb con: 9614800
+
+Modificado self.valorProgress con valor: 9623400
+
+Actualizada pb con: 9623400
+
+Modificado self.valorProgress con valor: 9632000
+
+Actualizada pb con: 9632000
+
+Modificado self.valorProgress con valor: 9640600
+
+Actualizada pb con: 9640600
+
+Modificado self.valorProgress con valor: 9649200
+
+Actualizada pb con: 9649200
+
+Modificado self.valorProgress con valor: 9657800
+
+Actualizada pb con: 9657800
+
+Modificado self.valorProgress con valor: 9666400
+
+Actualizada pb con: 9666400
+
+Modificado self.valorProgress con valor: 9675000
+
+Actualizada pb con: 9675000
+
+Modificado self.valorProgress con valor: 9683600
+
+Actualizada pb con: 9683600
+
+Modificado self.valorProgress con valor: 9692200
+
+Actualizada pb con: 9692200
+
+Modificado self.valorProgress con valor: 9700800
+
+Actualizada pb con: 9700800
+
+Modificado self.valorProgress con valor: 9709400
+
+Actualizada pb con: 9709400
+
+Modificado self.valorProgress con valor: 9718000
+
+Actualizada pb con: 9718000
+
+Modificado self.valorProgress con valor: 9726600
+
+Actualizada pb con: 9726600
+
+Modificado self.valorProgress con valor: 9735200
+
+Actualizada pb con: 9735200
+
+Modificado self.valorProgress con valor: 9743800
+
+Actualizada pb con: 9743800
+
+Modificado self.valorProgress con valor: 9752400
+
+Actualizada pb con: 9752400
+
+Modificado self.valorProgress con valor: 9761000
+
+Actualizada pb con: 9761000
+
+Modificado self.valorProgress con valor: 9769600
+
+Actualizada pb con: 9769600
+
+Modificado self.valorProgress con valor: 9778200
+
+Actualizada pb con: 9778200
+
+Modificado self.valorProgress con valor: 9786800
+
+Actualizada pb con: 9786800
+
+Modificado self.valorProgress con valor: 9795400
+
+Actualizada pb con: 9795400
+
+Modificado self.valorProgress con valor: 9804000
+
+Actualizada pb con: 9804000
+
+Modificado self.valorProgress con valor: 9812600
+
+Actualizada pb con: 9812600
+
+Modificado self.valorProgress con valor: 9821200
+
+Actualizada pb con: 9821200
+
+Modificado self.valorProgress con valor: 9829800
+
+Actualizada pb con: 9829800
+
+Modificado self.valorProgress con valor: 9838400
+
+Actualizada pb con: 9838400
+
+Modificado self.valorProgress con valor: 9847000
+
+Actualizada pb con: 9847000
+
+Modificado self.valorProgress con valor: 9855600
+
+Actualizada pb con: 9855600
+
+Modificado self.valorProgress con valor: 9864200
+
+Actualizada pb con: 9864200
+
+Modificado self.valorProgress con valor: 9872800
+
+Actualizada pb con: 9872800
+
+Modificado self.valorProgress con valor: 9881400
+
+Actualizada pb con: 9881400
+
+Modificado self.valorProgress con valor: 9890000
+
+Actualizada pb con: 9890000
+
+Modificado self.valorProgress con valor: 9898600
+
+Actualizada pb con: 9898600
+
+Modificado self.valorProgress con valor: 9907200
+
+Actualizada pb con: 9907200
+
+Modificado self.valorProgress con valor: 9915800
+
+Actualizada pb con: 9915800
+
+Modificado self.valorProgress con valor: 9924400
+
+Actualizada pb con: 9924400
+
+Modificado self.valorProgress con valor: 9933000
+
+Actualizada pb con: 9933000
+
+Modificado self.valorProgress con valor: 9941600
+
+Actualizada pb con: 9941600
+
+Modificado self.valorProgress con valor: 9950200
+
+Actualizada pb con: 9950200
+
+Modificado self.valorProgress con valor: 9958800
+
+Actualizada pb con: 9958800
+
+Modificado self.valorProgress con valor: 9967400
+
+Actualizada pb con: 9967400
+
+Modificado self.valorProgress con valor: 9976000
+
+Actualizada pb con: 9976000
+
+Modificado self.valorProgress con valor: 9984600
+
+Actualizada pb con: 9984600
+
+Modificado self.valorProgress con valor: 9993200
+
+Actualizada pb con: 9993200
+
+Modificado self.valorProgress con valor: 10001800
+
+Actualizada pb con: 10001800
+
+Modificado self.valorProgress con valor: 10010400
+
+Actualizada pb con: 10010400
+
+Modificado self.valorProgress con valor: 10019000
+
+Actualizada pb con: 10019000
+
+Modificado self.valorProgress con valor: 10027600
+
+Actualizada pb con: 10027600
+
+Modificado self.valorProgress con valor: 10036200
+
+Actualizada pb con: 10036200
+
+Modificado self.valorProgress con valor: 10044800
+
+Actualizada pb con: 10044800
+
+Modificado self.valorProgress con valor: 10053400
+
+Actualizada pb con: 10053400
+
+Modificado self.valorProgress con valor: 10062000
+
+Actualizada pb con: 10062000
+
+Modificado self.valorProgress con valor: 10070600
+
+Actualizada pb con: 10070600
+
+Modificado self.valorProgress con valor: 10079200
+
+Actualizada pb con: 10079200
+
+Modificado self.valorProgress con valor: 10087800
+
+Actualizada pb con: 10087800
+
+Modificado self.valorProgress con valor: 10096400
+
+Actualizada pb con: 10096400
+
+Modificado self.valorProgress con valor: 10105000
+
+Actualizada pb con: 10105000
+
+Modificado self.valorProgress con valor: 10113600
+
+Actualizada pb con: 10113600
+
+Modificado self.valorProgress con valor: 10122200
+
+Actualizada pb con: 10122200
+
+Modificado self.valorProgress con valor: 10130800
+
+Actualizada pb con: 10130800
+
+Modificado self.valorProgress con valor: 10139400
+
+Actualizada pb con: 10139400
+
+Modificado self.valorProgress con valor: 10148000
+
+Actualizada pb con: 10148000
+
+Modificado self.valorProgress con valor: 10156600
+
+Actualizada pb con: 10156600
+
+Modificado self.valorProgress con valor: 10165200
+
+Actualizada pb con: 10165200
+
+Modificado self.valorProgress con valor: 10173800
+
+Actualizada pb con: 10173800
+
+Modificado self.valorProgress con valor: 10182400
+
+Actualizada pb con: 10182400
+
+Modificado self.valorProgress con valor: 10191000
+
+Actualizada pb con: 10191000
+
+Modificado self.valorProgress con valor: 10199600
+
+Actualizada pb con: 10199600
+
+Modificado self.valorProgress con valor: 10208200
+
+Actualizada pb con: 10208200
+
+Modificado self.valorProgress con valor: 10216800
+
+Actualizada pb con: 10216800
+
+Modificado self.valorProgress con valor: 10225400
+
+Actualizada pb con: 10225400
+
+Modificado self.valorProgress con valor: 10234000
+
+Actualizada pb con: 10234000
+
+Modificado self.valorProgress con valor: 10242600
+
+Actualizada pb con: 10242600
+
+Modificado self.valorProgress con valor: 10251200
+
+Actualizada pb con: 10251200
+
+Modificado self.valorProgress con valor: 10259800
+
+Actualizada pb con: 10259800
+
+Modificado self.valorProgress con valor: 10268400
+
+Actualizada pb con: 10268400
+
+Modificado self.valorProgress con valor: 10277000
+
+Actualizada pb con: 10277000
+
+Modificado self.valorProgress con valor: 10285600
+
+Actualizada pb con: 10285600
+
+Modificado self.valorProgress con valor: 10294200
+
+Actualizada pb con: 10294200
+
+Modificado self.valorProgress con valor: 10302800
+
+Actualizada pb con: 10302800
+
+Modificado self.valorProgress con valor: 10311400
+
+Actualizada pb con: 10311400
+
+Modificado self.valorProgress con valor: 10320000
+
+Actualizada pb con: 10320000
+
+Modificado self.valorProgress con valor: 10328600
+
+Actualizada pb con: 10328600
+
+Modificado self.valorProgress con valor: 10337200
+
+Actualizada pb con: 10337200
+
+Modificado self.valorProgress con valor: 10345800
+
+Actualizada pb con: 10345800
+
+Modificado self.valorProgress con valor: 10354400
+
+Actualizada pb con: 10354400
+
+Modificado self.valorProgress con valor: 10363000
+
+Actualizada pb con: 10363000
+
+Modificado self.valorProgress con valor: 10371600
+
+Actualizada pb con: 10371600
+
+Modificado self.valorProgress con valor: 10380200
+
+Actualizada pb con: 10380200
+
+Modificado self.valorProgress con valor: 10388800
+
+Actualizada pb con: 10388800
+
+Modificado self.valorProgress con valor: 10397400
+
+Actualizada pb con: 10397400
+
+Modificado self.valorProgress con valor: 10406000
+
+Actualizada pb con: 10406000
+
+Modificado self.valorProgress con valor: 10414600
+
+Actualizada pb con: 10414600
+
+Modificado self.valorProgress con valor: 10423200
+
+Actualizada pb con: 10423200
+
+Modificado self.valorProgress con valor: 10431800
+
+Actualizada pb con: 10431800
+
+Modificado self.valorProgress con valor: 10440400
+
+Actualizada pb con: 10440400
+
+Modificado self.valorProgress con valor: 10449000
+
+Actualizada pb con: 10449000
+
+Modificado self.valorProgress con valor: 10457600
+
+Actualizada pb con: 10457600
+
+Modificado self.valorProgress con valor: 10466200
+
+Actualizada pb con: 10466200
+
+Modificado self.valorProgress con valor: 10474800
+
+Actualizada pb con: 10474800
+
+Modificado self.valorProgress con valor: 10483400
+
+Actualizada pb con: 10483400
+
+Modificado self.valorProgress con valor: 10492000
+
+Actualizada pb con: 10492000
+
+Modificado self.valorProgress con valor: 10500600
+
+Actualizada pb con: 10500600
+
+Modificado self.valorProgress con valor: 10509200
+
+Actualizada pb con: 10509200
+
+Modificado self.valorProgress con valor: 10517800
+
+Actualizada pb con: 10517800
+
+Modificado self.valorProgress con valor: 10526400
+
+Actualizada pb con: 10526400
+
+Modificado self.valorProgress con valor: 10535000
+
+Actualizada pb con: 10535000
+
+Modificado self.valorProgress con valor: 10543600
+
+Actualizada pb con: 10543600
+
+Modificado self.valorProgress con valor: 10552200
+
+Actualizada pb con: 10552200
+
+Modificado self.valorProgress con valor: 10560800
+
+Actualizada pb con: 10560800
+
+Modificado self.valorProgress con valor: 10569400
+
+Actualizada pb con: 10569400
+
+Modificado self.valorProgress con valor: 10578000
+
+Actualizada pb con: 10578000
+
+Modificado self.valorProgress con valor: 10586600
+
+Actualizada pb con: 10586600
+
+Modificado self.valorProgress con valor: 10595200
+
+Actualizada pb con: 10595200
+
+Modificado self.valorProgress con valor: 10603800
+
+Actualizada pb con: 10603800
+
+Modificado self.valorProgress con valor: 10612400
+
+Actualizada pb con: 10612400
+
+Modificado self.valorProgress con valor: 10621000
+
+Actualizada pb con: 10621000
+
+Modificado self.valorProgress con valor: 10629600
+
+Actualizada pb con: 10629600
+
+Modificado self.valorProgress con valor: 10638200
+
+Actualizada pb con: 10638200
+
+Modificado self.valorProgress con valor: 10646800
+
+Actualizada pb con: 10646800
+
+Modificado self.valorProgress con valor: 10655400
+
+Actualizada pb con: 10655400
+
+Modificado self.valorProgress con valor: 10664000
+
+Actualizada pb con: 10664000
+
+Modificado self.valorProgress con valor: 10672600
+
+Actualizada pb con: 10672600
+
+Modificado self.valorProgress con valor: 10681200
+
+Actualizada pb con: 10681200
+
+Modificado self.valorProgress con valor: 10689800
+
+Actualizada pb con: 10689800
+
+Modificado self.valorProgress con valor: 10698400
+
+Actualizada pb con: 10698400
+
+Modificado self.valorProgress con valor: 10707000
+
+Actualizada pb con: 10707000
+
+Modificado self.valorProgress con valor: 10715600
+
+Actualizada pb con: 10715600
+
+Modificado self.valorProgress con valor: 10724200
+
+Actualizada pb con: 10724200
+
+Modificado self.valorProgress con valor: 10732800
+
+Actualizada pb con: 10732800
+
+Modificado self.valorProgress con valor: 10741400
+
+Actualizada pb con: 10741400
+
+Modificado self.valorProgress con valor: 10750000
+
+Actualizada pb con: 10750000
+
+Modificado self.valorProgress con valor: 10758600
+
+Actualizada pb con: 10758600
+
+Modificado self.valorProgress con valor: 10767200
+
+Actualizada pb con: 10767200
+
+Modificado self.valorProgress con valor: 10775800
+
+Actualizada pb con: 10775800
+
+Modificado self.valorProgress con valor: 10784400
+
+Actualizada pb con: 10784400
+
+Modificado self.valorProgress con valor: 10793000
+
+Actualizada pb con: 10793000
+
+Modificado self.valorProgress con valor: 10801600
+
+Actualizada pb con: 10801600
+
+Modificado self.valorProgress con valor: 10810200
+
+Actualizada pb con: 10810200
+
+Modificado self.valorProgress con valor: 10818800
+
+Actualizada pb con: 10818800
+
+Modificado self.valorProgress con valor: 10827400
+
+Actualizada pb con: 10827400
+
+Modificado self.valorProgress con valor: 10836000
+
+Actualizada pb con: 10836000
+
+Modificado self.valorProgress con valor: 10844600
+
+Actualizada pb con: 10844600
+
+Modificado self.valorProgress con valor: 10853200
+
+Actualizada pb con: 10853200
+
+Modificado self.valorProgress con valor: 10861800
+
+Actualizada pb con: 10861800
+
+Modificado self.valorProgress con valor: 10870400
+
+Actualizada pb con: 10870400
+
+Modificado self.valorProgress con valor: 10879000
+
+Actualizada pb con: 10879000
+
+Modificado self.valorProgress con valor: 10887600
+
+Actualizada pb con: 10887600
+
+Modificado self.valorProgress con valor: 10896200
+
+Actualizada pb con: 10896200
+
+Modificado self.valorProgress con valor: 10904800
+
+Actualizada pb con: 10904800
+
+Modificado self.valorProgress con valor: 10913400
+
+Actualizada pb con: 10913400
+
+Modificado self.valorProgress con valor: 10922000
+
+Actualizada pb con: 10922000
+
+Modificado self.valorProgress con valor: 10930600
+
+Actualizada pb con: 10930600
+
+Modificado self.valorProgress con valor: 10939200
+
+Actualizada pb con: 10939200
+
+Modificado self.valorProgress con valor: 10947800
+
+Actualizada pb con: 10947800
+
+Modificado self.valorProgress con valor: 10956400
+
+Actualizada pb con: 10956400
+
+Modificado self.valorProgress con valor: 10965000
+
+Actualizada pb con: 10965000
+
+Modificado self.valorProgress con valor: 10973600
+
+Actualizada pb con: 10973600
+
+Modificado self.valorProgress con valor: 10982200
+
+Actualizada pb con: 10982200
+
+Modificado self.valorProgress con valor: 10990800
+
+Actualizada pb con: 10990800
+
+Modificado self.valorProgress con valor: 10999400
+
+Actualizada pb con: 10999400
+
+Modificado self.valorProgress con valor: 11008000
+
+Actualizada pb con: 11008000
+
+Modificado self.valorProgress con valor: 11016600
+
+Actualizada pb con: 11016600
+
+Modificado self.valorProgress con valor: 11025200
+
+Actualizada pb con: 11025200
+
+Modificado self.valorProgress con valor: 11033800
+
+Actualizada pb con: 11033800
+
+Modificado self.valorProgress con valor: 11042400
+
+Actualizada pb con: 11042400
+
+Modificado self.valorProgress con valor: 11051000
+
+Actualizada pb con: 11051000
+
+Modificado self.valorProgress con valor: 11059600
+
+Actualizada pb con: 11059600
+
+Modificado self.valorProgress con valor: 11068200
+
+Actualizada pb con: 11068200
+
+Modificado self.valorProgress con valor: 11076800
+
+Actualizada pb con: 11076800
+
+Modificado self.valorProgress con valor: 11085400
+
+Actualizada pb con: 11085400
+
+Modificado self.valorProgress con valor: 11094000
+
+Actualizada pb con: 11094000
+
+Modificado self.valorProgress con valor: 11102600
+
+Actualizada pb con: 11102600
+
+Modificado self.valorProgress con valor: 11111200
+
+Actualizada pb con: 11111200
+
+Modificado self.valorProgress con valor: 11119800
+
+Actualizada pb con: 11119800
+
+Modificado self.valorProgress con valor: 11128400
+
+Actualizada pb con: 11128400
+
+Modificado self.valorProgress con valor: 11137000
+
+Actualizada pb con: 11137000
+
+Modificado self.valorProgress con valor: 11145600
+
+Actualizada pb con: 11145600
+
+Modificado self.valorProgress con valor: 11154200
+
+Actualizada pb con: 11154200
+
+Modificado self.valorProgress con valor: 11162800
+
+Actualizada pb con: 11162800
+
+Modificado self.valorProgress con valor: 11171400
+
+Actualizada pb con: 11171400
+
+Modificado self.valorProgress con valor: 11180000
+
+Actualizada pb con: 11180000
+
+Modificado self.valorProgress con valor: 11188600
+
+Actualizada pb con: 11188600
+
+Modificado self.valorProgress con valor: 11197200
+
+Actualizada pb con: 11197200
+
+Modificado self.valorProgress con valor: 11205800
+
+Actualizada pb con: 11205800
+
+Modificado self.valorProgress con valor: 11214400
+
+Actualizada pb con: 11214400
+
+Modificado self.valorProgress con valor: 11223000
+
+Actualizada pb con: 11223000
+
+Modificado self.valorProgress con valor: 11231600
+
+Actualizada pb con: 11231600
+
+Modificado self.valorProgress con valor: 11240200
+
+Actualizada pb con: 11240200
+
+Modificado self.valorProgress con valor: 11248800
+
+Actualizada pb con: 11248800
+
+Modificado self.valorProgress con valor: 11257400
+
+Actualizada pb con: 11257400
+
+Modificado self.valorProgress con valor: 11266000
+
+Actualizada pb con: 11266000
+
+Modificado self.valorProgress con valor: 11274600
+
+Actualizada pb con: 11274600
+
+Modificado self.valorProgress con valor: 11283200
+
+Actualizada pb con: 11283200
+
+Modificado self.valorProgress con valor: 11291800
+
+Actualizada pb con: 11291800
+
+Modificado self.valorProgress con valor: 11300400
+
+Actualizada pb con: 11300400
+
+Modificado self.valorProgress con valor: 11309000
+
+Actualizada pb con: 11309000
+
+Modificado self.valorProgress con valor: 11317600
+
+Actualizada pb con: 11317600
+
+Modificado self.valorProgress con valor: 11326200
+
+Actualizada pb con: 11326200
+
+Modificado self.valorProgress con valor: 11334800
+
+Actualizada pb con: 11334800
+
+Modificado self.valorProgress con valor: 11343400
+
+Actualizada pb con: 11343400
+
+Modificado self.valorProgress con valor: 11352000
+
+Actualizada pb con: 11352000
+
+Modificado self.valorProgress con valor: 11360600
+
+Actualizada pb con: 11360600
+
+Modificado self.valorProgress con valor: 11369200
+
+Actualizada pb con: 11369200
+
+Modificado self.valorProgress con valor: 11377800
+
+Actualizada pb con: 11377800
+
+Modificado self.valorProgress con valor: 11386400
+
+Actualizada pb con: 11386400
+
+Modificado self.valorProgress con valor: 11395000
+
+Actualizada pb con: 11395000
+
+Modificado self.valorProgress con valor: 11403600
+
+Actualizada pb con: 11403600
+
+Modificado self.valorProgress con valor: 11412200
+
+Actualizada pb con: 11412200
+
+Modificado self.valorProgress con valor: 11420800
+
+Actualizada pb con: 11420800
+
+Modificado self.valorProgress con valor: 11429400
+
+Actualizada pb con: 11429400
+
+Modificado self.valorProgress con valor: 11438000
+
+Actualizada pb con: 11438000
+
+Modificado self.valorProgress con valor: 11446600
+
+Actualizada pb con: 11446600
+
+Modificado self.valorProgress con valor: 11455200
+
+Actualizada pb con: 11455200
+
+Modificado self.valorProgress con valor: 11463800
+
+Actualizada pb con: 11463800
+
+Modificado self.valorProgress con valor: 11472400
+
+Actualizada pb con: 11472400
+
+Modificado self.valorProgress con valor: 11481000
+
+Actualizada pb con: 11481000
+
+Modificado self.valorProgress con valor: 11489600
+
+Actualizada pb con: 11489600
+
+Modificado self.valorProgress con valor: 11498200
+
+Actualizada pb con: 11498200
+
+Modificado self.valorProgress con valor: 11506800
+
+Actualizada pb con: 11506800
+
+Modificado self.valorProgress con valor: 11515400
+
+Actualizada pb con: 11515400
+
+Modificado self.valorProgress con valor: 11524000
+
+Actualizada pb con: 11524000
+
+Modificado self.valorProgress con valor: 11532600
+
+Actualizada pb con: 11532600
+
+Modificado self.valorProgress con valor: 11541200
+
+Actualizada pb con: 11541200
+
+Modificado self.valorProgress con valor: 11549800
+
+Actualizada pb con: 11549800
+
+Modificado self.valorProgress con valor: 11558400
+
+Actualizada pb con: 11558400
+
+Modificado self.valorProgress con valor: 11567000
+
+Actualizada pb con: 11567000
+
+Modificado self.valorProgress con valor: 11575600
+
+Actualizada pb con: 11575600
+
+Modificado self.valorProgress con valor: 11584200
+
+Actualizada pb con: 11584200
+
+Modificado self.valorProgress con valor: 11592800
+
+Actualizada pb con: 11592800
+
+Modificado self.valorProgress con valor: 11601400
+
+Actualizada pb con: 11601400
+
+Modificado self.valorProgress con valor: 11610000
+
+Actualizada pb con: 11610000
+
+Modificado self.valorProgress con valor: 11618600
+
+Actualizada pb con: 11618600
+
+Modificado self.valorProgress con valor: 11627200
+
+Actualizada pb con: 11627200
+
+Modificado self.valorProgress con valor: 11635800
+
+Actualizada pb con: 11635800
+
+Modificado self.valorProgress con valor: 11644400
+
+Actualizada pb con: 11644400
+
+Modificado self.valorProgress con valor: 11653000
+
+Actualizada pb con: 11653000
+
+Modificado self.valorProgress con valor: 11661600
+
+Actualizada pb con: 11661600
+
+Modificado self.valorProgress con valor: 11670200
+
+Actualizada pb con: 11670200
+
+Modificado self.valorProgress con valor: 11678800
+
+Actualizada pb con: 11678800
+
+Modificado self.valorProgress con valor: 11687400
+
+Actualizada pb con: 11687400
+
+Modificado self.valorProgress con valor: 11696000
+
+Actualizada pb con: 11696000
+
+Modificado self.valorProgress con valor: 11704600
+
+Actualizada pb con: 11704600
+
+Modificado self.valorProgress con valor: 11713200
+
+Actualizada pb con: 11713200
+
+Modificado self.valorProgress con valor: 11721800
+
+Actualizada pb con: 11721800
+
+Modificado self.valorProgress con valor: 11730400
+
+Actualizada pb con: 11730400
+
+Modificado self.valorProgress con valor: 11739000
+
+Actualizada pb con: 11739000
+
+Modificado self.valorProgress con valor: 11747600
+
+Actualizada pb con: 11747600
+
+Modificado self.valorProgress con valor: 11756200
+
+Actualizada pb con: 11756200
+
+Modificado self.valorProgress con valor: 11764800
+
+Actualizada pb con: 11764800
+
+Modificado self.valorProgress con valor: 11773400
+
+Actualizada pb con: 11773400
+
+Modificado self.valorProgress con valor: 11782000
+
+Actualizada pb con: 11782000
+
+Modificado self.valorProgress con valor: 11790600
+
+Actualizada pb con: 11790600
+
+Modificado self.valorProgress con valor: 11799200
+
+Actualizada pb con: 11799200
+
+Modificado self.valorProgress con valor: 11807800
+
+Actualizada pb con: 11807800
+
+Modificado self.valorProgress con valor: 11816400
+
+Actualizada pb con: 11816400
+
+Modificado self.valorProgress con valor: 11825000
+
+Actualizada pb con: 11825000
+
+Modificado self.valorProgress con valor: 11833600
+
+Actualizada pb con: 11833600
+
+Modificado self.valorProgress con valor: 11842200
+
+Actualizada pb con: 11842200
+
+Modificado self.valorProgress con valor: 11850800
+
+Actualizada pb con: 11850800
+
+Modificado self.valorProgress con valor: 11859400
+
+Actualizada pb con: 11859400
+
+Modificado self.valorProgress con valor: 11868000
+
+Actualizada pb con: 11868000
+
+Modificado self.valorProgress con valor: 11876600
+
+Actualizada pb con: 11876600
+
+Modificado self.valorProgress con valor: 11885200
+
+Actualizada pb con: 11885200
+
+Modificado self.valorProgress con valor: 11893800
+
+Actualizada pb con: 11893800
+
+Modificado self.valorProgress con valor: 11902400
+
+Actualizada pb con: 11902400
+
+Modificado self.valorProgress con valor: 11911000
+
+Actualizada pb con: 11911000
+
+Modificado self.valorProgress con valor: 11919600
+
+Actualizada pb con: 11919600
+
+Modificado self.valorProgress con valor: 11928200
+
+Actualizada pb con: 11928200
+
+Modificado self.valorProgress con valor: 11936800
+
+Actualizada pb con: 11936800
+
+Modificado self.valorProgress con valor: 11945400
+
+Actualizada pb con: 11945400
+
+Modificado self.valorProgress con valor: 11954000
+
+Actualizada pb con: 11954000
+
+Modificado self.valorProgress con valor: 11962600
+
+Actualizada pb con: 11962600
+
+Modificado self.valorProgress con valor: 11971200
+
+Actualizada pb con: 11971200
+
+Modificado self.valorProgress con valor: 11979800
+
+Actualizada pb con: 11979800
+
+Modificado self.valorProgress con valor: 11988400
+
+Actualizada pb con: 11988400
+
+Modificado self.valorProgress con valor: 11997000
+
+Actualizada pb con: 11997000
+
+Modificado self.valorProgress con valor: 12005600
+
+Actualizada pb con: 12005600
+
+Modificado self.valorProgress con valor: 12014200
+
+Actualizada pb con: 12014200
+
+Modificado self.valorProgress con valor: 12022800
+
+Actualizada pb con: 12022800
+
+Modificado self.valorProgress con valor: 12031400
+
+Actualizada pb con: 12031400
+
+Modificado self.valorProgress con valor: 12040000
+
+Actualizada pb con: 12040000
+
+Modificado self.valorProgress con valor: 12048600
+
+Actualizada pb con: 12048600
+
+Modificado self.valorProgress con valor: 12057200
+
+Actualizada pb con: 12057200
+
+Modificado self.valorProgress con valor: 12065800
+
+Actualizada pb con: 12065800
+
+Modificado self.valorProgress con valor: 12074400
+
+Actualizada pb con: 12074400
+
+Modificado self.valorProgress con valor: 12083000
+
+Actualizada pb con: 12083000
+
+Modificado self.valorProgress con valor: 12091600
+
+Actualizada pb con: 12091600
+
+Modificado self.valorProgress con valor: 12100200
+
+Actualizada pb con: 12100200
+
+Modificado self.valorProgress con valor: 12108800
+
+Actualizada pb con: 12108800
+
+Modificado self.valorProgress con valor: 12117400
+
+Actualizada pb con: 12117400
+
+Modificado self.valorProgress con valor: 12126000
+
+Actualizada pb con: 12126000
+
+Modificado self.valorProgress con valor: 12134600
+
+Actualizada pb con: 12134600
+
+Modificado self.valorProgress con valor: 12143200
+
+Actualizada pb con: 12143200
+
+Modificado self.valorProgress con valor: 12151800
+
+Actualizada pb con: 12151800
+
+Modificado self.valorProgress con valor: 12160400
+
+Actualizada pb con: 12160400
+
+Modificado self.valorProgress con valor: 12169000
+
+Actualizada pb con: 12169000
+
+Modificado self.valorProgress con valor: 12177600
+
+Actualizada pb con: 12177600
+
+Modificado self.valorProgress con valor: 12186200
+
+Actualizada pb con: 12186200
+
+Modificado self.valorProgress con valor: 12194800
+
+Actualizada pb con: 12194800
+
+Modificado self.valorProgress con valor: 12203400
+
+Actualizada pb con: 12203400
+
+Modificado self.valorProgress con valor: 12212000
+
+Actualizada pb con: 12212000
+
+Modificado self.valorProgress con valor: 12220600
+
+Actualizada pb con: 12220600
+
+Modificado self.valorProgress con valor: 12229200
+
+Actualizada pb con: 12229200
+
+Modificado self.valorProgress con valor: 12237800
+
+Actualizada pb con: 12237800
+
+Modificado self.valorProgress con valor: 12246400
+
+Actualizada pb con: 12246400
+
+Modificado self.valorProgress con valor: 12255000
+
+Actualizada pb con: 12255000
+
+Modificado self.valorProgress con valor: 12263600
+
+Actualizada pb con: 12263600
+
+Modificado self.valorProgress con valor: 12272200
+
+Actualizada pb con: 12272200
+
+Modificado self.valorProgress con valor: 12280800
+
+Actualizada pb con: 12280800
+
+Modificado self.valorProgress con valor: 12289400
+
+Actualizada pb con: 12289400
+
+Modificado self.valorProgress con valor: 12298000
+
+Actualizada pb con: 12298000
+
+Modificado self.valorProgress con valor: 12306600
+
+Actualizada pb con: 12306600
+
+Modificado self.valorProgress con valor: 12315200
+
+Actualizada pb con: 12315200
+
+Modificado self.valorProgress con valor: 12323800
+
+Actualizada pb con: 12323800
+
+Modificado self.valorProgress con valor: 12332400
+
+Actualizada pb con: 12332400
+
+Modificado self.valorProgress con valor: 12341000
+
+Actualizada pb con: 12341000
+
+Modificado self.valorProgress con valor: 12349600
+
+Actualizada pb con: 12349600
+
+Modificado self.valorProgress con valor: 12358200
+
+Actualizada pb con: 12358200
+
+Modificado self.valorProgress con valor: 12366800
+
+Actualizada pb con: 12366800
+
+Modificado self.valorProgress con valor: 12375400
+
+Actualizada pb con: 12375400
+
+Modificado self.valorProgress con valor: 12384000
+
+Actualizada pb con: 12384000
+
+Modificado self.valorProgress con valor: 12392600
+
+Actualizada pb con: 12392600
+
+Modificado self.valorProgress con valor: 12401200
+
+Actualizada pb con: 12401200
+
+Modificado self.valorProgress con valor: 12409800
+
+Actualizada pb con: 12409800
+
+Modificado self.valorProgress con valor: 12418400
+
+Actualizada pb con: 12418400
+
+Modificado self.valorProgress con valor: 12427000
+
+Actualizada pb con: 12427000
+
+Modificado self.valorProgress con valor: 12435600
+
+Actualizada pb con: 12435600
+
+Modificado self.valorProgress con valor: 12444200
+
+Actualizada pb con: 12444200
+
+Modificado self.valorProgress con valor: 12452800
+
+Actualizada pb con: 12452800
+
+Modificado self.valorProgress con valor: 12461400
+
+Actualizada pb con: 12461400
+
+Modificado self.valorProgress con valor: 12470000
+
+Actualizada pb con: 12470000
+
+Modificado self.valorProgress con valor: 12478600
+
+Actualizada pb con: 12478600
+
+Modificado self.valorProgress con valor: 12487200
+
+Actualizada pb con: 12487200
+
+Modificado self.valorProgress con valor: 12495800
+
+Actualizada pb con: 12495800
+
+Modificado self.valorProgress con valor: 12504400
+
+Actualizada pb con: 12504400
+
+Modificado self.valorProgress con valor: 12513000
+
+Actualizada pb con: 12513000
+
+Modificado self.valorProgress con valor: 12521600
+
+Actualizada pb con: 12521600
+
+Modificado self.valorProgress con valor: 12530200
+
+Actualizada pb con: 12530200
+
+Modificado self.valorProgress con valor: 12538800
+
+Actualizada pb con: 12538800
+
+Modificado self.valorProgress con valor: 12547400
+
+Actualizada pb con: 12547400
+
+Modificado self.valorProgress con valor: 12556000
+
+Actualizada pb con: 12556000
+
+Modificado self.valorProgress con valor: 12564600
+
+Actualizada pb con: 12564600
+
+Modificado self.valorProgress con valor: 12573200
+
+Actualizada pb con: 12573200
+
+Modificado self.valorProgress con valor: 12581800
+
+Actualizada pb con: 12581800
+
+Modificado self.valorProgress con valor: 12590400
+
+Actualizada pb con: 12590400
+
+Modificado self.valorProgress con valor: 12599000
+
+Actualizada pb con: 12599000
+
+Modificado self.valorProgress con valor: 12607600
+
+Actualizada pb con: 12607600
+
+Modificado self.valorProgress con valor: 12616200
+
+Actualizada pb con: 12616200
+
+Modificado self.valorProgress con valor: 12624800
+
+Actualizada pb con: 12624800
+
+Modificado self.valorProgress con valor: 12633400
+
+Actualizada pb con: 12633400
+
+Modificado self.valorProgress con valor: 12642000
+
+Actualizada pb con: 12642000
+
+Modificado self.valorProgress con valor: 12650600
+
+Actualizada pb con: 12650600
+
+Modificado self.valorProgress con valor: 12659200
+
+Actualizada pb con: 12659200
+
+Modificado self.valorProgress con valor: 12667800
+
+Actualizada pb con: 12667800
+
+Modificado self.valorProgress con valor: 12676400
+
+Actualizada pb con: 12676400
+
+Modificado self.valorProgress con valor: 12685000
+
+Actualizada pb con: 12685000
+
+Modificado self.valorProgress con valor: 12693600
+
+Actualizada pb con: 12693600
+
+Modificado self.valorProgress con valor: 12702200
+
+Actualizada pb con: 12702200
+
+Modificado self.valorProgress con valor: 12710800
+
+Actualizada pb con: 12710800
+
+Modificado self.valorProgress con valor: 12719400
+
+Actualizada pb con: 12719400
+
+Modificado self.valorProgress con valor: 12728000
+
+Actualizada pb con: 12728000
+
+Modificado self.valorProgress con valor: 12736600
+
+Actualizada pb con: 12736600
+
+Modificado self.valorProgress con valor: 12745200
+
+Actualizada pb con: 12745200
+
+Modificado self.valorProgress con valor: 12753800
+
+Actualizada pb con: 12753800
+
+Modificado self.valorProgress con valor: 12762400
+
+Actualizada pb con: 12762400
+
+Modificado self.valorProgress con valor: 12771000
+
+Actualizada pb con: 12771000
+
+Modificado self.valorProgress con valor: 12779600
+
+Actualizada pb con: 12779600
+
+Modificado self.valorProgress con valor: 12788200
+
+Actualizada pb con: 12788200
+
+Modificado self.valorProgress con valor: 12796800
+
+Actualizada pb con: 12796800
+
+Modificado self.valorProgress con valor: 12805400
+
+Actualizada pb con: 12805400
+
+Modificado self.valorProgress con valor: 12814000
+
+Actualizada pb con: 12814000
+
+Modificado self.valorProgress con valor: 12822600
+
+Actualizada pb con: 12822600
+
+Modificado self.valorProgress con valor: 12831200
+
+Actualizada pb con: 12831200
+
+Modificado self.valorProgress con valor: 12839800
+
+Actualizada pb con: 12839800
+
+Modificado self.valorProgress con valor: 12848400
+
+Actualizada pb con: 12848400
+
+Modificado self.valorProgress con valor: 12857000
+
+Actualizada pb con: 12857000
+
+Modificado self.valorProgress con valor: 12865600
+
+Actualizada pb con: 12865600
+
+Modificado self.valorProgress con valor: 12874200
+
+Actualizada pb con: 12874200
+
+Modificado self.valorProgress con valor: 12882800
+
+Actualizada pb con: 12882800
+
+Modificado self.valorProgress con valor: 12891400
+
+Actualizada pb con: 12891400
+
+Modificado self.valorProgress con valor: 12900000
+
+Actualizada pb con: 12900000
+
+Modificado self.valorProgress con valor: 12908600
+
+Actualizada pb con: 12908600
+
+Modificado self.valorProgress con valor: 12917200
+
+Actualizada pb con: 12917200
+
+Modificado self.valorProgress con valor: 12925800
+
+Actualizada pb con: 12925800
+
+Modificado self.valorProgress con valor: 12934400
+
+Actualizada pb con: 12934400
+
+Modificado self.valorProgress con valor: 12943000
+
+Actualizada pb con: 12943000
+
+Modificado self.valorProgress con valor: 12951600
+
+Actualizada pb con: 12951600
+
+Modificado self.valorProgress con valor: 12960200
+
+Actualizada pb con: 12960200
+
+Modificado self.valorProgress con valor: 12968800
+
+Actualizada pb con: 12968800
+
+Modificado self.valorProgress con valor: 12977400
+
+Actualizada pb con: 12977400
+
+Modificado self.valorProgress con valor: 12986000
+
+Actualizada pb con: 12986000
+
+Modificado self.valorProgress con valor: 12994600
+
+Actualizada pb con: 12994600
+
+Modificado self.valorProgress con valor: 13003200
+
+Actualizada pb con: 13003200
+
+Modificado self.valorProgress con valor: 13011800
+
+Actualizada pb con: 13011800
+
+Modificado self.valorProgress con valor: 13020400
+
+Actualizada pb con: 13020400
+
+Modificado self.valorProgress con valor: 13029000
+
+Actualizada pb con: 13029000
+
+Modificado self.valorProgress con valor: 13037600
+
+Actualizada pb con: 13037600
+
+Modificado self.valorProgress con valor: 13046200
+
+Actualizada pb con: 13046200
+
+Modificado self.valorProgress con valor: 13054800
+
+Actualizada pb con: 13054800
+
+Modificado self.valorProgress con valor: 13063400
+
+Actualizada pb con: 13063400
+
+Modificado self.valorProgress con valor: 13072000
+
+Actualizada pb con: 13072000
+
+Modificado self.valorProgress con valor: 13080600
+
+Actualizada pb con: 13080600
+
+Modificado self.valorProgress con valor: 13089200
+
+Actualizada pb con: 13089200
+
+Modificado self.valorProgress con valor: 13097800
+
+Actualizada pb con: 13097800
+
+Modificado self.valorProgress con valor: 13106400
+
+Actualizada pb con: 13106400
+
+Modificado self.valorProgress con valor: 13115000
+
+Actualizada pb con: 13115000
+
+Modificado self.valorProgress con valor: 13123600
+
+Actualizada pb con: 13123600
+
+Modificado self.valorProgress con valor: 13132200
+
+Actualizada pb con: 13132200
+
+Modificado self.valorProgress con valor: 13140800
+
+Actualizada pb con: 13140800
+
+Modificado self.valorProgress con valor: 13149400
+
+Actualizada pb con: 13149400
+
+Modificado self.valorProgress con valor: 13158000
+
+Actualizada pb con: 13158000
+
+Modificado self.valorProgress con valor: 13166600
+
+Actualizada pb con: 13166600
+
+Modificado self.valorProgress con valor: 13175200
+
+Actualizada pb con: 13175200
+
+Modificado self.valorProgress con valor: 13183800
+
+Actualizada pb con: 13183800
+
+Modificado self.valorProgress con valor: 13192400
+
+Actualizada pb con: 13192400
+
+Modificado self.valorProgress con valor: 13201000
+
+Actualizada pb con: 13201000
+
+Modificado self.valorProgress con valor: 13209600
+
+Actualizada pb con: 13209600
+
+Modificado self.valorProgress con valor: 13218200
+
+Actualizada pb con: 13218200
+
+Modificado self.valorProgress con valor: 13226800
+
+Actualizada pb con: 13226800
+
+Modificado self.valorProgress con valor: 13235400
+
+Actualizada pb con: 13235400
+
+Modificado self.valorProgress con valor: 13244000
+
+Actualizada pb con: 13244000
+
+Modificado self.valorProgress con valor: 13252600
+
+Actualizada pb con: 13252600
+
+Modificado self.valorProgress con valor: 13261200
+
+Actualizada pb con: 13261200
+
+Modificado self.valorProgress con valor: 13269800
+
+Actualizada pb con: 13269800
+
+Modificado self.valorProgress con valor: 13278400
+
+Actualizada pb con: 13278400
+
+Modificado self.valorProgress con valor: 13287000
+
+Actualizada pb con: 13287000
+
+Modificado self.valorProgress con valor: 13295600
+
+Actualizada pb con: 13295600
+
+Modificado self.valorProgress con valor: 13304200
+
+Actualizada pb con: 13304200
+
+Modificado self.valorProgress con valor: 13312800
+
+Actualizada pb con: 13312800
+
+Modificado self.valorProgress con valor: 13321400
+
+Actualizada pb con: 13321400
+
+Actualizada pb con: 13321400
+
+Modificado self.valorProgress con valor: 13330000
+
+Modificado self.valorProgress con valor: 13338600
+
+Modificado self.valorProgress con valor: 13347200
+
+Actualizada pb con: 13347200
+
+Modificado self.valorProgress con valor: 13355800
+
+Modificado self.valorProgress con valor: 13364400
+
+Modificado self.valorProgress con valor: 13373000
+
+Actualizada pb con: 13373000
+
+Modificado self.valorProgress con valor: 13381600
+
+Actualizada pb con: 13381600
+
+Modificado self.valorProgress con valor: 13390200
+
+Actualizada pb con: 13390200
+
+Modificado self.valorProgress con valor: 13398800
+
+Actualizada pb con: 13398800
+
+Modificado self.valorProgress con valor: 13407400
+
+Actualizada pb con: 13407400
+
+Modificado self.valorProgress con valor: 13416000
+
+Actualizada pb con: 13416000
+
+Modificado self.valorProgress con valor: 13424600
+
+Actualizada pb con: 13424600
+
+Modificado self.valorProgress con valor: 13433200
+
+Actualizada pb con: 13433200
+
+Modificado self.valorProgress con valor: 13441800
+
+Actualizada pb con: 13441800
+
+Modificado self.valorProgress con valor: 13450400
+
+Actualizada pb con: 13450400
+
+Modificado self.valorProgress con valor: 13459000
+
+Actualizada pb con: 13459000
+
+Modificado self.valorProgress con valor: 13467600
+
+Actualizada pb con: 13467600
+
+Modificado self.valorProgress con valor: 13476200
+
+Actualizada pb con: 13476200
+
+Modificado self.valorProgress con valor: 13484800
+
+Actualizada pb con: 13484800
+
+Modificado self.valorProgress con valor: 13493400
+
+Actualizada pb con: 13493400
+
+Modificado self.valorProgress con valor: 13502000
+
+Actualizada pb con: 13502000
+
+Modificado self.valorProgress con valor: 13510600
+
+Actualizada pb con: 13510600
+
+Modificado self.valorProgress con valor: 13519200
+
+Actualizada pb con: 13519200
+
+Modificado self.valorProgress con valor: 13527800
+
+Actualizada pb con: 13527800
+
+Modificado self.valorProgress con valor: 13536400
+
+Actualizada pb con: 13536400
+
+Modificado self.valorProgress con valor: 13545000
+
+Actualizada pb con: 13545000
+
+Modificado self.valorProgress con valor: 13553600
+
+Actualizada pb con: 13553600
+
+Modificado self.valorProgress con valor: 13562200
+
+Actualizada pb con: 13562200
+
+Modificado self.valorProgress con valor: 13570800
+
+Actualizada pb con: 13570800
+
+Modificado self.valorProgress con valor: 13579400
+
+Actualizada pb con: 13579400
+
+Modificado self.valorProgress con valor: 13588000
+
+Actualizada pb con: 13588000
+
+Modificado self.valorProgress con valor: 13596600
+
+Actualizada pb con: 13596600
+
+Modificado self.valorProgress con valor: 13605200
+
+Actualizada pb con: 13605200
+
+Modificado self.valorProgress con valor: 13613800
+
+Actualizada pb con: 13613800
+
+Modificado self.valorProgress con valor: 13622400
+
+Actualizada pb con: 13622400
+
+Modificado self.valorProgress con valor: 13631000
+
+Actualizada pb con: 13631000
+
+Modificado self.valorProgress con valor: 13639600
+
+Actualizada pb con: 13639600
+
+Modificado self.valorProgress con valor: 13648200
+
+Actualizada pb con: 13648200
+
+Modificado self.valorProgress con valor: 13656800
+
+Actualizada pb con: 13656800
+
+Modificado self.valorProgress con valor: 13665400
+
+Actualizada pb con: 13665400
+
+Modificado self.valorProgress con valor: 13674000
+
+Actualizada pb con: 13674000
+
+Modificado self.valorProgress con valor: 13682600
+
+Actualizada pb con: 13682600
+
+Modificado self.valorProgress con valor: 13691200
+
+Actualizada pb con: 13691200
+
+Modificado self.valorProgress con valor: 13699800
+
+Actualizada pb con: 13699800
+
+Modificado self.valorProgress con valor: 13708400
+
+Actualizada pb con: 13708400
+
+Modificado self.valorProgress con valor: 13717000
+
+Actualizada pb con: 13717000
+
+Modificado self.valorProgress con valor: 13725600
+
+Actualizada pb con: 13725600
+
+Modificado self.valorProgress con valor: 13734200
+
+Actualizada pb con: 13734200
+
+Modificado self.valorProgress con valor: 13742800
+
+Actualizada pb con: 13742800
+
+Modificado self.valorProgress con valor: 13751400
+
+Actualizada pb con: 13751400
+
+Modificado self.valorProgress con valor: 13760000
+
+Actualizada pb con: 13760000
+
+Modificado self.valorProgress con valor: 13768600
+
+Actualizada pb con: 13768600
+
+Modificado self.valorProgress con valor: 13777200
+
+Actualizada pb con: 13777200
+
+Modificado self.valorProgress con valor: 13785800
+
+Actualizada pb con: 13785800
+
+Modificado self.valorProgress con valor: 13794400
+
+Actualizada pb con: 13794400
+
+Modificado self.valorProgress con valor: 13803000
+
+Actualizada pb con: 13803000
+
+Modificado self.valorProgress con valor: 13811600
+
+Actualizada pb con: 13811600
+
+Modificado self.valorProgress con valor: 13820200
+
+Actualizada pb con: 13820200
+
+Modificado self.valorProgress con valor: 13828800
+
+Actualizada pb con: 13828800
+
+Modificado self.valorProgress con valor: 13837400
+
+Actualizada pb con: 13837400
+
+Modificado self.valorProgress con valor: 13846000
+
+Actualizada pb con: 13846000
+
+Modificado self.valorProgress con valor: 13854600
+
+Actualizada pb con: 13854600
+
+Modificado self.valorProgress con valor: 13863200
+
+Actualizada pb con: 13863200
+
+Modificado self.valorProgress con valor: 13871800
+
+Actualizada pb con: 13871800
+
+Modificado self.valorProgress con valor: 13880400
+
+Actualizada pb con: 13880400
+
+Modificado self.valorProgress con valor: 13889000
+
+Actualizada pb con: 13889000
+
+Modificado self.valorProgress con valor: 13897600
+
+Actualizada pb con: 13897600
+
+Modificado self.valorProgress con valor: 13906200
+
+Actualizada pb con: 13906200
+
+Modificado self.valorProgress con valor: 13914800
+
+Actualizada pb con: 13914800
+
+Modificado self.valorProgress con valor: 13923400
+
+Actualizada pb con: 13923400
+
+Modificado self.valorProgress con valor: 13932000
+
+Actualizada pb con: 13932000
+
+Modificado self.valorProgress con valor: 13940600
+
+Actualizada pb con: 13940600
+
+Modificado self.valorProgress con valor: 13949200
+
+Actualizada pb con: 13949200
+
+Modificado self.valorProgress con valor: 13957800
+
+Actualizada pb con: 13957800
+
+Modificado self.valorProgress con valor: 13966400
+
+Actualizada pb con: 13966400
+
+Modificado self.valorProgress con valor: 13975000
+
+Actualizada pb con: 13975000
+
+Modificado self.valorProgress con valor: 13983600
+
+Actualizada pb con: 13983600
+
+Modificado self.valorProgress con valor: 13992200
+
+Actualizada pb con: 13992200
+
+Modificado self.valorProgress con valor: 14000800
+
+Actualizada pb con: 14000800
+
+Modificado self.valorProgress con valor: 14009400
+
+Actualizada pb con: 14009400
+
+Modificado self.valorProgress con valor: 14018000
+
+Actualizada pb con: 14018000
+
+Modificado self.valorProgress con valor: 14026600
+
+Actualizada pb con: 14026600
+
+Modificado self.valorProgress con valor: 14035200
+
+Actualizada pb con: 14035200
+
+Modificado self.valorProgress con valor: 14043800
+
+Actualizada pb con: 14043800
+
+Modificado self.valorProgress con valor: 14052400
+
+Actualizada pb con: 14052400
+
+Modificado self.valorProgress con valor: 14061000
+
+Actualizada pb con: 14061000
+
+Modificado self.valorProgress con valor: 14069600
+
+Actualizada pb con: 14069600
+
+Modificado self.valorProgress con valor: 14078200
+
+Actualizada pb con: 14078200
+
+Modificado self.valorProgress con valor: 14086800
+
+Actualizada pb con: 14086800
+
+Modificado self.valorProgress con valor: 14095400
+
+Actualizada pb con: 14095400
+
+Modificado self.valorProgress con valor: 14104000
+
+Actualizada pb con: 14104000
+
+Modificado self.valorProgress con valor: 14112600
+
+Actualizada pb con: 14112600
+
+Modificado self.valorProgress con valor: 14121200
+
+Actualizada pb con: 14121200
+
+Modificado self.valorProgress con valor: 14129800
+
+Actualizada pb con: 14129800
+
+Modificado self.valorProgress con valor: 14138400
+
+Actualizada pb con: 14138400
+
+Modificado self.valorProgress con valor: 14147000
+
+Actualizada pb con: 14147000
+
+Modificado self.valorProgress con valor: 14155600
+
+Actualizada pb con: 14155600
+
+Modificado self.valorProgress con valor: 14164200
+
+Actualizada pb con: 14164200
+
+Modificado self.valorProgress con valor: 14172800
+
+Actualizada pb con: 14172800
+
+Modificado self.valorProgress con valor: 14181400
+
+Actualizada pb con: 14181400
+
+Modificado self.valorProgress con valor: 14190000
+
+Actualizada pb con: 14190000
+
+Modificado self.valorProgress con valor: 14198600
+
+Actualizada pb con: 14198600
+
+Modificado self.valorProgress con valor: 14207200
+
+Actualizada pb con: 14207200
+
+Modificado self.valorProgress con valor: 14215800
+
+Actualizada pb con: 14215800
+
+Modificado self.valorProgress con valor: 14224400
+
+Actualizada pb con: 14224400
+
+Modificado self.valorProgress con valor: 14233000
+
+Actualizada pb con: 14233000
+
+Modificado self.valorProgress con valor: 14241600
+
+Actualizada pb con: 14241600
+
+Modificado self.valorProgress con valor: 14250200
+
+Actualizada pb con: 14250200
+
+Modificado self.valorProgress con valor: 14258800
+
+Actualizada pb con: 14258800
+
+Modificado self.valorProgress con valor: 14267400
+
+Actualizada pb con: 14267400
+
+Modificado self.valorProgress con valor: 14276000
+
+Actualizada pb con: 14276000
+
+Modificado self.valorProgress con valor: 14284600
+
+Actualizada pb con: 14284600
+
+Modificado self.valorProgress con valor: 14293200
+
+Actualizada pb con: 14293200
+
+Modificado self.valorProgress con valor: 14301800
+
+Actualizada pb con: 14301800
+
+Modificado self.valorProgress con valor: 14310400
+
+Actualizada pb con: 14310400
+
+Modificado self.valorProgress con valor: 14319000
+
+Actualizada pb con: 14319000
+
+Modificado self.valorProgress con valor: 14327600
+
+Actualizada pb con: 14327600
+
+Modificado self.valorProgress con valor: 14336200
+
+Actualizada pb con: 14336200
+
+Modificado self.valorProgress con valor: 14344800
+
+Actualizada pb con: 14344800
+
+Modificado self.valorProgress con valor: 14353400
+
+Actualizada pb con: 14353400
+
+Modificado self.valorProgress con valor: 14362000
+
+Actualizada pb con: 14362000
+
+Modificado[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+ self.valorProgress con valor: 14370600
+
+Actualizada pb con: 14370600
+
+Modificado self.valorProgress con valor: 14379200
+
+Actualizada pb con: 14379200
+
+Modificado self.valorProgress con valor: 14387800
+
+Actualizada pb con: 14387800
+
+Modificado self.valorProgress con valor: 14396400
+
+Actualizada pb con: 14396400
+
+Modificado self.valorProgress con valor: 14405000
+
+Actualizada pb con: 14405000
+
+Modificado self.valorProgress con valor: 14413600
+
+Actualizada pb con: 14413600
+
+Modificado self.valorProgress con valor: 14422200
+
+Actualizada pb con: 14422200
+
+Modificado self.valorProgress con valor: 14430800
+
+Actualizada pb con: 14430800
+
+Modificado self.valorProgress con valor: 14439400
+
+Actualizada pb con: 14439400
+
+Modificado self.valorProgress con valor: 14448000
+
+Actualizada pb con: 14448000
+
+Modificado self.valorProgress con valor: 14456600
+
+Actualizada pb con: 14456600
+
+Modificado self.valorProgress con valor: 14465200
+
+Actualizada pb con: 14465200
+
+Modificado self.valorProgress con valor: 14473800
+
+Actualizada pb con: 14473800
+
+Modificado self.valorProgress con valor: 14482400
+
+Actualizada pb con: 14482400
+
+Modificado self.valorProgress con valor: 14491000
+
+Actualizada pb con: 14491000
+
+Modificado self.valorProgress con valor: 14499600
+
+Actualizada pb con: 14499600
+
+Modificado self.valorProgress con valor: 14508200
+
+Actualizada pb con: 14508200
+
+Modificado self.valorProgress con valor: 14516800
+
+Actualizada pb con: 14516800
+
+Modificado self.valorProgress con valor: 14525400
+
+Actualizada pb con: 14525400
+
+Modificado self.valorProgress con valor: 14534000
+
+Actualizada pb con: 14534000
+
+Modificado self.valorProgress con valor: 14542600
+
+Actualizada pb con: 14542600
+
+Modificado self.valorProgress con valor: 14551200
+
+Actualizada pb con: 14551200
+
+Modificado self.valorProgress con valor: 14559800
+
+Actualizada pb con: 14559800
+
+Modificado self.valorProgress con valor: 14568400
+
+Actualizada pb con: 14568400
+
+Modificado self.valorProgress con valor: 14577000
+
+Actualizada pb con: 14577000
+
+Modificado self.valorProgress con valor: 14585600
+
+Actualizada pb con: 14585600
+
+Modificado self.valorProgress con valor: 14594200
+
+Actualizada pb con: 14594200
+
+Modificado self.valorProgress con valor: 14602800
+
+Actualizada pb con: 14602800
+
+Modificado self.valorProgress con valor: 14611400
+
+Actualizada pb con: 14611400
+
+Modificado self.valorProgress con valor: 14620000
+
+Actualizada pb con: 14620000
+
+Modificado self.valorProgress con valor: 14628600
+
+Actualizada pb con: 14628600
+
+Modificado self.valorProgress con valor: 14637200
+
+Actualizada pb con: 14637200
+
+Modificado self.valorProgress con valor: 14645800
+
+Actualizada pb con: 14645800
+
+Modificado self.valorProgress con valor: 14654400
+
+Actualizada pb con: 14654400
+
+Modificado self.valorProgress con valor: 14663000
+
+Actualizada pb con: 14663000
+
+Modificado self.valorProgress con valor: 14671600
+
+Actualizada pb con: 14671600
+
+Modificado self.valorProgress con valor: 14680200
+
+Actualizada pb con: 14680200
+
+Modificado self.valorProgress con valor: 14688800
+
+Fin de thead! desplanificando eventos...
+
+smsssssssssssssssssssssssssssss
+
+smsssssssssssssssssssssssssssss
+
+smsssssssssssssssssssssssssssss
+
+smsssssssssssssssssssssssssssss
+
+smsssssssssssssssssssssssssssss
+

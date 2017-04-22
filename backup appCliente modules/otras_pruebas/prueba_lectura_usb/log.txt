@@ -1,0 +1,1600 @@
+Esperando a que termine el thread observer...
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1/3-3.1:1.0')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.3/3-3.3:1.0')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.2/3-3.2:1.0')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3:1.0')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.3')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.2')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3')
+
+Accion: remove
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3:1.0')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.2')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 688 0x(02b0)
+idDev= 045e:02b0; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Motor detectada!
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.2/3-3.2:1.0')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 688 0x(02b0)
+idDev= 045e:02b0; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Motor detectada!
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 688 0x(02b0)
+idDev= 045e:02b0; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Motor detectada!
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 685 0x(02ad)
+idDev= 045e:02ad; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Audio detectada!
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.1/3-3.1:1.0')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 688 0x(02b0)
+idDev= 045e:02b0; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Motor detectada!
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 685 0x(02ad)
+idDev= 045e:02ad; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Audio detectada!
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a False!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.3')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 686 0x(02ae)
+idDev= 045e:02ae; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Camara detectada!
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 688 0x(02b0)
+idDev= 045e:02b0; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Motor detectada!
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 685 0x(02ad)
+idDev= 045e:02ad; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Audio detectada!
+
+Device:
+
+  idVendor: 1033 0x(0409)
+  idProduct: 90 0x(005a)
+idDev= 0409:005a; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+HUB detectado!
+
+Device:
+
+  idVendor: 1112 0x(0458)
+  idProduct: 229 0x(00e5)
+idDev= 0458:00e5; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 3 0x(0003)
+idDev= 1d6b:0003; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Modificado controlador.sensorListo() a True!
+
+Si no esta iniciado el thread observer iniciarlo sino nada !
+
+Conexion de sensor ocurrida con device: Device(u'/sys/devices/pci0000:00/0000:00:14.0/usb3/3-3/3-3.3/3-3.3:1.0')
+
+Accion: add
+
+Device:
+
+  idVendor: 7119 0x(1bcf)
+  idProduct: 10371 0x(2883)
+idDev= 1bcf:2883; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 5075 0x(13d3)
+  idProduct: 13154 0x(3362)
+idDev= 13d3:3362; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 32903 0x(8087)
+  idProduct: 36 0x(0024)
+idDev= 8087:0024; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 7531 0x(1d6b)
+  idProduct: 2 0x(0002)
+idDev= 1d6b:0002; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 686 0x(02ae)
+idDev= 045e:02ae; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Camara detectada!
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 688 0x(02b0)
+idDev= 045e:02b0; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------
+
+
+Motor detectada!
+
+Device:
+
+  idVendor: 1118 0x(045e)
+  idProduct: 685 0x(02ad)
+idDev= 045e:02ad; ID_USB_CAMERA: 045e:02ae
+
+-----------------------------------------------

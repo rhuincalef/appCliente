@@ -1,0 +1,10 @@
+{
+	"1": "Example Schema",
+	"2": "object",
+	"properties": {
+		"firstName": {
+			"type": "string"
+		}
+	},
+	"3": ["firstName", "lastName"]
+}

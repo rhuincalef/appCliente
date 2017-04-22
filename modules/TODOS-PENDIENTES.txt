@@ -27,6 +27,10 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 
 13. Ver la excepcion que se define en error-Kinect.txt. Probablemente solucionado, se verifica siempre la obtencion de datos tanto de la camara IR del sensor como de video. -->OK
 
+14. Resolver el problema de nombres de archivo que tienen blankspaces en el nombre, dentro del modulo dialogopropscaptura.py (en el textinput).
+
+15. Hacer que kinectviewer detecte la conexion al sensor y no haya que reiniciar la app.
+
 
 
 *EL tipoReparacion obligatorio lo va revisar Guille.

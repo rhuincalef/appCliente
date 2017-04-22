@@ -1,0 +1,72 @@
+1.	Instalar las dependencias comunes:
+
+	$sudo apt-get install -y \
+	    python-pip \
+	    build-essential \
+	    git \
+	    python \
+	    python-dev \
+	    ffmpeg \
+	    libsdl2-dev \
+	    libsdl2-image-dev \
+	    libsdl2-mixer-dev \
+	    libsdl2-ttf-dev \
+	    libportmidi-dev \
+	    libswscale-dev \
+	    libavformat-dev \
+	    libavcodec-dev \
+	    zlib1g-dev
+	
+	Instalar las dependencias con legacy PyGame:
+	$sudo apt-get install -y \
+	    python-pip \
+	    build-essential \
+	    mercurial \
+	    git \
+	    python \
+	    python-dev \
+	    ffmpeg \
+	    libsdl-image1.2-dev \
+	    libsdl-mixer1.2-dev \
+	    libsdl-ttf2.0-dev \
+	    libsmpeg-dev \
+	    libsdl1.2-dev \
+	    libportmidi-dev \
+	    libswscale-dev \
+	    libavformat-dev \
+	    libavcodec-dev \
+	    zlib1g-dev
+
+
+	Instalar la librería kivy:
+
+
+	$ sudo apt-get install python-setuptools python-pygame python-opengl \
+  		python-gst0.10 python-enchant gstreamer0.10-plugins-good python-dev \
+  		build-essential libgl1-mesa-dev-lts-quantal libgles2-mesa-dev-lts-quantal\
+  		python-pip
+	$ sudo add-apt-repository ppa:kivy-team/kivy; sudo apt-get update
+Con Python2.x:
+
+	$ sudo apt-get install python-kivy
+Con Python 3.x:
+
+	$ sudo apt-get install python3-kivy
+
+2. Instalar los siguientes paquetes con pip:
+
+	$ sudo pip install numpy requests requests-toolbelt pypcd persistent zodb zeo tinydb
+
+3. Descargar la appCliente desde el repositorio: https://github.com/rhuincalef/appCliente.git.
+
+4. Descargar y configurar la aplicación web alojada en el repositorio https://github.com/pablo1n7/ProyectoBacheo.git , junto con las instrucciones de instalacion para reversegeocoding.
+
+
+5.Ejecutar el comando $ python main.py -- -h para visualizar las opciones de ejecucion de la app (tipo de gps y tipos de captura). 
+
+6. Luego invocar la aplicacion con las opciones deseadas. Un ejemplo de ejecucion es:
+	$ python main.py -- --gps realgps 2>&1 | tee log.txt
+
+
+
+

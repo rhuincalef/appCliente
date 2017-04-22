@@ -914,8 +914,6 @@ class CapturadorInformados(Capturador):
       controlador = App.get_running_app()
       controlador.mostrarDialogoMensaje(title="Error en solicitud al servidor",
                                           text= e.message)
-      #mostrarDialogo(titulo="Error en solicitud al servidor",
-      #content= e.message)
     return self.colBachesInformados
 
   # Asocia la falla con la captura recien realizada.

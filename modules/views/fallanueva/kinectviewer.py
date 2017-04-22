@@ -25,10 +25,7 @@ from kivy.lang import Builder
 
 
 #import the necessary modules
-import freenect
-import cv2
 import numpy as np
-
 
 from calibkinect import depth2xyzuv,xyz_complete_matrix
 import pcl
@@ -60,7 +57,6 @@ from constantes import FALLA_NO_ESTABLECIDA
 from kivy.properties import NumericProperty
 
 #Agregado para Imagen en Escala de grises
-import freenect
 import frame_convert2
 import StringIO
 from kivy.core.image.img_pygame import ImageLoaderPygame
@@ -150,26 +146,45 @@ class KinectDepth(Thread):
         self.index = 0
         self.depths = None
         self.depths2 = None
+        #AGREGADO RODRIGO
+        self.detenido = False
+        self.recibiendoDatos = False # La primera vez que se crea alguna de las texturas 
+                                    # este flag se pone en True.Sirve para determinar
+                                    # si el sensor esta enviando datos o no.
 
+    def marcarRecepcionDatos(self):
+        if not self.recibiendoDatos:
+            self.recibiendoDatos = True
+
+    def detener(self):
+        self.detenido = True
         
     def run(self):
+        self.detenido = False
         qVideo = self.queueVideo
         qGreyImg = self.queueGreyImg
         qGreyImg2 = self.queueGreyImg2
         while not self.quit:
             try:
+                #AGREGADO RODRIGO
+                #Si no estoy detenido comienzo la recoleccion de datos
+                if self.detenido:
+                    print "Se detuvo el KinectDepth thread!\n"
+                    break
+
                 self.depths = get_depth()
                 self.depths2 = get_depth2()
                 frames = get_video2()
-                #if frames is None:
-                #   sleep(2)
-                #    continue
                 if frames is None or self.depths is None:
+                    print "Esperando data...\n"
                     sleep(1)
                     continue
+
                 qVideo.appendleft(frames)
                 qGreyImg.appendleft(self.depths)
                 qGreyImg2.appendleft(self.depths2)
+                self.marcarRecepcionDatos()
+                #print "Appendeando data a las colecciones!\n"
 
             except TypeError, e:
                 print "Excepcion typeError en thread KinectDepth!!!\n"
@@ -198,6 +213,11 @@ class KinectDepth(Thread):
     def popGreyImg2(self):
         return self.queueGreyImg2.pop()
 
+    def vaciar(self):
+        self.queueVideo = deque()
+        self.queueGreyImg = deque()
+        self.queueGreyImg2 = deque()
+        print "Se vaciaron todas las colas!!!\n"
 
     def get_depths(self):
         return self.depths
@@ -224,25 +244,37 @@ class KinectViewer(Image):
         super(KinectViewer, self).__init__(**kwargs)  
         #Clock.schedule_interval(self.actualizar_imagen, 1.0/30.0)
         print "El tamanio de la ventana es: %s,%s \n" % (Window.size[0],Window.size[1])
-
+    
 
     def iniciarSensado(self,depthThread):
+        from kivy.core.window import Window
         self.kinect = depthThread
         Clock.schedule_interval(self.actualizar_imagen, 1.0/30.0)
+        print "Planificado el inicioSensado RGB! \n"
+
+    #AGREGADO RODRIGO
+    #KinectViewer.detenerSensado()
+    def detenerSensado(self):
+        Clock.unschedule(self.actualizar_imagen)
+        print "Desplanificada RGB IMG!\n"
 
 
     def actualizar_imagen(self, dt):
+        #print "\n--------------------------------------------\n\n"
+        #print "En KinectViewer.actualizar_imagen() !\n"
         try:
             value = self.kinect.popVideo()
-        except:
+        except Exception as e:
             return
-        
+
         texture1 = Texture.create(size=(640, 480),
                                     colorfmt='rgb')
         texture1.flip_vertical()
         texture1.blit_buffer(value.tostring(), colorfmt='rgb')
         self.texture = texture1
-        
+        #print "Creada textura: %s\n" % self.texture
+        #print "\n--------------------------------------------\n\n"
+    
 
     # Prepara los datos del sensor, empaquetando el rgb del video al formato de PCL
     # con las coordenadas,obtenidas de la profundidad .
@@ -445,12 +477,14 @@ class KinectViewerGreyScale(Image):
     index = NumericProperty(0)
 
     def __init__(self, **kwargs):
+        print "Creando kinectViewer greyscale...\n"
         self.kinect = None
         self.imagen_kv = None
         self.controlador = App.get_running_app()
         
         # parent init
         super(KinectViewerGreyScale, self).__init__(**kwargs)  
+        print "Llamada a la superclase de kinectViewer greyscale OK!...\n"
 
         self.canvas = None
         self.canvas = RenderContext()
@@ -460,6 +494,7 @@ class KinectViewerGreyScale(Image):
         self.texture = Texture.create(
             size=(640, 480), colorfmt='luminance', bufferfmt='ushort')
         self.texture.flip_vertical()
+        print "Creada kinectViewer greyscale!\n"
 
 
 
@@ -476,9 +511,16 @@ class KinectViewerGreyScale(Image):
 
 
     def iniciarSensado(self,depthThread):
+        from kivy.core.window import Window
         self.kinect = depthThread
         Clock.schedule_interval(self.actualizar_imagen, 0)
 
+
+    #AGREGADO RODRIGO
+    #KinectViewerGreyScale.detenerSensado()
+    def detenerSensado(self):
+        Clock.unschedule(self.actualizar_imagen)
+        print "Desplanificada GREY IMG!\n"
 
     def actualizar_imagen(self, dt):
         try:
@@ -498,50 +540,130 @@ class KinectViewerGreyScale(Image):
         self.texture.blit_buffer(
             f.tostring(), colorfmt='luminance', bufferfmt='ushort')
         self.canvas.ask_update()
+        
 
-     
+from kivy.logger import LoggerHistory
+
+import signal, os
+import time
+
+
+
+#class ExcepcionTimeout(Exception):
+#    pass
+
 
 class KinectScreen(Screen):
     nombre_captura = StringProperty()
-    #dir_trabajo = StringProperty()
-    #idFalla = NumericProperty(FALLA_NO_ESTABLECIDA)
 
     def __init__(self,**kwargs):
         print "En KinectScreen!!"
-        depthThread = KinectDepth()
-        depthThread.start()
-        self.imagen_kv_rgb = None
-        self.imagen_kv_grey = None
-
+        self.depthThread = KinectDepth()
+        self.depthThread.start()
         print "Inicializado el depthThread!\n"
         super(KinectScreen, self).__init__(**kwargs)
-        self.inicializar_imagenes_kinect(depthThread)
+        self.inicializar_imagenes_kinect(self.depthThread)
         self._keyboard = Window.request_keyboard(None,self)
         print "Obtenido teclado...\n"
-        #self._keyboard.bind(on_key_down=self.tecla_presionada)
         self.dir_trabajo = "."
+        
+
+    def on_pre_enter(self):
+        controlador = App.get_running_app()
+        listo = controlador.conexionSensorEstablecida()
+        print "Sensor LISTO? : %s...\n" % listo
+        if listo:
+            print "Bindeado SPACEBAR!!\n"
+            self._keyboard.bind(on_key_down=self.tecla_presionada)
+            self._iniciarMonitorDatosKinect()
+        else:
+            controlador = App.get_running_app()
+            popup = controlador.mostrarDialogoMensaje(title='Error de conexion',
+                                                text='No se pueden realizar capturas hasta que\n el sensor se encuentre conectado.\nConecte el sensor y reinicie la aplicacion.')
+            popup.bind(on_dismiss=self.cancelarCaptura)
 
 
-    #Se bindea la escucha del teclado al entrar
-    def on_enter(self):
-        print "Bindeado SPACEBAR!!\n"
-        self._keyboard.bind(on_key_down=self.tecla_presionada)
+    # Establece una alarma para monitorear si se estan alamcenando frames
+    # en el thread que mantiene el sensor en ejecucion.Si no es asi,
+    # se muestra un dialog informando al usuario que debe reiniciar la app.
+    def _iniciarMonitorDatosKinect(self):
+        signal.signal(signal.SIGALRM,self._handlerTimeout)
+        signal.alarm(TIMEOUT_KINECT_SEG)
+        
+
+    def _handlerTimeout(self,signum, frame):
+        #raise ExcepcionTimeout("Error al abrir el dispositivo.\n Dispositivo ocupado\n")
+        print 'Llamando al manejador!\n'
+        if not self.depthThread.recibiendoDatos:
+            signal.alarm(0) # Disable the alarm
+            controlador = App.get_running_app()
+            msg = "No se estan detectando datos enviados del sensor.\n Reinicie la aplicacion con el sensor conectado e intentelo de nuevo.\n"
+            popup = controlador.mostrarDialogoMensaje(title='Error de streaming',
+                                    text=msg)
+            popup.bind(on_dismiss=self._terminarCaptura)
+     
+    def _terminarCaptura(self,instance):
+        self.volver()
+
+    #BACKUP!
+    #def on_enter(self):
+    #    self._keyboard.bind(on_key_down=self.tecla_presionada)
+    
+
+    # VERSION DE PRUEBA PARA DETECTAR LA CONEXION Y DESCONEXION DEL KINECT.
+    # Se bindea la escucha del teclado al entrar y se verifica que el
+    # sensor este conectado, si no lo esta, se regresa al screen 
+    # anterior.
+    #def on_enter(self):
+     #   controlador = App.get_running_app()
+     #   listo = controlador.conexionSensorEstablecida()
+        #print "tipo de kinect_rgb: %s y de kinect_grey: %s\n" % (type(self.kinect_rgb),
+        #                                                          type(self.kinect_grey))
+     #   print "Entrando en on_enter con listo? %s\n" % listo
+     
+     #   if listo:
+     #       print "Bindeado SPACEBAR!!\n"
+     #       self._keyboard.bind(on_key_down=self.tecla_presionada)
+     #   else:
+      #      controlador = App.get_running_app()
+      #      popup = controlador.mostrarDialogoMensaje(title='Error de conexion',
+      #                                          text='No se pueden realizar capturas hasta que\n el sensor se encuentre conectado.\nConecte el sensor y reinicie la aplicacion.')
+      #      popup.bind(on_dismiss=self.cancelarCaptura)
+        #print "\n=====================================================\n\n"
+        #print "En kinectscreen.on_enter() con sensorListo? %s con loggerHistory: \n" % listo
+        #for recordLog in LoggerHistory.history:
+        #    print "%s\n" % recordLog.getMessage()
+        #print "\n=====================================================\n\n"
 
 
+    def cancelarCaptura(self,instance):
+        print "Deteniendo la app...\n"
+        controlador = App.get_running_app()
+        controlador.stop()
+        self.volver()
+
+    
     def on_leave(self):
         print "DesBindeada SPACEBAR!!\n"
         self._keyboard.unbind(on_key_down=self.tecla_presionada)
+        #self.detener_imagenes_kinect()
+        #self.depthThread.detener()
+        #self.depthThread.vaciar()
 
+    
 
     #Metodo que inicializa las imagenes para visualizar en Kinect.
     def inicializar_imagenes_kinect(self,depthThread):
         print "En inicializar_imagenes_kinect() ...\n"
-        #self.imagen_kv_rgb = KinectViewer(depthThread) 
-        #self.layout_kinect_images.add_widget(self.imagen_kv_rgb,index=0)
-        #self.imagen_kv_grey = KinectViewerGreyScale(depthThread)
-        #self.layout_kinect_images.add_widget(self.imagen_kv_grey,index=0)
         self.kinect_rgb.iniciarSensado(depthThread)
         self.kinect_grey.iniciarSensado(depthThread)
+
+
+    def detener_imagenes_kinect(self):
+        print "Deteniendo imagenes_kinect!!\n"
+        self.kinect_rgb.detenerSensado()
+        self.kinect_grey.detenerSensado()
+
 
 
     def tecla_presionada(self,keyboard,keycode,text,modifiers):
@@ -562,9 +684,9 @@ class KinectScreen(Screen):
     def capturar(self):
         controlador = App.get_running_app()
         print "En Kinectviewer.capturar()...con idFalla %s\n" % controlador.getData("idFalla") 
-        if not conexionSensorEstablecida():
-            mostrarDialogo(titulo="Error de conexion con el sensor",
-                            content="Debe conectar el sensor antes de\nintentar realizar una captura.")
+        if not controlador.conexionSensorEstablecida():
+            controlador.mostrarDialogoMensaje(text= "Debe conectar el sensor antes de\nintentar realizar una captura.",
+                                        title = "Error de conexion con el sensor")
             return
         
         data = self.kinect_rgb.getDatosSensor()

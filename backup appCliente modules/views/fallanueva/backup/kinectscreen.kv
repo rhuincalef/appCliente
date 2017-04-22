@@ -1,0 +1,46 @@
+#:kivy 1.0
+
+<KinectScreen>:
+    FloatLayout:
+        #ID's de los atributos llamables por Python.
+        label_wid: my_label
+        main_layout: layout_principal
+        imagen_kv: my_img
+
+        #Propiedades de Controller (heredadas de BoxLayout)
+        id: layout_principal
+        orientation: 'vertical'
+        #padding: [15,-150,15,10]
+
+        Label:
+            id: my_label
+            text: 'Captura de baches'
+            pos: (300,400)
+            size_hint: (.20,.5)
+
+        KinectViewer:
+            id: my_img
+            #source: "mylogo.jpg"
+            
+            #keep_ratio: False
+            #allow_stretch: True
+            
+            BoxLayout:
+                orientation: 'horizontal'
+                size: 400,50
+                size_hint: .8, .1
+                padding: [150,0,0,20]
+                spacing: 70
+
+                Button:
+                    id: boton_capturar
+                    text: "Capturar"
+                    on_press: my_img.realizar_captura()
+
+                Button:
+                    id: boton_cancelar
+                    text: "Volver"
+                    on_press: root.manager.current = 'menutiposfalla'
+                    
+
+

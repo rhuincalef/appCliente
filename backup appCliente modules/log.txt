@@ -1,0 +1,402 @@
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-04-19_55.txt
+[[1;32mINFO[0m   ] [Kivy        ] v1.9.1
+[[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 19 2016, 06:48:10) 
+[GCC 5.4.0 20160609]
+[[1;32mINFO[0m   ] [Factory     ] 179 symbols loaded
+[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_pygame, img_pil (img_ffpyplayer ignored)
+[[1;32mINFO[0m   ] [Window      ] Provider: pygame(['window_egl_rpi'] ignored)
+[[1;32mINFO[0m   ] [GL          ] OpenGL version <3.0 Mesa 11.2.0>
+[[1;32mINFO[0m   ] [GL          ] OpenGL vendor <Intel Open Source Technology Center>
+[[1;32mINFO[0m   ] [GL          ] OpenGL renderer <Mesa DRI Intel(R) Ivybridge Mobile >
+[[1;32mINFO[0m   ] [GL          ] OpenGL parsed version: 3, 0
+[[1;32mINFO[0m   ] [GL          ] Shading version <1.30>
+[[1;32mINFO[0m   ] [GL          ] Texture max size <8192>
+[[1;32mINFO[0m   ] [GL          ] Texture max units <16>
+[[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
+[[1;32mINFO[0m   ] [Text        ] Provider: pygame
+[[1;33mWARNING[0m] [IOError     ] [Errno 2] No such file or directory: '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs/xpopup.mo'. Switch to the defaults.
+[[1;32mINFO[0m   ] [GL          ] NPOT texture support is available
+[Stream 70] Invalid magic 6eff
+[Stream 70] Invalid magic 6eff
+[Stream 70] Invalid magic c538
+[Stream 70] Lost too many packets, resyncing...
+ /usr/local/lib/python2.7/dist-packages/kivy/core/clipboard/clipboard_gtk3.py:14: PyGIWarning: Gtk was imported without specifying a version first. Use gi.require_version('Gtk', '3.0') before import to ensure that the right version gets loaded.
+   from gi.repository import Gtk, Gdk
+[[1;32mINFO[0m   ] [Clipboard   ] Provider: gtk3(['clipboard_dbusklipper'] ignored)
+[[1;31mCRITICAL[0m] [Cutbuffer   ] Unable to find any valuable Cutbuffer provider at all!
+xclip - OSError: [Errno 2] No existe el archivo o el directorio
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    fromlist=[modulename], level=0)
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/clipboard/clipboard_xclip.py", line 17, in <module>
+    p = subprocess.Popen(['xclip', '-version'], stdout=subprocess.PIPE)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+
+xsel - OSError: [Errno 2] No existe el archivo o el directorio
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    fromlist=[modulename], level=0)
+  File "/usr/local/lib/python2.7/dist-packages/kivy/core/clipboard/clipboard_xsel.py", line 15, in <module>
+    p = subprocess.Popen(['xsel'], stdout=subprocess.PIPE)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+
+[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 794f
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 76ff
+[Stream 70] Invalid magic 74ff
+[Stream 70] Invalid magic b1d6
+[Stream 70] Invalid magic 658c
+[Stream 70] Invalid magic 9d53
+[Stream 70] Invalid magic 796f
+[Stream 70] Invalid magic 6d2d
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic aeb5
+[Stream 70] Invalid magic 0ac1
+[Stream 70] Invalid magic 4b29
+[Stream 70] Invalid magic 1aeb
+[Stream 70] Invalid magic f1de
+[Stream 70] Invalid magic c618
+[Stream 70] Invalid magic 2ba5
+[Stream 70] Invalid magic 7caf
+[Stream 70] Invalid magic 526a
+[Stream 70] Invalid magic 06c2
+[Stream 70] Lost too many packets, resyncing...
+[[1;32mINFO[0m   ] [Base        ] Start application main loop
+[Stream 70] Invalid magic 6eff
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 7daf
+[Stream 70] Invalid magic d67a
+[Stream 70] Invalid magic f55f
+[Stream 70] Invalid magic 9d53
+[Stream 70] Invalid magic 4de9
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 652c
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 3566
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 56ea
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic de3b
+[Stream 70] Invalid magic d83b
+[Stream 70] Invalid magic 716e
+[Stream 70] Invalid magic aa95
+[Stream 70] Invalid magic aa15
+[Stream 70] Invalid magic ecdd
+[Stream 70] Invalid magic 774e
+[Stream 70] Invalid magic 760c
+[Stream 70] Invalid magic da5b
+[Stream 70] Invalid magic 2bc5
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic b817
+[Stream 70] Invalid magic ead5
+[Stream 70] Invalid magic 16a2
+[Stream 70] Invalid magic 6ded
+[Stream 70] Invalid magic 9772
+[Stream 70] Invalid magic 0d61
+[Stream 70] Invalid magic dc9b
+[Stream 70] Invalid magic 5f6b
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 6ef1
+[Stream 70] Invalid magic 20c4
+[Stream 70] Invalid magic 5c8b
+[Stream 70] Invalid magic 2562
+[Stream 70] Invalid magic 8d51
+[Stream 70] Invalid magic b716
+[Stream 70] Invalid magic e3bb
+[Stream 70] Invalid magic 8730
+[Stream 70] Invalid magic 5702
+[Stream 70] Invalid magic b556
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic ff5f
+[Stream 70] Invalid magic a194
+[Stream 70] Invalid magic dabd
+[Stream 70] Invalid magic 95b2
+[Stream 70] Invalid magic 1cc3
+[Stream 70] Invalid magic 5bcb
+[Stream 70] Invalid magic 55ca
+[Stream 70] Invalid magic 7cff
+[Stream 70] Invalid magic 7bff
+[Stream 70] Invalid magic 7aff
+[Stream 70] Invalid magic 6fcd
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic cef9
+[Stream 70] Invalid magic c518
+[Stream 70] Invalid magic 816f
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic eede
+[Stream 70] Invalid magic 776e
+[Stream 70] Invalid magic 660c
+[Stream 70] Invalid magic da5b
+[Stream 70] Invalid magic abd5
+[Stream 70] Invalid magic 1a82
+[Stream 70] Invalid magic bcb7
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 1582
+[Stream 70] Invalid magic b5d6
+[Stream 70] Invalid magic 5506
+[Stream 70] Invalid magic 776f
+[Stream 70] Invalid magic bb97
+[Stream 70] Invalid magic 2b05
+[Stream 70] Invalid magic 6bad
+[Stream 70] Invalid magic 15e2
+[Stream 70] Invalid magic 0540
+[Stream 70] Invalid magic de9b
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 04c0
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 51aa
+[Stream 70] Invalid magic 93b2
+[Stream 70] Invalid magic f9df
+[Stream 70] Invalid magic c959
+[Stream 70] Invalid magic 2be1
+[Stream 70] Invalid magic 98b2
+[Stream 70] Invalid magic 544a
+[Stream 70] Invalid magic 34e6
+[Stream 70] Invalid magic be77
+[Stream 70] Invalid magic 3246
+[Stream 70] Lost too many packets, resyncing...
+Hecho el registro de las clases!!
+
+Los argumentos enviados por consola son: Namespace(gps='fakegps', tipoCaptura='xyz_rgb')
+
+Abriendo BD json local ./DB_MUESTRAS_LOCALES_19-04-2017.json...
+
+Inicializado Capturador
+Abriendo BD json local ./DB_MUESTRAS_LOCALES_19-04-2017.json...
+
+Inicializado Capturador
+Inicializado MainApp!
+Registrando elemento default_font
+En build()
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+En KinectScreen!!
+El tamanio de la ventana es: 800,600 
+
+Creando kinectViewer greyscale...
+
+Llamada a la superclase de kinectViewer greyscale OK!...
+
+Creada kinectViewer greyscale!
+
+Sensor LISTO? : True...
+
+En inicializar_imagenes_kinect() ...
+
+Obtenido teclado...
+
+En KinectScreen!!
+El tamanio de la ventana es: 800,600 
+
+Creando kinectViewer greyscale...
+
+Llamada a la superclase de kinectViewer greyscale OK!...
+
+Creada kinectViewer greyscale!
+
+Sensor LISTO? : True...
+
+En inicializar_imagenes_kinect() ...
+
+Obtenido teclado...
+
+Bindeados elementos en subircapturasservidor!
+
+Bindeados elementos en subircapturasservidor!
+
+Despues de capturador.obtenerPropsConfirmadas()
+
+Creado un resplado de las propiedades de las fallas confirmadas!
+
+Tipos de falla obtenidos correctamente
+ desde servidor!
+SE DESVANECIO EL POPUPCONFIRMADAS!
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+MOSTRANDO EL RESULTADO DE LA PETICION...
+
+SE DESVANECIO EL POPUPCONFIRMADAS!
+
+screen manager -->
+['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura', 'propsFallaConfirmada']
+cambie!
+menutiposfalla
+Atributos obtenidos: [{'clave': 'tipoReparacion', 'colPropsAsociadas': [], 'valor': 'Cementar'}, {'clave': 'tipoReparacion', 'colPropsAsociadas': [], 'valor': 'Sellar'}, {'clave': 'tipoMaterial', 'colPropsAsociadas': [], 'valor': 'Cemento'}]
+
+Iterando elemento.getClave(): tipoReparacion
+
+Iterando elemento.getClave(): tipoReparacion
+
+Iterando elemento.getClave(): tipoMaterial
+
+Cambiados attrs de tiposFalla...
+
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas']
+Archivo captura seleccionado:  test
+test
+NOMBRE test VALIDO PARA UNA CAPTURA!
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
+
+Data SETEADA!!! con: nombre_cap =  test ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+len(self.queueVideo) = 1
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! tipo: float32 
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA[[1;33mWARNING[0m] <kivy.uix.gridlayout.GridLayout object at 0x7f5f194a2c90> have no cols or rows set, layout is not triggered.
+Invocando a pcl_viewer con parametro /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd
+[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+ERROR: In /build/vtk6-YpT4yb/vtk6-6.2.0+dfsg1/Rendering/OpenGL/vtkOpenGLTexture.cxx, line 200
+vtkOpenGLTexture (0x153f200): No scalar values found for texture input!
+
+[0;m[done, [0;36m98[0;m[0;m ms : [0;36m289221[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;m NUEVA!!!
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.264148 - longitud: -65.290654 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Bache; tipoReparacion: Cementar; tipoMaterial: Cemento
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas ; nombre_captura: test
+
+Cantidad de archivos .pcd con el nombre  test es :  2
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas) - formato(pcd) - extension(.pcd)
+
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/test_2.csv 
+
+Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  test_2.pcd
+
+En alamcenarCapturaLocal() ...
+BD actualizada con elementos: 
+[{u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/prueba_3.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/pruebass _1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsadsa_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/aaaa_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/asa_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/rodrigo_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd', u'longitud': -65.290654}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/test_2.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/test_2.csv'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd'}
+
+Abierto visualizador
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/test_2.pcd'}, {'csvFile': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/test_2.csv'}] en disco!
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'propsFallaConfirmada', 'dialogopropscaptura']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+EnUSB device disappeared, cancelling stream 81 :(
+USB camera marked dead, stopping streams
+send_cmd: Output control transfer failed (-4)
+write_register: send_cmd() returned -4
+send_cmd: Output control transfer failed (-4)
+write_register: send_cmd() returned -4

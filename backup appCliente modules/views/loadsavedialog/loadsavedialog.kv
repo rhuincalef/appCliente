@@ -1,0 +1,79 @@
+#:kivy 1.1.0
+#:import my_const constantes
+
+<LoadDialog>:
+    orientation: "vertical"
+    cols:1
+    rows:2
+    #Label:
+    #    text: "HOLSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+
+    FileChooserIconView:
+        id: filechooser
+        size_hint: (1,.95)
+        filters: ['*.txt']
+        rootpath: my_const.ROOT_PCD_FOLDER 
+
+    GridLayout:
+        orientation: "horizontal"
+        cols: 2
+        rows: 1
+        size_hint: (1,.05)
+        padding:[root.width/5,0,0.5,0]
+        spacing: [root.width/6,0]
+        col_default_width: root.width/6
+
+        Button:
+            text: "Cargar"
+            on_release: root.load(filechooser.path, filechooser.selection)
+
+        Button:
+            text: "Cancel"
+            on_release: root.cancel()
+
+
+<SaveDialog>:
+    text_input: text_input
+    orientation: "vertical"
+    cols:1
+    rows:4
+
+#    Label:
+#        text: "TEXTO DE PRUEBA DE GUARDADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+
+    Label:
+        text: "Ingrese el nombre del archivo de captura"
+        size_hint: (1,0.05)
+
+    TextInput:
+        id: text_input
+        size_hint: (1,0.05)
+        multiline: False
+
+    FileChooserIconView:
+        id: filechooser
+        size_hint: (1,0.85)
+        filters: ['*.txt']
+        rootpath: my_const.ROOT_PCD_FOLDER
+        on_selection: text_input.text = self.selection and self.selection[0] or ''
+
+
+    GridLayout:
+        orientation: "horizontal"
+        cols:2
+        rows:1
+        size_hint: (1,0.05)        
+        padding:[root.width/5,0,0.5,0]
+        spacing: [root.width/6,0]
+        col_default_width: root.width/6
+
+        Button:
+            text: "Save"
+            on_release: root.save(filechooser.path, text_input.text)
+
+        Button:
+            text: "Cancel"
+            on_release: root.cancel()
+
+
+

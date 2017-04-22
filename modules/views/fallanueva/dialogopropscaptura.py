@@ -41,6 +41,7 @@ from iconfonts import icon
 import shutil
 from constantes import TAMANIO_ICONOS_CTRL_BAR
 from os import path
+import kinectviewer
 
 class DialogoPropsCapturaScreen(Screen):
 
@@ -109,13 +110,22 @@ class DialogoPropsCapturaScreen(Screen):
 		print self.dir_chooser.selection
 
 
+	# Retorna una cadena con los espacios en blanco en medio escapados,
+	# y los espacios anteriores y posteriores a la misma trimeados 
+	def _sanearCadena(self,cad):
+		nueva = cad.strip()
+		#micad = nueva.replace(" ","\ ")
+		micad = nueva
+		#print "La cadena inicial es: %s ; cadena saneada es:%s\n" % (cad,micad)
+		return micad
+
 	#Se leen los datos ingresados por el usuario y se envian a la sigueinte
 	#screen.
 	def menu_falla_nueva(self):
 		nombre_captura = self.nombre_cap.text
 		es_nombre_valido = es_dir_valido = False
-		print "Archivo captura seleccionado: ", nombre_captura
-		print strip(nombre_captura)
+		#print "Archivo captura seleccionado: %s\n" % nombre_captura
+		#print strip(nombre_captura)
 
 		#NOTA: Solo se permiten nombres sin _ y un Numero y sin
 		# extension .PCD
@@ -125,9 +135,9 @@ class DialogoPropsCapturaScreen(Screen):
 		if (nombre_captura != None) and strip(nombre_captura) and \
 			match is None:
 			es_nombre_valido = True
-			print "NOMBRE %s VALIDO PARA UNA CAPTURA!" % nombre_captura
-		else:
-			print "NOMBRE %s INVALIDO PARA UNA CAPTURA!" % nombre_captura
+			#print "NOMBRE %s VALIDO PARA UNA CAPTURA!" % nombre_captura
+		#else:
+			#print "NOMBRE %s INVALIDO PARA UNA CAPTURA!" % nombre_captura
 
 
 		nombre_dir = self.dir_chooser.selection[0] 
@@ -140,19 +150,34 @@ class DialogoPropsCapturaScreen(Screen):
 		print "es_nombre_valido: ",str(es_nombre_valido)
 		print "es_dir_valido: ",str(es_dir_valido)
 		print ""
-
+		#BACKUP!!
 		# Si es un dirvalido se envian los datos a kinect_screen
 		if es_nombre_valido and es_dir_valido:
 			kinect_screen = self.manager.get_screen('capturaKinect')
 			#kinect_screen.setDatosCaptura(self.nombre_cap.text,
 			#	self.dir_chooser.selection[0])
+			kinect_screen.setDatosCaptura(self._sanearCadena(nombre_captura).encode("utf-8"),
+				self.dir_chooser.selection[0])
 			print "Dir. de trabajo: %s\n" % self.dir_chooser.path
-			kinect_screen.setDatosCaptura(self.nombre_cap.text,
-				self.dir_chooser.path)
-
-			
-			print "Data SETEADA!!! con: nombre_cap = ",self.nombre_cap.text,"; dir_trabajo = ",self.dir_chooser.selection[0]
+			print "Data SETEADA!!! con: nombre_cap = ",self._sanearCadena(nombre_captura).encode("utf-8"),"; dir_trabajo = ",self.dir_chooser.selection[0]
 			self.manager.current = 'capturaKinect'
+
+		#Version de prueba para detectar desconexion del sensor de forma automatica!
+		#controlador = App.get_running_app()
+		# Si es un dirvalido se envian los datos a kinect_screen
+		#if es_nombre_valido and es_dir_valido:
+		#	print "self.manager.screen_names tiene: %s\n" % self.manager.screen_names
+		#	if 'capturaKinect' in self.manager.screen_names:
+		#		print "Borrada kinect_screen\n"
+		#		kinect_screen1 = self.manager.get_screen('capturaKinect')
+		#		self.manager.remove_widget(kinect_screen1)
+		#	kinect_screen = kinectviewer.KinectScreen(name=cadNueva)
+		#	self.manager.add_widget(kinect_screen)
+		#	print "Agregada screen nueva desde dialogoPropsCaptura: %s\n" % cadNueva
+		#	kinect_screen.setDatosCaptura(self.nombre_cap.text,
+		#		self.dir_chooser.path)
+		#	print "Data SETEADA!!! con: nombre_cap = ",self.nombre_cap.text,"; dir_trabajo = ",self.dir_chooser.selection[0]
+		#	self.manager.current = cadNueva
 
 
 	def crearDir(self,componente):

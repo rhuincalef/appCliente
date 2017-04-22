@@ -1,0 +1,113 @@
+#:kivy 1.0
+
+#:import dictAdapter kivy.adapters.dictadapter
+#:import compItem kivy.uix.listview
+#:import appModule kivy.app
+#:import const constantes
+  
+<SettingScreen>:
+	listado1: listado
+	titulo1: titulo
+	layout_general: layout_principal 
+
+    GridLayout:
+		id: layout_principal
+		orientation: 'vertical'
+		cols: 1
+		rows: 3
+
+	    Label:
+	    	id: titulo
+	    	text: "Ingrese el nombre de la calle/altura de la que desea traer las fallas"
+	    	size_hint:(1,0.05)
+	    	color: 0,0,0,1
+			canvas.before:
+	            Color:
+	                #rgba: 1,1,1, 1
+	                rgba: const.COLOR_LABELS_RGBA
+	            Rectangle:
+	                pos: self.pos
+	                size: self.size
+		
+	    # Headers de la tabla de datos de las fallas
+	    GridLayout:
+	    	orientation: 'horizontal'
+	    	cols:3
+	    	rows:1
+	    	size_hint:(1,0.07)
+			Label:
+		    	text: "ID"
+		    	color: 1,1,1,1
+				canvas.before:
+		            Color:
+		                #rgba: 0.458, 0.458, 0.458,1
+		                rgba: const.COLOR_HEADERS_TABLA
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size
+			Label:
+		    	text: "Calle"
+		    	color: 1, 1, 1,1
+				canvas.before:
+		            Color:
+		                #rgba: 0.458, 0.458, 0.458,1
+		                rgba: const.COLOR_HEADERS_TABLA
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size                
+
+			Label:
+		    	text: "Altura"
+		    	color: 1, 1,1,1
+				canvas.before:
+		            Color:
+		                #rgba: 0.458, 0.458, 0.458,1
+		                rgba: const.COLOR_HEADERS_TABLA
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size                
+		                
+
+		#ListView de las fallas
+	    GridLayout:
+	    	cols:1
+	    	rows:2
+	    	orientation: 'vertical'
+	    	size_hint:(1,0.7)
+
+		    ListView:
+		    	id:listado
+
+		    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().getCapturadorInformados().getColBachesInformados(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)
+
+		    	
+		    	# Tamanio en porcentajes con respecto al widget anterior
+		    	size_hint:(1,0.9)
+		      
+		    GridLayout:
+		    	id: layout_botones
+		    	orientation: 'horizontal'
+		    	cols: 2
+		    	rows: 1
+
+		    	# Tamanio en porcentajes con respecto al widget anterior
+		    	size_hint:(1,0.07)
+		    	col_force_default: True
+		    	col_default_width: 150
+
+		    	#Espaciado entre los componentes del layout (en porcentaje del widget)
+		    	spacing: ( root.width * 0.20 ),0
+
+		    	#Relleno entre el layout y los widgets hijos
+		    	padding: (root.width * 0.24),0,0,0
+
+			    Button:
+			    	id: bt_capturar_fallas
+			    	text: "Realizar captura"
+			    	on_press: root.obtener_fallas()
+
+				Button:	
+					id: bt_volver
+					#on_press: root.manager.current = 'menutiposfalla'
+					on_press: root.volver()
+					text: "Volver"

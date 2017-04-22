@@ -1,0 +1,2 @@
+from utilscfg import convert_unicode,leer_configuracion,ROOT_PCD_FOLDER,URL_UPLOAD_SERVER
+__all__ = [convert_unicode,leer_configuracion,ROOT_PCD_FOLDER,URL_UPLOAD_SERVER]

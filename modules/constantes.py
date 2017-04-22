@@ -221,3 +221,8 @@ OPCIONES_CAPTURA = ['xyz_rgb','xyz']
 
 TIPO_GPS_DEFAULT = OPCIONES_GPS[0]  #Alternativa 'realgps'
 TIPO_CAPTURA_DEFAULT = OPCIONES_CAPTURA[0] # Alternativa 'xyz'
+
+
+# Timeout para cerrar la aplicacion porque no se reciben datos del
+# sensor Kinect.
+TIMEOUT_KINECT_SEG = 5

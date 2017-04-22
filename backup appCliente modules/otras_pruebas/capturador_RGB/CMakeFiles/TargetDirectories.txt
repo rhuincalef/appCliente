@@ -1,0 +1,3 @@
+/home/rodrigo/TESINA-2016-KINECT/capturador_RGB/CMakeFiles/edit_cache.dir
+/home/rodrigo/TESINA-2016-KINECT/capturador_RGB/CMakeFiles/rebuild_cache.dir
+/home/rodrigo/TESINA-2016-KINECT/capturador_RGB/CMakeFiles/openniViewer.dir

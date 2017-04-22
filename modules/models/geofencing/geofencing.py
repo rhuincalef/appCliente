@@ -32,12 +32,14 @@ class GeofencingAPI1(object):
 
 	def __init__(self):
 		self.gps = None
-		#MODIFICADO ACA!!!
 		try:
 			self.gps = serial.Serial(DEVICE_GPS_DEFAULT, 9600, timeout=1)
 			print "Instanciado GPS!\n"
 		except SerialException as e:
-			#mostrarDialogo(titulo="Error GPS ",content="Dispositivo GPS no detectado!",contiene_boton=True)
+			controlador = App.get_running_app()
+			controlador.mostrarDialogoMensaje(title='Error de GPS',
+										text="Dispositivo GPS no detectado!"
+										)
 			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 			print "+++++++++++++++++++++++++++ Error dispositivo GPS no detectado! ++++++++++++++++++++++++++"
 			print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
