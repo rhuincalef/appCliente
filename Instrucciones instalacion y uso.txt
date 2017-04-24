@@ -1,4 +1,4 @@
-1.	Instalar las dependencias comunes:
+1.	Instalar las dependencias:
 
 	$sudo apt-get install -y \
 	    python-pip \
@@ -46,11 +46,11 @@
   		build-essential libgl1-mesa-dev-lts-quantal libgles2-mesa-dev-lts-quantal\
   		python-pip
 	$ sudo add-apt-repository ppa:kivy-team/kivy; sudo apt-get update
+
 Con Python2.x:
-
 	$ sudo apt-get install python-kivy
-Con Python 3.x:
 
+Con Python 3.x:
 	$ sudo apt-get install python3-kivy
 
 2. Instalar los siguientes paquetes con pip:
@@ -59,12 +59,13 @@ Con Python 3.x:
 
 3. Descargar la appCliente desde el repositorio: https://github.com/rhuincalef/appCliente.git.
 
-4. Descargar y configurar la aplicación web alojada en el repositorio https://github.com/pablo1n7/ProyectoBacheo.git , junto con las instrucciones de instalacion para reversegeocoding.
+4. Descargar y configurar la aplicación web alojada en el repositorio https://github.com/pablo1n7/ProyectoBacheo.git.
 
+5. Configurar el servidor para manejo de direcciones detalladas dentro de la carpeta "Instrucciones para configuración APIs Geocoding", en el archivo "Instrucciones configuración APIs de direcciones.txt".
 
-5.Ejecutar el comando $ python main.py -- -h para visualizar las opciones de ejecucion de la app (tipo de gps y tipos de captura). 
+5.Ejecutar el comando $ python main.py -- -h para visualizar las opciones de ejecución de la app (tipo de gps y tipos de captura). 
 
-6. Luego invocar la aplicacion con las opciones deseadas. Un ejemplo de ejecucion es:
+6. Luego invocar la aplicación con las opciones deseadas. Un ejemplo de ejecución es:
 	$ python main.py -- --gps realgps 2>&1 | tee log.txt
 
 

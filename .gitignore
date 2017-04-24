@@ -1,0 +1,13 @@
+#Ignorar los pyc
+*.pyc
+
+#Ignorar los .rec usados para almacenamiento de recorridos(archivos con varios itemfalla capturados)
+*.rec
+#Archivos de capturas
+*.pcd
+*.csv
+*.zip
+*.tar.bz
+DB_MUESTRAS_LOCALES*.json
+
+

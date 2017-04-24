@@ -44,6 +44,9 @@ from multiprocessing import Process, Pipe, Queue
 import ZEO
 import copy
 
+
+
+
 #NOTA: Los objetos "ListadoPropiedades" y "Propiedad"
 # son las propiedades necesarias para dar de alta
 # un tipo de falla con estado "Confirmado".
@@ -189,7 +192,6 @@ class ListadoFallas(list):
       cad += " - "+ str(o)
     return cad
 
-#AGREGADO RODRIGO
 from persistent import Persistent
 
 class ItemFalla(SelectableDataItem,Persistent):
@@ -385,11 +387,10 @@ class ItemFalla(SelectableDataItem,Persistent):
 
 
   def setCalleEstimada(self,calle):
-  	self.estado.setCalleEstimada(calle)
+    self.estado.setCalleEstimada(calle)
 
-
-  def setAlturaEstimada(self,altura):
-  	self.estado.setAlturaEstimada(altura)
+  def setRangosEstimados(self,rango1,rango2):
+    self.estado.setRangosEstimados(rango1,rango2)
 
 
   # Obtiene el diccionario completo para enviar cada falla al servidor.
@@ -540,12 +541,13 @@ class Capturador(object):
   #Obtiene la calle y altura de cada falla confirmada y las establece
   # en el estado 
   def obtenerDirEstimada(self,itemFalla):
-    calle,altura = self.apiClient.obtenerDirEstimada(itemFalla.getEstado().getLatitud(),
+    calle,rangoEstimado1,rangoEstimado2 = self.apiClient.obtenerDirEstimada(itemFalla.getEstado().getLatitud(),
                     itemFalla.getEstado().getLongitud())
     itemFalla.setCalleEstimada(calle)
-    itemFalla.setAlturaEstimada(altura)
+    itemFalla.setRangosEstimados(rangoEstimado1,rangoEstimado2)
 
 
+  
 
   # Envia las fallas que capturo el capturador.
   # capturador.enviarCapturas()
@@ -894,27 +896,50 @@ class CapturadorInformados(Capturador):
       obj.is_selected = False
   
   def solicitarInformados(self,calle):
-    try:
-      print "Inicio de solicitarInformados()...\n"
+    print "Inicio de solicitarInformados()...\n"
+    # Hace un GET al servidor para obtener todos los baches en una calle
+    # Para probar esta parte ejecutar apiclient/servidor_json.py.
+    dic_json = self.apiClient.getInformados(calle)
+    for key,tupla in dic_json.iteritems():
+      falla = ItemFalla()
+      estado = Informada(tupla["id"],tupla["altura"],tupla["calle"])
+      estado.cambiar(falla)
+      if falla not in self.colBachesInformados:
+        print "Falla con id %s no esta en colBachesInformados, agregando!\n" % falla.getEstado().getId()
+        self.colBachesInformados.append(falla)
+        #self.colBachesInformados = sorted(self.colBachesInformados,reverse=True)
+    self.colBachesInformados.sort()
+    self.inicializar_fallas()
+    CapturadorInformados.mostrar_coleccion(self.colBachesInformados)
+    return self.colBachesInformados
+
+
+
+  #BACKUP!
+  #def solicitarInformados(self,calle):
+  #  try:
+  #    print "Inicio de solicitarInformados()...\n"
       # Hace un GET al servidor para obtener todos los baches en una calle
       # Para probar esta parte ejecutar apiclient/servidor_json.py.
-      dic_json = self.apiClient.getInformados(calle)
-      for key,tupla in dic_json.iteritems():
-        falla = ItemFalla()
-        estado = Informada(tupla["id"],tupla["altura"],tupla["calle"])
-        estado.cambiar(falla)
-        if falla not in self.colBachesInformados:
-          print "Falla con id %s no esta en colBachesInformados, agregando!\n" % falla.getEstado().getId()
-          self.colBachesInformados.append(falla)
+  #    dic_json = self.apiClient.getInformados(calle)
+  #    for key,tupla in dic_json.iteritems():
+  #      falla = ItemFalla()
+  #      estado = Informada(tupla["id"],tupla["altura"],tupla["calle"])
+  #      estado.cambiar(falla)
+  #      if falla not in self.colBachesInformados:
+  #        print "Falla con id %s no esta en colBachesInformados, agregando!\n" % falla.getEstado().getId()
+  #        self.colBachesInformados.append(falla)
           #self.colBachesInformados = sorted(self.colBachesInformados,reverse=True)
-      self.colBachesInformados.sort()
-      self.inicializar_fallas()
-      CapturadorInformados.mostrar_coleccion(self.colBachesInformados)
-    except ExcepcionAjax, e:
-      controlador = App.get_running_app()
-      controlador.mostrarDialogoMensaje(title="Error en solicitud al servidor",
-                                          text= e.message)
-    return self.colBachesInformados
+  #    self.colBachesInformados.sort()
+  #    self.inicializar_fallas()
+  #    CapturadorInformados.mostrar_coleccion(self.colBachesInformados)
+  #  except ExcepcionAjax, e:
+  #    controlador = App.get_running_app()
+  #    controlador.mostrarDialogoMensaje(title="Error en solicitud al servidor",
+  #                                        text= e.message)
+  #  return self.colBachesInformados
+
+
 
   # Asocia la falla con la captura recien realizada.
   # capturadorinformados.asociarFalla()

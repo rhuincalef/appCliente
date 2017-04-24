@@ -23,6 +23,8 @@ import threading
 from constantes import PATH_ICONO_LUPA
 import re
 
+from apiclient1 import ExcepcionAjax,ExcepcionSinInformados
+
 
 class ObtenerInformadasScreen(Screen):
    
@@ -35,13 +37,13 @@ class ObtenerInformadasScreen(Screen):
       self.calle = None
 
     
-    def limpiar(self,cad):
-      cad2 = cad.strip()
-      cadnueva = ""
-      for word in cad2.split(" "):
-        if word != " ":
-          cadnueva += word
-      return cadnueva
+    #def limpiar(self,cad):
+    #  cad2 = cad.strip()
+    #  cadnueva = ""
+    #  for word in cad2.split(" "):
+    #    if word != " ":
+    #      cadnueva += word
+    #  return cadnueva
 
     # Valida que el string tenga solo caracteres alfanumericos y 
     # underscore.
@@ -82,16 +84,26 @@ class ObtenerInformadasScreen(Screen):
       controlador = App.get_running_app()
       #controlador.obtenerInformados(self.calle)
       #Se limpia la calle de espacios!
-      calleSaneada = self.limpiar(self.calle)
-      if self.esValida(calleSaneada):
-        controlador.obtenerInformados(calleSaneada)
+      #calleSaneada = self.limpiar(self.calle)
+      #if self.esValida(calleSaneada):
+      #  controlador.obtenerInformados(calleSaneada)
         #TODO: Borrar este delay de prueba
         #time.sleep(3)
-      else:
-        controlador.mostrarDialogoMensaje(title = "Calle invalida",
-                                          text = "Ingrese una calle valida e intentelo nuevamente"
-                                          )
-      popup.dismiss()
+      #else:
+      #  controlador.mostrarDialogoMensaje(title = "Calle invalida",
+      #                                    text = "Ingrese una calle valida e intentelo nuevamente"
+      #                                    )
+      try:
+        controlador.obtenerInformados(calle)
+      except ExcepcionAjax, e:
+        controlador = App.get_running_app()
+        controlador.mostrarDialogoMensaje(title="Error en solicitud al servidor",
+                                            text= e.message)
+      except ExcepcionSinInformados as e:
+        msgVacio = controlador.mostrarDialogoMensaje(title = "Resultado de peticion vacio",
+                                                        text = e.message)
+      finally:
+        popup.dismiss()
       
 
 

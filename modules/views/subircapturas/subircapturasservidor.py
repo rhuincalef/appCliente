@@ -24,6 +24,7 @@ from kivy.uix.listview import ListItemButton, ListItemLabel, \
         CompositeListItem, ListView
 
 from kivy.adapters import dictadapter
+import threading
 
 class SubirCapturasServidorScreen(Screen):
 	
@@ -71,12 +72,33 @@ class SubirCapturasServidorScreen(Screen):
 		self.listado_capturas.adapter.data = fallasFiltradas
 
 
+
+
 	#Envia las capturas adaptadas para el envio al servidor,
 	#
 	def enviar_capturas(self):
-		self.manager.current = 'enviocapturasserver'
+		t = threading.Thread(name="thread-existenFallasSeleccionadas",
+								target=self._existenFallasSeleccionadas)
+		t.setDaemon(True)
+		t.start()
+
 		
-		
+	def _existenFallasSeleccionadas(self):
+		existenFallas = False
+		for falla in self.listado_capturas.adapter.data:
+			if falla.is_selected:
+				existenFallas = True
+				break
+		print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
+				existenFallas
+		if not existenFallas:
+			controlador = App.get_running_app()
+			controlador.mostrarDialogoMensaje( title="Seleccion de fallas",
+												text = "Se debe seleccionar al menos una falla\n del listado para realizar un envio al servidor.")
+		else:
+			self.manager.current = 'enviocapturasserver'
+
+
 	def volver(self):
 		#Limpiar el ListView y volver
 		print "Vaciadas capturas!"

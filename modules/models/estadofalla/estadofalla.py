@@ -43,16 +43,17 @@ class Confirmada(Estado):
 		self.id = "No asignado"
 		self.latitud = lat
 		self.longitud = lon
-		#
-		self.calleEstimada = self.alturaEstimada = None
+		self.calleEstimada = self.rangoEstimado1 = self.rangoEstimado2 = None
 		self.tipoReparacion = self.tipoMaterial = self.tipoFalla = None
 
 
 	def setCalleEstimada(self,c):
 		self.calleEstimada = c
 		
-	def setAlturaEstimada(self,a):
-		self.alturaEstimada = a
+	def setRangosEstimados(self,rango1,rango2):
+		self.rangoEstimado1 = rango1
+		self.rangoEstimado2 = rango2
+
 
 	def setTipoFalla(self,f):
 		self.tipoFalla = f
@@ -148,7 +149,9 @@ class Confirmada(Estado):
 	# Retorna un listado ordenado con los atributos del itemFalla
 	def getAttributos(self):
 		calle = self.calleEstimada + "("+str(self.latitud)+")"
-		altura = str(self.alturaEstimada) + "("+str(self.longitud)+")" 
+		#altura = str(self.alturaEstimada) + "("+str(self.longitud)+")" 
+		altura = str(self.rangoEstimado1) + "-" + str(self.rangoEstimado2)\
+						+ "("+str(self.longitud)+")" 
 		return list([self.id, calle, altura ])
 		#return list([self.id, self.latitud, self.longitud])
 

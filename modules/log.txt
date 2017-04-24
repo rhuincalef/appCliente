@@ -1,4 +1,4 @@
-[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-04-22_22.txt
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-04-24_17.txt
 [[1;32mINFO[0m   ] [Kivy        ] v1.9.1
 [[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 19 2016, 06:48:10) 
 [GCC 5.4.0 20160609]
@@ -24,53 +24,101 @@ Copyright (C) 2001-2008 Kim Saunders et al.
 Distributed under the terms of the GNU GPL
 [[1;32mINFO[0m   ] [Cutbuffer   ] Provider: xclip
 [[1;32mINFO[0m   ] [CutBuffer   ] cut buffer support enabled
+[[1;32mINFO[0m   ] [ProbeSysfs  ] device match: /dev/input/event7
+[[1;32mINFO[0m   ] [MTD         ] Read event from </dev/input/event7>
 [[1;32mINFO[0m   ] [Base        ] Start application main loop
+ Exception in thread Thread-3:
+ Traceback (most recent call last):
+   File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+     self.run()
+   File "/usr/lib/python2.7/threading.py", line 754, in run
+     self.__target(*self.__args, **self.__kwargs)
+   File "/usr/lib/python2.7/dist-packages/kivy/input/providers/mtdev.py", line 219, in _thread_run
+     _device = Device(_fn)
+   File "/usr/lib/python2.7/dist-packages/kivy/lib/mtdev.py", line 131, in __init__
+     self._fd = os.open(filename, os.O_NONBLOCK | os.O_RDONLY)
+ OSError: [Errno 13] Permiso denegado: '/dev/input/event7'
+ 
 [Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 02bf
+[Stream 70] Invalid magic 4929
+[Stream 70] Invalid magic 16ca
+[Stream 70] Invalid magic 0581
+[Stream 70] Invalid magic ed5d
+[Stream 70] Invalid magic 0bbd
+[Stream 70] Invalid magic 7eaf
+[Stream 70] Invalid magic 51ea
+[Stream 70] Invalid magic a5d6
+[Stream 70] Invalid magic 20ff
 [Stream 70] Lost too many packets, resyncing...
-[Stream 70] Invalid magic ffff
-[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 7cff
+[Stream 70] Invalid magic a935
+[Stream 70] Invalid magic 2a25
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic ae15
+[Stream 70] Invalid magic 8a2d
+[Stream 70] Invalid magic 42a8
+[Stream 70] Invalid magic 604c
+[Stream 70] Invalid magic 3766
+[Stream 70] Invalid magic e65c
+[Stream 70] Invalid magic 2b65
+[Stream 70] Invalid magic 4a88
+[Stream 70] Invalid magic 4f29
+[Stream 70] Invalid magic 17ba
 [Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
-[Stream 70] Invalid magic ed81
-[Stream 70] Invalid magic e4dc
-[Stream 70] Invalid magic 6b2d
-[Stream 70] Invalid magic d6ba
-[Stream 70] Invalid magic 626c
-[Stream 70] Invalid magic 3606
-[Stream 70] Invalid magic 0b60
-[Stream 70] Invalid magic b736
-[Stream 70] Invalid magic 5acb
-[Stream 70] Invalid magic 75ae
+[Stream 70] Invalid magic 6aad
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 6d6d
+[Stream 70] Invalid magic aad5
+[Stream 70] Invalid magic c9f9
+[Stream 70] Invalid magic 2ea5
+[Stream 70] Invalid magic 59cb
+[Stream 70] Invalid magic 4608
+[Stream 70] Invalid magic d85a
+[Stream 70] Invalid magic aa85
 [Stream 70] Lost too many packets, resyncing...
 [Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
-[Stream 70] Invalid magic fb5e
-[Stream 70] Invalid magic b136
-[Stream 70] Invalid magic 9b33
-[Stream 70] Invalid magic b1b6
-[Stream 70] Invalid magic da9b
-[Stream 70] Invalid magic 2d65
-[Stream 70] Invalid magic bed7
-[Stream 70] Invalid magic 6c2d
-[Stream 70] Invalid magic 66cc
-[Stream 70] Invalid magic 6c6d
+[Stream 70] Invalid magic b025
+[Stream 70] Invalid magic a3b4
+[Stream 70] Invalid magic 71ae
+[Stream 70] Invalid magic 55ca
+[Stream 70] Invalid magic 2944
+[Stream 70] Invalid magic a5d4
+[Stream 70] Invalid magic 4be5
+[Stream 70] Invalid magic 68ec
+[Stream 70] Invalid magic 5c0b
+[Stream 70] Invalid magic 656a
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic f2be
+[Stream 70] Invalid magic 58ab
+[Stream 70] Invalid magic 9530
+[Stream 70] Invalid magic 8d51
+[Stream 70] Invalid magic b2b6
+[Stream 70] Invalid magic bbb7
+[Stream 70] Invalid magic 7b2f
+[Stream 70] Invalid magic 161a
+[Stream 70] Invalid magic 594b
+[Stream 70] Invalid magic b296
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic f55e
+[Stream 70] Invalid magic a3d4
+[Stream 70] Invalid magic 0b65
+[Stream 70] Invalid magic 4ea9
+[Stream 70] Invalid magic 76ae
+[Stream 70] Invalid magic c5d8
+[Stream 70] Invalid magic b957
+[Stream 70] Invalid magic 28d5
+[Stream 70] Invalid magic 22e6
+[Stream 70] Invalid magic ffff
 [Stream 70] Lost too many packets, resyncing...
 Hecho el registro de las clases!!
 
 Los argumentos enviados por consola son: Namespace(gps='fakegps', tipoCaptura='xyz_rgb')
 
-Abriendo BD json local ./DB_MUESTRAS_LOCALES_22-04-2017.json...
+Abriendo BD json local ./DB_MUESTRAS_LOCALES_24-04-2017.json...
 
 Inicializado Capturador
-Abriendo BD json local ./DB_MUESTRAS_LOCALES_22-04-2017.json...
+Abriendo BD json local ./DB_MUESTRAS_LOCALES_24-04-2017.json...
 
 Inicializado Capturador
 Camara detectada!
@@ -158,160 +206,251 @@ Seleccion actual -->
 ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 MOSTRANDO EL RESULTADO DE LA PETICION...
 
-screen manager -->
-['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'dialogopropscaptura', 'propsFallaConfirmada']
-cambie!
-menutiposfalla
-Atributos obtenidos: [{'clave': 'tipoReparacion', 'colPropsAsociadas': [], 'valor': 'Cementar'}, {'clave': 'tipoReparacion', 'colPropsAsociadas': [], 'valor': 'Sellar'}, {'clave': 'tipoMaterial', 'colPropsAsociadas': [], 'valor': 'Cemento'}]
+Cargado dialogo carga de fallas
 
-Iterando elemento.getClave(): tipoReparacion
+Cargando recorrido en archivo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/recorrido con tres capturas.rec
 
-Iterando elemento.getClave(): tipoReparacion
+Obteniendo recorrido...
 
-Iterando elemento.getClave(): tipoMaterial
+En obtenerRecorrido...
 
-Cambiados attrs de tiposFalla...
+En obtenerRecorrido...
 
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+Obtenido el recorrido con las capturas!
 
-PRE-ENTER!!
-La seleccion es:  []
-
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas']
-Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
-es_nombre_valido:  True
-es_dir_valido:  True
-
-Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
-
-Data SETEADA!!! con: nombre_cap =  dsa dsa sa ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
-Sensor LISTO? : True...
-
-Bindeado SPACEBAR!!
-
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-En Kinectviewer.capturar()...con idFalla -1
-
-En getDatosSensor()...
-
-len(self.queueVideo) = 0
-
-rgbSinCod.shape: (480,640)
-
-rgbSinCod.size: 921600
-
-La forma de la matriz xyz antes de filtrar en calibkinect es:
-alto:307200 ; ancho:3
-
-LLENADA dataNube! tipo: float32 
-
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
-En main.capturar(): getData()? -1
- 
-En main.capturar(): id_falla? -1
- 
-threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
-
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas
+Cerrando conexion!
 
 
-Seleccionando capturarFallaNueva...
+Mostrando la coleccion de fallas cargadas: 
 
-tipo capturador: <class 'capturador.Capturador'>
-En capturador FALLA NUEVA!!!
 
-Cambiado el estado de la falla a : Confirmada; latitud: -43.264148 - longitud: -65.290654 
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Asignadas propiedades al estado de falla confirmada!
-tipoFalla: Bache; tipoReparacion: Cementar; tipoMaterial: Cemento
+Mostrando itemfallas con estado Confirmado: 
 
-En capturador.capturar()
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas ; nombre_captura: dsa dsa sa
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Cantidad de archivos .pcd con el nombre  dsa dsa sa es :  1
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-En capturador.registrar()...
 
-Appeandeada la captura!
 
-En estado.registrar()
-Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas) - formato(pcd) - extension(.pcd)
+-------------------------------------------
 
-Llamando al manejador!
+Mostrando itemfallas con estado Informado: 
 
-Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/dsa dsa sa_1.csv 
 
-Falla (lat:-43.264148,long:-65.290654) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas) - formato(pcd) - extension(.pcd)
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Captura realizada con exito! Agregada:  dsa dsa sa_1.pcd
+Se cargo correctamente el archivo con las capturas
 
-En alamcenarCapturaLocal() ...
-BD actualizada con elementos: 
-[{u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/r\xf3drig\xf3\\ es\\ gen\xedal_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/mar\xedsel\\ es\\ gen\xedal_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/\xe1bril\\ es\\ gen\xedal_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/abr\xedl\\ es\\ gen\xedal_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/abr\xedl\\ es\\ gen\xedal_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/l\xe1l\xe1_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/hac\xe9\\ m\xe1tes\\ gu\xedll\xe9_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/hac\xe9\\ mat\xe9\\ rodr\xedg\xf3_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/tesina de rodrigo_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/tesina de r\xf3drigo_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/tesina de guille_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/tesina de guill\xe9_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/tes\xedna de rodrigo_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/rodr\xedgo es gen\xedal_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/mi primera capt\xfara_1.pcd', u'longitud': -65.290654}, {u'latitud': -43.264148, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd', u'longitud': -65.290654}]
------------------------------------------------------
-Guard[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
-ERROR: In /build/vtk6-YpT4yb/vtk6-6.2.0+dfsg1/Rendering/OpenGL/vtkOpenGLTexture.cxx, line 200
-vtkOpenGLTexture (0x281b1d0): No scalar values found for texture input!
+Menu subidas
+Refrescando vista!!!! 
+{u'rangoEstimado1': u'1799', u'calle': u'Avenida Hip\xf3lito Yrigoyen', u'rangoEstimado2': u'1899', u'calleSecundariaA': u'Av. Hip\xf3lito Yrigoyen', u'calleSecundariaB': u'Tierra del Fuego', u'estado': 0}
+{u'rangoEstimado1': u'1799', u'calle': u'Avenida Hip\xf3lito Yrigoyen', u'rangoEstimado2': u'1899', u'calleSecundariaA': u'Av. Hip\xf3lito Yrigoyen', u'calleSecundariaB': u'Tierra del Fuego', u'estado': 0}
+{u'rangoEstimado1': u'1799', u'calle': u'Avenida Hip\xf3lito Yrigoyen', u'rangoEstimado2': u'1899', u'calleSecundariaA': u'Av. Hip\xf3lito Yrigoyen', u'calleSecundariaB': u'Tierra del Fuego', u'estado': 0}
 
-[0;m[done, [0;36m79[0;m[0;m ms : [0;36m205296[0;m[0;m points]
-[0;mAvailable dimensions: [0;36mx y z rgb
-[0;m[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
-ado archivo .pcd en BD_JSON!
+Las fallas filtradas de los capturadores son: 
 
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/dsa dsa sa_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-CERRADO EL POPUP CAPTURA!!!
+-----------------------------
 
-MOSTRADO DIALOGO DE VISUALIZACION!! 
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Si desea visualizar!!
+-----------------------------
 
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/dsa dsa sa_1.csv'}]...
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+-----------------------------
 
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd'}
 
-Abierto visualizador
 
-Si desea conservar la captura
 
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/dsa dsa sa_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/capturas_pruebas/csv/dsa dsa sa_1.csv'}] en disco!
-Screen encontrada y removida!
-SCreen agregada al mananger
-Las screens actuales de screenmanager luego de switch_to son: 
-['menutiposfalla', 'menu', 'settingscreen', 'capturaKinect', 'subircapturasservidor', 'obtenerinformadas', 'enviocapturasserver', 'propsFallaConfirmada', 'dialogopropscaptura']
-CAMBIO DE DIRECTORIO!
-selection : []
+En subircapturasservidor.args_converter()...
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+row_index actual: 0
 
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+falla: -->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-PRE-ENTER!!
-DesBindeada SPACEBAR!!
+Los attrEstado son: ['No asignado', 'Avenida Hip\xc3\xb3lito Yrigoyen(-43.264148)', '1799-1899(-65.290654)']
 
-La seleccion es:  []
+>...............................................<
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 
-En dialogopropscaptura.getData(): -1
+Cambio la seleccion!
 
-controlador.getData('idFalla') > 0 ? False
+DESELECCIONANDO FALLAS!!\N
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 1
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Avenida Hip\xc3\xb3lito Yrigoyen(-43.264148)', '1799-1899(-65.290654)']
+
+>...............................................<
+
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 2
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Avenida Hip\xc3\xb3lito Yrigoyen(-43.264148)', '1799-1899(-65.290654)']
+
+>...............................................<
+
+
+Resultado de controlador.existenFallasSeleccionadas()? False
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Resultado de controlador.existenFallasSeleccionadas()? True
+
+
+lista_capturadores desde subir_capturas: 2
+
+En threadSubidaCapturas...
+
+Iterando lista de capturadores...
+
+Lista capturadores: [<capturador.Capturador object at 0x7fc312a10710>, <capturador.CapturadorInformados object at 0x7fc312a10c90>]
+
+Iterando capturador <class 'capturador.Capturador'>
+
+En capturador.enviarCapturas()
+
+Inicio ItemFalla.enviar() para la falla:
+ -->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+Upload finished! (Returned status 200 OK)
+Inicio ItemFalla.enviar() para la falla:
+ -->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+Upload finished! (Returned status 200 OK)
+Inicio ItemFalla.enviar() para la falla:
+ -->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+Upload finished! (Returned status 500 Internal Server Error)
+Desplanificando el callback de actualizacion del screen!
+
+Liberando el lock!
+
+Liberado el candadoFinSubidas
+
+Si conservar las capturas subidas en disco!
+
+Cancelado subida al servidor!
+
+Refrescando vista!!!! 
+{u'rangoEstimado1': u'1799', u'calle': u'Avenida Hip\xf3lito Yrigoyen', u'rangoEstimado2': u'1899', u'calleSecundariaA': u'Av. Hip\xf3lito Yrigoyen', u'calleSecundariaB': u'Tierra del Fuego', u'estado': 0}
+{u'rangoEstimado1': u'1799', u'calle': u'Avenida Hip\xf3lito Yrigoyen', u'rangoEstimado2': u'1899', u'calleSecundariaA': u'Av. Hip\xf3lito Yrigoyen', u'calleSecundariaB': u'Tierra del Fuego', u'estado': 0}
+{u'rangoEstimado1': u'1799', u'calle': u'Avenida Hip\xf3lito Yrigoyen', u'rangoEstimado2': u'1899', u'calleSecundariaA': u'Av. Hip\xf3lito Yrigoyen', u'calleSecundariaB': u'Tierra del Fuego', u'estado': 0}
+
+Las fallas filtradas de los capturadores son: 
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+
+-----------------------------
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+
+-----------------------------
+
+-->{ 'estado': { Confirmada; latitud: -43.264148 - longitud: -65.290654  }, 'capturas':  [Captura: nombreArchivoCaptura=mi prueba nueva_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/pruebas , nombreCaptura= mi prueba nueva;
+] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+
+-----------------------------
+
+
+
+
+Finalizado thread-FiltradoCapturas...
 

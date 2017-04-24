@@ -15,6 +15,14 @@ from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncod
 from constantes import *
 import threading
 
+import urllib
+
+
+# Clase para un getInformados vacio! 
+class ExcepcionSinInformados(Exception):
+	pass
+
+
 class ExcepcionAjax(Exception):
 	pass
 # Instalar requests con pip y toolbelt request
@@ -29,8 +37,9 @@ class ApiClientApp(object):
 		self.ya_actualizado = False
 		self.bytes_acumulados = 0
 
-	def getInformados(self,calle):
-		print "Obteniendo baches sobre calle: ",calle
+	def getInformados(self,calle1):
+		calle = urllib.quote_plus(calle1).encode('utf-8')
+		print "Obteniendo baches sobre calle:%s\n " % calle
 		try:
 			results_json = {}
 			peticion = URL_INFORMADOS + calle 
@@ -56,7 +65,8 @@ class ApiClientApp(object):
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
 			raise ExcepcionAjax(msg)
 		#RETURN para el servidor remoto
-		print "tipo results_json: %s\n" % type(results_json["datos"])
+		if len(results_json["datos"]) == 0:
+			raise ExcepcionSinInformados("No hay fallas registradas sobre la calle ingresada")
 		return self.parsear_inf(results_json["datos"])
 
 	#Metodo de parseo para el diccionario de baches informados.
@@ -138,7 +148,8 @@ class ApiClientApp(object):
 		peticion = URL_GET_DIRECCION +'latitud/'+ str(latitud) +'/longitud/'+str(longitud) 
 		response = self.conexionServer.get(peticion)
 		calle = "No disponible"
-		altura = -1
+		#altura = -1
+		rangoEstimado1 =rangoEstimado2= -1
 		try:
 			#Problema con el json enviado desde el server
 			if response.status_code == 200:
@@ -150,7 +161,9 @@ class ApiClientApp(object):
 
 			if results_json["estado"] == 0:
 				calle = results_json["calle"].encode("utf8") 
-				altura = int(results_json["altura"] )
+				#altura = int(results_json["altura"] )
+				rangoEstimado1 = int(results_json["rangoEstimado1"] )
+				rangoEstimado2 = int(results_json["rangoEstimado2"] )
 
 		except ConnectionError, e:
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
@@ -167,7 +180,8 @@ class ApiClientApp(object):
 			msg = "Error desconocido en obtenerDirEstimada(): %s" % e
 			print msg
 		finally:
-			return (calle,altura)
+			#return (calle,altura)
+			return (calle,rangoEstimado1,rangoEstimado2)
 
 
 #FORMATO A PARSEAR -->

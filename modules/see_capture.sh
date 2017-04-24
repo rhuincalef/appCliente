@@ -7,5 +7,16 @@
 #cd -
 
 #V2. pcl_viewer /home/rodrigo/TESINA-2016-KINECT/appCliente-RGB NO FUNCIONAL-23-01-2017/nuevitaaaa_1.pcd
-echo "Invocando a pcl_viewer con parametro $1"
-pcl_viewer $1
+echo "Invocando a pcl_viewer con parametro "
+VAR=""
+I=0
+for i in "$@"; do
+  if [$I -gt 0]; then
+  	VAR="$VAR $i";
+  fi
+  I="$I+1"
+done
+
+COMANDO='"'"$VAR"'"'
+echo $COMANDO
+pcl_viewer $COMANDO

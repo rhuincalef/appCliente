@@ -180,7 +180,7 @@ class MainApp(App,EventDispatcher):
 
 	def obtenerInformados(self,calle):
 		return self.capturadorInformados.solicitarInformados(calle)
-
+		
 
 	#Lee el archivo .json a partir del stream
 	def leerFallas(self,stream):
@@ -255,6 +255,23 @@ class MainApp(App,EventDispatcher):
 		print "Fin desSeleccionarFalla!\n"
 
 
+
+	# Verifica si existe al menos una falla seleccionada para enviar al 
+	# servidor antes de cargar la vista enviocapturassserver.py.
+	#def existenFallasSeleccionadas(self):
+	#	res = False
+	#	self.capturador.filtrarCapturas()
+	#	self.capturadorInformados.filtrarCapturas()
+	#	colCapturas = []
+	#	colCapturas = self.capturador.getColCapturasConfirmadas() + \
+	#					self.capturadorInformados.getColCapturasConfirmadas()
+	#	for falla in colCapturas:
+	#		if falla.is_selected:
+	#			res = True
+	#			break
+	#	print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
+	#			res
+	#	return res
 
 
 	#Envia las capturas filtradas al servidor con POST
@@ -624,12 +641,22 @@ class MainApp(App,EventDispatcher):
 	#main.cargarRecorrido().
 	def cargarRecorrido(self,archivo):
 		dicElems = Capturador.cargarRecorrido(archivo)
+		#dicElems = MainApp.filtrarCapsConsistentes(dicElems)
 		self.capturador.setColCapturasTotales(dicElems["confirmados"])
 		self.capturadorInformados.setColCapturasTotales(dicElems["informados"])
 		if len(dicElems["confirmados"]) == 0 and len(dicElems["informados"]) == 0:
 			raise ExcepcionRecorridoVacio
 		print "\nMostrando la coleccion de fallas cargadas: \n"
 		self.mostrarColItemFalla()
+
+
+	#TODO: TERMINAR ESTE METODO
+	@staticmethod
+	def filtrarCapsConsistentes(dicColCaps):
+		#colConfirmados = dicColCaps["confirmados"]
+		#colInformados = dicColCaps["informados"]
+		pass
+
 
 
 	#Obtiene las fallas confirmadas e informados de los capturadores.

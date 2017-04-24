@@ -10,7 +10,7 @@
 cuando se espera conversion de valores o lectura de archivos.(cuando se captura una falla, cuando se leen los tipos de falla del servidor,
 cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con garden.iconfonts. -->OK
 
-6. Hacer un archivo de texto con la instalacion de composer para PHP(usado para el geocoding de direcciones).
+6. Hacer un archivo de texto con la instalacion de composer para PHP(usado para el geocoding de direcciones). --> OK
 
 7. Ver como implementar el "Cancelar" de las subidas. -->OK
 
@@ -19,17 +19,22 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 9. Revisar la secuencia de dialogos cuando el servidor no esta online
  y se tiene que leer de la BDConfirmadas.json. El dialgo de "obteniendo fallas del servidor" se muestra aun cuando se cierra el dialog de "Resultados del servidor".  -->ok
 
-10. Agregar en estrategia.filtrar() que los itemfalla que se agreguen a la coleccion de confirmados, se eliminen de la colCapturasTotales. 
+10. Agregar en estrategia.filtrar() que los itemfalla que se agreguen a la coleccion de confirmados, se eliminen de la colCapturasTotales.(opcional) 
 
 11. Agregar en kinectviewer.py el on_enter() y ahi bindear la captura con la SPACEBAR. -->OK
 
-12. Hacer que kinectviewer se actualice cada vez que el screen sea cargado por el screenmanager. 
+12. Hacer que kinectviewer se actualice cada vez que el screen sea cargado por el screenmanager.(opcional) 
 
 13. Ver la excepcion que se define en error-Kinect.txt. Probablemente solucionado, se verifica siempre la obtencion de datos tanto de la camara IR del sensor como de video. -->OK
 
-14. Resolver el problema de nombres de archivo que tienen blankspaces en el nombre, dentro del modulo dialogopropscaptura.py (en el textinput).
+14. Resolver el problema de nombres de archivo que tienen blankspaces en el nombre, dentro del modulo dialogopropscaptura.py (en el textinput). -->OK
 
-15. Hacer que kinectviewer detecte la conexion al sensor y no haya que reiniciar la app.
+15. Hacer que kinectviewer detecte la conexion al sensor y no haya que reiniciar la app.(opcional)
+
+16. Hacer en main.cargarRecorrido() que luego de cargar el recorrido, se verifique la existencia de los archivos .pcd y sus .csv asociados. Si al menos el .csv no existe, que se descarten aquellas fallas y no se agreguen a la colCapturas de los capturadores.
+
+
+
 
 
 

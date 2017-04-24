@@ -1,0 +1,47 @@
+#Configuracion en el servidor.
+
+1.Crear la cuenta de usuario que será empleada por la aplicación para realizar las consultas a www.geonames.org.Cuenta app creada: appclientetw
+
+2. Instalar composer con los siguientes comandos:
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');";
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;";
+sudo php composer-setup.php --install-dir=/usr/bin/ --filename=composernew;
+sudo php -r "unlink('composer-setup.php');";
+
+
+2. Descargar e instalar con composer la librería desde https://github.com/spacedealer/geonames-api dentro del directorio web/ de la applicación web.
+
+	$ unzip geonames-api-master
+	$ mv geonames-api-master geonames-api
+	$ php /usr/bin/composernew require --prefer-dist spacedealer/geonames-api "*"
+
+3. Descargar e instalar GeocodePHP desde https://github.com/geocoder-php/Geocoder e instalarlo localmente con composer:
+	$ cd web/ #Se ingresa al dir raiz del proyecto web
+	$ tar -xvf geocoder-master.zip
+	$ mv geocoder-master geocoderPhp
+	$ cd geocoderPhp
+	$ php /usr/bin/composernew require willdurand/geocoder
+
+5. Ejecutar el script "script-agregar-rango.sql" en la consola de postgresql para agregar el soporte de rangos a la tabla DireccionModelo.
+
+NOTAS PARA LA WEBAPP:
+
+*.La appCliente cuenta con un max. de 2000 créditos por hora, 30.000 créditos mensuales y un costo para la operación "findNearestIntersectionOSMJSON" de 1 crédito por petición.
+
+*.Utilizar el metodo "findNearestIntersectionOSMJSON" para obtener la inteseccion mas cercana a la calle.
+Ej. de consulta:
+http://api.geonames.org/findNearestIntersectionOSMJSON?lat=-43.252590&lng=-65.308979&username=appclientetw
+
+
+
+
+
+
+
+
+
+
+
+
+
