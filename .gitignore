@@ -3,6 +3,10 @@
 
 #Ignorar los .rec usados para almacenamiento de recorridos(archivos con varios itemfalla capturados)
 *.rec
+*.rec.index
+*.rec.lock
+*.rec.tmp
+
 #Archivos de capturas
 *.pcd
 *.csv
