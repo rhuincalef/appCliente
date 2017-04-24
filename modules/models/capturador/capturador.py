@@ -38,11 +38,10 @@ from zc.lockfile import LockError
 
 #Interfaz para la creacion de procesos
 from multiprocessing import Process, Pipe, Queue
-
-
-
 import ZEO
 import copy
+
+from os import path
 
 
 
@@ -192,6 +191,7 @@ class ListadoFallas(list):
       cad += " - "+ str(o)
     return cad
 
+######################## Clase que representa a una Falla ####################
 from persistent import Persistent
 
 class ItemFalla(SelectableDataItem,Persistent):
@@ -412,6 +412,46 @@ class ItemFalla(SelectableDataItem,Persistent):
     for captura in self.colCapturas:
       captura.descartar(self.colCapturas)
     print "Fin de itemFalla.descartar()\n"
+
+
+  # Valida las capturas asociadas a una falla, comprobando que existan en
+  # disco y retornando TRUE si al menos existe una captura valida asociada a la
+  # falla. Si no, retorna FALSE.
+  # NOTA: Se comprueba la validez de los  archivos .csv que son los que
+  # se envian al servidor.
+  # 
+  def filtrarCapturasConsistentes(self,logger):
+    print "En filtrarCapturas consistentes!\n"
+    colCapsValidas = list()
+    for cap in self.colCapturas:
+      pathCsv = cap.getFullPathCapturaConv()
+      print "Leyendo csv: %s ; path.exists(pathCsv):%s \n" % (pathCsv,
+                                                          path.exists(pathCsv))
+      msg = ""
+      if path.exists(pathCsv):
+        colCapsValidas.append(cap)
+      else:
+        atributo1 = atributo2 = atributo3 =None
+        atributo1 = self.estado.getId()
+        if isinstance(self.estado,Confirmada):
+          atributo2 = self.estado.getLatitud()
+          atributo3 = self.estado.getLongitud()
+        else:
+          atributo2 = self.estado.getCalle()
+          atributo3 = self.estado.getAltura()
+        
+        msg = 'Captura de falla (%s,%s,%s) %s no encontrada.Descartando...' %\
+        (atributo1,atributo2,atributo3,pathCsv)
+        utils.loggearMensaje(logger,msg)
+
+    #Se establece la colCapturas actualizada a la falla
+    self.colCapturas = colCapsValidas
+    #Se retorna True si se agregaron caps validas a la itemfalla.colCapturas
+    result = False 
+    if len(self.colCapturas) > 0:
+      result = True
+    return result 
+
 
 
   @staticmethod
@@ -801,6 +841,30 @@ class Capturador(object):
     dicElems = copy.deepcopy(dicElems1)
     Capturador.cerrarConexion(conn1,stop_function)
     return dicElems
+
+
+  # Dada una coleccion de fallas detecta si la falla contiene todas
+  # sus capturas .csv en disco, en path en el que fueron almacenadas
+  # anteriormente.
+  # Retorna la coleccion de itemfalla que tienen al menos una cap. valida
+  # asociada y retorna True si existe al menos un itemfalla
+  # que no pudo ser instanciado debido a que no tiene al menos una
+  # cap. valida.
+  @staticmethod
+  def filtrarFallasConsistentes(colecccionFallas):
+    print "Validando capturas...\n"
+    colNueva = ListadoFallas()
+    hayFallasCorruptas = False
+    logger = utils.instanciarLogger(LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT)
+    print "================================================\n"
+    for falla in colecccionFallas:
+      # Si valida las capturas de una falla y actualiza la coleccion de 
+      # la misma con capturas que aun existen en disco.
+      if falla.filtrarCapturasConsistentes(logger):
+        colNueva.append(falla)
+      else:
+        hayFallasCorruptas = True
+    return colNueva,hayFallasCorruptas
 
 
   @staticmethod

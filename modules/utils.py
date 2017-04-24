@@ -20,7 +20,7 @@ from iconfonts import *
 
 from constantes import *
 from capturador import ItemFalla
-
+import logging,time
 
 
 # Muestra un popup con un boton (por defecto)
@@ -174,5 +174,34 @@ def estaSensorListo():
 				print "HUB detectado!\n"
 				HUB_OK = True
 	return CAMERA_OK and MOTOR_OK and AUDIO_OK and HUB_OK 
+
+
+
+
+# Configura y retorna una instancia de Logger para el archivo .info.
+def instanciarLogger(logFile,logLevel=LOGGING_DEFAULT_LEVEL,appLogging=APP_NAME_LOGGING):
+	if not os.path.exists(LOGS_DEFAULT_DIR):
+		os.makedirs(LOGS_DEFAULT_DIR)
+	logger = logging.getLogger(appLogging)
+	hdlr = logging.FileHandler(LOGS_DEFAULT_DIR + logFile)
+	formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s",
+                              "%d/%m/%Y-- %H:%M:%S")
+	hdlr.setFormatter(formatter)
+	logger.addHandler(hdlr)
+	logger.setLevel(logging.INFO)
+	return logger
+
+#Cambia el formato del logger para actualizar la fecha y registrar el msg
+# con la fecha y hora actual.
+def loggearMensaje(logger,msg):
+	print "Llamado loggearMensaje...\n"
+	logger.info(msg)
+	logger.info("")
+
+
+
+
+
+
 
 

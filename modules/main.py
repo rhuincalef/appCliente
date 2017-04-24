@@ -641,22 +641,27 @@ class MainApp(App,EventDispatcher):
 	#main.cargarRecorrido().
 	def cargarRecorrido(self,archivo):
 		dicElems = Capturador.cargarRecorrido(archivo)
-		#dicElems = MainApp.filtrarCapsConsistentes(dicElems)
+		#AGREGADO RODRIGO
+		dicElems["informados"],hayInformadosCorruptos = Capturador.filtrarFallasConsistentes(dicElems["informados"])
+		dicElems["confirmados"],hayConfirmadosCorruptos = Capturador.filtrarFallasConsistentes(dicElems["confirmados"])
+
 		self.capturador.setColCapturasTotales(dicElems["confirmados"])
 		self.capturadorInformados.setColCapturasTotales(dicElems["informados"])
 		if len(dicElems["confirmados"]) == 0 and len(dicElems["informados"]) == 0:
 			raise ExcepcionRecorridoVacio
 		print "\nMostrando la coleccion de fallas cargadas: \n"
-		self.mostrarColItemFalla()
-
-
-	#TODO: TERMINAR ESTE METODO
-	@staticmethod
-	def filtrarCapsConsistentes(dicColCaps):
-		#colConfirmados = dicColCaps["confirmados"]
-		#colInformados = dicColCaps["informados"]
-		pass
-
+		self.mostrarColItemFalla()			
+		#AGREAGADO RODRIGO
+		msg = "Existen elementos falla"
+		if hayInformadosCorruptos:
+			msg += " informados"
+		if hayConfirmadosCorruptos:
+			msg += " y confirmados"
+		msg += " que \nse encuentran inconsistentes.\nMás información detallada en el archivo: %s." %\
+					LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT
+		if hayInformadosCorruptos or hayConfirmadosCorruptos:
+			self.mostrarDialogoMensaje(title="Carga de fallas",
+										text=msg)
 
 
 	#Obtiene las fallas confirmadas e informados de los capturadores.

@@ -11,7 +11,14 @@
 *.pcd
 *.csv
 *.zip
+*.tar
 *.tar.bz
+*.7z
+*.rar
+
 DB_MUESTRAS_LOCALES*.json
 
+#Archivos de logging de la appCliente
+_logs/*.log
+modules/log.txt
 

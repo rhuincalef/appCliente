@@ -1,5 +1,6 @@
 # Constantes usadas por la interfaz grafica 
 from os import path
+import logging
 
 # Constante para controlar cuantos niveles puede subir el usuario en 
 # el sist. de archivos
@@ -226,3 +227,27 @@ TIPO_CAPTURA_DEFAULT = OPCIONES_CAPTURA[0] # Alternativa 'xyz'
 # Timeout para cerrar la aplicacion porque no se reciben datos del
 # sensor Kinect.
 TIMEOUT_KINECT_SEG = 5
+
+
+# CONSTANTES PARA LOGGING EN ARCHIVO
+APP_NAME_LOGGING = "appCliente"
+
+#Archivo con capturas corruptas.
+LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT = "capturasCorruptas.log"
+LOGS_DEFAULT_DIR = "_logs/"
+LOGGING_DEFAULT_LEVEL = logging.INFO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
