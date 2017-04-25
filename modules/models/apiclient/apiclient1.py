@@ -1,6 +1,6 @@
+# -*- coding: utf-8 -*-
 # Clase que realiza la comunicacion con el servidor para obtener los baches
 #  y subir archivos al servidor
-# -*- coding: utf-8 -*-
 import kivy
 kivy.require('1.0.5')
 
@@ -12,17 +12,22 @@ import requests
 from json import JSONDecoder	
 from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncoderMonitor
 #from clint.textui.progress import Bar as ProgressBar
-from constantes import *
+
+import utils
 import threading
 
 import urllib
 
 
+#Excepcion para el servidor de la webapp offline.
+class ExcepcionServidorOffLine(Exception):
+	pass
+
 # Clase para un getInformados vacio! 
 class ExcepcionSinInformados(Exception):
 	pass
 
-
+#Excepcion para un error en una peticion Ajax.
 class ExcepcionAjax(Exception):
 	pass
 # Instalar requests con pip y toolbelt request
@@ -81,7 +86,7 @@ class ApiClientApp(object):
 
 
 
-	def postCapturas(self,url,dic_envio,nombreCapturas,bytes_leidos):
+	def postCapturas(self,url,dic_envio,nombreCapturas,bytes_leidos,logger):
 		#self.bytes_leidos =  bytes_leidos
 		self.bytes_leidos =  0
 		#Crea el objeto encoder para el multipart/form-data con el dic_envio de la 
@@ -92,9 +97,20 @@ class ApiClientApp(object):
 		print('\nUpload finished! (Returned status {0} {1})'.format(
 			r.status_code, r.reason
 		))
-		if r.status_code != requests.codes.ok:
-			raise ExcepcionAjax("Error subiendo las capturas de la falla con id %s .Respuesta del servidor: %s" %\
-									(dic_envio["id"],r.reason))
+
+
+		# Se lee la respuesta como un dic con strings unicode y se loguea 
+		# el resultado en disco.
+		#
+		print "Registrando la respuesta...\n"
+		dicRespuesta = r.json()
+		infolog = str(dicRespuesta["respuesta"]) 
+		utils.loggearMensaje(logger,infolog)
+		# Si ocurre un 500 Error se lanza una excepcion.
+		if (r.status_code != requests.codes.ok) or ( int(dicRespuesta["estadoGeocoding"]) in CODIGOS_ERROR_GEOCODING):
+			raise ExcepcionAjax("Error de servidor subiendo las fallas.\nMás información en %s%s" %\
+			 (LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_INFO_SERVER ))
+
 		return self.bytes_leidos
 
 	# Actualiza los datos que se muestran respecto del nombre del archivo actual

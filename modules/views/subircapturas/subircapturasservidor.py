@@ -30,8 +30,8 @@ class SubirCapturasServidorScreen(Screen):
 	
 	def __init__(self,**kwargs):
 		super(SubirCapturasServidorScreen, self).__init__(**kwargs)
-		self.bind(on_enter=self.refrescar_vista)
-		self.listado_capturas.adapter.bind(on_selection_change=self.cambio_seleccion)
+		self.bind(on_enter = self.refrescar_vista)
+		self.listado_capturas.adapter.bind(on_selection_change = self.cambio_seleccion)
 		print "Bindeados elementos en subircapturasservidor!\n"
 
 	#Se deseleccionan los elementos cunado adapter.selection<2 porque

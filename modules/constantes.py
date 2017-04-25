@@ -71,8 +71,36 @@ FALLA_NO_ESTABLECIDA = -1
 
 # Latitud y longitud de prueba para la calle av. Hipolito Irigoyen, TW
 #http://localhost/repoProyectoBacheo/web/restapi/es_calle_valida/latitud/-43.264148/longitud/-65.290654
-LAT_PRUEBA = -43.264148
-LONG_PRUEBA = -65.290654
+#LAT_PRUEBA = -43.264148
+#LONG_PRUEBA = -65.290654
+
+# Michael Jones[1-99] e Av. Hipolito Irigoyen
+#LAT_PRUEBA = -43.2612999
+#LONG_PRUEBA = -65.2952564
+
+# Condarco [1150-1198] y Fray Luis Beltran
+#LAT_PRUEBA = -43.2599560
+#LONG_PRUEBA = -65.2986200
+
+#Cabot[1-98] y Condarco
+#LAT_PRUEBA = -43.2589910
+#LONG_PRUEBA = -65.2992550
+
+
+#Moreno[999-1099] y Cutillo
+#LAT_PRUEBA,LONG_PRUEBA = -43.2574960,-65.2976790
+
+#Muzio-j [1-99] y Moreno .
+#LAT_PRUEBA,LONG_PRUEBA = -43.2568820,-65.2990470
+
+
+#Ameguino[699-799] y sobernia nacional
+#LAT_PRUEBA,LONG_PRUEBA = -43.2591600,-65.3114380
+
+#Pelegrini[700-798] y Moreteau -->Sin conexion
+#
+LAT_PRUEBA,LONG_PRUEBA = -43.2591350,-65.3081930
+
 
 
 
@@ -93,6 +121,8 @@ URL_UPLOAD_SERVER = "http://localhost/repoProyectoBacheo/web/restapi/upload_pcd"
 
 # URL para obtener los baches informados
 #URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
+
+# http://localhost/repoProyectoBacheo/web/restapi/obtener_informados/calle/belgrano
 URL_INFORMADOS  = "http://localhost/repoProyectoBacheo/web/restapi/obtener_informados/calle/"
 
 URL_GET_DIRECCION = "http://localhost/repoProyectoBacheo/web/restapi/obtener_datos_direccion/"
@@ -234,12 +264,43 @@ APP_NAME_LOGGING = "appCliente"
 
 #Archivo con capturas corruptas.
 LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT = "capturasCorruptas.log"
+LOG_FILE_CAPTURAS_INFO_SERVER = "infoServidor.log"
 LOGS_DEFAULT_DIR = "_logs/"
 LOGGING_DEFAULT_LEVEL = logging.INFO
 
+###########################################################################################################
+########################## CONSTANTES DE CODIGOS DE ERROR DE GEOCODING DEL SERVIDOR  ##########################
+###########################################################################################################
+#NOTA: Estas constantes se encuentran definidas en la webapp en application/config/constants.php
+#
 
+DIRECCION_PHP_DIRECCION_NO_RETORNADA = -1
+DIRECCION_PHP_PETICION_SIN_RESULTADOS = -2
+DIRECCION_PHP_QUOTA_EXCEDIDA = -3
+DIRECCION_PHP_OPERACION_GEOCODING_NO_SOPORTADA = -4
+DIRECCION_PHP_API_KEY_INVALIDA = -5
+DIRECCION_PHP_LAT_LONG_NO_VALIDAS = -6
+DIRECCION_PHP_HTTP_ADAPTER_TIMEOUT_EXCEDIDO = -7
+DIRECCION_PHP_EXCEPCION_GENERICA = -8
+DIRECCION_PHP_PETICION_INTERSECCION_FALLIDA = -9
+DIRECCION_PHP_INTERSECCION_TIMEOUT_EXCEDIDO = -10
+FALLA_PHP_CALLE_NO_DISPONIBLE = -11
+DIRECCION_PHP_LAT_LONG_FUERA_CIUDAD = -12
+FALLA_INVALIDA = -13
 
-
+CODIGOS_ERROR_GEOCODING = [ DIRECCION_PHP_DIRECCION_NO_RETORNADA,
+DIRECCION_PHP_PETICION_SIN_RESULTADOS,
+DIRECCION_PHP_QUOTA_EXCEDIDA,
+DIRECCION_PHP_OPERACION_GEOCODING_NO_SOPORTADA,
+DIRECCION_PHP_API_KEY_INVALIDA,
+DIRECCION_PHP_LAT_LONG_NO_VALIDAS,
+DIRECCION_PHP_HTTP_ADAPTER_TIMEOUT_EXCEDIDO,
+DIRECCION_PHP_EXCEPCION_GENERICA,
+DIRECCION_PHP_PETICION_INTERSECCION_FALLIDA,
+DIRECCION_PHP_INTERSECCION_TIMEOUT_EXCEDIDO,
+FALLA_PHP_CALLE_NO_DISPONIBLE,
+DIRECCION_PHP_LAT_LONG_FUERA_CIUDAD,
+FALLA_INVALIDA ]
 
 
 

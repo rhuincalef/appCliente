@@ -313,6 +313,9 @@ class ItemFalla(SelectableDataItem,Persistent):
   def enviar(self,url_server,api_client,bytes_leidos):
     print "Inicio ItemFalla.enviar() para la falla:\n %s\n" % self
     controlador = App.get_running_app()
+    #Agregado Rodrigo
+    logger = utils.instanciarLogger(LOG_FILE_CAPTURAS_INFO_SERVER)
+
     if self.is_selected:
       # Se convierte cada captura en un csv y luego se envia la falla en 
       # formato JSON al servidor.
@@ -360,7 +363,8 @@ class ItemFalla(SelectableDataItem,Persistent):
           bytes_leidos = api_client.postCapturas(url_server,
                                                 falla_formateada,
                                                 capturasConvertidas,
-                                                bytes_leidos)
+                                                bytes_leidos,
+                                                logger)
           #print "\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n"
           capturasConvertidas = []
 

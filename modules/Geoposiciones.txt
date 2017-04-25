@@ -1,0 +1,23 @@
+
+#Url de prueba-->
+http://localhost/repoProyectoBacheo/web/restapi/obtener_interseccion/latitud/-43.269823/longitud/-65.287003
+
+#Geoposiciones latitud,longitud de prueba -->
+
+#Belgrano [2300-2400] y Cangallo
+-43.269823,-65.287003
+
+# Michael Jones[1-99] e Av. Hipolito Irigoyen
+-43.2612999 , -65.2952564
+
+# Condarco [1150-1198] y Fray Luis Beltrán
+-43.2599560 , -65.2986200
+
+
+#Cabot[1-98] y Condarco
+-43.2589910 , -65.2992550
+
+#Moreno[999-1099] y Cutillo
+-43.2574960,-65.2976790
+
+

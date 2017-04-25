@@ -224,6 +224,28 @@ class MainApp(App,EventDispatcher):
 
 	#Filtra aquellos itemFalla que tengan al menos una captura asocida
 	#
+	#def threadFiltradoCapturas(self):
+	#	try:
+	#		self.capturador.filtrarCapturas()
+	#		self.capturadorInformados.filtrarCapturas()
+	#		colCapturas = []
+	#		colCapturas = self.capturador.getColCapturasConfirmadas() + \
+	#			self.capturadorInformados.getColCapturasConfirmadas()
+
+			#Se produce el evento desde capturador para cerrar el dialogo
+			# de carga
+	#		self.dispatch('on_fin_obtencion_direcciones')
+	#		screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
+	#		screenCapturas.actualizarListaCaps(colCapturas)
+	#		print "Finalizado thread-FiltradoCapturas...\n"
+	##	except ExcepcionServidorOffLine as e:
+	#		raise e
+	#	finally:
+	#		pass
+		
+
+	#Filtra aquellos itemFalla que tengan al menos una captura asocida
+	#
 	def threadFiltradoCapturas(self):
 		self.capturador.filtrarCapturas()
 		self.capturadorInformados.filtrarCapturas()
@@ -333,7 +355,7 @@ class MainApp(App,EventDispatcher):
 					print "Cancelada la subida de archivos desde main.threadSubidaCapturas\n"
 					break
 		except ExcepcionAjax, e:
-			self.mostrarDialogoMensaje( title="Error en la subida de archivos",
+			self.mostrarDialogoMensaje( title="Problema en la subida de archivos",
 										text=e.message
 										)
 		finally:
@@ -347,7 +369,7 @@ class MainApp(App,EventDispatcher):
 		candadoFinSubidas.acquire()
 		print "Liberado el candadoFinSubidas\n"
 		self.mostrarDialogoMensaje( title= "Subida de capturas",
-									text = "La carga de capturas en el servidor se ha realizado con exito!")
+									text = "La operacion de subida de archivos ha finalizado")
 
 		controlador = App.get_running_app()
 		conservarDialogo = controlador.mostrarDialogoConfirmacion(
@@ -657,8 +679,8 @@ class MainApp(App,EventDispatcher):
 			msg += " informados"
 		if hayConfirmadosCorruptos:
 			msg += " y confirmados"
-		msg += " que \nse encuentran inconsistentes.\nMás información detallada en el archivo: %s." %\
-					LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT
+		msg += " que \nse encuentran inconsistentes.\nMás información en: %s." %\
+					(LOGS_DEFAULT_DIR + LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT)
 		if hayInformadosCorruptos or hayConfirmadosCorruptos:
 			self.mostrarDialogoMensaje(title="Carga de fallas",
 										text=msg)

@@ -32,8 +32,7 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 15. Hacer que kinectviewer detecte la conexion al sensor y no haya que reiniciar la app.(opcional)
 
 16. Hacer en main.cargarRecorrido() que luego de cargar el recorrido, se verifique la existencia de los archivos .pcd y sus .csv asociados. Si al menos el .csv no existe, que se descarten aquellas fallas y no se agreguen a la colCapturas de los capturadores.
-
-
+-->OK
 
 
 
