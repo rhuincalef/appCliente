@@ -9,7 +9,6 @@ class Estrategia(object):
 		raise Exception("Error este metodo debe implementarse")
 
 
-
 class EstrategiaConfirmados(Estrategia):
 
 	#TODO: Verificar si se puede armar una clase "ColFallasInformadas"
@@ -21,15 +20,19 @@ class EstrategiaConfirmados(Estrategia):
 		#solo aquellas que tienen alguna captura asociada a la colFallasConfirmadas.
 		for i in xrange(0,len(colFallasTotales)):
 			if len(colFallasTotales[i].getColCapturas()) > 0:
-				#Se genera el idFalla negativo(valido solo para las fallasnuevas
-				#capturadas en la calle)			
-				idfalla = i * (-1)
-				latitud = colFallasTotales[i].getEstado().getLatitud()
-				longitud = colFallasTotales[i].getEstado().getLongitud()
-				colFallasConfirmadas.append(colFallasTotales[i])
-
 				#Se estima la calle y altura y se asigna a la falla actual.
 				capturador.obtenerDirEstimada(colFallasTotales[i])
+				colFallasConfirmadas.append(colFallasTotales[i])
+				
+				#Se genera el idFalla negativo(valido solo para las fallasnuevas
+				#capturadas en la calle)			
+				#idfalla = i * (-1)
+				#latitud = colFallasTotales[i].getEstado().getLatitud()
+				#longitud = colFallasTotales[i].getEstado().getLongitud()
+				#colFallasConfirmadas.append(colFallasTotales[i])
+
+				#Se estima la calle y altura y se asigna a la falla actual.
+				#capturador.obtenerDirEstimada(colFallasTotales[i])
 		
 	# Retorna una tupla con (NOMBRE_CALLE,ALTURA) para mostrar en
 	# subircapturasservidor.py

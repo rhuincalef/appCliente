@@ -207,7 +207,6 @@ class MainApp(App,EventDispatcher):
 		return dialogo
 
 
-
 	def filtrarCapturas(self):
 		popup = self.mostrarDialogoEspera(title ="Subida  de capturas",
 										content= "Estimando direcciones de capturas confirmadas...")
@@ -223,49 +222,64 @@ class MainApp(App,EventDispatcher):
 		t.start()
 
 	#Filtra aquellos itemFalla que tengan al menos una captura asocida
-	#
-	#def threadFiltradoCapturas(self):
-	#	try:
-	#		self.capturador.filtrarCapturas()
-	#		self.capturadorInformados.filtrarCapturas()
-	#		colCapturas = []
-	#		colCapturas = self.capturador.getColCapturasConfirmadas() + \
-	#			self.capturadorInformados.getColCapturasConfirmadas()
+	def threadFiltradoCapturas(self):
+		print "Iniciando thread-filtrado de capturas"
+		logger = utils.instanciarLogger(LOG_FILE_FILTRADO_CAPS)
+		try:
+			self.capturador.filtrarCapturas()
+			self.capturadorInformados.filtrarCapturas()
+			colCapturas = []
+			colCapturas = self.capturador.getColCapturasConfirmadas() + \
+				self.capturadorInformados.getColCapturasConfirmadas()
+			screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
+			screenCapturas.actualizarListaCaps(colCapturas)
+			print "Finalizado thread-FiltradoCapturas...\n"
+		
+		#except ExcepcionAjax as e:
+		except ConnectionError as e:
+			print "ConnectionError en controlador.threadFiltradoCapturas()...\n"
+			errMsg = "ConnectionError (%s)" % e.message
+			utils.loggearMensaje(logger,errMsg)
+			msg = "No se pueden subir archivos hasta que se haya\n establecido conexión con el servidor.\n Más información en %s%s" %\
+				(LOGS_DEFAULT_DIR,LOG_FILE_FILTRADO_CAPS)
+			popup = self.mostrarDialogoMensaje(title = "Error de conexion con el servidor",
+												text = msg)
+			popup.bind(on_dismiss=self._regresarAMainMenu)
 
+		finally:
 			#Se produce el evento desde capturador para cerrar el dialogo
 			# de carga
-	#		self.dispatch('on_fin_obtencion_direcciones')
-	#		screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
-	#		screenCapturas.actualizarListaCaps(colCapturas)
-	#		print "Finalizado thread-FiltradoCapturas...\n"
-	##	except ExcepcionServidorOffLine as e:
-	#		raise e
-	#	finally:
-	#		pass
-		
+			self.dispatch('on_fin_obtencion_direcciones')
 
+
+	# Regresa al menu principal
+	def _regresarAMainMenu(self,instance):
+		print "En _regresarAMainMenu()...\n"
+		self.screen_manager.current = "menu"
+
+	# BACKUP!
 	#Filtra aquellos itemFalla que tengan al menos una captura asocida
 	#
-	def threadFiltradoCapturas(self):
-		self.capturador.filtrarCapturas()
-		self.capturadorInformados.filtrarCapturas()
-		colCapturas = []
-		colCapturas = self.capturador.getColCapturasConfirmadas() + \
-						self.capturadorInformados.getColCapturasConfirmadas()
+	#def threadFiltradoCapturas(self):
+	#	self.capturador.filtrarCapturas()
+	#	self.capturadorInformados.filtrarCapturas()
+	#	colCapturas = []
+	#	colCapturas = self.capturador.getColCapturasConfirmadas() + \
+	#					self.capturadorInformados.getColCapturasConfirmadas()
 
 		# Se deseleccionan las fallas antes de cargar el screen con las mismas
-		print "\nLas fallas filtradas de los capturadores son: \n"
-		for falla in colCapturas:
-			print "%s\n" % falla
-			print "-----------------------------\n"
-		print "\n\n"
+	#	print "\nLas fallas filtradas de los capturadores son: \n"
+	#	for falla in colCapturas:
+	#		print "%s\n" % falla
+	#		print "-----------------------------\n"
+	#	print "\n\n"
 
 		#Se produce el evento desde capturador para cerrar el dialogo
 		# de carga
-		self.dispatch('on_fin_obtencion_direcciones')
-		screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
-		screenCapturas.actualizarListaCaps(colCapturas)
-		print "Finalizado thread-FiltradoCapturas...\n"
+	#	self.dispatch('on_fin_obtencion_direcciones')
+	#	screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
+	#	screenCapturas.actualizarListaCaps(colCapturas)
+	#	print "Finalizado thread-FiltradoCapturas...\n"
 		
 
 	#Este elemento establece el campo is_selected como FALSE de las fallas
@@ -578,7 +592,10 @@ class MainApp(App,EventDispatcher):
 						}
 		msg = ""
 		msg2 = ""
+		print "Iniciando threadGetPropsConfirmadas()...\n"
+		logger = utils.instanciarLogger(LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
 		try:
+
 			# Se cargan las propiedades desde el servidor y si se tiene exito
 			# se crea un resplado local
 			self.capturador.obtenerPropsConfirmadas()
@@ -586,26 +603,38 @@ class MainApp(App,EventDispatcher):
 			self.capturador.crearBackupConfirmados()
 			msg = "Tipos de falla obtenidos correctamente\n desde servidor!"
 		except (ExcepcionTipoFallaIncompleta,ExcepcionAjax) as e:
-			msgAux = "Excepcion:\n %s" % e
-			msg2 = "\n(" + msgAux + ")" 
-			print msg2
-			print "\n%s\n" % msg
+
+			utils.loggearMensaje(logger,str(e.message))
 			# Si no se puede conectar con el servidor se intenta
 			# cargar un respaldo de los atributos de los tipos de falla
 			try:
 				self.capturador.cargarAtributosDesdeBDLocal()
 				print "Despues de capturador.cargarAtributosDesdeBDLocal()\n"
-				msg = "Tipos de falla cargados desde BD Local."
+				msg = "Tipos de falla cargados desde BD Local.\n Más información en %s%s" %\
+					(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
+
 			except ExcepcionSinDatosTiposFalla as e:
-				msg = "ERROR al obtener tipos de falla.\n Sin datos disponibles: %s\n" % e
+				msg = "ERROR al obtener tipos de falla.\nSin datos disponibles.\n Más información en %s%s" %\
+					(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
+				errMsg = "ExcepcionSinDatosTiposFalla ocurrio:\n %s" % e.message
+				utils.loggearMensaje(logger,errMsg)
+
 			except ExcepcionTipoFallaIncompleta as e:
-				msg = "ExcepcionTipoFallaIncompleta en carga atributos locales:\n %s" % e
+				msg = " Error en la carga atributos locales.\n Más información en %s%s" %\
+					(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
+				errMsg = "ExcepcionTipoFallaIncompleta ocurrio:\n %s" % e.message
+				utils.loggearMensaje(logger,errMsg)		
 
 		except Exception as e: 
-			msg = "Excepcion desconocida en threadGetPropsConfirmadas\n: %s\n" % e 
+			msg = "Excepcion desconocida en threadGetPropsConfirmadas.\n Mas información en %s%s\n" %\
+				(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
+			errMsg = "Excepcion desconocida (%s) ocurrio en threadGetPropsConfirmadas:\n %s" % (type(e),e.message)
+			utils.loggearMensaje(logger,errMsg)
+
 		finally:
-			resultPeticion["msg"] = msg + msg2 
-			print msg + msg2
+			#resultPeticion["msg"] = msg + msg2 
+			resultPeticion["msg"] = msg 
+			print msg
 			popup.bind(on_dismiss = self.desvanecidoPopupConfirmadas)
 			popup.dismiss()
 			self.mostrarResultPeticion(resultPeticion,popup)

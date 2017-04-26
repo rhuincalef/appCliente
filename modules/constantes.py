@@ -263,9 +263,14 @@ TIMEOUT_KINECT_SEG = 5
 APP_NAME_LOGGING = "appCliente"
 
 #Archivo con capturas corruptas.
+LOGS_DEFAULT_DIR = "_logs/"
+
 LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT = "capturasCorruptas.log"
 LOG_FILE_CAPTURAS_INFO_SERVER = "infoServidor.log"
-LOGS_DEFAULT_DIR = "_logs/"
+LOG_FILE_CAPTURAS_PROPS_CONFIRMADA = "infoCargaPropiedades.log"
+#Usado para el metodo subir_archivos que llama a filtrarCapturas()
+LOG_FILE_FILTRADO_CAPS = "infoFiltradoCaps.log"
+
 LOGGING_DEFAULT_LEVEL = logging.INFO
 
 ###########################################################################################################

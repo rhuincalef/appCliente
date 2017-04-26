@@ -19,10 +19,6 @@ import threading
 import urllib
 
 
-#Excepcion para el servidor de la webapp offline.
-class ExcepcionServidorOffLine(Exception):
-	pass
-
 # Clase para un getInformados vacio! 
 class ExcepcionSinInformados(Exception):
 	pass
@@ -193,7 +189,7 @@ class ApiClientApp(object):
 			print "Cuerpo de la peticion: \n %s" % response.text 
 			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 		except Exception,e:
-			msg = "Error desconocido en obtenerDirEstimada(): %s" % e
+			msg = "Error desconocida (%s) en obtenerDirEstimada(): %s" % (type(e),e)
 			print msg
 		finally:
 			#return (calle,altura)
@@ -244,14 +240,17 @@ class ApiClientApp(object):
 				raise ExcepcionAjax(msg)
 			
 		except ValueError,e:
-			msg = "Error parseando la peticion a formato JSON.Peticion impresa en la linea de comandos."
-			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
-			print "Cuerpo de la peticion: \n %s" % response.text 
-			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
+			print "Value error en getProspConfirmada()!\n"
+			msg = "ValueError: Error parseando la peticion a formato JSON (response.text = %s)\n" % response.text
+			#print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
+			#print "Cuerpo de la peticion: \n %s" % response.text 
+			#print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 			raise ExcepcionAjax(msg)
 
 		except ConnectionError, e:
-			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea.Buscando BD con\n atributos de tipos de fallas en disco."
+			print "ConnectionError en getPropsConfirmados()!\n"
+			#msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea.Buscando BD con\n atributos de tipos de fallas en disco."
+			msg = "Error al establecer conexion con el servidor.\n (Excepcion ConnectionError: %s)" % e.message
 			raise ExcepcionAjax(msg)
 		return self.parsear_datos_confirmados(results_json)
 
