@@ -19,7 +19,6 @@ from os import path, makedirs
 from tools import *
 from xbase import XBase
 from notification import XError
-#from form import XTextInput
 from form import *
 from notification import XNotification, XConfirmation, XError
 

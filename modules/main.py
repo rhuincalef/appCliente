@@ -245,7 +245,6 @@ class MainApp(App,EventDispatcher):
 			popup = self.mostrarDialogoMensaje(title = "Error de conexion con el servidor",
 												text = msg)
 			popup.bind(on_dismiss=self._regresarAMainMenu)
-
 		finally:
 			#Se produce el evento desde capturador para cerrar el dialogo
 			# de carga

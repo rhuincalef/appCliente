@@ -8,6 +8,10 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.uix.label import Label
+from kivy.graphics.instructions import InstructionGroup
+from kivy.graphics import Color,Rectangle
+
+from kivy.core.window import Window
 
 from utils import *
 from iconfonts import *
@@ -48,7 +52,7 @@ class PropsFallaConfirmadaScreen(Screen):
 	# tiene index=0 por defecto.
 	def inicializarDropDown(self,listado):
 		labPrincipal = Label(text='Seleccione los atributos con los que el tipo de falla se subira al servidor',
-							size_hint =(1,0.05) )
+							size_hint =(1,0.05),color = COLOR_TEXTOS)
 		self.layout_principal.add_widget(labPrincipal)
 
 		myBtn = self.inicializarTipoFalla(listado)
@@ -81,7 +85,8 @@ class PropsFallaConfirmadaScreen(Screen):
 	def inicializarTipoFalla(self,listado):
 		labFalla = Label(text='%s Seleccione el tipo de falla' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)),
 						markup=True,
-						size_hint =(1,0.20) )
+						size_hint =(1,0.20),
+						color = COLOR_TEXTOS )
 		self.layout_principal.add_widget(labFalla)
 		# Inicializacion del boton y dropdown de Tipo de falla
 		listBtns = []
@@ -98,7 +103,8 @@ class PropsFallaConfirmadaScreen(Screen):
 		# Inicializacion del boton y dropdown de Tipo de Reparacion
 		labReparacion = Label(text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint =(1,0.20))
+							size_hint =(1,0.20),
+							color = COLOR_TEXTOS)
 		self.layout_principal.add_widget(labReparacion)
 		self.mainButtonReparacion = Button(text='Tipos de reparacion',size_hint =(1,0.05)) 
 		self.layout_principal.add_widget(self.mainButtonReparacion)
@@ -107,7 +113,8 @@ class PropsFallaConfirmadaScreen(Screen):
 		# Inicializacion del boton y dropdown de Tipo de Material
 		labMaterial = Label(text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint =(1,0.20) )
+							size_hint =(1,0.20),
+							color = COLOR_TEXTOS )
 		self.layout_principal.add_widget(labMaterial)
 		self.mainButtonMaterial = Button(text='Tipos de material', size_hint =(1,0.05)) 
 		self.layout_principal.add_widget(self.mainButtonMaterial)

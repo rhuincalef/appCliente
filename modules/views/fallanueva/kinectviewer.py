@@ -177,7 +177,7 @@ class KinectDepth(Thread):
                 frames = get_video2()
                 if frames is None or self.depths is None:
                     print "Esperando data...\n"
-                    sleep(1)
+                    sleep(2)
                     continue
 
                 qVideo.appendleft(frames)

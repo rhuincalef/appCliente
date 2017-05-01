@@ -18,12 +18,11 @@
 
 	    Label:
 	    	id: titulo
-	    	text: "Ingrese el nombre de la calle/altura de la que desea traer las fallas"
+	    	text: "Ingrese el nombre de la calle/altura de la que desea traer las fallas"	    	
 	    	size_hint:(1,0.05)
-	    	color: 0,0,0,1
+	    	color: const.COLOR_TEXTOS
 			canvas.before:
 	            Color:
-	                #rgba: 1,1,1, 1
 	                rgba: const.COLOR_LABELS_RGBA
 	            Rectangle:
 	                pos: self.pos
@@ -37,32 +36,29 @@
 	    	size_hint:(1,0.07)
 			Label:
 		    	text: "ID"
-		    	color: 1,1,1,1
+		    	color: const.COLOR_TEXTOS
 				canvas.before:
 		            Color:
-		                #rgba: 0.458, 0.458, 0.458,1
-		                rgba: const.COLOR_HEADERS_TABLA
+		                rgba: const.COLOR_LABELS_RGBA
 		            Rectangle:
 		                pos: self.pos
 		                size: self.size
 			Label:
 		    	text: "Calle"
-		    	color: 1, 1, 1,1
+		    	color: const.COLOR_TEXTOS
 				canvas.before:
 		            Color:
-		                #rgba: 0.458, 0.458, 0.458,1
-		                rgba: const.COLOR_HEADERS_TABLA
+		                rgba: const.COLOR_LABELS_RGBA
 		            Rectangle:
 		                pos: self.pos
 		                size: self.size                
 
 			Label:
 		    	text: "Altura"
-		    	color: 1, 1,1,1
+		    	color: const.COLOR_TEXTOS
 				canvas.before:
 		            Color:
-		                #rgba: 0.458, 0.458, 0.458,1
-		                rgba: const.COLOR_HEADERS_TABLA
+		                rgba: const.COLOR_LABELS_RGBA
 		            Rectangle:
 		                pos: self.pos
 		                size: self.size                

@@ -14,4 +14,10 @@
 		size_hint: (1,1)
 		#rows:7
 		orientation: 'vertical'
+		canvas.before:
+			Color:
+				rgba: const.COLOR_LABELS_RGBA
+			Rectangle:
+				pos: self.pos
+				size: self.size
 		

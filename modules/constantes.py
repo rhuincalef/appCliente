@@ -32,8 +32,11 @@ LISTADO_MODULOS = ['views/config',
 #PATH_ARCHIVO_CONFIGURACION = 'views/config/confViews.cfg'
 PATH_ARCHIVO_CONFIGURACION = 'views' + path.sep + 'config' + path.sep + 'confViews' + path.extsep + 'cfg'
 
-COLOR_LABELS_RGBA = 0,0.7,0, 1
+#Celeste claro
+COLOR_LABELS_RGBA = 102/255.0, 159/255.0, 255/255.0, 0.8
 COLOR_HEADERS_TABLA = 0.458, 0.458, 0.458,1
+COLOR_TEXTOS = 1,1,1,1
+
 
 
 #Constantes de los dialogos de carga y mensajes mostrados por la aplicacion.
