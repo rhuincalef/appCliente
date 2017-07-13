@@ -254,21 +254,70 @@ def convertirJson(url):
 
 
 
+#Conversión de caracteres de utf8 a unicode
+#In [63]: codigo
+#Out[63]: '\xc3\xa1'
+
+#In [64]: unicode(codigo,encoding="utf8")
+#Out[64]: u'\xe1'
+
+#In [68]: print unicode("Rodrig\xc3\xa1",encoding="utf8")
+#Rodrigá
+
+
+#In [70]: cad =  '{"clave": "tipoReparacion", "valor": "Cement\xc3\xa1r"}'
+
+#In [71]: unicode(cad,encoding="utf8")
+#Out[71]: u'{"clave": "tipoReparacion", "valor": "Cement\xe1r"}'
+
+#In [72]: cad2  = unicode(cad,encoding="utf8")
+
+#In [73]: cad2
+#Out[73]: u'{"clave": "tipoReparacion", "valor": "Cement\xe1r"}'
+
+#In [74]: json.loads(cad2)
+#Out[74]: {u'clave': u'tipoReparacion', u'valor': u'Cement\xe1r'}
+
+
+
+
+# Recibe un diccionario de propiedades y retorna una cadena de las propiedades
+# codificadas en unicode (con caracteres especiales convertidos), lista para
+# leer como json. 
+# NOTA IMPORTANTE: Para decodificar como json se debe convertir a unicode y reemplazar
+# los caracteres unicode que comienzan con \xNN con \uNNNN, donde N son numeros
+# hexadecimales.
+# Equivalencias en representación hexadecimal entre UNICODE Y UTF8 -->
+#http://www.utf8-chartable.de/unicode-utf8-table.pl?start=128&number=128&utf8=string-literal&unicodeinhtml=hex
+
+#Problema invalir caracter \xNN-->
+#https://stackoverflow.com/questions/4296041/simplejson-loads-get-invalid-escape-x 
+
+#In [145]: json.loads('{"clave": "tipoReparacion", "valor": "Cement\u00e1r"}')
+#Out[145]: {u'clave': u'tipoReparacion', u'valor': u'Cement\xe1r'}
+
+#In [146]: print json.loads('{"clave": "tipoReparacion", "valor": "Cement\u00e1r"}')
+#{u'clave': u'tipoReparacion', u'valor': u'Cement\xe1r'}
+
+#In [147]: j = json.loads('{"clave": "tipoReparacion", "valor": "Cement\u00e1r"}')
+
+#In [148]: type(j)
+#Out[148]: dict
+
+#In [150]: print j['valor']
+#Cementár
 
 def escaparCaracteresEspeciales(propiedad):
 	print "en escaparCaracteresEspeciales()...\n"
-	codificada = str(propiedad)
-	codificada = codificada.replace("'",'"')
-	codificada = codificada.replace("\\x","\\\\x")
-	return codificada
-	#try:
-		#Si contiene caracteres especiales utf-8 se escapa sino se retorna
-	#	cadena.encode("ascii","strict")
-	#except UnicodeDecodeError as e:	
-		#Se escapan los valores y se cambian 
-	#	codificada = codificada.replace("\\x","\\\\x")
-	#	print "reemplazada!\n"
-	#finally:
-	#	print "codificada = %s\n" % codificada 
-	#	return codificada
+	dic = {}
+	dic['clave'] = unicode(propiedad['clave'],encoding="utf8")
+	dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
+	print "dic nuevo: %s\n" % dic 
+	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final y,
+	# se reemplazan los \x por \u00
+	codificada = unicode(dic).replace("'",'"')
+	codificada = codificada.replace("u","").replace("\\x","\\u00")
+	print "codificada: %s\n" % codificada
+	return codificada 
+
 

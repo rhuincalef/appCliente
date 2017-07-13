@@ -727,7 +727,6 @@ class Capturador(object):
       for p in tipoFalla["colPropsAsociadas"]:
         print "4--\n"
         prop = json.loads(utils.escaparCaracteresEspeciales(p))
-        #prop = json.loads((str(p)).replace("'",'"'))
         propiedad = Propiedad(str(prop["clave"].encode("utf-8")),
                                 str(prop["valor"].encode("utf-8")))
         falla.asociarPropiedad(propiedad)
@@ -752,11 +751,9 @@ class Capturador(object):
     for p in propiedades:
       print "2.1--\n"
       print "Propiedad actual antes: %s\n" % p
-      valor = utils.escaparCaracteresEspeciales(p)
-      print "Propiedad actual despues: %s\n" % p
+      cadenaProp = utils.escaparCaracteresEspeciales(p)
       
-      #prop = json.loads((str(p)).replace("'",'"'))
-      prop = json.loads(valor)
+      prop = json.loads(cadenaProp)
       print "2.2--\n"
       if prop["clave"] == "tipoReparacion":
         contieneTipoReparacion = True

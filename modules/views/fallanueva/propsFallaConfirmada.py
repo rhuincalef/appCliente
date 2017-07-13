@@ -109,6 +109,7 @@ class PropsFallaConfirmadaScreen(Screen):
 		self.mainButtonReparacion = Button(text='Tipos de reparacion',size_hint =(1,0.05)) 
 		self.layout_principal.add_widget(self.mainButtonReparacion)
 
+
 	def inicializarTipoMaterial(self):
 		# Inicializacion del boton y dropdown de Tipo de Material
 		labMaterial = Label(text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
@@ -143,7 +144,6 @@ class PropsFallaConfirmadaScreen(Screen):
 
 	# Este metodo cambia el tipo de falla seleccionado en el dropdown
 	# y cambia los atributos de los dropdownTipoMaterial y dropdownTipoReparacion
-	#def cambiarAttrTiposFalla(self,dropdown,button):
 	def cambiarAttrTiposFalla(self,dropdown,btnNombre):
 		#Se limpian los dropdowns antes de cargarlos
 		#Se cambia el valor del boton que contiene al dropdown por el tipo de falla
@@ -160,8 +160,10 @@ class PropsFallaConfirmadaScreen(Screen):
 		print "Atributos obtenidos: %s\n" % atributos
 		for elem in atributos:
 			print "Iterando elemento.getClave(): %s\n" % elem.getClave()
-			btn = Button(text = elem.getValor(),size_hint_y=None, height=44)
-
+			print "Iterando elem.getValor(): %s\n" % elem.getValor()
+			#BACKUP!
+			#btn = Button(text = str(elem.getValor()),size_hint_y=None, height=44)
+			btn = Button(text = str(elem.getValor()),size_hint_y=None, height=44)
 			if elem.getClave() == 'tipoReparacion':
 				btn.bind(on_release=lambda btn: self.dropdownTipoReparacion.select(btn.text))
 				self.dropdownTipoReparacion.add_widget(btn)
@@ -171,7 +173,8 @@ class PropsFallaConfirmadaScreen(Screen):
 
 		#Se reestablecen los valores del boton principal que contiene al dropdown
 		setattr(self.mainButtonMaterial, 'text', "Seleccione el tipo de material")
-		setattr(self.mainButtonReparacion, 'text', "Seleccione el tipo de reparacion")
+		setattr(self.mainButtonReparacion, 'text', "Seleccione el tipo de reparación")
+		#setattr(self.mainButtonReparacion, 'text', "Seleccione el tipo de reparacion")
 		print "Cambiados attrs de tiposFalla...\n"
 
 
