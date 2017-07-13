@@ -114,25 +114,28 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 #################### Constantes para comunicacion con el  servidor ##########################
 #############################################################################################
 
+
+URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
+
+
+
 #URL donde se verificara si la falla se encuentra dada de alta, si es asi se da el
 # ok(200) retornando el $id. Sino, se da de alta la falla y se retorna su id, para
 # subirla al servidor. 
-URL_CHECK_FALLA = "http://localhost/repoProyectoBacheo/web/restapi/verificar_falla"
+URL_CHECK_FALLA =  URL_SERVIDOR_LOCAL + "restapi/verificar_falla"
 
 # URL donde el usuario subira las capturas en .pcd
-URL_UPLOAD_SERVER = "http://localhost/repoProyectoBacheo/web/restapi/upload_pcd"
+URL_UPLOAD_SERVER = URL_SERVIDOR_LOCAL + "restapi/upload_pcd"
 
 # URL para obtener los baches informados
 #URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
 
 # http://localhost/repoProyectoBacheo/web/restapi/obtener_informados/calle/belgrano
-URL_INFORMADOS  = "http://localhost/repoProyectoBacheo/web/restapi/obtener_informados/calle/"
+URL_INFORMADOS  = URL_SERVIDOR_LOCAL + "restapi/obtener_informados/calle/"
 
-URL_GET_DIRECCION = "http://localhost/repoProyectoBacheo/web/restapi/obtener_datos_direccion/"
+URL_GET_DIRECCION = URL_SERVIDOR_LOCAL + "restapi/obtener_datos_direccion/"
 
-
-
-URL_GET_PROPS_CONFIRMADAS = "http://localhost/repoProyectoBacheo/web/restapi/obtener_props_confirmadas" 
+URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirmadas" 
 
 
 DIVISOR_EN_MB = 1000000.0

@@ -53,6 +53,12 @@ Con Python2.x:
 Con Python 3.x:
 	$ sudo apt-get install python3-kivy
 
+
+1.5. En caso de requerirse,instalar los siguientes paquetes
+
+
+$ apt-get install pyudev pyusb
+
 2. Instalar los siguientes paquetes con pip:
 
 	$ sudo pip install numpy requests requests-toolbelt pypcd persistent zodb zeo tinydb

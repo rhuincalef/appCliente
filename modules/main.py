@@ -627,7 +627,7 @@ class MainApp(App,EventDispatcher):
 		except Exception as e: 
 			msg = "Excepcion desconocida en threadGetPropsConfirmadas.\n Mas información en %s%s\n" %\
 				(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
-			errMsg = "Excepcion desconocida (%s) ocurrio en threadGetPropsConfirmadas:\n %s" % (type(e),e.message)
+			errMsg = "Excepcion desconocida (%s) ocurrio en threadGetPropsConfirmadas:\n  ------------------>>   %s" % (type(e),e.message)
 			utils.loggearMensaje(logger,errMsg)
 
 		finally:

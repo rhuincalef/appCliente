@@ -37,6 +37,18 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 
 
 
-*EL tipoReparacion obligatorio lo va revisar Guille.
+*EL tipoReparacion obligatorio lo va revisar Guille. -->OK
+
+
+
+17-CORREGIR CONSTRUCTOR GEOFENCING PARA ACCEDER A SELF.SESSION PARA ACCEDERLO SOLO CUANDO NO SEA 'real-gps'. 
+
+18-CORREGIR EN apiclient.py "getPropsConfirmados" para obtener tipos de fallas y reparaciones con acentos.
+
+19-SEPARAR EN constantes.py CONSTANTES DE URLs PARA AGREGAR UN SERVERNAME CONFIGURABLE. -->ok
+
+
+
+
 
 

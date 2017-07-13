@@ -152,7 +152,7 @@ class GeofencingAPI(object):
 		return (latitude,longitude)
 
 	
-	# TODO: Obtiene la latidud y longitud del GPS.
+	#Obtiene la latidud y longitud ficticias del GPS.
 	def getLatLong(self):
 		return (LAT_PRUEBA,LONG_PRUEBA)
 

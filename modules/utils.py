@@ -200,8 +200,75 @@ def loggearMensaje(logger,msg):
 
 
 
+# URL CONFIRMADAS -->
+# s = "http://localhost/repoProyectoBacheo/restapi/obtener_props_confirmadas"
+#
+
+# Retorna la propiedad con caracteres unicode convertidos a string
+#
+#def adaptarPropiedadConfirmada(elementoDic):
+#	nuevoElem = {}
+##	nuevoElem = 
+#	return nuevoElem
+def convertirJson(url):
+	from json import JSONDecoder
+	JSONDecoder(object_hook=adaptarPropiedadConfirmada).decode()
+
+
+# Esta funcion escapa un string con caracteres espciales, insertando
+# "\\" delante de los caracteres especiales que comienzan con "\\" para que pueda ser levantado con JSON.
+# La propiedad confirmada de entrada de la falla fue convertida con str(),
+# y para luego ser escapada.
+
+#In [36]: p
+#Out[36]: {'clave': 'tipoReparacion', 'valor': 'Cement\xc3\xa1r'}
+
+#In [37]: val  = str(p)
+
+#In [38]: val
+#Out[38]: "{'clave': 'tipoReparacion', 'valor': 'Cement\\xc3\\xa1r'}"
+
+#In [41]: json.dumps('Cement\\xc3\\xa1r')
+#Out[41]: '"Cement\\\\xc3\\\\xa1r"'
+
+
+#VERSION QUE FUNCIONA-->
+#In [15]: p = {'clave': 'tipoReparacion', 'valor': 'Cement\xc3\xa1r'}
+
+#In [16]: str(p)
+#Out[16]: "{'clave': 'tipoReparacion', 'valor': 'Cement\\xc3\\xa1r'}"
+
+#In [17]: str(p).replace('\\x','\\\\x')
+#Out[17]: "{'clave': 'tipoReparacion', 'valor': 'Cement\\\\xc3\\\\xa1r'}"
+
+#In [18]: c = str(p).replace('\\x','\\\\x')
+
+# [26]: c
+#Out[26]: "{'clave': 'tipoReparacion', 'valor': 'Cement\\\\xc3\\\\xa1r'}"
+
+#In [27]: final = c.replace("'",'"')
+#Out[27]: '{"clave": "tipoReparacion", "valor": "Cement\\\\xc3\\\\xa1r"}'
+
+#In [31]: json.loads(final)
+#Out[31]: {u'clave': u'tipoReparacion', u'valor': u'Cement\\xc3\\xa1r'}
 
 
 
 
+def escaparCaracteresEspeciales(propiedad):
+	print "en escaparCaracteresEspeciales()...\n"
+	codificada = str(propiedad)
+	codificada = codificada.replace("'",'"')
+	codificada = codificada.replace("\\x","\\\\x")
+	return codificada
+	#try:
+		#Si contiene caracteres especiales utf-8 se escapa sino se retorna
+	#	cadena.encode("ascii","strict")
+	#except UnicodeDecodeError as e:	
+		#Se escapan los valores y se cambian 
+	#	codificada = codificada.replace("\\x","\\\\x")
+	#	print "reemplazada!\n"
+	#finally:
+	#	print "codificada = %s\n" % codificada 
+	#	return codificada
 

@@ -211,26 +211,29 @@ class ApiClientApp(object):
 #	},
 # 	...	
 #]
-	def parsear_datos_confirmados(self,dic):
+	def parsearDatosConfirmados(self,dic):
 		listaTFalla = []
+		print "4...\n"
 		for tipoFalla in dic:
 			dicParseado = {}
-			dicParseado["clave"] = str(tipoFalla["clave"])
-			dicParseado["valor"] = str(tipoFalla["valor"])
+			dicParseado["clave"] = str(tipoFalla["clave"].encode("utf-8"))
+			dicParseado["valor"] = str(tipoFalla["valor"].encode("utf-8"))
 			listaPropsAsociadas = []
 			for prop in tipoFalla["colPropsAsociadas"]:
 				d = {}
-				d["clave"] = str(prop["clave"])
-				d["valor"] = str(prop["valor"])
+				d["clave"] = str(prop["clave"].encode("utf-8"))
+				d["valor"] = str(prop["valor"].encode("utf-8"))
 				listaPropsAsociadas.append(d)
-
 			dicParseado["colPropsAsociadas"] = listaPropsAsociadas
 			listaTFalla.append(dicParseado)
+		print "5...\n"
+		print "listaTFalla:\n %s \n" % listaTFalla
 		return listaTFalla
 
 
 	def getPropsConfirmados(self):
 		results_json = {} 
+		print "EN getPropsCOnfirmadas()...\n"
 		try:
 			response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS)
 			if response.status_code == 200:
@@ -238,7 +241,7 @@ class ApiClientApp(object):
 			else:
 				msg = "Error en peticion del servidor. Codigo: %s" % response.status_code
 				raise ExcepcionAjax(msg)
-			
+			print "2...\n"
 		except ValueError,e:
 			print "Value error en getProspConfirmada()!\n"
 			msg = "ValueError: Error parseando la peticion a formato JSON (response.text = %s)\n" % response.text
@@ -252,6 +255,7 @@ class ApiClientApp(object):
 			#msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea.Buscando BD con\n atributos de tipos de fallas en disco."
 			msg = "Error al establecer conexion con el servidor.\n (Excepcion ConnectionError: %s)" % e.message
 			raise ExcepcionAjax(msg)
-		return self.parsear_datos_confirmados(results_json)
+		print "3...\n"
+		return self.parsearDatosConfirmados(results_json)
 
 
