@@ -1,0 +1,27 @@
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_17-07-13_37.txt
+[[1;32mINFO[0m   ] [Kivy        ] v1.9.1
+[[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 19 2016, 06:48:10) 
+[GCC 5.4.0 20160609]
+[[1;32mINFO[0m   ] [Factory     ] 179 symbols loaded
+[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_sdl2, img_pil (img_ffpyplayer ignored)
+[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
+[[1;32mINFO[0m   ] [Window      ] Provider: sdl2(['window_egl_rpi'] ignored)
+[[1;32mINFO[0m   ] [GL          ] OpenGL version <3.0 Mesa 11.2.0>
+[[1;32mINFO[0m   ] [GL          ] OpenGL vendor <Intel Open Source Technology Center>
+[[1;32mINFO[0m   ] [GL          ] OpenGL renderer <Mesa DRI Intel(R) Ivybridge Mobile >
+[[1;32mINFO[0m   ] [GL          ] OpenGL parsed version: 3, 0
+[[1;32mINFO[0m   ] [GL          ] Shading version <1.30>
+[[1;32mINFO[0m   ] [GL          ] Texture max size <8192>
+[[1;32mINFO[0m   ] [GL          ] Texture max units <16>
+[[1;32mINFO[0m   ] [Window      ] auto add sdl2 input provider
+[[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
+[[1;32mINFO[0m   ] [Text        ] Provider: sdl2
+[[1;33mWARNING[0m] [IOError     ] [Errno 2] No such file or directory: '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs/xpopup.mo'. Switch to the defaults.
+Hecho el registro de las clases!!
+
+ Traceback (most recent call last):
+   File "main.py", line 38, in <module>
+     from menu import *
+   File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/menu/menu.py", line 21, in <module>
+     from constantes import EXTENSION_RECORRIDO_DEFAULT
+ ImportError: cannot import name EXTENSION_RECORRIDO_DEFAULT

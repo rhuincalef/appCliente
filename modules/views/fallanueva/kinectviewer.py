@@ -166,7 +166,6 @@ class KinectDepth(Thread):
         qGreyImg2 = self.queueGreyImg2
         while not self.quit:
             try:
-                #AGREGADO RODRIGO
                 #Si no estoy detenido comienzo la recoleccion de datos
                 if self.detenido:
                     print "Se detuvo el KinectDepth thread!\n"

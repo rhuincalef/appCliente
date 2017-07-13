@@ -44,6 +44,7 @@ PATH_ICONO_RELOJ = 'resource' + path.sep + 'gifs' + path.sep + 'hourglass.gif'
 PATH_ICONO_LUPA = 'resource' + path.sep + 'gifs' + path.sep + 'lupa.gif'
 
 
+EXTENSION_RECORRIDO_DEFAULT = '.rec'
 
 #####################################################################################
 ############### VARIABLES GLOBALES USADAS POR KinectViewer ##########################
@@ -260,9 +261,8 @@ TIPO_GPS_DEFAULT = OPCIONES_GPS[0]  #Alternativa 'realgps'
 TIPO_CAPTURA_DEFAULT = OPCIONES_CAPTURA[0] # Alternativa 'xyz'
 
 
-# Timeout para cerrar la aplicacion porque no se reciben datos del
-# sensor Kinect.
-TIMEOUT_KINECT_SEG = 5
+# Timeout para cerrar la aplicacion porque no se reciben datos del sensor Kinect.
+TIMEOUT_KINECT_SEG = 2
 
 
 # CONSTANTES PARA LOGGING EN ARCHIVO

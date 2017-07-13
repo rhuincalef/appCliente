@@ -691,7 +691,6 @@ class MainApp(App,EventDispatcher):
 	#main.cargarRecorrido().
 	def cargarRecorrido(self,archivo):
 		dicElems = Capturador.cargarRecorrido(archivo)
-		#AGREGADO RODRIGO
 		dicElems["informados"],hayInformadosCorruptos = Capturador.filtrarFallasConsistentes(dicElems["informados"])
 		dicElems["confirmados"],hayConfirmadosCorruptos = Capturador.filtrarFallasConsistentes(dicElems["confirmados"])
 
@@ -701,7 +700,6 @@ class MainApp(App,EventDispatcher):
 			raise ExcepcionRecorridoVacio
 		print "\nMostrando la coleccion de fallas cargadas: \n"
 		self.mostrarColItemFalla()			
-		#AGREAGADO RODRIGO
 		msg = "Existen elementos falla"
 		if hayInformadosCorruptos:
 			msg += " informados"
@@ -714,7 +712,11 @@ class MainApp(App,EventDispatcher):
 										text=msg)
 
 
-	#Obtiene las fallas confirmadas e informados de los capturadores.
+	# GuardarRecorrido en menu principal.
+	# Guarda en un recorrido las fallas (en un archivo .rec) confirmadas e informados de los capturadores
+	# y vacia las colecciones de los dos capturadores.
+	# "nameBD" es el nombre del archivo de fallas que se guarda en disco. 
+	#
 	def persistirFallas(self,nameBD):
 		fallas = self.capturador.obtenerCapturasNoSubidas() +\
 			self.capturadorInformados.obtenerCapturasNoSubidas()

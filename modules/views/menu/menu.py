@@ -18,6 +18,8 @@ from os.path import expanduser
 from file import XFileOpen, XFileSave
 
 from capturador import ExcepcionRecorridoVacio
+from constantes import EXTENSION_RECORRIDO_DEFAULT
+
 
 class ArchivoExisteExcepcion(Exception):
     pass
@@ -59,7 +61,8 @@ class MenuScreen(Screen):
         if instance.is_canceled():
             return
         #Retorna el path completo a la BD
-        nameBD = instance.get_full_name()
+        #nameBD = instance.get_full_name()
+        nameBD = instance.get_full_name() + EXTENSION_RECORRIDO_DEFAULT
         if path.isfile(nameBD):
             controlador = App.get_running_app()
             print "tipo filename: %s; filename: %s\n" % (type(instance.filename),
