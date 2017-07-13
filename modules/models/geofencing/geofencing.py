@@ -1,3 +1,6 @@
+from kivy.app import App
+import argparse
+
 from constantes import *
 import sys,serial
 from serial import SerialException
@@ -114,14 +117,14 @@ class GeofencingAPI(object):
 		dada su latitud y longitud. """
 
 	def __init__(self):
-		self.session = gps.gps()
-		self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
+		controlador = App.get_running_app()
+		# Si no es el gps real no se accede al dispositivo y se inicializa
+		# solo la BD de coordenadas
+		if not (controlador.args.gps == OPCIONES_GPS[1]):
+			self.session = gps.gps()
+			self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
 		self.bd_json = BDLocal()
-		'''
-		for x in xrange(1,100):
-			report = self.session.next()
-			print report
-		'''
+
 
 	def obtenerLatitudLongitud(self,nombre_archivo="test_file_default.pcd"):
 		t1 = time.time()

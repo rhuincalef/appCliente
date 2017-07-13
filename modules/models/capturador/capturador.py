@@ -715,25 +715,17 @@ class Capturador(object):
       msg = "Listado de tipos de falla incompleto" 
       raise ExcepcionTipoFallaIncompleta(msg)
 
-    print "1--\n"
     # Si la falla es valida, Se la crea
     # y se asocian las propidades a la misma.
     for tipoFalla in listaProps:
-      print "bucle--\n"
-      print "2--\n"
       self.validarPropsDeTipoFalla(tipoFalla)
       falla = Propiedad(tipoFalla["clave"],tipoFalla["valor"])
-      print "3--\n"
       for p in tipoFalla["colPropsAsociadas"]:
-        print "4--\n"
         prop = json.loads(utils.escaparCaracteresEspeciales(p))
         propiedad = Propiedad(str(prop["clave"].encode("utf-8")),
                                 str(prop["valor"].encode("utf-8")))
         falla.asociarPropiedad(propiedad)
-        print "5--\n"
       self.propsConfirmados.append(falla)
-    print "6--\n"
-
 
 
 
@@ -749,12 +741,10 @@ class Capturador(object):
     contieneTipoReparacion = False
     contieneTipoMaterial = False
     for p in propiedades:
-      print "2.1--\n"
-      print "Propiedad actual antes: %s\n" % p
+      #print "Propiedad actual antes: %s\n" % p
       cadenaProp = utils.escaparCaracteresEspeciales(p)
       
       prop = json.loads(cadenaProp)
-      print "2.2--\n"
       if prop["clave"] == "tipoReparacion":
         contieneTipoReparacion = True
       if prop["clave"] == "tipoMaterial":

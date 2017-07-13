@@ -314,7 +314,7 @@ def escaparCaracteresEspeciales(propiedad):
 	dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
 	print "dic nuevo: %s\n" % dic 
 	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final y,
-	# se reemplazan los \x por \u00
+	# se reemplazan los \x por \u00 para que cumplan con el estandar de JSON.
 	codificada = unicode(dic).replace("'",'"')
 	codificada = codificada.replace("u","").replace("\\x","\\u00")
 	print "codificada: %s\n" % codificada
