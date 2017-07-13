@@ -45,9 +45,9 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 
 18-CORREGIR EN apiclient.py "getPropsConfirmados" para obtener tipos de fallas y reparaciones con acentos. -->OK
 
-19-SEPARAR EN constantes.py CONSTANTES DE URLs PARA AGREGAR UN SERVERNAME CONFIGURABLE. -->ok
+19-SEPARAR EN constantes.py CONSTANTES DE URLs PARA AGREGAR UN SERVERNAME CONFIGURABLE. -->OK
 
-20-HACER QUE CUANDO SE GUARDE UN ARCHIVO DE "RECORRIDO" DE CAPTURAS SE GUARDE COMO .rec.
+20-HACER QUE CUANDO SE GUARDE UN ARCHIVO DE "RECORRIDO" DE CAPTURAS SE GUARDE COMO .rec. -->OK
 
 
 

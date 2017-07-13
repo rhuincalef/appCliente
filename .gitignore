@@ -21,4 +21,5 @@ DB_MUESTRAS_LOCALES*.json
 #Archivos de logging de la appCliente
 modules/_logs/*.log
 modules/log.txt
+backup*
 
