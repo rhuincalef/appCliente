@@ -52,6 +52,38 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 
 
 
+21. CORREGIR EN utils.py escaparCaracteresEspeciales() problema con la "u" sin acento.
+
+22. Remover marco de ventana del mismo color (como nod32).
+
+23. Autocomplete para obtener fallas informadas (obtieniendo solo calles del servidor).OPCIONAL.
+
+24. CAMBIAR LA TESINA DE REPO DESPUES DE ARREGLAR LA INTERACCION APPCLIENTE-WEBAPP. -->OK
+
+25. Incluir la criticidad en la appCliente dentro de las propiedades de la falla que se traen desde el servidor.
+
+CONSULTA CON GABRIEL -->
+
+26. Cambiar el menu principal para que el cambio se aprecie por el usuario.
+
+27. Cambiar el drop-down para indicar cambio (con colores sobre el elemento seleccionado y/o tamaño de los elementos) en "Capturar falla nueva" propiedades de la falla.
+
+29. Ver posibilidad de elegir BD_LOCAL_xxxx.json de dias anteriores.
+
+30. Hacer el select all para subir todas las fallas capturadas.
+
+31. Cambiar el icono del tipo de falla y material.
+
+32. Reemplazar el tipo de reparación por las criticidades. Incluir las criticidades en las propiedades de la falla.
+
+33. Agregar los campos de las fallas confirmadas que se envian desde appCliente hacia webapp.
+
+ 
+
+
+
+
+
 
 
 

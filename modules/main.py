@@ -16,15 +16,19 @@ from kivy.animation import Animation
 
 from constantes import *
 
+from kivy.uix.tabbedpanel import TabbedPanel,TabbedPanelHeader,TabbedPanelStrip,TabbedPanelItem
+
 # Agrega las vistas al path de Python
-def agregar_vistas(listaVistas):
-    for vista in listaVistas:
-        path_local = vista
-        sys.path.append(os.path.join( os.getcwd(), path_local))
+#def agregar_vistas(listaVistas):
+#    for vista in listaVistas:
+#        path_local = vista
+#	        sys.path.append(os.path.join( os.getcwd(), path_local))
         # sys.path.append(os.path.join(os.path.dirname('__file__'), path_local  ))
 
 #Configuracion y carpetas de las vistas de la app.
-agregar_vistas(LISTADO_MODULOS)
+#agregar_vistas(LISTADO_MODULOS)
+
+
 
 #Se importan los iconfonts para los iconos y spinners
 from iconfonts import *
@@ -68,6 +72,7 @@ gi.require_version('Gtk','3.0')
 class MainApp(App,EventDispatcher):
 	def __init__(self,**kwargs):
 		super(MainApp,self).__init__()
+		cargarConfiguraciones()
 		self.args = self.validarArgs() #Argumentos enviados por linea de comandos.
 		
 		self.register_event_type('on_fin_obtencion_direcciones')
@@ -256,30 +261,6 @@ class MainApp(App,EventDispatcher):
 		print "En _regresarAMainMenu()...\n"
 		self.screen_manager.current = "menu"
 
-	# BACKUP!
-	#Filtra aquellos itemFalla que tengan al menos una captura asocida
-	#
-	#def threadFiltradoCapturas(self):
-	#	self.capturador.filtrarCapturas()
-	#	self.capturadorInformados.filtrarCapturas()
-	#	colCapturas = []
-	#	colCapturas = self.capturador.getColCapturasConfirmadas() + \
-	#					self.capturadorInformados.getColCapturasConfirmadas()
-
-		# Se deseleccionan las fallas antes de cargar el screen con las mismas
-	#	print "\nLas fallas filtradas de los capturadores son: \n"
-	#	for falla in colCapturas:
-	#		print "%s\n" % falla
-	#		print "-----------------------------\n"
-	#	print "\n\n"
-
-		#Se produce el evento desde capturador para cerrar el dialogo
-		# de carga
-	#	self.dispatch('on_fin_obtencion_direcciones')
-	#	screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
-	#	screenCapturas.actualizarListaCaps(colCapturas)
-	#	print "Finalizado thread-FiltradoCapturas...\n"
-		
 
 	#Este elemento establece el campo is_selected como FALSE de las fallas
 	# informadas al regresar de esa vista
@@ -288,25 +269,6 @@ class MainApp(App,EventDispatcher):
 			falla.is_selected = False
 			print "Deseleccionando falla informada: %s\n" % falla
 		print "Fin desSeleccionarFalla!\n"
-
-
-
-	# Verifica si existe al menos una falla seleccionada para enviar al 
-	# servidor antes de cargar la vista enviocapturassserver.py.
-	#def existenFallasSeleccionadas(self):
-	#	res = False
-	#	self.capturador.filtrarCapturas()
-	#	self.capturadorInformados.filtrarCapturas()
-	#	colCapturas = []
-	#	colCapturas = self.capturador.getColCapturasConfirmadas() + \
-	#					self.capturadorInformados.getColCapturasConfirmadas()
-	#	for falla in colCapturas:
-	#		if falla.is_selected:
-	#			res = True
-	#			break
-	#	print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
-	#			res
-	#	return res
 
 
 	#Envia las capturas filtradas al servidor con POST
@@ -468,18 +430,12 @@ class MainApp(App,EventDispatcher):
 		return self.capturadorInformados
 
 
-	def inicializar(self,sm):
-		conf = leer_configuracion(PATH_ARCHIVO_CONFIGURACION)
-		self.cargar_vistas(sm,conf)
-    
-	def cargar_vistas(self,sm,listaVistas):
-		for kev,tupla in listaVistas.iteritems():
-			Builder.load_file(tupla["ruta_kv"])
-			MyClass = getattr(importlib.import_module(tupla["modulo"]), 
-			tupla["clase"])
-			instance = MyClass()
-			screen = MyClass(name=tupla["nombre_menu"])
-			sm.add_widget(screen)
+	#def inicializar(self,sm):
+	#	conf = leer_configuracion(PATH_ARCHIVO_CONFIGURACION)
+		#self.cargar_vistas(sm,conf)
+
+
+
 
 	def mostrar_dialogo_visualizacion(self,pathCapturaPcd,pathCapturaCsv):
 		#NOTA: Se retrasa levemente el dibujado del dialogo_visualizacion para
@@ -567,12 +523,14 @@ class MainApp(App,EventDispatcher):
 		#Se registran los fonts
 		register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 		print "En build()"
-		sm = ScreenManager()
 		self.title = TITULO_APP
-		self.inicializar(sm)
-		sm.current = SCREEN_PRINCIPAL
-		self.screen_manager = sm
-		return sm
+		tb_panel= MyTabbedPanel(do_default_tab= False,
+									size_hint= (1,1),
+									pos_hint= {'center_x': .5, 'center_y': .5},
+									tab_pos = 'top_right',
+									tab_height= 40,
+									tab_width = 170)
+        return tb_panel
 
 
 	# Obtiene las propiedades que se emplean para dar de alta
@@ -775,6 +733,8 @@ class MainApp(App,EventDispatcher):
 
 
 #Ejemplo de la ejecucion del programa para enviar los comandos parseados por argparse:
+#
+#$ python main.py 2>&1 | tee log.txt
 #$ python main.py -- --gps realgps 2>&1 | tee log.txt
 if __name__ == '__main__':
     MainApp().run()

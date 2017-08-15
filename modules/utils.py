@@ -21,42 +21,7 @@ from iconfonts import *
 from constantes import *
 from capturador import ItemFalla
 import logging,time
-
-
-# Muestra un popup con un boton (por defecto)
-#def mostrarDialogo(titulo="",content="",contiene_boton=True,contiene_spinner=False,retornar_animacion=False):
-#	layout = GridLayout(cols=1,rows=3)
-#	label = Label(text=content,size_hint=(1,0.3))
-#	layout.add_widget(label)
-#	popup = Popup(title=titulo,
-#					content=layout,
-#					size_hint=(None, None), 
-#					size=(400, 400),
-#					auto_dismiss=False)
-#	if contiene_spinner:
-#		labelRotable = Builder.load_string(SPINNER_LABEL)
-		#print "Cargado labelRotable: %s\n" % type(labelRotable)		
-#		an = Animation(p=360, duration=1) + Animation(p=0, duration=0)
-#		an.repeat = True
-##		an.start(labelRotable)
-#		layout.add_widget(labelRotable)
-#	if contiene_boton:
-##		btn = Button(text="Aceptar",size_hint=(1,0.1))
-#		layout.add_widget(btn)
-#		btn.bind(on_press=popup.dismiss)
-#	popup.open()
-#	if retornar_animacion:
-#		return popup,an
-#	return popup
-
 import freenect
-
-#BACKUP!!	
-#def conexionSensorEstablecida():		
-#	if freenect.sync_get_depth() is None:
-#		return False
-#	else:
-#		return True
 
 
 #Crea un csv para enviar al servidor.
@@ -319,5 +284,18 @@ def escaparCaracteresEspeciales(propiedad):
 	codificada = codificada.replace("u","").replace("\\x","\\u00")
 	print "codificada: %s\n" % codificada
 	return codificada 
+
+
+# Este metodo agrega los directorios de todos los modulos y utilidades que se usan
+# al path actual 
+def cargarConfiguraciones():
+	kivy.resources.resource_add_path(RESOURCE_THEME_KIVY)
+	sys.path.append(RESOURCE_CUSTOM_WIDGETS)
+	sys.path.append(RESOURCE_LIBRERIA_KIVY_GARDEN)
+	#kivy.resources.resource_add_path(RESOURCE_LIBRERIA_KIVY_GARDEN)
+	print "configuraciones de directorios cargadas!\n"
+
+
+
 
 

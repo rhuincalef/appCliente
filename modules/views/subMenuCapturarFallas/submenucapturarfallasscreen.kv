@@ -1,0 +1,34 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+
+
+<CapturarFallasScreen>:
+
+    GridLayout:
+        id: main_layout
+        cols: 2
+        #padding:[100,0,0,100]
+        #spacing: 40
+
+        Button:
+            id: bt_capturar_nueva_falla
+            markup: True
+            text: "Capturar nueva falla"
+            on_press: root.capturar_falla_nueva()
+
+        Button:
+            id: bt_obtener_fallas_informadas
+            markup: True
+            text: "Obtener fallas informadas"
+            on_press: root.obtener_fallas_informadas()
+
+        Button:
+            id: bt_capturar_falla_informada
+            markup: True
+            text: "Capturar falla informada"
+            on_press: root.capturar_falla_informada()
+
+
+
+

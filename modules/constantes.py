@@ -1,33 +1,65 @@
+# -*- coding: utf-8 -*-
+
 # Constantes usadas por la interfaz grafica 
 from os import path
 import logging
+
+
+
+# Constantes relacionadas con el dir. de instalacion de kivy
+#import os,kivy
+#DIR_RAIZ_KIVY = os.path.dirname(kivy.__file__)
+#DIR_DEFAULT_THEMES_KIVY = DIR_RAIZ_KIVY + os.path.sep + "data"+ os.path.sep + "images" 
+
+#Comando para crear altas de custom theme en appClienteNuevoDisenio/themeAppCliente: 
+# python -m kivy.atlas customAppCliente 256x256 *
+# Constantes de archivo personalizado .atlas para kivy
+
+CUSTOM_THEME_NAME = "customAppCliente.atlas"
+DIR_CUSTOM_THEME_KIVY = os.getcwd() + "/resource/themeAppCliente/"
+#CUSTOM_THEME_FILE_KIVY =  DIR_CUSTOM_THEME_KIVY + CUSTOM_THEME_NAME 
+
+
 
 # Constante para controlar cuantos niveles puede subir el usuario en 
 # el sist. de archivos
 #ROOT_PCD_FOLDER = "../"
 ROOT_PCD_FOLDER = path.pardir + path.sep
 
-TITULO_APP = "Capturador de fallas"
+TITULO_APP = "Aplicación de captura de fallas"
 
-SCREEN_PRINCIPAL = 'menu'
+#SCREEN_PRINCIPAL = 'menu'
 
 # Listado de los modulos que se deben agregar al path de Python.
-LISTADO_MODULOS = ['views/config',
-					'views/menu',
-	                'views/tiposfalla',
-	                'views/fallanueva',
-	                'views/obtenerfallainformada',
-	                'views/seleccionarfallainformada',
-	                'views/subircapturas',
-	                'views/loadsavedialog',
-	                'models/captura',
-	                'models/apiclient',
-	                'models/capturador',
-	                'models/estadofalla',
-	                'models/geofencing',
-	                'models/estrategia',
-	                'resource/libs'
-	              ]
+#LISTADO_MODULOS = ['views/config',
+#					'views/menu',
+#	                'views/tiposfalla',
+#	                'views/fallanueva',
+#	                'views/obtenerfallainformada',
+#	                'views/seleccionarfallainformada',
+#	                'views/subircapturas',
+#	                'views/loadsavedialog',
+#	                'models/captura',
+#	                'models/apiclient',
+#	                'models/capturador',
+#	                'models/estadofalla',
+#	                'models/geofencing',
+#	                'models/estrategia',
+#	                'resource/libs'
+#	              ]
+
+#####################################################################################################
+#################### CONSTANTES PARA LOS RECURSOS QUE SON CARGADOS DESDE RESOURCE ################### 
+#####################################################################################################
+
+# Constantes de librerias que se cargan desde resource
+RESOURCE_LIBRERIA_KIVY_GARDEN = 'resource/libs'
+RESOURCE_THEME_KIVY = DIR_CUSTOM_THEME_KIVY
+# Constante para los widgets personalizados de los screens
+RESOURCE_CUSTOM_WIDGETS = os.getcwd() + os.path.sep + "resource" + os.path.sep + "customwidgets" 
+
+
+
 
 #PATH_ARCHIVO_CONFIGURACION = 'views/config/confViews.cfg'
 PATH_ARCHIVO_CONFIGURACION = 'views' + path.sep + 'config' + path.sep + 'confViews' + path.extsep + 'cfg'
@@ -137,6 +169,17 @@ URL_INFORMADOS  = URL_SERVIDOR_LOCAL + "restapi/obtener_informados/calle/"
 URL_GET_DIRECCION = URL_SERVIDOR_LOCAL + "restapi/obtener_datos_direccion/"
 
 URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirmadas" 
+
+
+# URL para obtener las opciones de Autocompletado de appCliente
+# Ej. de invocacion -->
+# http://localhost/repoProyectoBacheo/web/restapi/obtener_sugerencias_calle/calle/ca/cantmaxsugerencias/4
+
+#URL_RAIZ = "http://localhost/repoProyectoBacheo/web"
+#URL_OBTENER_SUGERENCIAS_CALLES = URL_SERVIDOR_LOCAL + "/restapi/obtener_sugerencias_calle"
+URL_OBTENER_SUGERENCIAS_CALLES = URL_SERVIDOR_LOCAL + "restapi/obtener_sugerencias_calle"
+
+
 
 
 DIVISOR_EN_MB = 1000000.0
@@ -314,6 +357,99 @@ DIRECCION_PHP_LAT_LONG_FUERA_CIUDAD,
 FALLA_INVALIDA ]
 
 
+
+
+
+############################################################################################
+################################ CONSTANTES DE AUTOCOMPLETE ################################
+############################################################################################
+#
+
+#Autocomplete (Obtener fallas del servidor)
+CANT_SUGERENCIAS = 3
+
+
+#Diccionario de criticidades que se va a obtener del server
+
+CRITICIDADES = [
+				{
+					"id":1,
+					"nombre":"Alta Bache", 
+					"descripcion":"Para baches entre x e y"
+				},
+				{
+					"id":2,
+					"nombre":"Media Bache", 
+					"descripcion":"Para baches entre x e y"
+				},
+				{
+					"id":3,
+					"nombre":"Baja Bache", 
+					"descripcion":"Para baches entre x e y"
+				}
+]
+
+# Criticidades habilitadas para seleccionar en el menu 
+IDS_CRITICIDADES_HABILITADAS = [1,2]
+
+
+# Archivos modificados en servidor -->
+# -config/routes.php
+# -controllers/api_rest.php
+# -models/calle.php
+#
+#REGEX_FORMATO_FECHA = '.*(\d{1,2}-\d{1,2}-\d{1,2}).*'
+REGEX_FORMATO_FECHA = '.*\d+-\d+-\d+.*'
+SUBFIJO_ARCHIVOS_BD_CONFIRMADAS = ".json"
+
+
+#CONSTANTES PARA LA CARGA DE SUBMENUS CON SCREENMANAGERS INDEPENDIENTES
+LISTADO_SUB_MENUS = [
+				        #Menu con las opciones para seleccionar la BD en JSON:
+				        #   1. Crear BD actual de capturas 
+						#   2. Anexar capturas a BD de capturas anteriores
+						{
+							"titulo" : "Seleccionar BD",
+							"dirRaizModulo": "subMenuSeleccionarBD",
+							"pathConfig" : "subMenuSeleccionarBD"+ path.sep + "config" +\
+								path.sep + "subMenuSeleccionarBD.cfg"
+
+						},
+
+						#Menu de captura de fallas con las opciones:
+				        #   1."Capturar falla nueva"
+				        #   2."Obtener fallas informadas"
+				        #   3."Capturar falla informada"
+						{
+							"titulo" : "Captura de fallas",
+							"dirRaizModulo": "subMenuCapturarFallas",
+							"pathConfig" : "subMenuCapturarFallas"+ path.sep + "config" +\
+								path.sep + "subMenuCapturarFallas.cfg"
+						},
+
+						#Menu de subida de archivos al servidor con las opciones:
+        				#   1."Subir capturas al servidor"
+						{
+							"titulo" : "Subida archivos",
+							"dirRaizModulo": "subMenuServidor",
+							"pathConfig" : "subMenuServidor"+ path.sep + "config" +\
+								path.sep + "subMenuServidor.cfg"
+						},
+
+				        #Menu de persistencia de recorridos con las opciones:
+				        #   1."Guardar recorrido de fallas capturadas"
+				        #   2."Cargar recorrido de fallas"
+						{
+							"titulo" : "Almacenar recorrido",
+							"dirRaizModulo": "subMenuRecorrido",
+							"pathConfig" : "subMenuRecorrido"+ path.sep + "config" +\
+								path.sep + "subMenuRecorrido.cfg"
+						}
+					]
+
+# Constante para identificar el tipo de elemento de los archivos de configuracion
+TIPO_SUB_MENU = "subMenu"
+TIPO_SCREEN = "screen"
 
 
 

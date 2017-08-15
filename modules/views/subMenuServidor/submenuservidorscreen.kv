@@ -1,0 +1,19 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+
+<ServidorScreen>:
+
+    GridLayout:
+        id: main_layout
+        cols: 2
+        #padding:[100,0,0,100]
+        #spacing: 40
+
+        Button:
+            id: bt_subir_fallas_servidor
+            markup: True
+            text: "Subir archivos al servidor"
+            on_press: root.subir_fallas()
+
+

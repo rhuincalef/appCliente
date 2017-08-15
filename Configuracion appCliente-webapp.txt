@@ -1,0 +1,30 @@
+
+#Pasos para conigurar la interacción entre la appCliente y la aplicación web -->
+
+1. Reemplazar en constants.py el valor de la constante URL_SERVIDOR_LOCAL con el valor del directorio raiz del proyecto en codeigniter.
+
+2. Reemplazar en config.php en la aplicacion web el $config["path_web"] el directorio raiz del proyecto en codeigniter.  
+
+3. Reemplazar los archivos de configuracion_server en sus respectivas rutas en el servidor.
+
+4. Crear carpeta geonames-api y geocoderPhp en el raiz del proyecto en codeigniter de la webapp. A continuación se exponen los pasos para instalar geonames con el gestor composer:
+
+//INSTALACION DE Geocoder con composer-->
+
+1. $ sudo apt-get install curl php5-cli git
+2. $ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+3. $ IR al directorio de instalacion de geocoder, donde se desea que
+se instale el directorio vendor/ con el autoload.php usado para cargar todas las dependencias de Php.
+4. $ cd /var/www/html/repoProyectoBacheo/web/
+5. $ mkdir geocoderPhp 
+6. $ cd geocoderPhp
+7. sudo chmod -R 777 vendor/
+8. $ composer require willdurand/geocoder
+
+
+
+
+
+
+
+

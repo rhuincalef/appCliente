@@ -1,0 +1,37 @@
+#:kivy 1.0
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+
+<ResultadosFiltradosScreen>:
+    BoxLayout:
+        id: main_layout
+        orientation:'vertical'
+        
+        Label:
+            id: label_resultados
+            text: 'Seleccione uno de los siguientes archivos filtrados:'
+            size_hint:(1,0.2)
+
+        #Layout donde se agregan los archivos filtrados        
+        BoxLayout:
+        	id: layout_elementos_filtrados
+	        orientation:'vertical'
+            size_hint:(1,0.5)
+
+
+        #Footer con los botones de aceptar y cancelar
+        BoxLayout:
+        	id: footer_1
+        	orientation: 'horizontal'
+            padding: [250,290,250,0]
+            spacing: 50
+
+        	Button:
+        		id: btn_aceptar
+        		text: 'Aceptar'
+        		on_press: root.seleccionarArchivo()
+
+        	Button:
+        		id: btn_cancelar
+        		text: 'Cancelar'
+        		on_press: root.cancelar()        
+

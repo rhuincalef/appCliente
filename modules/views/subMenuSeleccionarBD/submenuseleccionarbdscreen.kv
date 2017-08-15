@@ -1,0 +1,26 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+
+
+<SeleccionarBDScreen>:
+    BoxLayout:
+        #Propiedades de Controller (heredadas de BoxLayout)
+        id: main_layout
+        orientation: 'vertical'
+        padding:[100,0,0,100]
+        spacing: 40
+
+        Button:
+            id: bt_buscar_bd_anterior
+            markup: True
+            text: "Buscar archivo anterior de BD"
+            on_press: root.buscar_bd_anterior()
+
+        Button:
+            id: bt_comenzar_nueva_bd
+            markup: True
+            text: "Comenzar una BD nueva por defecto"
+            on_press: root.comenzar_nueva_bd()
+
+

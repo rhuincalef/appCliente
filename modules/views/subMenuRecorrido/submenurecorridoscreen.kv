@@ -1,0 +1,27 @@
+#:kivy 1.0
+
+# NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+
+<RecorridoScreen>:
+
+    GridLayout:
+        id: main_layout
+        cols: 2
+        #padding:[100,0,0,100]
+        #spacing: 40
+
+        Button:
+            id: bt_guardar_recorrido
+            markup: True
+            text: "Guardar recorrido"
+            on_press: root.guardar_recorrido()
+
+        Button:
+            id: bt_cargar_recorrido
+            markup: True
+            text: "Cargar recorrido"
+            on_press: root.cargar_recorrido()
+
+
+
+
