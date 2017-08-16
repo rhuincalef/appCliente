@@ -18,28 +18,34 @@ from constantes import *
 
 from kivy.uix.tabbedpanel import TabbedPanel,TabbedPanelHeader,TabbedPanelStrip,TabbedPanelItem
 
+#Se cargan las utilidades para cargar las configuraciones
+import utils
+from utils import *
+
+#cargarConfiguraciones()
 
 #Se importan los iconfonts para los iconos y spinners
 from iconfonts import *
 
-
 #Configuracion de los paths de las views en archivo .cfg
 from utilscfg import *
 
-from kinectviewer import KinectScreen
+#Views que se cargan despues -->
+#from kinectviewer import KinectScreen
+#from kinectviewer import *
+#from menu import *
+#from settingscreen import *
+#from subircapturasservidor import *
+
 import importlib
-from menu import *
-from settingscreen import *
-from kinectviewer import *
-from subircapturasservidor import *
 from apiclient1 import *
 from capturador import *
 from captura import *
 
-import utils
-import time
-from utils import *
+#from customwidgets import MyTabbedPanel
+from customwidgets import *
 
+import time
 from kivy.event import EventDispatcher
 
 #Se importan los dialogos de la libreria xpopup 
@@ -61,12 +67,15 @@ gi.require_version('Gtk','3.0')
 class MainApp(App,EventDispatcher):
 	def __init__(self,**kwargs):
 		super(MainApp,self).__init__()
-		cargarConfiguraciones()
+		#cargarConfiguraciones()
 		self.args = self.validarArgs() #Argumentos enviados por linea de comandos.
 		
 		self.register_event_type('on_fin_obtencion_direcciones')
 		self.register_event_type('on_finalizada_captura')
 		self.register_event_type('on_fin_solicitud_prop_confirmada')
+
+		#Evento producido en el AutoComplete.
+		self.register_event_type('on_fin_obtencion_direcciones')
 		super(MainApp, self).__init__(**kwargs)
 
 		# Los capturadores comparten el mismo apiClient, que lleva la cantidad
@@ -92,6 +101,25 @@ class MainApp(App,EventDispatcher):
 		print "Valor de self.sensorConectado: %s\n" % self.sensorConectado
 		self.inicializarMonitorKinect()
 		print "Inicializado MainApp!"
+
+
+	#Handler por default del metodo de autocompletar
+	def on_fin_obtencion_direcciones(self,*args):
+		pass
+
+	#Metoodo que realiza la peticion a ApiClient1 para el autocompletado de direcciones
+	def solicitarSugerencias(self,nombreCalle,cantMaximaSugerencias):
+		sugerencias = []
+		try:
+			#sugerencias = self.modelo.solicitarSugerencias(nombreCalle,cantMaximaSugerencias)
+			sugerencias = self.capturador.apiClient.solicitarSugerencias(nombreCalle,cantMaximaSugerencias)
+		except Exception as e:
+			print "\n\n Excepcion ocurrida al solicitar las sugerencias desde el servidor (%s)\n\n " %\
+				e
+		finally:
+			print "enviando sugerencias: %s\n" % sugerencias
+			self.dispatch('on_fin_obtencion_direcciones',sugerencias)
+
 
 
 	#controlador.conexionSensorEstablecida()
@@ -248,7 +276,7 @@ class MainApp(App,EventDispatcher):
 	# Regresa al menu principal
 	def _regresarAMainMenu(self,instance):
 		print "En _regresarAMainMenu()...\n"
-		self.screen_manager.current = "menu"
+		#self.screen_manager.current = "menu"
 
 
 	#Este elemento establece el campo is_selected como FALSE de las fallas
@@ -519,7 +547,7 @@ class MainApp(App,EventDispatcher):
 									tab_pos = 'top_right',
 									tab_height= 40,
 									tab_width = 170)
-        return tb_panel
+		return tb_panel
 
 
 	# Obtiene las propiedades que se emplean para dar de alta

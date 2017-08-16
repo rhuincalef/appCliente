@@ -259,3 +259,44 @@ class ApiClientApp(object):
 		return self.parsearDatosConfirmados(results_json)
 
 
+
+	#Metodo empleado en el autcompletar para la busqueda de fallas sobre una calle
+	def solicitarSugerencias(self,nombreCalle,cantMaximaSugerencias):
+		#2. Se hace una peticion ajax al servidor al controlador.Se envian la cadena y
+		# la cantidad al servidor para obtener solamente esa cantidad como maximo.
+		# controlador.obtenerSugerenciasCalles(myCalle,CANT_SUGERENCIAS) y se obtienen
+		# las calles que tienen esa secuencia de caracteres con regex's.
+		print "En solicitarSugerencias()!!!\n\n"
+		sugerenciasObtenidas = []
+		calleCodificada = urllib.quote_plus(nombreCalle.encode("utf-8"))
+		print "calleCodificada(%s)!!!\n\n" % calleCodificada
+		results_json = {}
+		peticion = URL_OBTENER_SUGERENCIAS_CALLES + "/calle/" + calleCodificada + \
+			"/cantmaxsugerencias/" + str(cantMaximaSugerencias)
+
+		print "peticion enviada:\n\n %s \n" % peticion
+		try:
+			response = self.conexionServer.get(peticion)
+			if response.status_code == 200:
+				results_json = response.json()
+				sugerenciasObtenidas = results_json
+				#print "La respuesta en formato json es: "
+				#print results_json
+			else:
+				msg = "Error en peticion del servidor. Codigo: %s" % response.status_code
+				print "\n%s\n\n" % msg
+				#raise ExcepcionAjax(msg)
+
+		except ValueError,e:
+			msg = "Error parseando la peticion a formato JSON.Peticion impresa en la linea de comandos."
+			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
+			print "Cuerpo de la peticion: \n %s" % response.text 
+			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
+			#raise ExcepcionAjax(msg)
+		except ConnectionError, e:
+			print "ConnectionError: %s\n" % e
+			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
+			#raise ExcepcionAjax(msg)
+		finally:
+			return sugerenciasObtenidas
+

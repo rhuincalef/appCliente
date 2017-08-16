@@ -9,25 +9,19 @@ class CapturarFallasScreen(SubMenuScreen):
     def __init__(self,tabbedPanel,**kwargs):
         super(CapturarFallasScreen,self).__init__(tabbedPanel,**kwargs)
 
-    #TODO: Este metodo tiene que deshabilitar el strip de este submenu, y deshabilitar
-    # el resto de los elementos del menu.
     def capturar_falla_nueva(self):
         print "LLamando al screen de captura de fallas...\n"
         self.deshabilitarOpciones()
-        self.manager.current = "seleccionarTipoFalla"
-        #TODO: AGREGAR CODIGO ACA!
+        #self.manager.current = "seleccionarTipoFalla"
+        self.manager.current = 'propsFallaConfirmada'
 
-    #TODO: Este metodo tiene que deshabilitar el strip de este submenu, y deshabilitar
-    # el resto de los elementos del menu.
     def obtener_fallas_informadas(self):
         print "LLamando al screen de obtener fallas inforamadas...\n"
         self.deshabilitarOpciones()
-        self.manager.current = "filtradoDirecciones"
-        #TODO: AGREGAR CODIGO ACA!
+        #self.manager.current = "filtradoDirecciones"
+        self.manager.current = 'obtenerinformadas'
 
-    #TODO: Este metodo tiene que deshabilitar el strip de este submenu, y deshabilitar
-    # el resto de los elementos del menu.
     def capturar_falla_informada(self):
         print "LLamando al screen de capturar falla informada...\n"
         self.deshabilitarOpciones()
-        #TODO: AGREGAR CODIGO ACA!
+        self.manager.current = 'capturarFallaInformada'

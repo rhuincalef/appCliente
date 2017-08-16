@@ -101,4 +101,4 @@ class CapturarFallaInformadaScreen(Screen):
       controlador.agregarData("idFalla",FALLA_NO_ESTABLECIDA)
       #controlador.desSeleccionarFallas()
       controlador.desSeleccionarInformados()
-      self.manager.current = 'menutiposfalla'
+      self.manager.current = 'subMenuCapturarFalla'

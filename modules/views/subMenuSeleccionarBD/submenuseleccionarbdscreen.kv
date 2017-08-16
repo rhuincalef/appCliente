@@ -1,6 +1,9 @@
 #:kivy 1.0
 
 # NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+#:import icon iconfonts.icon
+#:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
+#:import COLOR_SPINNER constantes.COLOR_SPINNER
 
 
 <SeleccionarBDScreen>:
@@ -14,13 +17,15 @@
         Button:
             id: bt_buscar_bd_anterior
             markup: True
-            text: "Buscar archivo anterior de BD"
+            #text: "Buscar archivo anterior de BD"
+            text: "%s Buscar achivo anterior de BD" % (icon('fa-search',TAMANIO_ICONOS))
             on_press: root.buscar_bd_anterior()
 
         Button:
             id: bt_comenzar_nueva_bd
             markup: True
-            text: "Comenzar una BD nueva por defecto"
+            #text: "Comenzar una BD nueva con la fecha actual(por defecto)"
+            text: "%s Comenzar una BD nueva con la fecha actual(por defecto)" % (icon('fa-plus-circle',TAMANIO_ICONOS))
             on_press: root.comenzar_nueva_bd()
 
 

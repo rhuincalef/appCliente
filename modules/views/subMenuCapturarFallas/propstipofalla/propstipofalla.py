@@ -220,4 +220,5 @@ class PropsFallaConfirmadaScreen(Screen):
 
 
 	def cancelar(self,evt):
-		self.manager.current = 'menutiposfalla'
+		#self.manager.current = 'menutiposfalla'
+		self.manager.current = 'subMenuCapturarFalla'

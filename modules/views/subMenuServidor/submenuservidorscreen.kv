@@ -1,6 +1,9 @@
 #:kivy 1.0
 
 # NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+#:import icon iconfonts.icon
+#:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
+#:import COLOR_SPINNER constantes.COLOR_SPINNER
 
 <ServidorScreen>:
 
@@ -13,7 +16,5 @@
         Button:
             id: bt_subir_fallas_servidor
             markup: True
-            text: "Subir archivos al servidor"
+            text: "%s Subir archivos" % (icon('fa-cloud-upload',TAMANIO_ICONOS))
             on_press: root.subir_fallas()
-
-

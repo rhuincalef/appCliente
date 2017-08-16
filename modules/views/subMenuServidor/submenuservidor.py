@@ -3,7 +3,7 @@
 #
 from kivy.uix.screenmanager import ScreenManager, Screen
 from submenuscreen import *
-#class RecorridoScreen(Screen):
+
 class ServidorScreen(SubMenuScreen):
 
     def __init__(self,tabbedPanel,**kwargs):
@@ -12,4 +12,4 @@ class ServidorScreen(SubMenuScreen):
     def subir_fallas(self):
         print "LLamando al screen de SUBIR FALLAS...\n"
         self.deshabilitarOpciones()
-        #TODO: AGREGAR CODIGO ACA!
+        self.manager.current = "subircapturasservidor"

@@ -8,21 +8,18 @@ SubMenuCapturarFalla:
 
 "Capturar Falla Informada" <--> settingscreen(Seleccionarinformadas) <-->dialogopropscaptura <--> capturaKinect
 
------------------------------------------>HASTA ACA HECHO!
-
-
-
-
-
-
 SubMenuServidor: 
 "Subir archivos servidor" <--> subircapturasservidor <--> enviocapturasserver
-
 
 SubMenuRecorrido: 
 "Cargar recorrido " --> Con XFileDialog de Garden-Kivy.Sin screens.
 
 "Guardar recorrido " --> Con XFileDialog de Garden-Kivy.Sin screens.
+
+----------------------------------------->HASTA ACA HECHO!
+
+
+
 
 
 

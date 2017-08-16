@@ -1,6 +1,9 @@
 #:kivy 1.0
 
 # NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+#:import icon iconfonts.icon
+#:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
+#:import COLOR_SPINNER constantes.COLOR_SPINNER
 
 <RecorridoScreen>:
 
@@ -13,13 +16,13 @@
         Button:
             id: bt_guardar_recorrido
             markup: True
-            text: "Guardar recorrido"
+            text: "%s Guardar fallas capturadas" % (icon('fa-floppy-o',TAMANIO_ICONOS))
             on_press: root.guardar_recorrido()
 
         Button:
             id: bt_cargar_recorrido
             markup: True
-            text: "Cargar recorrido"
+            text: "%s Cargar fallas capturadas" % (icon('fa-file-o',TAMANIO_ICONOS))
             on_press: root.cargar_recorrido()
 
 

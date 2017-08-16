@@ -334,7 +334,8 @@ class DialogoPropsCapturaScreen(Screen):
 		print "En dialogopropscaptura.getData(): %s\n" % controlador.getData("idFalla")
 		menu_cambio = 'propsFallaConfirmada'
 		if controlador.getData("idFalla") > 0:
-			menu_cambio = 'settingscreen'
+			#menu_cambio = 'settingscreen'
+			menu_cambio = 'capturarFallaInformada'
 
 		print "controlador.getData('idFalla') > 0 ? %s\n" % (controlador.getData("idFalla") > 0)
 		self.manager.current = menu_cambio

@@ -1,10 +1,24 @@
 # -*- coding: utf-8 -*-
 
 # Constantes usadas por la interfaz grafica 
+import os
 from os import path
 import logging
 
 
+
+
+# Constante para controlar cuantos niveles puede subir el usuario en 
+# el sist. de archivos
+#ROOT_PCD_FOLDER = "../"
+ROOT_PCD_FOLDER = path.pardir + path.sep
+
+TITULO_APP = "Aplicacion de captura de fallas"
+
+
+#####################################################################################################
+#################### CONSTANTES PARA LOS RECURSOS QUE SON CARGADOS DESDE RESOURCE ################### 
+#####################################################################################################
 
 # Constantes relacionadas con el dir. de instalacion de kivy
 #import os,kivy
@@ -16,48 +30,30 @@ import logging
 # Constantes de archivo personalizado .atlas para kivy
 
 CUSTOM_THEME_NAME = "customAppCliente.atlas"
+#DIR_CUSTOM_THEME_KIVY = os.getcwd() + "/resource/themeAppCliente/"
 DIR_CUSTOM_THEME_KIVY = os.getcwd() + "/resource/themeAppCliente/"
-#CUSTOM_THEME_FILE_KIVY =  DIR_CUSTOM_THEME_KIVY + CUSTOM_THEME_NAME 
-
-
-
-# Constante para controlar cuantos niveles puede subir el usuario en 
-# el sist. de archivos
-#ROOT_PCD_FOLDER = "../"
-ROOT_PCD_FOLDER = path.pardir + path.sep
-
-TITULO_APP = "Aplicación de captura de fallas"
-
-#SCREEN_PRINCIPAL = 'menu'
-
-# Listado de los modulos que se deben agregar al path de Python.
-#LISTADO_MODULOS = ['views/config',
-#					'views/menu',
-#	                'views/tiposfalla',
-#	                'views/fallanueva',
-#	                'views/obtenerfallainformada',
-#	                'views/seleccionarfallainformada',
-#	                'views/subircapturas',
-#	                'views/loadsavedialog',
-#	                'models/captura',
-#	                'models/apiclient',
-#	                'models/capturador',
-#	                'models/estadofalla',
-#	                'models/geofencing',
-#	                'models/estrategia',
-#	                'resource/libs'
-#	              ]
-
-#####################################################################################################
-#################### CONSTANTES PARA LOS RECURSOS QUE SON CARGADOS DESDE RESOURCE ################### 
-#####################################################################################################
 
 # Constantes de librerias que se cargan desde resource
 RESOURCE_LIBRERIA_KIVY_GARDEN = 'resource/libs'
 RESOURCE_THEME_KIVY = DIR_CUSTOM_THEME_KIVY
-# Constante para los widgets personalizados de los screens
-RESOURCE_CUSTOM_WIDGETS = os.getcwd() + os.path.sep + "resource" + os.path.sep + "customwidgets" 
 
+# Constante para los widgets personalizados de los screens
+#RESOURCE_CUSTOM_WIDGETS = os.getcwd() + os.path.sep + "resource" + os.path.sep + "customwidgets" 
+RESOURCE_CUSTOM_WIDGETS =  "resource" + os.path.sep + "customwidgets" 
+
+RESOURCE_FUNCIONES_PARSING_CFG = "views/config"
+
+PATHS_MODULOS = [	
+					RESOURCE_CUSTOM_WIDGETS,
+					RESOURCE_LIBRERIA_KIVY_GARDEN,
+					RESOURCE_FUNCIONES_PARSING_CFG,
+					'models/captura',
+	                'models/apiclient',
+	                'models/capturador',
+	                'models/estadofalla',
+	                'models/geofencing',
+	                'models/estrategia'
+				]
 
 
 
@@ -411,7 +407,7 @@ LISTADO_SUB_MENUS = [
 						{
 							"titulo" : "Seleccionar BD",
 							"dirRaizModulo": "subMenuSeleccionarBD",
-							"pathConfig" : "subMenuSeleccionarBD"+ path.sep + "config" +\
+							"pathConfig" : "views/subMenuSeleccionarBD"+ path.sep + "config" +\
 								path.sep + "subMenuSeleccionarBD.cfg"
 
 						},
@@ -423,7 +419,7 @@ LISTADO_SUB_MENUS = [
 						{
 							"titulo" : "Captura de fallas",
 							"dirRaizModulo": "subMenuCapturarFallas",
-							"pathConfig" : "subMenuCapturarFallas"+ path.sep + "config" +\
+							"pathConfig" : "views/subMenuCapturarFallas"+ path.sep + "config" +\
 								path.sep + "subMenuCapturarFallas.cfg"
 						},
 
@@ -432,7 +428,7 @@ LISTADO_SUB_MENUS = [
 						{
 							"titulo" : "Subida archivos",
 							"dirRaizModulo": "subMenuServidor",
-							"pathConfig" : "subMenuServidor"+ path.sep + "config" +\
+							"pathConfig" : "views/subMenuServidor"+ path.sep + "config" +\
 								path.sep + "subMenuServidor.cfg"
 						},
 
@@ -442,7 +438,7 @@ LISTADO_SUB_MENUS = [
 						{
 							"titulo" : "Almacenar recorrido",
 							"dirRaizModulo": "subMenuRecorrido",
-							"pathConfig" : "subMenuRecorrido"+ path.sep + "config" +\
+							"pathConfig" : "views/subMenuRecorrido"+ path.sep + "config" +\
 								path.sep + "subMenuRecorrido.cfg"
 						}
 					]

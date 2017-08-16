@@ -5,20 +5,32 @@ from kivy.uix.label import Label
 from  kivy.uix.popup import Popup
 from kivy.animation import Animation
 import numpy
+import kivy
 #import pcl
 import pypcd
 import utils
-import os
+import os,sys
 import subprocess
 
 from os import path
 from os import makedirs
 from kivy.lang import Builder
 
+from constantes import *
+# Este metodo agrega los directorios de todos los modulos y utilidades que se usan
+# al path actual 
+def cargarConfiguraciones():
+	for pathRecurso in PATHS_MODULOS:
+		sys.path.append(os.path.join(os.getcwd(), pathRecurso) )
+		print "agregando al path: %s\n" % os.path.join(os.getcwd(), pathRecurso)
+	kivy.resources.resource_add_path(RESOURCE_THEME_KIVY)
+	print "configuraciones de directorios cargadas!\n"
+
+
+cargarConfiguraciones()
+
 import iconfonts
 from iconfonts import *
-
-from constantes import *
 from capturador import ItemFalla
 import logging,time
 import freenect
@@ -285,15 +297,6 @@ def escaparCaracteresEspeciales(propiedad):
 	print "codificada: %s\n" % codificada
 	return codificada 
 
-
-# Este metodo agrega los directorios de todos los modulos y utilidades que se usan
-# al path actual 
-def cargarConfiguraciones():
-	kivy.resources.resource_add_path(RESOURCE_THEME_KIVY)
-	sys.path.append(RESOURCE_CUSTOM_WIDGETS)
-	sys.path.append(RESOURCE_LIBRERIA_KIVY_GARDEN)
-	#kivy.resources.resource_add_path(RESOURCE_LIBRERIA_KIVY_GARDEN)
-	print "configuraciones de directorios cargadas!\n"
 
 
 

@@ -109,7 +109,7 @@ class ObtenerInformadasScreen(Screen):
 
     def volver(self):
       self.calle_input_txt.text = ""
-      self.manager.current = 'menutiposfalla'
+      self.manager.current = 'subMenuCapturarFalla'
 
 
 

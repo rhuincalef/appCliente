@@ -1,5 +1,6 @@
 from kivy.app import App
-#from kivy.lang import Builder
+from kivy.lang import Builder
+import importlib
 
 #Imports para el AutoCompleteTextInput
 import threading
@@ -9,7 +10,7 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 
 
-from main import Controlador
+#from main import Controlador
 from constantes import *
 
 #Imports para el dropdown
@@ -18,15 +19,19 @@ from kivy.graphics import Color, Rectangle
 
 
 #Imports para el tabbedpanel
-from kivy.uix.tabbedpanel import TabbedPanel,TabbedPanelItem,
-                                    TabbedPanelHeader,TabbedPanelStrip
+from kivy.uix.tabbedpanel import TabbedPanel,TabbedPanelItem,TabbedPanelHeader,TabbedPanelStrip
 
 # Se importa resources para agregar el theme de kivy
 import kivy.resources
 
 # EventDispatcher para los eventos 
 from kivy.event import EventDispatcher
+# Imports del widget XFolder
+from os.path import sep, expanduser, isdir, dirname
+import sys
+from kivy.uix.screenmanager import ScreenManager, Screen
 
+from utilscfg import *
 
 class AutoCompleteTextInput(BoxLayout):
 
@@ -203,7 +208,7 @@ class MyTabbedPanel(TabbedPanel):
     def __init__(self,**kwargs):
         super(MyTabbedPanel,self).__init__(**kwargs)
         #background_image: '/home/rodrigo/TESINA-2016-KINECT/sky-01.jpg'
-        self._inicilizarSubScreens()
+        self._inicializarSubScreens()
         print "despues de inicializar...\n"
         #Window.borderless =  True
         #Window.clearcolor = (1, 0, 0, 1)
@@ -223,9 +228,8 @@ class MyTabbedPanel(TabbedPanel):
     #main.cargar_vistas()
     def cargar_vistas(self,tituloSubMenu,listaVistas):
         sm = ScreenManager()
-        for kev,tupla in listaVistas.iteritems():   
-            print "Leyendo en directorio :%s\n" % os.getcwd()
-            print "tupla actual: %s\n\n" % tupla
+        print "\nLeyendo listaVistas: %s\n" % listaVistas
+        for kev,tupla in listaVistas.iteritems():
             Builder.load_file(os.getcwd() + sep + tupla["ruta_kv"])
             MyClass = getattr(importlib.import_module(tupla["modulo"]), 
             tupla["clase"])
@@ -243,14 +247,16 @@ class MyTabbedPanel(TabbedPanel):
 
     # Carga instancia cada screenmanger y le agrega los screens que le corresponden
     # segun un archivo de configuracion.
-    def _inicilizarSubScreens(self):
+    def _inicializarSubScreens(self):
         # Se agrega el path de cada modulo y se parsea la configuracion
         # de cada submenu como screens
         for dicSubMenu in LISTADO_SUB_MENUS:
             dirRaizModulo = os.getcwd() + sep + dicSubMenu["dirRaizModulo"]
+            print "dirRaizModulo: %s\n\n" % dirRaizModulo
             sys.path.append(dirRaizModulo)
             #confSubMenu = self.leer_configuracion(dicSubMenu["pathConfig"])
             confSubMenu = leer_configuracion(dicSubMenu["pathConfig"])
+            print "\nInicializando subscreen: %s\n\n" % dicSubMenu 
             self.cargar_vistas(dicSubMenu["titulo"],confSubMenu)
 
 
@@ -294,8 +300,5 @@ class MyTabbedPanel(TabbedPanel):
         print "type(instancia.content): %s\n" % type(instancia.content)
         self.screenManagerActivo = instancia.content
         #self.desHabilitarOpciones()
-
-
-
 
 
