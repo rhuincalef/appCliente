@@ -115,26 +115,18 @@ class AutoCompleteTextInput(BoxLayout):
 
 
 
-
 class CustomDropDown(TreeView):
+
+    root_options = {
+                        'text': '',
+                        'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+                        'minimum_height': 500
+                    }
 
     def __init__(self,**kwargs):
         super(CustomDropDown,self).__init__(**kwargs)
-        self.root_options = {   'text': '',
-                                'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
-                                'minimum_height': 500
-                            }
         self.toggle_node(self.root)
-        #Widget Treeview
-        #self.tv = TreeView(
-        #                root_options = { 'text': '',
-        #                                'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
-        #                                'minimum_height': 500
-        #                                },
-        #                load_func = self.callbackCargaOpciones )
 
-        #Se cierra el treeview al inicio
-        #self.tv.toggle_node(self.tv.root)
 
     #def callbackCargaOpciones(self,treeview, node):
     @staticmethod

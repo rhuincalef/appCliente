@@ -18,17 +18,6 @@ from constantes import *
 
 from kivy.uix.tabbedpanel import TabbedPanel,TabbedPanelHeader,TabbedPanelStrip,TabbedPanelItem
 
-# Agrega las vistas al path de Python
-#def agregar_vistas(listaVistas):
-#    for vista in listaVistas:
-#        path_local = vista
-#	        sys.path.append(os.path.join( os.getcwd(), path_local))
-        # sys.path.append(os.path.join(os.path.dirname('__file__'), path_local  ))
-
-#Configuracion y carpetas de las vistas de la app.
-#agregar_vistas(LISTADO_MODULOS)
-
-
 
 #Se importan los iconfonts para los iconos y spinners
 from iconfonts import *
@@ -522,7 +511,7 @@ class MainApp(App,EventDispatcher):
 	def build(self):
 		#Se registran los fonts
 		register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
-		print "En build()"
+		print "En build()\n"
 		self.title = TITULO_APP
 		tb_panel= MyTabbedPanel(do_default_tab= False,
 									size_hint= (1,1),

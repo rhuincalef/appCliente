@@ -1,0 +1,103 @@
+#:kivy 1.0
+
+#:import dictAdapter kivy.adapters.dictadapter
+#:import compItem kivy.uix.listview
+  
+<FallasInformadasScreen>:
+    GridLayout:
+		id: layout_principal
+		orientation: 'vertical'
+		cols: 1
+		rows: 3
+
+	    Label:
+	    	id: titulo
+	    	text: "Seleccione las fallas que desea traer del servidor"
+	    	size_hint:(1,0.05)
+	    	color: 0,0,0,1
+			canvas.before:
+	            Color:
+	                rgba: 1,1,1, 1
+	            Rectangle:
+	                pos: self.pos
+	                size: self.size
+		
+	    # Headers de la tabla de datos de las fallas
+	    GridLayout:
+	    	orientation: 'horizontal'
+	    	cols:3
+	    	rows:1
+	    	size_hint:(1,0.07)
+			Label:
+		    	text: "ID"
+		    	color: 1,1,1,1
+				canvas.before:
+		            Color:
+		                rgba: 0.458, 0.458, 0.458,1
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size
+			Label:
+		    	text: "Calle"
+		    	color: 1, 1, 1,1
+				canvas.before:
+		            Color:
+		                rgba: 0.458, 0.458, 0.458,1
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size                
+
+			Label:
+		    	text: "Altura"
+		    	color: 1, 1,1,1
+				canvas.before:
+		            Color:
+		                rgba: 0.458, 0.458, 0.458,1
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size                
+		                
+
+		#ListView de las fallas
+	    GridLayout:
+	    	cols:1
+	    	rows:2
+	    	orientation: 'vertical'
+	    	size_hint:(1,0.7)
+
+		    ListView:
+		    	id:listado
+		    	adapter: dictAdapter.DictAdapter(data = root.integers_dict,args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)
+		    	
+
+				#adapter: dictAdapter.DictAdapter(sorted_keys = root.item_strings,data = root.integers_dict,args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)	    	
+
+		    	# Tamanio en porcentajes con respecto al widget anterior
+		    	size_hint:(1,0.9)
+		      
+		    GridLayout:
+		    	id: btn_layouts
+		    	orientation: 'horizontal'
+		    	cols: 2
+		    	rows: 1
+
+		    	# Tamanio en porcentajes con respecto al widget anterior
+		    	size_hint:(1,0.07)
+		    	col_force_default: True
+		    	col_default_width: 150
+
+		    	#Espaciado entre los componentes del layout (en porcentaje del widget)
+		    	spacing: ( root.width * 0.20 ),0
+
+		    	#Relleno entre el layout y los widgets hijos
+		    	padding: (root.width * 0.24),0,0,0
+
+			    Button:
+			    	id: bt_capturar_fallas
+			    	text: "Obtener fallas"
+			    	on_press: root.obtener_falla()
+
+				Button:	
+					id: bt_volver
+					on_press: root.manager.current = 'menutiposfalla'
+					text: "Volver"

@@ -1,0 +1,119 @@
+#:kivy 1.0
+
+#:import dictAdapter kivy.adapters.dictadapter
+#:import compItem kivy.uix.listview
+#:import const constantes
+#:import lbl kivy.uix.label
+  
+<ObtenerInformadasScreen>:
+	calle_input_txt: calle_txt
+	main_layout: layout_principal
+
+    GridLayout:
+		id: layout_principal
+		orientation: 'vertical'
+		cols: 1
+		rows: 6
+
+	    Label:
+	    	id: titulo
+	    	size_hint:(1,0.05)	
+	    	text: "Ingrese el nombre de la calle de la que desea traer las fallas."
+	    	color: const.COLOR_TEXTOS
+			canvas.before:
+	            Color:
+	                #rgba: 1,1,1,1
+	                rgba: const.COLOR_LABELS_RGBA
+	            Rectangle:
+	                pos: self.pos
+	                size: self.size
+		Label:
+	    	id: calle_lbl
+	    	text: "Calle: "
+	    	size_hint:(1,0.05)
+	    	color: const.COLOR_TEXTOS
+			canvas.before:
+	            Color:
+	                #rgba: 1,1,1, 1
+	                rgba: const.COLOR_LABELS_RGBA
+	            Rectangle:
+	                pos: self.pos
+	                size: self.size
+		
+	    TextInput:
+	    	id: calle_txt
+	    	size_hint:(0.5,0.05)
+	    	write_tab: False
+	    	multiline: False
+	    	on_text_validate: root.enviar_peticion(calle_txt.text)
+
+	    Label:
+	    	id: filler_lbl
+	    	text: ""
+	    	size_hint:(1,0.8)
+	    	color: const.COLOR_TEXTOS
+			canvas.before:
+	            Color:
+	                rgba: 0,0,0, 1
+	            Rectangle:
+	                pos: self.pos
+	                size: self.size
+		
+
+	    #PopUp para la carga de las fallas desde el servidor
+		#InfoPopUp:
+		#	size_hint: .5, .5
+		#	auto_dismiss: False
+		#	title: 'Obtencion de fallas del servidor'
+		#	content: lbl.Label(text='Cargando fallas solicitadas...')
+
+
+
+		#Label:
+	    #	id: altura_lbl
+	    #	text: "Altura: "
+	    #	size_hint:(1,0.05)
+	    #	color: 0,0,0,1
+		#	canvas.before:
+	    #        Color:
+	    #            rgba: 1,1,1, 1
+	    #        Rectangle:
+	    #            pos: self.pos
+	    #            size: self.size
+
+	    #TextInput:
+	    #	id: altura_txt
+	    #	size_hint:(1,0.05)
+	    #	input_filter: 'int'
+	    #	write_tab: False
+	    #	#focus: False
+	    #	#hint_text : 'i.e: 200'
+	    #	on_text_validate: root.enviar_peticion(calle_txt.text)
+
+		      
+	    GridLayout:
+	    	id: layout_botones
+	    	orientation: 'horizontal'
+	    	cols: 2
+	    	rows: 1
+
+	    	# Tamanio en porcentajes con respecto al widget anterior
+	    	size_hint:(1,0.05)
+	    	col_force_default: True
+	    	col_default_width: 150
+
+	    	#Espaciado entre los componentes del layout (en porcentaje del widget)
+	    	spacing: ( root.width * 0.20 ),0
+
+	    	#Relleno entre el layout y los widgets hijos
+	    	padding: (root.width * 0.24),0,0,0
+
+		    Button:
+		    	id: bt_capturar_fallas
+		    	text: "Solicitar fallas servidor"
+		    	on_press: root.enviar_peticion(calle_txt.text)
+
+			Button:	
+				id: bt_volver
+				text: "Volver"
+				on_press: root.volver()

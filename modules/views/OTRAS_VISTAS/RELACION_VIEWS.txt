@@ -1,0 +1,29 @@
+
+RELACION ENTRE SCREENS -->
+
+
+"Capturar Falla Nueva" <--> propsFallaConfirmada <--> dialogopropscaptura <--> capturaKinect
+
+"Obtener falla del servidor" <--> obtenerinformadas(obtenerfallainformada)
+
+"Capturar Falla Informada" <--> settingscreen(Seleccionarinformadas) <-->dialogopropscaptura <--> capturaKinect
+
+"Subir archivos servidor" <--> subircapturasservidor <--> enviocapturasserver
+
+
+"Cargar recorrido " --> Con XFileDialog de Garden-Kivy.Sin screens.
+
+"Guardar recorrido " --> Con XFileDialog de Garden-Kivy.Sin screens.
+
+
+
+
+
+
+
+
+
+
+
+
+
