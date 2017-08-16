@@ -1,4 +1,4 @@
-from settingscreen import SettingScreen
-__all__ = [SettingScreen]
+from obtenerinformadas import ObtenerInformadasScreen
+__all__ = [ObtenerInformadasScreen]
 
 

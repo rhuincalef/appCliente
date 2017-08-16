@@ -604,37 +604,6 @@ class KinectScreen(Screen):
     def _terminarCaptura(self,instance):
         self.volver()
 
-    #BACKUP!
-    #def on_enter(self):
-    #    self._keyboard.bind(on_key_down=self.tecla_presionada)
-    
-
-    # VERSION DE PRUEBA PARA DETECTAR LA CONEXION Y DESCONEXION DEL KINECT.
-    # Se bindea la escucha del teclado al entrar y se verifica que el
-    # sensor este conectado, si no lo esta, se regresa al screen 
-    # anterior.
-    #def on_enter(self):
-     #   controlador = App.get_running_app()
-     #   listo = controlador.conexionSensorEstablecida()
-        #print "tipo de kinect_rgb: %s y de kinect_grey: %s\n" % (type(self.kinect_rgb),
-        #                                                          type(self.kinect_grey))
-     #   print "Entrando en on_enter con listo? %s\n" % listo
-     
-     #   if listo:
-     #       print "Bindeado SPACEBAR!!\n"
-     #       self._keyboard.bind(on_key_down=self.tecla_presionada)
-     #   else:
-      #      controlador = App.get_running_app()
-      #      popup = controlador.mostrarDialogoMensaje(title='Error de conexion',
-      #                                          text='No se pueden realizar capturas hasta que\n el sensor se encuentre conectado.\nConecte el sensor y reinicie la aplicacion.')
-      #      popup.bind(on_dismiss=self.cancelarCaptura)
-        #print "\n=====================================================\n\n"
-        #print "En kinectscreen.on_enter() con sensorListo? %s con loggerHistory: \n" % listo
-        #for recordLog in LoggerHistory.history:
-        #    print "%s\n" % recordLog.getMessage()
-        #print "\n=====================================================\n\n"
-
-
     def cancelarCaptura(self,instance):
         print "Deteniendo la app...\n"
         controlador = App.get_running_app()
@@ -645,9 +614,6 @@ class KinectScreen(Screen):
     def on_leave(self):
         print "DesBindeada SPACEBAR!!\n"
         self._keyboard.unbind(on_key_down=self.tecla_presionada)
-        #self.detener_imagenes_kinect()
-        #self.depthThread.detener()
-        #self.depthThread.vaciar()
 
     
 
@@ -714,7 +680,4 @@ class KinectScreen(Screen):
         print "Las screens actuales de screenmanager luego de switch_to son: "
         print self.manager.screen_names
         self.manager.current = 'dialogopropscaptura'
-
-
-
 

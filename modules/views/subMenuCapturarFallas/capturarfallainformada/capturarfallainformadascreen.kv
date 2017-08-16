@@ -2,8 +2,14 @@
 
 #:import dictAdapter kivy.adapters.dictadapter
 #:import compItem kivy.uix.listview
+#:import appModule kivy.app
+#:import const constantes
   
-<FallasInformadasScreen>:
+<CapturarFallaInformadaScreen>:
+	listado1: listado
+	titulo1: titulo
+	layout_general: layout_principal 
+
     GridLayout:
 		id: layout_principal
 		orientation: 'vertical'
@@ -12,12 +18,12 @@
 
 	    Label:
 	    	id: titulo
-	    	text: "Seleccione las fallas que desea traer del servidor"
+	    	text: "Ingrese el nombre de la calle/altura de la que desea traer las fallas"	    	
 	    	size_hint:(1,0.05)
-	    	color: 0,0,0,1
+	    	color: const.COLOR_TEXTOS
 			canvas.before:
 	            Color:
-	                rgba: 1,1,1, 1
+	                rgba: const.COLOR_LABELS_RGBA
 	            Rectangle:
 	                pos: self.pos
 	                size: self.size
@@ -30,29 +36,29 @@
 	    	size_hint:(1,0.07)
 			Label:
 		    	text: "ID"
-		    	color: 1,1,1,1
+		    	color: const.COLOR_TEXTOS
 				canvas.before:
 		            Color:
-		                rgba: 0.458, 0.458, 0.458,1
+		                rgba: const.COLOR_LABELS_RGBA
 		            Rectangle:
 		                pos: self.pos
 		                size: self.size
 			Label:
 		    	text: "Calle"
-		    	color: 1, 1, 1,1
+		    	color: const.COLOR_TEXTOS
 				canvas.before:
 		            Color:
-		                rgba: 0.458, 0.458, 0.458,1
+		                rgba: const.COLOR_LABELS_RGBA
 		            Rectangle:
 		                pos: self.pos
 		                size: self.size                
 
 			Label:
 		    	text: "Altura"
-		    	color: 1, 1,1,1
+		    	color: const.COLOR_TEXTOS
 				canvas.before:
 		            Color:
-		                rgba: 0.458, 0.458, 0.458,1
+		                rgba: const.COLOR_LABELS_RGBA
 		            Rectangle:
 		                pos: self.pos
 		                size: self.size                
@@ -67,16 +73,15 @@
 
 		    ListView:
 		    	id:listado
-		    	adapter: dictAdapter.DictAdapter(data = root.integers_dict,args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)
+
+		    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().getCapturadorInformados().getColBachesInformados(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)
+
 		    	
-
-				#adapter: dictAdapter.DictAdapter(sorted_keys = root.item_strings,data = root.integers_dict,args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)	    	
-
 		    	# Tamanio en porcentajes con respecto al widget anterior
 		    	size_hint:(1,0.9)
 		      
 		    GridLayout:
-		    	id: btn_layouts
+		    	id: layout_botones
 		    	orientation: 'horizontal'
 		    	cols: 2
 		    	rows: 1
@@ -94,10 +99,11 @@
 
 			    Button:
 			    	id: bt_capturar_fallas
-			    	text: "Obtener fallas"
-			    	on_press: root.obtener_falla()
+			    	text: "Realizar captura"
+			    	on_press: root.obtener_fallas()
 
 				Button:	
 					id: bt_volver
-					on_press: root.manager.current = 'menutiposfalla'
+					#on_press: root.manager.current = 'menutiposfalla'
+					on_press: root.volver()
 					text: "Volver"

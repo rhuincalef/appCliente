@@ -15,7 +15,7 @@ from kivy.uix.label import Label
 from capturador import CapturadorInformados
 from constantes import FALLA_NO_ESTABLECIDA
 
-class SettingScreen(Screen):
+class CapturarFallaInformadaScreen(Screen):
    
     def __init__(self, **kwargs):
       super(Screen, self).__init__(**kwargs)

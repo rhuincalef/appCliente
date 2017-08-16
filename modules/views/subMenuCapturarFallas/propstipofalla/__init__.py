@@ -1,4 +1,4 @@
-from kinectviewer import KinectScreen
-__all__ = [KinectScreen,ConfirmPopup]
+from propstipofalla import PropsFallaConfirmadaScreen
+__all__ = [PropsFallaConfirmadaScreen]
 
 
