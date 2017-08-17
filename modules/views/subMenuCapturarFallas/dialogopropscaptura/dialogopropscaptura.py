@@ -40,7 +40,7 @@ from iconfonts import icon
 import shutil
 from constantes import TAMANIO_ICONOS_CTRL_BAR
 from os import path
-import kinectviewer
+#import kinectviewer
 
 class DialogoPropsCapturaScreen(Screen):
 

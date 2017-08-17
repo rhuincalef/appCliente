@@ -208,10 +208,17 @@ class MyTabbedPanel(TabbedPanel):
     def __init__(self,**kwargs):
         super(MyTabbedPanel,self).__init__(**kwargs)
         #background_image: '/home/rodrigo/TESINA-2016-KINECT/sky-01.jpg'
+        #NOTA: Esta variable tiene indexados por el nombre los submenus principales de 
+        # la aplicacion. Se usa desde el controlador(App) para algunos metodos concurrentes. 
+        self.subMenus = {}
         self._inicializarSubScreens()
         print "despues de inicializar...\n"
         #Window.borderless =  True
         #Window.clearcolor = (1, 0, 0, 1)
+
+
+    def getSubMenuPorNombre(self,nombreSubMenu):
+        return self.subMenus[nombreSubMenu]
 
 
     # Crea el TabbedPanelItem con el nombre y screenmanager(layout) y,
@@ -232,13 +239,15 @@ class MyTabbedPanel(TabbedPanel):
         for kev,tupla in listaVistas.iteritems():
             Builder.load_file(os.getcwd() + sep + tupla["ruta_kv"])
             MyClass = getattr(importlib.import_module(tupla["modulo"]), 
-            tupla["clase"])
+                                tupla["clase"])
             print "Leyendo clase: %s de tipo: %s\n\n" % (tupla["clase"],tupla["tipo"])
             screen = None
             if tupla["tipo"] == TIPO_SUB_MENU:
                 screen = MyClass(self,name=tupla["nombre_menu"])
             else:
                 screen = MyClass(name=tupla["nombre_menu"])
+            
+            self.subMenus[tupla["nombre_menu"]] = screen
             sm.add_widget(screen)
         # Crea un tabbedpanelItem para el screen manager con el nombre leido de la 
         # configuracion

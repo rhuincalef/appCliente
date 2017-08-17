@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Screen principal del menu qeu selecciona el archivo de BD JSON para las 
 # geoposiciones. Este screen se enlaza con "FileFilterWidget".
 #
@@ -10,8 +12,8 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 
-import loadsavedialog
-from loadsavedialog import *
+#import loadsavedialog
+#from loadsavedialog import *
 from kivy.uix.popup import Popup
 
 import os

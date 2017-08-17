@@ -109,6 +109,7 @@ class ObtenerInformadasScreen(Screen):
 
     def volver(self):
       self.calle_input_txt.text = ""
+      self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()  
       self.manager.current = 'subMenuCapturarFalla'
 
 

@@ -406,7 +406,7 @@ LISTADO_SUB_MENUS = [
 						#   2. Anexar capturas a BD de capturas anteriores
 						{
 							"titulo" : "Seleccionar BD",
-							"dirRaizModulo": "subMenuSeleccionarBD",
+							"dirRaizModulo": "views/subMenuSeleccionarBD",
 							"pathConfig" : "views/subMenuSeleccionarBD"+ path.sep + "config" +\
 								path.sep + "subMenuSeleccionarBD.cfg"
 
@@ -418,7 +418,7 @@ LISTADO_SUB_MENUS = [
 				        #   3."Capturar falla informada"
 						{
 							"titulo" : "Captura de fallas",
-							"dirRaizModulo": "subMenuCapturarFallas",
+							"dirRaizModulo": "views/subMenuCapturarFallas",
 							"pathConfig" : "views/subMenuCapturarFallas"+ path.sep + "config" +\
 								path.sep + "subMenuCapturarFallas.cfg"
 						},
@@ -427,7 +427,7 @@ LISTADO_SUB_MENUS = [
         				#   1."Subir capturas al servidor"
 						{
 							"titulo" : "Subida archivos",
-							"dirRaizModulo": "subMenuServidor",
+							"dirRaizModulo": "views/subMenuServidor",
 							"pathConfig" : "views/subMenuServidor"+ path.sep + "config" +\
 								path.sep + "subMenuServidor.cfg"
 						},
@@ -437,7 +437,7 @@ LISTADO_SUB_MENUS = [
 				        #   2."Cargar recorrido de fallas"
 						{
 							"titulo" : "Almacenar recorrido",
-							"dirRaizModulo": "subMenuRecorrido",
+							"dirRaizModulo": "views/subMenuRecorrido",
 							"pathConfig" : "views/subMenuRecorrido"+ path.sep + "config" +\
 								path.sep + "subMenuRecorrido.cfg"
 						}

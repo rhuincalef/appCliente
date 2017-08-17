@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import kivy
 kivy.require('1.0.5')
 
@@ -100,6 +101,8 @@ class MainApp(App,EventDispatcher):
 		self.sensorConectado = estaSensorListo()
 		print "Valor de self.sensorConectado: %s\n" % self.sensorConectado
 		self.inicializarMonitorKinect()
+
+		self.tabbedPanel = None
 		print "Inicializado MainApp!"
 
 
@@ -253,7 +256,8 @@ class MainApp(App,EventDispatcher):
 			colCapturas = []
 			colCapturas = self.capturador.getColCapturasConfirmadas() + \
 				self.capturadorInformados.getColCapturasConfirmadas()
-			screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
+			#screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
+			screenCapturas = self.tabbedPanel.getSubMenuPorNombre('subircapturasservidor')
 			screenCapturas.actualizarListaCaps(colCapturas)
 			print "Finalizado thread-FiltradoCapturas...\n"
 		
@@ -320,7 +324,9 @@ class MainApp(App,EventDispatcher):
 		print "En threadSubidaCapturas...\n"
 		# Se actualiza el valor maximo de la progressbar con los bytes totales
 		# de la peticion
-		screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+		
+		#screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+		screen_upload = self.tabbedPanel.get_screen('enviocapturasserver')
 		screen_upload.setMaxBarraProgreso(bytes_totales_a_enviar)
 		#Se adquiere el control y se inicia el thread del dialgo de pregunta
 		# para caps subidas
@@ -384,7 +390,8 @@ class MainApp(App,EventDispatcher):
 	# Actualiza los labels de cantidad de bytes subidos
 	# en la pantalla enviocapturasservidor
 	def actualizar_datos(self,dt):
-		screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+		#screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+		screen_upload = self.tabbedPanel.get_screen('enviocapturasserver')
 		bytes_read = self.capturador.apiClient.bytes_acumulados
 		screen_upload.actualizar_datos(bytes_read)
 
@@ -547,6 +554,7 @@ class MainApp(App,EventDispatcher):
 									tab_pos = 'top_right',
 									tab_height= 40,
 									tab_width = 170)
+		self.tabbedPanel = tb_panel
 		return tb_panel
 
 

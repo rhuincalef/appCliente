@@ -220,5 +220,5 @@ class PropsFallaConfirmadaScreen(Screen):
 
 
 	def cancelar(self,evt):
-		#self.manager.current = 'menutiposfalla'
+		self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()  
 		self.manager.current = 'subMenuCapturarFalla'

@@ -104,6 +104,7 @@ class SubirCapturasServidorScreen(Screen):
 		print "Vaciadas capturas!"
 		self.listado_capturas.adapter.data = []
 		#self.manager.current = 'menu'
+		self.manager.get_screen("subMenuServidor").habilitarOpciones()  
 		self.manager.current = 'subMenuServidor'
 
 	# This is quite an involved args_converter, so we should go through the
