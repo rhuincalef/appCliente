@@ -223,6 +223,10 @@ class ItemFalla(SelectableDataItem,Persistent):
   def desSeleccionar(self):
     self.is_selected = False
 
+  def seleccionar(self):
+    self.is_selected = True
+
+
   def estaSubida(self):
     return self.estaSubidaAlServidor
 

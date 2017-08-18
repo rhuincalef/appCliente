@@ -15,8 +15,8 @@
 		id: layout_principal
 		orientation: 'vertical'
 		cols: 1
-		rows: 3
-		#rows: 2
+		rows: 4
+		#rows: 3
 
 		Label:
 			id: titulo
@@ -29,6 +29,22 @@
 				Rectangle:
 					pos: self.pos
 					size: self.size
+
+		BoxLayout:
+			id:layout_seleccionar_todo
+			orientation: 'horizontal'
+			size_hint:(1,0.05)
+
+			CheckBox:
+				id: check_box_seleccionar_todo
+				on_active: root.check_box_activado()
+				size_hint: (0.2,1)
+
+			Label:
+				id: label_seleccionar_todo
+				text: 'Seleccionar todas las fallas'
+				size_hint: (0.8,1)
+				halign: 'left'
 
 		GridLayout:
 			id: layout_labels
@@ -83,7 +99,8 @@
 	    	
 	    	
 	    	# Tamanio en porcentajes con respecto al widget anterior
-	    	size_hint:(1,0.9)
+	    	#size_hint:(1,0.9)
+	    	size_hint:(1,0.85)
 
 		    
 	#Barra de opciones abajo

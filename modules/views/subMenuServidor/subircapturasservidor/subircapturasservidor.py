@@ -34,33 +34,87 @@ class SubirCapturasServidorScreen(Screen):
 		self.listado_capturas.adapter.bind(on_selection_change = self.cambio_seleccion)
 		print "Bindeados elementos en subircapturasservidor!\n"
 
+
+	#Recorre todos los elementos del listview y los marca segun el parametro
+	# "activos".
+	def marcarCapturas(self,activo):
+		print "En marcarCapturas con activo: %s\n" % activo
+		print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
+		colItemFalla = self.ids.listado.adapter.data
+		for index in xrange(0,len(colItemFalla)):
+			print "\n\n ---->type(colItemFalla[index]): %s\n\n" % type(colItemFalla[index])
+			funcionItemFalla= colItemFalla[index].desSeleccionar
+			if activo:
+				print "Seleccionando elementos!\n"
+				funcionItemFalla= colItemFalla[index].seleccionar
+				
+			print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
+			print "self.ids.listado.adapter.selection[0]: %s\n" % self.ids.listado.adapter.selection[index].__dict__
+			print "self.ids.listado.adapter.selection[0].children: %s\n" % self.ids.listado.adapter.selection[index].children
+			funcionItemFalla()
+			for boton in self.ids.listado.adapter.selection[index].children:
+				funcionSeleccionarBoton = boton.deselect
+				if activo:
+					funcionSeleccionarBoton = boton.select
+				funcionSeleccionarBoton()
+
+
+	#BACKUP!
+	#def marcarCapturas(self,activo):
+	#	print "En marcarCapturas con activo: %s\n" % activo
+	#	print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
+	#	for itemfalla in self.ids.listado.adapter.data:
+	#		print "\n\n ---->type(itemfalla): %s\n\n" % type(itemfalla)
+	#		if activo:
+	#			itemfalla.seleccionar()
+	#			print "Seleccionado!\n"
+	#			print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
+	#			print "self.ids.listado.adapter.selection[0]: %s\n" % self.ids.listado.adapter.selection[0].__dict__
+	#			print "self.ids.listado.adapter.selection[0].children: %s\n" % self.ids.listado.adapter.selection[0].children
+	#			for boton in self.ids.listado.adapter.selection[0].children:
+	#				boton.select()
+	##			break
+	#		itemfalla.desSeleccionar()
+	#		print "DesSeleccionado!\n"
+
+
+
+	#def check_box_activado(self,estaActivo):
+	def check_box_activado(self):
+		print "En check_box_activado con checkbox active: %s\n" % \
+					self.ids.check_box_seleccionar_todo.active 
+		self.marcarCapturas(activo = self.ids.check_box_seleccionar_todo.active)
+
+
 	#Se deseleccionan los elementos cunado adapter.selection<2 porque
 	# sino se cambia el estado del primer elemento en la lista a
 	# is_selected = True
 	def cambio_seleccion(self,adapter):
 		print "Cambio la seleccion!\n"
-		#for elem in adapter.selection:
-		#	print "Elemento seleccionado: %s,%s\n" % (type(elem),elem)
-		if len(adapter.selection) < 2:
-			print "DESELECCIONANDO FALLAS!!\N"
-			for falla in self.listado_capturas.adapter.data:
-				falla.desSeleccionar()
 		print "El estado de las fallas es: \n"
 		for falla in self.listado_capturas.adapter.data:
 			print "%s\n" % falla
 		print "\n*****************************************\n"
 		print "Fin de cambio_seleccion"
 
-	#Actualiza la lista de fallas confirmadas
-	#def refrescar_vista(self,listview):
-	#	print "Refrescando vista!!!! "
-	#	controlador = App.get_running_app()
-	#	fallas_dic = controlador.filtrarCapturas()
-	#	if len(fallas_dic) > 0:
-	#		print "Objeto: %s" % fallas_dic[0]
-	#		print "Tipo de objeto: %s" % type(fallas_dic[0].getEstado())
-	#		print ""
-	#	self.listado_capturas.adapter.data = fallas_dic
+
+	#BACKUP!
+	#Se deseleccionan los elementos cunado adapter.selection<2 porque
+	# sino se cambia el estado del primer elemento en la lista a
+	# is_selected = True
+	#def cambio_seleccion(self,adapter):
+	#	print "Cambio la seleccion!\n"
+	#	if len(adapter.selection) < 2:
+	#		print "DESELECCIONANDO FALLAS!!\N"
+	#		for falla in self.listado_capturas.adapter.data:
+	#			falla.desSeleccionar()
+	#	print "El estado de las fallas es: \n"
+	#	for falla in self.listado_capturas.adapter.data:
+	#		print "%s\n" % falla
+	##	print "\n*****************************************\n"
+	#	print "Fin de cambio_seleccion"
+
+
 
 	def refrescar_vista(self,listview):
 		print "Refrescando vista!!!! "
