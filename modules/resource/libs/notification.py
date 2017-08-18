@@ -251,7 +251,8 @@ class XMessage(XNotifyBase):
     """XMessageBox class. See module documentation for more information.
     """
 
-    buttons = ListProperty([XNotifyBase.BUTTON_OK])
+    #buttons = ListProperty([XNotifyBase.BUTTON_OK])
+    buttons = ListProperty([XNotifyBase.BUTTON_ACEPTAR])
     '''Default button set for class
     '''
 

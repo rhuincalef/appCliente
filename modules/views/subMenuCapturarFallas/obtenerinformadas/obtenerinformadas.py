@@ -24,6 +24,8 @@ from constantes import PATH_ICONO_LUPA
 import re
 
 from apiclient1 import ExcepcionAjax,ExcepcionSinInformados
+from customwidgets import AutoCompleteTextInput
+
 
 
 class ObtenerInformadasScreen(Screen):
@@ -35,6 +37,7 @@ class ObtenerInformadasScreen(Screen):
       # self.fallas_dict = cap.solicitarInformados()
       super(Screen, self).__init__(**kwargs)
       self.calle = None
+      self.ids.container_autocomplete.add_widget(AutoCompleteTextInput())
 
     
     #def limpiar(self,cad):
@@ -52,10 +55,10 @@ class ObtenerInformadasScreen(Screen):
         return False
       return True
 
-    def enviar_peticion(self,calle):
-      print "Enviando peticion al servidor"
-      print "Calle ",calle
-      self.calle = calle
+    def enviar_peticion(self):
+      #self.calle = calle
+      self.calle = self.ids.container_autocomplete.children[0].getOpcionSeleccionada()
+      print "Enviando peticion al servidor calle: %s\n" % self.calle
       controlador = App.get_running_app()
       popup = controlador.mostrarDialogoEspera(
                               title="Peticion al servidor",
@@ -78,21 +81,9 @@ class ObtenerInformadasScreen(Screen):
 
     #Llamado al abrir el pop_up en enviar_peticion().
     def threadObtenerInformadas(self,popup):
-      calle = self.calle_input_txt.text
-      print "En threadObtenerInformadas() con self.calle: %s\n" % self.calle
-      print "calle: %s\n" % calle
+      #calle = self.ids.calle_input_txt.text
+      calle = self.ids.container_autocomplete.children[0].getOpcionSeleccionada()
       controlador = App.get_running_app()
-      #controlador.obtenerInformados(self.calle)
-      #Se limpia la calle de espacios!
-      #calleSaneada = self.limpiar(self.calle)
-      #if self.esValida(calleSaneada):
-      #  controlador.obtenerInformados(calleSaneada)
-        #TODO: Borrar este delay de prueba
-        #time.sleep(3)
-      #else:
-      #  controlador.mostrarDialogoMensaje(title = "Calle invalida",
-      #                                    text = "Ingrese una calle valida e intentelo nuevamente"
-      #                                    )
       try:
         controlador.obtenerInformados(calle)
       except ExcepcionAjax, e:
@@ -108,7 +99,8 @@ class ObtenerInformadasScreen(Screen):
 
 
     def volver(self):
-      self.calle_input_txt.text = ""
+      #self.ids.calle_input_txt.text = ""
+      self.ids.container_autocomplete.children[0].limpiar()
       self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()  
       self.manager.current = 'subMenuCapturarFalla'
 

@@ -56,19 +56,19 @@ cuando se estiman las direcciones de las fallas nuevas capturadas). Hacer con ga
 
 22. Remover marco de ventana del mismo color (como nod32).
 
-23. Autocomplete para obtener fallas informadas (obtieniendo solo calles del servidor).OPCIONAL.
+23. Autocomplete para obtener fallas informadas (obtieniendo solo calles del servidor). -->OK
 
 24. CAMBIAR LA TESINA DE REPO DESPUES DE ARREGLAR LA INTERACCION APPCLIENTE-WEBAPP. -->OK
 
 25. Incluir la criticidad en la appCliente dentro de las propiedades de la falla que se traen desde el servidor.
 
-CONSULTA CON GABRIEL -->
+CONSULTA CON GABRIEL JULIO 2017-->
 
-26. Cambiar el menu principal para que el cambio se aprecie por el usuario.
+26. Cambiar el menu principal para que el cambio se aprecie por el usuario. -->OK
 
-27. Cambiar el drop-down para indicar cambio (con colores sobre el elemento seleccionado y/o tamaño de los elementos) en "Capturar falla nueva" propiedades de la falla.
+27. Cambiar el drop-down para indicar cambio (con colores sobre el elemento seleccionado y/o tamaño de los elementos) en "Capturar falla nueva" propiedades de la falla. -->OK PARCIAL. (Falta implementar en appCliente)
 
-29. Ver posibilidad de elegir BD_LOCAL_xxxx.json de dias anteriores.
+29. Ver posibilidad de elegir BD_LOCAL_xxxx.json de dias anteriores. -->OK PARCIAL.(Falta implementar menu).
 
 30. Hacer el select all para subir todas las fallas capturadas.
 

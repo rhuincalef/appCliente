@@ -283,13 +283,24 @@ class MainApp(App,EventDispatcher):
 		#self.screen_manager.current = "menu"
 
 
+	#BACKUP!
 	#Este elemento establece el campo is_selected como FALSE de las fallas
 	# informadas al regresar de esa vista
+	#def desSeleccionarInformados(self):
+	#	for falla in self.capturadorInformados.getColBachesInformados():
+	#		falla.is_selected = False
+	#		print "Deseleccionando falla informada: %s\n" % falla
+	#	print "Fin desSeleccionarFalla!\n"
+
 	def desSeleccionarInformados(self):
+		print "En main.desSeleccionarInformados()...\n"
 		for falla in self.capturadorInformados.getColBachesInformados():
-			falla.is_selected = False
+			#falla.is_selected = False
+			falla.desSeleccionar()
 			print "Deseleccionando falla informada: %s\n" % falla
 		print "Fin desSeleccionarFalla!\n"
+	
+	
 
 
 	#Envia las capturas filtradas al servidor con POST

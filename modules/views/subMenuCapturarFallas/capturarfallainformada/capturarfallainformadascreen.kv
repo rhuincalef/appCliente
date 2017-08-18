@@ -74,8 +74,8 @@
 		    ListView:
 		    	id:listado
 
-		    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().getCapturadorInformados().getColBachesInformados(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = False,cls = compItem.CompositeListItem)
-
+		    	adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().getCapturadorInformados().getColBachesInformados(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'single',allow_empty_selection = True,cls = compItem.CompositeListItem)
+		    	
 		    	
 		    	# Tamanio en porcentajes con respecto al widget anterior
 		    	size_hint:(1,0.9)
@@ -104,6 +104,5 @@
 
 				Button:	
 					id: bt_volver
-					#on_press: root.manager.current = 'menutiposfalla'
 					on_press: root.volver()
 					text: "Volver"

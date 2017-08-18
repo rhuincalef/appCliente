@@ -53,7 +53,8 @@ class AutoCompleteTextInput(BoxLayout):
         #Se agrega el textinput en el subboxlayout que lo contiene.
         self.add_widget(self.textInput)
         self.add_widget(self.boxLayoutSugerencias)
-        self.controlador = Controlador()
+        #self.controlador = Controlador()
+        self.controlador = App.get_running_app()
         
         # ...
 
@@ -84,9 +85,7 @@ class AutoCompleteTextInput(BoxLayout):
     #Este metodo agrega labels que indican las sugerencias disponibles para 
     # autocompletar la calle ingresada por el usuario.
     def autocompletar(self,instance,value):
-        print "\n\nVALOR ACTUAL TEXTINPUT: %s\n\n" % value
         if self.textInput.focus:
-
             # Si es cadena vacia, se borran las sugerencias y no se envia la peticion
             # al servidor.
             if not value.strip():
@@ -118,6 +117,11 @@ class AutoCompleteTextInput(BoxLayout):
         self.textInput.text = label.text
         self.boxLayoutSugerencias.clear_widgets()
 
+    def getOpcionSeleccionada(self):
+        return self.textInput.text
+
+    def limpiar(self):
+        self.textInput.text = ''
 
 
 class CustomDropDown(TreeView):

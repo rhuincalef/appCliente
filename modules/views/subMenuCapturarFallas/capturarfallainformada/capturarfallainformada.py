@@ -19,44 +19,70 @@ class CapturarFallaInformadaScreen(Screen):
    
     def __init__(self, **kwargs):
       super(Screen, self).__init__(**kwargs)
-      self.bind(on_enter=self.refrescar_vista)
+      self.bind(on_enter = self.refrescar_vista)
+      #self.ids.listado.adapter.propagate_selection_to_data = True
+      #self.ids.listado.adapter.bind(on_selection_change = self.cambioSeleccion)
+      #print "cantidad de elementos en la seleccion: %s\n " % \
+      #                            len(self.ids.listado.adapter.selection)
+
+    #def cambioSeleccion(self,adapter):
+    #  print "\ncambio la seleccion! len(adapter.selection) = %s\n\n" % len(adapter.selection)
+    #  itemButton = adapter.selection[0]
+    #  print "seleccion actual: %s\n" % len(adapter.selection)  
+
+    #def on_enter(self):
+    #  controlador = App.get_running_app()
+    #  controlador.desSeleccionarInformados()
+
+    def buscarFallaSeleccionada(self,fallas_dict):
+      # Se carga el dialogopropsscreen con el id_falla de la falla seleccionada
+      # en el listview.
+      id_falla_seleccionada = -1 
+      for falla in fallas_dict:
+        print "recorriendo falla informada %s falla.estaSeleccionado: %s\n" % \
+                          (falla.getEstado().getId(),falla.estaSeleccionado())
+        if falla.estaSeleccionado():
+          id_falla_seleccionada = falla.getEstado().getId()
+          break
+      return id_falla_seleccionada 
+
 
     def obtener_fallas(self):
       controlador = App.get_running_app()
       # Diccionario de objetos ItemFalla(mostrados en el listview cuando se 
       # seleccionan los baches).
+      id_falla_seleccionada = -1
       fallas_dict = controlador.getCapturadorInformados().getColBachesInformados()
-      if len(fallas_dict) > 0:
-        print "Existen fallas seleccionadas"
-        # Se carga el dialogopropsscreen con el id_falla de la falla seleccionada
-        # en el listview.
-        id_falla_seleccionada = -1 
-        for falla in fallas_dict:
-          if falla.estaSeleccionado():
-            id_falla_seleccionada = falla.getEstado().getId()
-            break
 
+      if len(fallas_dict) == 0:
+        #print "Coleccion vacia de fallas!\n"
+        controlador.mostrarDialogoMensaje(title="Captura de falla informada", 
+                                            text="No existen fallas informadas asociadas a la calle")
+        return
+
+      id_falla_seleccionada = self.buscarFallaSeleccionada(fallas_dict)
+      if id_falla_seleccionada != -1:
+        print "Existen fallas seleccionadas"
         print "Agregando falla informada para ser capturada: "
         print "Id: ",id_falla_seleccionada
         print ""
-        #self.manager.get_screen('dialogopropscaptura').set_id_falla_informada(id_falla_seleccionada)
-        #print "get_id_falla_informada() retorno: %s\n" %\
-        #    self.manager.get_screen('dialogopropscaptura').get_id_falla_informada()
+        #NOTA: Se coloca el idFalla en el dic. del controlador para que la vista
+        # dialogoPropsCaptura sepa donde volver cuando regresa.
+        #
         controlador = App.get_running_app()
         controlador.agregarData("idFalla",id_falla_seleccionada)
         print "id_falla_seleccionada: %s\n" % controlador.getData("idFalla")
-        
         self.manager.current = 'dialogopropscaptura'
-        print "Cambie el screen!"
       else:
-        print "No existen fallas seleccionadas para enviar"
+        #print "No existen fallas seleccionadas para enviar!\n"
+        controlador.mostrarDialogoMensaje(title="Captura de falla informada", 
+                                            text="Debe seleccionar una falla informada para capturar")
 
     # Cuando se carga el screen se actualiza el listao de fallas seleccionadas
     def refrescar_vista(self,settignscreen):
       print "Actualizando listado de fallas..."
       print "tipo: ", str(type(settignscreen))
       controlador = App.get_running_app()
-      
       fallas_dic = controlador.getCapturadorInformados().getColBachesInformados()
       self.listado1.adapter.data = fallas_dic
       print "Actualizado listado!"

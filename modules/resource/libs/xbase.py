@@ -101,7 +101,9 @@ class XBase(XPopup):
     '''
 
     BUTTON_OK = _('Ok')
-    BUTTON_CANCEL = _('Cancel')
+    BUTTON_CANCEL = _('Cancelar')
+    BUTTON_ACEPTAR = _('Aceptar')
+    BUTTON_CANCELAR = _('Cancelar')
     #BUTTON_YES = _('Yes')
     #BUTTON_NO = _('No')
     BUTTON_YES = _('Si')

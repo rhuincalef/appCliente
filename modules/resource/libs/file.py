@@ -280,6 +280,7 @@ class XFileSave(XFilePopup):
     """
 
     BUTTON_SAVE = _('Save')
+    BUTTON_GUARDAR = _('Guardar')
     #TXT_ERROR_FILENAME = _('Maybe you should enter a filename?')
     TXT_ERROR_FILENAME = _('Debes ingresar un nombre de archivo para almacenar el recorrido')
 
@@ -291,7 +292,8 @@ class XFileSave(XFilePopup):
     '''Default title for the popup
     '''
 
-    buttons = ListProperty([BUTTON_SAVE, XFilePopup.BUTTON_CANCEL])
+    #buttons = ListProperty([BUTTON_SAVE, XFilePopup.BUTTON_CANCEL])
+    buttons = ListProperty([BUTTON_GUARDAR, XFilePopup.BUTTON_CANCELAR])
     '''Default button set for the popup
     '''
 
@@ -315,7 +317,8 @@ class XFileSave(XFilePopup):
     def dismiss(self, *largs, **kwargs):
         """Pre-validation before closing.
         """
-        if self.button_pressed == self.BUTTON_SAVE:
+        #if self.button_pressed == self.BUTTON_SAVE:
+        if self.button_pressed == self.BUTTON_GUARDAR:
             if self.filename == '':
                 # must be entered filename
                 XError(text=self.TXT_ERROR_FILENAME)
@@ -333,7 +336,8 @@ class XFileOpen(XFilePopup):
     """XFileOpen class. See module documentation for more information.
     """
 
-    BUTTON_OPEN = _('Open')
+    BUTTON_OPEN = _('Abrir')
+    BUTTON_ABRIR = _('Abrir')
     #TXT_ERROR_SELECTION = _('Maybe you should select a file?')
     TXT_ERROR_SELECTION = _('Debes seleccionar un archivo para cargar el recorrido')
 
@@ -342,12 +346,14 @@ class XFileOpen(XFilePopup):
     '''
 
     buttons = ListProperty([BUTTON_OPEN, XFilePopup.BUTTON_CANCEL])
+    #buttons = ListProperty([BUTTON_ABRIR, XFilePopup.BUTTON_CANCELAR])
     '''Default button set for the popup
     '''
 
     def dismiss(self, *largs, **kwargs):
         """Pre-validation before closing.
         """
+        #if self.button_pressed == self.BUTTON_ABRIR:
         if self.button_pressed == self.BUTTON_OPEN:
             self._filter_selection(folders=False)
             if len(self.selection) == 0:

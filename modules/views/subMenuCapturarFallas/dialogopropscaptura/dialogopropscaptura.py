@@ -149,45 +149,20 @@ class DialogoPropsCapturaScreen(Screen):
 		print "es_nombre_valido: ",str(es_nombre_valido)
 		print "es_dir_valido: ",str(es_dir_valido)
 		print ""
-		#BACKUP!!
 		# Si es un dirvalido se envian los datos a kinect_screen
 		if es_nombre_valido and es_dir_valido:
 			kinect_screen = self.manager.get_screen('capturaKinect')
-			#kinect_screen.setDatosCaptura(self.nombre_cap.text,
-			#	self.dir_chooser.selection[0])
 			kinect_screen.setDatosCaptura(self._sanearCadena(nombre_captura).encode("utf-8"),
 				self.dir_chooser.selection[0])
 			print "Dir. de trabajo: %s\n" % self.dir_chooser.path
 			print "Data SETEADA!!! con: nombre_cap = ",self._sanearCadena(nombre_captura).encode("utf-8"),"; dir_trabajo = ",self.dir_chooser.selection[0]
 			self.manager.current = 'capturaKinect'
 
-		#Version de prueba para detectar desconexion del sensor de forma automatica!
-		#controlador = App.get_running_app()
-		# Si es un dirvalido se envian los datos a kinect_screen
-		#if es_nombre_valido and es_dir_valido:
-		#	print "self.manager.screen_names tiene: %s\n" % self.manager.screen_names
-		#	if 'capturaKinect' in self.manager.screen_names:
-		#		print "Borrada kinect_screen\n"
-		#		kinect_screen1 = self.manager.get_screen('capturaKinect')
-		#		self.manager.remove_widget(kinect_screen1)
-		#	kinect_screen = kinectviewer.KinectScreen(name=cadNueva)
-		#	self.manager.add_widget(kinect_screen)
-		#	print "Agregada screen nueva desde dialogoPropsCaptura: %s\n" % cadNueva
-		#	kinect_screen.setDatosCaptura(self.nombre_cap.text,
-		#		self.dir_chooser.path)
-		#	print "Data SETEADA!!! con: nombre_cap = ",self.nombre_cap.text,"; dir_trabajo = ",self.dir_chooser.selection[0]
-		#	self.manager.current = cadNueva
-
 
 	def crearDir(self,componente):
 		print "Creando directorio!!\n"
 		XTextInput(title='Creacion de directorio', text='Ingrese el nombre del nuevo directorio',
 			on_dismiss=self._createDir)
-		#self.instanciarComponente(
-		#								XTextInput,
-		#								callbackFn1 = self._createDir,
-		#								titulo = 'Creacion de directorio',
-		#								texto = 'Nombre carpeta nueva')
 	
 	def _createDir(self, instance):
 		if instance.is_canceled():
@@ -302,17 +277,6 @@ class DialogoPropsCapturaScreen(Screen):
 		print "Error ocurrido al borrar! %s\n" % self.dir_chooser.path + path.sep + self.dir_chooser.selection[0] 
 		XError(text= ("Error borrando el directorio\n %s" % shutil.Error))
 
-
-
-	#def instanciarComponente(self,componente,callbackFn1=None,titulo="",
-	#								texto="",buttons=[]):
-	#	callbackFn = self.default
-	##	if callbackFn1 is not None:
-	#		callbackFn = self.default
-	#	componente(title=titulo,
-	#			text=texto,
-	#			on_dismiss=callbackFn,
-	#			buttons=buttons)
 
 	def default(self,evt):
 		pass
