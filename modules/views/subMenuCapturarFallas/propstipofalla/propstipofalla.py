@@ -17,15 +17,15 @@ from utils import *
 from iconfonts import *
 from constantes import *
 
+from customwidgets import CustomDropDown
+
 class PropsFallaConfirmadaScreen(Screen):
-	"""docstring for PropsFallaConfirmadaScreen"""
 
 	def __init__(self,**kwargs):
 		super(PropsFallaConfirmadaScreen, self).__init__(**kwargs)
-		self.dropdownTipoFalla = DropDown() 
-		self.dropdownTipoMaterial = DropDown() 
-		self.dropdownTipoReparacion = DropDown()
-		self.mainButtonFalla = self.mainButtonReparacion = self.mainButtonMaterial = None
+		self.dropdownTipoFalla =self.dropdownTipoMaterial  = \
+				self.dropdownTipoReparacion = None
+		self.inicializarDropDown()
 
 	def on_enter(self):
 		controlador = App.get_running_app()
@@ -38,10 +38,9 @@ class PropsFallaConfirmadaScreen(Screen):
 			self.manager.current = 'menutiposfalla'
 			return
 		#Se cargan solamente los tipos de falla en el dropdown
-		listado = controlador.getPropsConfirmados()
-		if self.mainButtonFalla is None and self.mainButtonReparacion is None and self.mainButtonMaterial is None:
-			self.inicializarDropDown(listado)
-		
+		#listado = controlador.getPropsConfirmados()
+		#if self.mainButtonFalla is None and self.mainButtonReparacion is None and self.mainButtonMaterial is None:
+		#	self.inicializarDropDown(listado)
 		#Se establece el idFalla como una falla no establecida
 		controlador.agregarData("idFalla",FALLA_NO_ESTABLECIDA)
 		
@@ -50,79 +49,53 @@ class PropsFallaConfirmadaScreen(Screen):
 	# Inicializa el dropdown estableciendo todos los tipos de falla
 	# en el dropdown y estableciendo el tipo de falla a la falla que
 	# tiene index=0 por defecto.
-	def inicializarDropDown(self,listado):
+	def inicializarDropDown(self):
 		labPrincipal = Label(text='Seleccione los atributos con los que el tipo de falla se subira al servidor',
 							size_hint =(1,0.05),color = COLOR_TEXTOS)
-		self.layout_principal.add_widget(labPrincipal)
-
-		myBtn = self.inicializarTipoFalla(listado)
+		self.ids.layout_principal.add_widget(labPrincipal)
+		self.inicializarTipoFalla()
 		self.inicializarTipoReparacion()
 		self.inicializarTipoMaterial()
 		self.inicializarFooter()
-
-		# show the dropdown menu when the main button is released
-		# note: all the bind() calls pass the instance of the caller (here, the
-		# mainbutton instance) as the first argument of the callback (here,
-		# dropdown.open.).
-		self.mainButtonFalla.bind(on_release = self.dropdownTipoFalla.open)
-		self.mainButtonMaterial.bind(on_release = self.dropdownTipoMaterial.open)
-		self.mainButtonReparacion.bind(on_release = self.dropdownTipoReparacion.open)
-		
-		# one last thing, listen for the selection in the dropdown list and
-		# assign the data to the button text.
-		#self.dropdownTipoFalla.bind(on_select=self.actualizar_btn_falla)
-		#self.dropdownTipoFalla.bind(on_select=lambda instance, x: setattr(self.mainButtonFalla, 'text', x))
-		
-		self.dropdownTipoFalla.bind(on_select=self.cambiarAttrTiposFalla)
-		self.dropdownTipoMaterial.bind(on_select= self.actualizar_btn_mat)
-		self.dropdownTipoReparacion.bind(on_select= self.actualizar_btn_rep)
-
-		# Se dispara el evento on_select sobre el primer boton de la lista
-		# para llenar el resto de las propiedades segun el tipo de falla
-		self.dropdownTipoFalla.select(myBtn.text)
-
 	
-	def inicializarTipoFalla(self,listado):
-		labFalla = Label(text='%s Seleccione el tipo de falla' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)),
-						markup=True,
-						size_hint =(1,0.20),
-						color = COLOR_TEXTOS )
-		self.layout_principal.add_widget(labFalla)
-		# Inicializacion del boton y dropdown de Tipo de falla
-		listBtns = []
-		self.mainButtonFalla = Button(text='Tipos de falla', size_hint =(1,0.05))
-		for elem in listado:
-			btn = Button(text = elem.getValor(),size_hint_y=None, height=44)
-			btn.bind(on_release = lambda btn: self.dropdownTipoFalla.select(btn.text))
-			self.dropdownTipoFalla.add_widget(btn)
-			listBtns.append(btn)
-		self.layout_principal.add_widget(self.mainButtonFalla)
-		return listBtns[0]
-
-	def inicializarTipoReparacion(self):
-		# Inicializacion del boton y dropdown de Tipo de Reparacion
-		labReparacion = Label(text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+	def inicializarTipoFalla(self):
+		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
+							text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint =(1,0.20),
 							color = COLOR_TEXTOS)
-		self.layout_principal.add_widget(labReparacion)
-		self.mainButtonReparacion = Button(text='Tipos de reparacion',size_hint =(1,0.05)) 
-		self.layout_principal.add_widget(self.mainButtonReparacion)
+		self.ids.layout_principal.add_widget(labReparacion)
+		self.dropdownTipoFalla = CustomDropDown(id="TipoFallaDropdown",
+												load_func = CustomDropDown.callbackCargaOpciones)
+		self.ids.layout_principal.add_widget(self.dropdownTipoFalla)
 
+
+	def inicializarTipoReparacion(self):
+		# Inicializacion del boton y dropdown de Tipo de Reparacion
+		labReparacion = Label( id=PREFIJO_LABEL_DROPDOWN + "TipoReparacionDropwdown",
+							text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+							markup=True,
+							size_hint =(1,0.20),
+							color = COLOR_TEXTOS)
+		self.ids.layout_principal.add_widget(labReparacion)
+		self.dropdownTipoReparacion = CustomDropDown(id="TipoReparacionDropwdown",
+													load_func = CustomDropDown.callbackCargaOpciones)
+		self.ids.layout_principal.add_widget(self.dropdownTipoReparacion)
 
 	def inicializarTipoMaterial(self):
 		# Inicializacion del boton y dropdown de Tipo de Material
-		labMaterial = Label(text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
+		labMaterial = Label(id=PREFIJO_LABEL_DROPDOWN + "TipoMaterialDropdown",
+							text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint =(1,0.20),
 							color = COLOR_TEXTOS )
-		self.layout_principal.add_widget(labMaterial)
-		self.mainButtonMaterial = Button(text='Tipos de material', size_hint =(1,0.05)) 
-		self.layout_principal.add_widget(self.mainButtonMaterial)
+		self.ids.layout_principal.add_widget(labMaterial)
+		self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterialDropdown",
+													load_func = CustomDropDown.callbackCargaOpciones)
+		self.ids.layout_principal.add_widget(self.dropdownTipoMaterial)
 
 
 	def inicializarFooter(self):
-		#layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal')
 		layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal',
 								size_hint= (1,0.05))
 		btnAcept = Button(text = 'Aceptar')
@@ -131,7 +104,7 @@ class PropsFallaConfirmadaScreen(Screen):
 		btnCancel = Button(text = 'Cancelar')
 		btnCancel.bind(on_press = self.cancelar)
 		layout.add_widget(btnCancel)
-		self.layout_principal.add_widget(layout)
+		self.ids.layout_principal.add_widget(layout)
 
 
 	def actualizar_btn_mat(self,drop,btnNombre):

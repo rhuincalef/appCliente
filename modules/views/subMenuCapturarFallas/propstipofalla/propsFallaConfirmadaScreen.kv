@@ -6,19 +6,21 @@
 
 <PropsFallaConfirmadaScreen>:
 	# Los dropdowns para los tipos de falla se cargan de forma dinamica 
-	layout_principal: main_layout
-
+	
 	GridLayout:
-		id: main_layout
+		id: layout_principal
 		cols:1
 		rows:8
-		size_hint: (1,1)
 		#rows:7
+		size_hint: (1,1)
 		orientation: 'vertical'
-		canvas.before:
-			Color:
-				rgba: const.COLOR_LABELS_RGBA
-			Rectangle:
-				pos: self.pos
-				size: self.size
+		
+		#canvas.before:
+		#	Color:
+		#		rgba: const.COLOR_LABELS_RGBA
+		#	Rectangle:
+		#		pos: self.pos
+		#		size: self.size
+
+
 		

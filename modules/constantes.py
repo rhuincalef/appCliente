@@ -382,11 +382,27 @@ CRITICIDADES = [
 					"id":3,
 					"nombre":"Baja Bache", 
 					"descripcion":"Para baches entre x e y"
+				},
+				{
+					"id":4,
+					"nombre":"Adicional Bache", 
+					"descripcion":"Para baches entre x e y"
+				},
+				{
+					"id":5,
+					"nombre":"Adicional Bache", 
+					"descripcion":"Para baches entre x e y"
+				},
+				{
+					"id":6,
+					"nombre":"Adicional Bache", 
+					"descripcion":"Para baches entre x e y"
 				}
 ]
 
 # Criticidades habilitadas para seleccionar en el menu 
-IDS_CRITICIDADES_HABILITADAS = [1,2]
+#IDS_CRITICIDADES_HABILITADAS = [1,2]
+IDS_CRITICIDADES_HABILITADAS = [1,2,3,4,5]
 
 
 # Archivos modificados en servidor -->
@@ -447,9 +463,12 @@ LISTADO_SUB_MENUS = [
 TIPO_SUB_MENU = "subMenu"
 TIPO_SCREEN = "screen"
 
+# Constantes para el tamanio de los iconos en screen "propsTipoFalla" (solicitado en 
+# modulo customwidgets)
 
-
-
+TAMANIO_PLUS_ICON_DROPDOWN = 17
+TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN = '18sp' 
+PREFIJO_LABEL_DROPDOWN = "label"
 
 
 

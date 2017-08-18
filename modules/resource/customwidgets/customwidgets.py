@@ -123,21 +123,50 @@ class AutoCompleteTextInput(BoxLayout):
     def limpiar(self):
         self.textInput.text = ''
 
+from iconfonts import *
+from constantes import *
+register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 
 class CustomDropDown(TreeView):
 
     root_options = {
-                        'text': '',
-                        'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
-                        'minimum_height': 500
+                        #'text': "+",
+                        'text': "%s"% icon('fa-plus',TAMANIO_PLUS_ICON_DROPDOWN),
+                        'markup': True,
+                        'font_size':TAMANIO_PLUS_ICON_DROPDOWN,
+                        'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
                     }
 
     def __init__(self,**kwargs):
         super(CustomDropDown,self).__init__(**kwargs)
         self.toggle_node(self.root)
+        self.bind(on_node_expand = self.ocultarLabels)
+        self.bind(on_node_collapse = self.mostrarLabels)
 
 
-    #def callbackCargaOpciones(self,treeview, node):
+    #Evento usado para ocular los labels que se encuentran detras del customdropdown
+    def ocultarLabels(self,customDropdown,treeViewLabel):
+        self._toogleGUI(customDropdown,True)
+        
+    #Evento usado para mostrar nuevamente los labels que se encuentran detras del customdropdown
+    def mostrarLabels(self,customDropdown,treeViewLabel):
+        self._toogleGUI(customDropdown,False)
+        
+
+    #Este metodo al habilitarse un dropdown, deshabilita el resto y sus lables asociados
+    def _toogleGUI(self,customDropdown,estanDeshabilitadosWidgets):
+        print "type (dropdown):%s,  dropdown.id: %s\n" % (type(customDropdown),customDropdown.id)
+        for elemento in self.parent.children:
+            print "recorriendo elemento: %s\n" % type(elemento)
+            print "recorriendo elemento.id: %s\n" % elemento.id
+            if elemento.id is not None and not (elemento.id == customDropdown.id) \
+                                        and not (elemento.id == PREFIJO_LABEL_DROPDOWN+customDropdown.id):
+                elemento.disabled = estanDeshabilitadosWidgets
+                print "deshabilitado: %s !\n\n" % elemento.id
+
+
+
+
     @staticmethod
     def callbackCargaOpciones(treeview, node):
         #TODO: SOLICITAR NOMBRES DE ATRIBUTOS
@@ -151,13 +180,16 @@ class CustomDropDown(TreeView):
                     element = TreeViewLabel(text = elem["nombre"] +": "+elem["descripcion"] ,
                                         color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
                                         disabled = True,
-                                        disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3)
+                                        disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
+                                        font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN 
+
                                         )
                     print "Esta deshabilitado: %s\n" % elem['nombre']
                     element.no_selection = True                    
                 else:
                     element = TreeViewLabel(text = elem["nombre"] +": "+elem["descripcion"] ,
-                                        color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
+                                        color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+                                        font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN 
                                         )
 
                 #element.bind(on_touch_down = self.on_pressed_element)
@@ -175,10 +207,10 @@ class CustomDropDown(TreeView):
         label.parent_node.bold = True
         print "type(label.parent_node):%s\n" % type(label.parent_node)
         print "type(label.parent_node.parent_node):%s\n" % type(label.parent_node.parent)
-        with label.parent_node.canvas.after:
-            label.parent_node.canvas.after.clear()
-            Color(25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
-            Rectangle(pos = label.parent_node.pos, size = label.parent_node.size)
+        #with label.parent_node.canvas.after:
+        #    label.parent_node.canvas.after.clear()
+        #    Color(25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
+        #    Rectangle(pos = label.parent_node.pos, size = label.parent_node.size)
 
         self.getOpcSeleccionadas()
 
