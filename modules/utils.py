@@ -35,6 +35,7 @@ from capturador import ItemFalla
 import logging,time
 import freenect
 
+import re
 
 #Crea un csv para enviar al servidor.
 def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
@@ -285,16 +286,20 @@ def convertirJson(url):
 #Cementár
 
 def escaparCaracteresEspeciales(propiedad):
-	print "en escaparCaracteresEspeciales()...\n"
+	#print "en escaparCaracteresEspeciales()...\n"
 	dic = {}
 	dic['clave'] = unicode(propiedad['clave'],encoding="utf8")
 	dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
-	print "dic nuevo: %s\n" % dic 
-	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final y,
-	# se reemplazan los \x por \u00 para que cumplan con el estandar de JSON.
-	codificada = unicode(dic).replace("'",'"')
-	codificada = codificada.replace("u","").replace("\\x","\\u00")
-	print "codificada: %s\n" % codificada
+	#print "dic nuevo: %s\n" % dic 
+	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final("u" de codificacion unicode) 
+	# y se reemplazan los \x por \u00 para que cumplan con el estandar de JSON.
+	codificada = str(dic).replace("'",'"')
+	#print "codificada inicial: %s\n" % codificada
+	#print "type(codificada): %s\n" % type(codificada)
+	codificada = re.sub(":.u",":",codificada)
+	#print "\n\ncodificada intermedia: %s\n\n" % codificada
+	codificada = codificada.replace("\\x","\\u00")
+	#print "codificada: %s\n" % codificada
 	return codificada 
 
 
