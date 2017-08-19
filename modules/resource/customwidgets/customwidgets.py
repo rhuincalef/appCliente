@@ -129,9 +129,11 @@ register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 
 class CustomDropDown(TreeView):
 
+    ICONO_DEFAULT_DROPDOWN = "%s"% icon('fa-plus',TAMANIO_PLUS_ICON_DROPDOWN)
+
     root_options = {
                         #'text': "+",
-                        'text': "%s"% icon('fa-plus',TAMANIO_PLUS_ICON_DROPDOWN),
+                        'text': ICONO_DEFAULT_DROPDOWN,
                         'markup': True,
                         'font_size':TAMANIO_PLUS_ICON_DROPDOWN,
                         'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
@@ -218,6 +220,7 @@ class CustomDropDown(TreeView):
     def getOpcSeleccionadas(self):
         print "Los elementos seleccionados son:\n\n"
         print "Nodos seleccionados: %s\n" % self.selected_node.text
+        return self.selected_node.text
         #if self.tv.selected_node is not None:
         #    print "Nodos seleccionados: %s\n" % self.tv.selected_node.text
         #else:
@@ -235,6 +238,12 @@ class CustomDropDown(TreeView):
             if elem["id"] in IDS_CRITICIDADES_HABILITADAS:
                 elem["estaHabilitada"] = True
         return criticidades
+
+    def reestablecer(self):
+        self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN 
+
+
+
 
 
 #Clase principal de la GUI que agrupa por submenus los screenmangers que realizan

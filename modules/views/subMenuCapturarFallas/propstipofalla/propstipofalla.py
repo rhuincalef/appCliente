@@ -25,7 +25,7 @@ class PropsFallaConfirmadaScreen(Screen):
 		super(PropsFallaConfirmadaScreen, self).__init__(**kwargs)
 		self.dropdownTipoFalla =self.dropdownTipoMaterial  = \
 				self.dropdownTipoReparacion = None
-		self.inicializarDropDown()
+		self.inicializarDropDownPrincipal()
 
 	def on_enter(self):
 		controlador = App.get_running_app()
@@ -49,8 +49,8 @@ class PropsFallaConfirmadaScreen(Screen):
 	# Inicializa el dropdown estableciendo todos los tipos de falla
 	# en el dropdown y estableciendo el tipo de falla a la falla que
 	# tiene index=0 por defecto.
-	def inicializarDropDown(self):
-		labPrincipal = Label(text='Seleccione los atributos con los que el tipo de falla se subira al servidor',
+	def inicializarDropDownPrincipal(self):
+		labPrincipal = Label(id = "labelPrincipal",text='Seleccione los atributos con los que el tipo de falla se subira al servidor',
 							size_hint =(1,0.05),color = COLOR_TEXTOS)
 		self.ids.layout_principal.add_widget(labPrincipal)
 		self.inicializarTipoFalla()
@@ -62,10 +62,11 @@ class PropsFallaConfirmadaScreen(Screen):
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
 							text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint =(1,0.20),
+							size_hint =(1,0.05),
 							color = COLOR_TEXTOS)
 		self.ids.layout_principal.add_widget(labReparacion)
 		self.dropdownTipoFalla = CustomDropDown(id="TipoFallaDropdown",
+												size_hint = (1,0.15),
 												load_func = CustomDropDown.callbackCargaOpciones)
 		self.ids.layout_principal.add_widget(self.dropdownTipoFalla)
 
@@ -75,10 +76,11 @@ class PropsFallaConfirmadaScreen(Screen):
 		labReparacion = Label( id=PREFIJO_LABEL_DROPDOWN + "TipoReparacionDropwdown",
 							text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint =(1,0.20),
+							size_hint =(1,0.05),
 							color = COLOR_TEXTOS)
 		self.ids.layout_principal.add_widget(labReparacion)
 		self.dropdownTipoReparacion = CustomDropDown(id="TipoReparacionDropwdown",
+													size_hint = (1,0.15),
 													load_func = CustomDropDown.callbackCargaOpciones)
 		self.ids.layout_principal.add_widget(self.dropdownTipoReparacion)
 
@@ -87,17 +89,21 @@ class PropsFallaConfirmadaScreen(Screen):
 		labMaterial = Label(id=PREFIJO_LABEL_DROPDOWN + "TipoMaterialDropdown",
 							text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint =(1,0.20),
+							size_hint =(1,0.05),
 							color = COLOR_TEXTOS )
 		self.ids.layout_principal.add_widget(labMaterial)
 		self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterialDropdown",
+													size_hint = (1,0.15),
 													load_func = CustomDropDown.callbackCargaOpciones)
 		self.ids.layout_principal.add_widget(self.dropdownTipoMaterial)
 
 
 	def inicializarFooter(self):
 		layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal',
-								size_hint= (1,0.05))
+								size_hint= (1,0.05),
+								padding = (0,10,0,0)
+
+								)
 		btnAcept = Button(text = 'Aceptar')
 		btnAcept.bind(on_press = self.aceptar)
 		layout.add_widget(btnAcept)
@@ -105,6 +111,10 @@ class PropsFallaConfirmadaScreen(Screen):
 		btnCancel.bind(on_press = self.cancelar)
 		layout.add_widget(btnCancel)
 		self.ids.layout_principal.add_widget(layout)
+
+
+
+
 
 
 	def actualizar_btn_mat(self,drop,btnNombre):
@@ -173,25 +183,41 @@ class PropsFallaConfirmadaScreen(Screen):
 				dropdownTipoMaterial.add_widget(btn)
 
 
+	def _obtenerWidgetPorId(self,nombreWidget):
+		for w in self.ids.layout_principal.children:
+			if w.id == nombreWidget:
+				return w
+		return None
 	
 	def aceptar(self,evt):
 		#Se envian los datos de la falla
 		screen = self.manager.get_screen('dialogopropscaptura')
 		controlador = App.get_running_app()
-		if not controlador.sonPropiedadesValidas(self.mainButtonFalla.text,
-											self.mainButtonReparacion.text,
-											self.mainButtonMaterial.text):
+		tipoFalla = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
+		tipoReparacion = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
+		tipoMaterial = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
+
+		print "props leidas: %s, %s, %s \n\n" % (tipoFalla,tipoReparacion,tipoMaterial)
+		if not controlador.sonPropiedadesValidas(tipoFalla,tipoReparacion, tipoMaterial):
 			controlador.mostrarDialogoMensaje(title="Error de propiedades",
 												text="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
 												)			
 			return
-		
-		controlador.agregarData("tipoFalla",self.mainButtonFalla.text)
-		controlador.agregarData("tipoReparacion",self.mainButtonReparacion.text)
-		controlador.agregarData("tipoMaterial",self.mainButtonMaterial.text)
-		self.manager.current = 'dialogopropscaptura'
+
+		#controlador.agregarData("tipoFalla",tipoFalla)
+		#controlador.agregarData("tipoReparacion",tipoReparacion)
+		#controlador.agregarData("tipoMaterial",tipoMaterial)
+		#self.manager.current = 'dialogopropscaptura'
 
 
+	def reestablecerDropDowns(self):
+		for widget in self.ids.layout_principal.children:
+			print "Iterando elemento: %s\n" % widget.id
+			if widget.id == "TipoFallaDropdown" or widget.id == "TipoReparacionDropwdown" or \
+						 widget.id == "TipoMaterialDropdown":
+				widget.reestablecer()  
+	
 	def cancelar(self,evt):
-		self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()  
+		self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()
+		self.reestablecerDropDowns()
 		self.manager.current = 'subMenuCapturarFalla'
