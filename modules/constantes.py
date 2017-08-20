@@ -470,7 +470,8 @@ TAMANIO_PLUS_ICON_DROPDOWN = 17
 TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN = '18sp' 
 PREFIJO_LABEL_DROPDOWN = "label"
 
-
+#Espacio que se reserva horizontalmente por opcion de cada CustomDropdown
+PADDING_POR_WIDGET = 36
 
 
 

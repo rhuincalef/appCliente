@@ -27,22 +27,13 @@ class PropsFallaConfirmadaScreen(Screen):
 				self.dropdownTipoReparacion = None
 		self.layout_principal = GridLayout(id="layout_principal",
 											cols = 1,
-											rows = 9,
+											rows = 15,
+											#size_hint = (1,1),
 											size_hint_y = None,
-											orientation = 'vertical')
+											orientation = 'vertical',
+											spacing  = [0,100])
 		self.layout_principal.bind(minimum_height = self.layout_principal.setter('height'))
 		self.inicializarDropDownPrincipal()
-
-
-	# Calcula el espacio reservado para cada una de las opciones de los customdropdown
-	def calcularSpacingEntreLayouts(self,cantidadCriticidades):
-		contador = 0
-		for i in xrange(1,cantidadCriticidades):
-			print "Iterando valor i:%s\n" % i
-			contador += PADDING_POR_WIDGET
-			print "contador actual: %s\n" % contador 
-		self.layout_principal.spacing = [0, contador]
-
 
 	def on_enter(self):
 		controlador = App.get_running_app()
@@ -68,150 +59,97 @@ class PropsFallaConfirmadaScreen(Screen):
 	# tiene index=0 por defecto.
 	def inicializarDropDownPrincipal(self):
 		labPrincipal = Label(id = "labelPrincipal",text='Seleccione los atributos con los que el tipo de falla se subira al servidor',
+							#size_hint =(1,0.05),
 							size_hint =(1,None),
 							color = COLOR_TEXTOS)
+		#self.ids.layout_principal.add_widget(labPrincipal)
+		self.inicializarTipoFalla(label = labPrincipal)
 		
-		cantMaximaOpcionesDropwdown = 0
-		cantMaximaOpcionesDropwdown = self.inicializarTipoFalla(label = None)
-		cantOpcTipoMaterial = self.inicializarTipoMaterial()
-		if cantMaximaOpcionesDropwdown < cantOpcTipoMaterial:
-			cantMaximaOpcionesDropwdown = cantOpcTipoMaterial
-
-		cantOpcCriticidad = self.inicializarTipoCriticidad()
-		if cantMaximaOpcionesDropwdown < cantOpcCriticidad:
-			cantMaximaOpcionesDropwdown = cantOpcCriticidad
-		
-		self.inicializarFooter()
+		#self.inicializarTipoReparacion()
+		#self.inicializarTipoMaterial()
+		#self.inicializarFooter()
 		self.ids.main_scroll_view.add_widget(self.layout_principal)
-		print "valor final cantMaximaOpcionesDropwdown: %s\n" % cantMaximaOpcionesDropwdown
-		self.calcularSpacingEntreLayouts(cantMaximaOpcionesDropwdown)
 	
 
 	def inicializarTipoFalla(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoFalla",
 					cols = 1,
-					rows = 2,
+					rows = 3,
 					size_hint_y = None,
 					orientation = 'vertical')
+					#spacing  = [0,100]))
 		if label is not None:
 			subLayout.add_widget(label)
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
-							text='%s Seleccione el tipo de falla' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+							text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
+							#size_hint =(1,0.05),
 							color = COLOR_TEXTOS)
+		#self.ids.layout_principal.add_widget(labReparacion)
+		#self.layout_principal.add_widget(labReparacion)
 		subLayout.add_widget(labReparacion)
 
 		self.dropdownTipoFalla = CustomDropDown(id="TipoFallaDropdown",
 												size_hint_y = None,
 												size_hint_x = 1,
+												#size_hint = (1,0.15),
 												load_func = CustomDropDown.callbackCargaOpciones)
+		#self.ids.layout_principal.add_widget(self.dropdownTipoFalla)
 		subLayout.add_widget(self.dropdownTipoFalla)
 		self.layout_principal.add_widget(subLayout)
-		return len(CustomDropDown.getCriticidadesHabilitadas())
 
 
-	def inicializarTipoMaterial(self,label=None):
-		subLayout = GridLayout(id="subLayoutTipoMaterial",
-					cols = 1,
-					rows = 2,
-					size_hint_y = None,
-					orientation = 'vertical')
-		if label is not None:
-			subLayout.add_widget(label)
-
-		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoMaterial",
-							text='%s Seleccione el tipo de material' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+	def inicializarTipoReparacion(self):
+		# Inicializacion del boton y dropdown de Tipo de Reparacion
+		labReparacion = Label( id=PREFIJO_LABEL_DROPDOWN + "TipoReparacionDropwdown",
+							text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint_y = None,
-							size_hint_x = 1,
+							size_hint =(1,0.05),
 							color = COLOR_TEXTOS)
-		subLayout.add_widget(labReparacion)
+		#self.ids.layout_principal.add_widget(labReparacion)
+		self.layout_principal.add_widget(labReparacion)
+		self.dropdownTipoReparacion = CustomDropDown(id="TipoReparacionDropwdown",
+													size_hint = (1,0.15),
+													load_func = CustomDropDown.callbackCargaOpciones)
+		#self.ids.layout_principal.add_widget(self.dropdownTipoReparacion)
+		self.layout_principal.add_widget(self.dropdownTipoReparacion)
 
-		self.dropdownTipoFalla = CustomDropDown(id="TipoMaterial",
-												size_hint_y = None,
-												size_hint_x = 1,
-												load_func = CustomDropDown.callbackCargaOpciones)
-		subLayout.add_widget(self.dropdownTipoFalla)
-		self.layout_principal.add_widget(subLayout)
-		return len(CustomDropDown.getCriticidadesHabilitadas())
-
-	def inicializarTipoCriticidad(self,label=None):
-		subLayout = GridLayout(id="subLayoutTipoCriticidad",
-					cols = 1,
-					rows = 2,
-					size_hint_y = None,
-					orientation = 'vertical')
-		if label is not None:
-			subLayout.add_widget(label)
-
-		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoCriticidad",
-							text='%s Seleccione el tipo de material' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+	def inicializarTipoMaterial(self):
+		# Inicializacion del boton y dropdown de Tipo de Material
+		labMaterial = Label(id=PREFIJO_LABEL_DROPDOWN + "TipoMaterialDropdown",
+							text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
 							markup=True,
-							size_hint_y = None,
-							size_hint_x = 1,
-							color = COLOR_TEXTOS)
-		subLayout.add_widget(labReparacion)
-
-		self.dropdownTipoFalla = CustomDropDown(id="TipoCriticidad",
-												size_hint_y = None,
-												size_hint_x = 1,
-												load_func = CustomDropDown.callbackCargaOpciones)
-		subLayout.add_widget(self.dropdownTipoFalla)
-		self.layout_principal.add_widget(subLayout)
-		return len(CustomDropDown.getCriticidadesHabilitadas())
-
-
-	#def inicializarTipoReparacion(self):
-	#	# Inicializacion del boton y dropdown de Tipo de Reparacion
-	#	labReparacion = Label( id=PREFIJO_LABEL_DROPDOWN + "TipoReparacionDropwdown",
-	#						text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
-	#						markup=True,
-	#						size_hint =(1,0.05),
-	#						color = COLOR_TEXTOS)
-	#	#self.ids.layout_principal.add_widget(labReparacion)
-	#	self.layout_principal.add_widget(labReparacion)
-	#	self.dropdownTipoReparacion = CustomDropDown(id="TipoReparacionDropwdown",
-	#												size_hint = (1,0.15),
-	#												load_func = CustomDropDown.callbackCargaOpciones)
-	#	#self.ids.layout_principal.add_widget(self.dropdownTipoReparacion)
-	#	self.layout_principal.add_widget(self.dropdownTipoReparacion)
-
-	#def inicializarTipoMaterial(self):
-	#	# Inicializacion del boton y dropdown de Tipo de Material
-	#	labMaterial = Label(id=PREFIJO_LABEL_DROPDOWN + "TipoMaterialDropdown",
-	#						text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
-	#						markup=True,
-	#						size_hint =(1,0.05),
-	#						color = COLOR_TEXTOS )
-	#	#self.ids.layout_principal.add_widget(labMaterial)
-	#	self.layout_principal.add_widget(labMaterial)
-	#	self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterialDropdown",
-	#												size_hint = (1,0.15),
-	#												load_func = CustomDropDown.callbackCargaOpciones)
-	#	#self.ids.layout_principal.add_widget(self.dropdownTipoMaterial)
-	#	self.layout_principal.add_widget(self.dropdownTipoMaterial)
+							size_hint =(1,0.05),
+							color = COLOR_TEXTOS )
+		#self.ids.layout_principal.add_widget(labMaterial)
+		self.layout_principal.add_widget(labMaterial)
+		self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterialDropdown",
+													size_hint = (1,0.15),
+													load_func = CustomDropDown.callbackCargaOpciones)
+		#self.ids.layout_principal.add_widget(self.dropdownTipoMaterial)
+		self.layout_principal.add_widget(self.dropdownTipoMaterial)
 
 
 	def inicializarFooter(self):
-		layout = GridLayout(
-							rows = 1,
-							cols = 2,
-							orientation = 'horizontal',
-							size_hint_y = None,
-							padding = (0,50,0,0)
-							#size_hint= (1,0.05),
-							#padding = (0,10,0,0)
-							)
+		layout = GridLayout(rows = 1,cols = 2,orientation = 'horizontal',
+								size_hint= (1,0.05),
+								padding = (0,10,0,0)
+
+								)
 		btnAcept = Button(text = 'Aceptar')
 		btnAcept.bind(on_press = self.aceptar)
 		layout.add_widget(btnAcept)
 		btnCancel = Button(text = 'Cancelar')
 		btnCancel.bind(on_press = self.cancelar)
 		layout.add_widget(btnCancel)
+		#self.ids.layout_principal.add_widget(layout)
 		self.layout_principal.add_widget(layout)
+
+
+
 
 
 

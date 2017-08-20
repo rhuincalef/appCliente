@@ -132,7 +132,6 @@ class CustomDropDown(TreeView):
     ICONO_DEFAULT_DROPDOWN = "%s"% icon('fa-plus',TAMANIO_PLUS_ICON_DROPDOWN)
 
     root_options = {
-                        #'text': "+",
                         'text': ICONO_DEFAULT_DROPDOWN,
                         'markup': True,
                         'font_size':TAMANIO_PLUS_ICON_DROPDOWN,
@@ -148,25 +147,41 @@ class CustomDropDown(TreeView):
 
     #Evento usado para ocular los labels que se encuentran detras del customdropdown
     def ocultarLabels(self,customDropdown,treeViewLabel):
-        self._toogleGUI(customDropdown,True)
+        print "type(self.parent): %s, id: %s\n" % (type(self.parent.parent),self.parent.parent.id)
+        #Se modifica el spacing entre elementos cuando se expande un nodo.
+        self._toggleGUI(customDropdown,True)
         
     #Evento usado para mostrar nuevamente los labels que se encuentran detras del customdropdown
     def mostrarLabels(self,customDropdown,treeViewLabel):
-        self._toogleGUI(customDropdown,False)
+        self._toggleGUI(customDropdown,False)
         
 
     #Este metodo al habilitarse un dropdown, deshabilita el resto y sus lables asociados
-    def _toogleGUI(self,customDropdown,estanDeshabilitadosWidgets):
-        print "type (dropdown):%s,  dropdown.id: %s\n" % (type(customDropdown),customDropdown.id)
-        for elemento in self.parent.children:
+    def _toggleGUI(self,customDropdown,estanDeshabilitadosWidgets):
+        print "type (customDropdown):%s,  customDropdown.id: %s\n" % (type(customDropdown),customDropdown.id)
+        print "type (customDropdown.parent.id):%s,  customDropdown.parent.id: %s\n" % (type(customDropdown.parent.id),
+                                                                                            customDropdown.parent.id)
+        #NOTA: "elemento" a este nivel es un sublayout
+        for elemento in self.parent.parent.children:
             print "recorriendo elemento: %s\n" % type(elemento)
             print "recorriendo elemento.id: %s\n" % elemento.id
-            if elemento.id is not None and not (elemento.id == customDropdown.id) \
-                                        and not (elemento.id == PREFIJO_LABEL_DROPDOWN+customDropdown.id):
+            if (elemento.id is not None) and not (elemento.id == customDropdown.parent.id):
                 elemento.disabled = estanDeshabilitadosWidgets
                 print "deshabilitado: %s !\n\n" % elemento.id
 
 
+
+    # BACKUP!!
+    #Este metodo al habilitarse un dropdown, deshabilita el resto y sus lables asociados
+    #def _toggleGUI(self,customDropdown,estanDeshabilitadosWidgets):
+    #    print "type (dropdown):%s,  dropdown.id: %s\n" % (type(customDropdown),customDropdown.id)
+    #    for elemento in self.parent.children:
+    #        print "recorriendo elemento: %s\n" % type(elemento)
+    #        print "recorriendo elemento.id: %s\n" % elemento.id
+    #        if (elemento.id is not None) and not (elemento.id == customDropdown.id) \
+    #                                    and not (elemento.id == PREFIJO_LABEL_DROPDOWN+customDropdown.id):
+    #            elemento.disabled = estanDeshabilitadosWidgets
+    #            print "deshabilitado: %s !\n\n" % elemento.id
 
 
     @staticmethod
@@ -209,6 +224,7 @@ class CustomDropDown(TreeView):
         label.parent_node.bold = True
         print "type(label.parent_node):%s\n" % type(label.parent_node)
         print "type(label.parent_node.parent_node):%s\n" % type(label.parent_node.parent)
+        print "type(self.parent): %s\n" % type(self.parent)
         #with label.parent_node.canvas.after:
         #    label.parent_node.canvas.after.clear()
         #    Color(25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)

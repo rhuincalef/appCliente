@@ -3,23 +3,25 @@
 # NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del 
 # archivo .kv.
 #:import const constantes
+#:import Window kivy.core.window
+
 
 <PropsFallaConfirmadaScreen>:
 	# Los dropdowns para los tipos de falla se cargan de forma dinamica 
-	
-	GridLayout:
-		id: layout_principal
-		cols:1
-		rows:8
-		size_hint: (1,1)
-		orientation: 'vertical'
-		
-		#canvas.before:
-		#	Color:
-		#		rgba: const.COLOR_LABELS_RGBA
-		#	Rectangle:
-		#		pos: self.pos
-		#		size: self.size
 
+	ScrollView:
+		id: main_scroll_view
+		size_hint: (1, None)
+		size: (root.width, root.height)
+		#size: (Window.width, Window.height)
+		#size: (800, 600)
+		
+	#GridLayout:
+	#	id: layout_principal
+	#	cols:1
+	#	rows:8
+	#	size_hint: (1,1)
+	#	orientation: 'vertical'
+		
 
 		
