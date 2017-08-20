@@ -30,8 +30,18 @@ class PropsFallaConfirmadaScreen(Screen):
 											rows = 9,
 											size_hint_y = None,
 											orientation = 'vertical')
-		self.layout_principal.bind(minimum_height = self.layout_principal.setter('height'))
+		self.layout_principal.setter('height')
+		#self.layout_principal.bind(minimum_height = self.layout_principal.setter('height'))
+		self.layout_principal.bind(minimum_height = self.calcular_height )
 		self.inicializarDropDownPrincipal()
+
+
+
+	# Este metodo establece la altura maxima del layout, lo que determina
+	# hasta que punto el usuario puede scrollear sobre este.
+	#
+	def calcular_height(self,instance,value):
+		self.layout_principal.height = 940
 
 
 	# Calcula el espacio reservado para cada una de las opciones de los customdropdown
