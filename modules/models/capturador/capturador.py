@@ -124,6 +124,29 @@ class ListadoPropiedades(list):
       if cantMaxima < cantidadActual:
         cantMaxima = cantidadActual
     print "Cantidad maxima de propiedades: %s es: %s\n" % (nombreProp,cantMaxima)
+    return cantMaxima
+
+
+  #AGREGADO RODRIGO
+  # Retorna la referencia a una propiedad "tipoFalla" en base al nombre
+  def getTipoFallaPorNombre(self,nombreTipoFalla):
+    for tipoFalla in self:
+      if tipoFalla.getValor() == nombreTipoFalla:
+        return tipoFalla
+    return None
+
+
+  #AGREGADO RODRIGO
+  # Obtiene las subpropiedades de un tipo de falla dado su nombre y el de 
+  # su subpropiedad.
+  # .getPropsAsociadasATipoFalla("bache","tipoMaterial")
+  # .getPropsAsociadasATipoFalla("bache","criticidad")
+  def getPropsAsociadasATipoFalla(self,nombreTipoFalla,nombreSubPropiedad):
+    subProps = []
+    for prop in self:
+      if prop.getValor() == nombreTipoFalla:
+        subProps = prop.getPropsAsociadasPorNombre(nombreSubPropiedad)
+    return subProps
 
 
 
@@ -165,6 +188,19 @@ class Propiedad(object):
   def estaHabilitada(self):
     return self.estaHabilitada
 
+
+  #AGREGADO RODRIGO
+  # Obtiene las subpropiedades de un tipo de falla dado su nombre y el de 
+  # su subpropiedad.
+  def getPropsAsociadasPorNombre(self,nombreSubPropiedad):
+    subProps = []
+    for subProp in self.colPropsAsociadas:
+      if subProp.getClave() == nombreSubPropiedad:
+        subProps.append(subProp.getValor())
+    return subProps
+
+
+
   #AGREGADO RODRIGO
   #Retorna la cantidad de propiedades que tiene la propiedad actual con un nombre dado.
   #SE EMPLEA PRINCIPALMENTE PARA LAS PROPS DIRECTAS DE LOS TIPOS DE FALLA.
@@ -174,7 +210,6 @@ class Propiedad(object):
       if prop["clave"] == nombreProp:
         cantProps += 1
     return cantProps
-
 
   # Convirte a diccionario la propiedad y sus atributos
   # asociados
@@ -200,7 +235,6 @@ class Propiedad(object):
     tinyDB.insert(self.toDict())
   def getClave(self):
     return self.clave
-
 
 
 #Listado de elementos ItemFalla
@@ -527,8 +561,10 @@ class Capturador(object):
     # tipo de material).
 
 
+  #Retorna los tiposFalla con todas sus propiedades
   def getPropsConfirmados(self):
     return self.propsConfirmados
+
 
 
 

@@ -81,12 +81,19 @@ class PropsFallaConfirmadaScreen(Screen):
 							color = COLOR_TEXTOS)
 		
 		cantMaximaOpcionesDropwdown = 0
-		cantMaximaOpcionesDropwdown = self.inicializarTipoFalla(label = None)
-		cantOpcTipoMaterial = self.inicializarTipoMaterial()
+		controlador = App.get_running_app()
+		todasPropsConfirmadas = controlador.getPropsConfirmados()
+
+		self.inicializarTipoFalla(label = None)
+		cantMaximaOpcionesDropwdown = len(todasPropsConfirmadas)
+		
+		self.inicializarTipoMaterial()
+		cantOpcTipoMaterial = todasPropsConfirmadas.getCantPropsTipoFalla("tipoMaterial") 
 		if cantMaximaOpcionesDropwdown < cantOpcTipoMaterial:
 			cantMaximaOpcionesDropwdown = cantOpcTipoMaterial
 
-		cantOpcCriticidad = self.inicializarTipoCriticidad()
+		self.inicializarTipoCriticidad()
+		cantOpcCriticidad = todasPropsConfirmadas.getCantPropsTipoFalla("criticidad") 
 		if cantMaximaOpcionesDropwdown < cantOpcCriticidad:
 			cantMaximaOpcionesDropwdown = cantOpcCriticidad
 		
@@ -116,10 +123,12 @@ class PropsFallaConfirmadaScreen(Screen):
 		self.dropdownTipoFalla = CustomDropDown(id="TipoFallaDropdown",
 												size_hint_y = None,
 												size_hint_x = 1,
-												load_func = CustomDropDown.callbackCargaOpciones)
+												#load_func = CustomDropDown.callbackCargaOpciones)
+												load_func = CustomDropDown.callbackCargaTiposFalla)
 		subLayout.add_widget(self.dropdownTipoFalla)
 		self.layout_principal.add_widget(subLayout)
-		return len(CustomDropDown.getCriticidadesHabilitadas())
+		#return len(CustomDropDown.getCriticidadesHabilitadas())
+		
 
 
 	def inicializarTipoMaterial(self,label=None):
@@ -139,13 +148,13 @@ class PropsFallaConfirmadaScreen(Screen):
 							color = COLOR_TEXTOS)
 		subLayout.add_widget(labReparacion)
 
-		self.dropdownTipoFalla = CustomDropDown(id="TipoMaterial",
+		self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterial",
 												size_hint_y = None,
-												size_hint_x = 1,
-												load_func = CustomDropDown.callbackCargaOpciones)
-		subLayout.add_widget(self.dropdownTipoFalla)
+												size_hint_x = 1)
+												#,load_func = CustomDropDown.callbackCargaOpciones)
+		subLayout.add_widget(self.dropdownTipoMaterial)
 		self.layout_principal.add_widget(subLayout)
-		return len(CustomDropDown.getCriticidadesHabilitadas())
+		#return len(CustomDropDown.getCriticidadesHabilitadas())
 
 	def inicializarTipoCriticidad(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoCriticidad",
@@ -164,13 +173,13 @@ class PropsFallaConfirmadaScreen(Screen):
 							color = COLOR_TEXTOS)
 		subLayout.add_widget(labReparacion)
 
-		self.dropdownTipoFalla = CustomDropDown(id="TipoCriticidad",
+		self.dropdownCriticidad = CustomDropDown(id="TipoCriticidad",
 												size_hint_y = None,
-												size_hint_x = 1,
-												load_func = CustomDropDown.callbackCargaOpciones)
-		subLayout.add_widget(self.dropdownTipoFalla)
+												size_hint_x = 1)
+												#,load_func = CustomDropDown.callbackCargaOpciones)
+		subLayout.add_widget(self.dropdownCriticidad)
 		self.layout_principal.add_widget(subLayout)
-		return len(CustomDropDown.getCriticidadesHabilitadas())
+		#return len(CustomDropDown.getCriticidadesHabilitadas())
 
 
 	def inicializarFooter(self):

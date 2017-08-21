@@ -148,13 +148,12 @@ class CustomDropDown(TreeView):
     #Evento usado para ocular los labels que se encuentran detras del customdropdown
     def ocultarLabels(self,customDropdown,treeViewLabel):
         print "type(self.parent): %s, id: %s\n" % (type(self.parent.parent),self.parent.parent.id)
-        #Se modifica el spacing entre elementos cuando se expande un nodo.
         self._toggleGUI(customDropdown,True)
         
     #Evento usado para mostrar nuevamente los labels que se encuentran detras del customdropdown
     def mostrarLabels(self,customDropdown,treeViewLabel):
         self._toggleGUI(customDropdown,False)
-        
+    
 
     #Este metodo al habilitarse un dropdown, deshabilita el resto y sus lables asociados
     def _toggleGUI(self,customDropdown,estanDeshabilitadosWidgets):
@@ -185,51 +184,124 @@ class CustomDropDown(TreeView):
 
 
     @staticmethod
-    def callbackCargaOpciones(treeview, node):
-        #TODO: SOLICITAR NOMBRES DE ATRIBUTOS
-        dicNombres = CustomDropDown.getCriticidadesHabilitadas()
-        
+    def callbackCargaTiposFalla(treeview, node):
+        controlador = App.get_running_app()
+        dicNombres = controlador.capturador.getPropsConfirmados()
+        estaDeshabilitada = True
+        if tipoFalla.estaHabilitada():
+            estaDeshabilitada = False
+
         print "dicNombres tiene: %s\n" % dicNombres
         if len(treeview.children) <= 0:
             for elem in dicNombres:
-                if not elem["estaHabilitada"]:
-                    element = TreeViewLabel(text = elem["nombre"] +": "+elem["descripcion"] ,
+                element = TreeViewLabel(
+                                        #text = elem["nombre"] +": "+elem["descripcion"] ,
+                                        text = elem.getValor() ,
                                         color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
-                                        disabled = True,
+                                        disabled = estaDeshabilitada,
                                         disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
-                                        font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN 
-
+                                        font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
                                         )
-                    print "Esta deshabilitado: %s\n" % elem['nombre']
-                    element.no_selection = True                    
-                else:
-                    element = TreeViewLabel(text = elem["nombre"] +": "+elem["descripcion"] ,
-                                        color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
-                                        font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN 
-                                        )
-
-                #element.bind(on_touch_down = self.on_pressed_element)
+                element.no_selection = estaDeshabilitada
+                print "Propiedad deshabilitada %s: %s\n" % (elem.getValor(),
+                                                                estaDeshabilitada)
                 element.bind(on_touch_down = treeview.on_pressed_element)
                 yield element
 
-    #def on_pressed_element(self,label,mouseEvt):
+    #BACKUP!
     #@staticmethod
+    #def callbackCargaOpciones(treeview, node):
+    #    #TODO: SOLICITAR NOMBRES DE ATRIBUTOS
+    #    dicNombres = CustomDropDown.getCriticidadesHabilitadas()
+    #    print "dicNombres tiene: %s\n" % dicNombres
+    #    if len(treeview.children) <= 0:
+    #        for elem in dicNombres:
+    #            if not elem["estaHabilitada"]:
+    #                element = TreeViewLabel(text = elem["nombre"] +": "+elem["descripcion"] ,
+    #                                    color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+    #                                    disabled = True,
+    #                                    disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
+    #                                    font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN 
+    #
+    #                                    )
+    #                print "Esta deshabilitado: %s\n" % elem['nombre']
+    #                element.no_selection = True                    
+    #            else:
+    #                element = TreeViewLabel(text = elem["nombre"] +": "+elem["descripcion"] ,
+    #                                    color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+    #                                    font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN 
+    #                                    )
+
+    #            #element.bind(on_touch_down = self.on_pressed_element)
+    ##            element.bind(on_touch_down = treeview.on_pressed_element)
+    #            yield element
+
+
     def on_pressed_element(self,label,mouseEvt):
         print "Presione un elemento del tree! %s\n" % label.text
-        #Se colapsa el padre del elemento seleccionado
-        #self.tv.toggle_node(label.parent_node)
         self.toggle_node(label.parent_node)
         label.parent_node.text = label.text
         label.parent_node.bold = True
         print "type(label.parent_node):%s\n" % type(label.parent_node)
         print "type(label.parent_node.parent_node):%s\n" % type(label.parent_node.parent)
         print "type(self.parent): %s\n" % type(self.parent)
-        #with label.parent_node.canvas.after:
-        #    label.parent_node.canvas.after.clear()
-        #    Color(25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
-        #    Rectangle(pos = label.parent_node.pos, size = label.parent_node.size)
+        #Se cargan las props del tipoFalla seleccionado
+        self.cargarPropsAsociadas(label.text)
 
-        self.getOpcSeleccionadas()
+
+    #Este metodo realiza la carga de elementos
+    def cargarPropsAsociadas(self,nombreTipoFalla):
+        print "En _cargarAtributosAsociados()...\n"
+        print "len(self.dropdownTipoMaterial.children): %s\n" % len(self.dropdownTipoMaterial.children)
+        print "len(self.dropdownCriticidad.children): %s\n" % len(self.dropdownCriticidad.children)
+        # Se limpian los layouts de los dropwdowns
+        controlador = App.get_running_app()
+        propsConfirmados = controlador.capturador.getPropsConfirmados()
+        tipoFalla = propsConfirmados.getTipoFallaPorNombre(nombreTipoFalla)
+        mainLayout = self.parent.parent
+
+        estaDeshabilitada = True
+        if tipoFalla.estaHabilitada():
+            estaDeshabilitada = False
+
+        tiposMaterial = propsConfirmados.getPropsAsociadasATipoFalla(nombreTipoFalla,"tipoMaterial")
+        mainLayout.dropdownTipoMaterial.cargarOpciones(tiposMaterial,estaDeshabilitada)
+
+        criticidades = propsConfirmados.getPropsAsociadasATipoFalla(nombreTipoFalla,"criticidad")
+        mainLayout.dropdownCriticidad.cargarOpciones(criticidades,estaDeshabilitada)
+
+    #Carga los elementos en el dropdown actual en base a una lista de strings
+    def cargarOpciones(self,elementos,estanDesHabilitadas):
+        print "En cargarOpciones()...\n"
+        self.clear_widgets()
+        for opcion in elementos:
+            element = TreeViewLabel(text = opcion.getValor() ,
+                                    color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+                                    disabled = estanDesHabilitadas,
+                                    disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
+                                    font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
+                                    )
+            print "Esta deshabilitado %s: %s \n" % (opcion.getValor(), estanDesHabilitadas)
+            element.no_selection = estanDesHabilitadas
+                
+
+
+    #BACKUP!
+    #def on_pressed_element(self,label,mouseEvt):
+    #    print "Presione un elemento del tree! %s\n" % label.text
+    #    #Se colapsa el padre del elemento seleccionado
+    #    #self.tv.toggle_node(label.parent_node)
+    #    self.toggle_node(label.parent_node)
+    #    label.parent_node.text = label.text
+    #    label.parent_node.bold = True
+    #    print "type(label.parent_node):%s\n" % type(label.parent_node)
+    #    print "type(label.parent_node.parent_node):%s\n" % type(label.parent_node.parent)
+    #    print "type(self.parent): %s\n" % type(self.parent)
+    #    #with label.parent_node.canvas.after:
+    #    #    label.parent_node.canvas.after.clear()
+    #    #    Color(25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
+    #    #    Rectangle(pos = label.parent_node.pos, size = label.parent_node.size)
+    #    #self.getOpcSeleccionadas()
 
 
     def getOpcSeleccionadas(self):
