@@ -39,7 +39,6 @@ class PropsFallaConfirmadaScreen(Screen):
 
 	# Este metodo establece la altura maxima del layout, lo que determina
 	# hasta que punto el usuario puede scrollear sobre este.
-	#
 	def calcular_height(self,instance,value):
 		self.layout_principal.height = 940
 
@@ -174,37 +173,6 @@ class PropsFallaConfirmadaScreen(Screen):
 		return len(CustomDropDown.getCriticidadesHabilitadas())
 
 
-	#def inicializarTipoReparacion(self):
-	#	# Inicializacion del boton y dropdown de Tipo de Reparacion
-	#	labReparacion = Label( id=PREFIJO_LABEL_DROPDOWN + "TipoReparacionDropwdown",
-	#						text='%s Seleccione el tipo de reparacion' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
-	#						markup=True,
-	#						size_hint =(1,0.05),
-	#						color = COLOR_TEXTOS)
-	#	#self.ids.layout_principal.add_widget(labReparacion)
-	#	self.layout_principal.add_widget(labReparacion)
-	#	self.dropdownTipoReparacion = CustomDropDown(id="TipoReparacionDropwdown",
-	#												size_hint = (1,0.15),
-	#												load_func = CustomDropDown.callbackCargaOpciones)
-	#	#self.ids.layout_principal.add_widget(self.dropdownTipoReparacion)
-	#	self.layout_principal.add_widget(self.dropdownTipoReparacion)
-
-	#def inicializarTipoMaterial(self):
-	#	# Inicializacion del boton y dropdown de Tipo de Material
-	#	labMaterial = Label(id=PREFIJO_LABEL_DROPDOWN + "TipoMaterialDropdown",
-	#						text='%s Seleccione el tipo de material' % (icon('fa-cubes', TAMANIO_ICONOS)) ,
-	#						markup=True,
-	#						size_hint =(1,0.05),
-	#						color = COLOR_TEXTOS )
-	#	#self.ids.layout_principal.add_widget(labMaterial)
-	#	self.layout_principal.add_widget(labMaterial)
-	#	self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterialDropdown",
-	#												size_hint = (1,0.15),
-	#												load_func = CustomDropDown.callbackCargaOpciones)
-	#	#self.ids.layout_principal.add_widget(self.dropdownTipoMaterial)
-	#	self.layout_principal.add_widget(self.dropdownTipoMaterial)
-
-
 	def inicializarFooter(self):
 		layout = GridLayout(
 							rows = 1,
@@ -303,20 +271,22 @@ class PropsFallaConfirmadaScreen(Screen):
 		screen = self.manager.get_screen('dialogopropscaptura')
 		controlador = App.get_running_app()
 		tipoFalla = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
-		tipoReparacion = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
+		criticidad = self._obtenerWidgetPorId("CriticidadDropdown").getOpcSeleccionadas()
 		tipoMaterial = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
 
-		print "props leidas: %s, %s, %s \n\n" % (tipoFalla,tipoReparacion,tipoMaterial)
-		if not controlador.sonPropiedadesValidas(tipoFalla,tipoReparacion, tipoMaterial):
+		print "props leidas: %s, %s, %s \n\n" % (tipoFalla,criticidad,tipoMaterial)
+		if not controlador.sonPropiedadesValidas(tipoFalla,criticidad, tipoMaterial):
 			controlador.mostrarDialogoMensaje(title="Error de propiedades",
 												text="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
 												)			
 			return
 
-		#controlador.agregarData("tipoFalla",tipoFalla)
 		#controlador.agregarData("tipoReparacion",tipoReparacion)
-		#controlador.agregarData("tipoMaterial",tipoMaterial)
-		#self.manager.current = 'dialogopropscaptura'
+		controlador.agregarData("tipoFalla",tipoFalla)
+		controlador.agregarData("criticidad",criticidad)
+		controlador.agregarData("tipoMaterial",tipoMaterial)
+		#TODO: DESCOMENTAR ESTO!
+		self.manager.current = 'dialogopropscaptura'
 
 
 	def reestablecerDropDowns(self):
@@ -327,6 +297,30 @@ class PropsFallaConfirmadaScreen(Screen):
 						 widget.id == "TipoMaterialDropdown":
 				widget.reestablecer()  
 	
+
+	#Borra la info temporal almacenada en controlador
+	def borrarData(self):
+		controlador = App.get_running_app()
+		try:
+			controlador.getData("criticidad")
+			controlador.borrarData("criticidad")
+		except (KeyError,Exception) as e:
+			print "Clave criticidad en controlador inexistente!\n"
+		
+		try:
+			controlador.getData("tipoFalla")
+			controlador.borrarData("tipoFalla")
+		except (KeyError,Exception) as e:
+			print "Clave tipoFalla en controlador inexistente!\n"
+			
+		try:
+			controlador.getData("tipoMaterial")
+			controlador.borrarData("tipoMaterial")
+		except (KeyError,Exception) as e:
+			print "Clave tipoMaterial en controlador inexistente!\n"
+
+
+
 	def cancelar(self,evt):
 		self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()
 		self.reestablecerDropDowns()

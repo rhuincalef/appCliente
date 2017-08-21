@@ -164,6 +164,8 @@ URL_INFORMADOS  = URL_SERVIDOR_LOCAL + "restapi/obtener_informados/calle/"
 
 URL_GET_DIRECCION = URL_SERVIDOR_LOCAL + "restapi/obtener_datos_direccion/"
 
+
+# http://localhost/repoProyectoBacheo/web/restapi/obtener_props_confirmadas
 URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirmadas" 
 
 
@@ -472,6 +474,22 @@ PREFIJO_LABEL_DROPDOWN = "label"
 
 #Espacio que se reserva horizontalmente por opcion de cada CustomDropdown
 PADDING_POR_WIDGET = 36
+
+
+#Ponderaciones para los tipos de criticidad de las fallas
+PONDERACION_BAJA_CRITICIDAD = 1
+PONDERACION_MEDIA_CRITICIDAD = 1.15
+PONDERACION_ALTA_CRITICIDAD = 1.5
+
+
+ESTADO_POR_DEFAULT_SUBIDA_CAPTURAS = "Confirmado"
+
+# Estos son los IDs que se emplean para indicar los tipos de falla y sus respectivos
+# tipos de material y criticidades habilitados. Estos IDS se corresponden con los de 
+# la tabla "TipoFallaModelo".
+IDS_TIPOS_FALLA_HABILITADOS = [1,2]
+
+
 
 
 

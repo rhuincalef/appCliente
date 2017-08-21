@@ -187,9 +187,8 @@ class CustomDropDown(TreeView):
     @staticmethod
     def callbackCargaOpciones(treeview, node):
         #TODO: SOLICITAR NOMBRES DE ATRIBUTOS
-        #nombres = ['baja', 'media','alta','INVALIDA','INVALIDA']
-        #dicNombres = self.getCriticidadesHabilitadas()
         dicNombres = CustomDropDown.getCriticidadesHabilitadas()
+        
         print "dicNombres tiene: %s\n" % dicNombres
         if len(treeview.children) <= 0:
             for elem in dicNombres:
@@ -356,14 +355,14 @@ class MyTabbedPanel(TabbedPanel):
 
     #Este metodo retorna las criticidades para los baches y las grietas
     # implementadas para la tesina
-    def getCriticidadesHabilitadas(self):
-        #TODO: Esta linea significa una peticion al servidor de todas las criticidades
-        criticidades = CRITICIDADES 
-        for elem in criticidades:
-            elem["estaHabilitada"] = False
-            if elem["id"] in IDS_CRITICIDADES_HABILITADAS:
-                elem["estaHabilitada"] = True
-        return criticidades
+    #def getCriticidadesHabilitadas(self):
+    #    #TODO: Esta linea significa una peticion al servidor de todas las criticidades
+    #    criticidades = CRITICIDADES 
+    #    for elem in criticidades:
+    #        elem["estaHabilitada"] = False
+    #        if elem["id"] in IDS_CRITICIDADES_HABILITADAS:
+    #            elem["estaHabilitada"] = True
+    #    return criticidades
 
     def _cambioSubMenu(self,instancia):
         print "Se presiono panelBD!!type(instancia): %s\n" % type(instancia)

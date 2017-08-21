@@ -44,7 +44,9 @@ class Confirmada(Estado):
 		self.latitud = lat
 		self.longitud = lon
 		self.calleEstimada = self.rangoEstimado1 = self.rangoEstimado2 = None
-		self.tipoReparacion = self.tipoMaterial = self.tipoFalla = None
+		self.criticidad = self.tipoMaterial = self.tipoFalla = None
+		#self.tipoReparacion = self.tipoMaterial = self.tipoFalla = None
+		
 
 
 	def setCalleEstimada(self,c):
@@ -58,8 +60,11 @@ class Confirmada(Estado):
 	def setTipoFalla(self,f):
 		self.tipoFalla = f
 		
-	def setTipoReparacion(self,r):
-		self.tipoReparacion = r
+	#def setTipoReparacion(self,r):
+	#	self.tipoReparacion = r
+
+	def setCriticidad(self,c):
+		self.criticidad = c
 
 	def setTipoMaterial(self,m):
 		self.tipoMaterial = m
@@ -167,16 +172,13 @@ class Confirmada(Estado):
 
 			# Campos agregados para que el servidor los reciba
 			# y registre una falla consistente en el sistema. 
-			#'nombreTipoMaterial':str("Cemento").encode("utf-8"),
-			#'nombreTipoFalla':str("Bache").encode("utf-8"),
-			#'tipoReparacion': str("Cementar").encode("utf-8")
+			#'tipoReparacion':str(self.tipoReparacion),
 			'nombreTipoMaterial':str(self.tipoMaterial).encode("utf-8"),
 			'nombreTipoFalla':str(self.tipoFalla).encode("utf-8"),
-			'tipoReparacion':str(self.tipoReparacion),
-
-			'nombreCriticidad':str("Media").encode("utf-8"),
+			#'nombreCriticidad':str("Media").encode("utf-8"),
+			'nombreCriticidad':str(self.criticidad).encode("utf-8"),
 			'observacion':str("Falla recolectada por personal de municipalidad en la calle").encode("utf-8"),
-			'tipoEstado':str("Confirmado").encode("utf-8")
+			'tipoEstado':str(ESTADO_POR_DEFAULT_SUBIDA_CAPTURAS).encode("utf-8")
 		}
 		
 

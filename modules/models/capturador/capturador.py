@@ -113,6 +113,20 @@ class ListadoPropiedades(list):
     for o in self:
       o.guardar(tinyDB)
 
+
+  #AGREGADO RODRIGO
+  #Cuenta la cantidad de propiedades maxima entre los distintos tipos de falla
+  # y retorna la cantidad maxima de esa propiedad, entre todos los tipos de falla.
+  def getCantPropsTipoFalla(self,nombreProp):
+    cantMaxima = 0
+    for tipoFalla in self:
+      cantidadActual = tipoFalla.getCantProps(nombreProp) 
+      if cantMaxima < cantidadActual:
+        cantMaxima = cantidadActual
+    print "Cantidad maxima de propiedades: %s es: %s\n" % (nombreProp,cantMaxima)
+
+
+
 #-Propiedad
 #	-clave
 #	-valor
@@ -134,18 +148,38 @@ import json
 
 #class Propiedad(JSONSerializable):
 class Propiedad(object):
-  def __init__(self,clave,valor):
+  def __init__(self,myID,clave,valor,estaTipoFallaHabilitada):
     self.clave = str(clave)
     self.valor = str(valor)
     self.colPropsAsociadas = []
+    #Campos agregados
+    self.id = myID
+    # Este campo se emplea para habilitar/deshabilitar la seleccion de elementos en el 
+    # widget "CustomDropdown".
+    self.estaHabilitada = estaTipoFallaHabilitada
 
   def __repr__(self):
     return str(self.toDict())
 
+  #AGREGADO RODRIGO
+  def estaHabilitada(self):
+    return self.estaHabilitada
+
+  #AGREGADO RODRIGO
+  #Retorna la cantidad de propiedades que tiene la propiedad actual con un nombre dado.
+  #SE EMPLEA PRINCIPALMENTE PARA LAS PROPS DIRECTAS DE LOS TIPOS DE FALLA.
+  def getCantProps(self,nombreProp):
+    cantProps = 0
+    for prop in tipoFalla.getColPropsAsociadas():
+      if prop["clave"] == nombreProp:
+        cantProps += 1
+    return cantProps
+
+
   # Convirte a diccionario la propiedad y sus atributos
   # asociados
   def toDict(self):
-    dic = {"clave": self.clave,"valor": self.valor,
+    dic = {"id": self.id,"clave": self.clave,"valor": self.valor,
             "colPropsAsociadas": []}
     for e in self.colPropsAsociadas:
       dic["colPropsAsociadas"].append(str(e))
@@ -237,12 +271,16 @@ class ItemFalla(SelectableDataItem,Persistent):
   def asignarPropiedades(self):
     controlador = App.get_running_app()
     self.estado.setTipoFalla(controlador.getData("tipoFalla"))
-    self.estado.setTipoReparacion(controlador.getData("tipoReparacion"))
+    #self.estado.setTipoReparacion(controlador.getData("tipoReparacion"))
+    self.estado.setCriticidad(controlador.getData("criticidad"))
     self.estado.setTipoMaterial(controlador.getData("tipoMaterial"))
-    print "Asignadas propiedades al estado de falla confirmada!"                           
+    print "Asignadas propiedades al estado de falla confirmada!"
     print "tipoFalla: %s; tipoReparacion: %s; tipoMaterial: %s\n" %\
-          (controlador.getData("tipoFalla"),controlador.getData("tipoReparacion"),
-            controlador.getData("tipoMaterial"))                           
+          (controlador.getData("tipoFalla"),controlador.getData("criticidad"),
+            controlador.getData("tipoMaterial"))
+    #print "tipoFalla: %s; tipoReparacion: %s; tipoMaterial: %s\n" %\
+    #      (controlador.getData("tipoFalla"),controlador.getData("tipoReparacion"),
+    #        controlador.getData("tipoMaterial"))                           
 
 
   def getEstado(self):
@@ -713,25 +751,32 @@ class Capturador(object):
 # },
 #   ... 
 #]
+
   def crearListaProps(self,listaProps):
     print "En crearListaProps()...\n"
     if len(listaProps) == 0:
       msg = "Listado de tipos de falla incompleto" 
       raise ExcepcionTipoFallaIncompleta(msg)
 
-    # Si la falla es valida, Se la crea
-    # y se asocian las propidades a la misma.
+    # Si la falla es valida, Se la crea y se asocian las propidades a la misma.
     for tipoFalla in listaProps:
+      #AGREGADO RODRIGO
+      estaTipoFallaHabilitada = False
+      if tipoFalla["id"] in IDS_TIPOS_FALLA_HABILITADOS :
+        estaTipoFallaHabilitada = True
+
       self.validarPropsDeTipoFalla(tipoFalla)
-      falla = Propiedad(tipoFalla["clave"],tipoFalla["valor"])
+      falla = Propiedad(prop["id"],tipoFalla["clave"],tipoFalla["valor"],
+                          estaTipoFallaHabilitada)
+      #Se asocian las propiedades que pueda tener la propiedad del tipo de falla
       for p in tipoFalla["colPropsAsociadas"]:
         prop = json.loads(utils.escaparCaracteresEspeciales(p))
-        propiedad = Propiedad(str(prop["clave"].encode("utf-8")),
-                                str(prop["valor"].encode("utf-8")))
+        propiedad = Propiedad(  prop["id"],
+                                str(prop["clave"].encode("utf-8")),
+                                str(prop["valor"].encode("utf-8")),
+                                estaTipoFallaHabilitada)
         falla.asociarPropiedad(propiedad)
       self.propsConfirmados.append(falla)
-
-
 
 
   #Valida el atributo "colPropsAsociadas" para que contenga
@@ -742,18 +787,18 @@ class Capturador(object):
       msg = "Atributos insuficientes para tipo de falla:\n %s" % tipoFalla["valor"]
       raise ExcepcionTipoFallaIncompleta(msg)
 
-    contieneTipoReparacion = False
+    contieneCriticidad = False
     contieneTipoMaterial = False
     for p in propiedades:
       #print "Propiedad actual antes: %s\n" % p
       cadenaProp = utils.escaparCaracteresEspeciales(p)
-      
       prop = json.loads(cadenaProp)
-      if prop["clave"] == "tipoReparacion":
-        contieneTipoReparacion = True
+      if prop["clave"] == "criticidad":
+        contieneCriticidad = True
       if prop["clave"] == "tipoMaterial":
         contieneTipoMaterial = True
-    if not contieneTipoReparacion:
+        
+    if not contieneCriticidad:
       msg = "Error TipoFalla %s \nsin ningun tipo de reparacion disponible" %\
             tipoFalla["valor"] 
       raise ExcepcionTipoFallaIncompleta(msg)
@@ -761,6 +806,57 @@ class Capturador(object):
       msg = "Error TipoFalla %s \nsin ningun tipo de material disponible" %\
             tipoFalla["valor"] 
       raise ExcepcionTipoFallaIncompleta(msg)
+
+
+
+#BACKUP VERSION ANTERIOR!
+#  def crearListaProps(self,listaProps):
+#    print "En crearListaProps()...\n"
+#    if len(listaProps) == 0:
+#      msg = "Listado de tipos de falla incompleto" 
+#      raise ExcepcionTipoFallaIncompleta(msg)
+
+#    # Si la falla es valida, Se la crea
+ #   # y se asocian las propidades a la misma.
+#    for tipoFalla in listaProps:
+#      self.validarPropsDeTipoFalla(tipoFalla)
+#      falla = Propiedad(tipoFalla["clave"],tipoFalla["valor"])
+#      for p in tipoFalla["colPropsAsociadas"]:
+#        prop = json.loads(utils.escaparCaracteresEspeciales(p))
+#        propiedad = Propiedad(str(prop["clave"].encode("utf-8")),
+#                                str(prop["valor"].encode("utf-8")))
+#        falla.asociarPropiedad(propiedad)
+#      self.propsConfirmados.append(falla)
+
+#  #Valida el atributo "colPropsAsociadas" para que contenga
+#  # al menos un tipo de material y un tipo de reparacion.
+##  def validarPropsDeTipoFalla(self,tipoFalla):
+#    propiedades = tipoFalla["colPropsAsociadas"]
+#    if len(propiedades) == 0:
+#      msg = "Atributos insuficientes para tipo de falla:\n %s" % tipoFalla["valor"]
+#      raise ExcepcionTipoFallaIncompleta(msg)
+#
+#    contieneTipoReparacion = False
+#    contieneTipoMaterial = False
+#    for p in propiedades:
+#      #print "Propiedad actual antes: %s\n" % p
+#      cadenaProp = utils.escaparCaracteresEspeciales(p)
+##      
+#      prop = json.loads(cadenaProp)
+#      if prop["clave"] == "tipoReparacion":
+#        contieneTipoReparacion = True
+#      if prop["clave"] == "tipoMaterial":
+#        contieneTipoMaterial = True
+
+#    if not contieneTipoReparacion:
+#      msg = "Error TipoFalla %s \nsin ningun tipo de reparacion disponible" %\
+#            tipoFalla["valor"] 
+#      raise ExcepcionTipoFallaIncompleta(msg)
+#    if not contieneTipoMaterial:
+#      msg = "Error TipoFalla %s \nsin ningun tipo de material disponible" %\
+#            tipoFalla["valor"] 
+#      raise ExcepcionTipoFallaIncompleta(msg)
+
 
 
   # Abre una BD en JSON con TinyDB y si esta esta vacia, se 
