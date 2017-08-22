@@ -149,28 +149,7 @@ class ListadoPropiedades(list):
     return subProps
 
 
-  #AGREGADO RODRIGO
-  #Retorna la lista de atributos dato un nombre de tipoFalla
-  #ListaConfirmados.sonPropiedadesValidas()
-  #def sonPropiedadesValidas(self,tipoFalla,tipoMaterial,criticidad):
-  ##  esTipoFallaValido = esTipoMaterialValido = esCriticidadValida =  False
-  #  print "En ListaConfirmados.sonPropiedadesValidas()\n"
-  #  for tFalla in self:
-  #    if tFalla.getValor() == tipoFalla:
-  #      print "TipoFalla valido!\n"
-  #      esTipoFallaValido = True
-  #      propsAsociadas = tFalla.getColPropsAsociadas()
-  #      for prop in propsAsociadas:
-  #        if prop.getValor() == tipoMaterial:
-  #          print "TipoMaterial valido!\n"
-  #          esTipoMaterialValido = True
-  #        if prop.getValor() == criticidad:
-  #          print "Criticidad valida!\n"
-  #          esCriticidadValida = True
-  #      break
-  #  print "Fin ListaConfirmados.sonPropiedadesValidas()\n"
-  #  return esTipoFallaValido and esTipoMaterialValido and esCriticidadValida
-
+  
 
 
 #-Propiedad
@@ -195,6 +174,7 @@ import json
 #class Propiedad(JSONSerializable):
 class Propiedad(object):
   def __init__(self,myID,clave,valor,estaTipoFallaHabilitada):
+    print "en constructor propiedad!"
     self.clave = str(clave)
     self.valor = str(valor)
     self.colPropsAsociadas = []
@@ -219,7 +199,8 @@ class Propiedad(object):
     subProps = []
     for subProp in self.colPropsAsociadas:
       if subProp.getClave() == nombreSubPropiedad:
-        subProps.append(subProp.getValor())
+        subProps.append(subProp)
+        #subProps.append(subProp.getValor())
     return subProps
 
 
@@ -233,6 +214,7 @@ class Propiedad(object):
       if prop["clave"] == nombreProp:
         cantProps += 1
     return cantProps
+
 
   # Convirte a diccionario la propiedad y sus atributos
   # asociados
@@ -827,13 +809,32 @@ class Capturador(object):
       self.validarPropsDeTipoFalla(tipoFalla)
       falla = Propiedad(tipoFalla["id"],tipoFalla["clave"],tipoFalla["valor"],
                           estaTipoFallaHabilitada)
+      print "asociando props a subpropiedades: %s\n" % tipoFalla["colPropsAsociadas"]
+
       #Se asocian las propiedades que pueda tener la propiedad del tipo de falla
       for p in tipoFalla["colPropsAsociadas"]:
-        prop = json.loads(utils.escaparCaracteresEspeciales(p))
+        prop = json.loads(utils.escaparCaracteresEspeciales(p))        
         propiedad = Propiedad(  prop["id"],
                                 str(prop["clave"].encode("utf-8")),
                                 str(prop["valor"].encode("utf-8")),
                                 estaTipoFallaHabilitada)
+
+        print "leidas propiedades principales falla!\n"
+        print "prop: %s\n\n\n" % prop
+        #AGREGADO RODRIGO
+        if prop.has_key("colPropsAsociadas") and (len(prop["colPropsAsociadas"]) > 0):
+          print "La criticidad tiene propiedades!\n"
+          
+          for s in prop["colPropsAsociadas"]:
+            print "subpropiedad de la criticidad: %s\n" % s
+            print "s['clave']: %s\n" % s["clave"]
+            print "s['valor']: %s\n" % s["valor"]
+            subProp = Propiedad(1,s["clave"],s["valor"],estaTipoFallaHabilitada)
+            print "instanciada!\n"
+            propiedad.asociarPropiedad(subProp)
+            print "asociada!\n"
+            print "propiedad.colPropsAsociadas: %s\n" % propiedad.colPropsAsociadas
+
         print "Creada propiedad asociada: %s ...\n" % propiedad
         falla.asociarPropiedad(propiedad)
       self.propsConfirmados.append(falla)
@@ -943,40 +944,6 @@ class Capturador(object):
   # al screen de "Capturar falla nueva"
   def existenPropsCargadas(self):
     return len(self.propsConfirmados) > 0 
-
-
-
-  # Invocado desde screen propsFallaConfirmada al seleccionar los atributos
-  # para el tipo de falla
-  # capturador.sonPropiedadesValidas()
-  #def sonPropiedadesValidas(self,tipoFalla,tipoMaterial,criticidad):
-  #  return self.propsConfirmados.sonPropiedadesValidas(tipoFalla,tipoMaterial,criticidad)
-
-  #BACKUP!
-  #Retorna la lista de atributos dato un nombre de tipoFalla
-  #def getAtributosAsociados(self,nombreTipoFalla):
-  #  props = []
-  #  for tFalla in self.propsConfirmados:
-  #    if tFalla.getValor() == nombreTipoFalla:
-  #      props = tFalla.getColPropsAsociadas()
-  #      break
-  #  return props
-
-
-  #BACKUP!
-  # Invocado desde screen propsFallaConfirmada al seleccionar los atributos
-  # para el tipo de falla
-  #def sonPropiedadesValidas(self,tipoFalla,tipoReparacion,tipoMaterial):
-  #  esTipoRepValido = esTipoMatValido = False
-  #  atributos = self.getAtributosAsociados(tipoFalla)
-  #  for a in atributos:
-  #    if a.getValor() == tipoReparacion:
-  #      esTipoRepValido = True
-  #    if a.getValor() == tipoMaterial:
-  #      esTipoMatValido = True
-  #  if esTipoRepValido and esTipoMatValido:
-  #    return True
-  #  return False
 
 
 
@@ -1159,33 +1126,6 @@ class CapturadorInformados(Capturador):
     self.inicializar_fallas()
     CapturadorInformados.mostrar_coleccion(self.colBachesInformados)
     return self.colBachesInformados
-
-
-
-  #BACKUP!
-  #def solicitarInformados(self,calle):
-  #  try:
-  #    print "Inicio de solicitarInformados()...\n"
-      # Hace un GET al servidor para obtener todos los baches en una calle
-      # Para probar esta parte ejecutar apiclient/servidor_json.py.
-  #    dic_json = self.apiClient.getInformados(calle)
-  #    for key,tupla in dic_json.iteritems():
-  #      falla = ItemFalla()
-  #      estado = Informada(tupla["id"],tupla["altura"],tupla["calle"])
-  #      estado.cambiar(falla)
-  #      if falla not in self.colBachesInformados:
-  #        print "Falla con id %s no esta en colBachesInformados, agregando!\n" % falla.getEstado().getId()
-  #        self.colBachesInformados.append(falla)
-          #self.colBachesInformados = sorted(self.colBachesInformados,reverse=True)
-  #    self.colBachesInformados.sort()
-  #    self.inicializar_fallas()
-  #    CapturadorInformados.mostrar_coleccion(self.colBachesInformados)
-  #  except ExcepcionAjax, e:
-  #    controlador = App.get_running_app()
-  #    controlador.mostrarDialogoMensaje(title="Error en solicitud al servidor",
-  #                                        text= e.message)
-  #  return self.colBachesInformados
-
 
 
   # Asocia la falla con la captura recien realizada.

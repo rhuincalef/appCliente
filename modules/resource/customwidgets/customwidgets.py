@@ -32,6 +32,7 @@ import sys
 from kivy.uix.screenmanager import ScreenManager, Screen
 
 from utilscfg import *
+import re
 
 class AutoCompleteTextInput(BoxLayout):
 
@@ -299,13 +300,61 @@ class CustomDropDown(TreeView):
         print "Agregado dropdown tipo material de nuevo!\n"
 
 
+
+    # Genera el string con los iconos segun el tipo de ponderacion.Este metodo
+    # es exclusivo para el la criticidad asociada a un tipo de falla
+    def generarStrIconos(self,propiedad):
+        cadenaOpcion = ""
+        print "propiedad: %s\n" % propiedad
+        print "propiedades de criticidad: %s\n" % propiedad.getColPropsAsociadas()
+        for subProp in propiedad.getColPropsAsociadas():
+            print "recorriendo propiedades asociadas: %s\n" % subProp
+            if subProp.getClave() == "ponderacion":
+                if float(subProp.getValor()) == PONDERACION_CRITICIDAD_BAJA:
+                    cadenaOpcion = "%s " % (icon('fa-exclamation-triangle',
+                                                        TAMANIO_ICONOS,
+                                                        color=COLOR_PONDERACION_BAJA).encode("utf-8")) 
+                elif float(subProp.getValor()) == PONDERACION_CRITICIDAD_MEDIA:
+                    cadenaOpcion = "%s%s " % ( (icon('fa-exclamation-triangle',
+                                                        TAMANIO_ICONOS,
+                                                        color=COLOR_PONDERACION_MEDIA).encode("utf-8")),
+                                                (icon('fa-exclamation-triangle',
+                                                        TAMANIO_ICONOS,
+                                                        color=COLOR_PONDERACION_MEDIA).encode("utf-8"))
+                                                )
+                elif float(subProp.getValor()) == PONDERACION_CRITICIDAD_ALTA:
+                    cadenaOpcion = "%s%s%s " % ( (icon('fa-exclamation-triangle',
+                                                        TAMANIO_ICONOS,
+                                                        color=COLOR_PONDERACION_ALTA).encode("utf-8")),
+                                                (icon('fa-exclamation-triangle',
+                                                        TAMANIO_ICONOS,
+                                                        color=COLOR_PONDERACION_ALTA).encode("utf-8")),
+                                                (icon('fa-exclamation-triangle',
+                                                        TAMANIO_ICONOS,
+                                                        color=COLOR_PONDERACION_ALTA).encode("utf-8"))
+                                                )
+                break
+        return cadenaOpcion
+
+
+
+
+
     #Carga los elementos en el dropdown actual en base a una lista de strings
     def cargarOpciones(self,elementos,estanDesHabilitadas):
         print "En cargarOpciones()...\n"
-        print "cantidad de nodos: %s\n" % len(self.root.nodes)
-        for cadOpcion in elementos:
-            print "agregando nodo: %s\n" % cadOpcion
-            element = TreeViewLabel(text = cadOpcion,
+        for prop in elementos:
+            print "prop.getClave(): %s\n" % prop.getClave()
+            print "prop.getValor(): %s\n" % prop.getValor()
+            cadOpcion = prop.getValor()
+            if prop.getClave() == "criticidad":
+                print "entre a generarSTRIconos()!\n"
+                cadOpcion = self.generarStrIconos(prop) + prop.getValor()
+                
+            print "agregando cadOpcion generada: %s\n" % cadOpcion
+            element = TreeViewLabel(
+                                    text = cadOpcion,
+                                    markup = True,
                                     color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
                                     disabled = estanDesHabilitadas,
                                     disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
@@ -314,14 +363,75 @@ class CustomDropDown(TreeView):
             self.add_node(element)
             print "Esta deshabilitado %s: %s \n" % (cadOpcion, estanDesHabilitadas)
             element.no_selection = estanDesHabilitadas
-            #element.bind(on_touch_down = treeview.on_pressed_propiedad)
             element.bind(on_touch_down = self.on_pressed_propiedad)
+
+
+    #BACKUP!!
+    ##Carga los elementos en el dropdown actual en base a una lista de strings
+    #def cargarOpciones(self,elementos,estanDesHabilitadas):
+    #    print "En cargarOpciones()...\n"
+    #    print "cantidad de nodos: %s\n" % len(self.root.nodes)
+    #    for cadOpcion in elementos:
+    #        print "agregando nodo: %s\n" % cadOpcion
+    #        element = TreeViewLabel(
+    #                                #text='%s' % cadOpcion,
+    #                                text="%s %s" % ( (icon('fa-exclamation-triangle',
+    #                                                    TAMANIO_ICONOS,
+    #                                                    color='ff0000').encode("utf-8")),
+    #                                                    cadOpcion),
+    ###                                markup = True,
+#                                    color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+    #                                disabled = estanDesHabilitadas,
+    #                                disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
+    #                                font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
+    #                                )
+    #        self.add_node(element)
+    #        print "Esta deshabilitado %s: %s \n" % (cadOpcion, estanDesHabilitadas)
+    #        element.no_selection = estanDesHabilitadas
+    ##        #element.bind(on_touch_down = treeview.on_pressed_propiedad)
+    #        element.bind(on_touch_down = self.on_pressed_propiedad)
+
+
+
+
+    # Este metodo retorna el contenido textual de una opcion que contiene iconos + contenido textual.
+    # Se emplea unicamente en la propiedad asociada criticidad.
+    # Retorna la cadena exacta si no contiene el patron, o el contenido textual si lo contiene.
+    #filtrarContenidoOpcion(1,'[color=ff0000][size=32][font=resource/fonts/font-awesome.ttf]\xef\x81\xb1[/font][/size][/color] Pavimento  r\xc3\xadgido')
+    def filtrarContenidoOpcion(self,cadena):
+        print "en filtrarContenidoOpcion()...\n"
+        patron = re.compile(PATRON_ICONO_DROPDOWN)
+        if patron.match(cadena) is not None:
+            colCads = cadena.split()
+            cad = ""
+            for index in xrange(0,len(colCads)):
+                if index == 0:
+                    continue
+                cad += colCads[index] + " "
+            print "cad final: %s\n" % cad
+            return cad
+        else:
+            print "cadena final: %s\n" % cadena
+            return cadena
+
+
 
     #Retorna la opcion seleccinada en el treeview
     def getOpcSeleccionadas(self):
         if self.selected_node is None:
             return self.selected_node
-        return self.selected_node.text
+        print "Existen nodos seleccionados!\n"
+        return self.filtrarContenidoOpcion(self.selected_node.text)
+        #return self.selected_node.text
+
+
+    #BACKUP!
+    #Retorna la opcion seleccinada en el treeview
+    #def getOpcSeleccionadas(self):
+    #    if self.selected_node is None:
+    ##        return self.selected_node
+    #    return self.selected_node.text
+
 
 
     #Este metodo retorna las criticidades para los baches y las grietas

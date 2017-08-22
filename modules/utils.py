@@ -286,11 +286,21 @@ def convertirJson(url):
 #Cementár
 
 def escaparCaracteresEspeciales(propiedad):
-	#print "en escaparCaracteresEspeciales()...\n"
+	print "en escaparCaracteresEspeciales()...\n"
+	print "con propiedad: %s\n" % propiedad
 	dic = {}
 	dic['clave'] = unicode(propiedad['clave'],encoding="utf8")
 	dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
 	dic['id'] = unicode(propiedad['id'],encoding="utf8")
+	#AGREGADO RODRIGO
+	dic['colPropsAsociadas'] = []
+	for prop in propiedad['colPropsAsociadas']:
+		print "iterando subpropiedad: %s\n" % prop
+		nuevoDic = {}
+		nuevoDic['clave'] = unicode(prop['clave'],encoding="utf8")
+		nuevoDic['valor'] = prop['valor']
+		dic['colPropsAsociadas'].append(nuevoDic)
+
 	#print "dic nuevo: %s\n" % dic 
 	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final("u" de codificacion unicode) 
 	# y se reemplazan los \x por \u00 para que cumplan con el estandar de JSON.
@@ -300,7 +310,7 @@ def escaparCaracteresEspeciales(propiedad):
 	codificada = re.sub(":.u",":",codificada)
 	#print "\n\ncodificada intermedia: %s\n\n" % codificada
 	codificada = codificada.replace("\\x","\\u00")
-	#print "codificada: %s\n" % codificada
+	print "codificada final: %s\n" % codificada
 	return codificada 
 
 

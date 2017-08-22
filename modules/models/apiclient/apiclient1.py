@@ -227,7 +227,19 @@ class ApiClientApp(object):
 				d["clave"] = str(prop["clave"].encode("utf-8"))
 				d["valor"] = str(prop["valor"].encode("utf-8"))
 				d["id"] = str(prop["id"].encode("utf-8"))
+				#AGREGADO RODRIGO
+				#Si la subpropiedad tiene propiedades asociadas se las asocia.
+				#Esta parte se emplea para la "ponderacion" que se asocia a la criticidad.
+				d["colPropsAsociadas"] = []
+				if prop.has_key("colPropsAsociadas"):
+					for e in prop["colPropsAsociadas"]:
+						aux = {}
+						aux["clave"] = str(e["clave"].encode("utf-8"))
+						aux["valor"] = e["valor"]
+						d["colPropsAsociadas"].append(aux)
+
 				listaPropsAsociadas.append(d)
+
 			dicParseado["colPropsAsociadas"] = listaPropsAsociadas
 			listaTFalla.append(dicParseado)
 		print "5...\n"
