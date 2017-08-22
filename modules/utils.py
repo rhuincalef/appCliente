@@ -290,6 +290,7 @@ def escaparCaracteresEspeciales(propiedad):
 	dic = {}
 	dic['clave'] = unicode(propiedad['clave'],encoding="utf8")
 	dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
+	dic['id'] = unicode(propiedad['id'],encoding="utf8")
 	#print "dic nuevo: %s\n" % dic 
 	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final("u" de codificacion unicode) 
 	# y se reemplazan los \x por \u00 para que cumplan con el estandar de JSON.

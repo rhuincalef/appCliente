@@ -106,6 +106,10 @@ class MainApp(App,EventDispatcher):
 		print "Inicializado MainApp!"
 
 
+	def getScreenPorNombre(nombre):
+		self
+
+
 	#Handler por default del metodo de autocompletar
 	def on_fin_obtencion_direcciones(self,*args):
 		pass
@@ -594,7 +598,7 @@ class MainApp(App,EventDispatcher):
 			self.capturador.obtenerPropsConfirmadas()
 			print "Despues de capturador.obtenerPropsConfirmadas()\n"
 			self.capturador.crearBackupConfirmados()
-			msg = "Tipos de falla obtenidos correctamente\n desde servidor!"
+			msg = "Tipos de falla obtenidos correctamente desde servidor!!!!"
 		except (ExcepcionTipoFallaIncompleta,ExcepcionAjax) as e:
 
 			utils.loggearMensaje(logger,str(e.message))
@@ -621,7 +625,7 @@ class MainApp(App,EventDispatcher):
 		except Exception as e: 
 			msg = "Excepcion desconocida en threadGetPropsConfirmadas.\n Mas información en %s%s\n" %\
 				(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
-			errMsg = "Excepcion desconocida (%s) ocurrio en threadGetPropsConfirmadas:\n  ------------------>>   %s" % (type(e),e.message)
+			errMsg = "Excepcion desconocida (%s) ocurrio en threadGetPropsConfirmadas:\n  ------------------>> message:  %s" % (type(e),e.message)
 			utils.loggearMensaje(logger,errMsg)
 
 		finally:

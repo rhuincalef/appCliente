@@ -218,11 +218,15 @@ class ApiClientApp(object):
 			dicParseado = {}
 			dicParseado["clave"] = str(tipoFalla["clave"].encode("utf-8"))
 			dicParseado["valor"] = str(tipoFalla["valor"].encode("utf-8"))
+			#NOTA: Los "tiposFalla" y sus propiedades asociadsa directas tienen
+			# id asociado. Las propsAsociadas de estas propiedades no.
+			dicParseado["id"] = str(tipoFalla["id"].encode("utf-8"))
 			listaPropsAsociadas = []
 			for prop in tipoFalla["colPropsAsociadas"]:
 				d = {}
 				d["clave"] = str(prop["clave"].encode("utf-8"))
 				d["valor"] = str(prop["valor"].encode("utf-8"))
+				d["id"] = str(prop["id"].encode("utf-8"))
 				listaPropsAsociadas.append(d)
 			dicParseado["colPropsAsociadas"] = listaPropsAsociadas
 			listaTFalla.append(dicParseado)

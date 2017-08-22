@@ -138,12 +138,12 @@ class CustomDropDown(TreeView):
                         'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
                     }
 
-    def __init__(self,**kwargs):
+    def __init__(self,screen,**kwargs):
         super(CustomDropDown,self).__init__(**kwargs)
         self.toggle_node(self.root)
         self.bind(on_node_expand = self.ocultarLabels)
         self.bind(on_node_collapse = self.mostrarLabels)
-
+        self.screen = screen
 
     #Evento usado para ocular los labels que se encuentran detras del customdropdown
     def ocultarLabels(self,customDropdown,treeViewLabel):
@@ -186,14 +186,18 @@ class CustomDropDown(TreeView):
     @staticmethod
     def callbackCargaTiposFalla(treeview, node):
         controlador = App.get_running_app()
-        dicNombres = controlador.capturador.getPropsConfirmados()
-        estaDeshabilitada = True
-        if tipoFalla.estaHabilitada():
-            estaDeshabilitada = False
-
-        print "dicNombres tiene: %s\n" % dicNombres
+        #dicNombres = controlador.capturador.getPropsConfirmados()
+        dicNombres = controlador.getPropsConfirmados()
+        print "En callbackCargaTiposFalla con dicNombres propiedades tiene: %s\n" % \
+                                                                        dicNombres
         if len(treeview.children) <= 0:
             for elem in dicNombres:
+                estaDeshabilitada = True
+                if elem.estaHabilitada():
+                    estaDeshabilitada = False
+                print "customwidgets dropdown type(elem): %s\n" % type(elem)
+                print "estaDeshabilitada: %s\n" % estaDeshabilitada
+                print "elem.estaHabilitada(): %s\n" % elem.estaHabilitada()
                 element = TreeViewLabel(
                                         #text = elem["nombre"] +": "+elem["descripcion"] ,
                                         text = elem.getValor() ,
@@ -251,37 +255,67 @@ class CustomDropDown(TreeView):
 
     #Este metodo realiza la carga de elementos
     def cargarPropsAsociadas(self,nombreTipoFalla):
-        print "En _cargarAtributosAsociados()...\n"
-        print "len(self.dropdownTipoMaterial.children): %s\n" % len(self.dropdownTipoMaterial.children)
-        print "len(self.dropdownCriticidad.children): %s\n" % len(self.dropdownCriticidad.children)
+        print "En cargarPropsAsociadas()...\n"
         # Se limpian los layouts de los dropwdowns
         controlador = App.get_running_app()
-        propsConfirmados = controlador.capturador.getPropsConfirmados()
-        tipoFalla = propsConfirmados.getTipoFallaPorNombre(nombreTipoFalla)
+        propsConfirmados = controlador.getPropsConfirmados()
+        print "controlador.getPropsConfirmados(): %s...\n" % controlador.getPropsConfirmados()
+        print "len(controlador.getPropsConfirmados()): %s...\n" % len(controlador.getPropsConfirmados())
+        
+        tipoFalla = propsConfirmados.getTipoFallaPorValor(nombreTipoFalla)
         mainLayout = self.parent.parent
 
         estaDeshabilitada = True
         if tipoFalla.estaHabilitada():
             estaDeshabilitada = False
 
-        tiposMaterial = propsConfirmados.getPropsAsociadasATipoFalla(nombreTipoFalla,"tipoMaterial")
-        mainLayout.dropdownTipoMaterial.cargarOpciones(tiposMaterial,estaDeshabilitada)
+        print "screen obtenido: %s\n" % type(self.screen)
+        print "tipoFalla.getValor(): %s\n ; tipoFalla.estaHabilitada(): %s\n" % \
+                                    (tipoFalla.getValor(),tipoFalla.estaHabilitada())
+        #Se obtienen los strings de las propiedades asociadas a un tipoFalla
+        #tiposMaterial = propsConfirmados.getPropsAsociadasATipoFalla(nombreTipoFalla,"tipoMaterial")
+        #self.screen.dropdownTipoMaterial.cargarOpciones(tiposMaterial,estaDeshabilitada)
 
         criticidades = propsConfirmados.getPropsAsociadasATipoFalla(nombreTipoFalla,"criticidad")
-        mainLayout.dropdownCriticidad.cargarOpciones(criticidades,estaDeshabilitada)
+        print "criticidades: %s, len(criticidades): %s\n" % (criticidades,len(criticidades))
+        #AGREGADO
+        self.screen.dropdownCriticidad.resetearDropdown("subLayoutTipoCriticidad","TipoCriticidad")
+        self.screen.dropdownCriticidad.cargarOpciones(criticidades,estaDeshabilitada)
+
+
+
+    def resetearDropdown(self,subLayoutNombre,nombreDrop):
+        print "self.screen.layout_principal:%s\n" % self.screen.layout_principal
+        subLayout = None
+        for x in self.screen.layout_principal.children:
+            print "w.id: %s\n" % x.id
+            if x.id == subLayoutNombre:
+                subLayout = x
+                for widget in x.children:
+                    if widget.id == nombreDrop:
+                        x.remove_widget(widget)
+                        print "ENCONTRADO Y REMOVIDO DROP!!!\n"
+                        break        
+        self.screen.dropdownCriticidad = CustomDropDown(self.screen,id="TipoCriticidad",
+                                                size_hint_y = None,
+                                                size_hint_x = 1)
+        subLayout.add_widget(self.screen.dropdownCriticidad)
+        print "Agregado dropdown criticidad de nuevo!\n"
 
     #Carga los elementos en el dropdown actual en base a una lista de strings
     def cargarOpciones(self,elementos,estanDesHabilitadas):
         print "En cargarOpciones()...\n"
-        self.clear_widgets()
-        for opcion in elementos:
-            element = TreeViewLabel(text = opcion.getValor() ,
+        print "cantidad de nodos: %s\n" % len(self.root.nodes)
+        for cadOpcion in elementos:
+            print "agregando nodo: %s\n" % cadOpcion
+            element = TreeViewLabel(text = cadOpcion,
                                     color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
                                     disabled = estanDesHabilitadas,
                                     disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
                                     font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
                                     )
-            print "Esta deshabilitado %s: %s \n" % (opcion.getValor(), estanDesHabilitadas)
+            self.add_node(element)
+            print "Esta deshabilitado %s: %s \n" % (cadOpcion, estanDesHabilitadas)
             element.no_selection = estanDesHabilitadas
                 
 

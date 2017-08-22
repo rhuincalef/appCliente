@@ -23,8 +23,10 @@ class PropsFallaConfirmadaScreen(Screen):
 
 	def __init__(self,**kwargs):
 		super(PropsFallaConfirmadaScreen, self).__init__(**kwargs)
+		#self.dropdownTipoFalla =self.dropdownTipoMaterial  = \
+		#		self.dropdownTipoReparacion = None
 		self.dropdownTipoFalla =self.dropdownTipoMaterial  = \
-				self.dropdownTipoReparacion = None
+				self.dropdownCriticidad = None
 		self.layout_principal = GridLayout(id="layout_principal",
 											cols = 1,
 											rows = 9,
@@ -80,27 +82,32 @@ class PropsFallaConfirmadaScreen(Screen):
 							size_hint =(1,None),
 							color = COLOR_TEXTOS)
 		
-		cantMaximaOpcionesDropwdown = 0
-		controlador = App.get_running_app()
-		todasPropsConfirmadas = controlador.getPropsConfirmados()
+		print "En inicializarDropDownPrincipal()... \n"
+		#controlador = App.get_running_app()
+		#dicNombres = controlador.getPropsConfirmados()
+		#cantMaximaOpcionesDropwdown = 0
+		#print "type(todasPropsConfirmadas): %s\n" % type(dicNombres)
+		#print "todas las propiedades confirmadas: %s\n" % dicNombres
 
 		self.inicializarTipoFalla(label = None)
-		cantMaximaOpcionesDropwdown = len(todasPropsConfirmadas)
-		
+		#longitud = len(dicNombres)
+		#print "LONGITUD: %s\n" % longitud
+
 		self.inicializarTipoMaterial()
-		cantOpcTipoMaterial = todasPropsConfirmadas.getCantPropsTipoFalla("tipoMaterial") 
-		if cantMaximaOpcionesDropwdown < cantOpcTipoMaterial:
-			cantMaximaOpcionesDropwdown = cantOpcTipoMaterial
+		#cantOpcTipoMaterial = todasPropsConfirmadas.getCantPropsTipoFalla("tipoMaterial") 
+		#if cantMaximaOpcionesDropwdown < cantOpcTipoMaterial:
+		#	cantMaximaOpcionesDropwdown = cantOpcTipoMaterial
 
 		self.inicializarTipoCriticidad()
-		cantOpcCriticidad = todasPropsConfirmadas.getCantPropsTipoFalla("criticidad") 
-		if cantMaximaOpcionesDropwdown < cantOpcCriticidad:
-			cantMaximaOpcionesDropwdown = cantOpcCriticidad
+		#cantOpcCriticidad = todasPropsConfirmadas.getCantPropsTipoFalla("criticidad") 
+		#if cantMaximaOpcionesDropwdown < cantOpcCriticidad:
+		#	cantMaximaOpcionesDropwdown = cantOpcCriticidad
 		
 		self.inicializarFooter()
 		self.ids.main_scroll_view.add_widget(self.layout_principal)
-		print "valor final cantMaximaOpcionesDropwdown: %s\n" % cantMaximaOpcionesDropwdown
-		self.calcularSpacingEntreLayouts(cantMaximaOpcionesDropwdown)
+		#print "valor final cantMaximaOpcionesDropwdown: %s\n" % cantMaximaOpcionesDropwdown
+		#self.calcularSpacingEntreLayouts(cantMaximaOpcionesDropwdown)
+		self.calcularSpacingEntreLayouts(6)
 	
 
 	def inicializarTipoFalla(self,label=None):
@@ -120,7 +127,7 @@ class PropsFallaConfirmadaScreen(Screen):
 							color = COLOR_TEXTOS)
 		subLayout.add_widget(labReparacion)
 
-		self.dropdownTipoFalla = CustomDropDown(id="TipoFallaDropdown",
+		self.dropdownTipoFalla = CustomDropDown(self,id="TipoFallaDropdown",
 												size_hint_y = None,
 												size_hint_x = 1,
 												#load_func = CustomDropDown.callbackCargaOpciones)
@@ -148,7 +155,7 @@ class PropsFallaConfirmadaScreen(Screen):
 							color = COLOR_TEXTOS)
 		subLayout.add_widget(labReparacion)
 
-		self.dropdownTipoMaterial = CustomDropDown(id="TipoMaterial",
+		self.dropdownTipoMaterial = CustomDropDown(self,id="TipoMaterial",
 												size_hint_y = None,
 												size_hint_x = 1)
 												#,load_func = CustomDropDown.callbackCargaOpciones)
@@ -173,7 +180,7 @@ class PropsFallaConfirmadaScreen(Screen):
 							color = COLOR_TEXTOS)
 		subLayout.add_widget(labReparacion)
 
-		self.dropdownCriticidad = CustomDropDown(id="TipoCriticidad",
+		self.dropdownCriticidad = CustomDropDown(self,id="TipoCriticidad",
 												size_hint_y = None,
 												size_hint_x = 1)
 												#,load_func = CustomDropDown.callbackCargaOpciones)

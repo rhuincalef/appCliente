@@ -129,7 +129,7 @@ class ListadoPropiedades(list):
 
   #AGREGADO RODRIGO
   # Retorna la referencia a una propiedad "tipoFalla" en base al nombre
-  def getTipoFallaPorNombre(self,nombreTipoFalla):
+  def getTipoFallaPorValor(self,nombreTipoFalla):
     for tipoFalla in self:
       if tipoFalla.getValor() == nombreTipoFalla:
         return tipoFalla
@@ -179,14 +179,14 @@ class Propiedad(object):
     self.id = myID
     # Este campo se emplea para habilitar/deshabilitar la seleccion de elementos en el 
     # widget "CustomDropdown".
-    self.estaHabilitada = estaTipoFallaHabilitada
+    self.estaPropHabilitada = estaTipoFallaHabilitada
 
   def __repr__(self):
     return str(self.toDict())
 
   #AGREGADO RODRIGO
   def estaHabilitada(self):
-    return self.estaHabilitada
+    return self.estaPropHabilitada
 
 
   #AGREGADO RODRIGO
@@ -796,13 +796,13 @@ class Capturador(object):
 
     # Si la falla es valida, Se la crea y se asocian las propidades a la misma.
     for tipoFalla in listaProps:
-      #AGREGADO RODRIGO
+      print "tipoFalla['id']: %s\n" % tipoFalla["id"]
       estaTipoFallaHabilitada = False
-      if tipoFalla["id"] in IDS_TIPOS_FALLA_HABILITADOS :
+      if int(tipoFalla["id"]) in IDS_TIPOS_FALLA_HABILITADOS:
         estaTipoFallaHabilitada = True
 
       self.validarPropsDeTipoFalla(tipoFalla)
-      falla = Propiedad(prop["id"],tipoFalla["clave"],tipoFalla["valor"],
+      falla = Propiedad(tipoFalla["id"],tipoFalla["clave"],tipoFalla["valor"],
                           estaTipoFallaHabilitada)
       #Se asocian las propiedades que pueda tener la propiedad del tipo de falla
       for p in tipoFalla["colPropsAsociadas"]:
@@ -811,8 +811,12 @@ class Capturador(object):
                                 str(prop["clave"].encode("utf-8")),
                                 str(prop["valor"].encode("utf-8")),
                                 estaTipoFallaHabilitada)
+        print "Creada propiedad asociada: %s ...\n" % propiedad
         falla.asociarPropiedad(propiedad)
       self.propsConfirmados.append(falla)
+
+    print "Fin de crearListaProps()...\n"
+    print "self.propsConfirmados tiene: \n\n%s\n" % self.propsConfirmados
 
 
   #Valida el atributo "colPropsAsociadas" para que contenga
