@@ -317,34 +317,12 @@ class CustomDropDown(TreeView):
             #element.bind(on_touch_down = treeview.on_pressed_propiedad)
             element.bind(on_touch_down = self.on_pressed_propiedad)
 
-
-    #BACKUP!
-    #def on_pressed_element(self,label,mouseEvt):
-    #    print "Presione un elemento del tree! %s\n" % label.text
-    #    #Se colapsa el padre del elemento seleccionado
-    #    #self.tv.toggle_node(label.parent_node)
-    #    self.toggle_node(label.parent_node)
-    #    label.parent_node.text = label.text
-    #    label.parent_node.bold = True
-    #    print "type(label.parent_node):%s\n" % type(label.parent_node)
-    #    print "type(label.parent_node.parent_node):%s\n" % type(label.parent_node.parent)
-    #    print "type(self.parent): %s\n" % type(self.parent)
-    #    #with label.parent_node.canvas.after:
-    #    #    label.parent_node.canvas.after.clear()
-    #    #    Color(25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
-    #    #    Rectangle(pos = label.parent_node.pos, size = label.parent_node.size)
-    #    #self.getOpcSeleccionadas()
-
-
+    #Retorna la opcion seleccinada en el treeview
     def getOpcSeleccionadas(self):
-        print "Los elementos seleccionados son:\n\n"
-        print "Nodos seleccionados: %s\n" % self.selected_node.text
+        if self.selected_node is None:
+            return self.selected_node
         return self.selected_node.text
-        #if self.tv.selected_node is not None:
-        #    print "Nodos seleccionados: %s\n" % self.tv.selected_node.text
-        #else:
-        #    print "deshabilitado nodo!\n"
-        #print "\n"
+
 
     #Este metodo retorna las criticidades para los baches y las grietas
     # implementadas para la tesina

@@ -106,8 +106,6 @@ class MainApp(App,EventDispatcher):
 		print "Inicializado MainApp!"
 
 
-	def getScreenPorNombre(nombre):
-		self
 
 
 	#Handler por default del metodo de autocompletar
@@ -682,8 +680,8 @@ class MainApp(App,EventDispatcher):
 	#Invoca a capturador para determinar si son atributos validos para
 	# el tipo de falla seleccionado(valida si no dejo sin seleccionar 
 	# el tipoReparacion y tipoMaterial)
-	def sonPropiedadesValidas(self,tipoFalla,tipoReparacion,tipoMaterial):
-		return self.capturador.sonPropiedadesValidas(tipoFalla,tipoReparacion,tipoMaterial)
+	#def sonPropiedadesValidas(self,tipoFalla,tipoMaterial,criticidad):
+	#	return self.capturador.sonPropiedadesValidas(tipoFalla,tipoMaterial,criticidad)
 
 	#Llamado desde menu.py (menu principal de la app)
 	#main.cargarRecorrido().

@@ -149,6 +149,29 @@ class ListadoPropiedades(list):
     return subProps
 
 
+  #AGREGADO RODRIGO
+  #Retorna la lista de atributos dato un nombre de tipoFalla
+  #ListaConfirmados.sonPropiedadesValidas()
+  #def sonPropiedadesValidas(self,tipoFalla,tipoMaterial,criticidad):
+  ##  esTipoFallaValido = esTipoMaterialValido = esCriticidadValida =  False
+  #  print "En ListaConfirmados.sonPropiedadesValidas()\n"
+  #  for tFalla in self:
+  #    if tFalla.getValor() == tipoFalla:
+  #      print "TipoFalla valido!\n"
+  #      esTipoFallaValido = True
+  #      propsAsociadas = tFalla.getColPropsAsociadas()
+  #      for prop in propsAsociadas:
+  #        if prop.getValor() == tipoMaterial:
+  #          print "TipoMaterial valido!\n"
+  #          esTipoMaterialValido = True
+  #        if prop.getValor() == criticidad:
+  #          print "Criticidad valida!\n"
+  #          esCriticidadValida = True
+  #      break
+  #  print "Fin ListaConfirmados.sonPropiedadesValidas()\n"
+  #  return esTipoFallaValido and esTipoMaterialValido and esCriticidadValida
+
+
 
 #-Propiedad
 #	-clave
@@ -921,29 +944,41 @@ class Capturador(object):
   def existenPropsCargadas(self):
     return len(self.propsConfirmados) > 0 
 
-  #Retorna la lista de atributos dato un nombre de tipoFalla
-  def getAtributosAsociados(self,nombreTipoFalla):
-    props = []
-    for tFalla in self.propsConfirmados:
-      if tFalla.getValor() == nombreTipoFalla:
-        props = tFalla.getColPropsAsociadas()
-        break
-    return props
 
 
-  # Invocado desde propsFallaConfirmada.py al seleccionar los atributos
+  # Invocado desde screen propsFallaConfirmada al seleccionar los atributos
   # para el tipo de falla
-  def sonPropiedadesValidas(self,tipoFalla,tipoReparacion,tipoMaterial):
-    esTipoRepValido = esTipoMatValido = False
-    atributos = self.getAtributosAsociados(tipoFalla)
-    for a in atributos:
-      if a.getValor() == tipoReparacion:
-        esTipoRepValido = True
-      if a.getValor() == tipoMaterial:
-        esTipoMatValido = True
-    if esTipoRepValido and esTipoMatValido:
-      return True
-    return False
+  # capturador.sonPropiedadesValidas()
+  #def sonPropiedadesValidas(self,tipoFalla,tipoMaterial,criticidad):
+  #  return self.propsConfirmados.sonPropiedadesValidas(tipoFalla,tipoMaterial,criticidad)
+
+  #BACKUP!
+  #Retorna la lista de atributos dato un nombre de tipoFalla
+  #def getAtributosAsociados(self,nombreTipoFalla):
+  #  props = []
+  #  for tFalla in self.propsConfirmados:
+  #    if tFalla.getValor() == nombreTipoFalla:
+  #      props = tFalla.getColPropsAsociadas()
+  #      break
+  #  return props
+
+
+  #BACKUP!
+  # Invocado desde screen propsFallaConfirmada al seleccionar los atributos
+  # para el tipo de falla
+  #def sonPropiedadesValidas(self,tipoFalla,tipoReparacion,tipoMaterial):
+  #  esTipoRepValido = esTipoMatValido = False
+  #  atributos = self.getAtributosAsociados(tipoFalla)
+  #  for a in atributos:
+  #    if a.getValor() == tipoReparacion:
+  #      esTipoRepValido = True
+  #    if a.getValor() == tipoMaterial:
+  #      esTipoMatValido = True
+  #  if esTipoRepValido and esTipoMatValido:
+  #    return True
+  #  return False
+
+
 
   ################ METODO PARA ALAMCENAR CAPTURAS LOCALES CON OOBD ##################
   # https://pypi.python.org/pypi/ZEO/4.2.0b1

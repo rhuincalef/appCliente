@@ -173,7 +173,7 @@ class PropsFallaConfirmadaScreen(Screen):
 			subLayout.add_widget(label)
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoCriticidad",
-							text='%s Seleccione el tipo de material' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+							text='%s Seleccione la criticidad' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
@@ -275,23 +275,35 @@ class PropsFallaConfirmadaScreen(Screen):
 				dropdownTipoMaterial.add_widget(btn)
 
 
-	def _obtenerWidgetPorId(self,nombreWidget):
-		#for w in self.ids.layout_principal.children:
-		for w in self.layout_principal.children:
-			if w.id == nombreWidget:
-				return w
+	# Este metodo busca dentro de los sublayouts del layout principal un sublayout
+	# con un nombre dado y, dentro de este, un widget con un nombre especificado.
+	def _obtenerWidgetPorId(self,nombreSubLayout,nombreWidget):
+		print "En _obtenerWidgetPorId()..\n"
+		for subLayout in self.layout_principal.children:
+			print "En subLayout.id: %s..\n" % subLayout.id
+			if subLayout.id == nombreSubLayout:
+				print "encontrado sublayout: %s\n" % nombreSubLayout
+				for widget in subLayout.children:
+					print "En widget.id: %s , nombreWidget:%s..\n" % (widget.id,nombreWidget)
+					if widget.id == nombreWidget:
+						print "Encontrado widget!:%s..\n" % type(widget)
+						return widget
 		return None
+	
 	
 	def aceptar(self,evt):
 		#Se envian los datos de la falla
-		screen = self.manager.get_screen('dialogopropscaptura')
 		controlador = App.get_running_app()
-		tipoFalla = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
-		criticidad = self._obtenerWidgetPorId("CriticidadDropdown").getOpcSeleccionadas()
-		tipoMaterial = self._obtenerWidgetPorId("TipoFallaDropdown").getOpcSeleccionadas()
+		screen = self.manager.get_screen('dialogopropscaptura')
 
-		print "props leidas: %s, %s, %s \n\n" % (tipoFalla,criticidad,tipoMaterial)
-		if not controlador.sonPropiedadesValidas(tipoFalla,criticidad, tipoMaterial):
+		tipoFalla = self._obtenerWidgetPorId("subLayoutTipoFalla","TipoFallaDropdown").getOpcSeleccionadas()
+		criticidad = self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").getOpcSeleccionadas()
+		tipoMaterial = self._obtenerWidgetPorId("subLayoutTipoMaterial","TipoMaterial").getOpcSeleccionadas()
+
+		#controlador.sonPropiedadesValidas(tipoFalla,tipoMaterial,criticidad)
+		print "props leidas: %s, %s, %s \n\n" % (tipoFalla,tipoMaterial,criticidad)
+
+		if (tipoFalla is None) or (criticidad is None) or (tipoMaterial is None):
 			controlador.mostrarDialogoMensaje(title="Error de propiedades",
 												text="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
 												)			
@@ -299,20 +311,23 @@ class PropsFallaConfirmadaScreen(Screen):
 
 		#controlador.agregarData("tipoReparacion",tipoReparacion)
 		controlador.agregarData("tipoFalla",tipoFalla)
-		controlador.agregarData("criticidad",criticidad)
 		controlador.agregarData("tipoMaterial",tipoMaterial)
-		#TODO: DESCOMENTAR ESTO!
+		controlador.agregarData("criticidad",criticidad)
 		self.manager.current = 'dialogopropscaptura'
 
 
+
+	#Reestablece el contenido sin seleccionar de todos los dropdowns
 	def reestablecerDropDowns(self):
-		#for widget in self.ids.layout_principal.children:
-		for widget in self.layout_principal.children:
-			print "Iterando elemento: %s\n" % widget.id
-			if widget.id == "TipoFallaDropdown" or widget.id == "TipoReparacionDropwdown" or \
-						 widget.id == "TipoMaterialDropdown":
-				widget.reestablecer()  
-	
+		for subLayout in self.layout_principal.children:
+			print "Iterando elemento: %s\n" % subLayout.id
+			if subLayout.id == "subLayoutTipoCriticidad" or \
+						subLayout.id == "subLayoutTipoFalla" or \
+						subLayout.id == "subLayoutTipoMaterial":						
+				for widget in subLayout.children:
+					if widget.id == "TipoFallaDropdown" or widget.id == "TipoCriticidad" or \
+								 widget.id == "TipoMaterial":
+						widget.reestablecer()
 
 	#Borra la info temporal almacenada en controlador
 	def borrarData(self):
