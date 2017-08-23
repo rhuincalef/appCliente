@@ -114,8 +114,9 @@ class PropsFallaConfirmadaScreen(Screen):
 			subLayout.add_widget(label)
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
-							text='%s Seleccione el tipo de falla' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
-							#text='%s Seleccione el tipo de falla' % (icon('fa-gavel', TAMANIO_ICONOS,color='ff0000')) ,
+							text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_CUSTOM_ICONOS)) ,
+							#text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_ICONOS)) ,
+							
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
@@ -141,7 +142,8 @@ class PropsFallaConfirmadaScreen(Screen):
 			subLayout.add_widget(label)
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoMaterial",
-							text='%s Seleccione el tipo de material' % (icon('fa-gavel', TAMANIO_ICONOS)) ,
+							#text='%s Seleccione el tipo de material' % (icon('cf-tipomaterial', TAMANIO_ICONOS)) ,
+							text='%s Seleccione el tipo de material' % (icon('cf-tipomaterial', TAMANIO_CUSTOM_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
