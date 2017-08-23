@@ -13,8 +13,14 @@ class SeleccionarBDScreen(SubMenuScreen):
     # el resto de los elementos del menu.
     def comenzar_nueva_bd(self):
         print "Comenzando nueva BD, deshabilitando los elementos del menu!\n"
-        self.deshabilitarOpciones()
-        #TODO:AGREGAR CODIGO ACA!
+        #self.deshabilitarOpciones()
+        #Si se comienza una nueva BDLocal, se crea un nuevo archivo con la fecha actual. 
+        controlador = App.get_running_app()
+        controlador.inicializarBDLocal()
+        archivoBD = controlador.getBDLocalMuestras().getNombreBDLocal()
+        controlador.mostrarDialogoMensaje(title = 'Carga de BD Muestras anterior',
+                                            text = 'BD de Muestras locales %s \n cargada exitosamente!' % \
+                                            archivoBD)
 
     def buscar_bd_anterior(self):
         print "Buscando BD anterior, deshabilitando los elementos del menu!\n"

@@ -8,7 +8,7 @@ import re
 from notification import XLoading, XConfirmation, XMessage
 import threading
 
-from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA
+from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA,SUBFIJO_ARCHIVOS_BD_CONFIRMADAS
 import datetime
 import os
 from kivy.event import EventDispatcher
@@ -126,6 +126,13 @@ class FileFilterScreen(Screen,EventDispatcher):
                         archivosFiltrados.append(fullPathArch)
 
         print "\nArchivos filtrados: %s\n\n" % archivosFiltrados
+        if len(archivosFiltrados) == 0:
+            controlador = App.get_running_app()
+            controlador.mostrarDialogoMensaje(title="Filtrado de archivos",
+                                        text="No existen archivos de BD relacionados a esa fecha")
+            self.popup.dismiss()
+            return
+
         self.dispatch('on_fin_busqueda_archivos',archivosFiltrados)
 
 

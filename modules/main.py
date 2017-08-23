@@ -81,9 +81,16 @@ class MainApp(App,EventDispatcher):
 
 		# Los capturadores comparten el mismo apiClient, que lleva la cantidad
 		# comun de bytes enviados y bytes totales a enviar, de ambos capturadores.
+		#BACKUP!
+		#apiClientComun = ApiClientApp()
+		#self.capturador = Capturador(apiClientComun,bdLocal)
+		#self.capturadorInformados = CapturadorInformados(apiClientComun)
+
 		apiClientComun = ApiClientApp()
-		self.capturador = Capturador(apiClientComun)
-		self.capturadorInformados = CapturadorInformados(apiClientComun)
+		bdLocalMuestrasComun = BDLocal(fullPathBD = None)
+		self.capturador = Capturador(apiClientComun,bdLocalMuestrasComun)
+		self.capturadorInformados = CapturadorInformados(apiClientComun,bdLocalMuestrasComun)
+
 		self.bind(on_start = self.instanciada_app)
 		self.screen_manager = None
 		self.dataViews = {} #Diccionario usado para envio de datos entre views 
@@ -106,7 +113,16 @@ class MainApp(App,EventDispatcher):
 		print "Inicializado MainApp!"
 
 
+	#AGREGADO RODRIGO
+	def getNombreBDLocal(self):
+		return self.capturador.getNombreBDLocal()
 
+	#AGREGADO RODRIGO
+	#Inicializa la BD de Muestras local para el objeto "Capturador" (baches confirmados).
+	# NOTA: LA BD de "CapturadorInformados" no se inicializa porque es la misma referencia. 
+	def inicializarBDLocal(self,fullPathBD = None):
+		self.capturador.inicializarBDLocal(fullPathBD = fullPathBD)
+		
 
 	#Handler por default del metodo de autocompletar
 	def on_fin_obtencion_direcciones(self,*args):

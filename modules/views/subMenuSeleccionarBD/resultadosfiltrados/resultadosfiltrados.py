@@ -73,33 +73,40 @@ class ContainerRadioGroup(BoxLayout):
 
 
 from notification import XMessage
+from os import path
+
 class ResultadosFiltradosScreen(Screen):
 
-	def __init__(self,**kwargs):
-		super(ResultadosFiltradosScreen,self).__init__(**kwargs)
-		self.contenedorOpciones = None
+    def __init__(self,**kwargs):
+        super(ResultadosFiltradosScreen,self).__init__(**kwargs)
+        self.contenedorOpciones = None
 
+    def agregarArchivosFiltrados(self,archivos):
+        print "en agregarArchivosFiltrados\n"
+        self.ids.layout_elementos_filtrados.clear_widgets()
+        self.contenedorOpciones = ContainerRadioGroup(archivos)
+        self.ids.layout_elementos_filtrados.add_widget(self.contenedorOpciones)
 
-	def agregarArchivosFiltrados(self,archivos):
-		print "en agregarArchivosFiltrados\n"
-		self.ids.layout_elementos_filtrados.clear_widgets()
-		self.contenedorOpciones = ContainerRadioGroup(archivos)
-		self.ids.layout_elementos_filtrados.add_widget(self.contenedorOpciones)
+    def cancelar(self):
+        self.ids.layout_elementos_filtrados.clear_widgets()
+        print "Limpiados resultados del screen!\n"
+        self.manager.current = "fileFilter"
 
-
-	def cancelar(self):
-		self.ids.layout_elementos_filtrados.clear_widgets()
-		print "Limpiados resultados del screen!\n"
-		self.manager.current = "fileFilter"
-
-	def seleccionarArchivo(self):
-		opcion = self.contenedorOpciones.obtenerContenidoSeleccionado()
-		if opcion is None:
-			XMessage(title = "Seleccion de opcion",
-							text = "Debe selecionar una opción para cargar")
-			return
-		print "\n\nLA OPCION SELECCIONADA FUE -------------->\n: %s\n\n" % \
-						opcion
-		#TODO: SE DEBE ACTUALIZAR EL CONTROLADOR CON LA OPCION QUE ELIGIO EL USUARIO
-		# UTILIZAR ESA OPCION PARA ALMACENAR LAS POSICIONES DE LAS FALLAS Y SUS CAPTURAS.
+    def seleccionarArchivo(self):
+        opcion = self.contenedorOpciones.obtenerContenidoSeleccionado()
+        if opcion is None:
+            XMessage(title = "Seleccion de opcion",
+                        text = "Debe selecionar una opción para cargar")
+            return
+        print "\n\nLA OPCION SELECCIONADA FUE -------------->\n: %s\n\n" % opcion
+        # Se inicializa TinyBD con la opcion seleccionada por el 
+        # usuario (BD de muestras locales creada anteriormente por el usuario).
+        controlador = App.get_running_app()
+        controlador.inicializarBDLocal(self,fullPathBD = opcion)
+        archivoBD = controlador.getBDLocalMuestras().getNombreBDLocal()
+        #Se muestra un mensaje y se regresa al menu principal
+        controlador.mostrarDialogoMensaje(title = 'Carga de BD Muestras anterior',
+                                            text = 'BD de Muestras locales %s \n cargada exitosamente!' % \
+                                            archivoBD)
+        self.manager.current = "subMenuSeleccionarBD"
 

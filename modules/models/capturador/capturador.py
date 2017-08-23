@@ -550,7 +550,7 @@ class ItemFalla(SelectableDataItem,Persistent):
 
 
 class Capturador(object):
-  def __init__(self,apiclientComun,**kwargs):		
+  def __init__(self,apiclientComun,BDLocal=None,**kwargs):		
     #NOTA: Tanto colCapturasTotales como colCapturasConfirmadas 
     # contienen elementos "ItemFalla", que tienen objetos "Captura" asociados. 
     self.colCapturasTotales = [] #Todas las capturas hechas informadas y confirmadas.
@@ -559,6 +559,10 @@ class Capturador(object):
     # self.apiClient = ApiClientApp()
     self.estrategia = EstrategiaConfirmados()
     self.api_geo = GeofencingAPI()
+
+    #AGREGADO RODRIGO
+    self.bdLocalMuestras = BDLocal
+
     print "Inicializado Capturador"
     self.propsConfirmados = ListadoPropiedades() #Listado de objetos que se asocian
     # con los atrigbutos de un tipoFalla confirmada
@@ -566,12 +570,22 @@ class Capturador(object):
     # tipo de material).
 
 
+  #AGREADO RODRIGO
+  #Inicializa la BDLocal del capturador actual.
+  def inicializarBDLocal(self,fullPathBD = None):
+    if fullPathBD is None:
+      self.bdLocalMuestras.inicializar()
+      return
+    self.bdLocalMuestras.inicializar(fullPathBD = fechaBD)
+
+
+  #AGREADO RODRIGO
+  def getBDLocalMuestras(self):
+    return self.bdLocalMuestras
+
   #Retorna los tiposFalla con todas sus propiedades
   def getPropsConfirmados(self):
     return self.propsConfirmados
-
-
-
 
   #Reestablece el contador de bytes totales a enviar a cero
   def reestablecerApiClient(self):
@@ -633,6 +647,7 @@ class Capturador(object):
     return self.capturar(data, dir_trabajo, nombre_captura,falla,latitud_prueba,
       longitud_prueba)
 
+
   #Metodo de captura de fallas nuevas
   # capturador.capturar() invocado desde main.threadCapturarFalla()
   def capturar(self,dataSensor, dir_trabajo, nombre_captura,item_falla,latitud,longitud):
@@ -653,6 +668,7 @@ class Capturador(object):
     print ""
     #AGREGADO RODRIGO
     return cap.getFullPathCaptura(),cap.getFullPathCapturaConv()
+
 
   # Filtra las colCapturasTotales y agrega solamente las capturas seleccionadas en el listview
   # a la colCapturasConfirmadas

@@ -123,7 +123,8 @@ class GeofencingAPI(object):
 		if not (controlador.args.gps == OPCIONES_GPS[1]):
 			self.session = gps.gps()
 			self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
-		self.bd_json = BDLocal()
+		#BACKUP!
+		#self.bd_json = BDLocal()
 
 
 	def obtenerLatitudLongitud(self,nombre_archivo="test_file_default.pcd"):
@@ -170,12 +171,49 @@ class GeofencingAPI(object):
 from tinydb import TinyDB, Query
 class BDLocal(object):
 
-	def __init__(self):
-		MY_JSON_BD = LOCAL_DB_JSON_NAME +time.strftime("%d-%m-%Y")+\
-						EXTENSION_LOCAL_BD_JSON_NAME
+	def __init__(self,fullPathBD=None):
+		controlador = App.get_running_app()
+		self.rutaBDLocal = self.bd_json = None
+		if fullPathBD is not None:
+			self.bd_json = TinyDB(fullPathBD)
+			self.rutaBDLocal = fullPathBD
+		print "BDLocal en json tiene: %s\n" % self.bd_json
 
-		self.bd_json = TinyDB(MY_JSON_BD)
-		print "Abriendo BD json local %s...\n" % MY_JSON_BD
+		#MY_JSON_BD = LOCAL_DB_JSON_NAME +time.strftime("%d-%m-%Y")+\
+		#				EXTENSION_LOCAL_BD_JSON_NAME
+		#self.bd_json = TinyDB(MY_JSON_BD)
+		#print "Abriendo BD json local %s...\n" % MY_JSON_BD
+
+
+	#AGREGADO RODRIGO
+	# Inicializa una BD Local con una fecha dada. Si no se especifica nada
+	# se considera por defecto la fecha actual. 
+	def inicializar(self,fullPathBD = None ):
+		if fullPathBD is not None:
+			self.bd_json = TinyDB(fullPathBD)
+			print "Inicializada con path del usuario: %s...\n" % fullPathBD
+			return
+
+		fechaBDActual = time.strftime("%d-%m-%Y")
+		bdPath = LOCAL_DB_JSON_NAME + fechaBDActual +\
+						EXTENSION_LOCAL_BD_JSON_NAME
+		self.bd_json = TinyDB(bdPath)
+		print "Inicializada por Defecto BD Local de muestras...\n"
+
+
+	#AGREGADO RODRIGO
+	#Retorna True si la BD se encuentra inicializada con una instancia a TinyDB
+	def estaInicializada(self):
+		return self.bd_json is not None
+
+	#AGREGADO RODRIGO
+	#Retorna el nombre de archivo de la BD Muestras Locales
+	def getNombreBDLocal(self):
+		nombreArch = ""
+		if self.estaInicializada():
+			nombreArch = path.basename(self.rutaBDLocal)
+		return nombreArch
+
 
 	def agregar(self,latitud,longitud,nombrePcd):
 		my_dic = {

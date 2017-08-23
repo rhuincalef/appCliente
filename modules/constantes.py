@@ -227,6 +227,7 @@ LOCAL_BD_PROPS_CONFIRMADAS = "./DB_CONFIRMADAS.json"
 ####################################################################################
 #LOCAL_DB_JSON_NAME = './DB_MUESTRAS_LOCALES_30-03-2017.json'
 LOCAL_DB_JSON_NAME = './DB_MUESTRAS_LOCALES_'
+
 #EXTENSION_LOCAL_BD_JSON_NAME = '.json'
 EXTENSION_LOCAL_BD_JSON_NAME = path.extsep + 'json'
 
