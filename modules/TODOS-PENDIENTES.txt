@@ -66,17 +66,17 @@ CONSULTA CON GABRIEL JULIO 2017-->
 
 26. Cambiar el menu principal para que el cambio se aprecie por el usuario. -->OK
 
-27. Cambiar el drop-down para indicar cambio (con colores sobre el elemento seleccionado y/o tamaño de los elementos) en "Capturar falla nueva" propiedades de la falla. -->OK PARCIAL. (Falta implementar en appCliente)
+27. Cambiar el drop-down para indicar cambio (con colores sobre el elemento seleccionado y/o tamaño de los elementos) en "Capturar falla nueva" propiedades de la falla. -->OK
 
 29. Ver posibilidad de elegir BD_LOCAL_xxxx.json de dias anteriores. -->OK PARCIAL.(Falta implementar en appCliente).
 
 30. Hacer el select all para subir todas las fallas capturadas. -->OK
 
-31. Cambiar el icono del tipo de falla y material.
+31. Cambiar el icono del tipo de falla y material. -->OK. Iconos agregados.
 
-32. Reemplazar el tipo de reparación por las criticidades. Incluir las criticidades en las propiedades de la falla.
+32. Reemplazar el tipo de reparación por las criticidades. Incluir las criticidades en las propiedades de la falla. -->OK
 
-33. Agregar los campos de las fallas confirmadas que se envian desde appCliente hacia webapp.
+33. Agregar los campos de las fallas confirmadas que se envian desde appCliente hacia webapp. -->OK
 
  
 
