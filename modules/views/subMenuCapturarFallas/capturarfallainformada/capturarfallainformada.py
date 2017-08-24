@@ -20,10 +20,6 @@ class CapturarFallaInformadaScreen(Screen):
     def __init__(self, **kwargs):
       super(Screen, self).__init__(**kwargs)
       self.bind(on_enter = self.refrescar_vista)
-      #self.ids.listado.adapter.propagate_selection_to_data = True
-      #self.ids.listado.adapter.bind(on_selection_change = self.cambioSeleccion)
-      #print "cantidad de elementos en la seleccion: %s\n " % \
-      #                            len(self.ids.listado.adapter.selection)
 
     #def cambioSeleccion(self,adapter):
     #  print "\ncambio la seleccion! len(adapter.selection) = %s\n\n" % len(adapter.selection)
@@ -33,6 +29,8 @@ class CapturarFallaInformadaScreen(Screen):
     #def on_enter(self):
     #  controlador = App.get_running_app()
     #  controlador.desSeleccionarInformados()
+
+  
 
     def buscarFallaSeleccionada(self,fallas_dict):
       # Se carga el dialogopropsscreen con el id_falla de la falla seleccionada
@@ -49,6 +47,7 @@ class CapturarFallaInformadaScreen(Screen):
 
     def obtener_fallas(self):
       controlador = App.get_running_app()
+
       # Diccionario de objetos ItemFalla(mostrados en el listview cuando se 
       # seleccionan los baches).
       id_falla_seleccionada = -1
@@ -68,7 +67,6 @@ class CapturarFallaInformadaScreen(Screen):
         print ""
         #NOTA: Se coloca el idFalla en el dic. del controlador para que la vista
         # dialogoPropsCaptura sepa donde volver cuando regresa.
-        #
         controlador = App.get_running_app()
         controlador.agregarData("idFalla",id_falla_seleccionada)
         print "id_falla_seleccionada: %s\n" % controlador.getData("idFalla")

@@ -1108,8 +1108,8 @@ class Capturador(object):
 #     +solicitarInformados()
 #
 class CapturadorInformados(Capturador):
-  def __init__(self,apiclientComun):
-    Capturador.__init__(self,apiclientComun)
+  def __init__(self,apiclientComun,bdLocal):
+    Capturador.__init__(self,apiclientComun,bdLocal)
     self.colBachesInformados = ListadoFallas()
     self.estrategia = EstrategiaInformados()
 

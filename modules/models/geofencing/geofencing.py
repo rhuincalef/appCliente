@@ -191,6 +191,7 @@ class BDLocal(object):
 	def inicializar(self,fullPathBD = None ):
 		if fullPathBD is not None:
 			self.bd_json = TinyDB(fullPathBD)
+			self.rutaBDLocal = fullPathBD
 			print "Inicializada con path del usuario: %s...\n" % fullPathBD
 			return
 
@@ -198,6 +199,7 @@ class BDLocal(object):
 		bdPath = LOCAL_DB_JSON_NAME + fechaBDActual +\
 						EXTENSION_LOCAL_BD_JSON_NAME
 		self.bd_json = TinyDB(bdPath)
+		self.rutaBDLocal = bdPath
 		print "Inicializada por Defecto BD Local de muestras...\n"
 
 
@@ -211,6 +213,7 @@ class BDLocal(object):
 	def getNombreBDLocal(self):
 		nombreArch = ""
 		if self.estaInicializada():
+			print "En getNombreBDLocal() con self.rutaBDLocal: %s\n" % self.rutaBDLocal
 			nombreArch = path.basename(self.rutaBDLocal)
 		return nombreArch
 

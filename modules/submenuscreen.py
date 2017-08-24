@@ -8,7 +8,7 @@ class SubMenuScreen(Screen):
 
  
 	def deshabilitarOpciones(self):
-		print "type(self.parent.parent.parent): %s\n" % type(self.parent.parent.parent)
+		#print "type(self.parent.parent.parent): %s\n" % type(self.parent.parent.parent)
 		#self.parent.parent.parent.desHabilitarOpciones()
 		self.tabbedPanel.desHabilitarOpciones()
 
@@ -17,7 +17,7 @@ class SubMenuScreen(Screen):
 		#print "type(self.parent): %s\n" % type(self.parent)
 		#print "type(self.parent.parent): %s\n" % type(self.parent.parent)
 		#print "type(self.parent.parent.parent): %s\n" % type(self.parent.parent.parent)
-		print "Habilitando las opciones del menu principal!\n"
+		#print "Habilitando las opciones del menu principal!\n"
 		#self.parent.parent.parent.habilitarOpciones()
 		self.tabbedPanel.habilitarOpciones()
 

@@ -504,6 +504,8 @@ COLOR_PONDERACION_ALTA = 'FF0000'
 
 PATRON_ICONO_DROPDOWN = ".*\[/\color\].*"
 
-
+#Prefijo con el que se generan ID's unicos para los TabbedPanelItem
+# sumado al titulo del submenu (PREFIJO_ID_TP_ITEM + tituloSubMenu)
+PREFIJO_ID_TP_ITEM = "TpItem_"
 
 

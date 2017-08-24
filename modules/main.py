@@ -114,15 +114,15 @@ class MainApp(App,EventDispatcher):
 
 
 	#AGREGADO RODRIGO
-	def getNombreBDLocal(self):
-		return self.capturador.getNombreBDLocal()
+	def getBDLocalMuestras(self):
+		return self.capturador.getBDLocalMuestras()
 
 	#AGREGADO RODRIGO
 	#Inicializa la BD de Muestras local para el objeto "Capturador" (baches confirmados).
 	# NOTA: LA BD de "CapturadorInformados" no se inicializa porque es la misma referencia. 
 	def inicializarBDLocal(self,fullPathBD = None):
 		self.capturador.inicializarBDLocal(fullPathBD = fullPathBD)
-		
+
 
 	#Handler por default del metodo de autocompletar
 	def on_fin_obtencion_direcciones(self,*args):
@@ -569,6 +569,8 @@ class MainApp(App,EventDispatcher):
 	def noMostrarCaptura(self,caps):
 		print "No se visualizara la captura %s...\n" % caps
 
+
+
 	#Construir aca las instancias del modelo que son usadas por la App.
 	# NOTA: Emplear el metodo App.get_running_app() para obtener la instancia
 	# actual de MainAPP.
@@ -584,6 +586,8 @@ class MainApp(App,EventDispatcher):
 									tab_height= 40,
 									tab_width = 170)
 		self.tabbedPanel = tb_panel
+		#AGREGADO RODRIGO
+		#self.tabbedPanel.inHabilitarSubMenus([PREFIJO_ID_TP_ITEM + "subMenuSeleccionarBD"])
 		return tb_panel
 
 

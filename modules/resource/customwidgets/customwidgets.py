@@ -468,6 +468,33 @@ class MyTabbedPanel(TabbedPanel):
         #Window.borderless =  True
         #Window.clearcolor = (1, 0, 0, 1)
 
+        
+    #AGREGADO RODRIGO
+    #Retorna el Strip con todos los tabbedpanel items del menu.
+    def getTabbedPanelStrip(self):
+        return self._tab_strip.children
+
+
+    #AGREGADO RODRIGO
+    # Inhabilita todos los elementos del submenu excepto los que estan en
+    # la coleccion tpItems.
+    #def inHabilitarSubMenus(self,tpItems):
+    #    for item in self.getTabbedPanelStrip():
+    #        print "iterando item.id:%s\n; tpItems: %s\n" % (item.id,tpItems[0])
+    #        print "item.id not in tpItems: %s\n" % (item.id not in tpItems)
+    #        item.disabled = False
+    #        if item.id not in tpItems:
+    #            item.disabled = True
+    
+    #AGREGADO RODRIGO
+    # Habilita todos los elementos del submenu excepto los que estan en
+    # la coleccion tpItems.
+    #def habilitarSubMenus(self,tpItems):
+    #    for item in self.getTabbedPanelStrip():
+    #        item.disabled = True
+    #        if item.id not in tpItems:
+    #            item.disabled = False
+                
 
     def getSubMenuPorNombre(self,nombreSubMenu):
         return self.subMenus[nombreSubMenu]
@@ -476,8 +503,10 @@ class MyTabbedPanel(TabbedPanel):
     # Crea el TabbedPanelItem con el nombre y screenmanager(layout) y,
     # se lo asigna al tabbedpanel menu principal.
     #  
-    def inicializarOpcionSubMenu(self,tituloSubMenu,screenManager):
-        tpItem = TabbedPanelItem(text = tituloSubMenu)
+    def inicializarOpcionSubMenu(self,tituloSubMenu,nombreMenu,screenManager):
+        tpItem = TabbedPanelItem(id= PREFIJO_ID_TP_ITEM + nombreMenu,
+                                    text = tituloSubMenu)
+        #tpItem = TabbedPanelItem(text = tituloSubMenu)
         tpItem.background_down = 'atlas://customAppCliente/tab_btn_pressed'
         tpItem.content = screenManager
         self.add_widget(tpItem)
@@ -503,7 +532,8 @@ class MyTabbedPanel(TabbedPanel):
             sm.add_widget(screen)
         # Crea un tabbedpanelItem para el screen manager con el nombre leido de la 
         # configuracion
-        self.inicializarOpcionSubMenu(tituloSubMenu,sm) 
+        # Se pasa el ID
+        self.inicializarOpcionSubMenu(tituloSubMenu,listaVistas['1']["nombre_menu"],sm) 
 
 
     # Carga instancia cada screenmanger y le agrega los screens que le corresponden
@@ -536,7 +566,9 @@ class MyTabbedPanel(TabbedPanel):
 
     #def desHabilitarOpciones(self,evt):
     def desHabilitarOpciones(self):
+        print "en tabbedpanel.desHabilitarOpciones()\n"
         for widg in self.walk(restrict=True):
+            print "iterando... %s\n" % type(widg)
             if isinstance(widg, TabbedPanelStrip):
                 print "hijos: %s\n" % widg.children
                 for hijo in widg.children:
