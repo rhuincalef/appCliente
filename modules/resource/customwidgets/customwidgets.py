@@ -366,39 +366,12 @@ class CustomDropDown(TreeView):
             element.bind(on_touch_down = self.on_pressed_propiedad)
 
 
-    #BACKUP!!
-    ##Carga los elementos en el dropdown actual en base a una lista de strings
-    #def cargarOpciones(self,elementos,estanDesHabilitadas):
-    #    print "En cargarOpciones()...\n"
-    #    print "cantidad de nodos: %s\n" % len(self.root.nodes)
-    #    for cadOpcion in elementos:
-    #        print "agregando nodo: %s\n" % cadOpcion
-    #        element = TreeViewLabel(
-    #                                #text='%s' % cadOpcion,
-    #                                text="%s %s" % ( (icon('fa-exclamation-triangle',
-    #                                                    TAMANIO_ICONOS,
-    #                                                    color='ff0000').encode("utf-8")),
-    #                                                    cadOpcion),
-    ###                                markup = True,
-#                                    color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
-    #                                disabled = estanDesHabilitadas,
-    #                                disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
-    #                                font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
-    #                                )
-    #        self.add_node(element)
-    #        print "Esta deshabilitado %s: %s \n" % (cadOpcion, estanDesHabilitadas)
-    #        element.no_selection = estanDesHabilitadas
-    ##        #element.bind(on_touch_down = treeview.on_pressed_propiedad)
-    #        element.bind(on_touch_down = self.on_pressed_propiedad)
-
-
-
 
     # Este metodo retorna el contenido textual de una opcion que contiene iconos + contenido textual.
     # Se emplea unicamente en la propiedad asociada criticidad.
     # Retorna la cadena exacta si no contiene el patron, o el contenido textual si lo contiene.
     #filtrarContenidoOpcion(1,'[color=ff0000][size=32][font=resource/fonts/font-awesome.ttf]\xef\x81\xb1[/font][/size][/color] Pavimento  r\xc3\xadgido')
-    def filtrarContenidoOpcion(self,cadena):
+    def filtrarContenidoOpcion(self,cadena,filtrarPorSeparador = False):
         print "en filtrarContenidoOpcion()...\n"
         patron = re.compile(PATRON_ICONO_DROPDOWN)
         if patron.match(cadena) is not None:
@@ -409,7 +382,13 @@ class CustomDropDown(TreeView):
                     continue
                 cad += colCads[index] + " "
             print "cad final: %s\n" % cad
-            return cad
+
+            patron = re.compile(PATRON_SEPARADOR_CRITICIDAD_DROPDOWN)
+            if filtrarPorSeparador and (patron.match(cad) is not None):
+                print "filtrando por separador...\n"
+                cad = cad.split(CARACTER_SEPARADOR_CRITICIDAD)[POSICION_INTERES_PARA_CRITICIDAD]
+                print "cadena filtrada por separador final: %s\n" % cad
+                return cad
         else:
             print "cadena final: %s\n" % cadena
             return cadena
@@ -417,21 +396,12 @@ class CustomDropDown(TreeView):
 
 
     #Retorna la opcion seleccinada en el treeview
-    def getOpcSeleccionadas(self):
+    def getOpcSeleccionadas(self,filtrarPorSeparador = False):
         if self.selected_node is None:
             return self.selected_node
         print "Existen nodos seleccionados!\n"
-        return self.filtrarContenidoOpcion(self.selected_node.text)
-        #return self.selected_node.text
-
-
-    #BACKUP!
-    #Retorna la opcion seleccinada en el treeview
-    #def getOpcSeleccionadas(self):
-    #    if self.selected_node is None:
-    ##        return self.selected_node
-    #    return self.selected_node.text
-
+        return self.filtrarContenidoOpcion(self.selected_node.text,
+                                            filtrarPorSeparador = filtrarPorSeparador)
 
 
     #Este metodo retorna las criticidades para los baches y las grietas
@@ -485,7 +455,7 @@ class MyTabbedPanel(TabbedPanel):
     #        item.disabled = False
     #        if item.id not in tpItems:
     #            item.disabled = True
-    
+
     #AGREGADO RODRIGO
     # Habilita todos los elementos del submenu excepto los que estan en
     # la coleccion tpItems.

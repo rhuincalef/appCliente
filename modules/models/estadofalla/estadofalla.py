@@ -164,7 +164,7 @@ class Confirmada(Estado):
 	#Retorna el dicc de la falla codificado en utf-8 para enviar al server
 	def getDicFallaEncoded(self):
 		print "En getDicFallaEncoded()...\n"
-		print "TipoReparacion: %s\n" % self.tipoReparacion
+		print "Criticidad: %s\n" % self.criticidad
 		return {
 			'id': str(self.id).encode("utf-8"),
 			'latitud':str(self.latitud).encode("utf-8"),
@@ -173,7 +173,7 @@ class Confirmada(Estado):
 			# Campos agregados para que el servidor los reciba
 			# y registre una falla consistente en el sistema. 
 			#'tipoReparacion':str(self.tipoReparacion),
-			'nombreTipoMaterial':str(self.tipoMaterial).encode("utf-8"),
+			'nombreTipoMaterial':str(self.tipoMaterial),
 			'nombreTipoFalla':str(self.tipoFalla).encode("utf-8"),
 			#'nombreCriticidad':str("Media").encode("utf-8"),
 			'nombreCriticidad':str(self.criticidad).encode("utf-8"),

@@ -502,7 +502,17 @@ COLOR_PONDERACION_BAJA = '21C3E8'
 COLOR_PONDERACION_MEDIA = 'F2F939'
 COLOR_PONDERACION_ALTA = 'FF0000'
 
+
+# Patrones para usar con regex.
+# Patron para detectar texto con etiquetas de marcado 
 PATRON_ICONO_DROPDOWN = ".*\[/\color\].*"
+# Patron para detectar la separacion de propiedades por ":".
+# Si el nombre y la descripcion de una propiedad de la falla se separa por ":", entonces
+# se procede a filtrar solamente el nombre. Este caso se aplica a la criticidad de una falla 
+#
+CARACTER_SEPARADOR_CRITICIDAD = ":"
+PATRON_SEPARADOR_CRITICIDAD_DROPDOWN = ".*" + CARACTER_SEPARADOR_CRITICIDAD + ".*"
+POSICION_INTERES_PARA_CRITICIDAD = 0
 
 #Prefijo con el que se generan ID's unicos para los TabbedPanelItem
 # sumado al titulo del submenu (PREFIJO_ID_TP_ITEM + tituloSubMenu)

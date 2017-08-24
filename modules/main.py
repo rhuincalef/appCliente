@@ -63,6 +63,8 @@ EventLoop.ensure_window()
 import gi
 gi.require_version('Gtk','3.0')
 
+from kivy.clock import Clock
+
 
 
 class MainApp(App,EventDispatcher):
@@ -351,12 +353,14 @@ class MainApp(App,EventDispatcher):
 	# Metodo que paraleliza el envio al servidor de los objetos
 	def threadSubidaCapturas(self,bytes_totales_a_enviar,lista_capturadores,candadoFinSubidas):
 		print "En threadSubidaCapturas...\n"
+
 		# Se actualiza el valor maximo de la progressbar con los bytes totales
 		# de la peticion
-		
 		#screen_upload = self.screen_manager.get_screen('enviocapturasserver')
-		screen_upload = self.tabbedPanel.get_screen('enviocapturasserver')
+		screenManager = self.tabbedPanel.getSubMenuPorNombre('subMenuServidor').manager
+		screen_upload = screenManager.get_screen('enviocapturasserver')
 		screen_upload.setMaxBarraProgreso(bytes_totales_a_enviar)
+		
 		#Se adquiere el control y se inicia el thread del dialgo de pregunta
 		# para caps subidas
 		candadoFinSubidas.acquire()
@@ -419,8 +423,10 @@ class MainApp(App,EventDispatcher):
 	# Actualiza los labels de cantidad de bytes subidos
 	# en la pantalla enviocapturasservidor
 	def actualizar_datos(self,dt):
-		#screen_upload = self.screen_manager.get_screen('enviocapturasserver')
-		screen_upload = self.tabbedPanel.get_screen('enviocapturasserver')
+		#BACKUP!
+		#screen_upload = self.tabbedPanel.get_screen('enviocapturasserver')
+		screenManager = self.tabbedPanel.getSubMenuPorNombre('subMenuServidor').manager
+		screen_upload = screenManager.get_screen('enviocapturasserver')
 		bytes_read = self.capturador.apiClient.bytes_acumulados
 		screen_upload.actualizar_datos(bytes_read)
 

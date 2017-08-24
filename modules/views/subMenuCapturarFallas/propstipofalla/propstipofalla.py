@@ -291,7 +291,9 @@ class PropsFallaConfirmadaScreen(Screen):
 		screen = self.manager.get_screen('dialogopropscaptura')
 
 		tipoFalla = self._obtenerWidgetPorId("subLayoutTipoFalla","TipoFallaDropdown").getOpcSeleccionadas()
-		criticidad = self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").getOpcSeleccionadas()
+		#criticidad = self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").getOpcSeleccionadas()
+		criticidad = self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").getOpcSeleccionadas(
+																										filtrarPorSeparador=True)
 		tipoMaterial = self._obtenerWidgetPorId("subLayoutTipoMaterial","TipoMaterial").getOpcSeleccionadas()
 
 		print "props leidas: %s, %s, %s \n\n" % (tipoFalla,tipoMaterial,criticidad)
