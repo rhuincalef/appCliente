@@ -39,47 +39,33 @@ class SubirCapturasServidorScreen(Screen):
 	# "activos".
 	def marcarCapturas(self,activo):
 		print "En marcarCapturas con activo: %s\n" % activo
+		print "\nself.ids.listado.adapter: %s\n\n" % self.ids.listado.adapter.__dict__
 		print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
 		colItemFalla = self.ids.listado.adapter.data
+		print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
+		
 		for index in xrange(0,len(colItemFalla)):
-			print "\n\n ---->type(colItemFalla[index]): %s\n\n" % type(colItemFalla[index])
-			funcionItemFalla= colItemFalla[index].desSeleccionar
+			print "\n\n iteracion %s---->type(colItemFalla[index]): %s\n\n" % \
+											(index,type(colItemFalla[index]))
+			funcionItemFalla = None
 			if activo:
-				print "Seleccionando elementos!\n"
 				funcionItemFalla= colItemFalla[index].seleccionar
-				
-			print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
-			print "self.ids.listado.adapter.selection[0]: %s\n" % self.ids.listado.adapter.selection[index].__dict__
-			print "self.ids.listado.adapter.selection[0].children: %s\n" % self.ids.listado.adapter.selection[index].children
+				print "Seleccionado elementos!\n"
+			else:
+				funcionItemFalla= colItemFalla[index].desSeleccionar
+				print "DesSeleccionado elementos!\n"				
 			funcionItemFalla()
-			for boton in self.ids.listado.adapter.selection[index].children:
-				funcionSeleccionarBoton = boton.deselect
-				if activo:
-					funcionSeleccionarBoton = boton.select
-				funcionSeleccionarBoton()
+			#Se seleccionan los botones de la GUI que representan a los elementos
+			listadoCompositeListItem = self.ids.listado.children[0].children[0].children
+			for elementoComp in listadoCompositeListItem:
+				print "iterando botones...\n"
+				for boton in elementoComp.children:
+					funcionSeleccionarBoton = boton.deselect
+					if activo:
+						funcionSeleccionarBoton = boton.select
+					funcionSeleccionarBoton()
 
 
-	#BACKUP!
-	#def marcarCapturas(self,activo):
-	#	print "En marcarCapturas con activo: %s\n" % activo
-	#	print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
-	#	for itemfalla in self.ids.listado.adapter.data:
-	#		print "\n\n ---->type(itemfalla): %s\n\n" % type(itemfalla)
-	#		if activo:
-	#			itemfalla.seleccionar()
-	#			print "Seleccionado!\n"
-	#			print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
-	#			print "self.ids.listado.adapter.selection[0]: %s\n" % self.ids.listado.adapter.selection[0].__dict__
-	#			print "self.ids.listado.adapter.selection[0].children: %s\n" % self.ids.listado.adapter.selection[0].children
-	#			for boton in self.ids.listado.adapter.selection[0].children:
-	#				boton.select()
-	##			break
-	#		itemfalla.desSeleccionar()
-	#		print "DesSeleccionado!\n"
-
-
-
-	#def check_box_activado(self,estaActivo):
 	def check_box_activado(self):
 		print "En check_box_activado con checkbox active: %s\n" % \
 					self.ids.check_box_seleccionar_todo.active 

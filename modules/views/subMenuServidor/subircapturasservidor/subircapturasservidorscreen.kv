@@ -95,7 +95,7 @@
 	    	# Popula el ListView con el listado de objetos obtenidos del filtrado de capturas del capturador y capturadorInformado
 	    	#adapter: dictAdapter.ListAdapter(data = appModule.App.get_running_app().filtrarCapturas(),propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
 	    	
-	    	adapter: dictAdapter.ListAdapter(data =[] ,propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = False,cls = compItem.CompositeListItem)
+	    	adapter: dictAdapter.ListAdapter(data =[] ,propagate_selection_to_data=True, args_converter = root.args_converter,selection_mode = 'multiple',allow_empty_selection = True,cls = compItem.CompositeListItem)
 	    	
 	    	
 	    	# Tamanio en porcentajes con respecto al widget anterior

@@ -102,7 +102,7 @@ class ResultadosFiltradosScreen(Screen):
         # Se inicializa TinyBD con la opcion seleccionada por el 
         # usuario (BD de muestras locales creada anteriormente por el usuario).
         controlador = App.get_running_app()
-        controlador.inicializarBDLocal(self,fullPathBD = opcion)
+        controlador.inicializarBDLocal(fullPathBD = opcion)
         archivoBD = controlador.getBDLocalMuestras().getNombreBDLocal()
         #Se muestra un mensaje y se regresa al menu principal
         controlador.mostrarDialogoMensaje(title = 'Carga de BD Muestras anterior',

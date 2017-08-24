@@ -576,7 +576,7 @@ class Capturador(object):
     if fullPathBD is None:
       self.bdLocalMuestras.inicializar()
       return
-    self.bdLocalMuestras.inicializar(fullPathBD = fechaBD)
+    self.bdLocalMuestras.inicializar(fullPathBD = fullPathBD)
 
 
   #AGREADO RODRIGO
@@ -663,7 +663,9 @@ class Capturador(object):
 
     print "Captura realizada con exito! Agregada: ",str(cap)
     print ""
-    self.api_geo.almacenarCapturaLocal(latitud,longitud,cap.getFullPathCaptura())
+    #BACKUP!
+    #self.api_geo.almacenarCapturaLocal(latitud,longitud,cap.getFullPathCaptura())
+    self.bdLocalMuestras.agregar(latitud,longitud,cap.getFullPathCaptura())
     print "Guardado archivo .pcd en BD_JSON!"
     print ""
     #AGREGADO RODRIGO

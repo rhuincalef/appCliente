@@ -106,10 +106,10 @@ class GeofencingAPI1(object):
 
 
 
-
-	def almacenarCapturaLocal(self,lat,long,nombre_archivo):
-		print "En alamcenarCapturaLocal() ..."
-		self.bd_json.agregar(lat,long,nombre_archivo)
+	#BACKUP!
+	#def almacenarCapturaLocal(self,lat,long,nombre_archivo):
+	#	print "En alamcenarCapturaLocal() ..."
+	#	self.bd_json.agregar(lat,long,nombre_archivo)
 
 
 class GeofencingAPI(object):
@@ -160,9 +160,11 @@ class GeofencingAPI(object):
 	def getLatLong(self):
 		return (LAT_PRUEBA,LONG_PRUEBA)
 
-	def almacenarCapturaLocal(self,lat,long,nombre_archivo):
-		print "En alamcenarCapturaLocal() ..."
-		self.bd_json.agregar(lat,long,nombre_archivo)
+
+	#BACKUP!
+	#def almacenarCapturaLocal(self,lat,long,nombre_archivo):
+	#	print "En alamcenarCapturaLocal() ..."
+	#	self.bd_json.agregar(lat,long,nombre_archivo)
 
 # Clase que almacena en una TinyBD la latidud, longitud,
 # y el nombre del archivo de captura .pcd.
@@ -178,7 +180,6 @@ class BDLocal(object):
 			self.bd_json = TinyDB(fullPathBD)
 			self.rutaBDLocal = fullPathBD
 		print "BDLocal en json tiene: %s\n" % self.bd_json
-
 		#MY_JSON_BD = LOCAL_DB_JSON_NAME +time.strftime("%d-%m-%Y")+\
 		#				EXTENSION_LOCAL_BD_JSON_NAME
 		#self.bd_json = TinyDB(MY_JSON_BD)

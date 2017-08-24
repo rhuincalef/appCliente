@@ -10,8 +10,6 @@ class SeleccionarBDScreen(SubMenuScreen):
 
     def __init__(self,tabbedPanel,**kwargs):
         super(SeleccionarBDScreen,self).__init__(tabbedPanel,**kwargs)
-        #AGREGADO RODRIGO
-        #self.deshabilitarOpciones()
 
 
     #TODO: Este metodo tiene que deshabilitar el strip de este submenu, y deshabilitar
@@ -30,7 +28,7 @@ class SeleccionarBDScreen(SubMenuScreen):
 
     def buscar_bd_anterior(self):
         print "Buscando BD anterior, deshabilitando los elementos del menu!\n"
-        self.deshabilitarOpciones()
+        #self.deshabilitarOpciones()
         self.manager.current = "fileFilter"
 
 

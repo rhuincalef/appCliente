@@ -1,0 +1,16 @@
+NOTAS PARA EL MANUAL DEL USUARIO:
+
+-Al cargar un recorrido con fallas confirmadas, se descartan aquellas fallas para los que no existan el .csv para el envio al servidor.
+-Al guardar un recorrido con fallas, se persisten las capturas asociados a las fallas (ItemFalla) en disco  y se eliminan de memoria.
+-Al enviar un conjunto de capturas al servidor, se descartan de memoria.
+-El BDLocal-xxxx.json es solo para motivos de logging, no sirve para hacer un respaldo y recuperar archivos. 
+-Si las propiedades de las fallas confirmadas no se pueden traer del servidor, se cargan localmente.
+
+
+
+
+
+
+
+
+
