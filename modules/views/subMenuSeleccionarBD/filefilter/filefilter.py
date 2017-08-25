@@ -8,7 +8,8 @@ import re
 from notification import XLoading, XConfirmation, XMessage
 import threading
 
-from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA,SUBFIJO_ARCHIVOS_BD_CONFIRMADAS
+#from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA,SUBFIJO_ARCHIVOS_BD_CONFIRMADAS
+from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA,PATRON_SUBFIJO_ARCHIVOS_BD_CONFIRMADAS
 import datetime
 import os
 from kivy.event import EventDispatcher
@@ -93,14 +94,9 @@ class FileFilterScreen(Screen,EventDispatcher):
             print "Patron de archivo: %s\n" % self.ids.text_input_patron.text
             print "Directorios seleccionados: %s\n" % self.ids.text_input_lista_directorios.text
 
-            #TODO: 1. MOSTRAR EL DIALOGO CON EL GIF DE LA LUPA
             self.popup = self.mostrarDialogoEspera(title ="Buscando archivos",
                                         content= "Estimando direcciones de capturas confirmadas...")
-            #self.bind(on_fin_busqueda_archivos = popup.dismiss)
-            self.bind(on_fin_busqueda_archivos = self.mostrarResultados)
-            
-            #      2. EJECUTAR UN THREAD QUE PARSEE EL LISTADO DE DIRS Y BUSQUE ARCHIVOS 
-            #           QUE CONTENGAN EL PATRON BUSCADO.
+            self.bind(on_fin_busqueda_archivos = self.mostrarResultados)            
             t = threading.Thread(name = "thread-FiltradoArchivos",
                                     target = self.threadFiltrarArchivos)
             t.setDaemon(True)
@@ -121,7 +117,8 @@ class FileFilterScreen(Screen,EventDispatcher):
                     # se genera el fullpath y se lo almacena para mostrarlo posteriormente 
                     #TODO: PERFECCIONAR ESTO PARA QUE SOLO BUSQUE EL PATRON 
                     # "SUBFIJO_ARCHIVOS_BD_CONFIRMADAS" SI EL ARCHIVO TERMINA CON ESA EXTENSION!!
-                    if file.find(patronArchivo) != -1 and file.find(SUBFIJO_ARCHIVOS_BD_CONFIRMADAS):
+                    #if file.find(patronArchivo) != -1 and file.find(SUBFIJO_ARCHIVOS_BD_CONFIRMADAS):
+                    if file.find(patronArchivo) != -1 and (re.compile(".*\.json$").match(file) is not None):
                         fullPathArch = join(dirPath,file)
                         archivosFiltrados.append(fullPathArch)
 
