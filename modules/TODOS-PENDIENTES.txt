@@ -79,7 +79,15 @@ CONSULTA CON GABRIEL JULIO 2017-->
 33. Agregar los campos de las fallas confirmadas que se envian desde appCliente hacia webapp. -->OK
 
  
-34. Ver almacenar recorrido, solo para capturas confirmadas??
+34. Ver almacenar recorrido, porque solmanete almacena las fallas confirmadas. Tiene que almacenar confirmadas e informadas capturadas no subidas al servidor.
+
+
+35. Ver validacion de archivo json BD Local confirmadas...
+
+36. Crear iconos de peligro para criticidad y obtener fallas informadas...
+
+
+
 
 NOTAS IMPORTANTE PARA INTEGRACION:
 
