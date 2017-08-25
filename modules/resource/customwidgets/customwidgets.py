@@ -311,27 +311,28 @@ class CustomDropDown(TreeView):
             print "recorriendo propiedades asociadas: %s\n" % subProp
             if subProp.getClave() == "ponderacion":
                 if float(subProp.getValor()) <= PONDERACION_CRITICIDAD_BAJA:
-                    cadenaOpcion = "%s " % (icon('fa-exclamation-triangle',
+                    #cadenaOpcion = "%s " % (icon('fa-exclamation-triangle',
+                    cadenaOpcion = "%s " % (icon('cf-peligro',
                                                         TAMANIO_ICONOS,
                                                         color=COLOR_PONDERACION_BAJA).encode("utf-8")) 
                 elif float(subProp.getValor()) > PONDERACION_CRITICIDAD_BAJA and \
                                 float(subProp.getValor()) <= PONDERACION_CRITICIDAD_MEDIA:
-                    cadenaOpcion = "%s%s " % ( (icon('fa-exclamation-triangle',
+                    cadenaOpcion = "%s%s " % ( (icon('cf-peligro',
                                                         TAMANIO_ICONOS,
                                                         color=COLOR_PONDERACION_MEDIA).encode("utf-8")),
-                                                (icon('fa-exclamation-triangle',
+                                                (icon('cf-peligro',
                                                         TAMANIO_ICONOS,
                                                         color=COLOR_PONDERACION_MEDIA).encode("utf-8"))
                                                 )
                 elif float(subProp.getValor()) > PONDERACION_CRITICIDAD_MEDIA and \
                             float(subProp.getValor()) <= PONDERACION_CRITICIDAD_ALTA:
-                    cadenaOpcion = "%s%s%s " % ( (icon('fa-exclamation-triangle',
+                    cadenaOpcion = "%s%s%s " % ( (icon('cf-peligro',
                                                         TAMANIO_ICONOS,
                                                         color=COLOR_PONDERACION_ALTA).encode("utf-8")),
-                                                (icon('fa-exclamation-triangle',
+                                                (icon('cf-peligro',
                                                         TAMANIO_ICONOS,
                                                         color=COLOR_PONDERACION_ALTA).encode("utf-8")),
-                                                (icon('fa-exclamation-triangle',
+                                                (icon('cf-peligro',
                                                         TAMANIO_ICONOS,
                                                         color=COLOR_PONDERACION_ALTA).encode("utf-8"))
                                                 )

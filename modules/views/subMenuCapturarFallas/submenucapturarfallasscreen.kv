@@ -4,6 +4,7 @@
 #:import icon iconfonts.icon
 #:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
 #:import COLOR_SPINNER constantes.COLOR_SPINNER
+#:import TAMANIO_CUSTOM_ICONOS constantes.TAMANIO_CUSTOM_ICONOS
 
 
 <CapturarFallasScreen>:
@@ -24,15 +25,18 @@
         Button:
             id: bt_obtener_fallas_informadas
             markup: True
-            text: "%s Obtener fallas informadas del servidor" % (icon('fa-cloud-download',TAMANIO_ICONOS))
+            text: "%s Obtener fallas informadas del servidor" % (icon('cf-obtenerinformadas',TAMANIO_CUSTOM_ICONOS))
             on_press: root.obtener_fallas_informadas()
 
-            
+            #text: "%s Obtener fallas informadas del servidor" % (icon('fa-cloud-download',TAMANIO_ICONOS + 20))
+
 
         Button:
             id: bt_capturar_falla_informada
             markup: True
             text: "Capturar falla informada"
-            text: "%s Capturar falla informada" % (icon('fa-id-card',TAMANIO_ICONOS))
+            text: "%s Capturar falla informada" % (icon('cf-capturarinformadas',TAMANIO_CUSTOM_ICONOS))
             on_press: root.capturar_falla_informada()
+
+            #text: "%s Capturar falla informada" % (icon('fa-id-card',TAMANIO_ICONOS))
             #font_size: '30sp'

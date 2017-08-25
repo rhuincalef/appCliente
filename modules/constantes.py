@@ -261,7 +261,7 @@ TIMEOUT_FOR_KILLING_PROCESS = 10
 ################################################################################################ 
 TAMANIO_ICONOS = 32
 #TAMANIO_CUSTOM_ICONOS = 45
-TAMANIO_CUSTOM_ICONOS = 50
+TAMANIO_CUSTOM_ICONOS = 55
 
 TAMANIO_SPINNER = 40
 COLOR_SPINNER = "'5729ff'"

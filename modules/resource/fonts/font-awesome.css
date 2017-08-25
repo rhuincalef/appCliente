@@ -180,12 +180,19 @@
 }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-.fa-glass:before {
+.cf-bache:before {
+  content: "\f000";
+}
+.cf-tipomaterial:before {
+  content: "\f001";
+}
+/*.fa-glass:before {
   content: "\f000";
 }
 .fa-music:before {
   content: "\f001";
-}
+}*/
+
 .fa-search:before {
   content: "\f002";
 }
@@ -243,9 +250,18 @@
 .fa-trash-o:before {
   content: "\f014";
 }
+
+
+/* Iconos personalizados appCliente */
+.cf-peligro:before {
+  content: "\f00f";
+}
+
+
 .fa-home:before {
   content: "\f015";
 }
+
 .fa-file-o:before {
   content: "\f016";
 }
@@ -274,6 +290,19 @@
 .fa-repeat:before {
   content: "\f01e";
 }
+
+
+/* Iconos personalizados appCliente */
+.cf-obtenerinformadas:before {
+  content: "\f01f";
+}
+
+.cf-capturarinformadas:before {
+  content: "\f020";
+}
+
+
+
 .fa-refresh:before {
   content: "\f021";
 }
