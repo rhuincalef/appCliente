@@ -5,7 +5,7 @@ NOTAS PARA EL MANUAL DEL USUARIO:
 -Al enviar un conjunto de capturas al servidor, si no se conservan las capturas se eliminan de memoria y solo los ".csv" de disco(conservando los .pcd). Si se conservan, se conservan en memoria y en disco (.csv y .pcd).
 -El BDLocal-xxxx.json es solo para motivos de logging, no sirve para hacer un respaldo y recuperar archivos. 
 -Si las propiedades de las fallas confirmadas no se pueden traer del servidor, se cargan localmente.
-
+-Cuando se sube una falla confirmada la direccion se calcula como calle secundariaA y secundariaB, incluyendo como calleSecundariaA a la calle Principal y como calleSecundariaB a la calle estimada por la API de Geonames, formando la interseccion mas cercana a la falla.
 
 
 

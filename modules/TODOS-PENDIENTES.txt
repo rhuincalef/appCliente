@@ -79,9 +79,14 @@ CONSULTA CON GABRIEL JULIO 2017-->
 33. Agregar los campos de las fallas confirmadas que se envian desde appCliente hacia webapp. -->OK
 
  
+34. Ver almacenar recorrido, solo para capturas confirmadas??
 
+NOTAS IMPORTANTE PARA INTEGRACION:
 
-
+-Agregar asociacion entre tipoFalla-tipoMaterial, tipoFalla-Criticidad
+-El tipo reparacion tiene que ser opcional para fallas con estado Confirmado
+-Copiar los archivos que se encuentran en carpeta "archServerModificadosParaRedisenio"
+-Modificar el path en constantes de customTheme.py
 
 
 

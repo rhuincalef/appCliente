@@ -19,14 +19,15 @@
             markup: True
             text: "%s Capturar falla nueva" % (icon('fa-camera',TAMANIO_ICONOS))
             on_press: root.capturar_falla_nueva()
-            #on_press: root.manager.current = 'propsFallaConfirmada'
+            
 
         Button:
             id: bt_obtener_fallas_informadas
             markup: True
             text: "%s Obtener fallas informadas del servidor" % (icon('fa-cloud-download',TAMANIO_ICONOS))
             on_press: root.obtener_fallas_informadas()
-            #on_press: root.manager.current = "obtenerinformadas"
+
+            
 
         Button:
             id: bt_capturar_falla_informada
@@ -34,4 +35,4 @@
             text: "Capturar falla informada"
             text: "%s Capturar falla informada" % (icon('fa-id-card',TAMANIO_ICONOS))
             on_press: root.capturar_falla_informada()
-            #on_press: root.manager.current = 'settingscreen'
+            #font_size: '30sp'

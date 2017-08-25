@@ -1148,7 +1148,7 @@ class CapturadorInformados(Capturador):
 
   # Asocia la falla con la captura recien realizada.
   # capturadorinformados.asociarFalla()
-  def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla):
+  def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla,gps):
     print "Inicio asociarFalla() para id_falla: ",id_falla
     print ""
     itemFalla = None
