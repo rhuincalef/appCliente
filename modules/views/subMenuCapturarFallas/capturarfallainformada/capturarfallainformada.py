@@ -15,7 +15,11 @@ from kivy.uix.label import Label
 from capturador import CapturadorInformados
 from constantes import FALLA_NO_ESTABLECIDA
 
-class CapturarFallaInformadaScreen(Screen):
+
+from screenredimensionable import ScreenRedimensionable
+
+#class CapturarFallaInformadaScreen(Screen):
+class CapturarFallaInformadaScreen(ScreenRedimensionable):
    
     def __init__(self, **kwargs):
       super(Screen, self).__init__(**kwargs)

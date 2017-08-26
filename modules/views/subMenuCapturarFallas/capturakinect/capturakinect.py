@@ -552,7 +552,10 @@ import time
 #    pass
 
 
-class KinectScreen(Screen):
+from screenredimensionable import ScreenRedimensionable
+#class KinectScreen(Screen):
+class KinectScreen(ScreenRedimensionable):
+    
     nombre_captura = StringProperty()
 
     def __init__(self,**kwargs):

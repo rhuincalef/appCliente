@@ -65,7 +65,7 @@ gi.require_version('Gtk','3.0')
 
 from kivy.clock import Clock
 
-
+from kivy.core.window import Window
 
 class MainApp(App,EventDispatcher):
 	def __init__(self,**kwargs):
@@ -587,7 +587,23 @@ class MainApp(App,EventDispatcher):
 		self.tabbedPanel = tb_panel
 		#AGREGADO RODRIGO
 		#self.tabbedPanel.inHabilitarSubMenus([PREFIJO_ID_TP_ITEM + "subMenuSeleccionarBD"])
+		Window.bind(on_resize=self.ventanaCambioTamanio)
+		print "bindeados eventos\n"
 		return tb_panel
+
+
+	#Handler de ventana
+	def ventanaCambioTamanio(self,window,width,height):
+		print "Ventana cambio tamanio %s, %s, %s!\n" % (type(window),
+														type(width),
+														type(height))
+		print "nuevo tamanio %s, %s, %s!\n" % (window,
+														width,
+														height)
+		print "llamando a subircapturasservidor...\n"
+		#TODO: CAMBIAR TAMANIO DE TODOS LOS SCREENS!
+		self.tabbedPanel.getSubMenuPorNombre("subircapturasservidor").redimensionarFooter(width)
+
 
 
 	# Obtiene las propiedades que se emplean para dar de alta

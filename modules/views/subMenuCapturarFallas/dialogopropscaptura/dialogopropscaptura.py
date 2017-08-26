@@ -42,7 +42,9 @@ from constantes import TAMANIO_ICONOS_CTRL_BAR
 from os import path
 #import kinectviewer
 
-class DialogoPropsCapturaScreen(Screen):
+from screenredimensionable import ScreenRedimensionable
+#class DialogoPropsCapturaScreen(Screen):
+class DialogoPropsCapturaScreen(ScreenRedimensionable):
 
 	def __init__(self,**kwargs):
 		super(DialogoPropsCapturaScreen, self).__init__(**kwargs)

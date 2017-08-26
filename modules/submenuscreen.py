@@ -1,5 +1,7 @@
 from kivy.uix.screenmanager import ScreenManager, Screen
 
+from constantes import ESCALA_PADDING_HORIZONTAL,ESCALA_SPACING_VERTICAL
+
 class SubMenuScreen(Screen):
 	
 	def __init__(self,tabbedPanel,**kwargs):

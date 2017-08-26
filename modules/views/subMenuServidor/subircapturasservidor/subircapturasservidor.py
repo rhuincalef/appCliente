@@ -26,13 +26,17 @@ from kivy.uix.listview import ListItemButton, ListItemLabel, \
 from kivy.adapters import dictadapter
 import threading
 
-class SubirCapturasServidorScreen(Screen):
+from screenredimensionable import ScreenRedimensionable
+#class SubirCapturasServidorScreen(Screen):
+class SubirCapturasServidorScreen(ScreenRedimensionable):
 	
 	def __init__(self,**kwargs):
 		super(SubirCapturasServidorScreen, self).__init__(**kwargs)
 		self.bind(on_enter = self.refrescar_vista)
 		self.listado_capturas.adapter.bind(on_selection_change = self.cambio_seleccion)
 		print "Bindeados elementos en subircapturasservidor!\n"
+
+
 
 
 	#Recorre todos los elementos del listview y los marca segun el parametro

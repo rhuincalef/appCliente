@@ -14,8 +14,10 @@ import datetime
 import os
 from kivy.event import EventDispatcher
 
+from screenredimensionable import ScreenRedimensionable
 
-class FileFilterScreen(Screen,EventDispatcher):
+#class FileFilterScreen(Screen,EventDispatcher):
+class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
 
     def __init__(self,**kwargs):
         super(FileFilterScreen,self).__init__(**kwargs)

@@ -20,7 +20,9 @@ from constantes import *
 
 from customwidgets import CustomDropDown
 
-class PropsFallaConfirmadaScreen(Screen):
+from screenredimensionable import ScreenRedimensionable
+#class PropsFallaConfirmadaScreen(Screen):
+class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 	def __init__(self,**kwargs):
 		super(PropsFallaConfirmadaScreen, self).__init__(**kwargs)

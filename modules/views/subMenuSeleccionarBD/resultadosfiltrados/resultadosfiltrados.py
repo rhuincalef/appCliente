@@ -75,7 +75,9 @@ class ContainerRadioGroup(BoxLayout):
 from notification import XMessage
 from os import path
 
-class ResultadosFiltradosScreen(Screen):
+from screenredimensionable import ScreenRedimensionable
+
+class ResultadosFiltradosScreen(ScreenRedimensionable):
 
     def __init__(self,**kwargs):
         super(ResultadosFiltradosScreen,self).__init__(**kwargs)

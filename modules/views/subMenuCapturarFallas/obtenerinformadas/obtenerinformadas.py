@@ -27,8 +27,9 @@ from apiclient1 import ExcepcionAjax,ExcepcionSinInformados
 from customwidgets import AutoCompleteTextInput
 
 
-
-class ObtenerInformadasScreen(Screen):
+from screenredimensionable import ScreenRedimensionable
+#class ObtenerInformadasScreen(Screen):
+class ObtenerInformadasScreen(ScreenRedimensionable):
    
     def __init__(self, **kwargs):
       # cap = CapturadorInformados()      
