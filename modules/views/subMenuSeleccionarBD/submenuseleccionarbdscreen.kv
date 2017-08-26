@@ -4,28 +4,33 @@
 #:import icon iconfonts.icon
 #:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
 #:import COLOR_SPINNER constantes.COLOR_SPINNER
+#:import const constantes
 
 
 <SeleccionarBDScreen>:
     BoxLayout:
         #Propiedades de Controller (heredadas de BoxLayout)
         id: main_layout
-        orientation: 'vertical'
-        padding:[100,0,0,100]
-        spacing: 40
-
+        orientation: 'horizontal'
+        
+        #padding:[root.width * 0.20 ,root.height * 0.20]
+        
+        padding:[root.width * 0.11 ,root.height * 0.30]
+        spacing: root.width / 15
+            
         Button:
             id: bt_buscar_bd_anterior
+            background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
             markup: True
-            #text: "Buscar archivo anterior de BD"
             text: "%s Buscar achivo anterior de BD" % (icon('fa-search',TAMANIO_ICONOS))
             on_press: root.buscar_bd_anterior()
 
+
         Button:
             id: bt_comenzar_nueva_bd
+            background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
             markup: True
-            #text: "Comenzar una BD nueva con la fecha actual(por defecto)"
-            text: "%s Comenzar una BD nueva con la fecha actual(por defecto)" % (icon('fa-plus-circle',TAMANIO_ICONOS))
+            text: "%s Comenzar una BD nueva \n con la fecha actual(por defecto)" % (icon('fa-plus-circle',TAMANIO_ICONOS))
             on_press: root.comenzar_nueva_bd()
 
 

@@ -4,17 +4,20 @@
 #:import icon iconfonts.icon
 #:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
 #:import COLOR_SPINNER constantes.COLOR_SPINNER
+#:import const constantes
 
 <ServidorScreen>:
 
-    GridLayout:
+    BoxLayout:
         id: main_layout
-        cols: 2
-        #padding:[100,0,0,100]
-        #spacing: 40
+        
+        orientation: 'horizontal'
+        padding:[root.width * 0.30 ,root.height * 0.30]
+        spacing: root.width / 15
 
         Button:
             id: bt_subir_fallas_servidor
+            background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
             markup: True
             text: "%s Subir archivos" % (icon('fa-cloud-upload',TAMANIO_ICONOS))
             on_press: root.subir_fallas()

@@ -534,7 +534,10 @@ DEFAULT_PADDING_HORIZONTAL = Window.width * ESCALA_PADDING_HORIZONTAL
 DEFAULT_SPACING = [( Window.width * ESCALA_SPACING_VERTICAL ),0]
 
 
-
+# Constante para el estilo de los botones de las opciones principales que
+# aparecen en los submenus de appCliente.
+# 
+ESTILO_BOTON_DEFAULT_OPCIONES_MENU = 'atlas://customAppCliente/button'
 
 
 

@@ -4,23 +4,27 @@
 #:import icon iconfonts.icon
 #:import TAMANIO_ICONOS constantes.TAMANIO_ICONOS
 #:import COLOR_SPINNER constantes.COLOR_SPINNER
+#:import const constantes
 
 <RecorridoScreen>:
 
-    GridLayout:
+    BoxLayout:
         id: main_layout
-        cols: 2
-        #padding:[100,0,0,100]
-        #spacing: 40
-
+        
+        orientation: 'horizontal'
+        padding:[root.width * 0.12 ,root.height * 0.25]
+        spacing: root.width / 15
+        
         Button:
             id: bt_guardar_recorrido
+            background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
             markup: True
             text: "%s Guardar fallas capturadas" % (icon('fa-floppy-o',TAMANIO_ICONOS))
             on_press: root.guardar_recorrido()
 
         Button:
             id: bt_cargar_recorrido
+            background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
             markup: True
             text: "%s Cargar fallas capturadas" % (icon('fa-file-o',TAMANIO_ICONOS))
             on_press: root.cargar_recorrido()
