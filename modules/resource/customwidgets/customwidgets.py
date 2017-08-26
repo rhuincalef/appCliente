@@ -424,7 +424,7 @@ class CustomDropDown(TreeView):
 
 
 
-
+from screenredimensionable import ScreenRedimensionable
 
 #Clase principal de la GUI que agrupa por submenus los screenmangers que realizan
 # el control de las transiciones
@@ -433,8 +433,9 @@ class MyTabbedPanel(TabbedPanel):
     def __init__(self,**kwargs):
         super(MyTabbedPanel,self).__init__(**kwargs)
         #background_image: '/home/rodrigo/TESINA-2016-KINECT/sky-01.jpg'
-        #NOTA: Esta variable tiene indexados por el nombre los submenus principales de 
-        # la aplicacion. Se usa desde el controlador(App) para algunos metodos concurrentes. 
+        # NOTA: Esta variable tiene indexados por el "nombre_menu" los screens y submenus de
+        # cada uno de los archivos de configuracion de cada submenu.
+        # Se usa desde el controlador(App) para algunos metodos concurrentes. 
         self.subMenus = {}
         self._inicializarSubScreens()
         print "despues de inicializar...\n"
@@ -471,6 +472,21 @@ class MyTabbedPanel(TabbedPanel):
 
     def getSubMenuPorNombre(self,nombreSubMenu):
         return self.subMenus[nombreSubMenu]
+
+
+    #AGREGADO RODRIGO.
+    # Obtiene todas las screens que se cargaron desde los
+    # archivos de configuracion de cada submenu (.cfg), excepto aquellos
+    # que son screens de tipo SubMenu.
+    def getScreensRedimensionables(self):
+        colScreens = []
+        for nombreMenu,screen in self.subMenus.iteritems():
+            if isinstance(screen,ScreenRedimensionable):
+                print "nombreMenu: %s\n" % nombreMenu
+                print "screen: %s\n" % screen
+                colScreens.append(screen)
+        print "retornando todas las screens...\n"
+        return colScreens
 
 
     # Crea el TabbedPanelItem con el nombre y screenmanager(layout) y,

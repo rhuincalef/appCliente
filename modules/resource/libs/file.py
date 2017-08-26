@@ -313,6 +313,7 @@ class XFileSave(XFilePopup):
     BUTTON_SAVE = _('Save')
     BUTTON_GUARDAR = _('Guardar')
     #TXT_ERROR_FILENAME = _('Maybe you should enter a filename?')
+    TXT_ERROR_TITLE = _('Guardado de recorrido')
     TXT_ERROR_FILENAME = _('Debes ingresar un nombre de archivo para almacenar el recorrido')
 
     filename = StringProperty(u'')
@@ -352,7 +353,8 @@ class XFileSave(XFilePopup):
         if self.button_pressed == self.BUTTON_GUARDAR:
             if self.filename == '':
                 # must be entered filename
-                XError(text=self.TXT_ERROR_FILENAME)
+                XError( title=self.TXT_ERROR_TITLE,
+                    text=self.TXT_ERROR_FILENAME)
                 return self
 
         return super(XFileSave, self).dismiss(*largs, **kwargs)
@@ -370,6 +372,7 @@ class XFileOpen(XFilePopup):
     BUTTON_OPEN = _('Abrir')
     BUTTON_ABRIR = _('Abrir')
     #TXT_ERROR_SELECTION = _('Maybe you should select a file?')
+    TXT_ERROR_TITLE = _('Carga de recorrido')
     TXT_ERROR_SELECTION = _('Debes seleccionar un archivo para cargar el recorrido')
 
     title = StringProperty(_('Open file'))
@@ -389,7 +392,8 @@ class XFileOpen(XFilePopup):
             self._filter_selection(folders=False)
             if len(self.selection) == 0:
                 # files must be selected
-                XError(text=self.TXT_ERROR_SELECTION)
+                XError(title=self.TXT_ERROR_TITLE,                    
+                    text=self.TXT_ERROR_SELECTION)
                 return self
         return super(XFileOpen, self).dismiss(*largs, **kwargs)
 
@@ -398,8 +402,10 @@ class XFolder(XFilePopup):
     """XFolder class. See module documentation for more information.
     """
 
-    BUTTON_SELECT = _('Select')
-    TXT_ERROR_SELECTION = _('Maybe you should select a folders?')
+    #BUTTON_SELECT = _('Select')
+    #TXT_ERROR_SELECTION = _('Maybe you should select a folders?')
+    BUTTON_SELECT = _('Cargar recorrido')
+    TXT_ERROR_SELECTION = _('Debe seleccionar un archivo de .rec para continuar.')
 
     title = StringProperty(_('Choose folder'))
     '''Default title for the popup

@@ -600,10 +600,17 @@ class MainApp(App,EventDispatcher):
 		print "nuevo tamanio %s, %s, %s!\n" % (window,
 														width,
 														height)
-		print "llamando a subircapturasservidor...\n"
-		#TODO: CAMBIAR TAMANIO DE TODOS LOS SCREENS!
-		self.tabbedPanel.getSubMenuPorNombre("subircapturasservidor").redimensionarFooter(width)
+		
+		#print "self.tabbedPanel.getScreensRedimensionables():\n%s\n" % \
+		#		self.tabbedPanel.getScreensRedimensionables()
+		#print "self.tabbedPanel.getScreensRedimensionables()[0]:\n%s\n" % \
+		#		self.tabbedPanel.getScreensRedimensionables()[0].ids.footer_layout
 
+		# Se modifica el padding y spacing de todas los screens de la app que tienen footer
+		for screen in self.tabbedPanel.getScreensRedimensionables():
+			print "iterando screen %s\n" % type(screen)
+			print " screen.ids: %s\n" % screen.ids
+			screen.redimensionarFooter(width)
 
 
 	# Obtiene las propiedades que se emplean para dar de alta

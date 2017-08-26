@@ -11,20 +11,25 @@ class ScreenRedimensionable(Screen):
 	def __init__(self,**kwargs):
 		super(ScreenRedimensionable, self).__init__(**kwargs)
 
+
 	def redimensionarFooter(self,nuevoAnchoVentana):
-		if self.ids.footer_layout is None:
+		print "En redimensionarFooter()...\n"
+		#print "self.ids: %s\n" % self.ids
+		footer_layout = self.getFooterLayout()
+		if footer_layout is None:
 			print "No tiene footer!\n"
 			return
-		self.ids.footer_layout.padding = [
+		footer_layout.padding = [
 											nuevoAnchoVentana * ESCALA_PADDING_HORIZONTAL,
-											self.ids.footer_layout.padding[1],
+											footer_layout.padding[1],
 											nuevoAnchoVentana * ESCALA_PADDING_HORIZONTAL,
-											self.ids.footer_layout.padding[3] 
+											footer_layout.padding[3] 
 											]
-		self.ids.footer_layout.spacing = [( Window.width * ESCALA_SPACING_VERTICAL ),0]
+		footer_layout.spacing = [( Window.width * ESCALA_SPACING_VERTICAL ),0]
 		print "modificado el spacing y layout en footer!\n"
 
-
+	def getFooterLayout(self):
+		return self.ids.footer_layout
 
 
 

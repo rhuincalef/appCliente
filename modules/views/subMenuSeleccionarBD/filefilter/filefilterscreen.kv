@@ -45,7 +45,7 @@
 
         #Footer con los botones de aceptar y cancelar
         GridLayout:
-            id: footer_1
+            id: footer_layout
 
             rows: 1
             cols: 2
@@ -57,7 +57,8 @@
 
 
             #Relleno entre el layout y los widgets hijos
-            padding: [const.DEFAULT_PADDING_HORIZONTAL,300,const.DEFAULT_PADDING_HORIZONTAL,0]
+            #padding: [const.DEFAULT_PADDING_HORIZONTAL,300,const.DEFAULT_PADDING_HORIZONTAL,0]
+            padding: [const.DEFAULT_PADDING_HORIZONTAL,root.height * 0.54 ,const.DEFAULT_PADDING_HORIZONTAL,0]
 
 
             Button:

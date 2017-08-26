@@ -37,6 +37,7 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		#self.layout_principal.bind(minimum_height = self.layout_principal.setter('height'))
 		self.layout_principal.bind(minimum_height = self.calcular_height )
 		self.inicializarDropDownPrincipal()
+		self.layoutFooter = None
 
 
 
@@ -210,8 +211,12 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		btnCancel.bind(on_press = self.cancelar)
 		layout.add_widget(btnCancel)
 		self.layout_principal.add_widget(layout)
+		#Se inicaliza el layout que contiene al footer
+		self.layoutFooter = layout
 
 
+	def getFooterLayout(self):
+		return self.layoutFooter
 
 	def actualizar_btn_mat(self,drop,btnNombre):
 		setattr(self.mainButtonMaterial, 'text', btnNombre)

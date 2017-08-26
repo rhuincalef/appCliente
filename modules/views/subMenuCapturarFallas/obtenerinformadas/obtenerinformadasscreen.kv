@@ -44,6 +44,7 @@
 			id: container_autocomplete
 			orientation: 'vertical'
 	    	size_hint:(1,0.3)
+	    	
 
 	    #Layout que funciona como filler restante entre los widgets
 	    #BoxLayout:
@@ -53,7 +54,7 @@
 
 		  
 	    GridLayout:
-	    	id: layout_botones
+	    	id: footer_layout
 	    	orientation: 'horizontal'
 	    	cols: 2
 	    	rows: 1
@@ -69,8 +70,10 @@
 	    	spacing: const.DEFAULT_SPACING
 
 	    	#Relleno entre el layout y los widgets hijos
-			padding: [const.DEFAULT_PADDING_HORIZONTAL,300,const.DEFAULT_PADDING_HORIZONTAL,0]
-
+			#padding: [const.DEFAULT_PADDING_HORIZONTAL,300,const.DEFAULT_PADDING_HORIZONTAL,0]
+			
+			padding: [const.DEFAULT_PADDING_HORIZONTAL,root.height * 0.52,const.DEFAULT_PADDING_HORIZONTAL,0]
+			
 		    Button:
 		    	id: bt_capturar_fallas
 		    	text: "Solicitar fallas servidor"

@@ -52,7 +52,6 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		self.dir_chooser.rootpath = ROOT_PCD_FOLDER
 
 
-
 	def validar(self):
 		pass
 
