@@ -81,11 +81,9 @@ CONSULTA CON GABRIEL JULIO 2017-->
  
 34. Ver almacenar recorrido, porque solmanete almacena las fallas confirmadas. Tiene que almacenar confirmadas e informadas capturadas no subidas al servidor.
 
-
-35. Ver validacion de archivo json BD Local confirmadas...
+35. Ver validacion de archivo json BD Local confirmadas (si se incluye esto en la version final).
 
 36. Crear iconos de peligro para criticidad y obtener fallas informadas... -->OK
-
 
 
 

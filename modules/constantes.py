@@ -5,7 +5,7 @@ import os
 from os import path
 import logging
 
-
+from kivy.core.window import Window
 
 
 # Constante para controlar cuantos niveles puede subir el usuario en 
@@ -517,5 +517,33 @@ POSICION_INTERES_PARA_CRITICIDAD = 0
 #Prefijo con el que se generan ID's unicos para los TabbedPanelItem
 # sumado al titulo del submenu (PREFIJO_ID_TP_ITEM + tituloSubMenu)
 PREFIJO_ID_TP_ITEM = "TpItem_"
+
+
+#####################################################################################################################
+############################## CONSTANTES DEL FOOTER QUE CONTIENE LOS BOTONES DE LA APP##############################
+#####################################################################################################################
+
+COL_DEFAULT_WIDTH = 150
+ROW_DEFAULT_HEIGHT = 50
+DEFAULT_PADDING_HORIZONTAL = Window.width * 0.24
+DEFAULT_PADDING_VERTICAL = 50
+DEFAULT_SPACING = [( Window.width * 0.20 ),0]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

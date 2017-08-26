@@ -1,5 +1,6 @@
 #:kivy 1.0
 # NOTA: La clase que hereda de App tiene que tener el mismo nombre que el layout del archivo .kv.
+#:import const constantes
 
 <ResultadosFiltradosScreen>:
     BoxLayout:
@@ -14,24 +15,49 @@
         #Layout donde se agregan los archivos filtrados        
         BoxLayout:
         	id: layout_elementos_filtrados
-	        orientation:'vertical'
+	        #orientation:'vertical'
             size_hint:(1,0.5)
+
+        #Footer con los botones de aceptar y cancelar
+        GridLayout:
+            id: footer_1
+            rows: 1
+            cols: 2
+            col_force_default: True
+            col_default_width: const.COL_DEFAULT_WIDTH
+            
+            #Espaciado entre los componentes del layout (en porcentaje del widget)
+            spacing: const.DEFAULT_SPACING
+
+            #Relleno entre el layout y los widgets hijos
+            padding: [const.DEFAULT_PADDING_HORIZONTAL,300,const.DEFAULT_PADDING_HORIZONTAL,0]
+
+            Button:
+                id: btn_aceptar
+                text: 'Aceptar'
+                on_press: root.seleccionarArchivo()
+
+            Button:
+                id: btn_cancelar
+                text: 'Cancelar'
+                on_press: root.cancelar()        
+
 
 
         #Footer con los botones de aceptar y cancelar
-        BoxLayout:
-        	id: footer_1
-        	orientation: 'horizontal'
-            padding: [250,290,250,0]
-            spacing: 50
+        #BoxLayout:
+        #	id: footer_1
+        #	orientation: 'horizontal'
+        #    padding: [250,290,250,0]
+        #    spacing: 50
 
-        	Button:
-        		id: btn_aceptar
-        		text: 'Aceptar'
-        		on_press: root.seleccionarArchivo()
+        #	Button:
+        #		id: btn_aceptar
+        #		text: 'Aceptar'
+        #		on_press: root.seleccionarArchivo()
 
-        	Button:
-        		id: btn_cancelar
-        		text: 'Cancelar'
-        		on_press: root.cancelar()        
+        #	Button:
+        #		id: btn_cancelar
+        #		text: 'Cancelar'
+        #		on_press: root.cancelar()        
 

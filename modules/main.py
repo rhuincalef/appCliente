@@ -489,13 +489,6 @@ class MainApp(App,EventDispatcher):
 		return self.capturadorInformados
 
 
-	#def inicializar(self,sm):
-	#	conf = leer_configuracion(PATH_ARCHIVO_CONFIGURACION)
-		#self.cargar_vistas(sm,conf)
-
-
-
-
 	def mostrar_dialogo_visualizacion(self,pathCapturaPcd,pathCapturaCsv):
 		#NOTA: Se retrasa levemente el dibujado del dialogo_visualizacion para
 		# darle tiempo al popup a que se cierre y no hayan problemas de 

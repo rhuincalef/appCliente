@@ -40,19 +40,21 @@
                 id: imagen_grises
                 size_hint: (0.5,1)
             
-
         GridLayout:
             cols:2
             rows:1
-            orientation: 'horizontal'
-            size_hint: (1,0.05)
-            spacing: [root.width / 3,0]
-            #Forzar el ancho de los botones (pixeles)
+            #size_hint: (1,0.05)
+            size_hint: (1,0.08)
+            
             col_force_default: True
-            col_default_width: root.width / 6
+            col_default_width: const.COL_DEFAULT_WIDTH
+            
+            #Espaciado entre los componentes del layout (en porcentaje del widget)
+            spacing: const.DEFAULT_SPACING
 
-            #Padding izquierdo de botones(pixeles)
-            padding: [root.width / 7,0,0,0]
+            #Relleno entre el layout y los widgets hijos
+            padding: [const.DEFAULT_PADDING_HORIZONTAL,0,const.DEFAULT_PADDING_HORIZONTAL,0]
+
             Button:
                 id: boton_capturar
                 text: "Capturar"
@@ -61,8 +63,31 @@
             Button:
                 id: boton_cancelar
                 text: "Volver"
-                #on_press: root.manager.current = 'dialogopropscaptura'
                 on_press: root.volver()
-                
+            
 
+        #BACKUP!
+        #GridLayout:
+        #    cols:2
+        #    rows:1
+        #    orientation: 'horizontal'
+        #    size_hint: (1,0.05)
+        #    spacing: [root.width / 3,0]
+        #    #Forzar el ancho de los botones (pixeles)
+        #    col_force_default: True
+        #    col_default_width: root.width / 6
+
+        #    #Padding izquierdo de botones(pixeles)
+        #    padding: [root.width / 7,0,0,0]
+        #    Button:
+        #        id: boton_capturar
+        #        text: "Capturar"
+        #        on_press: root.capturar()
+
+        #    Button:
+        #        id: boton_cancelar
+        #        text: "Volver"
+        #        #on_press: root.manager.current = 'dialogopropscaptura'
+        #        on_press: root.volver()
+                
 

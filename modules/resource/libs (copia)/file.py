@@ -119,9 +119,6 @@ from kivy.factory import Factory
 from kivy.properties import StringProperty, NumericProperty, ListProperty,\
     OptionProperty, BooleanProperty, ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.gridlayout import GridLayout
-
-
 from kivy.uix.textinput import TextInput
 
 from os import path, makedirs
@@ -141,8 +138,6 @@ __author__ = 'ophermit'
 
 __all__ = ('XFileSave', 'XFileOpen', 'XFolder')
 
-import constantes
-from kivy.uix.filechooser import FileChooser
 
 class XFilePopup(XBase):
     """XFilePopup class. See module documentation for more information.
@@ -180,8 +175,7 @@ class XFilePopup(XBase):
 
     CTRL_VIEW_ICON = 'icon'
     CTRL_VIEW_LIST = 'list'
-    #CTRL_NEW_FOLDER = 'new_folder'
-
+    CTRL_NEW_FOLDER = 'new_folder'
 
     TXT_ICON = 'Vista iconos'
     TXT_LIST = 'Vista lista'
@@ -205,7 +199,6 @@ class XFilePopup(XBase):
             FileChooserListLayout
         '''))
 
-
         #AGREGADO
         self.browser.filters = ['*.rec'] 
         self.browser.path = self.path
@@ -226,52 +219,28 @@ class XFilePopup(XBase):
         layout.add_widget(self._ctrls_init())
         layout.add_widget(lbl_path)
         layout.add_widget(self.browser)
-
         return layout
 
     def _ctrls_init(self):
         pnl_controls = BoxLayout(size_hint_y=None, height=metrics.dp(25))
-        #pnl_controls = GridLayout(size_hint_y=None,
-        #                            rows=1,
-        #                            cols=2, 
-        #                            col_force_default= True,
-        #                            col_default_width= constantes.COL_DEFAULT_WIDTH,
-        #                            spacing = constantes.DEFAULT_SPACING,
-        #                            padding = [constantes.DEFAULT_PADDING_HORIZONTAL,0,constantes.DEFAULT_PADDING_HORIZONTAL,0],
-        #                            height=metrics.dp(25))
-
         pnl_controls.add_widget(Factory.XButton(
             text=_(self.TXT_ICON), id=self.CTRL_VIEW_ICON,
             on_release=self._ctrls_click))
         pnl_controls.add_widget(Factory.XButton(
             text=_(self.TXT_LIST), id=self.CTRL_VIEW_LIST,
             on_release=self._ctrls_click))
+        pnl_controls.add_widget(Factory.XButton(
+            text=_(self.TXT_FOLDER), id=self.CTRL_NEW_FOLDER,
+            on_release=self._ctrls_click))
         return pnl_controls
-
-
-
-    #BACKUP!
-    #def _ctrls_init(self):
-    #    pnl_controls = BoxLayout(size_hint_y=None, height=metrics.dp(25))
-    #    pnl_controls.add_widget(Factory.XButton(
-    ##        text=_(self.TXT_ICON), id=self.CTRL_VIEW_ICON,
-    #        on_release=self._ctrls_click))
-    #    pnl_controls.add_widget(Factory.XButton(
-    ##        text=_(self.TXT_LIST), id=self.CTRL_VIEW_LIST,
-    #        on_release=self._ctrls_click))
-    #    #pnl_controls.add_widget(Factory.XButton(
-    #    #    text=_(self.TXT_FOLDER), id=self.CTRL_NEW_FOLDER,
-    #    #    on_release=self._ctrls_click))
-    #    return pnl_controls
-
 
     def _ctrls_click(self, instance):
         if instance.id in self.property('view_mode').options:
             self.view_mode = instance.id
-        #elif instance.id == self.CTRL_NEW_FOLDER:
-        #    XTextInput(title=_(self.TITLE_FOLDER_CREATION),
-        #               text=_(self.INPUT_TEXT_FOLDER_CREATION),
-        #               on_dismiss=self._create_dir)
+        elif instance.id == self.CTRL_NEW_FOLDER:
+            XTextInput(title=_(self.TITLE_FOLDER_CREATION),
+                       text=_(self.INPUT_TEXT_FOLDER_CREATION),
+                       on_dismiss=self._create_dir)
 
     def _create_dir(self, instance):
         """Callback for create a new folder.

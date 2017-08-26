@@ -35,16 +35,33 @@
 			orientation: 'horizontal'
 			size_hint:(1,0.05)
 
+			color: const.COLOR_TEXTOS
+			canvas.before:
+				Color:
+					rgba: const.COLOR_LABELS_RGBA
+				Rectangle:
+					pos: self.pos
+					size: self.size
+
+
 			CheckBox:
 				id: check_box_seleccionar_todo
 				on_active: root.check_box_activado()
-				size_hint: (0.2,1)
+				#size_hint: (0.2,1)
+				size_hint: (0.15,1)
 
 			Label:
 				id: label_seleccionar_todo
 				text: 'Seleccionar todas las fallas'
-				size_hint: (0.8,1)
+				size_hint: (0.15,1)
 				halign: 'left'
+				
+
+			BoxLayout:
+				id: filler_layout
+				orientation: 'horizontal'
+				size_hint:(0.7,1)
+
 
 		GridLayout:
 			id: layout_labels
@@ -103,13 +120,22 @@
 	    	size_hint:(1,0.85)
 
 		    
-	#Barra de opciones abajo
+	#Footer del screen
 	GridLayout:
 		id: layout_principal
-		orientation: 'horizontal'
-		cols: 3
-		rows: 1
 		size_hint:(1,0.05)
+		cols: 2
+		rows: 1
+
+		col_force_default: True
+		col_default_width: const.COL_DEFAULT_WIDTH
+	    	
+		#Espaciado entre los componentes del layout (en porcentaje del widget)
+		spacing: const.DEFAULT_SPACING
+
+		#Relleno entre el layout y los widgets hijos
+		padding: [const.DEFAULT_PADDING_HORIZONTAL,0,const.DEFAULT_PADDING_HORIZONTAL,0]
+
 
 	    Button:
         	id: bt_subir_archivos
@@ -120,4 +146,26 @@
         	id: bt_salir
         	on_press: root.volver()
         	text: "Volver"
+
+
+
+
+    #BACKUP!
+	#Barra de opciones abajo
+	#GridLayout:
+	#	id: layout_principal
+	#	orientation: 'horizontal'
+	#	cols: 3
+	#	rows: 1
+	#	size_hint:(1,0.05)
+
+	#    Button:
+    #    	id: bt_subir_archivos
+    #    	text: "Enviar fallas"
+    #    	on_press: root.enviar_capturas()
+
+    #    Button:	
+    #    	id: bt_salir
+    #    	on_press: root.volver()
+    #    	text: "Volver"
 

@@ -4,6 +4,7 @@
 
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
@@ -189,10 +190,17 @@ class PropsFallaConfirmadaScreen(Screen):
 							cols = 2,
 							orientation = 'horizontal',
 							size_hint_y = None,
-							padding = (0,50,0,0)
-							#size_hint= (1,0.05),
-							#padding = (0,10,0,0)
+							#padding = (0,50,0,0),
+							col_force_default = True,
+	    					col_default_width = COL_DEFAULT_WIDTH,
+	    					row_force_default = True,
+	    					row_default_height = ROW_DEFAULT_HEIGHT,
+	    					size_hint_x = 1,
+							#padding = ((Window.width * 0.24),0,0,0),
+							padding = [DEFAULT_PADDING_HORIZONTAL,DEFAULT_PADDING_VERTICAL],
+							spacing = DEFAULT_SPACING
 							)
+		
 		btnAcept = Button(text = 'Aceptar')
 		btnAcept.bind(on_press = self.aceptar)
 		layout.add_widget(btnAcept)

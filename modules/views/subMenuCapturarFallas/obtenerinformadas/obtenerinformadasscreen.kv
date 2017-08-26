@@ -22,11 +22,11 @@
 	    	color: const.COLOR_TEXTOS
 			canvas.before:
 	            Color:
-	                #rgba: 1,1,1,1
 	                rgba: const.COLOR_LABELS_RGBA
 	            Rectangle:
 	                pos: self.pos
 	                size: self.size
+
 		Label:
 	    	id: calle_lbl
 	    	text: "Calle: "
@@ -43,59 +43,15 @@
 		BoxLayout:
 			id: container_autocomplete
 			orientation: 'vertical'
+	    	size_hint:(1,0.3)
 
+	    #Layout que funciona como filler restante entre los widgets
+	    #BoxLayout:
+		#	id: filler_layout
+		#	orientation: 'vertical'
+	    #	size_hint:(1,0.3)
 
-		#TextInput:
-		#	id: calle_txt
-		#	size_hint:(0.5,0.05)
-		#	write_tab: False
-		#	multiline: False
-		#	on_text_validate: root.enviar_peticion(calle_txt.text)
-
-	    Label:
-	    	id: filler_lbl
-	    	text: ""
-	    	size_hint:(1,0.8)
-	    	color: const.COLOR_TEXTOS
-			canvas.before:
-	            Color:
-	                rgba: 0,0,0, 1
-	            Rectangle:
-	                pos: self.pos
-	                size: self.size
-		
-
-	    #PopUp para la carga de las fallas desde el servidor
-		#InfoPopUp:
-		#	size_hint: .5, .5
-		#	auto_dismiss: False
-		#	title: 'Obtencion de fallas del servidor'
-		#	content: lbl.Label(text='Cargando fallas solicitadas...')
-
-
-
-		#Label:
-	    #	id: altura_lbl
-	    #	text: "Altura: "
-	    #	size_hint:(1,0.05)
-	    #	color: 0,0,0,1
-		#	canvas.before:
-	    #        Color:
-	    #            rgba: 1,1,1, 1
-	    #        Rectangle:
-	    #            pos: self.pos
-	    #            size: self.size
-
-	    #TextInput:
-	    #	id: altura_txt
-	    #	size_hint:(1,0.05)
-	    #	input_filter: 'int'
-	    #	write_tab: False
-	    #	#focus: False
-	    #	#hint_text : 'i.e: 200'
-	    #	on_text_validate: root.enviar_peticion(calle_txt.text)
-
-		      
+		  
 	    GridLayout:
 	    	id: layout_botones
 	    	orientation: 'horizontal'
@@ -103,20 +59,21 @@
 	    	rows: 1
 
 	    	# Tamanio en porcentajes con respecto al widget anterior
-	    	size_hint:(1,0.05)
-	    	col_force_default: True
-	    	col_default_width: 150
+	    	size_hint:(1,0.6)
+	    	
 
+	    	col_force_default: True
+	    	col_default_width: const.COL_DEFAULT_WIDTH
+	    	
 	    	#Espaciado entre los componentes del layout (en porcentaje del widget)
-	    	spacing: ( root.width * 0.20 ),0
+	    	spacing: const.DEFAULT_SPACING
 
 	    	#Relleno entre el layout y los widgets hijos
-	    	padding: (root.width * 0.24),0,0,0
+			padding: [const.DEFAULT_PADDING_HORIZONTAL,300,const.DEFAULT_PADDING_HORIZONTAL,0]
 
 		    Button:
 		    	id: bt_capturar_fallas
 		    	text: "Solicitar fallas servidor"
-		    	#on_press: root.enviar_peticion(calle_txt.text)
 		    	on_press: root.enviar_peticion()
 
 			Button:	
