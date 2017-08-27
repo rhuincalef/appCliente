@@ -25,6 +25,8 @@ from submenuscreen import *
 from capturador import ExcepcionRecorridoVacio
 from constantes import EXTENSION_RECORRIDO_DEFAULT
 
+import re
+
 class RecorridoScreen(SubMenuScreen):
 
     def __init__(self,tabbedPanel,**kwargs):
@@ -58,12 +60,27 @@ class RecorridoScreen(SubMenuScreen):
                         #path=expanduser(u'~'))
                         path=os.getcwd())
         
+
+
+    def contieneExtensionPorDefecto(self,nameBD):
+        patron = ".*\%s$" % EXTENSION_RECORRIDO_DEFAULT
+        regex = re.compile(patron)
+        if regex.match(nameBD) is not None:
+            return True
+        return False
+    
+
     def _fileSaveCallback(self, instance):
         if instance.is_canceled():
             return
+
         #Retorna el path completo a la BD
-        #nameBD = instance.get_full_name()
-        nameBD = instance.get_full_name() + EXTENSION_RECORRIDO_DEFAULT
+        nameBD = instance.get_full_name()
+        if not self.contieneExtensionPorDefecto(nameBD):
+            nameBD = instance.get_full_name() + EXTENSION_RECORRIDO_DEFAULT
+
+        print "nameBD final: %s\n" % nameBD
+        
         if path.isfile(nameBD):
             controlador = App.get_running_app()
             print "tipo filename: %s; filename: %s\n" % (type(instance.filename),

@@ -7,7 +7,7 @@ NOTAS PARA EL MANUAL DEL USUARIO:
 -Si las propiedades de las fallas confirmadas no se pueden traer del servidor, se cargan localmente.
 -Cuando se sube una falla confirmada la direccion se calcula como calle secundariaA y secundariaB, incluyendo como calleSecundariaA a la calle Principal y como calleSecundariaB a la calle estimada por la API de Geonames, formando la interseccion mas cercana a la falla.
 
-
+-Si se suben las capturas al servidor y no se conservan (en memoria y en disco), no se podra guardar un recorrido porque ya se habran registrado en el sistema. El flujo de trabajo en tal caso, consiste en capturar y guardar el recorrido con todas las fallas (por defecto se guardar informadas y confirmadas) y, posteriormente cargar el archivo de recorrido de disco y realizar la subida correspondiente. 
 
 
 

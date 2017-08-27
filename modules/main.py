@@ -756,15 +756,19 @@ class MainApp(App,EventDispatcher):
 	# "nameBD" es el nombre del archivo de fallas que se guarda en disco. 
 	#
 	def persistirFallas(self,nameBD):
+		print "En persistirFallas()\n nameBD: %s ...\n" % nameBD
+		print "Mostrando la coleccion de fallas persistidas...\n"
+		self.mostrarColItemFalla()
+		
 		fallas = self.capturador.obtenerCapturasNoSubidas() +\
 			self.capturadorInformados.obtenerCapturasNoSubidas()
 		Capturador.persistirFallas(nameBD,fallas)
-		print "Mostrando la coleccion de fallas persistidas...\n"
-		self.mostrarColItemFalla()
+		
 		# Se vacian las colecciones de los capturadores al
 		# guardar el recorrido.
 		self.capturador.setColCapturasTotales([])
 		self.capturadorInformados.setColCapturasTotales([])
+		print "Fin de persistirFallas()\n"
 
 	#Metodo de prueba
 	def mostrarColItemFalla(self,col=None):
