@@ -78,9 +78,8 @@ class RecorridoScreen(SubMenuScreen):
         nameBD = instance.get_full_name()
         if not self.contieneExtensionPorDefecto(nameBD):
             nameBD = instance.get_full_name() + EXTENSION_RECORRIDO_DEFAULT
-
+            
         print "nameBD final: %s\n" % nameBD
-        
         if path.isfile(nameBD):
             controlador = App.get_running_app()
             print "tipo filename: %s; filename: %s\n" % (type(instance.filename),

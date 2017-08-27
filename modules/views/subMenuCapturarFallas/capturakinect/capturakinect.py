@@ -547,13 +547,8 @@ import signal, os
 import time
 
 
-
-#class ExcepcionTimeout(Exception):
-#    pass
-
-
 from screenredimensionable import ScreenRedimensionable
-#class KinectScreen(Screen):
+
 class KinectScreen(ScreenRedimensionable):
     
     nombre_captura = StringProperty()
@@ -569,6 +564,17 @@ class KinectScreen(ScreenRedimensionable):
         print "Obtenido teclado...\n"
         self.dir_trabajo = "."
         
+
+    #AGREGADO RODRIGO
+    # Obtiene una referencia al thread que interactua con el sensor para obtener
+    # los datos.
+    #def getThreadCapturaSensor(self):
+    #    return self.depthThread
+
+    #AGREGADO RODRIGO
+    def recibiendoDatosKinect(self):
+        return self.depthThread.recibiendoDatos    
+
 
     def on_pre_enter(self):
         controlador = App.get_running_app()

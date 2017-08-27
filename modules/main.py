@@ -83,11 +83,6 @@ class MainApp(App,EventDispatcher):
 
 		# Los capturadores comparten el mismo apiClient, que lleva la cantidad
 		# comun de bytes enviados y bytes totales a enviar, de ambos capturadores.
-		#BACKUP!
-		#apiClientComun = ApiClientApp()
-		#self.capturador = Capturador(apiClientComun,bdLocal)
-		#self.capturadorInformados = CapturadorInformados(apiClientComun)
-
 		apiClientComun = ApiClientApp()
 		bdLocalMuestrasComun = BDLocal(fullPathBD = None)
 		self.capturador = Capturador(apiClientComun,bdLocalMuestrasComun)
@@ -112,14 +107,22 @@ class MainApp(App,EventDispatcher):
 		self.inicializarMonitorKinect()
 
 		self.tabbedPanel = None
+
+
+
+		tb_panel= MyTabbedPanel(do_default_tab= False,
+									size_hint= (1,1),
+									pos_hint= {'center_x': .5, 'center_y': .5},
+									tab_pos = 'top_right',
+									tab_height= 40,
+									tab_width = 170)
+		self.tabbedPanel = tb_panel
 		print "Inicializado MainApp!"
 
 
-	#AGREGADO RODRIGO
 	def getBDLocalMuestras(self):
 		return self.capturador.getBDLocalMuestras()
 
-	#AGREGADO RODRIGO
 	#Inicializa la BD de Muestras local para el objeto "Capturador" (baches confirmados).
 	# NOTA: LA BD de "CapturadorInformados" no se inicializa porque es la misma referencia. 
 	def inicializarBDLocal(self,fullPathBD = None):
@@ -578,18 +581,22 @@ class MainApp(App,EventDispatcher):
 		register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 		print "En build()\n"
 		self.title = TITULO_APP
-		tb_panel= MyTabbedPanel(do_default_tab= False,
-									size_hint= (1,1),
-									pos_hint= {'center_x': .5, 'center_y': .5},
-									tab_pos = 'top_right',
-									tab_height= 40,
-									tab_width = 170)
-		self.tabbedPanel = tb_panel
+		#tb_panel= MyTabbedPanel(do_default_tab= False,
+		#							size_hint= (1,1),
+		#							pos_hint= {'center_x': .5, 'center_y': .5},
+		#							tab_pos = 'top_right',
+		#							tab_height= 40,
+		#							tab_width = 170)
+		#self.tabbedPanel = tb_panel
+		
 		#AGREGADO RODRIGO
 		#self.tabbedPanel.inHabilitarSubMenus([PREFIJO_ID_TP_ITEM + "subMenuSeleccionarBD"])
 		Window.bind(on_resize=self.ventanaCambioTamanio)
 		print "bindeados eventos\n"
-		return tb_panel
+		#AGREGADO RODRIGO
+		#self.comprobarConexionSensor()
+		#return tb_panel
+		return self.tabbedPanel
 
 
 	#Handler de ventana
@@ -682,9 +689,52 @@ class MainApp(App,EventDispatcher):
 		time.sleep(1)
 		print "MOSTRANDO EL RESULTADO DE LA PETICION...\n"
 		popup.dismiss()
-		self.mostrarDialogoMensaje(
+		dialogoPeticionProps = self.mostrarDialogoMensaje(
 								text= dicInfo["msg"],
 								title = dicInfo["titulo"])
+
+		#AGREGADO RODRIGO
+		dialogoPeticionProps.bind(on_dismiss = self.comprobarConexionSensor)
+
+
+	#AGREGADO RODRIGO
+	# Muestra un dialogo de espera donde se comprueba la conexion con el sensor. 
+	#def comprobarConexionSensor(self):
+	def comprobarConexionSensor(self,instance):
+		print "En comprobarConexionSensor().\n"
+		popup = self.mostrarDialogoEspera(title="Conexion con el sensor",
+				content ="Comprobando la correcta conexion al sensor Kinect...",
+			)
+		t = threading.Thread(name = "thread-threadComprobarConexionSensor",
+								target = self.threadComprobarConexionSensor, 
+								args = (popup,)
+							)
+		t.setDaemon(True)
+		t.start()
+
+	#AGREGADO RODRIGO
+	def threadComprobarConexionSensor(self,popup):
+		time.sleep(1)
+		print "En threadComprobarConexionSensor() \n"
+		if not self.tabbedPanel.getSubMenuPorNombre("capturaKinect").recibiendoDatosKinect():
+			print "No recibiendo data...\n"
+			self.mostrarDialogoConfirmacion(
+									title = "Conexion al sensor kinect",
+									content = "No se estan recibiendo datos del sensor, si desea capturar debe reconectarlo.\n¿Desea continuar ejecutando la aplicación?",
+									callback = self._callbackContinuarSensor)
+		popup.dismiss()
+
+
+	#AGREGADO RODRIGO
+	def _callbackContinuarSensor(self,instance):
+		print "En _callbackContinuarSensor() \n"
+		if instance.is_confirmed():
+			print "Si continuar ejecutando app!\n"
+			return
+		print "Matando la aplicacion...\n"
+		App.stop(App.get_running_app())
+
+
 
 	def _defaultDialogoMensajeHandler(self,instance):
 		pass
