@@ -156,6 +156,8 @@ def estaSensorListo():
 
 
 
+
+
 # Configura y retorna una instancia de Logger para el archivo .info.
 def instanciarLogger(logFile,logLevel=LOGGING_DEFAULT_LEVEL,appLogging=APP_NAME_LOGGING):
 	if not os.path.exists(LOGS_DEFAULT_DIR):

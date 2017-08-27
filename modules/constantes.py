@@ -74,6 +74,8 @@ PATH_ICONO_LUPA = 'resource' + path.sep + 'gifs' + path.sep + 'lupa.gif'
 
 EXTENSION_RECORRIDO_DEFAULT = '.rec'
 
+
+
 #####################################################################################
 ############### VARIABLES GLOBALES USADAS POR KinectViewer ##########################
 #####################################################################################
@@ -541,7 +543,7 @@ ESTILO_BOTON_DEFAULT_OPCIONES_MENU = 'atlas://customAppCliente/button'
 
 
 
-
+PATH_LOG_PRINCIPAL = "_logs/log.txt"
 
 
 

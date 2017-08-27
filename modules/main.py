@@ -117,7 +117,21 @@ class MainApp(App,EventDispatcher):
 									tab_height= 40,
 									tab_width = 170)
 		self.tabbedPanel = tb_panel
+		self.configurarLoggingPrincipal()
 		print "Inicializado MainApp!"
+
+	# Realiza las redicciones de stderr y stdout al mismo tiempo, envia los
+	# registros a la linea de comandos.
+	#
+	def configurarLoggingPrincipal(self):
+		from constantes import PATH_LOG_PRINCIPAL
+		sys.stdout = sys.stderr = open(PATH_LOG_PRINCIPAL,"w")
+		tee = subprocess.Popen(["tee", PATH_LOG_PRINCIPAL], stdin=subprocess.PIPE)
+		os.dup2(tee.stdin.fileno(), sys.stdout.fileno())
+		os.dup2(tee.stdin.fileno(), sys.stderr.fileno())
+		print "configurado el logging principal"
+
+
 
 
 	def getBDLocalMuestras(self):
