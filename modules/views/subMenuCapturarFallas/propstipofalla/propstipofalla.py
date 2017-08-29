@@ -36,7 +36,8 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		self.layout_principal.setter('height')
 		#self.layout_principal.bind(minimum_height = self.layout_principal.setter('height'))
 		self.layout_principal.bind(minimum_height = self.calcular_height )
-		self.inicializarDropDownPrincipal()
+		#BACKUP!
+		#self.inicializarDropDownPrincipal()
 		self.layoutFooter = None
 
 

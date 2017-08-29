@@ -147,6 +147,8 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 
 
 URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
+#Servidor Guille
+#URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
 
 
 
@@ -168,6 +170,7 @@ URL_GET_DIRECCION = URL_SERVIDOR_LOCAL + "restapi/obtener_datos_direccion/"
 
 
 # http://localhost/repoProyectoBacheo/web/restapi/obtener_props_confirmadas
+# http://192.168.0.102/web/restapi/obtener_props_confirmadas
 URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirmadas" 
 
 
@@ -470,6 +473,7 @@ LISTADO_SUB_MENUS = [
 # Constante para identificar el tipo de elemento de los archivos de configuracion
 TIPO_SUB_MENU = "subMenu"
 TIPO_SCREEN = "screen"
+#TIPO_SCREEN_CONCURRENTE = "screenconcurrente"
 
 # Constantes para el tamanio de los iconos en screen "propsTipoFalla" (solicitado en 
 # modulo customwidgets)

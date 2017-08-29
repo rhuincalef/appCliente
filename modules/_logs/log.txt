@@ -5,11 +5,13 @@ En build()
 
 bindeados eventos
 
+instanciada la app!
+
+instanciado dialogo espera...
+
 Iniciando threadGetPropsConfirmadas()...
 
 EN getPropsCOnfirmadas()...
-
-En callbackCargaTiposFalla con dicNombres propiedades tiene: 
 
 CAMBIO DE DIRECTORIO!
 selection : []
@@ -670,9 +672,71 @@ Creado un resplado de las propiedades de las fallas confirmadas!
 Tipos de falla obtenidos correctamente desde servidor!!!!
 SE DESVANECIO EL POPUPCONFIRMADAS!
 
+inicializando el screen de propsTipoFallaConfirmada!
+
+En inicializarDropDownPrincipal()... 
+
+Iterando valor i:1
+
+contador actual: 36
+
+Iterando valor i:2
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}
+
+contador actual: 72
+
+Iterando valor i:3
+
+contador actual: 108
+
+Iterando valor i:4
+
+contador actual: 144
+
+Iterando valor i:5
+
+contador actual: 180
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+incializada el screen de propsTipoFallaConfirmada!
+
+
+elem.estaHabilitada(): True
+
+Propiedad deshabilitada Bache: False
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+elem.estaHabilitada(): True
+
+Propiedad deshabilitada Grieta: False
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: True
+
+elem.estaHabilitada(): False
+
+Propiedad deshabilitada Deficiencia de sellado: True
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: True
+
+elem.estaHabilitada(): False
+
+Propiedad deshabilitada Deformación: True
+
 MOSTRANDO EL RESULTADO DE LA PETICION...
 
 En comprobarConexionSensor().
+
+instanciado dialogo espera...
 
 En threadComprobarConexionSensor() 
 
@@ -680,5 +744,469 @@ No recibiendo data...
 
 En _callbackContinuarSensor() 
 
-Matando la aplicacion...
+Si continuar ejecutando app!
 
+Comenzando nueva BD, deshabilitando los elementos del menu!
+
+Inicializada por Defecto BD Local de muestras...
+
+En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_29-08-2017.json
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45097933d0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45098211a0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4509976d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f454005e750>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4545200f30>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4545200f30>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4545200f30>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de captura de fallas...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45097933d0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45098211a0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4509976d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f454005e750>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4545200f30>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4545200f30>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4545200f30>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoFalla
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+Presione un elemento tipo falla en el tree! Grieta
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoFalla
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+En cargarPropsAsociadas()...
+
+controlador.getPropsConfirmados():  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}...
+
+len(controlador.getPropsConfirmados()): 4...
+
+screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+tipoFalla.getValor(): Grieta
+ ; tipoFalla.estaHabilitada(): True
+
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4509976590>
+
+w.id: None
+
+w.id: subLayoutTipoCriticidad
+
+w.id: subLayoutTipoMaterial
+
+ENCONTRADO Y REMOVIDO DROP!!!
+
+w.id: subLayoutTipoFalla
+
+Agregado dropdown tipo material de nuevo!
+
+En cargarOpciones()...
+
+prop.getClave(): tipoMaterial
+
+prop.getValor(): Pavimento  rígido
+
+agregando cadOpcion generada: Pavimento  rígido
+
+Esta deshabilitado Pavimento  rígido: False 
+
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4509976590>
+
+w.id: None
+
+w.id: subLayoutTipoCriticidad
+
+ENCONTRADO Y REMOVIDO DROP!!!
+
+w.id: subLayoutTipoMaterial
+
+w.id: subLayoutTipoFalla
+
+Agregado dropdown criticidad de nuevo!
+
+En cargarOpciones()...
+
+prop.getClave(): criticidad
+
+prop.getValor(): Baja grieta: Area afectada menor al 5%
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'Baja grieta: Area afectada menor al 5%'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}
+
+agregando cadOpcion generada: [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Baja grieta: Area afectada menor al 5%
+
+Esta deshabilitado [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Baja grieta: Area afectada menor al 5%: False 
+
+prop.getClave(): criticidad
+
+prop.getValor(): Media grieta: Area afectada menor al 10%
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'Media grieta: Area afectada menor al 10%'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}
+
+agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Media grieta: Area afectada menor al 10%
+
+Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Media grieta: Area afectada menor al 10%: False 
+
+prop.getClave(): criticidad
+
+prop.getValor(): Alta grieta: Area afectada menor al 15%
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'Alta grieta: Area afectada menor al 15%'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}
+
+agregando cadOpcion generada: [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Alta grieta: Area afectada menor al 15%
+
+Esta deshabilitado [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Alta grieta: Area afectada menor al 15%: False 
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! Pavimento  rígido
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:222: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  label.parent_node.text = label.text
+/usr/lib/python2.7/dist-packages/kivy/core/text/__init__.py:675: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if text != self._text:
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Media grieta: Area afectada menor al 10%
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Baja grieta: Area afectada menor al 5%
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: Grieta
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cad final: Baja grieta: Area afectada menor al 5% 
+
+filtrando por separador...
+
+cadena filtrada por separador final: Baja grieta
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: Pavimento  rígido
+
+props leidas: Grieta, Pavimento  rígido, Baja grieta 
+
+
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!

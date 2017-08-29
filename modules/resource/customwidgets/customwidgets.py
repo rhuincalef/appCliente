@@ -437,44 +437,19 @@ class MyTabbedPanel(TabbedPanel):
         # cada uno de los archivos de configuracion de cada submenu.
         # Se usa desde el controlador(App) para algunos metodos concurrentes. 
         self.subMenus = {}
+
         self._inicializarSubScreens()
         print "despues de inicializar...\n"
-        #Window.borderless =  True
-        #Window.clearcolor = (1, 0, 0, 1)
 
         
-    #AGREGADO RODRIGO
     #Retorna el Strip con todos los tabbedpanel items del menu.
     def getTabbedPanelStrip(self):
-        return self._tab_strip.children
-
-
-    #AGREGADO RODRIGO
-    # Inhabilita todos los elementos del submenu excepto los que estan en
-    # la coleccion tpItems.
-    #def inHabilitarSubMenus(self,tpItems):
-    #    for item in self.getTabbedPanelStrip():
-    #        print "iterando item.id:%s\n; tpItems: %s\n" % (item.id,tpItems[0])
-    #        print "item.id not in tpItems: %s\n" % (item.id not in tpItems)
-    #        item.disabled = False
-    #        if item.id not in tpItems:
-    #            item.disabled = True
-
-    #AGREGADO RODRIGO
-    # Habilita todos los elementos del submenu excepto los que estan en
-    # la coleccion tpItems.
-    #def habilitarSubMenus(self,tpItems):
-    #    for item in self.getTabbedPanelStrip():
-    #        item.disabled = True
-    #        if item.id not in tpItems:
-    #            item.disabled = False
-                
+        return self._tab_strip.children            
 
     def getSubMenuPorNombre(self,nombreSubMenu):
         return self.subMenus[nombreSubMenu]
 
 
-    #AGREGADO RODRIGO.
     # Obtiene todas las screens que se cargaron desde los
     # archivos de configuracion de cada submenu (.cfg), excepto aquellos
     # que son screens de tipo SubMenu.
@@ -502,7 +477,7 @@ class MyTabbedPanel(TabbedPanel):
         tpItem.bind(on_press = self._cambioSubMenu)
 
 
-    #main.cargar_vistas()
+    #mytabbedpanel.cargar_vistas()
     def cargar_vistas(self,tituloSubMenu,listaVistas):
         sm = ScreenManager()
         print "\nLeyendo listaVistas: %s\n" % listaVistas
@@ -512,6 +487,9 @@ class MyTabbedPanel(TabbedPanel):
                                 tupla["clase"])
             print "Leyendo clase: %s de tipo: %s\n\n" % (tupla["clase"],tupla["tipo"])
             screen = None
+            
+            # Los submenus contienen una referencia al widget padre que los contiene,
+            # por lo que si es un submenu se pasa el tabbedpanel por parametro.
             if tupla["tipo"] == TIPO_SUB_MENU:
                 screen = MyClass(self,name=tupla["nombre_menu"])
             else:
@@ -534,7 +512,6 @@ class MyTabbedPanel(TabbedPanel):
             dirRaizModulo = os.getcwd() + sep + dicSubMenu["dirRaizModulo"]
             print "dirRaizModulo: %s\n\n" % dirRaizModulo
             sys.path.append(dirRaizModulo)
-            #confSubMenu = self.leer_configuracion(dicSubMenu["pathConfig"])
             confSubMenu = leer_configuracion(dicSubMenu["pathConfig"])
             print "\nInicializando subscreen: %s\n\n" % dicSubMenu 
             self.cargar_vistas(dicSubMenu["titulo"],confSubMenu)
@@ -565,17 +542,6 @@ class MyTabbedPanel(TabbedPanel):
                         print "deshabilitando elemento: %s\n" % widg
                         hijo.disabled = True
     
-
-    #Este metodo retorna las criticidades para los baches y las grietas
-    # implementadas para la tesina
-    #def getCriticidadesHabilitadas(self):
-    #    #TODO: Esta linea significa una peticion al servidor de todas las criticidades
-    #    criticidades = CRITICIDADES 
-    #    for elem in criticidades:
-    #        elem["estaHabilitada"] = False
-    #        if elem["id"] in IDS_CRITICIDADES_HABILITADAS:
-    #            elem["estaHabilitada"] = True
-    #    return criticidades
 
     def _cambioSubMenu(self,instancia):
         print "Se presiono panelBD!!type(instancia): %s\n" % type(instancia)

@@ -66,6 +66,9 @@ gi.require_version('Gtk','3.0')
 from kivy.clock import Clock
 
 from kivy.core.window import Window
+import threading
+
+
 
 class MainApp(App,EventDispatcher):
 	def __init__(self,**kwargs):
@@ -88,7 +91,10 @@ class MainApp(App,EventDispatcher):
 		self.capturador = Capturador(apiClientComun,bdLocalMuestrasComun)
 		self.capturadorInformados = CapturadorInformados(apiClientComun,bdLocalMuestrasComun)
 
+		# Se comienzan a mostrar los dialogos al inicio de la aplicacion una vez 
+		# que esta se instancio completamente.
 		self.bind(on_start = self.instanciada_app)
+
 		self.screen_manager = None
 		self.dataViews = {} #Diccionario usado para envio de datos entre views 
 							# (usado para las propiedades de las fallas confirmadas)
@@ -102,13 +108,12 @@ class MainApp(App,EventDispatcher):
 		#Este campo es modificado cada vez que se conecta o desconecta el kinect.
 		#La monitorizacion y ejecucion del callback se realiza por medio del thread
 		# daemon que se lanza en inicializarMonitorKinect()
+		
 		self.sensorConectado = estaSensorListo()
 		print "Valor de self.sensorConectado: %s\n" % self.sensorConectado
 		self.inicializarMonitorKinect()
 
 		self.tabbedPanel = None
-
-
 
 		tb_panel= MyTabbedPanel(do_default_tab= False,
 									size_hint= (1,1),
@@ -117,6 +122,7 @@ class MainApp(App,EventDispatcher):
 									tab_height= 40,
 									tab_width = 170)
 		self.tabbedPanel = tb_panel
+
 		self.configurarLoggingPrincipal()
 		print "Inicializado MainApp!"
 
@@ -220,6 +226,7 @@ class MainApp(App,EventDispatcher):
 	# propiedades para los tipos de falla.
 	#
 	def instanciada_app(self,app):
+		print "instanciada la app!\n"
 		if not self.conexionSensorEstablecida():
 			self.mostrarDialogoMensaje( title='Error de conexion',
 										text='El sensor no se encuentra conectado.\nConecte el sensor antes de realizar una nueva captura.'
@@ -227,8 +234,7 @@ class MainApp(App,EventDispatcher):
 		popup = self.mostrarDialogoEspera(title="Carga de propiedades",
 				content ="Cargando propiedades para fallas confirmadas...",
 			)
-		
-		#self.bind(on_fin_solicitud_prop_confirmada = self.mostrarResultPeticion)
+		self.bind(on_fin_solicitud_prop_confirmada = self.mostrarResultPeticion)
 		#Se configura el envio de los archivos como un proceso demonio.
 		t = threading.Thread(name = "thread-getPropsConfirmadas",
 								target = self.threadGetPropsConfirmadas, 
@@ -236,6 +242,7 @@ class MainApp(App,EventDispatcher):
 							)
 		t.setDaemon(True)
 		t.start()
+
 
 	def getCapturador(self):
 		return self.capturador
@@ -265,6 +272,7 @@ class MainApp(App,EventDispatcher):
 							gif = gif,
 							size_hint_x = 0.5,
 							size_hint_y = 0.4)
+		print "instanciado dialogo espera...\n"
 		dialogo.open()
 		return dialogo
 
@@ -595,6 +603,23 @@ class MainApp(App,EventDispatcher):
 		register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 		print "En build()\n"
 		self.title = TITULO_APP
+
+		#self.lockPropsConfirmadas = threading.Condition()
+		#popup = self.mostrarDialogoEspera(title="Carga de propiedades",
+		#		content ="Cargando propiedades para fallas confirmadas..." )
+
+		#t = threading.Thread(name = "thread-getPropsConfirmadas",
+		#						target = self.threadGetPropsConfirmadas, 
+		#						args = (popup,self.lockPropsConfirmadas,) 
+		#						#args = (self.lockPropsConfirmadas,) 
+		#					)
+		#t.setDaemon(True)
+		#t.start()
+		#print "Adquiriendo el lock desde main... \n"
+		#self.lockPropsConfirmadas.acquire()
+		#self.lockPropsConfirmadas.wait(5)
+		
+		#print "DESPERTO MAIN!\n"
 		#tb_panel= MyTabbedPanel(do_default_tab= False,
 		#							size_hint= (1,1),
 		#							pos_hint= {'center_x': .5, 'center_y': .5},
@@ -602,14 +627,11 @@ class MainApp(App,EventDispatcher):
 		#							tab_height= 40,
 		#							tab_width = 170)
 		#self.tabbedPanel = tb_panel
-		
-		#AGREGADO RODRIGO
+
 		#self.tabbedPanel.inHabilitarSubMenus([PREFIJO_ID_TP_ITEM + "subMenuSeleccionarBD"])
 		Window.bind(on_resize=self.ventanaCambioTamanio)
 		print "bindeados eventos\n"
-		#AGREGADO RODRIGO
 		#self.comprobarConexionSensor()
-		#return tb_panel
 		return self.tabbedPanel
 
 
@@ -644,6 +666,9 @@ class MainApp(App,EventDispatcher):
 	# un msg indicando que se conecte a internet para obtener las
 	# propiedades de los tipos de falla confirmadas y se retorna
 	# al screen principal.
+
+	
+	#def threadGetPropsConfirmadas(self,popup,lockPropsConfirmadas):
 	def threadGetPropsConfirmadas(self,popup):
 		resultPeticion = {
 						"titulo":"Peticion al servidor"
@@ -695,7 +720,15 @@ class MainApp(App,EventDispatcher):
 			print msg
 			popup.bind(on_dismiss = self.desvanecidoPopupConfirmadas)
 			popup.dismiss()
+
+			print "inicializando el screen de propsTipoFallaConfirmada!\n"
+			self.tabbedPanel.getSubMenuPorNombre("propsFallaConfirmada").inicializarDropDownPrincipal()
+			
+			print "incializada el screen de propsTipoFallaConfirmada!\n"
 			self.mostrarResultPeticion(resultPeticion,popup)
+			#print "notificando a main...\n"
+			#	lockPropsConfirmadas.notify_all()
+
 
 	#Muestra un dialogo que indica si las propiedades se pudieron 
 	#cargar desde la BD, o si se usara la DB local.

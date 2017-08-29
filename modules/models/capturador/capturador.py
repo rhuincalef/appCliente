@@ -947,7 +947,7 @@ class Capturador(object):
     db = TinyDB(LOCAL_BD_PROPS_CONFIRMADAS)
     listaElems = db.all()
     if len(listaElems) == 0:
-      msg = "\nNo existen atributos locales \npara los tipos de falla"
+      msg = "\nNo existen atributos locales para los tipos de falla\n"
       print msg
       self.propsConfirmados = ListadoPropiedades()
       raise ExcepcionSinDatosTiposFalla(msg)
