@@ -13,6 +13,13 @@ Iniciando threadGetPropsConfirmadas()...
 
 EN getPropsCOnfirmadas()...
 
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 2...
 
 3...
@@ -22,7 +29,7 @@ EN getPropsCOnfirmadas()...
 5...
 
 listaTFalla:
- [{'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}] 
+ [{'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'Baja bache: Area afectada menor al 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'Media bache: Area afectada menor al 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '3', 'valor': 'Alta bache: Area afectada menor al 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'Baja grieta: Area afectada menor al 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'Media grieta: Area afectada menor al 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '6', 'valor': 'Alta grieta: Area afectada menor al 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'Deficiencia sellado bajo: Area afectada < 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'Deficiencia sellado medio: Area afectada < 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '9', 'valor': 'Deficiencia sellado  alto: Area afectada < 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'Deformacion bajo: Area afectada < 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'Deformacion medio: Area afectada < 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '12', 'valor': 'Deformacion alto: Area efectada < 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}] 
 
 En crearListaProps()...
 
@@ -30,49 +37,55 @@ tipoFalla['id']: 1
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'Baja bache: Area afectada menor al 5%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"1", "valor":"bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"1", "valor":"Baja bache: Area afectada menor al 5%"}
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'Media bache: Area afectada menor al 10%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"2", "valor":"medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"2", "valor":"Media bache: Area afectada menor al 10%"}
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '3', 'valor': 'Alta bache: Area afectada menor al 15%'}
 
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"3", "valor":"alto: longitud con deficiencias de sellado > 25% de la longitud de la junta"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"3", "valor":"Alta bache: Area afectada menor al 15%"}
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}
 
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"Pavimento  r\u00edgido"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"Pavimento flexible"}
 
 en constructor propiedad!
-asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}]
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'Baja bache: Area afectada menor al 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'Media bache: Area afectada menor al 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '3', 'valor': 'Alta bache: Area afectada menor al 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}]
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'Baja bache: Area afectada menor al 5%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"1", "valor":"bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"1", "valor":"Baja bache: Area afectada menor al 5%"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'1'}
+prop: {u'valor': u'Baja bache: Area afectada menor al 5%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'1'}
 
 
 
@@ -91,20 +104,20 @@ asociada!
 
 propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
 
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'} ...
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'1', 'valor': 'Baja bache: Area afectada menor al 5%'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'Media bache: Area afectada menor al 10%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"2", "valor":"medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"2", "valor":"Media bache: Area afectada menor al 10%"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'2'}
+prop: {u'valor': u'Media bache: Area afectada menor al 10%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'2'}
 
 
 
@@ -123,394 +136,117 @@ asociada!
 
 propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
 
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'} ...
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'2', 'valor': 'Media bache: Area afectada menor al 10%'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '3', 'valor': 'Alta bache: Area afectada menor al 15%'}
 
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"3", "valor":"alto: longitud con deficiencias de sellado > 25% de la longitud de la junta"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"3", "valor":"Alta bache: Area afectada menor al 15%"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'3'}
+prop: {u'valor': u'Alta bache: Area afectada menor al 15%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.5'}], u'id': u'3'}
 
 
 
 La criticidad tiene propiedades!
 
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.5'}
 
 s['clave']: ponderacion
 
-s['valor']: 1.3
+s['valor']: 1.5
 
 en constructor propiedad!
 instanciada!
 
 asociada!
 
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}]
 
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'} ...
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}"], 'clave': 'criticidad', 'id': u'3', 'valor': 'Alta bache: Area afectada menor al 15%'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}
 
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"Pavimento  r\u00edgido"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'pavimento r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
+prop: {u'valor': u'Pavimento  r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
 
 
 
-Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\xc3\xadgido'} ...
-
-tipoFalla['id']: 3
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\xc3\xadgido'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}
 
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"7", "valor":"bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible"}
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"8", "valor":"medio: 3 \u2264ancho grieta\u2264 10 mm \u00f3 c/ resaltos de ancho < 50 mm \u00f3 escalonamiento < 15 mm"}
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"9", "valor":"alto: ancho 10 mm \u00f3 resaltos de ancho 50 mm \u00f3 escalonamiento 15 mm"}
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
-
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
-
-en constructor propiedad!
-asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}]
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"7", "valor":"bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible"}
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"Pavimento flexible"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'7'}
+prop: {u'valor': u'Pavimento flexible', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'2'}
 
 
 
-La criticidad tiene propiedades!
-
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
-
-s['clave']: ponderacion
-
-s['valor']: 1
-
-en constructor propiedad!
-instanciada!
-
-asociada!
-
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
-
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'} ...
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"8", "valor":"medio: 3 \u2264ancho grieta\u2264 10 mm \u00f3 c/ resaltos de ancho < 50 mm \u00f3 escalonamiento < 15 mm"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'medio: 3 \u2264ancho grieta\u2264 10 mm \xf3 c/ resaltos de ancho < 50 mm \xf3 escalonamiento < 15 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'8'}
-
-
-
-La criticidad tiene propiedades!
-
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
-
-s['clave']: ponderacion
-
-s['valor']: 1.15
-
-en constructor propiedad!
-instanciada!
-
-asociada!
-
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
-
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'} ...
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"9", "valor":"alto: ancho 10 mm \u00f3 resaltos de ancho 50 mm \u00f3 escalonamiento 15 mm"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'alto: ancho 10 mm \xf3 resaltos de ancho 50 mm \xf3 escalonamiento 15 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'9'}
-
-
-
-La criticidad tiene propiedades!
-
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
-
-s['clave']: ponderacion
-
-s['valor']: 1.3
-
-en constructor propiedad!
-instanciada!
-
-asociada!
-
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
-
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'} ...
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
-
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'pavimento r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
-
-
-
-Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\xc3\xadgido'} ...
-
-tipoFalla['id']: 4
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"10", "valor":"bajo: profundidad m\u00e1xima del ahuellamiento es inferior a los 20 mm"}
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"11", "valor":"medio: profundidad m\u00e1xima es mayor a 20 mm pero inferior a 40 mm"}
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"12", "valor":"alto: profundidad m\u00e1xima superior a 40 mm"}
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}
-
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"pavimento flexible"}
-
-en constructor propiedad!
-asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}]
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"10", "valor":"bajo: profundidad m\u00e1xima del ahuellamiento es inferior a los 20 mm"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'bajo: profundidad m\xe1xima del ahuellamiento es inferior a los 20 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'10'}
-
-
-
-La criticidad tiene propiedades!
-
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
-
-s['clave']: ponderacion
-
-s['valor']: 1
-
-en constructor propiedad!
-instanciada!
-
-asociada!
-
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
-
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'} ...
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"11", "valor":"medio: profundidad m\u00e1xima es mayor a 20 mm pero inferior a 40 mm"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'medio: profundidad m\xe1xima es mayor a 20 mm pero inferior a 40 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'11'}
-
-
-
-La criticidad tiene propiedades!
-
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
-
-s['clave']: ponderacion
-
-s['valor']: 1.15
-
-en constructor propiedad!
-instanciada!
-
-asociada!
-
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
-
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'} ...
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}
-
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
-
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"12", "valor":"alto: profundidad m\u00e1xima superior a 40 mm"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'alto: profundidad m\xe1xima superior a 40 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'12'}
-
-
-
-La criticidad tiene propiedades!
-
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
-
-s['clave']: ponderacion
-
-s['valor']: 1.3
-
-en constructor propiedad!
-instanciada!
-
-asociada!
-
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
-
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'} ...
-
-en escaparCaracteresEspeciales()...
-
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}
-
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"pavimento flexible"}
-
-en constructor propiedad!
-leidas propiedades principales falla!
-
-prop: {u'valor': u'pavimento flexible', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'2'}
-
-
-
-Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'} ...
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'} ...
 
 tipoFalla['id']: 2
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'Baja grieta: Area afectada menor al 5%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"4", "valor":"bajo: Se determina por cantidad de baches y dimensiones"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"4", "valor":"Baja grieta: Area afectada menor al 5%"}
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'Media grieta: Area afectada menor al 10%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"5", "valor":"medio: Se determina por cantidad de baches y dimensiones"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"5", "valor":"Media grieta: Area afectada menor al 10%"}
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '6', 'valor': 'Alta grieta: Area afectada menor al 15%'}
 
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"6", "valor":"alto: Se determina por cantidad de baches y dimensiones"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"6", "valor":"Alta grieta: Area afectada menor al 15%"}
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}
 
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"Pavimento  r\u00edgido"}
 
 en constructor propiedad!
-asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}]
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'Baja grieta: Area afectada menor al 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'Media grieta: Area afectada menor al 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '6', 'valor': 'Alta grieta: Area afectada menor al 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}]
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'Baja grieta: Area afectada menor al 5%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"4", "valor":"bajo: Se determina por cantidad de baches y dimensiones"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"4", "valor":"Baja grieta: Area afectada menor al 5%"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'bajo: Se determina por cantidad de baches y dimensiones', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'4'}
+prop: {u'valor': u'Baja grieta: Area afectada menor al 5%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'4'}
 
 
 
@@ -529,20 +265,20 @@ asociada!
 
 propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
 
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'} ...
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'Baja grieta: Area afectada menor al 5%'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'Media grieta: Area afectada menor al 10%'}
 
 iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"5", "valor":"medio: Se determina por cantidad de baches y dimensiones"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"5", "valor":"Media grieta: Area afectada menor al 10%"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'medio: Se determina por cantidad de baches y dimensiones', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'5'}
+prop: {u'valor': u'Media grieta: Area afectada menor al 10%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'5'}
 
 
 
@@ -561,60 +297,373 @@ asociada!
 
 propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
 
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'} ...
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'Media grieta: Area afectada menor al 10%'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '6', 'valor': 'Alta grieta: Area afectada menor al 15%'}
 
-iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
 
-codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"6", "valor":"alto: Se determina por cantidad de baches y dimensiones"}
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"6", "valor":"Alta grieta: Area afectada menor al 15%"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'alto: Se determina por cantidad de baches y dimensiones', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'6'}
+prop: {u'valor': u'Alta grieta: Area afectada menor al 15%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.5'}], u'id': u'6'}
 
 
 
 La criticidad tiene propiedades!
 
-subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.5'}
 
 s['clave']: ponderacion
 
-s['valor']: 1.3
+s['valor']: 1.5
 
 en constructor propiedad!
 instanciada!
 
 asociada!
 
-propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}]
 
-Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'} ...
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'Alta grieta: Area afectada menor al 15%'} ...
 
 en escaparCaracteresEspeciales()...
 
-con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}
 
-codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"Pavimento  r\u00edgido"}
 
 en constructor propiedad!
 leidas propiedades principales falla!
 
-prop: {u'valor': u'pavimento r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
+prop: {u'valor': u'Pavimento  r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
 
 
 
-Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\xc3\xadgido'} ...
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\xc3\xadgido'} ...
+
+tipoFalla['id']: 3
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'Deficiencia sellado bajo: Area afectada < 5%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"7", "valor":"Deficiencia sellado bajo: Area afectada < 5%"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'Deficiencia sellado medio: Area afectada < 10%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"8", "valor":"Deficiencia sellado medio: Area afectada < 10%"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '9', 'valor': 'Deficiencia sellado  alto: Area afectada < 15%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"9", "valor":"Deficiencia sellado  alto: Area afectada < 15%"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"Pavimento  r\u00edgido"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"Pavimento flexible"}
+
+en constructor propiedad!
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'Deficiencia sellado bajo: Area afectada < 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'Deficiencia sellado medio: Area afectada < 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '9', 'valor': 'Deficiencia sellado  alto: Area afectada < 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}]
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'Deficiencia sellado bajo: Area afectada < 5%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"7", "valor":"Deficiencia sellado bajo: Area afectada < 5%"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Deficiencia sellado bajo: Area afectada < 5%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'7'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
+
+s['clave']: ponderacion
+
+s['valor']: 1
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'7', 'valor': 'Deficiencia sellado bajo: Area afectada < 5%'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'Deficiencia sellado medio: Area afectada < 10%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"8", "valor":"Deficiencia sellado medio: Area afectada < 10%"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Deficiencia sellado medio: Area afectada < 10%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'8'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.15
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'8', 'valor': 'Deficiencia sellado medio: Area afectada < 10%'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '9', 'valor': 'Deficiencia sellado  alto: Area afectada < 15%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"9", "valor":"Deficiencia sellado  alto: Area afectada < 15%"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Deficiencia sellado  alto: Area afectada < 15%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.5'}], u'id': u'9'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.5'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.5
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}"], 'clave': 'criticidad', 'id': u'9', 'valor': 'Deficiencia sellado  alto: Area afectada < 15%'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'Pavimento  r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"Pavimento  r\u00edgido"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Pavimento  r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\xc3\xadgido'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"Pavimento flexible"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Pavimento flexible', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'2'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'} ...
+
+tipoFalla['id']: 5
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'Deformacion bajo: Area afectada < 5%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"10", "valor":"Deformacion bajo: Area afectada < 5%"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'Deformacion medio: Area afectada < 10%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"11", "valor":"Deformacion medio: Area afectada < 10%"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '12', 'valor': 'Deformacion alto: Area efectada < 15%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"12", "valor":"Deformacion alto: Area efectada < 15%"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"Pavimento flexible"}
+
+en constructor propiedad!
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'Deformacion bajo: Area afectada < 5%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'Deformacion medio: Area afectada < 10%'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '12', 'valor': 'Deformacion alto: Area efectada < 15%'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}]
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'Deformacion bajo: Area afectada < 5%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"10", "valor":"Deformacion bajo: Area afectada < 5%"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Deformacion bajo: Area afectada < 5%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'10'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
+
+s['clave']: ponderacion
+
+s['valor']: 1
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'10', 'valor': 'Deformacion bajo: Area afectada < 5%'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'Deformacion medio: Area afectada < 10%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"11", "valor":"Deformacion medio: Area afectada < 10%"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Deformacion medio: Area afectada < 10%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'11'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.15
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'11', 'valor': 'Deformacion medio: Area afectada < 10%'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.5'}], 'clave': 'criticidad', 'id': '12', 'valor': 'Deformacion alto: Area efectada < 15%'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.5'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.5"}], "clave":"criticidad", "id":"12", "valor":"Deformacion alto: Area efectada < 15%"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Deformacion alto: Area efectada < 15%', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.5'}], u'id': u'12'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.5'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.5
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}"], 'clave': 'criticidad', 'id': u'12', 'valor': 'Deformacion alto: Area efectada < 15%'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'Pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"Pavimento flexible"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'Pavimento flexible', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'2'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'} ...
 
 Fin de crearListaProps()...
 
 self.propsConfirmados tiene: 
 
- - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}
+ - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}
 
 Despues de capturador.obtenerPropsConfirmadas()
 
@@ -649,7 +698,7 @@ contador actual: 180
 
 incializada el screen de propsTipoFallaConfirmada!
 
-En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}
 
 customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
 
@@ -657,7 +706,7 @@ estaDeshabilitada: True
 
 elem.estaHabilitada(): False
 
-Propiedad deshabilitada deficiencia de sellado: True
+Propiedad deshabilitada Bache: True
 
 customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
 
@@ -665,7 +714,15 @@ estaDeshabilitada: False
 
 elem.estaHabilitada(): True
 
-Propiedad deshabilitada grietas: False
+Propiedad deshabilitada Grieta: False
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+elem.estaHabilitada(): True
+
+Propiedad deshabilitada Deficiencia de sellado: False
 
 customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
 
@@ -673,23 +730,8 @@ estaDeshabilitada: True
 
 elem.estaHabilitada(): False
 
-Propiedad deshabilitada ahuellamiento y depresiones: True
+Propiedad deshabilitada Deformación: True
 
-customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
-
-estaDeshabilitada: False
-
-elem.estaHabilitada(): True
-
-Propiedad deshabilitada baches: False
-
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 MOSTRANDO EL RESULTADO DE LA PETICION...
 
 En comprobarConexionSensor().
@@ -702,15 +744,15 @@ Comenzando nueva BD, deshabilitando los elementos del menu!
 
 Inicializada por Defecto BD Local de muestras...
 
-En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_29-08-2017.json
+En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_30-08-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc2e975b210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc3080cbfa0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc31004ab40>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc32004a590>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a0c11e600>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a0c1853d0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a0c350f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a440d5980>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f7a45b5d1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f7a45b5d1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f7a45b5d1a0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -732,13 +774,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc2e975b210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc3080cbfa0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc31004ab40>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc32004a590>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a0c11e600>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a0c1853d0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a0c350f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f7a440d5980>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f7a45b5d1a0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f7a45b5d1a0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f7a45b5d1a0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -762,7 +804,7 @@ iterando... <class 'kivy.uix.button.Button'>
 
 iterando... <class 'kivy.uix.button.Button'>
 
-En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}
 
 type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
 
@@ -792,7 +834,7 @@ recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
 recorriendo elemento.id: subLayoutTipoFalla
 
-Presione un elemento tipo falla en el tree! baches
+Presione un elemento tipo falla en el tree! Grieta
 
 type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
 
@@ -822,16 +864,16 @@ recorriendo elemento.id: subLayoutTipoFalla
 
 En cargarPropsAsociadas()...
 
-controlador.getPropsConfirmados():  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}...
+controlador.getPropsConfirmados():  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'Baja bache: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'Media bache: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'Alta bache: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'Bache'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'Baja grieta: Area afectada menor al 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'Media grieta: Area afectada menor al 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'Alta grieta: Area afectada menor al 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'Grieta'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'Deficiencia sellado bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'Deficiencia sellado medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'Deficiencia sellado  alto: Area afectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'Pavimento  r\\xc3\\xadgido'}", "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'Deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'Deformacion bajo: Area afectada < 5%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'Deformacion medio: Area afectada < 10%\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.5\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'Deformacion alto: Area efectada < 15%\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'Pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '5', 'valor': 'Deformaci\xc3\xb3n'}...
 
 len(controlador.getPropsConfirmados()): 4...
 
 screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
 
-tipoFalla.getValor(): baches
+tipoFalla.getValor(): Grieta
  ; tipoFalla.estaHabilitada(): True
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7fc31004a3d0>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f7a0c3507c0>
 
 w.id: None
 
@@ -849,13 +891,13 @@ En cargarOpciones()...
 
 prop.getClave(): tipoMaterial
 
-prop.getValor(): pavimento rígido
+prop.getValor(): Pavimento  rígido
 
-agregando cadOpcion generada: pavimento rígido
+agregando cadOpcion generada: Pavimento  rígido
 
-Esta deshabilitado pavimento rígido: False 
+Esta deshabilitado Pavimento  rígido: False 
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7fc31004a3d0>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f7a0c3507c0>
 
 w.id: None
 
@@ -873,51 +915,51 @@ En cargarOpciones()...
 
 prop.getClave(): criticidad
 
-prop.getValor(): bajo: Se determina por cantidad de baches y dimensiones
+prop.getValor(): Baja grieta: Area afectada menor al 5%
 
 entre a generarSTRIconos()!
 
-propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'Baja grieta: Area afectada menor al 5%'}
 
 propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
 
 recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}
 
-agregando cadOpcion generada: [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: Se determina por cantidad de baches y dimensiones
+agregando cadOpcion generada: [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Baja grieta: Area afectada menor al 5%
 
-Esta deshabilitado [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: Se determina por cantidad de baches y dimensiones: False 
+Esta deshabilitado [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Baja grieta: Area afectada menor al 5%: False 
 
 prop.getClave(): criticidad
 
-prop.getValor(): medio: Se determina por cantidad de baches y dimensiones
+prop.getValor(): Media grieta: Area afectada menor al 10%
 
 entre a generarSTRIconos()!
 
-propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'Media grieta: Area afectada menor al 10%'}
 
 propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
 
 recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}
 
-agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: Se determina por cantidad de baches y dimensiones
+agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Media grieta: Area afectada menor al 10%
 
-Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: Se determina por cantidad de baches y dimensiones: False 
+Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Media grieta: Area afectada menor al 10%: False 
 
 prop.getClave(): criticidad
 
-prop.getValor(): alto: Se determina por cantidad de baches y dimensiones
+prop.getValor(): Alta grieta: Area afectada menor al 15%
 
 entre a generarSTRIconos()!
 
-propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'Alta grieta: Area afectada menor al 15%'}
 
-propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}]
 
-recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.5'}
 
-agregando cadOpcion generada: [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] alto: Se determina por cantidad de baches y dimensiones
+agregando cadOpcion generada: [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Alta grieta: Area afectada menor al 15%
 
-Esta deshabilitado [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] alto: Se determina por cantidad de baches y dimensiones: False 
+Esta deshabilitado [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Alta grieta: Area afectada menor al 15%: False 
 
 type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
 
@@ -947,7 +989,7 @@ recorriendo elemento.id: subLayoutTipoFalla
 deshabilitado: subLayoutTipoFalla !
 
 
-Presione una propiedad del tipo de falla en el tree! pavimento rígido
+Presione una propiedad del tipo de falla en el tree! Pavimento  rígido
 
 type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
 
@@ -1007,7 +1049,7 @@ recorriendo elemento.id: subLayoutTipoFalla
 deshabilitado: subLayoutTipoFalla !
 
 
-Presione una propiedad del tipo de falla en el tree! [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: Se determina por cantidad de baches y dimensiones
+Presione una propiedad del tipo de falla en el tree! [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] Baja grieta: Area afectada menor al 5%
 
 type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
 
@@ -1055,7 +1097,7 @@ Existen nodos seleccionados!
 
 en filtrarContenidoOpcion()...
 
-cadena final: baches
+cadena final: Grieta
 
 En _obtenerWidgetPorId()..
 
@@ -1073,11 +1115,11 @@ Existen nodos seleccionados!
 
 en filtrarContenidoOpcion()...
 
-cad final: medio: Se determina por cantidad de baches y dimensiones 
+cad final: Baja grieta: Area afectada menor al 5% 
 
 filtrando por separador...
 
-cadena filtrada por separador final: medio
+cadena filtrada por separador final: Baja grieta
 
 En _obtenerWidgetPorId()..
 
@@ -1097,9 +1139,9 @@ Existen nodos seleccionados!
 
 en filtrarContenidoOpcion()...
 
-cadena final: pavimento rígido
+cadena final: Pavimento  rígido
 
-props leidas: baches, pavimento rígido, medio 
+props leidas: Grieta, Pavimento  rígido, Baja grieta 
 
 
 Entre al filechooser
@@ -1121,7 +1163,7 @@ es_dir_valido:  True
 
 Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
 
-Data SETEADA!!! con: nombre_cap =  cabot ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
+Data SETEADA!!! con: nombre_cap =  asd ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
 Sensor LISTO? : True...
 
 Bindeado SPACEBAR!!
@@ -1134,7 +1176,7 @@ En Kinectviewer.capturar()...con idFalla -1
 
 En getDatosSensor()...
 
-len(self.queueVideo) = 0
+len(self.queueVideo) = 1
 
 rgbSinCod.shape: (480,640)
 
@@ -1164,16 +1206,227 @@ Seleccionando capturarFallaNueva...
 tipo capturador: <class 'capturador.Capturador'>
 En capturador FALLA NUEVA!!!
 
-Cambiado el estado de la falla a : Confirmada; latitud: -43.258991 - longitud: -65.299255 
+
+self.posCoordenadaActual + 1: 1
+
+len(self.colCoordenadas): 12
+
+self.posCoordenadaActual: 1
+
+
+retornando la siguiente coordenada: { nombreCalle: Michael Jones[1-99] y Av. Hipolito Irigoyen, latitud: -43.2612999,  longitud -65.2952564 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 1}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Michael Jones[1-99] y Av. Hipolito Irigoyen
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.2612999 - longitud: -65.2952564 
 
 Asignadas propiedades al estado de falla confirmada!
-tipoFalla: baches; tipoReparacion: medio; tipoMaterial: pavimento rígido
+tipoFalla: Grieta; tipoReparacion: Baja grieta; tipoMaterial: Pavimento  rígido
 
 En capturador.capturar()
 
-dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados ; nombre_captura: cabot
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados ; nombre_captura: asd
 
-Cantidad de archivos .pcd con el nombre  cabot es :  1
+Cantidad de archivos .pcd con el nombre  asd es :  1
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.2612999,long:-65.2952564) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
+
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_1.csv 
+
+Falla (lat:-43.2612999,long:-65.2952564) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  asd_1.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd', u'longitud': -65.2952564}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+NO desea visualizar
+
+No se visualizara la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_1.csv'}]...
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_1.csv'}] en disco!
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+len(self.queueVideo) = 0
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! tipo: float32 
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 2
+
+len(self.colCoordenadas): 12
+
+self.posCoordenadaActual: 2
+
+
+retornando la siguiente coordenada: { nombreCalle: Condarco [1150-1198] y Fray Luis Beltran, latitud: -43.259956,  longitud -65.29862 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 2}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Condarco [1150-1198] y Fray Luis Beltran
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.259956 - longitud: -65.29862 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Grieta; tipoReparacion: Baja grieta; tipoMaterial: Pavimento  rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados ; nombre_captura: asd
+
+Cantidad de archivos .pcd con el nombre  asd es :  2
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.259956,long:-65.29862) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
+
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_2.csv 
+
+Falla (lat:-43.259956,long:-65.29862) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  asd_2.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd', u'longitud': -65.29862}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_2.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+NO desea visualizar
+
+No se visualizara la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_2.csv'}]...
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_2.csv'}] en disco!
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+len(self.queueVideo) = 0
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! tipo: float32 
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 3
+
+len(self.colCoordenadas): 12
+
+self.posCoordenadaActual: 3
+
+
+retornando la siguiente coordenada: { nombreCalle: Cabot[1-98] y Condarco, latitud: -43.258991,  longitud -65.299255 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 3}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Cabot[1-98] y Condarco
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.258991 - longitud: -65.299255 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Grieta; tipoReparacion: Baja grieta; tipoMaterial: Pavimento  rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados ; nombre_captura: asd
+
+Cantidad de archivos .pcd con el nombre  asd es :  3
 
 En capturador.registrar()...
 
@@ -1181,301 +1434,129 @@ Appeandeada la captura!
 
 En estado.registrar()
 Falla (lat:-43.258991,long:-65.299255) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
 
-Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/cabot_1.csv 
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_3.csv 
 
 Falla (lat:-43.258991,long:-65.299255) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
 
-Captura realizada con exito! Agregada:  cabot_1.pcd
+Captura realizada con exito! Agregada:  asd_3.pcd
 
 BD actualizada con elementos: 
-[{u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/mitre_confirmado_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/mitre_confirmado_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/mitre_confirmado_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/mitre_confirmado_4.pcd', u'longitud': -65.308193}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/ameghino_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/muzio_1.pcd', u'longitud': -65.299047}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/moreno_1.pcd', u'longitud': -65.297679}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd', u'longitud': -65.299255}]
+[{u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd', u'longitud': -65.299255}]
 -----------------------------------------------------
 Guardado archivo .pcd en BD_JSON!
 
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/cabot_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_3.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
 
 CERRADO EL POPUP CAPTURA!!!
 
 MOSTRADO DIALOGO DE VISUALIZACION!! 
 
-Si desea visualizar!!
+NO desea visualizar
 
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/cabot_1.csv'}]...
-
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
-
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd'}
-
-Abierto visualizador
+No se visualizara la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_3.csv'}]...
 
 Si desea conservar la captura
 
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/cabot_1.csv'}] en disco!
-Screen encontrada y removida!
-SCreen agregada al mananger
-Las screens actuales de screenmanager luego de switch_to son: 
-['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
-CAMBIO DE DIRECTORIO!
-selection : []
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_3.csv'}] en disco!
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+En Kinectviewer.capturar()...con idFalla -1
 
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+En getDatosSensor()...
 
-PRE-ENTER!!
-DesBindeada SPACEBAR!!
+len(self.queueVideo) = 1
 
-La seleccion es:  []
+rgbSinCod.shape: (480,640)
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+rgbSinCod.size: 921600
 
-En dialogopropscaptura.getData(): -1
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
 
-controlador.getData('idFalla') > 0 ? False
+LLENADA dataNube! tipo: float32 
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc2e975b210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc3080cbfa0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc31004ab40>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc32004a590>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-Iterando elemento: None
-
-Iterando elemento: subLayoutTipoCriticidad
-
-/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:423: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
-  self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
-Iterando elemento: subLayoutTipoMaterial
-
-Iterando elemento: subLayoutTipoFalla
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-LLamando al screen de SUBIR FALLAS...
-
-en tabbedpanel.desHabilitarOpciones()
-
-iterando... <class 'customwidgets.MyTabbedPanel'>
-
-iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
-
-iterando... <class 'kivy.uix.widget.Widget'>
-
-iterando... <class 'kivy.uix.widget.Widget'>
-
-iterando... <class 'kivy.uix.scrollview.ScrollView'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
-
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc2e975b210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc3080cbfa0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc31004ab40>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc32004a590>]
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
-
-iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
-
-iterando... <class 'submenuservidor.ServidorScreen'>
-
-iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-Refrescando vista!!!! 
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
 instanciado dialogo espera...
 
-Iniciando thread-filtrado de capturas
-{u'rangoEstimado1': u'67', u'calle': u'Cabot', u'rangoEstimado2': None, u'calleSecundariaA': u'Cabot', u'calleSecundariaB': u'Condarco', u'estado': 0}
-Error desconocida (<type 'exceptions.TypeError'>) en obtenerDirEstimada(): int() argument must be a string or a number, not 'NoneType'
-Finalizado thread-FiltradoCapturas...
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
 
-En subircapturasservidor.args_converter()...
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados
 
-row_index actual: 0
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.258991 - longitud: -65.299255  }, 'capturas':  [Captura: nombreArchivoCaptura=cabot_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= cabot;
-] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+Seleccionando capturarFallaNueva...
 
-Los attrEstado son: ['No asignado', 'Cabot(-43.258991)', '67--1(-65.299255)']
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
 
->...............................................<
 
+self.posCoordenadaActual + 1: 4
 
-Cambio la seleccion!
+len(self.colCoordenadas): 12
 
-El estado de las fallas es: 
+self.posCoordenadaActual: 4
 
--->{ 'estado': { Confirmada; latitud: -43.258991 - longitud: -65.299255  }, 'capturas':  [Captura: nombreArchivoCaptura=cabot_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= cabot;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
 
+retornando la siguiente coordenada: { nombreCalle: Moreno[999-1099] y Cutillo, latitud: -43.257496,  longitud -65.297679 }
 
-*****************************************
 
-Fin de cambio_seleccion
-Resultado de controlador.existenFallasSeleccionadas()? True
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 4}
 
+dumpeado objeto a archivo!
 
-lista_capturadores desde subir_capturas: 2
+retornando coordenada calle: Moreno[999-1099] y Cutillo
 
-En threadSubidaCapturas...
+Cambiado el estado de la falla a : Confirmada; latitud: -43.257496 - longitud: -65.297679 
 
-Iterando lista de capturadores...
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: Grieta; tipoReparacion: Baja grieta; tipoMaterial: Pavimento  rígido
 
-Lista capturadores: [<capturador.Capturador object at 0x7fc325137b90>, <capturador.CapturadorInformados object at 0x7fc325137c10>]
+En capturador.capturar()
 
-Iterando capturador <class 'capturador.Capturador'>
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados ; nombre_captura: asd
 
-En capturador.enviarCapturas()
+Cantidad de archivos .pcd con el nombre  asd es :  4
 
-Inicio ItemFalla.enviar() para la falla:
- -->{ 'estado': { Confirmada; latitud: -43.258991 - longitud: -65.299255  }, 'capturas':  [Captura: nombreArchivoCaptura=cabot_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= cabot;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+En capturador.registrar()...
 
-En getDicFallaEncoded()...
+Appeandeada la captura!
 
-Criticidad: medio
+En estado.registrar()
+Falla (lat:-43.257496,long:-65.297679) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_4.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
 
+Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_4.csv 
 
-Upload finished! (Returned status 200 OK)
-Registrando la respuesta...
+Falla (lat:-43.257496,long:-65.297679) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_4.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados) - formato(pcd) - extension(.pcd)
 
-Llamado loggearMensaje...
+Captura realizada con exito! Agregada:  asd_4.pcd
 
-Fin de capturador.enviarCapturas()!
+BD actualizada con elementos: 
+[{u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmadosss_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirmatidos_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confi_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/confirRodrigo_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/rodrg_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_4.pcd', u'longitud': -65.297679}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
 
-Iterando capturador <class 'capturador.CapturadorInformados'>
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_4.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_4.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
 
-En capturador.enviarCapturas()
+CERRADO EL POPUP CAPTURA!!!
 
-Fin de capturador.enviarCapturas()!
+MOSTRADO DIALOGO DE VISUALIZACION!! 
 
-Desplanificando el callback de actualizacion del screen!
+NO desea visualizar
 
-Liberando el lock!
+No se visualizara la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_4.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_4.csv'}]...
 
-Liberado el candadoFinSubidas
+Si desea conservar la captura
 
-Eliminando las capturas subidas de disco...
-
-Iterando desde capturador.descartarCapsSubidas()
-
-falla: -->{ 'estado': { Confirmada; latitud: -43.258991 - longitud: -65.299255  }, 'capturas':  [Captura: nombreArchivoCaptura=cabot_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= cabot;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
-
-En itemFalla.descartar()...
-
-La coleccion antes de descartar el itemfalla con sus capturas tiene:%s
-
-----------------------------------------------------------
-
-En itemfalla.mostrarColItemFalla()...
-
-----------------------------------------------------------
-
--->{ 'estado': { Confirmada; latitud: -43.258991 - longitud: -65.299255  }, 'capturas':  [Captura: nombreArchivoCaptura=cabot_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= cabot;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-----------------------------------------------------------
-
-Fin de itemfalla.mostrarColItemFalla()...
-
-----------------------------------------------------------
-
-Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/cabot_1.pcd
-
-Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/cabot_1.csv
-
-Eliminando captura de memoria...
-
-Mostrando la coleccion desde captura
-
-En mostrarCapturas()
-
-Fin mostrarCapturas()
-
-Fin de itemFalla.descartar()
-
-
-
-Mostrando la coleccion colItemFalla despues de borrar una falla subida:
-%s
-
-----------------------------------------------------------
-
-En itemfalla.mostrarColItemFalla()...
-
-----------------------------------------------------------
-
--->{ 'estado': { Confirmada; latitud: -43.258991 - longitud: -65.299255  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-----------------------------------------------------------
-
-Fin de itemfalla.mostrarColItemFalla()...
-
-----------------------------------------------------------
-
-----------------------------------------------------------
-
-En itemfalla.mostrarColItemFalla()...
-
-----------------------------------------------------------
-
-----------------------------------------------------------
-
-Fin de itemfalla.mostrarColItemFalla()...
-
-----------------------------------------------------------
-
-Eliminadas todas las capturas subidas!
-
-Cancelado subida al servidor!
-
-Refrescando vista!!!! 
-instanciado dialogo espera...
-
-Iniciando thread-filtrado de capturas
-Cambio la seleccion!
-
-El estado de las fallas es: 
-
-
-*****************************************
-
-Fin de cambio_seleccion
-Finalizado thread-FiltradoCapturas...
-
-Vaciadas capturas!
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc2e975b210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc3080cbfa0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc31004ab40>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc32004a590>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc3251e4d70>
-
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/asd_4.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/csv/asd_4.csv'}] en disco!
+keycode[0] : 27
+keycode[1] : escape

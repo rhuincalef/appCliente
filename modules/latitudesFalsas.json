@@ -1,19 +1,65 @@
 {
-	"posCoordenadaActual": 0,
-	"colCoordenadas": [
-						{
-							"posCoordenada": 0,
-							"latitud":-43.2612999,
-							"longitud":-65.2952564,
-							"nombreCalle": "Michael Jones[1-99] y Av. Hipolito Irigoyen"
-						},
-
-						{
-							"posCoordenada": 1,
-							"latitud": -43.2599560,
-							"longitud":-65.2986200,
-							"nombreCalle": "Condarco [1150-1198] y Fray Luis Beltran"
-						}
-
-					]
+    "colCoordenadas": [
+        {
+            "latitud": -43.2612999, 
+            "longitud": -65.2952564, 
+            "nombreCalle": "Michael Jones[1-99] y Av. Hipolito Irigoyen"
+        }, 
+        {
+            "latitud": -43.259956, 
+            "longitud": -65.29862, 
+            "nombreCalle": "Condarco [1150-1198] y Fray Luis Beltran"
+        }, 
+        {
+            "latitud": -43.258991, 
+            "longitud": -65.299255, 
+            "nombreCalle": "Cabot[1-98] y Condarco"
+        }, 
+        {
+            "latitud": -43.257496, 
+            "longitud": -65.297679, 
+            "nombreCalle": "Moreno[999-1099] y Cutillo"
+        }, 
+        {
+            "latitud": -43.256882, 
+            "longitud": -65.299047, 
+            "nombreCalle": "Muzio-j [1-99] y Moreno"
+        }, 
+        {
+            "latitud": -43.25916, 
+            "longitud": -65.311438, 
+            "nombreCalle": "Ameguino[699-799] y Sobernia Nacional"
+        }, 
+        {
+            "latitud": -43.259135, 
+            "longitud": -65.308193, 
+            "nombreCalle": "Pelegrini[700-798] y Moreteau"
+        }, 
+        {
+            "latitud": -43.253469, 
+            "longitud": -65.308611, 
+            "nombreCalle": "San Martin y Rivadavia"
+        }, 
+        {
+            "latitud": -43.252091, 
+            "longitud": -65.313846, 
+            "nombreCalle": "Av. Rawson y Bell A.P."
+        }, 
+        {
+            "latitud": -43.251478, 
+            "longitud": -65.317677, 
+            "nombreCalle": "Pecoraro y Ecuador"
+        }, 
+        {
+            "latitud": -43.252548, 
+            "longitud": -65.318417, 
+            "nombreCalle": "Gales y Marconi"
+        }, 
+        {
+            "latitud": -43.249282, 
+            "longitud": -65.310902, 
+            "nombreCalle": "Rivadavia y Ecuador"
+        }
+    ], 
+    "posCoordenadaActual": 4
 }

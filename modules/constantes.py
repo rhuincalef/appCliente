@@ -207,9 +207,6 @@ PATH_ARCH_UBICACIONES_FALSAS = "latitudesFalsas.json"
 
 
 
-
-
-
 CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacenan
 					# los .csv convertidos y que se subiran al servidor
 
@@ -218,9 +215,9 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 #############################################################################################
 
 
-#URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
+URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
 #Servidor Guille
-URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
+#URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
 
 
 
@@ -484,8 +481,7 @@ CRITICIDADES = [
 ]
 
 # Criticidades habilitadas para seleccionar en el menu 
-#IDS_CRITICIDADES_HABILITADAS = [1,2]
-IDS_CRITICIDADES_HABILITADAS = [1,2,3,4,5]
+#IDS_CRITICIDADES_HABILITADAS = [1,2,3,4,5]
 
 
 # Archivos modificados en servidor -->

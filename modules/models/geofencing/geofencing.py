@@ -56,8 +56,21 @@ class GeofencingAPI1(object):
 		pass
 
 	# TODO: Obtiene la latidud y longitud del GPS.
+	#def getLatLong(self):
+	#	return (LAT_PRUEBA,LONG_PRUEBA)
+
+
 	def getLatLong(self):
-		return (LAT_PRUEBA,LONG_PRUEBA)
+		"""Obtiene la latidud y longitud ficticias de un objeto FakeGPS que simula
+			obtener distintas ubicaciones falsas."""
+		#Se obtiene la siguiente coordenada del objeto FakeGPS y se sobreescribe el json
+		# con las ubicaciones para mantener la coordenada actual entre varias ejecuciones de 
+		# appCliente. 	
+		coord = self.fakeGPS.getCoordenada()
+		self.fakeGPS.persistirUbicaciones()
+		print "retornando coordenada calle: %s\n" % coord.getNombreCalle() 
+		return coord.getLatitud(),coord.getLongitud()
+
 
 	#Obtiene la latidud y longitud para una captura y lo alamcena
 	# en la BD local junto con el nombre de la captura.
@@ -106,23 +119,12 @@ class GeofencingAPI1(object):
 
 
 
-	#BACKUP!
-	#def almacenarCapturaLocal(self,lat,long,nombre_archivo):
-	#	print "En alamcenarCapturaLocal() ..."
-	#	self.bd_json.agregar(lat,long,nombre_archivo)
-
-
-
-
 # Clase que almacena en una TinyBD la latidud, longitud,
 # y el nombre del archivo de captura .pcd.
 # https://tinydb.readthedocs.io/en/latest/getting-started.html#basic-usage
 #
 from tinydb import TinyDB, Query
-
-	
-
-
+from fakegps import *
 
 class GeofencingAPI(object):
 	""" API para obtener la calle y altura de una falla confirmada,
@@ -130,14 +132,16 @@ class GeofencingAPI(object):
 
 	def __init__(self):
 		controlador = App.get_running_app()
+		self.fakeGPS = FakeGPS()
+		self.fakeGPS.inicializarGPS()
+
 		# Si no es el gps real no se accede al dispositivo y se inicializa
 		# solo la BD de coordenadas
 		if not (controlador.args.gps == OPCIONES_GPS[1]):
 			self.session = gps.gps()
 			self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
-		#BACKUP!
-		#self.bd_json = BDLocal()
 
+		
 
 	def obtenerLatitudLongitud(self,nombre_archivo="test_file_default.pcd"):
 		t1 = time.time()
@@ -168,15 +172,16 @@ class GeofencingAPI(object):
 		return (latitude,longitude)
 
 	
-	#Obtiene la latidud y longitud ficticias del GPS.
 	def getLatLong(self):
-		return (LAT_PRUEBA,LONG_PRUEBA)
-
-
-	#BACKUP!
-	#def almacenarCapturaLocal(self,lat,long,nombre_archivo):
-	#	print "En alamcenarCapturaLocal() ..."
-	#	self.bd_json.agregar(lat,long,nombre_archivo)
+		"""Obtiene la latidud y longitud ficticias de un objeto FakeGPS que simula
+			obtener distintas ubicaciones falsas."""
+		#Se obtiene la siguiente coordenada del objeto FakeGPS y se sobreescribe el json
+		# con las ubicaciones para mantener la coordenada actual entre varias ejecuciones de 
+		# appCliente. 	
+		coord = self.fakeGPS.getCoordenada()
+		self.fakeGPS.persistirUbicaciones()
+		print "retornando coordenada calle: %s\n" % coord.getNombreCalle() 
+		return coord.getLatitud(),coord.getLongitud()
 
 
 class BDLocal(object):
@@ -188,13 +193,8 @@ class BDLocal(object):
 			self.bd_json = TinyDB(fullPathBD)
 			self.rutaBDLocal = fullPathBD
 		print "BDLocal en json tiene: %s\n" % self.bd_json
-		#MY_JSON_BD = LOCAL_DB_JSON_NAME +time.strftime("%d-%m-%Y")+\
-		#				EXTENSION_LOCAL_BD_JSON_NAME
-		#self.bd_json = TinyDB(MY_JSON_BD)
-		#print "Abriendo BD json local %s...\n" % MY_JSON_BD
 
 
-	#AGREGADO RODRIGO
 	# Inicializa una BD Local con una fecha dada. Si no se especifica nada
 	# se considera por defecto la fecha actual. 
 	def inicializar(self,fullPathBD = None ):
@@ -212,12 +212,12 @@ class BDLocal(object):
 		print "Inicializada por Defecto BD Local de muestras...\n"
 
 
-	#AGREGADO RODRIGO
+
 	#Retorna True si la BD se encuentra inicializada con una instancia a TinyDB
 	def estaInicializada(self):
 		return self.bd_json is not None
 
-	#AGREGADO RODRIGO
+
 	#Retorna el nombre de archivo de la BD Muestras Locales
 	def getNombreBDLocal(self):
 		nombreArch = ""

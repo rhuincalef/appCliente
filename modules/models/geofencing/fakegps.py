@@ -1,11 +1,7 @@
-
-from tinydb import TinyDB, Query
 import json
-#from constantes import PATH_ARCH_UBICACIONES_FALSAS
+from constantes import PATH_ARCH_UBICACIONES_FALSAS
 
-PATH_ARCH_UBICACIONES_FALSAS = "latitudesFalsas.json"
-
-
+#PATH_ARCH_UBICACIONES_FALSAS = "latitudesFalsas.json"
 
 class ExcepcionArchCoordInvalido(Exception):
 	pass
@@ -16,11 +12,10 @@ class JSONizable(object):
 		return self.__dict__
 
 
-#class CoordenadaFalsa(object):
 class CoordenadaFalsa(JSONizable):
 	""" Clase que representa una coordenada falsa """
-	def __init__(self,posCoordenada,latitud,longitud,nombreCalle):
-		self.posCoordenada = posCoordenada
+
+	def __init__(self,latitud,longitud,nombreCalle):
 		self.latitud = latitud
 		self.longitud = longitud
 		self.nombreCalle = nombreCalle
@@ -31,9 +26,6 @@ class CoordenadaFalsa(JSONizable):
 	def getLongitud(self):
 		return self.longitud
 
-	def getPosCoordenada(self):
-		return self.posCoordenada
-
 	def getNombreCalle(self):
 		return self.nombreCalle
 
@@ -42,7 +34,7 @@ class CoordenadaFalsa(JSONizable):
 					(self.nombreCalle, self.latitud, self.longitud)
 
 
-#class FakeGPS(object):
+
 class FakeGPS(JSONizable):
 	""" Clase que simula ser un gps proporciona una secuencia de coordenadas GPS,
 		partiendo de un JSON. Esto permite que las ubicaciones no se superpongan en
@@ -50,7 +42,6 @@ class FakeGPS(JSONizable):
 	def __init__(self):
 		self.posCoordenadaActual = 0
 		self.colCoordenadas = []
-		#self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"r+") 
 		self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"r") 
 
 	def setColCoordenadas(self,col):
@@ -60,9 +51,8 @@ class FakeGPS(JSONizable):
 	def instanciarCoordenadaFalsa(self,dicElem):
 		""" Este metodo instancia un objeto coordenada falsa dado un elemento del diccionario"""
 		#print "dicElem actual: %s\n" % dicElem
-		if dicElem.has_key('posCoordenada'):
+		if dicElem.has_key('latitud'):
 			objeto = CoordenadaFalsa(
-									dicElem['posCoordenada'],
 									dicElem['latitud'],
 									dicElem['longitud'],
 									dicElem['nombreCalle']
@@ -83,24 +73,20 @@ class FakeGPS(JSONizable):
 		# json.load() carga primero los nodos del json mas anidados,
 		# y luego los nodos mas externos.
 		dicObj = json.load(self.f,object_hook = self.instanciarCoordenadaFalsa)
-		#print "dicObj es: %s\n" % dicObj
-		#print "dicObj.colCoordenadas: %s\n " % dicObj.colCoordenadas
-		#print "dicObj.posCoordenadaActual: %s\n " % dicObj.posCoordenadaActual
-
 
 
 	def getCoordenada(self):
 		""" Obtiene la coordenada actual en la coleccion y aumenta 
 			el indice de coordenada actual, para que en la proxima invocacion 
 			se solicite la siguiente coordenada """
+		
+		coord = self.colCoordenadas[self.posCoordenadaActual]
 		if self.llegoAFinCoordenadas():
 			print "se llego a fin!\n"
 			self.posCoordenadaActual = 0
 		else:
 			self.posCoordenadaActual = self.posCoordenadaActual + 1
-
 		print "self.posCoordenadaActual: %s\n" % self.posCoordenadaActual
-		coord = self.colCoordenadas[self.posCoordenadaActual]
 		print "\nretornando la siguiente coordenada: %s\n" % coord
 		return coord
 
@@ -124,17 +110,17 @@ class FakeGPS(JSONizable):
 
 	def persistirUbicaciones(self):
 		print "fakegps.toJson(): %s\n" % self.toJson()
-		self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"w") 
-		json.dump(self.toJson(),self.f)
+		self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"w")
+		json.dump(self.toJson(),self.f,indent=4)
 		print "dumpeado objeto a archivo!\n"
 
 
 
-if __name__ == '__main__':
-	gps = FakeGPS()
-	gps.inicializarGPS()
-	gps.getCoordenada()
-	gps.persistirUbicaciones()
+#if __name__ == '__main__':
+#	gps = FakeGPS()
+#	gps.inicializarGPS()
+#	gps.getCoordenada()
+#	gps.persistirUbicaciones()
 
 
 
