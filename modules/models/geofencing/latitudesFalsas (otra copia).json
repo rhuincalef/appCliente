@@ -1,0 +1,19 @@
+{
+	"posCoordenadaActual": 0,
+	"colCoordenadas": [
+						{
+							"posCoordenada": 0,
+							"latitud":-43.2612999,
+							"longitud":-65.2952564,
+							"nombreCalle": "Michael Jones[1-99] y Av. Hipolito Irigoyen"
+						},
+
+						{
+							"posCoordenada": 1,
+							"latitud": -43.2599560,
+							"longitud":-65.2986200,
+							"nombreCalle": "Condarco [1150-1198] y Fray Luis Beltran"
+						}
+						
+					]
+}

@@ -108,8 +108,9 @@ FALLA_NO_ESTABLECIDA = -1
 #LAT_PRUEBA = -43.264148
 #LONG_PRUEBA = -65.290654
 
-# Michael Jones[1-99] e Av. Hipolito Irigoyen
-#LAT_PRUEBA = -43.2612999
+# Michael Jones[1-99] y Av. Hipolito Irigoyen
+#LAT_PRUEBA = -43.261299
+#LAT_PRUEBA longitud -
 #LONG_PRUEBA = -65.2952564
 
 # Condarco [1150-1198] y Fray Luis Beltran
@@ -117,8 +118,7 @@ FALLA_NO_ESTABLECIDA = -1
 #LONG_PRUEBA = -65.2986200
 
 #Cabot[1-98] y Condarco
-#LAT_PRUEBA = -43.2589910
-#LONG_PRUEBA = -65.2992550
+#LAT_PRUEBA,LONG_PRUEBA = -43.2589910,-65.2992550
 
 
 #Moreno[999-1099] y Cutillo
@@ -133,7 +133,79 @@ FALLA_NO_ESTABLECIDA = -1
 
 #Pelegrini[700-798] y Moreteau -->Sin conexion
 #
-LAT_PRUEBA,LONG_PRUEBA = -43.2591350,-65.3081930
+#LAT_PRUEBA,LONG_PRUEBA = -43.2591350,-65.3081930
+
+
+PATH_ARCH_UBICACIONES_FALSAS = "latitudesFalsas.json"
+
+#DICCIONARIO_FAKE_GPS = {
+#						1: {
+#							"nombreCalle": "Michael Jones[1-99] y Av. Hipolito Irigoyen",
+#							"latitud":-43.2612999,
+#							"longitud":-65.2952564
+#						},
+						
+#						2: {
+#							"nombreCalle": "Condarco [1150-1198] y Fray Luis Beltran",
+#							"latitud": -43.2599560,
+#							"longitud":-65.2986200
+#						}
+
+						#,3: {
+						#	"nombreCalle": "Cabot[1-98] y Condarco",
+						#	"latitud": -43.2589910,
+						#	"longitud":-65.2992550
+						#},
+
+						#4: {
+						#	"nombreCalle": "Moreno[999-1099] y Cutillo",
+						#	"latitud": -43.2574960,
+					#		"longitud":-65.2976790
+					#	},
+						#5: {
+						#	"nombreCalle": "Muzio-j [1-99] y Moreno",
+						#	"latitud": -43.2568820,
+						#	"longitud":-65.2990470
+						#},
+						#6: {
+						#	"nombreCalle": "Ameguino[699-799] y Sobernia Nacional",
+						#	"latitud": -43.2591600,
+						#	"longitud":-65.3114380
+						#},
+						#7: {
+						#	"nombreCalle": "Pelegrini[700-798] y Moreteau",
+						#	"latitud": -43.2591350,
+						#	"longitud":-65.3081930
+						#},
+						#8: {
+						#	"nombreCalle": "San Martin y Rivadavia",
+						#	"latitud": -43.253469,
+						#	"longitud":-65.308611
+						#},
+						#9: {
+						#	"nombreCalle": "Av. Rawson y Bell A.P.",
+						#	"latitud":-43.252091 ,
+						#	"longitud":-65.313846
+						#},
+						#10: {
+						#	"nombreCalle": "Pecoraro y Ecuador",
+						#	"latitud": -43.251478,
+						#	"longitud": -65.317677
+						#},
+						#11: {
+						#	"nombreCalle": "Gales y Marconi",
+						#	"latitud": -43.252548,
+						#	"longitud": -65.318417
+						#},
+						#12: {
+						#	"nombreCalle": "Rivadavia y Ecuador",
+						#	"latitud": -43.249282,
+						#	"longitud": -65.310902
+						#}
+#}
+
+
+
 
 
 
@@ -146,9 +218,9 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 #############################################################################################
 
 
-URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
+#URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
 #Servidor Guille
-#URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
+URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
 
 
 
@@ -497,7 +569,10 @@ ESTADO_POR_DEFAULT_SUBIDA_CAPTURAS = "Confirmado"
 # Estos son los IDs que se emplean para indicar los tipos de falla y sus respectivos
 # tipos de material y criticidades habilitados. Estos IDS se corresponden con los de 
 # la tabla "TipoFallaModelo".
-IDS_TIPOS_FALLA_HABILITADOS = [1,2]
+#IDS_TIPOS_FALLA_HABILITADOS = [1,2]
+IDS_TIPOS_FALLA_HABILITADOS = [2,3]
+
+
 
 PONDERACION_CRITICIDAD_BAJA = 1
 PONDERACION_CRITICIDAD_MEDIA = 1.15

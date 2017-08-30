@@ -1,0 +1,17 @@
+
+self.posCoordenadaActual + 1: 2
+
+len(self.colCoordenadas): 2
+
+se llego a fin!
+
+self.posCoordenadaActual: 0
+
+
+retornando la siguiente coordenada: { nombreCalle: Michael Jones[1-99] y Av. Hipolito Irigoyen, latitud: -43.2612999,  longitud -65.2952564 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.2612999, 'posCoordenada': 0, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'posCoordenada': 1, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}], 'posCoordenadaActual': 0}
+
+dumpeado objeto a archivo!
+

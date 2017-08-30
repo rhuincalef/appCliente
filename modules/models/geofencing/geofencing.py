@@ -112,6 +112,18 @@ class GeofencingAPI1(object):
 	#	self.bd_json.agregar(lat,long,nombre_archivo)
 
 
+
+
+# Clase que almacena en una TinyBD la latidud, longitud,
+# y el nombre del archivo de captura .pcd.
+# https://tinydb.readthedocs.io/en/latest/getting-started.html#basic-usage
+#
+from tinydb import TinyDB, Query
+
+	
+
+
+
 class GeofencingAPI(object):
 	""" API para obtener la calle y altura de una falla confirmada,
 		dada su latitud y longitud. """
@@ -166,11 +178,7 @@ class GeofencingAPI(object):
 	#	print "En alamcenarCapturaLocal() ..."
 	#	self.bd_json.agregar(lat,long,nombre_archivo)
 
-# Clase que almacena en una TinyBD la latidud, longitud,
-# y el nombre del archivo de captura .pcd.
-# https://tinydb.readthedocs.io/en/latest/getting-started.html#basic-usage
-#
-from tinydb import TinyDB, Query
+
 class BDLocal(object):
 
 	def __init__(self,fullPathBD=None):

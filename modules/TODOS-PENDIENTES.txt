@@ -85,6 +85,10 @@ CONSULTA CON GABRIEL JULIO 2017-->
 
 36. Crear iconos de peligro para criticidad y obtener fallas informadas... -->OK
 
+37. Crear un objeto FakeGPS que tire las latitudes y longitudes en una lista ciclica y almacene en un archivo la ultima falla.      
+
+38. 
+
 
 
 NOTAS IMPORTANTE PARA INTEGRACION:
@@ -93,6 +97,10 @@ NOTAS IMPORTANTE PARA INTEGRACION:
 -El tipo reparacion tiene que ser opcional para fallas con estado Confirmado
 -Copiar los archivos que se encuentran en carpeta "archServerModificadosParaRedisenio"
 -Modificar el path en constantes de customTheme.py
+
+
+
+
 
 
 

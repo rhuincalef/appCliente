@@ -1,0 +1,48 @@
+# Captura y subidas de de falla nueva
+
+1.Ir a "Capturar Fallas" -> "Capturar falla nueva"
+
+2.Seleccionar tipo falla=baches, tipo reparacion=reparación especial y tipo material=pavimento rigido, luego click en Aceptar.
+
+	-Las propiedades se obtienen del servidor, y si es la primera vez que se ejecuta la app se crea una BD local en JSON con las propiedades.
+
+
+3.Crear una carpeta "baches_confirmados", ingresar en la carpeta.
+
+4.Ingresar nombre de captura "baches_confirmados" y hacer click en continuar.
+
+5.Presionar SPACEBAR o click en capturar, y capturar 2 fallas nuevas. Por cada captura: Se abre el dialogo que brinda al usuario la posibilidad de visualizar la captura y se abre otro que ofrece al usuario la posibilidad de conservar la captura en disco y en memoria.
+
+
+	-Los archivos asociados a las capturas que se guardan en disco son: .pcd que es el archivo de la captura de PCL y .csv que es el archivo que posteriormente se envía al servidor.
+	-Se pueden capturar varias fallas con el mismo nombre y se guardan de manera incremental. 
+	-La herramienta para visualizar es la del framework PCL. 
+
+
+6.Agregar un bache en calle "mitre" desde la webapp en una altura.
+
+
+7. Volver a "Menu Principal",ir a "Capturar Fallas" -> "Obtener fallas del servidor"
+
+
+# Captura y subidas de falla informada
+
+
+1. Ir al sistema web "Agregar falla", en calle "Mitre", y adjuntar alguna imagen y Guardar bache.
+
+2. Ir a appCliente "Capturar falla informada".
+
+3. Tipear el nombre de la calle (considerando que es case sensitive) "mitre"
+
+4.Ir a "Capturar Falla Informada", seleccionar la falla que se subio con la webapp, ingresar en la carpeta "baches_informados" el nombre de falla "bache_info"  y continuar. Presionar SPACEBAR o click en capturar, y capturar 1 muestra asociada a la falla.
+
+
+5. Ir a menu principal--> "Subir Falla", seleccionar todas y subirlas.
+
+6. Ir a appweb a la falla informada y clickear sobre ella.
+
+7. Ir a visor nube --> para visualizar la captura realizada. 
+
+
+
+
