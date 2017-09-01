@@ -60,13 +60,15 @@ class AutoCompleteTextInput(BoxLayout):
         # ...
 
         #Se bindea el evento de fin de obtencion de nombres de calles a la gui
-        self.controlador.bind(on_fin_obtencion_direcciones = self.calles_obtenidas_servidor)
+        #self.controlador.bind(on_fin_obtencion_direcciones = self.calles_obtenidas_servidor)
+        self.controlador.bind(on_fin_obtencion_sugerencias = self.calles_obtenidas_servidor)
 
         
     
     #Manejador que recibe las calles sugeridas por el servidor.
     # NOTA: args es una tupla (clase Controlador, LISTA DE SUGERENCIAS)
     def calles_obtenidas_servidor(self,*args):
+        print "Handler de on_fin_obtencion_sugerencias ejecutado!\n"
         #4. Se agregan los labels que indican las sugerencias de la calle
         # y se bindean el evento on_touch_down con el handler que modifica el text
         # input y remueve todos los widgets.

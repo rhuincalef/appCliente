@@ -172,10 +172,19 @@ class ApiClientApp(object):
 				print msg
 
 			if results_json["estado"] == 0:
-				calle = results_json["calle"].encode("utf8") 
-				#altura = int(results_json["altura"] )
-				rangoEstimado1 = int(results_json["rangoEstimado1"] )
-				rangoEstimado2 = int(results_json["rangoEstimado2"] )
+				calle = results_json["calle"].encode("utf8")
+				print "calle casteada: %s\n" % calle
+				print "results_json[rangoEstimado1]: %s\n" % results_json["rangoEstimado1"] 
+				print "results_json[rangoEstimado2]: %s\n" % results_json["rangoEstimado2"] 
+				if results_json["rangoEstimado1"] is not None:
+					rangoEstimado1 = int(results_json["rangoEstimado1"] )
+				if results_json["rangoEstimado2"] is not None:
+					rangoEstimado2 = int(results_json["rangoEstimado2"] )
+
+
+
+				#rangoEstimado1 = int(results_json["rangoEstimado1"] )
+				#rangoEstimado2 = int(results_json["rangoEstimado2"] )
 
 		except ConnectionError, e:
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
@@ -192,6 +201,9 @@ class ApiClientApp(object):
 			msg = "Error desconocida (%s) en obtenerDirEstimada(): %s" % (type(e),e)
 			print msg
 		finally:
+			print "En finally...\n"
+			print "rangoEstimado1: %s\n" % rangoEstimado1
+			print "rangoEstimado2: %s\n" % rangoEstimado2
 			#return (calle,altura)
 			return (calle,rangoEstimado1,rangoEstimado2)
 
@@ -285,7 +297,9 @@ class ApiClientApp(object):
 		print "En solicitarSugerencias()!!!\n\n"
 		sugerenciasObtenidas = []
 		calleCodificada = urllib.quote_plus(nombreCalle.encode("utf-8"))
+		
 		print "calleCodificada(%s)!!!\n\n" % calleCodificada
+		
 		results_json = {}
 		peticion = URL_OBTENER_SUGERENCIAS_CALLES + "/calle/" + calleCodificada + \
 			"/cantmaxsugerencias/" + str(cantMaximaSugerencias)
@@ -296,8 +310,8 @@ class ApiClientApp(object):
 			if response.status_code == 200:
 				results_json = response.json()
 				sugerenciasObtenidas = results_json
-				#print "La respuesta en formato json es: "
-				#print results_json
+				print "La respuesta en formato json de solicitarSugerencias() es: "
+				print results_json
 			else:
 				msg = "Error en peticion del servidor. Codigo: %s" % response.status_code
 				print "\n%s\n\n" % msg
@@ -313,6 +327,9 @@ class ApiClientApp(object):
 			print "ConnectionError: %s\n" % e
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
 			#raise ExcepcionAjax(msg)
+		except Exception, e:
+			print "Excepcion desconocida en solicitarSugerencias(): %s\n" % e
+			msg = "Excepcion desconocida en solicitarSugerencias(): %s\n" % e
 		finally:
 			return sugerenciasObtenidas
 

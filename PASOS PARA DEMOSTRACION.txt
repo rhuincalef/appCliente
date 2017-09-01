@@ -45,4 +45,35 @@
 
 
 
+# Filtrar la falla informada subidas
+
+1.Seleccionar calle en "Mitre,Trelew". 
+2.Seleccionar "Tipo de falla" --> "Todas".
+3.Seleccionar "Estado de falla" --> "Informado".
+4.Visualizar las fallas cargadas en esa calle.
+
+
+# Filtrar la falla confirmada subida
+
+1.Seleccionar calle que se subio desde appCliente. 
+2.Seleccionar "Tipo de falla" --> "Todas".
+3.Seleccionar "Estado de falla" --> "Confirmado".
+4.Visualizar las fallas cargadas en esa calle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -81,7 +81,8 @@ class MainApp(App,EventDispatcher):
 		self.register_event_type('on_fin_solicitud_prop_confirmada')
 
 		#Evento producido en el AutoComplete.
-		self.register_event_type('on_fin_obtencion_direcciones')
+		#self.register_event_type('on_fin_obtencion_direcciones')
+		self.register_event_type('on_fin_obtencion_sugerencias')
 		super(MainApp, self).__init__(**kwargs)
 
 		# Los capturadores comparten el mismo apiClient, que lleva la cantidad
@@ -153,6 +154,11 @@ class MainApp(App,EventDispatcher):
 	def on_fin_obtencion_direcciones(self,*args):
 		pass
 
+
+	#Handler por default del metodo de autocompletar
+	def on_fin_obtencion_sugerencias(self,*args):
+		pass
+
 	#Metoodo que realiza la peticion a ApiClient1 para el autocompletado de direcciones
 	def solicitarSugerencias(self,nombreCalle,cantMaximaSugerencias):
 		sugerencias = []
@@ -163,8 +169,9 @@ class MainApp(App,EventDispatcher):
 			print "\n\n Excepcion ocurrida al solicitar las sugerencias desde el servidor (%s)\n\n " %\
 				e
 		finally:
-			print "enviando sugerencias: %s\n" % sugerencias
-			self.dispatch('on_fin_obtencion_direcciones',sugerencias)
+			print "produciendo evento on_fin_obtencion_sugerencias con sugerencias: %s\n" % sugerencias
+			#self.dispatch('on_fin_obtencion_direcciones',sugerencias)
+			self.dispatch('on_fin_obtencion_sugerencias',sugerencias)
 
 
 

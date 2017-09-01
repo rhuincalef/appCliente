@@ -247,6 +247,7 @@ URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirma
 # Ej. de invocacion -->
 # http://localhost/repoProyectoBacheo/web/restapi/obtener_sugerencias_calle/calle/ca/cantmaxsugerencias/4
 
+#http://localhost/repoProyectoBacheo/web/restapi/obtener_sugerencias_calle/calle/ca/cantmaxsugerencias/4
 #URL_RAIZ = "http://localhost/repoProyectoBacheo/web"
 #URL_OBTENER_SUGERENCIAS_CALLES = URL_SERVIDOR_LOCAL + "/restapi/obtener_sugerencias_calle"
 URL_OBTENER_SUGERENCIAS_CALLES = URL_SERVIDOR_LOCAL + "restapi/obtener_sugerencias_calle"

@@ -452,6 +452,9 @@ class ItemFalla(SelectableDataItem,Persistent):
           print "Cancelada la subida de archivos desde itemFalla.enviar()...\n"
           return 
     return bytes_leidos
+    #if bytes_leidos is  None:
+    #  bytes_leidos = 0
+    #return bytes_leidos
 
 
   # Retorna el tamanio en bytes de los ".csv "asociados a una captura.
@@ -699,6 +702,9 @@ class Capturador(object):
     bytes_leidos = 0
     for falla in self.getColCapturasConfirmadas():
       #print "\nEnviando falla %s\n" % (falla,falla.is_selected)
+      #if falla.is_selected:
+      #  bytes_leidos += falla.enviar(URL_UPLOAD_SERVER,self.apiClient,bytes_leidos)
+
       if falla.is_selected:
         bytes_leidos += falla.enviar(URL_UPLOAD_SERVER,self.apiClient,bytes_leidos)
     print "Fin de capturador.enviarCapturas()!\n"
