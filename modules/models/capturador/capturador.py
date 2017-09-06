@@ -701,12 +701,10 @@ class Capturador(object):
     controlador = App.get_running_app()
     bytes_leidos = 0
     for falla in self.getColCapturasConfirmadas():
-      #print "\nEnviando falla %s\n" % (falla,falla.is_selected)
-      #if falla.is_selected:
-      #  bytes_leidos += falla.enviar(URL_UPLOAD_SERVER,self.apiClient,bytes_leidos)
-
+      print "\nEnviando falla= %s; falla.is_selected=%s)\n" % (falla,falla.is_selected)
       if falla.is_selected:
         bytes_leidos += falla.enviar(URL_UPLOAD_SERVER,self.apiClient,bytes_leidos)
+
     print "Fin de capturador.enviarCapturas()!\n"
 
 

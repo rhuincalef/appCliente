@@ -1,0 +1,4 @@
+
+1. Al descargar el repositorio, crear el dir _/dataMutimedia con permisos rw+.Para subida archivos desde appCliente.
+2. 
+

@@ -366,6 +366,10 @@ class MainApp(App,EventDispatcher):
 		#print ""
 		lista_capturadores = [self.capturador,self.capturadorInformados]
 		print "\nlista_capturadores desde subir_capturas: %s\n" % len(lista_capturadores)
+		#Reseteando estado de la subida de archivos.
+		print "Reseteando flag de subida archivos...\n"
+		self.canceladaSubidaArchivos = False
+		
 		#Este candado es adqurido por threadSubidaCapturas al iniciar y cuando 
 		# se termine o se cancele la subida de archivos, se libera desde ese thread
 		# y es adquirido por mostrarDialogoConservar
@@ -409,7 +413,13 @@ class MainApp(App,EventDispatcher):
 		#Se planifica la actualizacion del reloj a espacios de tiempo regulares
 		Clock.schedule_interval(self.actualizar_datos,0.0005)
 		try:
-			print "Iterando lista de capturadores...\n"
+			print "Iterando lista de capturadores para subir...\n"
+			controlador = App.get_running_app()
+			print "tipo: %s; controlador.canceladaSubidaArchivos: %s\n" % (type(controlador),
+																			controlador.canceladaSubidaArchivos)
+			print "tipo: %s; self.canceladaSubidaArchivos: %s\n" % (type(self),
+																		self.canceladaSubidaArchivos)
+
 			print "Lista capturadores: %s\n" % lista_capturadores
 			for capturador in lista_capturadores:
 				print "Iterando capturador %s\n" % type(capturador)
@@ -439,7 +449,102 @@ class MainApp(App,EventDispatcher):
 									title = "Conservar capturas enviadas",
 									content = "¿Desea conservar las capturas enviadas al servidor en disco?",
 									callback = self._callbackConservarCapsSubidas)
-		self.canceladaSubidaArchivos = False
+		#self.canceladaSubidaArchivos = False
+
+
+
+
+
+	#BACKUP!
+	#Envia las capturas filtradas al servidor con POST
+	#def subir_capturas(self):
+	#	#print "Enviando fallas nuevas ..."
+	#	bytes_totales_a_enviar = 0
+	#	bytes_totales_a_enviar = self.capturador.calcularTamanioCapturas()+\
+	#						self.capturadorInformados.calcularTamanioCapturas()
+#
+#		#print "Los bytes_totales_a_enviar son : %s" % bytes_totales_a_enviar
+	#	#print ""
+	#	lista_capturadores = [self.capturador,self.capturadorInformados]
+	#	print "\nlista_capturadores desde subir_capturas: %s\n" % len(lista_capturadores)
+	#	#Este candado es adqurido por threadSubidaCapturas al iniciar y cuando 
+	#	# se termine o se cancele la subida de archivos, se libera desde ese thread
+	##	# y es adquirido por mostrarDialogoConservar
+	#	candadoFinSubidas = threading.Lock()
+	#	t = threading.Thread(name = "thread-subir_capturas",
+	##							target=self.threadSubidaCapturas, 
+	#							args=(bytes_totales_a_enviar,
+	#								lista_capturadores,
+	#								candadoFinSubidas,)
+	#						)
+	#	#Se configura el envio de los archivos como un proceso demonio.
+	#	t.setDaemon(True)
+	#	t.start()
+
+		
+	#BACKUP!
+	# Metodo que paraleliza el envio al servidor de los objetos
+	#def threadSubidaCapturas(self,bytes_totales_a_enviar,lista_capturadores,candadoFinSubidas):
+	#	print "En threadSubidaCapturas...\n"
+	#
+	#	# Se actualiza el valor maximo de la progressbar con los bytes totales
+	#	# de la peticion
+	#	#screen_upload = self.screen_manager.get_screen('enviocapturasserver')
+	#	screenManager = self.tabbedPanel.getSubMenuPorNombre('subMenuServidor').manager
+	#	screen_upload = screenManager.get_screen('enviocapturasserver')
+	#	screen_upload.setMaxBarraProgreso(bytes_totales_a_enviar)
+	#	
+	#	#Se adquiere el control y se inicia el thread del dialgo de pregunta
+	#	# para caps subidas
+	#	candadoFinSubidas.acquire()
+	#	t = threading.Thread(name = "thread-conservarCapsSubidas",
+	#						target=self.threadConservarCapsSubidas, 
+	#						args=(screen_upload,
+	#							candadoFinSubidas,
+	#							lista_capturadores,)
+	#						)
+	#	#Se configura el envio de los archivos como un proceso demonio.
+	#	t.setDaemon(True)
+	##	t.start()
+
+	#	#Se planifica la actualizacion del reloj a espacios de tiempo regulares
+	#	Clock.schedule_interval(self.actualizar_datos,0.0005)
+	#	try:
+	#		print "Iterando lista de capturadores...\n"
+	#		print "Lista capturadores: %s\n" % lista_capturadores
+	##		for capturador in lista_capturadores:
+	#			print "Iterando capturador %s\n" % type(capturador)
+	#			capturador.enviarCapturas(URL_UPLOAD_SERVER)
+	#			if self.canceladaSubidaArchivos:
+	#				print "Cancelada la subida de archivos desde main.threadSubidaCapturas\n"
+	#				break
+	#	except ExcepcionAjax, e:
+	#		self.mostrarDialogoMensaje( title="Problema en la subida de archivos",
+	#									text=e.message
+	#									)
+	#	finally:
+	#		print "Desplanificando el callback de actualizacion del screen!\n"
+	#		Clock.unschedule(self.actualizar_datos)
+	#		print "Liberando el lock!\n"
+	#		candadoFinSubidas.release()
+
+
+	#BACKUP!
+	#Invocado desde threadSubirCapturas
+	#def threadConservarCapsSubidas(self,screen_upload,candadoFinSubidas,lista_capturadores):
+	#	candadoFinSubidas.acquire()
+	#	print "Liberado el candadoFinSubidas\n"
+	#	self.mostrarDialogoMensaje( title= "Subida de capturas",
+	#								text = "La operacion de subida de archivos ha finalizado")
+	#
+	#	controlador = App.get_running_app()
+	#	conservarDialogo = controlador.mostrarDialogoConfirmacion(
+	#								title = "Conservar capturas enviadas",
+	##								content = "¿Desea conservar las capturas enviadas al servidor en disco?",
+	#								callback = self._callbackConservarCapsSubidas)
+	#	self.canceladaSubidaArchivos = False
+
+
 
 
 	def _callbackConservarCapsSubidas(self,instance):
@@ -451,6 +556,8 @@ class MainApp(App,EventDispatcher):
 		for capturador in listaCapturadores:
 			capturador.descartarCapsSubidas()
 		print "Eliminadas todas las capturas subidas!\n"
+		print "main.canceladaSubidaArchivos: %s\n" % self.canceladaSubidaArchivos
+
 
 	# Actualiza los labels de cantidad de bytes subidos
 	# en la pantalla enviocapturasservidor

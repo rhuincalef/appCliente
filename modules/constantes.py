@@ -214,8 +214,12 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 #################### Constantes para comunicacion con el  servidor ##########################
 #############################################################################################
 
+#Servidor local rodrigo
+#URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
 
-URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
+#Servidor local rodrigo
+URL_SERVIDOR_LOCAL = "http://localhost/web/"
+
 #Servidor Guille
 #URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
 
