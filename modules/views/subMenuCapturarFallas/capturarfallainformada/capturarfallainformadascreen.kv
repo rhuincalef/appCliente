@@ -103,37 +103,15 @@
 			    	id: bt_capturar_fallas
 			    	text: "Realizar captura"
 			    	on_press: root.obtener_fallas()
+			    	background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+					background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
 
 				Button:	
 					id: bt_volver
 					on_press: root.volver()
 					text: "Volver"
+					background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+					background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
 
 
-
-			#GridLayout:
-		    #	id: layout_botones
-		    #	orientation: 'horizontal'
-		    #	cols: 2
-		    #	rows: 1
-
-		    #	# Tamanio en porcentajes con respecto al widget anterior
-		    #	size_hint:(1,0.07)
-		    #	col_force_default: True
-		    #	col_default_width: 150
-
-		    #	#Espaciado entre los componentes del layout (en porcentaje del widget)
-		    #	spacing: ( root.width * 0.20 ),0
-
-		    #	#Relleno entre el layout y los widgets hijos
-		    #	padding: (root.width * 0.24),0,0,0
-
-			#    Button:
-			#    	id: bt_capturar_fallas
-			#    	text: "Realizar captura"
-			#    	on_press: root.obtener_fallas()
-
-			#	Button:	
-			#		id: bt_volver
-			#		on_press: root.volver()
-			#		text: "Volver"

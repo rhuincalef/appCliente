@@ -1,4 +1,5 @@
 #:kivy 1.0
+#:import const constantes
 
 <KinectScreen>:
     id: kinect_screen
@@ -60,35 +61,15 @@
                 id: boton_capturar
                 text: "Capturar"
                 on_press: root.capturar()
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
 
             Button:
                 id: boton_cancelar
                 text: "Volver"
                 on_press: root.volver()
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
             
-
-        #BACKUP!
-        #GridLayout:
-        #    cols:2
-        #    rows:1
-        #    orientation: 'horizontal'
-        #    size_hint: (1,0.05)
-        #    spacing: [root.width / 3,0]
-        #    #Forzar el ancho de los botones (pixeles)
-        #    col_force_default: True
-        #    col_default_width: root.width / 6
-
-        #    #Padding izquierdo de botones(pixeles)
-        #    padding: [root.width / 7,0,0,0]
-        #    Button:
-        #        id: boton_capturar
-        #        text: "Capturar"
-        #        on_press: root.capturar()
-
-        #    Button:
-        #        id: boton_cancelar
-        #        text: "Volver"
-        #        #on_press: root.manager.current = 'dialogopropscaptura'
-        #        on_press: root.volver()
-                
-

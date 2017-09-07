@@ -443,6 +443,9 @@ class MyTabbedPanel(TabbedPanel):
         self.subMenus = {}
 
         self._inicializarSubScreens()
+
+        #AGREGADO RODRIGO
+        self.background_image = ESTILO_FONDO_TABBED_PANEL
         print "despues de inicializar...\n"
 
         

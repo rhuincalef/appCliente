@@ -634,6 +634,9 @@ ESTILO_TABBED_PANEL_NORMAL = 'atlas://customAppCliente/tab_btn'
 
 ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 
+ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tab'
+
+
 
 
 PATH_LOG_PRINCIPAL = "_logs/log.txt"

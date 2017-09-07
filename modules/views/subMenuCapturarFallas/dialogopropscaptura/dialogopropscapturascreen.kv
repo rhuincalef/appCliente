@@ -57,12 +57,20 @@
                 text: "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR))
                 on_press: root.crearDir(btn_crear_dir)
 
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
+
             Button:
                 id: btn_borrar_dir
                 markup: True
                 size_hint:(0.20,1)
                 text: "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR))
                 on_press: root.borrarDir(btn_borrar_dir)
+
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
 
 
         Label:
@@ -129,40 +137,15 @@
                 id: boton_continuar
                 text: "Continuar"
                 on_press: root.menu_falla_nueva()
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
 
             Button:
                 id: boton_cancelar
                 text: "Volver"
                 on_press: root.volver()
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
                 
-
-
-
-
-
-        #BACKUP!
-        #GridLayout:
-        #    cols:2
-        #    rows:1
-        #    orientation: 'horizontal'
-        #    size_hint: (1,0.05)
-        #    spacing: [root.width / 3,0]
-        #    #Forzar el ancho de los botones (pixeles)
-        #    col_force_default: True
-        #    col_default_width: root.width / 6
-
-        #    #Padding izquierdo de botones(pixeles)
-        #    padding: [root.width / 7,0,0,0]
-        #    Button:
-        #        id: boton_continuar
-        #        text: "Continuar"
-        #        on_press: root.menu_falla_nueva()
-
-        #    Button:
-        #        id: boton_cancelar
-        #        text: "Volver"
-        #        on_press: root.volver()
-                
-
-
-

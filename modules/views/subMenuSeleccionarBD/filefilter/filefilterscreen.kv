@@ -41,6 +41,9 @@
                 text: '(+)'
                 size_hint: (0.2,1)
                 on_press: root.onXFolderSeleccionado()
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
 
 
         #Footer con los botones de aceptar y cancelar
@@ -65,26 +68,15 @@
                 id: btn_aceptar
                 text: 'Aceptar'
                 on_press: root.buscarArchivo()
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
 
             Button:
                 id: btn_cancelar
                 text: 'Cancelar'
                 on_press: root.cancelar()        
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
 
-
-
-        #BoxLayout:
-        #    id: footer_1
-        #    orientation: 'horizontal'
-        #    padding: [250,290,250,0]
-        #    spacing: 50
-        #    Button:
-        #        id: btn_aceptar
-        #        text: 'Aceptar'
-        #        on_press: root.buscarArchivo()
-
-        #    Button:
-        #        id: btn_cancelar
-        #        text: 'Cancelar'
-        ##        on_press: root.cancelar()        
 

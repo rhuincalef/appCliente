@@ -206,11 +206,17 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 							)
 		
 		btnAcept = Button(text = 'Aceptar')
+		btnAcept.background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+		btnAcept.background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 		btnAcept.bind(on_press = self.aceptar)
 		layout.add_widget(btnAcept)
+
 		btnCancel = Button(text = 'Cancelar')
+		btnCancel.background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+		btnCancel.background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 		btnCancel.bind(on_press = self.cancelar)
 		layout.add_widget(btnCancel)
+		
 		self.layout_principal.add_widget(layout)
 		#Se inicaliza el layout que contiene al footer
 		self.layoutFooter = layout

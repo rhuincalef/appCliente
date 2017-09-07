@@ -651,6 +651,38 @@ incializada el screen de propsTipoFallaConfirmada!
 
 En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'}
 
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: True
+
+elem.estaHabilitada(): False
+
+Propiedad deshabilitada deficiencia de sellado: True
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+elem.estaHabilitada(): True
+
+Propiedad deshabilitada baches: False
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+elem.estaHabilitada(): True
+
+Propiedad deshabilitada grietas: False
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: True
+
+elem.estaHabilitada(): False
+
+Propiedad deshabilitada ahuellamiento y depresiones: True
+
 CAMBIO DE DIRECTORIO!
 selection : []
 
@@ -680,17 +712,21 @@ Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelIt
 
 type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
 
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+Buscando BD anterior, deshabilitando los elementos del menu!
 
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+cancelar seleccion!
 
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+Limpiando campos del screen...
 
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+type(src): <class 'submenuseleccionarbd.SeleccionarBDScreen'>
 
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa5f1401ec0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa5f1514c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa62007b7c0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa6281b4d00>]
 
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -716,13 +752,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f02394c8520>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f02395422f0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0239718de0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f026a98b830>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa5f1401ec0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa5f1514c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa62007b7c0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa6281b4d00>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -748,128 +784,18 @@ instanciado dialogo espera...
 Iniciando thread-filtrado de capturas
 Finalizado thread-FiltradoCapturas...
 
-En check_box_activado con checkbox active: True
-
-En marcarCapturas con activo: True
-
-
-self.ids.listado.adapter: {}
-
-
-self.ids.listado.adapter.data: []
-
-self.ids.listado.adapter.selection: []
-
-En check_box_activado con checkbox active: False
-
-En marcarCapturas con activo: False
-
-
-self.ids.listado.adapter: {}
-
-
-self.ids.listado.adapter.data: []
-
-self.ids.listado.adapter.selection: []
-
-En check_box_activado con checkbox active: True
-
-En marcarCapturas con activo: True
-
-
-self.ids.listado.adapter: {}
-
-
-self.ids.listado.adapter.data: []
-
-self.ids.listado.adapter.selection: []
-
-En check_box_activado con checkbox active: False
-
-En marcarCapturas con activo: False
-
-
-self.ids.listado.adapter: {}
-
-
-self.ids.listado.adapter.data: []
-
-self.ids.listado.adapter.selection: []
-
-En check_box_activado con checkbox active: True
-
-En marcarCapturas con activo: True
-
-
-self.ids.listado.adapter: {}
-
-
-self.ids.listado.adapter.data: []
-
-self.ids.listado.adapter.selection: []
-
-En check_box_activado con checkbox active: False
-
-En marcarCapturas con activo: False
-
-
-self.ids.listado.adapter: {}
-
-
-self.ids.listado.adapter.data: []
-
-self.ids.listado.adapter.selection: []
-
 Vaciadas capturas!
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f02394c8520>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f02395422f0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0239718de0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f026a98b830>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa5f1401ec0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa5f1514c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa62007b7c0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fa6281b4d00>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fa62be710c0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
 type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Comenzando nueva BD, deshabilitando los elementos del menu!
-
-Inicializada por Defecto BD Local de muestras...
-
-En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_07-09-2017.json
-
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f02394c8520>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f02395422f0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0239718de0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f026a98b830>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f02736c1050>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
