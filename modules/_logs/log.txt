@@ -698,23 +698,623 @@ instanciado dialogo espera...
 
 En threadComprobarConexionSensor() 
 
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
 Comenzando nueva BD, deshabilitando los elementos del menu!
 
 Inicializada por Defecto BD Local de muestras...
 
 En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_07-09-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29b9cf30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29c36d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29d55830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a5bfeede0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
 type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de captura de fallas...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'}
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoFalla
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+Presione un elemento tipo falla en el tree! baches
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoFalla
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+En cargarPropsAsociadas()...
+
+controlador.getPropsConfirmados():  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'}...
+
+len(controlador.getPropsConfirmados()): 4...
+
+screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+tipoFalla.getValor(): baches
+ ; tipoFalla.estaHabilitada(): True
+
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7fec3e39a0c0>
+
+w.id: None
+
+w.id: subLayoutTipoCriticidad
+
+w.id: subLayoutTipoMaterial
+
+ENCONTRADO Y REMOVIDO DROP!!!
+
+w.id: subLayoutTipoFalla
+
+Agregado dropdown tipo material de nuevo!
+
+En cargarOpciones()...
+
+prop.getClave(): tipoMaterial
+
+prop.getValor(): pavimento rígido
+
+agregando cadOpcion generada: pavimento rígido
+
+Esta deshabilitado pavimento rígido: False 
+
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7fec3e39a0c0>
+
+w.id: None
+
+w.id: subLayoutTipoCriticidad
+
+ENCONTRADO Y REMOVIDO DROP!!!
+
+w.id: subLayoutTipoMaterial
+
+w.id: subLayoutTipoFalla
+
+Agregado dropdown criticidad de nuevo!
+
+En cargarOpciones()...
+
+prop.getClave(): criticidad
+
+prop.getValor(): bajo: Se determina por cantidad de baches y dimensiones
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}
+
+agregando cadOpcion generada: [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: Se determina por cantidad de baches y dimensiones
+
+Esta deshabilitado [color=21C3E8][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: Se determina por cantidad de baches y dimensiones: False 
+
+prop.getClave(): criticidad
+
+prop.getValor(): medio: Se determina por cantidad de baches y dimensiones
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}
+
+agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: Se determina por cantidad de baches y dimensiones
+
+Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: Se determina por cantidad de baches y dimensiones: False 
+
+prop.getClave(): criticidad
+
+prop.getValor(): alto: Se determina por cantidad de baches y dimensiones
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}
+
+agregando cadOpcion generada: [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] alto: Se determina por cantidad de baches y dimensiones
+
+Esta deshabilitado [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] alto: Se determina por cantidad de baches y dimensiones: False 
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! pavimento rígido
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:226: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  label.parent_node.text = label.text
+/usr/lib/python2.7/dist-packages/kivy/core/text/__init__.py:675: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if text != self._text:
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: Se determina por cantidad de baches y dimensiones
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: baches
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cad final: medio: Se determina por cantidad de baches y dimensiones 
+
+filtrando por separador...
+
+cadena filtrada por separador final: medio
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: pavimento rígido
+
+props leidas: baches, pavimento rígido, medio 
+
+
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
+
+Data SETEADA!!! con: nombre_cap =  dsadsa ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+Llamando al manejador!
+
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
+Entre al filechooser
+El directorio actual seleccionado es:  []
+
+PRE-ENTER!!
+DesBindeada SPACEBAR!!
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+En dialogopropscaptura.getData(): -1
+
+controlador.getData('idFalla') > 0 ? False
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+Iterando elemento: None
+
+Iterando elemento: subLayoutTipoCriticidad
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:427: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
+Iterando elemento: subLayoutTipoMaterial
+
+Iterando elemento: subLayoutTipoFalla
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+Finalizado thread-FiltradoCapturas...
+
+Vaciadas capturas!
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de capturar falla informada...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Actualizando listado de fallas...
+tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+Actualizado listado!
+En main.desSeleccionarInformados()...
+
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+Fin desSeleccionarFalla!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
 LLamando al screen de obtener fallas inforamadas...
 
@@ -732,13 +1332,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29b9cf30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29c36d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29d55830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a5bfeede0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -803,6 +1403,38 @@ calleCodificada(mit)!!!
 peticion enviada:
 
  http://localhost/web/restapi/obtener_sugerencias_calle/calle/mit/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(mitr)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/mitr/cantmaxsugerencias/3 
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(mitre)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/mitre/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
 
 La respuesta en formato json de solicitarSugerencias() es: 
 [u'Mitre']
@@ -897,13 +1529,13 @@ Fin de muestra de la coleccion solicitarInformados()...
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Cerrado popup!
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29b9cf30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29c36d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29d55830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a5bfeede0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
 LLamando al screen de capturar falla informada...
 
@@ -921,13 +1553,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29b9cf30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29c36d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29d55830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a5bfeede0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -959,7 +1591,7 @@ En __cmp__() con self_id: 3 y other_id: 2
 
 En __cmp__() con self_id: 4 y other_id: 3
 
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3a29c30e60>, <capturador.ItemFalla object at 0x7f3a1bfca758>, <capturador.ItemFalla object at 0x7f3a1bfca488>, <capturador.ItemFalla object at 0x7f3a1bfca668>]
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fec2ea47488>, <capturador.ItemFalla object at 0x7fec2ea475f0>, <capturador.ItemFalla object at 0x7fec2ea47230>, <capturador.ItemFalla object at 0x7fec2ea47668>]
 
 self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
@@ -972,150 +1604,6 @@ row_index actual:  2
 
 row_index actual:  3
 
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3a29c30e60>, <capturador.ItemFalla object at 0x7f3a1bfca758>, <capturador.ItemFalla object at 0x7f3a1bfca488>, <capturador.ItemFalla object at 0x7f3a1bfca668>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-recorriendo falla informada 1 falla.estaSeleccionado: True
-
-Existen fallas seleccionadas
-Agregando falla informada para ser capturada: 
-Id:  1
-
-id_falla_seleccionada: 1
-
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-PRE-ENTER!!
-Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-es_nombre_valido:  True
-es_dir_valido:  True
-
-Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-
-Data SETEADA!!! con: nombre_cap =  mitree ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-Sensor LISTO? : True...
-
-Bindeado SPACEBAR!!
-
-Llamando al manejador!
-
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-En Kinectviewer.capturar()...con idFalla 1
-
-En getDatosSensor()...
-
-len(self.queueVideo) = 0
-
-rgbSinCod.shape: (480,640)
-
-rgbSinCod.size: 921600
-
-La forma de la matriz xyz antes de filtrar en calibkinect es:
-alto:307200 ; ancho:3
-
-LLENADA dataNube! tipo: float32 
-
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-En main.capturar(): getData()? 1
- 
-En main.capturar(): id_falla? 1
- 
-instanciado dialogo espera...
-
-threadCapturarFalla id_falla:  1 ; FALLA_NO_ESTABLECIDA: -1
-
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules
-
-
-Seleccionando capturadorInformados...
-
-tipo capturador: <class 'capturador.CapturadorInformados'>
-Inicio asociarFalla() para id_falla:  1
-
-Encontrado ItemFalla(%s):  1
-Cantidad de archivos .pcd con el nombre  mitree es :  1
-
-En registrar fallaInformada!
-item_falla: <class 'capturador.ItemFalla'>
-capturador: <class 'capturador.CapturadorInformados'>
-captura: <class 'captura.Captura'>
-ItemFalla no encontrado: id=  1
-Agregada captura a falla!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-Convertida con nombre de archivo /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/csv/mitree_1.csv 
-
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/mitree_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/csv/mitree_1.csv; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
-
-CERRADO EL POPUP CAPTURA!!!
-
-MOSTRADO DIALOGO DE VISUALIZACION!! 
-
-Si desea visualizar!!
-
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/mitree_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/csv/mitree_1.csv'}]...
-
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
-
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/mitree_1.pcd'}
-
-Abierto visualizador
-
-Si desea conservar la captura
-
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/mitree_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/csv/mitree_1.csv'}] en disco!
-Screen encontrada y removida!
-SCreen agregada al mananger
-Las screens actuales de screenmanager luego de switch_to son: 
-['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-PRE-ENTER!!
-DesBindeada SPACEBAR!!
-
-La seleccion es:  []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-En dialogopropscaptura.getData(): 1
-
-controlador.getData('idFalla') > 0 ? True
-
-Actualizando listado de fallas...
-tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3a29c30e60>, <capturador.ItemFalla object at 0x7f3a1bfca758>, <capturador.ItemFalla object at 0x7f3a1bfca488>, <capturador.ItemFalla object at 0x7f3a1bfca668>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=mitree_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules , nombreCaptura= mitree;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Actualizado listado!
 En main.desSeleccionarInformados()...
 
 En __cmp__() con self_id: 2 y other_id: 1
@@ -1124,13 +1612,11 @@ En __cmp__() con self_id: 3 y other_id: 2
 
 En __cmp__() con self_id: 4 y other_id: 3
 
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3a29c30e60>, <capturador.ItemFalla object at 0x7f3a1bfca758>, <capturador.ItemFalla object at 0x7f3a1bfca488>, <capturador.ItemFalla object at 0x7f3a1bfca668>]
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fec2ea47488>, <capturador.ItemFalla object at 0x7fec2ea475f0>, <capturador.ItemFalla object at 0x7fec2ea47230>, <capturador.ItemFalla object at 0x7fec2ea47668>]
 
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=mitree_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules , nombreCaptura= mitree;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=mitree_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules , nombreCaptura= mitree;
-] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+Deseleccionando falla informada: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
 Deseleccionando falla informada: -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
@@ -1140,97 +1626,11 @@ Deseleccionando falla informada: -->{ 'estado': { Informada; id: 4 - calle: Mitr
 
 Fin desSeleccionarFalla!
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29b9cf30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29c36d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a29d55830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3a5bfeede0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e1e1f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e27bd00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec3e39a830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec7064ade0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3a6458b1a0>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
-
-LLamando al screen de cargar recorrido...
-
-Cargado dialogo carga de fallas
-
-Cancelo la carga del recorrido en memoria!
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec78bbb1a0>
 

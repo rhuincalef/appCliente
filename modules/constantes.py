@@ -634,11 +634,17 @@ ESTILO_TABBED_PANEL_NORMAL = 'atlas://customAppCliente/tab_btn'
 
 ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 
-ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tab'
+
+#Estilo principal de los tabbedpanelItem que contienen a los screens
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tab'
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv1'
+ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv2'
 
 
+#Estilo de los dialogos que se invocan con controlador.mostrarDialogo()
 #ESTILO_BACKGROUND_MODAL_XBASE = ESTILO_FONDO_TABBED_PANEL
 ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
+
 
 
 
