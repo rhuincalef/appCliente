@@ -278,7 +278,10 @@ class MainApp(App,EventDispatcher):
 							auto_open=False,
 							gif = gif,
 							size_hint_x = 0.5,
-							size_hint_y = 0.4)
+							size_hint_y = 0.4,
+							background = ESTILO_BACKGROUND_MODAL_XBASE,
+							separator_color = COLOR_SEPARADOR_POPUPS
+							)
 		print "instanciado dialogo espera...\n"
 		dialogo.open()
 		return dialogo
@@ -902,7 +905,9 @@ class MainApp(App,EventDispatcher):
 
 	#Muestra un dialogo de mensaje con un boton de aceptar
 	def mostrarDialogoMensaje(self,text = "", title=""):
-		return XMessage(text= text, title=title)
+		return XMessage(text= text, title=title 
+							,background = ESTILO_BACKGROUND_MODAL_XBASE,
+							separator_color = COLOR_SEPARADOR_POPUPS )
 
 	#Muestra un dialogo de confirmacion con los botones "Si","No".
 	def mostrarDialogoConfirmacion(self,content = "",title="",callback=None,
@@ -910,7 +915,9 @@ class MainApp(App,EventDispatcher):
 		if callback is None:
 			callback = self.confirmDefaultHandler
 		XConfirmation(title = title,text = content,on_dismiss = callback,
-						args = args)
+						args = args,
+						background = ESTILO_BACKGROUND_MODAL_XBASE,
+						separator_color = COLOR_SEPARADOR_POPUPS)
 
 
 	def confirmDefaultHandler(self,popup):

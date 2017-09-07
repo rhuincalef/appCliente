@@ -637,6 +637,18 @@ ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tab'
 
 
+#ESTILO_BACKGROUND_MODAL_XBASE = ESTILO_FONDO_TABBED_PANEL
+ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
+
+
+
+
+
+COLOR_SEPARADOR_POPUPS = [1,1,1,1]
+
+
+
+
 
 
 PATH_LOG_PRINCIPAL = "_logs/log.txt"

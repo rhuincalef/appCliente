@@ -62,6 +62,8 @@ except:
 __author__ = 'ophermit'
 
 
+from constantes import ESTILO_BOTON_DEFAULT_OPCIONES_MENU,ESTILO_BOTON_DEFAULT_PRESIONADO
+
 class XBase(XPopup):
     """XBase class. See module documentation for more information.
     """
@@ -153,7 +155,28 @@ class XBase(XPopup):
         for button in buttons:
             self._pnl_buttons.add_widget(
                 Factory.XButton(
-                    text=button, id=button, on_release=self._on_click))
+                    text=button, id=button, on_release=self._on_click,
+                    background_normal= ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                    background_down= ESTILO_BOTON_DEFAULT_PRESIONADO
+                      ))
+
+
+#BACKUP!
+#    def on_buttons(self, instance, buttons):
+#        if self._pnl_buttons is None:
+ #           return
+#
+ #       self._pnl_buttons.clear_widgets()
+#        if len(buttons) == 0:
+#            self._pnl_buttons.height = 0
+#            return
+
+#        self._pnl_buttons.height = metrics.dp(30)
+#        for button in buttons:
+#            self._pnl_buttons.add_widget(
+#                Factory.XButton(
+#                    text=button, id=button, on_release=self._on_click))
+
 
     def is_canceled(self):
         """Check the `cancel` event

@@ -163,7 +163,10 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 	def crearDir(self,componente):
 		print "Creando directorio!!\n"
 		XTextInput(title='Creacion de directorio', text='Ingrese el nombre del nuevo directorio',
-			on_dismiss=self._createDir)
+					on_dismiss=self._createDir,
+					background = ESTILO_BACKGROUND_MODAL_XBASE,
+					separator_color = COLOR_SEPARADOR_POPUPS 
+					)
 	
 	def _createDir(self, instance):
 		if instance.is_canceled():
@@ -173,7 +176,9 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		if path.exists(new_folder):
 			print "La carpeta existe!!!"
 			#XError(text=_('La carpeta "%s" ya existe. Ingrese otro nombre de carpeta') % instance.get_value())
-			XError(text=('La carpeta "%s" ya existe. Ingrese otro nombre de carpeta') % instance.get_value())
+			XError(text=('La carpeta "%s" ya existe. Ingrese otro nombre de carpeta') % instance.get_value(),
+				background = ESTILO_BACKGROUND_MODAL_XBASE,
+				separator_color = COLOR_SEPARADOR_POPUPS)
 			return
 		makedirs(new_folder)
 		#Se refresca el directorio de trabajo al crear un dir nuevo
@@ -202,14 +207,18 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
                 text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR)),
 				markup=True,
                 size_hint = (0.20,1),
-                on_press = self._borrarSeleccion                
+                on_press = self._borrarSeleccion,
+				background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 			)
 		self.ctl_bar.add_widget(borrar)
 		cancelar = Button(
                 text = "%sCancelar borrado" % (icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
 				markup=True,
                 size_hint = (0.20,1),
-                on_press = self._cancelarSeleccion                
+                on_press = self._cancelarSeleccion,
+                background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO                
 			)
 		self.ctl_bar.add_widget(cancelar)
 
@@ -248,7 +257,9 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 							id="btn_crear_dir",
 							markup = True,
                 			size_hint = (0.20,1),
-                			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR))
+                			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR)),
+                			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
                 			)
 
 		btn_crear_dir.bind(on_press = self.crearDir)
@@ -258,6 +269,8 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 							markup = True,
 							size_hint = (0.20,1),
 							text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+							background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+			                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 							 )
 		btn_borrar_dir.bind(on_press = self.borrarDir)
 		self.ctl_bar.add_widget(btn_borrar_dir)
