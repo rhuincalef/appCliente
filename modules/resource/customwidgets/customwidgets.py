@@ -77,7 +77,8 @@ class AutoCompleteTextInput(BoxLayout):
         for i in xrange(0,len(args[1])):
             lab = Button(text = args[1][i],
                         color = (0,0,0,1),
-                        background_normal = 'atlas://customAppCliente/autocomplete_normal')
+                        background_normal = ESTILO_AUTOCOMPLETE_OPCIONES )
+                        #background_normal = 'atlas://customAppCliente/autocomplete_normal')
             lab.bind(on_press = self.reemplazarContenido)
             self.boxLayoutSugerencias.add_widget(lab)
             #lab.background_normal = 'atlas://customAppCliente/autocomplete_normal'
@@ -99,7 +100,8 @@ class AutoCompleteTextInput(BoxLayout):
             self.boxLayoutSugerencias.clear_widgets()
             #1. Se agrega un spinner mientras se resuelve la peticion (Representado por string "Buscando ...")
             self.spinner = Button(text="Buscando ...",color = (0,0,0,1),
-                                    background_normal = 'atlas://customAppCliente/autocomplete_normal')
+                                    background_normal = ESTILO_AUTOCOMPLETE_OPCIONES )
+                                    #background_normal = 'atlas://customAppCliente/autocomplete_normal')
 
             self.boxLayoutSugerencias.padding = [0,0,0,80]
             self.boxLayoutSugerencias.add_widget(self.spinner)
@@ -473,7 +475,10 @@ class MyTabbedPanel(TabbedPanel):
         tpItem = TabbedPanelItem(id= PREFIJO_ID_TP_ITEM + nombreMenu,
                                     text = tituloSubMenu)
         #tpItem = TabbedPanelItem(text = tituloSubMenu)
-        tpItem.background_down = 'atlas://customAppCliente/tab_btn_pressed'
+        #tpItem.background_down = 'atlas://customAppCliente/tab_btn_pressed'
+        tpItem.background_down = ESTILO_TABBED_PANEL_PRESIONADO
+        tpItem.background_normal = ESTILO_TABBED_PANEL_NORMAL
+
         tpItem.content = screenManager
         self.add_widget(tpItem)
         tpItem.bind(on_press = self._cambioSubMenu)

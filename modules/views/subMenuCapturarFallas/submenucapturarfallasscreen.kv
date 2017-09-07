@@ -21,6 +21,7 @@
         Button:
             id: bt_capturar_nueva_falla
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
             markup: True
             text: "%s Capturar falla nueva" % (icon('fa-camera',TAMANIO_ICONOS))
             on_press: root.capturar_falla_nueva()
@@ -29,6 +30,8 @@
         Button:
             id: bt_obtener_fallas_informadas
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+            
             markup: True
             text: "%s Obtener fallas informadas del servidor" % (icon('cf-obtenerinformadas',TAMANIO_CUSTOM_ICONOS))
             on_press: root.obtener_fallas_informadas()
@@ -39,6 +42,7 @@
         Button:
             id: bt_capturar_falla_informada
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
             markup: True
             text: "Capturar falla informada"
             text: "%s Capturar falla informada" % (icon('cf-capturarinformadas',TAMANIO_CUSTOM_ICONOS))

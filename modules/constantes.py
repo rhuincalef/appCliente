@@ -30,12 +30,13 @@ TITULO_APP = "Aplicacion de captura de fallas"
 # Constantes de archivo personalizado .atlas para kivy
 
 CUSTOM_THEME_NAME = "customAppCliente.atlas"
-#DIR_CUSTOM_THEME_KIVY = os.getcwd() + "/resource/themeAppCliente/"
 DIR_CUSTOM_THEME_KIVY = os.getcwd() + "/resource/themeAppCliente/"
+
 
 # Constantes de librerias que se cargan desde resource
 RESOURCE_LIBRERIA_KIVY_GARDEN = 'resource/libs'
 RESOURCE_THEME_KIVY = DIR_CUSTOM_THEME_KIVY
+
 
 # Constante para los widgets personalizados de los screens
 #RESOURCE_CUSTOM_WIDGETS = os.getcwd() + os.path.sep + "resource" + os.path.sep + "customwidgets" 
@@ -221,7 +222,7 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 URL_SERVIDOR_LOCAL = "http://localhost/web/"
 
 #Servidor Guille
-#URL_SERVIDOR_LOCAL = "http://192.168.0.102/web/"
+#URL_SERVIDOR_LOCAL = "http://192.168.2.54/web/"
 
 
 
@@ -620,6 +621,18 @@ DEFAULT_SPACING = [( Window.width * ESCALA_SPACING_VERTICAL ),0]
 # aparecen en los submenus de appCliente.
 # 
 ESTILO_BOTON_DEFAULT_OPCIONES_MENU = 'atlas://customAppCliente/button'
+
+ESTILO_BOTON_DEFAULT_PRESIONADO = 'atlas://customAppCliente/button_pressed'
+
+
+ESTILO_CHECKBOX_DESSELECCIONADO = 'atlas://customAppCliente/checkbox_off'
+ESTILO_CHECKBOX_SELECCIONADO = 'atlas://customAppCliente/checkbox_on'
+
+#Estilos para el strip del tabbedpanel principal
+ESTILO_TABBED_PANEL_PRESIONADO = 'atlas://customAppCliente/tab_btn_pressed'
+ESTILO_TABBED_PANEL_NORMAL = 'atlas://customAppCliente/tab_btn'
+
+ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 
 
 

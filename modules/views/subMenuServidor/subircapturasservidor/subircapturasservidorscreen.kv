@@ -47,8 +47,11 @@
 			CheckBox:
 				id: check_box_seleccionar_todo
 				on_active: root.check_box_activado()
-				#size_hint: (0.2,1)
 				size_hint: (0.15,1)
+				
+				background_checkbox_normal: const.ESTILO_CHECKBOX_DESSELECCIONADO
+				background_checkbox_down: const.ESTILO_CHECKBOX_SELECCIONADO
+
 
 			Label:
 				id: label_seleccionar_todo

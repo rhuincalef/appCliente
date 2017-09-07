@@ -21,6 +21,7 @@
         Button:
             id: bt_buscar_bd_anterior
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
             markup: True
             text: "%s Buscar achivo anterior de BD" % (icon('fa-search',TAMANIO_ICONOS))
             on_press: root.buscar_bd_anterior()
@@ -29,6 +30,7 @@
         Button:
             id: bt_comenzar_nueva_bd
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
             markup: True
             text: "%s Comenzar una BD nueva \n con la fecha actual(por defecto)" % (icon('fa-plus-circle',TAMANIO_ICONOS))
             on_press: root.comenzar_nueva_bd()

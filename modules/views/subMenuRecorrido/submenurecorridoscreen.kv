@@ -18,6 +18,7 @@
         Button:
             id: bt_guardar_recorrido
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
             markup: True
             text: "%s Guardar fallas capturadas" % (icon('fa-floppy-o',TAMANIO_ICONOS))
             on_press: root.guardar_recorrido()
@@ -25,6 +26,7 @@
         Button:
             id: bt_cargar_recorrido
             background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+            background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
             markup: True
             text: "%s Cargar fallas capturadas" % (icon('fa-file-o',TAMANIO_ICONOS))
             on_press: root.cargar_recorrido()
