@@ -121,11 +121,11 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
 							text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_CUSTOM_ICONOS)) ,
 							#text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_ICONOS)) ,
-							
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
 							color = COLOR_TEXTOS)
+		
 		subLayout.add_widget(labReparacion)
 
 		self.dropdownTipoFalla = CustomDropDown(self,id="TipoFallaDropdown",
@@ -134,7 +134,17 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 												load_func = CustomDropDown.callbackCargaTiposFalla)
 		subLayout.add_widget(self.dropdownTipoFalla)
 		self.layout_principal.add_widget(subLayout)
-		
+
+		#with self.layout_principal.canvas:
+		#	print "canvas: posicion= %s; tamanio=%s\n" % (self.pos,self.size)
+		#	print "sublayout: posicion= %s; tamanio=%s\n" % (subLayout.pos,subLayout.size)
+		#	Color((1,0,0,1))
+		#	#Rectangle(pos= self.pos,size = self.size)
+		#	Rectangle(pos= self.pos,size = self.size)
+
+
+
+
 
 
 	def inicializarTipoMaterial(self,label=None):

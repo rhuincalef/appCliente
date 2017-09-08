@@ -168,8 +168,10 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 		'size_hint_y': None,
 		'height': 25,
 		'cls_dicts': [{'cls': ListItemButton,
-		               'kwargs': {'text': "{0}".format(attrEstado[0])
+		               'kwargs': {'text': "{0}".format(attrEstado[0]),
 		                          #'deselected_color': [0.,0,1,1]
+		                          'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
+                                  ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
 		                          }
 		              }
 		              ,{
@@ -177,12 +179,16 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 		                   'kwargs': {
 		                       'text': "{0}".format(attrEstado[1]),
 		                       #'deselected_color': [0.,0,1,1],
-		                       'background_color': [0,1,0,1]
+		                       #'background_color': [0,1,0,1]
+		                       'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
+                               ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
 		                        }
 		              },
 		              {
 		                   'cls': ListItemButton,
-		                   'kwargs': { 'text': "{0}".format(attrEstado[2])
+		                   'kwargs': { 'text': "{0}".format(attrEstado[2]),
+		                   				'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
+                                  		,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
 		                            }
 		              }]
 		    }

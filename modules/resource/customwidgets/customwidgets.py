@@ -140,7 +140,8 @@ class CustomDropDown(TreeView):
                         'text': ICONO_DEFAULT_DROPDOWN,
                         'markup': True,
                         'font_size':TAMANIO_PLUS_ICON_DROPDOWN,
-                        'color_selected': (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
+                        'color_selected': COLOR_DROPDOWN_ROW_SELECCIONADO
+                        #,'opened': 'atlas://customAppCliente/tree_closed'
                     }
 
     def __init__(self,screen,**kwargs):
@@ -204,11 +205,15 @@ class CustomDropDown(TreeView):
                 print "estaDeshabilitada: %s\n" % estaDeshabilitada
                 print "elem.estaHabilitada(): %s\n" % elem.estaHabilitada()
                 element = TreeViewLabel(
-                                        #text = elem["nombre"] +": "+elem["descripcion"] ,
-                                        text = elem.getValor() ,
-                                        color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
+                                        text = elem.getValor(),
+                                        #text = "[u] " + elem.getValor() + " [/u]",
                                         disabled = estaDeshabilitada,
-                                        disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
+                                        markup = True,
+                                        disabled_color = COLOR_DROPDOWN_TEXTO_DESHABILITADO,
+                                        color_selected = COLOR_DROPDOWN_ROW_SELECCIONADO,
+                                        even_color = COLOR_ROW_PAR_DROPDOWN,
+                                        odd_color = COLOR_ROW_IMPAR_DROPDOWN,
+                                        #disabled_outline_color = COLOR_DROPDOWN_ITEM_DESHABILITADO_OUTLINE,
                                         font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
                                         )
                 element.no_selection = estaDeshabilitada
@@ -361,10 +366,12 @@ class CustomDropDown(TreeView):
             print "agregando cadOpcion generada: %s\n" % cadOpcion
             element = TreeViewLabel(
                                     text = cadOpcion,
-                                    markup = True,
-                                    color_selected = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3),
                                     disabled = estanDesHabilitadas,
-                                    disabled_color = (223.0/255.0, 221.0/255.0, 221.0/255.0,0.3),
+                                    markup = True,
+                                    disabled_color = COLOR_DROPDOWN_TEXTO_DESHABILITADO,
+                                    color_selected = COLOR_DROPDOWN_ROW_SELECCIONADO,
+                                    even_color = COLOR_ROW_PAR_DROPDOWN,
+                                    odd_color = COLOR_ROW_IMPAR_DROPDOWN,
                                     font_size = TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN
                                     )
             self.add_node(element)

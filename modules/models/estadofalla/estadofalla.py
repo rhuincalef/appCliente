@@ -151,14 +151,37 @@ class Confirmada(Estado):
 		return respuesta
 
 
+	# Confirmada.getAttributos()
 	# Retorna un listado ordenado con los atributos del itemFalla
 	def getAttributos(self):
 		calle = self.calleEstimada + "("+str(self.latitud)+")"
-		#altura = str(self.alturaEstimada) + "("+str(self.longitud)+")" 
-		altura = str(self.rangoEstimado1) + "-" + str(self.rangoEstimado2)\
+
+		rangoEstimado1 = rangoEstimado2 = DIRECCION_PHP_DIRECCION_NO_RETORNADA
+		if self.rangoEstimado1 != DIRECCION_PHP_DIRECCION_NO_RETORNADA:
+			rangoEstimado1 = self.rangoEstimado1
+
+		if self.rangoEstimado2 != DIRECCION_PHP_DIRECCION_NO_RETORNADA:
+			rangoEstimado2 = self.rangoEstimado2
+
+		if (rangoEstimado1 == DIRECCION_PHP_DIRECCION_NO_RETORNADA) and \
+					(rangoEstimado2 != DIRECCION_PHP_DIRECCION_NO_RETORNADA):
+			rangoEstimado1 = rangoEstimado2
+		elif (rangoEstimado2 == DIRECCION_PHP_DIRECCION_NO_RETORNADA) and \
+					(rangoEstimado1 != DIRECCION_PHP_DIRECCION_NO_RETORNADA):
+			rangoEstimado2 = rangoEstimado1
+
+		altura = str(rangoEstimado1) + "-" + str(rangoEstimado2)\
 						+ "("+str(self.longitud)+")" 
 		return list([self.id, calle, altura ])
-		#return list([self.id, self.latitud, self.longitud])
+
+
+	#BACKUP!
+	#def getAttributos(self):
+	#	calle = self.calleEstimada + "("+str(self.latitud)+")"
+	#	#altura = str(self.alturaEstimada) + "("+str(self.longitud)+")" 
+	#	altura = str(self.rangoEstimado1) + "-" + str(self.rangoEstimado2)\
+	#					+ "("+str(self.longitud)+")" 
+	#	return list([self.id, calle, altura ])
 
 
 	#Retorna el dicc de la falla codificado en utf-8 para enviar al server
@@ -260,6 +283,7 @@ class Informada(Estado):
 		return respuesta		
 
 
+	# Informada.getAttributos()
 	# Retorna un listado ordenado con los atributos del itemFalla
 	def getAttributos(self):
 		l = list([self.id, self.calle, self.altura])

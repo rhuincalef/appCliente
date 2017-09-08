@@ -636,7 +636,7 @@ ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 
 
 #Estilo principal de los tabbedpanelItem que contienen a los screens
-#Color
+#Color gris
 #ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv1'
 
 #Mapa
@@ -648,19 +648,36 @@ ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 #Otro Mapa
 ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv4'
 
+#Color amarillo
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv5'
+
+
 
 #Estilo de los dialogos que se invocan con controlador.mostrarDialogo()
 #ESTILO_BACKGROUND_MODAL_XBASE = ESTILO_FONDO_TABBED_PANEL
 ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
 
-
-
-
-
-
 COLOR_SEPARADOR_POPUPS = [1,1,1,1]
 
+#Constantes para el texto en cada Label del CustomDropDown
+#COLOR_DROPDOWN_TEXTO_DESHABILITADO = (1, 1, 1,0.5)
+COLOR_DROPDOWN_TEXTO_DESHABILITADO = (94.0/255, 94.0/255, 94.0/255,0.4)
 
+#Constantes para el row del CustomDropDown
+COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
+COLOR_ROW_PAR_DROPDOWN = (1,1,1,0.5) 
+COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
+
+
+#COLOR_DROPDOWN_ITEM_DESHABILITADO_OUTLINE = [1,0,0,1]
+
+
+# Estilos que se usan para los botones del listado en los screens
+# "capturarfallainformada" y "subirfalla".  
+
+#COLOR_ITEMS_LISTADO_NO_SELECCIONADO = [ 0.458, 0.458, 0.458, 1]
+COLOR_ITEMS_LISTADO_NO_SELECCIONADO = [ 35/255.0, 235/255.0, 237/255.0, 1]
+COLOR_ITEMS_LISTADO_SELECCIONADO = [25/255.0, 105/255.0, 204/255.0, 1]
 
 
 
