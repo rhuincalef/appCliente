@@ -636,9 +636,17 @@ ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 
 
 #Estilo principal de los tabbedpanelItem que contienen a los screens
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tab'
+#Color
 #ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv1'
-ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv2'
+
+#Mapa
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv2'
+
+#Logo UNPSJB
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv3'
+
+#Otro Mapa
+ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv4'
 
 
 #Estilo de los dialogos que se invocan con controlador.mostrarDialogo()
