@@ -241,11 +241,19 @@ class XFilePopup(XBase):
         #                            height=metrics.dp(25))
 
         pnl_controls.add_widget(Factory.XButton(
-            text=_(self.TXT_ICON), id=self.CTRL_VIEW_ICON,
-            on_release=self._ctrls_click))
+                    text=_(self.TXT_ICON), id=self.CTRL_VIEW_ICON,
+                    on_release=self._ctrls_click,
+                    background_normal = constantes.ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                    background_down = constantes.ESTILO_BOTON_DEFAULT_PRESIONADO
+            )
+        )
         pnl_controls.add_widget(Factory.XButton(
-            text=_(self.TXT_LIST), id=self.CTRL_VIEW_LIST,
-            on_release=self._ctrls_click))
+                text=_(self.TXT_LIST), id=self.CTRL_VIEW_LIST,
+                on_release=self._ctrls_click,
+                background_normal = constantes.ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                background_down = constantes.ESTILO_BOTON_DEFAULT_PRESIONADO
+            )
+        )
         return pnl_controls
 
 

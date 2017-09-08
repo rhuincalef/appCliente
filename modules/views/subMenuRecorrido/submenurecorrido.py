@@ -23,7 +23,7 @@ from file import XFileOpen, XFileSave
 
 from submenuscreen import *
 from capturador import ExcepcionRecorridoVacio
-from constantes import EXTENSION_RECORRIDO_DEFAULT
+from constantes import EXTENSION_RECORRIDO_DEFAULT,ESTILO_BACKGROUND_MODAL_XBASE,COLOR_SEPARADOR_POPUPS
 
 import re
 
@@ -58,7 +58,10 @@ class RecorridoScreen(SubMenuScreen):
             XFileSave(on_dismiss=self._fileSaveCallback,
                         title = "Guardar recorrido con fallas",
                         #path=expanduser(u'~'))
-                        path=os.getcwd())
+                        path=os.getcwd(),
+                        background = ESTILO_BACKGROUND_MODAL_XBASE,
+                        separator_color = COLOR_SEPARADOR_POPUPS
+                        )
         
 
 
@@ -113,7 +116,10 @@ class RecorridoScreen(SubMenuScreen):
                     title = "Cargar recorrido en memoria",
                     #path=expanduser(u'~'),
                     path=os.getcwd(),
-                    multiselect=False)
+                    multiselect=False,
+                    background = ESTILO_BACKGROUND_MODAL_XBASE,
+                    separator_color = COLOR_SEPARADOR_POPUPS
+                    )
 
 
     def _callbackCargarRecorrido(self,instance):
