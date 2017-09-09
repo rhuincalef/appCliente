@@ -289,7 +289,9 @@ class XFilePopup(XBase):
         new_folder = self.path + path.sep + instance.get_value()
         if path.exists(new_folder):
             XError(text=_('La carpeta "%s" ya existe.¿Desea ingresar'
-                          'otro nombre de carpeta?') % instance.get_value())
+                          'otro nombre de carpeta?') % instance.get_value()
+                    ,background = constantes.ESTILO_BACKGROUND_MODAL_XBASE,
+                    separator_color = constantes.COLOR_SEPARADOR_POPUPS )
             return True
         makedirs(new_folder)
         self.browser.property('path').dispatch(self.browser)
@@ -362,7 +364,9 @@ class XFileSave(XFilePopup):
             if self.filename == '':
                 # must be entered filename
                 XError( title=self.TXT_ERROR_TITLE,
-                    text=self.TXT_ERROR_FILENAME)
+                    text=self.TXT_ERROR_FILENAME
+                    ,background = constantes.ESTILO_BACKGROUND_MODAL_XBASE,
+                    separator_color = constantes.COLOR_SEPARADOR_POPUPS )
                 return self
 
         return super(XFileSave, self).dismiss(*largs, **kwargs)
@@ -401,7 +405,10 @@ class XFileOpen(XFilePopup):
             if len(self.selection) == 0:
                 # files must be selected
                 XError(title=self.TXT_ERROR_TITLE,                    
-                    text=self.TXT_ERROR_SELECTION)
+                    text=self.TXT_ERROR_SELECTION
+                    ,background = constantes.ESTILO_BACKGROUND_MODAL_XBASE,
+                    separator_color = constantes.COLOR_SEPARADOR_POPUPS
+                    )
                 return self
         return super(XFileOpen, self).dismiss(*largs, **kwargs)
 
@@ -440,6 +447,8 @@ class XFolder(XFilePopup):
             self._filter_selection(files=False)
             if len(self.selection) == 0:
                 # folders must be selected
-                XError(text=self.TXT_ERROR_SELECTION)
+                XError(text=self.TXT_ERROR_SELECTION
+                        ,background = constantes.ESTILO_BACKGROUND_MODAL_XBASE,
+                        separator_color = constantes.COLOR_SEPARADOR_POPUPS)
                 return self
         return super(XFolder, self).dismiss(*largs, **kwargs)

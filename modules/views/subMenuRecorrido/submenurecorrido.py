@@ -52,7 +52,7 @@ class RecorridoScreen(SubMenuScreen):
         controlador = App.get_running_app()
         if not controlador.existenFallasCargadas():
             controlador.mostrarDialogoMensaje( title= "Guardado de recorrido",
-                                        text=  "No existen fallas cargadas en memoria!")
+                                        text="No existen fallas cargadas en memoria!")
             return
         else:
             XFileSave(on_dismiss=self._fileSaveCallback,
