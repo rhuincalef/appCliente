@@ -132,6 +132,25 @@ from iconfonts import *
 from constantes import *
 register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 
+
+
+
+class OpcionDropDown(TreeViewLabel):
+    def __init__(self,**kwargs):
+        print "creada opcion dropdown!\n"
+        super(OpcionDropDown,self).__init__(**kwargs)
+        #self.dibujarLimitesWidget()
+
+    #def on_size(self, *args):
+    #    print "cambiado tamanio de ventana..\n"
+    #    self.canvas.before.clear()
+    #    with self.canvas.before:
+    #        Color(0,0, 1, 0.25)
+    #        Rectangle(pos=self.pos, size=self.size)
+
+
+
+
 class CustomDropDown(TreeView):
 
     ICONO_DEFAULT_DROPDOWN = "%s"% icon('fa-plus',TAMANIO_PLUS_ICON_DROPDOWN)
@@ -150,6 +169,8 @@ class CustomDropDown(TreeView):
         self.bind(on_node_expand = self.ocultarLabels)
         self.bind(on_node_collapse = self.mostrarLabels)
         self.screen = screen
+        print "creado customdropdown con self.root: %s\n" % type(self.root)
+        
 
     #Evento usado para ocular los labels que se encuentran detras del customdropdown
     def ocultarLabels(self,customDropdown,treeViewLabel):
@@ -204,7 +225,8 @@ class CustomDropDown(TreeView):
                 print "customwidgets dropdown type(elem): %s\n" % type(elem)
                 print "estaDeshabilitada: %s\n" % estaDeshabilitada
                 print "elem.estaHabilitada(): %s\n" % elem.estaHabilitada()
-                element = TreeViewLabel(
+                #element = TreeViewLabel(
+                element = OpcionDropDown(
                                         text = elem.getValor(),
                                         #text = "[u] " + elem.getValor() + " [/u]",
                                         disabled = estaDeshabilitada,
@@ -230,6 +252,26 @@ class CustomDropDown(TreeView):
         self.toggle_node(label.parent_node)
         label.parent_node.text = label.text
         label.parent_node.bold = True
+        #print "cambio label.parent_node: %s\n" % type(label.parent_node)
+        self.redibujarContorno()
+
+
+    # Se dibuja el contorno del TreeviewLabel parent que contiene 
+    # a las opciones en el dropdown
+    def redibujarContorno(self):
+        print "redibujando contorno!\n"
+        #label.parent_node.canvas.before.clear()
+        #with label.parent_node.canvas.before:
+        self.root.canvas.after.clear()
+        with self.root.canvas.after:
+            print "self.pos: %s; self.size: %s \n" % (self.pos,self.size)
+            print "self.root.height: %s\n" % self.root.height
+            Color(ESTILO_ROOT_TREELABEL_SELECCIONADO[0],
+                   ESTILO_ROOT_TREELABEL_SELECCIONADO[1],
+                   ESTILO_ROOT_TREELABEL_SELECCIONADO[2],
+                   ESTILO_ROOT_TREELABEL_SELECCIONADO[3] )
+            #Rectangle(pos=self.pos, size=self.size)
+            Rectangle(pos=(self.root.pos[0], self.root.pos[1]-7), size=(self.root.width,self.root.height))
 
 
 
@@ -364,7 +406,8 @@ class CustomDropDown(TreeView):
                 cadOpcion = self.generarStrIconos(prop) + prop.getValor()
                 
             print "agregando cadOpcion generada: %s\n" % cadOpcion
-            element = TreeViewLabel(
+            #element = TreeViewLabel(
+            element = OpcionDropDown(
                                     text = cadOpcion,
                                     disabled = estanDesHabilitadas,
                                     markup = True,

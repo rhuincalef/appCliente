@@ -670,7 +670,14 @@ COLOR_ROW_PAR_DROPDOWN = (251/255.0,224/255.0,0/255.0,0.6)
 COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
 
 
-#COLOR_DROPDOWN_ITEM_DESHABILITADO_OUTLINE = [1,0,0,1]
+#Estilo que representa el color del treeviewlabel "root" cuando se
+# selecciona una opcion.
+
+#ESTILO_ROOT_TREELABEL_SELECCIONADO = (0, 0, 1, 0.25)
+ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_ROW_PAR_DROPDOWN[0],
+										COLOR_ROW_PAR_DROPDOWN[1],
+										COLOR_ROW_PAR_DROPDOWN[2],
+										0.20)
 
 
 # Estilos que se usan para los botones del listado en los screens
