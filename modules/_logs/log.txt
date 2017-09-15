@@ -712,559 +712,72 @@ instanciado dialogo espera...
 
 En threadComprobarConexionSensor() 
 
-Comenzando nueva BD, deshabilitando los elementos del menu!
+No recibiendo data...
 
-Inicializada por Defecto BD Local de muestras...
+En _callbackContinuarSensor() 
 
-En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_15-09-2017.json
-
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+Si continuar ejecutando app!
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
 type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
 
-LLamando al screen de obtener fallas inforamadas...
+LLamando al screen de cargar recorrido...
 
-en tabbedpanel.desHabilitarOpciones()
+Cargado dialogo carga de fallas
 
-iterando... <class 'customwidgets.MyTabbedPanel'>
+Cargando recorrido en archivo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/RECORRIDO3CONFIRMADOS.rec
 
-iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+Obteniendo recorrido...
 
-iterando... <class 'kivy.uix.widget.Widget'>
+En obtenerRecorrido...
 
-iterando... <class 'kivy.uix.widget.Widget'>
+En obtenerRecorrido...
 
-iterando... <class 'kivy.uix.scrollview.ScrollView'>
+Obtenido el recorrido con las capturas!
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+Cerrando conexion!
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+Validando capturas...
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+================================================
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+Validando capturas...
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+================================================
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+En filtrarCapturas consistentes!
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/NUEVOOO_1.pcd ; path.exists(pathCsv):True 
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+En filtrarCapturas consistentes!
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados/NUEVOOO_2.pcd ; path.exists(pathCsv):True 
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
 
-iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+Mostrando la coleccion de fallas cargadas: 
 
-iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
 
-iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-iterando... <class 'kivy.uix.button.Button'>
+Mostrando itemfallas con estado Confirmado: 
 
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-En solicitarSugerencias()!!!
-
-
-calleCodificada(m)!!!
-
-
-peticion enviada:
-
- http://localhost/web/restapi/obtener_sugerencias_calle/calle/m/cantmaxsugerencias/3 
-
-La respuesta en formato json de solicitarSugerencias() es: 
-[u'Mitre', u'Muzio J.', u'Juan Muzio']
-produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre', u'Muzio J.', u'Juan Muzio']
-
-Handler de on_fin_obtencion_sugerencias ejecutado!
-
-En solicitarSugerencias()!!!
-
-
-calleCodificada(mi)!!!
-
-
-peticion enviada:
-
- http://localhost/web/restapi/obtener_sugerencias_calle/calle/mi/cantmaxsugerencias/3 
-
-La respuesta en formato json de solicitarSugerencias() es: 
-[u'Mitre']
-produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
-
-Handler de on_fin_obtencion_sugerencias ejecutado!
-
-type(label): <class 'kivy.uix.button.Button'>
-
-En solicitarSugerencias()!!!
-
-
-calleCodificada(Mitre)!!!
-
-
-peticion enviada:
-
- http://localhost/web/restapi/obtener_sugerencias_calle/calle/Mitre/cantmaxsugerencias/3 
-
-La respuesta en formato json de solicitarSugerencias() es: 
-[u'Mitre']
-produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
-
-Handler de on_fin_obtencion_sugerencias ejecutado!
-
-Enviando peticion al servidor calle: Mitre
-
-instanciado dialogo espera...
-
-Inicio de solicitarInformados()...
-
-Obteniendo baches sobre calle:Mitre
- 
-peticion -->
-http://localhost/web/restapi/obtener_informados/calle/Mitre
-La respuesta en formato json es: 
-{u'codigo': 200, u'datos': {u'1': {u'calle': u'Mitre', u'id': u'1', u'altura': u'334'}, u'3': {u'calle': u'Mitre', u'id': u'3', u'altura': u'424'}, u'2': {u'calle': u'Mitre', u'id': u'2', u'altura': u'389'}, u'4': {u'calle': u'Mitre', u'id': u'4', u'altura': u'439'}}}
-dic. valores parseados: {u'1': {'calle': 'Mitre', 'id': 1, 'altura': 334}, u'3': {'calle': 'Mitre', 'id': 3, 'altura': 424}, u'2': {'calle': 'Mitre', 'id': 2, 'altura': 389}, u'4': {'calle': 'Mitre', 'id': 4, 'altura': 439}}
-
-Cambiado el estado de la falla a : Informada; id: 1 - calle: Mitre - altura: 334 
-
-Falla con id 1 no esta en colBachesInformados, agregando!
-
-Cambiado el estado de la falla a : Informada; id: 3 - calle: Mitre - altura: 424 
-
-Falla con id 3 no esta en colBachesInformados, agregando!
-
-Cambiado el estado de la falla a : Informada; id: 2 - calle: Mitre - altura: 389 
-
-Falla con id 2 no esta en colBachesInformados, agregando!
-
-Cambiado el estado de la falla a : Informada; id: 4 - calle: Mitre - altura: 439 
-
-Falla con id 4 no esta en colBachesInformados, agregando!
-
-En __cmp__() con self_id: 3 y other_id: 1
-
-En __cmp__() con self_id: 2 y other_id: 3
-
-En __cmp__() con self_id: 2 y other_id: 3
-
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 4 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-Mostrando la coleccion despues de solicitarInformados()...
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Id falla:  1 ; Calle: Mitre ; Altura: 
-334
-Id falla:  2 ; Calle: Mitre ; Altura: 
-389
-Id falla:  3 ; Calle: Mitre ; Altura: 
-424
-Id falla:  4 ; Calle: Mitre ; Altura: 
-439
----------------------------------------------------------------
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-Fin de muestra de la coleccion solicitarInformados()...
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Cerrado popup!
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-LLamando al screen de capturar falla informada...
-
-en tabbedpanel.desHabilitarOpciones()
-
-iterando... <class 'customwidgets.MyTabbedPanel'>
-
-iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
-
-iterando... <class 'kivy.uix.widget.Widget'>
-
-iterando... <class 'kivy.uix.widget.Widget'>
-
-iterando... <class 'kivy.uix.scrollview.ScrollView'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
-
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
-
-iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
-
-iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
-
-iterando... <class 'kivy.uix.gridlayout.GridLayout'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-Actualizando listado de fallas...
-tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Actualizado listado!
-row_index actual:  0
-
-row_index actual:  1
-
-row_index actual:  2
-
-row_index actual:  3
-
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-recorriendo falla informada 1 falla.estaSeleccionado: True
-
-Existen fallas seleccionadas
-Agregando falla informada para ser capturada: 
-Id:  1
-
-id_falla_seleccionada: 1
-
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-PRE-ENTER!!
-La seleccion es:  []
-
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado']
-Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-es_nombre_valido:  True
-es_dir_valido:  True
-
-Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-
-Data SETEADA!!! con: nombre_cap =  MITREINFO ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-Sensor LISTO? : True...
-
-Bindeado SPACEBAR!!
-
-Llamando al manejador!
-
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-En Kinectviewer.capturar()...con idFalla 1
-
-En getDatosSensor()...
-
-len(self.queueVideo) = 0
-
-rgbSinCod.shape: (480,640)
-
-rgbSinCod.size: 921600
-
-La forma de la matriz xyz antes de filtrar en calibkinect es:
-alto:307200 ; ancho:3
-
-LLENADA dataNube! tipo: float32 
-
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-En main.capturar(): getData()? 1
- 
-En main.capturar(): id_falla? 1
- 
-instanciado dialogo espera...
-
-threadCapturarFalla id_falla:  1 ; FALLA_NO_ESTABLECIDA: -1
-
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-
-
-Seleccionando capturadorInformados...
-
-tipo capturador: <class 'capturador.CapturadorInformados'>
-Inicio asociarFalla() para id_falla:  1
-
-Encontrado ItemFalla(%s):  1
-Cantidad de archivos .pcd con el nombre  MITREINFO es :  1
-
-En registrar fallaInformada!
-item_falla: <class 'capturador.ItemFalla'>
-capturador: <class 'capturador.CapturadorInformados'>
-captura: <class 'captura.Captura'>
-ItemFalla no encontrado: id=  1
-Agregada captura a falla!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
-
-CERRADO EL POPUP CAPTURA!!!
-
-MOSTRADO DIALOGO DE VISUALIZACION!! 
-
-Si desea visualizar!!
-
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}]...
-
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
-
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}
-
-Abierto visualizador
-
-NO desea conservar la captura
-
-En descartar()...
-Las capturas recibidas son :['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd']
-
-Inicio de capturador.descartar()
-
-En Capturador.descartarFallaSinCaps()!
-
-Fin de capturador.descartar()
-
-Inicio de capturador.descartar()
-
-Captura encontrada! en: ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'] 
-
-Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd
-
-Eliminando captura de memoria...
-
-Mostrando la coleccion desde captura
-
-En mostrarCapturas()
-
-Fin mostrarCapturas()
-
-Descartada correctamente! 
-
-En mostrarCapturas()
-
-Fin mostrarCapturas()
-
-verificando long. capturas de itemfalla...
-
-len(itemFalla.getColCapturas()): 0
- 
-En CapturadorInformados.descartarFallaSinCaps()!
-
-Fin de capturador.descartar()
-
-Captura descartada en self.capturador: False ; self.capturadorInformados: False
-
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-En Kinectviewer.capturar()...con idFalla 1
-
-En getDatosSensor()...
-
-len(self.queueVideo) = 79
-
-rgbSinCod.shape: (480,640)
-
-rgbSinCod.size: 921600
-
-La forma de la matriz xyz antes de filtrar en calibkinect es:
-alto:307200 ; ancho:3
-
-LLENADA dataNube! tipo: float32 
-
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-En main.capturar(): getData()? 1
- 
-En main.capturar(): id_falla? 1
- 
-instanciado dialogo espera...
-
-threadCapturarFalla id_falla:  1 ; FALLA_NO_ESTABLECIDA: -1
-
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-
-
-Seleccionando capturadorInformados...
-
-tipo capturador: <class 'capturador.CapturadorInformados'>
-Inicio asociarFalla() para id_falla:  1
-
-Encontrado ItemFalla(%s):  1
-Cantidad de archivos .pcd con el nombre  MITREINFO es :  1
-
-En registrar fallaInformada!
-item_falla: <class 'capturador.ItemFalla'>
-capturador: <class 'capturador.CapturadorInformados'>
-captura: <class 'captura.Captura'>
-Comparando item_falla_id(1) vs f_id(1)
-
-Encontrado item_falla (1)
-
-Agregada captura a falla!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
-
-CERRADO EL POPUP CAPTURA!!!
-
-MOSTRADO DIALOGO DE VISUALIZACION!! 
-
-Si desea visualizar!!
-
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}]...
-
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
-
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}
-
-Abierto visualizador
-
-keycode[0] : 113
-keycode[1] : q
-keycode[0] : 113
-keycode[1] : q
-Si desea conservar la captura
-
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/MITREINFO_1.pcd'}] en disco!
-Screen encontrada y removida!
-SCreen agregada al mananger
-Las screens actuales de screenmanager luego de switch_to son: 
-['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
-Entre al filechooser
-El directorio actual seleccionado es:  []
-
-PRE-ENTER!!
-DesBindeada SPACEBAR!!
-
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-La seleccion es:  []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-En dialogopropscaptura.getData(): 1
-
-controlador.getData('idFalla') > 0 ? True
-
-Actualizando listado de fallas...
-tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Actualizado listado!
-En main.desSeleccionarInformados()...
-
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Fin desSeleccionarFalla!
+-------------------------------------------
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+Mostrando itemfallas con estado Informado: 
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+Se cargo correctamente el archivo con las capturas
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -1286,13 +799,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -1316,33 +829,562 @@ Refrescando vista!!!!
 instanciado dialogo espera...
 
 Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'87', u'calle': u'Muzio J.', u'rangoEstimado2': None, u'calleSecundariaA': u'Juan Muzio', u'calleSecundariaB': u'Moreno', u'estado': 0}
+calle casteada: Muzio J.
+
+results_json[rangoEstimado1]: 87
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 87
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'799', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 799
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 799
+
 Finalizado thread-FiltradoCapturas...
 
 En subircapturasservidor.args_converter()...
 
 row_index actual: 0
 
-falla: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
+falla: -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-lista informado.getAttributos() es: [1, 'Mitre', 334]
-
-Los attrEstado son: [1, 'Mitre', 334]
+Los attrEstado son: ['No asignado', 'Muzio J.(-43.256882)', '87-87(-65.299047)']
 
 >...............................................<
 
 
-Cambio la seleccion!
+En subircapturasservidor.args_converter()...
 
-El estado de las fallas es: 
+row_index actual: 1
 
--->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-799(-65.311438)']
+
+>...............................................<
 
 
-*****************************************
+Resultado de controlador.existenFallasSeleccionadas()? False
 
-Fin de cambio_seleccion
+En check_box_activado con checkbox active: True
+
+
+En marcarCapturas con activo: True
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+Seleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+Seleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Vaciadas capturas!
+Desmarcando elementos ...
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+En check_box_activado con checkbox active: False
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Desmarcados todos los elementos!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'87', u'calle': u'Muzio J.', u'rangoEstimado2': None, u'calleSecundariaA': u'Juan Muzio', u'calleSecundariaB': u'Moreno', u'estado': 0}
+calle casteada: Muzio J.
+
+results_json[rangoEstimado1]: 87
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 87
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'799', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 799
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 799
+
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 0
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Muzio J.(-43.256882)', '87-87(-65.299047)']
+
+>...............................................<
+
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 1
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-799(-65.311438)']
+
+>...............................................<
+
+
+Resultado de controlador.existenFallasSeleccionadas()? False
+
+En check_box_activado con checkbox active: True
+
+
+En marcarCapturas con activo: True
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+Seleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+Seleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Vaciadas capturas!
+Desmarcando elementos ...
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+En check_box_activado con checkbox active: False
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Desmarcados todos los elementos!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'87', u'calle': u'Muzio J.', u'rangoEstimado2': None, u'calleSecundariaA': u'Juan Muzio', u'calleSecundariaB': u'Moreno', u'estado': 0}
+calle casteada: Muzio J.
+
+results_json[rangoEstimado1]: 87
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 87
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'799', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 799
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 799
+
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 0
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Muzio J.(-43.256882)', '87-87(-65.299047)']
+
+>...............................................<
+
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 1
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-799(-65.311438)']
+
+>...............................................<
+
+
+Resultado de controlador.existenFallasSeleccionadas()? False
+
+En check_box_activado con checkbox active: True
+
+
+En marcarCapturas con activo: True
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+Seleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+Seleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
 Resultado de controlador.existenFallasSeleccionadas()? True
 
 
@@ -1358,31 +1400,53 @@ tipo: <class '__main__.MainApp'>; controlador.canceladaSubidaArchivos: False
 
 tipo: <class '__main__.MainApp'>; self.canceladaSubidaArchivos: False
 
-Lista capturadores: [<capturador.Capturador object at 0x7f3e5d4e9610>, <capturador.CapturadorInformados object at 0x7f3e5d4e96d0>]
+Lista capturadores: [<capturador.Capturador object at 0x7f3ca0641610>, <capturador.CapturadorInformados object at 0x7f3ca06416d0>]
 
 Iterando capturador <class 'capturador.Capturador'>
 
 En capturador.enviarCapturas()
 
-Fin de capturador.enviarCapturas()!
 
-Iterando capturador <class 'capturador.CapturadorInformados'>
-
-En capturador.enviarCapturas()
-
-
-Enviando falla= -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
+Enviando falla= -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
 ] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    ; falla.is_selected=True)
 
 Inicio ItemFalla.enviar() para la falla:
- -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
+ -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
 ] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+En getDicFallaEncoded()...
+
+Criticidad: alto
 
 
 Upload finished! (Returned status 200 OK)
 Registrando la respuesta...
 
 Llamado loggearMensaje...
+
+
+Enviando falla= -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    ; falla.is_selected=True)
+
+Inicio ItemFalla.enviar() para la falla:
+ -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+En getDicFallaEncoded()...
+
+Criticidad: alto
+
+
+Upload finished! (Returned status 200 OK)
+Registrando la respuesta...
+
+Llamado loggearMensaje...
+
+Fin de capturador.enviarCapturas()!
+
+Iterando capturador <class 'capturador.CapturadorInformados'>
+
+En capturador.enviarCapturas()
 
 Fin de capturador.enviarCapturas()!
 
@@ -1400,350 +1464,124 @@ Refrescando vista!!!!
 instanciado dialogo espera...
 
 Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'87', u'calle': u'Muzio J.', u'rangoEstimado2': None, u'calleSecundariaA': u'Juan Muzio', u'calleSecundariaB': u'Moreno', u'estado': 0}
+calle casteada: Muzio J.
+
+results_json[rangoEstimado1]: 87
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 87
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'799', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 799
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 799
+
 Finalizado thread-FiltradoCapturas...
 
 Vaciadas capturas!
-Cambio la seleccion!
+Desmarcando elementos ...
 
-El estado de las fallas es: 
 
+En marcarCapturas con activo: False
 
-*****************************************
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
 
-Fin de cambio_seleccion
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+self.ids.listado.adapter.selection: []
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
 
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+DesSeleccionado elementos!
 
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+iterando botones...
 
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+iterando botones...
 
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
 
-LLamando al screen de obtener fallas inforamadas...
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
 
-en tabbedpanel.desHabilitarOpciones()
 
-iterando... <class 'customwidgets.MyTabbedPanel'>
+DesSeleccionado elementos!
 
-iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+iterando botones...
 
-iterando... <class 'kivy.uix.widget.Widget'>
+iterando botones...
 
-iterando... <class 'kivy.uix.widget.Widget'>
+Colecciones actualizadas ...
 
-iterando... <class 'kivy.uix.scrollview.ScrollView'>
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+self.ids.listado.adapter.selection: []
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+Fin de marcarCapturas()! %s
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+En check_box_activado con checkbox active: False
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+En marcarCapturas con activo: False
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+self.ids.listado.adapter.selection: []
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
 
-iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
 
-iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
 
-iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+DesSeleccionado elementos!
 
-iterando... <class 'kivy.uix.button.Button'>
+iterando botones...
 
-iterando... <class 'kivy.uix.button.Button'>
+iterando botones...
 
-iterando... <class 'kivy.uix.button.Button'>
 
-type(label): <class 'kivy.uix.button.Button'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+DesSeleccionado elementos!
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+iterando botones...
 
-LLamando al screen de capturar falla informada...
+iterando botones...
 
-en tabbedpanel.desHabilitarOpciones()
+Colecciones actualizadas ...
 
-iterando... <class 'customwidgets.MyTabbedPanel'>
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
 
-iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+self.ids.listado.adapter.selection: []
 
-iterando... <class 'kivy.uix.widget.Widget'>
 
-iterando... <class 'kivy.uix.widget.Widget'>
+Fin de marcarCapturas()! %s
 
-iterando... <class 'kivy.uix.scrollview.ScrollView'>
+Desmarcados todos los elementos!
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
-
-iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
-
-iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
-
-iterando... <class 'kivy.uix.gridlayout.GridLayout'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-Actualizando listado de fallas...
-tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Actualizado listado!
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-recorriendo falla informada 1 falla.estaSeleccionado: True
-
-Existen fallas seleccionadas
-Agregando falla informada para ser capturada: 
-Id:  1
-
-id_falla_seleccionada: 1
-
-Entre al filechooser
-El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-PRE-ENTER!!
-La seleccion es:  []
-
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado']
-Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-es_nombre_valido:  True
-es_dir_valido:  True
-
-Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-
-Data SETEADA!!! con: nombre_cap =  INFOOOONUEVO ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-Sensor LISTO? : True...
-
-Bindeado SPACEBAR!!
-
-Llamando al manejador!
-
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-En Kinectviewer.capturar()...con idFalla 1
-
-En getDatosSensor()...
-
-len(self.queueVideo) = 0
-
-rgbSinCod.shape: (480,640)
-
-rgbSinCod.size: 921600
-
-La forma de la matriz xyz antes de filtrar en calibkinect es:
-alto:307200 ; ancho:3
-
-LLENADA dataNube! tipo: float32 
-
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-En main.capturar(): getData()? 1
- 
-En main.capturar(): id_falla? 1
- 
-instanciado dialogo espera...
-
-threadCapturarFalla id_falla:  1 ; FALLA_NO_ESTABLECIDA: -1
-
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado
-
-
-Seleccionando capturadorInformados...
-
-tipo capturador: <class 'capturador.CapturadorInformados'>
-Inicio asociarFalla() para id_falla:  1
-
-Encontrado ItemFalla(%s):  1
-Cantidad de archivos .pcd con el nombre  INFOOOONUEVO es :  1
-
-En registrar fallaInformada!
-item_falla: <class 'capturador.ItemFalla'>
-capturador: <class 'capturador.CapturadorInformados'>
-captura: <class 'captura.Captura'>
-Comparando item_falla_id(1) vs f_id(1)
-
-Encontrado item_falla (1)
-
-Agregada captura a falla!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-Falla (1) tiene las capturas:  
-Item_falla no tiene capturas!!!!
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
-
-CERRADO EL POPUP CAPTURA!!!
-
-MOSTRADO DIALOGO DE VISUALIZACION!! 
-
-Si desea visualizar!!
-
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd'}]...
-
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
-
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd'}
-
-Abierto visualizador
-
-keycode[0] : 113
-keycode[1] : q
-keycode[0] : 113
-keycode[1] : q
-Si desea conservar la captura
-
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado/INFOOOONUEVO_1.pcd'}] en disco!
-Screen encontrada y removida!
-SCreen agregada al mananger
-Las screens actuales de screenmanager luego de switch_to son: 
-['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
-Entre al filechooser
-El directorio actual seleccionado es:  []
-
-PRE-ENTER!!
-DesBindeada SPACEBAR!!
-
-CAMBIO DE DIRECTORIO!
-selection : []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-La seleccion es:  []
-
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
-
-En dialogopropscaptura.getData(): 1
-
-controlador.getData('idFalla') > 0 ? True
-
-Actualizando listado de fallas...
-tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Actualizado listado!
-En main.desSeleccionarInformados()...
-
-En __cmp__() con self_id: 2 y other_id: 1
-
-En __cmp__() con self_id: 3 y other_id: 2
-
-En __cmp__() con self_id: 4 y other_id: 3
-
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f3e13e95f50>, <capturador.ItemFalla object at 0x7f3e1356e0c8>, <capturador.ItemFalla object at 0x7f3e13e95e60>, <capturador.ItemFalla object at 0x7f3e1356e1b8>]
-
-self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--     - -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
-] , 'is_selected': False , 'estaSubidaAlServidor': True }<--    
-
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 2 - calle: Mitre - altura: 389  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 3 - calle: Mitre - altura: 424  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Deseleccionando falla informada: -->{ 'estado': { Informada; id: 4 - calle: Mitre - altura: 439  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Fin desSeleccionarFalla!
-
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
-
-Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
-
-type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
 LLamando al screen de SUBIR FALLAS...
 
@@ -1761,13 +1599,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21ae6f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e21bffc90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e50078750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3e53fb0d70>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3e5c531130>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -1791,93 +1629,108 @@ Refrescando vista!!!!
 instanciado dialogo espera...
 
 Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'87', u'calle': u'Muzio J.', u'rangoEstimado2': None, u'calleSecundariaA': u'Juan Muzio', u'calleSecundariaB': u'Moreno', u'estado': 0}
+calle casteada: Muzio J.
+
+results_json[rangoEstimado1]: 87
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 87
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'799', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 799
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 799
+
 Finalizado thread-FiltradoCapturas...
 
 En subircapturasservidor.args_converter()...
 
 row_index actual: 0
 
-falla: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
+falla: -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
 ] , 'is_selected': False , 'estaSubidaAlServidor': True }<--    
 
-lista informado.getAttributos() es: [1, 'Mitre', 334]
-
-Los attrEstado son: [1, 'Mitre', 334]
+Los attrEstado son: ['No asignado', 'Muzio J.(-43.256882)', '87-87(-65.299047)']
 
 >...............................................<
 
 
-Cambio la seleccion!
+En subircapturasservidor.args_converter()...
 
-El estado de las fallas es: 
+row_index actual: 1
 
--->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=NUEVOOO_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/baches_confirmados , nombreCaptura= NUEVOOO;
+] , 'is_selected': False , 'estaSubidaAlServidor': True }<--    
 
+Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-799(-65.311438)']
 
-*****************************************
-
-Fin de cambio_seleccion
-Resultado de controlador.existenFallasSeleccionadas()? True
+>...............................................<
 
 
-lista_capturadores desde subir_capturas: 2
+Resultado de controlador.existenFallasSeleccionadas()? False
 
-Reseteando flag de subida archivos...
-
-En threadSubidaCapturas...
-
-Iterando lista de capturadores para subir...
-
-tipo: <class '__main__.MainApp'>; controlador.canceladaSubidaArchivos: False
-
-tipo: <class '__main__.MainApp'>; self.canceladaSubidaArchivos: False
-
-Lista capturadores: [<capturador.Capturador object at 0x7f3e5d4e9610>, <capturador.CapturadorInformados object at 0x7f3e5d4e96d0>]
-
-Iterando capturador <class 'capturador.Capturador'>
-
-En capturador.enviarCapturas()
-
-Fin de capturador.enviarCapturas()!
-
-Iterando capturador <class 'capturador.CapturadorInformados'>
-
-En capturador.enviarCapturas()
+Vaciadas capturas!
+Desmarcando elementos ...
 
 
-Enviando falla= -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    ; falla.is_selected=True)
+En marcarCapturas con activo: False
 
-Inicio ItemFalla.enviar() para la falla:
- -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [Captura: nombreArchivoCaptura=MITREINFO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= MITREINFO;
-, Captura: nombreArchivoCaptura=INFOOOONUEVO_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/bache_informado , nombreCaptura= INFOOOONUEVO;
-] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
 
 
-Upload finished! (Returned status 200 OK)
-Registrando la respuesta...
 
-Llamado loggearMensaje...
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
 
-Fin de capturador.enviarCapturas()!
 
-Desplanificando el callback de actualizacion del screen!
+DesSeleccionado elementos!
 
-Liberando el lock!
+iterando botones...
 
-Liberado el candadoFinSubidas
+iterando botones...
 
-Si conservar las capturas subidas en disco!
 
-Cancelado subida al servidor!
 
-Refrescando vista!!!! 
-instanciado dialogo espera...
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
 
-Iniciando thread-filtrado de capturas
-Finalizado thread-FiltradoCapturas...
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+iterando botones...
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f3c5e609938>, <capturador.ItemFalla object at 0x7f3c5ddb2050>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Desmarcados todos los elementos!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64c42f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64d58c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c64e71750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f3c9c0a4d70>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f3c9f689130>
 

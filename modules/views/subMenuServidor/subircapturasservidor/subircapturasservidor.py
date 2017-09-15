@@ -42,10 +42,10 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 	#Recorre todos los elementos del listview y los marca segun el parametro
 	# "activos".
 	def marcarCapturas(self,activo):
-		print "En marcarCapturas con activo: %s\n" % activo
-		print "\nself.ids.listado.adapter: %s\n\n" % self.ids.listado.adapter.__dict__
-		print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
+		print "\nEn marcarCapturas con activo: %s\n" % activo
+		#print "\nself.ids.listado.adapter: %s\n\n" % self.ids.listado.adapter.__dict__
 		colItemFalla = self.ids.listado.adapter.data
+		print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
 		print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
 		
 		for index in xrange(0,len(colItemFalla)):
@@ -59,6 +59,7 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 				funcionItemFalla= colItemFalla[index].desSeleccionar
 				print "DesSeleccionado elementos!\n"				
 			funcionItemFalla()
+		
 			#Se seleccionan los botones de la GUI que representan a los elementos
 			listadoCompositeListItem = self.ids.listado.children[0].children[0].children
 			for elementoComp in listadoCompositeListItem:
@@ -69,11 +70,25 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 						funcionSeleccionarBoton = boton.select
 					funcionSeleccionarBoton()
 
+		print "Colecciones actualizadas ...\n"
+		print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
+		print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
+		print "\nFin de marcarCapturas()! %s\n"
 
 	def check_box_activado(self):
 		print "En check_box_activado con checkbox active: %s\n" % \
 					self.ids.check_box_seleccionar_todo.active 
 		self.marcarCapturas(activo = self.ids.check_box_seleccionar_todo.active)
+
+
+	
+	#Se desmarcan los elementos seleccionados antes al salir de la vista
+	def desMarcarElementos(self):
+		print "Desmarcando elementos ...\n" 
+		self.marcarCapturas(activo=False)
+		self.ids.check_box_seleccionar_todo.active = False
+		print "Desmarcados todos los elementos!\n"
+
 
 
 	#Se deseleccionan los elementos cunado adapter.selection<2 porque
@@ -86,23 +101,6 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 			print "%s\n" % falla
 		print "\n*****************************************\n"
 		print "Fin de cambio_seleccion"
-
-
-	#BACKUP!
-	#Se deseleccionan los elementos cunado adapter.selection<2 porque
-	# sino se cambia el estado del primer elemento en la lista a
-	# is_selected = True
-	#def cambio_seleccion(self,adapter):
-	#	print "Cambio la seleccion!\n"
-	#	if len(adapter.selection) < 2:
-	#		print "DESELECCIONANDO FALLAS!!\N"
-	#		for falla in self.listado_capturas.adapter.data:
-	#			falla.desSeleccionar()
-	#	print "El estado de las fallas es: \n"
-	#	for falla in self.listado_capturas.adapter.data:
-	#		print "%s\n" % falla
-	##	print "\n*****************************************\n"
-	#	print "Fin de cambio_seleccion"
 
 
 
@@ -146,7 +144,9 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 	def volver(self):
 		#Limpiar el ListView y volver
 		print "Vaciadas capturas!"
+		self.desMarcarElementos()
 		self.listado_capturas.adapter.data = []
+
 		#self.manager.current = 'menu'
 		self.manager.get_screen("subMenuServidor").habilitarOpciones()  
 		self.manager.current = 'subMenuServidor'
