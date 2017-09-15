@@ -9,6 +9,7 @@ NOTAS PARA EL MANUAL DEL USUARIO:
 
 -Si se suben las capturas al servidor y no se conservan (en memoria y en disco), no se podra guardar un recorrido porque ya se habran registrado en el sistema. El flujo de trabajo en tal caso, consiste en capturar y guardar el recorrido con todas las fallas (por defecto se guardar informadas y confirmadas) y, posteriormente cargar el archivo de recorrido de disco y realizar la subida correspondiente. 
 
+-Si selecciona la opcion de subir_falla y se conservan las capturas en disco y en memoria, estas se pueden volver a subir al servidor si se desea, por lo que la subida de las capturas debe realizarse como un unico paso. Se pueden conservar las capturas en memoria y disco, debido a que se podría querer guardar el recorrido en disco nuevamente, como un respaldo.
 
 
 
