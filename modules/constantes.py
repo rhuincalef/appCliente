@@ -93,7 +93,10 @@ EXTENSION_ARCHIVO = path.extsep + "pcd"
 FORMATO_CAPTURA = "pcd"
 SUBFIJO = "_"
 #EXTENSION_SUBIDA_SERVER_DEFAULT = ".csv"
-EXTENSION_SUBIDA_SERVER_DEFAULT = path.extsep + "csv"
+
+# Ej. ".pcd",".csv"
+#EXTENSION_SUBIDA_SERVER_DEFAULT = path.extsep + "csv"
+EXTENSION_SUBIDA_SERVER_DEFAULT = path.extsep + "pcd"
 
 
 # Valor usado para verificar si la vista fue cargada desde la opcion de 

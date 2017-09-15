@@ -676,7 +676,7 @@ class MainApp(App,EventDispatcher):
 		dicCaps = popup.args
 		capturas = list() 
 		capturas.append(dicCaps[0]['pcdFile'])
-		capturas.append(dicCaps[1]['csvFile'])
+		#capturas.append(dicCaps[1]['csvFile'])
 		print "Las capturas recibidas son :%s\n" % capturas
 		estaDescartada = self.capturador.descartar(capturas)
 		if not estaDescartada:
@@ -958,10 +958,10 @@ class MainApp(App,EventDispatcher):
 		self.mostrarColItemFalla()			
 		msg = "Existen elementos falla"
 		if hayInformadosCorruptos:
-			msg += " informados"
+			msg += " informados,"
 		if hayConfirmadosCorruptos:
-			msg += " y confirmados"
-		msg += " que \nse encuentran inconsistentes.\nMás información en: %s." %\
+			msg += " confirmados"
+		msg += " que \nse encuentran inconsistentes y se han ignorado.\nMás información en: %s." %\
 					(LOGS_DEFAULT_DIR + LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT)
 		if hayInformadosCorruptos or hayConfirmadosCorruptos:
 			self.mostrarDialogoMensaje(title="Carga de fallas",

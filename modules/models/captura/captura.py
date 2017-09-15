@@ -23,29 +23,33 @@ from constantes import CSV_TMP_DIR
 
 import utils
 from utils import *
+from kivy.app import App
 
 from persistent import Persistent
-#class Captura(object):
+
 class Captura(Persistent):
 	def __init__(self,nombre,dirLocal,formatoArchivo,extensionArchivo):
-		self.nombreCaptura = nombre
-		self.dirLocal = dirLocal
+		self.nombreCaptura = nombre #Nombre sin extension.Ej:  "NUEVOSCONFIRMADOS"
+		self.dirLocal = dirLocal #Directorio local donde se guardan los archivos de captura.
 		self.formato = formatoArchivo
 		self.extension = extensionArchivo
-		self.nombreArchivoCaptura = None
+		self.nombreArchivoCaptura = None #Nombre del archivo de captura completo.Ej."NUEVOSCONFIRMADOS_1.pcd"
 		self.estaSubidaAlServidor = False # determina si una captura se subio
 										#completamente al servidor.
 
 
-	#Retorna el nombre del archivo+SUBFIJO+ID_INCREMENTAL+".csv"
+	#Retorna el nombre del archivo+SUBFIJO+ID_INCREMENTAL+ EXTENSION_SUBIDA_DEFAULT
+	# (puede ser .pcd o .csv)
+	#
 	def getNombreCapturaConvertida(self):
 		archivo_csv_salida = os.path.splitext(self.nombreArchivoCaptura)[0] 
 		return archivo_csv_salida + EXTENSION_SUBIDA_SERVER_DEFAULT
-
+	
 
 	#Retorna la ruta completa al archivo .csv convertido asociado a la captura
 	def getFullPathCapturaConv(self):
-		return self.dirLocal + path.sep + CSV_TMP_DIR + self.getNombreCapturaConvertida() 
+		#return self.dirLocal + path.sep + CSV_TMP_DIR + self.getNombreCapturaConvertida() 
+		return self.dirLocal + path.sep + self.getNombreCapturaConvertida() 
 
 
 	#Retorna la ruta completa al archivo .pcd asociado con la captura
@@ -127,9 +131,9 @@ class Captura(Persistent):
 	def descartar(self,colCaps):
 		try:
 			subprocess.check_call([REMOVE_COMMAND,self.getFullPathCaptura()])
-			subprocess.check_call([REMOVE_COMMAND,self.getFullPathCapturaConv()])
 			print "Borrada captura de disco! %s\n" % self.getFullPathCaptura()
-			print "Borrada captura de disco! %s\n" % self.getFullPathCapturaConv()
+			#subprocess.check_call([REMOVE_COMMAND,self.getFullPathCapturaConv()])
+			#print "Borrada captura de disco! %s\n" % self.getFullPathCapturaConv()
 		except Exception as e:
 			err = "Error OS en borrar(%s)\n" % e
 			print err
