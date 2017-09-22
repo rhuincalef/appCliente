@@ -235,7 +235,7 @@ class MainApp(App,EventDispatcher):
 	def instanciada_app(self,app):
 		print "instanciada la app!\n"
 		if not self.conexionSensorEstablecida():
-			self.mostrarDialogoMensaje( title='Error de conexion',
+			self.mostrarDialogoMensaje( title='Error de conexión',
 										text='El sensor no se encuentra conectado.\nConecte el sensor antes de realizar una nueva captura.'
 										)
 		popup = self.mostrarDialogoEspera(title="Carga de propiedades",
@@ -323,7 +323,7 @@ class MainApp(App,EventDispatcher):
 			utils.loggearMensaje(logger,errMsg)
 			msg = "No se pueden subir archivos hasta que se haya\n establecido conexión con el servidor.\n Más información en %s%s" %\
 				(LOGS_DEFAULT_DIR,LOG_FILE_FILTRADO_CAPS)
-			popup = self.mostrarDialogoMensaje(title = "Error de conexion con el servidor",
+			popup = self.mostrarDialogoMensaje(title = "Error de conexión con el servidor",
 												text = msg)
 			popup.bind(on_dismiss=self._regresarAMainMenu)
 		finally:
@@ -788,7 +788,7 @@ class MainApp(App,EventDispatcher):
 	#def threadGetPropsConfirmadas(self,popup,lockPropsConfirmadas):
 	def threadGetPropsConfirmadas(self,popup):
 		resultPeticion = {
-						"titulo":"Peticion al servidor"
+						"titulo":"Petición al servidor"
 						}
 		msg = ""
 		msg2 = ""
@@ -801,7 +801,7 @@ class MainApp(App,EventDispatcher):
 			self.capturador.obtenerPropsConfirmadas()
 			print "Despues de capturador.obtenerPropsConfirmadas()\n"
 			self.capturador.crearBackupConfirmados()
-			msg = "Tipos de falla obtenidos correctamente desde servidor!!!!"
+			msg = "Tipos de falla obtenidos correctamente desde servidor!"
 		except (ExcepcionTipoFallaIncompleta,ExcepcionAjax) as e:
 
 			utils.loggearMensaje(logger,str(e.message))
@@ -866,8 +866,8 @@ class MainApp(App,EventDispatcher):
 	#def comprobarConexionSensor(self):
 	def comprobarConexionSensor(self,instance):
 		print "En comprobarConexionSensor().\n"
-		popup = self.mostrarDialogoEspera(title="Conexion con el sensor",
-				content ="Comprobando la correcta conexion al sensor Kinect...",
+		popup = self.mostrarDialogoEspera(title="Conexión con el sensor",
+				content ="Comprobando la correcta conexión al sensor Kinect...",
 			)
 		t = threading.Thread(name = "thread-threadComprobarConexionSensor",
 								target = self.threadComprobarConexionSensor, 
@@ -883,7 +883,7 @@ class MainApp(App,EventDispatcher):
 		if not self.tabbedPanel.getSubMenuPorNombre("capturaKinect").recibiendoDatosKinect():
 			print "No recibiendo data...\n"
 			self.mostrarDialogoConfirmacion(
-									title = "Conexion al sensor kinect",
+									title = "Conexión al sensor kinect",
 									content = "No se estan recibiendo datos del sensor, si desea capturar debe reconectarlo.\n¿Desea continuar ejecutando la aplicación?",
 									callback = self._callbackContinuarSensor)
 		popup.dismiss()

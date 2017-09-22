@@ -26,7 +26,11 @@ TITULO_APP = "Aplicacion de captura de fallas"
 #DIR_DEFAULT_THEMES_KIVY = DIR_RAIZ_KIVY + os.path.sep + "data"+ os.path.sep + "images" 
 
 #Comando para crear altas de custom theme en appClienteNuevoDisenio/themeAppCliente: 
-# python -m kivy.atlas customAppCliente 256x256 *
+# python -m kivy.atlas customAppCliente 1087x621 *
+
+
+
+
 # Constantes de archivo personalizado .atlas para kivy
 
 CUSTOM_THEME_NAME = "customAppCliente.atlas"
@@ -583,8 +587,17 @@ PONDERACION_CRITICIDAD_BAJA = 1
 PONDERACION_CRITICIDAD_MEDIA = 1.15
 PONDERACION_CRITICIDAD_ALTA = 1.5
 
-#COLOR_PONDERACION_BAJA = '39F964'
-COLOR_PONDERACION_BAJA = '21C3E8'
+
+#COLOR DE LAS CRITICIDADES EN RGB(Capturar falla confirmada)
+#AZUL MARINO CLARO -->
+#COLOR_PONDERACION_BAJA = '21C3E8'
+
+#AZUL OSCURO -->
+COLOR_PONDERACION_BAJA = '1710EC'
+
+#VERDE OSCURO -->
+#COLOR_PONDERACION_BAJA = '009900'
+
 COLOR_PONDERACION_MEDIA = 'F2F939'
 COLOR_PONDERACION_ALTA = 'FF0000'
 
@@ -628,6 +641,9 @@ ESTILO_BOTON_DEFAULT_OPCIONES_MENU = 'atlas://customAppCliente/button'
 ESTILO_BOTON_DEFAULT_PRESIONADO = 'atlas://customAppCliente/button_pressed'
 
 
+ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_no_seleccionado'
+
+
 ESTILO_CHECKBOX_DESSELECCIONADO = 'atlas://customAppCliente/checkbox_off'
 ESTILO_CHECKBOX_SELECCIONADO = 'atlas://customAppCliente/checkbox_on'
 
@@ -648,12 +664,19 @@ ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 #Logo UNPSJB
 #ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv3'
 
-#Otro Mapa
-ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv4'
 
 #Color amarillo
 #ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv5'
 
+#Otro Mapa
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv4'
+
+#Mapa con zoom-out mayor
+#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv7'
+
+
+#Mapa con zoom-out mayor
+ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv8'
 
 
 #Estilo de los dialogos que se invocan con controlador.mostrarDialogo()
@@ -662,35 +685,32 @@ ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
 
 COLOR_SEPARADOR_POPUPS = [1,1,1,1]
 
+
 #Constantes para el texto en cada Label del CustomDropDown
 #COLOR_DROPDOWN_TEXTO_DESHABILITADO = (1, 1, 1,0.5)
 COLOR_DROPDOWN_TEXTO_DESHABILITADO = (94.0/255, 94.0/255, 94.0/255,0.4)
 
 #Constantes para el row del CustomDropDown
+#
 COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
-#COLOR_ROW_PAR_DROPDOWN = (1,1,1,0.5) 
 COLOR_ROW_PAR_DROPDOWN = (251/255.0,224/255.0,0/255.0,0.6) 
 COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
 
-
 #Estilo que representa el color del treeviewlabel "root" cuando se
 # selecciona una opcion.
-
-#ESTILO_ROOT_TREELABEL_SELECCIONADO = (0, 0, 1, 0.25)
+#ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_ROW_PAR_DROPDOWN[0],
+#										COLOR_ROW_PAR_DROPDOWN[1],
+#										COLOR_ROW_PAR_DROPDOWN[2],
+#										0.20)
 ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_ROW_PAR_DROPDOWN[0],
 										COLOR_ROW_PAR_DROPDOWN[1],
 										COLOR_ROW_PAR_DROPDOWN[2],
-										0.20)
-
+										0.50)
 
 # Estilos que se usan para los botones del listado en los screens
 # "capturarfallainformada" y "subirfalla".  
-
-#COLOR_ITEMS_LISTADO_NO_SELECCIONADO = [ 0.458, 0.458, 0.458, 1]
 COLOR_ITEMS_LISTADO_NO_SELECCIONADO = [ 35/255.0, 235/255.0, 237/255.0, 1]
 COLOR_ITEMS_LISTADO_SELECCIONADO = [25/255.0, 105/255.0, 204/255.0, 1]
-
-
 
 
 PATH_LOG_PRINCIPAL = "_logs/log.txt"

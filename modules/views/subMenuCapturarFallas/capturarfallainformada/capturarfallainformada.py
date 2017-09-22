@@ -14,7 +14,7 @@ from kivy.graphics import *
 from kivy.uix.label import Label
 from capturador import CapturadorInformados
 from constantes import FALLA_NO_ESTABLECIDA,COLOR_ITEMS_LISTADO_SELECCIONADO,COLOR_ITEMS_LISTADO_NO_SELECCIONADO,\
-ESTILO_BOTON_DEFAULT_OPCIONES_MENU, ESTILO_BOTON_DEFAULT_PRESIONADO
+ESTILO_BOTON_DEFAULT_OPCIONES_MENU, ESTILO_BOTON_DEFAULT_PRESIONADO,ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
 
 from screenredimensionable import ScreenRedimensionable
 
@@ -99,16 +99,18 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
       print "row_index actual: ",row_index
       print ""
       return {
-        # 'text': an_obj.id,
         'size_hint_y': None,
-        'height': 25,
+        'height': 32,
         'cls_dicts': [{'cls': ListItemButton,
                        'kwargs': {
                                   'text': "{0}".format(an_obj.getEstado().getId()),
-                                  #'deselected_color': [0.,0,1,1]
-                                  'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
-                                  ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
-                                  #,'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                                  'background_color': [1,1,1,1],
+                                  'deselected_color': [1,1,1,0],
+                                  #'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+
+                                  #'selected_color': [0,0,1,1],
+
+                                  #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU
                                   #'background_down': ESTILO_BOTON_DEFAULT_PRESIONADO
                                   }
                       }

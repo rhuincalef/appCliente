@@ -99,6 +99,20 @@ NOTAS IMPORTANTE PARA INTEGRACION:
 -Modificar el path en constantes de customTheme.py
 
 
+--COSAS PARA CORREGIR DE GABRIEL-->
+
+En appCliente: 
+*FONDO TABBED PANEL, MAPA MAS ALEJADO Y MENOS DIFUMINADO.  -->OK
+*DROPDOWN MAS BRILLANTE CUANDO SE SELECCIONA ELEMENTO. --> OK
+*CHECKBOX SUBIR FALLA BLANCO O NEGRO. -->  OK
+*LISTVIEW COLOR MAS BRILLANTE PARA SELECCION Y COLOR MAS OSCURO PARA NO SELECCION.CRIT. SELECCION UNIFORME. -->
+
+
+En documento formal tesina:
+*Quitar los numeros al costado del indice 1,2,3,4,5,etc.
+*Marco teórico como breve introduccion del cap. de antecedentes historicos.
+*Cap. "organización de contenidos" debe estar fuera del índice.
+*Diagrama de Gantt en sección de "Anexos". Ver como incorporar anexo en sphinx.
 
 
 

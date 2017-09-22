@@ -157,12 +157,15 @@ class Confirmada(Estado):
 		calle = self.calleEstimada + "("+str(self.latitud)+")"
 
 		rangoEstimado1 = rangoEstimado2 = DIRECCION_PHP_DIRECCION_NO_RETORNADA
+		#Se verifica si alguna de las dos no se obtuvo
 		if self.rangoEstimado1 != DIRECCION_PHP_DIRECCION_NO_RETORNADA:
 			rangoEstimado1 = self.rangoEstimado1
 
 		if self.rangoEstimado2 != DIRECCION_PHP_DIRECCION_NO_RETORNADA:
 			rangoEstimado2 = self.rangoEstimado2
 
+		#Se reemplaza el valor de una por el de otra, si alguna de las dos dirs 
+		#se pudo obtener pero la otra no.
 		if (rangoEstimado1 == DIRECCION_PHP_DIRECCION_NO_RETORNADA) and \
 					(rangoEstimado2 != DIRECCION_PHP_DIRECCION_NO_RETORNADA):
 			rangoEstimado1 = rangoEstimado2
@@ -170,6 +173,11 @@ class Confirmada(Estado):
 					(rangoEstimado1 != DIRECCION_PHP_DIRECCION_NO_RETORNADA):
 			rangoEstimado2 = rangoEstimado1
 
+		#Si ninguna se pudo obtener se reemplaza por el caracter "-"
+		if rangoEstimado1 == DIRECCION_PHP_DIRECCION_NO_RETORNADA and \
+				rangoEstimado2 == DIRECCION_PHP_DIRECCION_NO_RETORNADA:
+			rangoEstimado1 = rangoEstimado2 = "-"
+		  	  
 		altura = str(rangoEstimado1) + "-" + str(rangoEstimado2)\
 						+ "("+str(self.longitud)+")" 
 		return list([self.id, calle, altura ])
