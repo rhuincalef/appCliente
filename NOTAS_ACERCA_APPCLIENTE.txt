@@ -9,7 +9,11 @@ NOTAS PARA EL MANUAL DEL USUARIO:
 
 -Si se suben las capturas al servidor y no se conservan (en memoria y en disco), no se podra guardar un recorrido porque ya se habran registrado en el sistema. El flujo de trabajo en tal caso, consiste en capturar y guardar el recorrido con todas las fallas (por defecto se guardar informadas y confirmadas) y, posteriormente cargar el archivo de recorrido de disco y realizar la subida correspondiente. 
 
--Si selecciona la opcion de subir_falla y se conservan las capturas en disco y en memoria, estas se pueden volver a subir al servidor si se desea, por lo que la subida de las capturas debe realizarse como un unico paso. Se pueden conservar las capturas en memoria y disco, debido a que se podría querer guardar el recorrido en disco nuevamente, como un respaldo.
+-Si selecciona la opcion de subir_falla y se conservan las capturas en disco y en memoria, estas se pueden volver a subir al servidor si se desea, por lo que la subida de las capturas debe realizarse como un unico paso. 
+
+-Al ejecutar subir_capturas() y elegir conservar las capturas(memoria y disco), las capturas subidas no se guardan por lo que una vez que se realiza la subida de archivos, se pierden las capturas y NO SE PUEDEN almacenar nuevamente en disco en un recorrido.Las capturas que no se seleccionen para subir en subir_capturas(), se conservan en memoria y PUEDEN ALMACENARSE como parte de un archivo de recorrido. Por lo tanto, un recorrido .rec se crea solo a partir de:
+ 	*Capturas que no se hayan subido al servidor.
+
 
 
 
