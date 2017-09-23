@@ -726,13 +726,13 @@ Inicializada por Defecto BD Local de muestras...
 
 En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_23-09-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e44ae50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e55bbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e5e3670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f809d97e050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc91497de50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc914a8dbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc93c032670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc9446f4050>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -754,13 +754,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e44ae50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e55bbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e5e3670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f809d97e050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc91497de50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc914a8dbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc93c032670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc9446f4050>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -865,13 +865,13 @@ Fin de muestra de la coleccion solicitarInformados()...
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Cerrado popup!
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e44ae50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e55bbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e5e3670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f809d97e050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc91497de50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc914a8dbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc93c032670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc9446f4050>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
 LLamando al screen de capturar falla informada...
 
@@ -889,13 +889,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e44ae50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e55bbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f806e5e3670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f809d97e050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc91497de50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc914a8dbb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc93c032670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fc9446f4050>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f80a9e393d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fc9503983d0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -923,7 +923,7 @@ Actualizando listado de fallas...
 tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
 En __cmp__() con self_id: 5 y other_id: 1
 
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f806e3e1a28>, <capturador.ItemFalla object at 0x7f806e3e1938>]
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fc914914b18>, <capturador.ItemFalla object at 0x7fc914914a28>]
 
 self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
@@ -933,10 +933,19 @@ row_index actual:  0
 En MyListItemButton con args -->
 {'text': '1', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 0}
 
+En MyToggleButton con args -->
+{'text': '1', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 0}
+
 En MyListItemButton con args -->
 {'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 0}
 
+En MyToggleButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 0}
+
 En MyListItemButton con args -->
+{'text': '334', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 0}
+
+En MyToggleButton con args -->
 {'text': '334', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 0}
 
 row_index actual:  1
@@ -944,163 +953,1161 @@ row_index actual:  1
 En MyListItemButton con args -->
 {'text': '5', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 1}
 
+En MyToggleButton con args -->
+{'text': '5', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 1}
+
 En MyListItemButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 1}
+
+En MyToggleButton con args -->
 {'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 1}
 
 En MyListItemButton con args -->
 {'text': '520', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 1}
 
-en Seelect!
+En MyToggleButton con args -->
+{'text': '520', 'background_normal': 'atlas://customAppCliente/button', 'background_down': 'atlas://customAppCliente/button_listview_no_seleccionado', 'index': 1}
 
-select_from_compiste
+en button.select() 1!
 
-En seleccionar()...
+button.select_from_composite(): 334
 
-Seleccionado boton! 
+En seleccionarBtn() 334...
 
-select_from_compiste
+Fin de seleccionarBtn() 
 
-En seleccionar()...
 
-Seleccionado boton! 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-en DeSeelect!
 
-deselect_from_compiste
 
-En deseleccionar()...
+button.select_from_composite(): Mitre
 
-Desseleccionado boton! 
+En seleccionarBtn() Mitre...
 
-deselect_from_compiste
+Fin de seleccionarBtn() 
 
-En deseleccionar()...
 
-Desseleccionado boton! 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-en Seelect!
 
-select_from_compiste
 
-En seleccionar()...
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
 
-Seleccionado boton! 
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
 
-select_from_compiste
+self.parent.parent.id: None
 
-En seleccionar()...
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
 
-Seleccionado boton! 
+type (widgListButton): <MyListItemButton text=520>
 
-en DeSeelect!
+En desseleccionarBtn() 520...
 
-deselect_from_compiste
+Fin de desSeleccionarBtn() 
 
-En deseleccionar()...
 
-Desseleccionado boton! 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-deselect_from_compiste
 
-En deseleccionar()...
 
-Desseleccionado boton! 
+type (widgListButton): <MyListItemButton text=Mitre>
 
-en Seelect!
+En desseleccionarBtn() Mitre...
 
-select_from_compiste
+Fin de desSeleccionarBtn() 
 
-En seleccionar()...
 
-Seleccionado boton! 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-select_from_compiste
 
-En seleccionar()...
 
-Seleccionado boton! 
+type (widgListButton): <MyListItemButton text=5>
 
-en DeSeelect!
+En desseleccionarBtn() 5...
 
-deselect_from_compiste
+Fin de desSeleccionarBtn() 
 
-En deseleccionar()...
 
-Desseleccionado boton! 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-deselect_from_compiste
 
-En deseleccionar()...
 
-Desseleccionado boton! 
+widgetCompListItem: <CompositeListItem>
 
-en Seelect!
+type (widgListButton): <MyListItemButton text=334>
 
-select_from_compiste
+En desseleccionarBtn() 334...
 
-En seleccionar()...
+Fin de desSeleccionarBtn() 
 
-Seleccionado boton! 
 
-select_from_compiste
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-En seleccionar()...
 
-Seleccionado boton! 
 
-en DeSeelect!
+type (widgListButton): <MyListItemButton text=Mitre>
 
-deselect_from_compiste
+En desseleccionarBtn() Mitre...
 
-En deseleccionar()...
+Fin de desSeleccionarBtn() 
 
-Desseleccionado boton! 
 
-deselect_from_compiste
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-En deseleccionar()...
 
-Desseleccionado boton! 
 
-en Seelect!
+type (widgListButton): <MyListItemButton text=1>
 
-select_from_compiste
+En desseleccionarBtn() 1...
 
-En seleccionar()...
+Fin de desSeleccionarBtn() 
 
-Seleccionado boton! 
 
-select_from_compiste
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-En seleccionar()...
 
-Seleccionado boton! 
 
-en DeSeelect!
+en button.deselect() 1!
 
-deselect_from_compiste
+button.deselect_from_composite(): 334
 
-En deseleccionar()...
+En desseleccionarBtn() 334...
 
-Desseleccionado boton! 
+Fin de desSeleccionarBtn() 
 
-deselect_from_compiste
 
-En deseleccionar()...
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Desseleccionado boton! 
 
-en Seelect!
 
-select_from_compiste
+button.deselect_from_composite(): Mitre
 
-En seleccionar()...
+En desseleccionarBtn() Mitre...
 
-Seleccionado boton! 
+Fin de desSeleccionarBtn() 
 
-select_from_compiste
 
-En seleccionar()...
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Seleccionado boton! 
+
+
+en button.select() 1!
+
+button.select_from_composite(): 334
+
+En seleccionarBtn() 334...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 1!
+
+button.deselect_from_composite(): 334
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 1!
+
+button.select_from_composite(): 334
+
+En seleccionarBtn() 334...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 1!
+
+button.deselect_from_composite(): 334
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 1!
+
+button.select_from_composite(): 334
+
+En seleccionarBtn() 334...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 1!
+
+button.deselect_from_composite(): 334
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 1!
+
+button.select_from_composite(): 334
+
+En seleccionarBtn() 334...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 1!
+
+button.deselect_from_composite(): 334
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 1!
+
+button.select_from_composite(): 334
+
+En seleccionarBtn() 334...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 1!
+
+button.deselect_from_composite(): 334
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 5!
+
+button.select_from_composite(): 520
+
+En seleccionarBtn() 520...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 5!
+
+button.deselect_from_composite(): 520
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 5!
+
+button.select_from_composite(): 520
+
+En seleccionarBtn() 520...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 5!
+
+button.deselect_from_composite(): 520
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.select() 5!
+
+button.select_from_composite(): 520
+
+En seleccionarBtn() 520...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.select_from_composite(): Mitre
+
+En seleccionarBtn() Mitre...
+
+Fin de seleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type(self.parent): <class 'kivy.uix.listview.CompositeListItem'>
+
+type(self.parent.parent): <class 'kivy.uix.gridlayout.GridLayout'>
+
+self.parent.parent.id: None
+
+hijos de layout self.parent.parent son:
+ -->
+[<CompositeListItem>, <CompositeListItem>]
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=520>
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=5>
+
+En desseleccionarBtn() 5...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+widgetCompListItem: <CompositeListItem>
+
+type (widgListButton): <MyListItemButton text=334>
+
+En desseleccionarBtn() 334...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=Mitre>
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+type (widgListButton): <MyListItemButton text=1>
+
+En desseleccionarBtn() 1...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+en button.deselect() 5!
+
+button.deselect_from_composite(): 520
+
+En desseleccionarBtn() 520...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+
+button.deselect_from_composite(): Mitre
+
+En desseleccionarBtn() Mitre...
+
+Fin de desSeleccionarBtn() 
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
 

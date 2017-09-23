@@ -638,6 +638,8 @@ from kivy.uix.behaviors.button import ButtonBehavior
 #            if c is not child:
 #                c.deselect_from_composite(*args)
 
+from constantes import ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,\
+                        ESTILO_BOTON_DEFAULT_OPCIONES_MENU
 
 class MyToggleButton(ToggleButtonBehavior, Button):
     '''Button class, see module documentation for more information.
@@ -720,6 +722,30 @@ class MyToggleButton(ToggleButtonBehavior, Button):
     (16, 16, 16, 16)
     '''
 
+    def __init__(self, **kwargs):
+        print "En MyToggleButton con args -->\n%s\n" % kwargs
+        super(MyToggleButton, self).__init__(**kwargs)
+
+
+    def seleccionarBtn(self):
+        print "En seleccionarBtn() %s...\n" % self.text
+        self._do_press()
+        #self.source = ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
+        #self.dispatch('on_press')
+        print "Fin de seleccionarBtn() \n"
+        print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+
+
+    def desSeleccionarBtn(self):
+        print "En desseleccionarBtn() %s...\n" % self.text
+        self._do_release()
+        #self.source = ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+        #self.dispatch('on_release')
+        print "Fin de desSeleccionarBtn() \n"
+        print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+
+
+
 #class MyListItemButton(ListItemReprMixin, SelectableView, Button):
 class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
     def __init__(self, **kwargs):
@@ -727,37 +753,35 @@ class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
         super(MyListItemButton, self).__init__(**kwargs)
 
     def select(self, *args):
-        print "en Seelect!\n"
+        print "en button.select() %s!\n" % self.text
         if isinstance(self.parent, CompositeListItem):
             self.parent.select_from_child(self, *args)
 
+        print "type(self.parent): %s\n" % type(self.parent)
+        print "type(self.parent.parent): %s\n" % type(self.parent.parent)
+        print "self.parent.parent.id: %s\n" % self.parent.parent.id
+        print "hijos de layout self.parent.parent son:\n -->" 
+        print self.parent.parent.children
+        for widgetCompListItem  in self.parent.parent.children:
+            print "widgetCompListItem: %s\n" % widgetCompListItem
+            for widgListButton in widgetCompListItem.children:
+                print "type (widgListButton): %s\n" % widgListButton
+                widgListButton.desSeleccionarBtn()
+
 
     def deselect(self, *args):
-        print "en DeSeelect!\n"
+        print "en button.deselect() %s!\n" % self.text
         if isinstance(self.parent, CompositeListItem):
             self.parent.deselect_from_child(self, *args)
 
-
-    def seleccionarBtn(self):
-        print "En seleccionar()...\n"
-        self._do_press()
-        #self.dispatch('on_press')
-        print "Seleccionado boton! \n"
-
-    def desSeleccionarBtn(self):
-        print "En deseleccionar()...\n"
-        self._do_release()
-        #self.dispatch('on_release')
-        print "Desseleccionado boton! \n"
-
     #Seleccionar los otros dos buttons que son hijos del mismo CompositeListItem
     def select_from_composite(self, *args):
-        print "select_from_compiste\n"
+        print "button.select_from_composite(): %s\n" % self.text
         self.seleccionarBtn()
 
     #Desseleccionar los otros dos buttons que son hijos del mismo CompositeListItem
     def deselect_from_composite(self, *args):
-        print "deselect_from_compiste\n"
+        print "button.deselect_from_composite(): %s\n" % self.text
         self.desSeleccionarBtn()
 
 
