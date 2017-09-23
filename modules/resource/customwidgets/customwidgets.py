@@ -610,3 +610,154 @@ class MyTabbedPanel(TabbedPanel):
         #self.desHabilitarOpciones()
 
 
+from kivy.uix.listview import ListItemReprMixin,SelectableView,\
+                                CompositeListItem
+from kivy.uix.button import Button
+
+from kivy.uix.label import Label
+from kivy.properties import StringProperty, ListProperty
+from kivy.uix.behaviors.togglebutton import ToggleButtonBehavior
+from kivy.uix.behaviors.button import ButtonBehavior
+
+#class CompositeListItem(SelectableView, BoxLayout):
+#class MyCompositeListItem(CompositeListItem):
+
+    #def select(self, *args):
+    #    self.background_color = self.selected_color
+
+    #def deselect(self, *args):
+    #    self.background_color = self.deselected_color
+
+#    def select_from_child(self, child, *args):
+#        for c in self.children:
+#            if c is not child:
+#                c.select_from_composite(*args)
+
+#    def deselect_from_child(self, child, *args):
+#        for c in self.children:
+#            if c is not child:
+#                c.deselect_from_composite(*args)
+
+
+class MyToggleButton(ToggleButtonBehavior, Button):
+    '''Button class, see module documentation for more information.
+
+    .. versionchanged:: 1.8.0
+        The behavior / logic of the button has been moved to
+        :class:`~kivy.uix.behaviors.ButtonBehaviors`.
+
+    '''
+
+    background_color = ListProperty([1, 1, 1, 1])
+    '''Background color, in the format (r, g, b, a).
+
+    This acts as a *multiplier* to the texture colour. The default
+    texture is grey, so just setting the background color will give
+    a darker result. To set a plain color, set the
+    :attr:`background_normal` to ``''``.
+
+    .. versionadded:: 1.0.8
+
+    The :attr:`background_color` is a
+    :class:`~kivy.properties.ListProperty` and defaults to [1, 1, 1, 1].
+    '''
+
+    background_normal = StringProperty(
+        'atlas://data/images/defaulttheme/button')
+    '''Background image of the button used for the default graphical
+    representation when the button is not pressed.
+
+    .. versionadded:: 1.0.4
+
+    :attr:`background_normal` is a :class:`~kivy.properties.StringProperty`
+    and defaults to 'atlas://data/images/defaulttheme/button'.
+    '''
+
+    background_down = StringProperty(
+        'atlas://data/images/defaulttheme/button_pressed')
+    '''Background image of the button used for the default graphical
+    representation when the button is pressed.
+
+    .. versionadded:: 1.0.4
+
+    :attr:`background_down` is a :class:`~kivy.properties.StringProperty` and
+    defaults to 'atlas://data/images/defaulttheme/button_pressed'.
+    '''
+
+    background_disabled_normal = StringProperty(
+        'atlas://data/images/defaulttheme/button_disabled')
+    '''Background image of the button used for the default graphical
+    representation when the button is disabled and not pressed.
+
+    .. versionadded:: 1.8.0
+
+    :attr:`background_disabled_normal` is a
+    :class:`~kivy.properties.StringProperty` and defaults to
+    'atlas://data/images/defaulttheme/button_disabled'.
+    '''
+
+    background_disabled_down = StringProperty(
+        'atlas://data/images/defaulttheme/button_disabled_pressed')
+    '''Background image of the button used for the default graphical
+    representation when the button is disabled and pressed.
+
+    .. versionadded:: 1.8.0
+
+    :attr:`background_disabled_down` is a
+    :class:`~kivy.properties.StringProperty` and defaults to
+    'atlas://data/images/defaulttheme/button_disabled_pressed'.
+    '''
+
+    border = ListProperty([16, 16, 16, 16])
+    '''Border used for :class:`~kivy.graphics.vertex_instructions.BorderImage`
+    graphics instruction. Used with :attr:`background_normal` and
+    :attr:`background_down`. Can be used for custom backgrounds.
+
+    It must be a list of four values: (top, right, bottom, left). Read the
+    BorderImage instruction for more information about how to use it.
+
+    :attr:`border` is a :class:`~kivy.properties.ListProperty` and defaults to
+    (16, 16, 16, 16)
+    '''
+
+#class MyListItemButton(ListItemReprMixin, SelectableView, Button):
+class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
+    def __init__(self, **kwargs):
+        print "En MyListItemButton con args -->\n%s\n" % kwargs
+        super(MyListItemButton, self).__init__(**kwargs)
+
+    def select(self, *args):
+        print "en Seelect!\n"
+        if isinstance(self.parent, CompositeListItem):
+            self.parent.select_from_child(self, *args)
+
+
+    def deselect(self, *args):
+        print "en DeSeelect!\n"
+        if isinstance(self.parent, CompositeListItem):
+            self.parent.deselect_from_child(self, *args)
+
+
+    def seleccionarBtn(self):
+        print "En seleccionar()...\n"
+        self._do_press()
+        #self.dispatch('on_press')
+        print "Seleccionado boton! \n"
+
+    def desSeleccionarBtn(self):
+        print "En deseleccionar()...\n"
+        self._do_release()
+        #self.dispatch('on_release')
+        print "Desseleccionado boton! \n"
+
+    #Seleccionar los otros dos buttons que son hijos del mismo CompositeListItem
+    def select_from_composite(self, *args):
+        print "select_from_compiste\n"
+        self.seleccionarBtn()
+
+    #Desseleccionar los otros dos buttons que son hijos del mismo CompositeListItem
+    def deselect_from_composite(self, *args):
+        print "deselect_from_compiste\n"
+        self.desSeleccionarBtn()
+
+
