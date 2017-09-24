@@ -619,24 +619,6 @@ from kivy.properties import StringProperty, ListProperty
 from kivy.uix.behaviors.togglebutton import ToggleButtonBehavior
 from kivy.uix.behaviors.button import ButtonBehavior
 
-#class CompositeListItem(SelectableView, BoxLayout):
-#class MyCompositeListItem(CompositeListItem):
-
-    #def select(self, *args):
-    #    self.background_color = self.selected_color
-
-    #def deselect(self, *args):
-    #    self.background_color = self.deselected_color
-
-#    def select_from_child(self, child, *args):
-#        for c in self.children:
-#            if c is not child:
-#                c.select_from_composite(*args)
-
-#    def deselect_from_child(self, child, *args):
-#        for c in self.children:
-#            if c is not child:
-#                c.deselect_from_composite(*args)
 
 from constantes import ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,\
                         ESTILO_BOTON_DEFAULT_OPCIONES_MENU
@@ -722,66 +704,255 @@ class MyToggleButton(ToggleButtonBehavior, Button):
     (16, 16, 16, 16)
     '''
 
-    def __init__(self, **kwargs):
-        print "En MyToggleButton con args -->\n%s\n" % kwargs
-        super(MyToggleButton, self).__init__(**kwargs)
+    #def __init__(self, **kwargs):
+    #    print "En MyToggleButton con args -->\n%s\n" % kwargs
+    #    super(MyToggleButton, self).__init__(**kwargs)
 
 
     def seleccionarBtn(self):
-        print "En seleccionarBtn() %s...\n" % self.text
-        self._do_press()
+        self.state = 'down'
+        #print "En seleccionarBtn() %s...\n" % self.text
+        #self._do_press()
         #self.source = ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
         #self.dispatch('on_press')
-        print "Fin de seleccionarBtn() \n"
-        print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+        #print "Fin de seleccionarBtn() \n"
+        #print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
 
 
     def desSeleccionarBtn(self):
-        print "En desseleccionarBtn() %s...\n" % self.text
-        self._do_release()
+        self.state = 'normal'
+        #print "En desseleccionarBtn() %s...\n" % self.text
+        #self._do_release()
         #self.source = ESTILO_BOTON_DEFAULT_OPCIONES_MENU
         #self.dispatch('on_release')
-        print "Fin de desSeleccionarBtn() \n"
-        print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+        #print "Fin de desSeleccionarBtn() \n"
+        #print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+
+
+from constantes import COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,\
+                            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO
+
+class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
+    
+
+    deselected_color = ListProperty(COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO)
+
+    selected_color = ListProperty([])
+
+    def __init__(self, **kwargs):
+        print "En MyListItemButton con args -->\n%s\n" % kwargs
+        super(MyListItemButton, self).__init__(**kwargs)
+        # Set Button bg color to be deselected_color.
+        self.background_color = self.deselected_color
+
+        
+
+    def select(self, *args):
+        self.background_color = [
+                COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0] + \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[0],
+                COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1] + \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[1], 
+                COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2] + \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[2]
+        ]
+        if isinstance(self.parent, CompositeListItem):
+            self.parent.select_from_child(self, *args)
+        print "en button.select() %s!\n" % self.text
+        
+
+    def deselect(self, *args):
+        self.background_color = [
+                self.background_color[0] - \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0],
+
+                self.background_color[1] - \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1],
+
+                self.background_color[2] - \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2]
+        ]
+        if isinstance(self.parent, CompositeListItem):
+            self.parent.deselect_from_child(self, *args)
+        print "en button.deselect() %s!\n" % self.text
+
+    #Seleccionar los otros dos buttons que son hijos del mismo CompositeListItem
+    def select_from_composite(self, *args):
+        self.background_color = [
+            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0] + \
+                COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[0],
+            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1] + \
+                COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[1], 
+            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2] + \
+                COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[2]
+        ]
+        self.seleccionarBtn()
+        print "button.select_from_composite(): %s\n" % self.text
+        print "colores: self.background_color = %s\n\n" % self.background_color
+        #self.seleccionarBtn()
+
+
+    #Desseleccionar los otros dos buttons que son hijos del mismo CompositeListItem
+    def deselect_from_composite(self, *args):
+        self.desSeleccionarBtn()
+        self.background_color = [
+                self.background_color[0] - \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0],
+
+                self.background_color[1] - \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1],
+
+                self.background_color[2] - \
+                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2]
+        ]
+        print "button.deselect_from_composite(): %s\n" % self.text
+        print "colores: self.background_color = %s\n\n" % self.background_color
+
+        #self.desSeleccionarBtn()
+
+
+
+# BACKUP!
+#class MyToggleButton(ToggleButtonBehavior, Button):
+    '''Button class, see module documentation for more information.
+
+    .. versionchanged:: 1.8.0
+        The behavior / logic of the button has been moved to
+        :class:`~kivy.uix.behaviors.ButtonBehaviors`.
+
+    '''
+
+#    background_color = ListProperty([1, 1, 1, 1])
+    '''Background color, in the format (r, g, b, a).
+
+    This acts as a *multiplier* to the texture colour. The default
+    texture is grey, so just setting the background color will give
+    a darker result. To set a plain color, set the
+    :attr:`background_normal` to ``''``.
+
+    .. versionadded:: 1.0.8
+
+    The :attr:`background_color` is a
+    :class:`~kivy.properties.ListProperty` and defaults to [1, 1, 1, 1].
+    '''
+
+#    background_normal = StringProperty(
+#        'atlas://data/images/defaulttheme/button')
+    '''Background image of the button used for the default graphical
+    representation when the button is not pressed.
+
+    .. versionadded:: 1.0.4
+
+    :attr:`background_normal` is a :class:`~kivy.properties.StringProperty`
+    and defaults to 'atlas://data/images/defaulttheme/button'.
+    '''
+
+#    background_down = StringProperty(
+#        'atlas://data/images/defaulttheme/button_pressed')
+    '''Background image of the button used for the default graphical
+    representation when the button is pressed.
+
+    .. versionadded:: 1.0.4
+
+    :attr:`background_down` is a :class:`~kivy.properties.StringProperty` and
+    defaults to 'atlas://data/images/defaulttheme/button_pressed'.
+    '''
+
+#    background_disabled_normal = StringProperty(
+#        'atlas://data/images/defaulttheme/button_disabled')
+    '''Background image of the button used for the default graphical
+    representation when the button is disabled and not pressed.
+
+    .. versionadded:: 1.8.0
+
+    :attr:`background_disabled_normal` is a
+    :class:`~kivy.properties.StringProperty` and defaults to
+    'atlas://data/images/defaulttheme/button_disabled'.
+    '''
+
+#    background_disabled_down = StringProperty(
+#        'atlas://data/images/defaulttheme/button_disabled_pressed')
+    '''Background image of the button used for the default graphical
+    representation when the button is disabled and pressed.
+
+    .. versionadded:: 1.8.0
+
+    :attr:`background_disabled_down` is a
+    :class:`~kivy.properties.StringProperty` and defaults to
+    'atlas://data/images/defaulttheme/button_disabled_pressed'.
+    '''
+
+#    border = ListProperty([16, 16, 16, 16])
+    '''Border used for :class:`~kivy.graphics.vertex_instructions.BorderImage`
+    graphics instruction. Used with :attr:`background_normal` and
+    :attr:`background_down`. Can be used for custom backgrounds.
+
+    It must be a list of four values: (top, right, bottom, left). Read the
+    BorderImage instruction for more information about how to use it.
+
+    :attr:`border` is a :class:`~kivy.properties.ListProperty` and defaults to
+    (16, 16, 16, 16)
+    '''
+
+#    def __init__(self, **kwargs):
+#        print "En MyToggleButton con args -->\n%s\n" % kwargs
+#        super(MyToggleButton, self).__init__(**kwargs)
+
+
+#    def seleccionarBtn(self):
+#        print "En seleccionarBtn() %s...\n" % self.text
+#        self._do_press()
+#        #self.source = ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
+#        #self.dispatch('on_press')
+#        print "Fin de seleccionarBtn() \n"
+#        print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+
+
+##    def desSeleccionarBtn(self):
+#        print "En desseleccionarBtn() %s...\n" % self.text
+#        self._do_release()
+#        #self.source = ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+#        #self.dispatch('on_release')
+#        print "Fin de desSeleccionarBtn() \n"
+#        print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
+
 
 
 
 #class MyListItemButton(ListItemReprMixin, SelectableView, Button):
-class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
-    def __init__(self, **kwargs):
-        print "En MyListItemButton con args -->\n%s\n" % kwargs
-        super(MyListItemButton, self).__init__(**kwargs)
+#class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
+#    def __init__(self, **kwargs):
+#        print "En MyListItemButton con args -->\n%s\n" % kwargs
+#        super(MyListItemButton, self).__init__(**kwargs)
 
-    def select(self, *args):
-        print "en button.select() %s!\n" % self.text
-        if isinstance(self.parent, CompositeListItem):
-            self.parent.select_from_child(self, *args)
+#    def select(self, *args):
+#        print "en button.select() %s!\n" % self.text
+#        if isinstance(self.parent, CompositeListItem):
+#            self.parent.select_from_child(self, *args)
 
-        print "type(self.parent): %s\n" % type(self.parent)
-        print "type(self.parent.parent): %s\n" % type(self.parent.parent)
-        print "self.parent.parent.id: %s\n" % self.parent.parent.id
-        print "hijos de layout self.parent.parent son:\n -->" 
-        print self.parent.parent.children
-        for widgetCompListItem  in self.parent.parent.children:
-            print "widgetCompListItem: %s\n" % widgetCompListItem
-            for widgListButton in widgetCompListItem.children:
-                print "type (widgListButton): %s\n" % widgListButton
-                widgListButton.desSeleccionarBtn()
-
-
-    def deselect(self, *args):
-        print "en button.deselect() %s!\n" % self.text
-        if isinstance(self.parent, CompositeListItem):
-            self.parent.deselect_from_child(self, *args)
-
-    #Seleccionar los otros dos buttons que son hijos del mismo CompositeListItem
-    def select_from_composite(self, *args):
-        print "button.select_from_composite(): %s\n" % self.text
-        self.seleccionarBtn()
-
-    #Desseleccionar los otros dos buttons que son hijos del mismo CompositeListItem
-    def deselect_from_composite(self, *args):
-        print "button.deselect_from_composite(): %s\n" % self.text
-        self.desSeleccionarBtn()
+#        print "type(self.parent): %s\n" % type(self.parent)
+##        print "type(self.parent.parent): %s\n" % type(self.parent.parent)
+#        print "self.parent.parent.id: %s\n" % self.parent.parent.id
+#        print "hijos de layout self.parent.parent son:\n -->" 
+##        print self.parent.parent.children
+#        for widgetCompListItem  in self.parent.parent.children:
+#            print "widgetCompListItem: %s\n" % widgetCompListItem
+#            for widgListButton in widgetCompListItem.children:
+#                print "type (widgListButton): %s\n" % widgListButton
+#                widgListButton.desSeleccionarBtn()
 
 
+#    def deselect(self, *args):
+##        print "en button.deselect() %s!\n" % self.text
+#        if isinstance(self.parent, CompositeListItem):
+#            self.parent.deselect_from_child(self, *args)
+
+#    #Seleccionar los otros dos buttons que son hijos del mismo CompositeListItem
+#    def select_from_composite(self, *args):
+#        print "button.select_from_composite(): %s\n" % self.text
+#        self.seleccionarBtn()
+
+##    #Desseleccionar los otros dos buttons que son hijos del mismo CompositeListItem
+#    def deselect_from_composite(self, *args):
+#        print "button.deselect_from_composite(): %s\n" % self.text
+#        self.desSeleccionarBtn()

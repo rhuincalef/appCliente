@@ -21,6 +21,8 @@ from screenredimensionable import ScreenRedimensionable
 from customwidgets import MyListItemButton
 
 
+from constantes import COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO
+
 #class CapturarFallaInformadaScreen(Screen):
 class CapturarFallaInformadaScreen(ScreenRedimensionable):
    
@@ -104,27 +106,38 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
       return {
         'size_hint_y': None,
         'height': 32,
+        #'cls_dicts': [{'cls': MyListItemButton,
         'cls_dicts': [{'cls': MyListItemButton,
                        'kwargs': {
                                   'text': "{0}".format(an_obj.getEstado().getId()),
-                                  #'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
-                                  'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                                  'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
+                                  'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,
+                                  'selected_color':COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO,
+
+                                  #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                                  #'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
                                   }
                       }
                       ,{
                            'cls': MyListItemButton,
                            'kwargs': {
                                 'text': "{0}".format(an_obj.getEstado().getCalle()),
-                                'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                                'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
+                                #'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO
+                                'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,
+                                'selected_color':COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO,
+
+                                #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                                #'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
                                 }
                       },
                       {
                            'cls': MyListItemButton,
                            'kwargs': {  'text': "{0}".format(an_obj.getEstado().getAltura()),
-                                        'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                                        'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
+                                        #'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO
+                                        'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,
+                                        'selected_color':COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO,
+
+                                        #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                                        #'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
                                       }
 
                       }]
