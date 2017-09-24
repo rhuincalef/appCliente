@@ -27,6 +27,9 @@ from kivy.adapters import dictadapter
 import threading
 
 from screenredimensionable import ScreenRedimensionable
+
+from customwidgets import MyListItemButton
+
 #class SubirCapturasServidorScreen(Screen):
 class SubirCapturasServidorScreen(ScreenRedimensionable):
 	
@@ -167,28 +170,25 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 		return {
 		'size_hint_y': None,
 		'height': 25,
-		'cls_dicts': [{'cls': ListItemButton,
+		'cls_dicts': [{'cls': MyListItemButton,
 		               'kwargs': {'text': "{0}".format(attrEstado[0]),
-		                          #'deselected_color': [0.,0,1,1]
-		                          'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
-                                  ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
+		                          'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                  'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
 		                          }
 		              }
 		              ,{
-		                   'cls': ListItemButton,
+		                   'cls': MyListItemButton,
 		                   'kwargs': {
 		                       'text': "{0}".format(attrEstado[1]),
-		                       #'deselected_color': [0.,0,1,1],
-		                       #'background_color': [0,1,0,1]
-		                       'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
-                               ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
+		                       'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                               'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
 		                        }
 		              },
 		              {
-		                   'cls': ListItemButton,
+		                   'cls': MyListItemButton,
 		                   'kwargs': { 'text': "{0}".format(attrEstado[2]),
-		                   				'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
-                                  		,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
+		                   				'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                  		'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
 		                            }
 		              }]
 		    }

@@ -704,76 +704,32 @@ class MyToggleButton(ToggleButtonBehavior, Button):
     (16, 16, 16, 16)
     '''
 
-    #def __init__(self, **kwargs):
-    #    print "En MyToggleButton con args -->\n%s\n" % kwargs
-    #    super(MyToggleButton, self).__init__(**kwargs)
-
-
     def seleccionarBtn(self):
         self.state = 'down'
-        #print "En seleccionarBtn() %s...\n" % self.text
-        #self._do_press()
-        #self.source = ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
-        #self.dispatch('on_press')
-        #print "Fin de seleccionarBtn() \n"
-        #print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
 
 
     def desSeleccionarBtn(self):
         self.state = 'normal'
-        #print "En desseleccionarBtn() %s...\n" % self.text
-        #self._do_release()
-        #self.source = ESTILO_BOTON_DEFAULT_OPCIONES_MENU
-        #self.dispatch('on_release')
-        #print "Fin de desSeleccionarBtn() \n"
-        #print "\n ++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n\n"
-
+    
 
 from constantes import COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,\
                             COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO
 
 class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
     
-
-    deselected_color = ListProperty(COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO)
-
-    selected_color = ListProperty([])
-
     def __init__(self, **kwargs):
         print "En MyListItemButton con args -->\n%s\n" % kwargs
         super(MyListItemButton, self).__init__(**kwargs)
-        # Set Button bg color to be deselected_color.
-        self.background_color = self.deselected_color
 
         
-
     def select(self, *args):
-        self.background_color = [
-                COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0] + \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[0],
-                COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1] + \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[1], 
-                COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2] + \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[2]
-        ]
         self.seleccionarBtn()
-
         if isinstance(self.parent, CompositeListItem):
             self.parent.select_from_child(self, *args)
         print "en button.select() %s!\n" % self.text
         
 
     def deselect(self, *args):
-        self.background_color = [
-                self.background_color[0] - \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0],
-
-                self.background_color[1] - \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1],
-
-                self.background_color[2] - \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2]
-        ]
         self.desSeleccionarBtn()
         if isinstance(self.parent, CompositeListItem):
             self.parent.deselect_from_child(self, *args)
@@ -781,37 +737,16 @@ class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
 
     #Seleccionar los otros dos buttons que son hijos del mismo CompositeListItem
     def select_from_composite(self, *args):
-        self.background_color = [
-            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0] + \
-                COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[0],
-            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1] + \
-                COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[1], 
-            COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2] + \
-                COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[2]
-        ]
         self.seleccionarBtn()
         print "button.select_from_composite(): %s\n" % self.text
         print "colores: self.background_color = %s\n\n" % self.background_color
-        #self.seleccionarBtn()
-
+        
 
     #Desseleccionar los otros dos buttons que son hijos del mismo CompositeListItem
     def deselect_from_composite(self, *args):
         self.desSeleccionarBtn()
-        self.background_color = [
-                self.background_color[0] - \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[0],
-
-                self.background_color[1] - \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[1],
-
-                self.background_color[2] - \
-                    COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2]
-        ]
         print "button.deselect_from_composite(): %s\n" % self.text
         print "colores: self.background_color = %s\n\n" % self.background_color
-
-        #self.desSeleccionarBtn()
 
 
 

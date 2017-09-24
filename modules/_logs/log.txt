@@ -724,15 +724,15 @@ Comenzando nueva BD, deshabilitando los elementos del menu!
 
 Inicializada por Defecto BD Local de muestras...
 
-En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_23-09-2017.json
+En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_24-09-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8251e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8360bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca83e9670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6cd378a050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -754,13 +754,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8251e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8360bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca83e9670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6cd378a050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -787,12 +787,12 @@ iterando... <class 'kivy.uix.button.Button'>
 En solicitarSugerencias()!!!
 
 
-calleCodificada(m)!!!
+calleCodificada(M)!!!
 
 
 peticion enviada:
 
- http://localhost/web/restapi/obtener_sugerencias_calle/calle/m/cantmaxsugerencias/3 
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/M/cantmaxsugerencias/3 
 
 La respuesta en formato json de solicitarSugerencias() es: 
 [u'Mitre', u'Michael Jones', u'Michael D. Jones']
@@ -865,13 +865,13 @@ Fin de muestra de la coleccion solicitarInformados()...
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Cerrado popup!
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8251e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8360bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca83e9670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6cd378a050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
 LLamando al screen de capturar falla informada...
 
@@ -889,13 +889,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8251e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca8360bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ca83e9670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6cd378a050>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6ce3c1e3d0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -923,7 +923,7 @@ Actualizando listado de fallas...
 tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
 En __cmp__() con self_id: 5 y other_id: 1
 
-sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f6ce3bdad70>, <capturador.ItemFalla object at 0x7f6ca81e7aa0>]
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f4af048fa28>, <capturador.ItemFalla object at 0x7f4ae926a938>]
 
 self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
@@ -931,154 +931,1182 @@ Actualizado listado!
 row_index actual:  0
 
 En MyListItemButton con args -->
-{'text': '1', 'deselected_color': [1, 46, 136], 'selected_color': [4, 106, 119], 'index': 0}
+{'text': '1', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 0}
 
 En MyListItemButton con args -->
-{'text': 'Mitre', 'deselected_color': [1, 46, 136], 'selected_color': [4, 106, 119], 'index': 0}
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 0}
 
 En MyListItemButton con args -->
-{'text': '334', 'deselected_color': [1, 46, 136], 'selected_color': [4, 106, 119], 'index': 0}
+{'text': '334', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 0}
 
 row_index actual:  1
 
 En MyListItemButton con args -->
-{'text': '5', 'deselected_color': [1, 46, 136], 'selected_color': [4, 106, 119], 'index': 1}
+{'text': '5', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 1}
 
 En MyListItemButton con args -->
-{'text': 'Mitre', 'deselected_color': [1, 46, 136], 'selected_color': [4, 106, 119], 'index': 1}
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 1}
 
 En MyListItemButton con args -->
-{'text': '520', 'deselected_color': [1, 46, 136], 'selected_color': [4, 106, 119], 'index': 1}
+{'text': '520', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 1}
 
 button.select_from_composite(): 334
 
-colores: self.background_color = [5, 152, 255]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 button.select_from_composite(): Mitre
 
-colores: self.background_color = [5, 152, 255]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 en button.select() 1!
 
 button.deselect_from_composite(): 334
 
-colores: self.background_color = [1, 46, 136]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 button.deselect_from_composite(): Mitre
 
-colores: self.background_color = [1, 46, 136]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 en button.deselect() 1!
 
 button.select_from_composite(): 520
 
-colores: self.background_color = [5, 152, 255]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 button.select_from_composite(): Mitre
 
-colores: self.background_color = [5, 152, 255]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 en button.select() 5!
 
 button.deselect_from_composite(): 520
 
-colores: self.background_color = [1, 46, 136]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 button.deselect_from_composite(): Mitre
 
-colores: self.background_color = [1, 46, 136]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 en button.deselect() 5!
 
 button.select_from_composite(): 334
 
-colores: self.background_color = [5, 152, 255]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 button.select_from_composite(): Mitre
 
-colores: self.background_color = [5, 152, 255]
+colores: self.background_color = [1, 1, 1, 1]
 
 
 en button.select() 1!
 
-button.deselect_from_composite(): 334
+En main.desSeleccionarInformados()...
 
-colores: self.background_color = [1, 46, 136]
+En __cmp__() con self_id: 5 y other_id: 1
 
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f4af048fa28>, <capturador.ItemFalla object at 0x7f4ae926a938>]
 
-button.deselect_from_composite(): Mitre
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-colores: self.background_color = [1, 46, 136]
+Deseleccionando falla informada: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
+Deseleccionando falla informada: -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-en button.deselect() 1!
+Fin desSeleccionarFalla!
 
-button.select_from_composite(): 520
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
 
-colores: self.background_color = [5, 152, 255]
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-button.select_from_composite(): Mitre
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 
-colores: self.background_color = [5, 152, 255]
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
 
-en button.select() 5!
+LLamando al screen de cargar recorrido...
 
-button.deselect_from_composite(): 520
+Cargado dialogo carga de fallas
 
-colores: self.background_color = [1, 46, 136]
+Cargando recorrido en archivo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS/tresConfirmadas.rec
 
+Obteniendo recorrido...
 
-button.deselect_from_composite(): Mitre
+En obtenerRecorrido...
 
-colores: self.background_color = [1, 46, 136]
+En obtenerRecorrido...
 
+Obtenido el recorrido con las capturas!
 
-en button.deselect() 5!
+Cerrando conexion!
 
-button.select_from_composite(): 334
+Validando capturas...
 
-colores: self.background_color = [5, 152, 255]
+================================================
 
+Validando capturas...
 
-button.select_from_composite(): Mitre
+================================================
 
-colores: self.background_color = [5, 152, 255]
+En filtrarCapturas consistentes!
 
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS/varias_confirmadas_1.pcd ; path.exists(pathCsv):True 
 
-en button.select() 1!
+En filtrarCapturas consistentes!
 
-button.deselect_from_composite(): 334
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS/varias_confirmadas_2.pcd ; path.exists(pathCsv):True 
 
-colores: self.background_color = [1, 46, 136]
+En filtrarCapturas consistentes!
 
-
-button.deselect_from_composite(): Mitre
-
-colores: self.background_color = [1, 46, 136]
-
-
-en button.deselect() 1!
-
-button.select_from_composite(): 520
-
-colores: self.background_color = [5, 152, 255]
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS/varias_confirmadas_3.pcd ; path.exists(pathCsv):True 
 
 
-button.select_from_composite(): Mitre
-
-colores: self.background_color = [5, 152, 255]
+Mostrando la coleccion de fallas cargadas: 
 
 
-en button.select() 5!
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Mostrando itemfallas con estado Confirmado: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+
+-------------------------------------------
+
+Mostrando itemfallas con estado Informado: 
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Se cargo correctamente el archivo con las capturas
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'87', u'calle': u'Muzio J.', u'rangoEstimado2': None, u'calleSecundariaA': u'Juan Muzio', u'calleSecundariaB': u'Moreno', u'estado': 0}
+calle casteada: Muzio J.
+
+results_json[rangoEstimado1]: 87
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 87
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'799', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 799
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 799
+
+{u'rangoEstimado1': u'200', u'calle': u'San Mart\xedn', u'rangoEstimado2': u'260', u'calleSecundariaA': u'San Mart\xedn', u'calleSecundariaB': u'Rivadavia', u'estado': 0}
+calle casteada: San Martín
+
+results_json[rangoEstimado1]: 200
+
+results_json[rangoEstimado2]: 260
+
+En finally...
+
+rangoEstimado1: 200
+
+rangoEstimado2: 260
+
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 0
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Muzio J.(-43.256882)', '87-87(-65.299047)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': 'Muzio J.(-43.256882)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': '87-87(-65.299047)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 0}
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 1
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-799(-65.311438)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': 'Ameghino(-43.25916)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': '699-799(-65.311438)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 1}
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 2
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'San Mart\xc3\xadn(-43.253469)', '200-260(-65.308611)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 2}
+
+En MyListItemButton con args -->
+{'text': 'San Mart\xc3\xadn(-43.253469)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 2}
+
+En MyListItemButton con args -->
+{'text': '200-260(-65.308611)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado', 'index': 2}
+
+button.select_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.select_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.256882 - longitud: -65.299047  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=varias_confirmadas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/RECORRIDOS , nombreCaptura= varias_confirmadas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Vaciadas capturas!
+Desmarcando elementos ...
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f4ae83a7b90>, <capturador.ItemFalla object at 0x7f4ae83a7f50>, <capturador.ItemFalla object at 0x7f4ae834a398>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 200-260(-65.308611)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() San Martín(-43.253469)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 699-799(-65.311438)!
+
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Ameghino(-43.25916)!
+
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 87-87(-65.299047)!
+
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Muzio J.(-43.256882)!
+
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 200-260(-65.308611)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() San Martín(-43.253469)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 699-799(-65.311438)!
+
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Ameghino(-43.25916)!
+
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 87-87(-65.299047)!
+
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Muzio J.(-43.256882)!
+
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+
+
+ iteracion 2---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 200-260(-65.308611)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() San Martín(-43.253469)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 699-799(-65.311438)!
+
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Ameghino(-43.25916)!
+
+button.deselect_from_composite(): 699-799(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 87-87(-65.299047)!
+
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Muzio J.(-43.256882)!
+
+button.deselect_from_composite(): 87-87(-65.299047)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Muzio J.(-43.256882)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f4ae83a7b90>, <capturador.ItemFalla object at 0x7f4ae83a7f50>, <capturador.ItemFalla object at 0x7f4ae834a398>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Desmarcados todos los elementos!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af04f8e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af0608bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4af068f670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4b1ea24050>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4b2aebc3d0>
 

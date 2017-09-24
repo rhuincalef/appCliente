@@ -13,15 +13,14 @@ from kivy.graphics import *
 
 from kivy.uix.label import Label
 from capturador import CapturadorInformados
-from constantes import FALLA_NO_ESTABLECIDA,COLOR_ITEMS_LISTADO_SELECCIONADO,COLOR_ITEMS_LISTADO_NO_SELECCIONADO,\
-ESTILO_BOTON_DEFAULT_OPCIONES_MENU, ESTILO_BOTON_DEFAULT_PRESIONADO,ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
+from constantes import FALLA_NO_ESTABLECIDA,ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,\
+                          ESTILO_BOTON_SELECCIONADO_LIST_VIEW
 
 from screenredimensionable import ScreenRedimensionable
 
 from customwidgets import MyListItemButton
 
 
-from constantes import COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO
 
 #class CapturarFallaInformadaScreen(Screen):
 class CapturarFallaInformadaScreen(ScreenRedimensionable):
@@ -106,38 +105,27 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
       return {
         'size_hint_y': None,
         'height': 32,
-        #'cls_dicts': [{'cls': MyListItemButton,
         'cls_dicts': [{'cls': MyListItemButton,
                        'kwargs': {
                                   'text': "{0}".format(an_obj.getEstado().getId()),
-                                  'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,
-                                  'selected_color':COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO,
-
                                   #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                                  #'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
+                                  'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                  'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
                                   }
                       }
                       ,{
                            'cls': MyListItemButton,
                            'kwargs': {
                                 'text': "{0}".format(an_obj.getEstado().getCalle()),
-                                #'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO
-                                'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,
-                                'selected_color':COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO,
-
-                                #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                                #'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
+                                'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
                                 }
                       },
                       {
                            'cls': MyListItemButton,
                            'kwargs': {  'text': "{0}".format(an_obj.getEstado().getAltura()),
-                                        #'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO
-                                        'deselected_color':COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO,
-                                        'selected_color':COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO,
-
-                                        #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                                        #'background_down': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW 
+                                        'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                        'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
                                       }
 
                       }]
