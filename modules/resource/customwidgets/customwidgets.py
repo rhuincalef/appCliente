@@ -756,6 +756,8 @@ class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
                 COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2] + \
                     COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO[2]
         ]
+        self.seleccionarBtn()
+
         if isinstance(self.parent, CompositeListItem):
             self.parent.select_from_child(self, *args)
         print "en button.select() %s!\n" % self.text
@@ -772,6 +774,7 @@ class MyListItemButton(ListItemReprMixin, SelectableView, MyToggleButton):
                 self.background_color[2] - \
                     COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO[2]
         ]
+        self.desSeleccionarBtn()
         if isinstance(self.parent, CompositeListItem):
             self.parent.deselect_from_child(self, *args)
         print "en button.deselect() %s!\n" % self.text
