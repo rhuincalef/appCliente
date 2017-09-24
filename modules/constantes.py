@@ -641,7 +641,7 @@ ESTILO_BOTON_DEFAULT_OPCIONES_MENU = 'atlas://customAppCliente/button'
 ESTILO_BOTON_DEFAULT_PRESIONADO = 'atlas://customAppCliente/button_pressed'
 
 
-ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_no_seleccionado'
+
 
 
 ESTILO_CHECKBOX_DESSELECCIONADO = 'atlas://customAppCliente/checkbox_off'
@@ -680,8 +680,22 @@ ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv8'
 
 
 #Estilo de los dialogos que se invocan con controlador.mostrarDialogo()
-#ESTILO_BACKGROUND_MODAL_XBASE = ESTILO_FONDO_TABBED_PANEL
 ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
+
+
+#Estilos de los items que se muestran en los listview de capturarfallainformada y subirfalla
+#
+ESTILO_BOTON_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_seleccionado'
+ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_no_seleccionado'
+
+
+
+
+
+
+
+
+
 
 COLOR_SEPARADOR_POPUPS = [1,1,1,1]
 
@@ -717,6 +731,14 @@ PATH_LOG_PRINCIPAL = "_logs/log.txt"
 
 
 
+#AZUL OSCURO
+COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO = [ 1,46,136 ] 
+
+#CELESTE CLARO
+COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO = [ 5,152,255 ]
+
+#INCREMENTO PARA LLEGAR A CELESTE CLARO
+COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO = [ 4,106,119 ]
 
 
 

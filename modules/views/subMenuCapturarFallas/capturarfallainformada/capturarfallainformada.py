@@ -13,10 +13,14 @@ from kivy.graphics import *
 
 from kivy.uix.label import Label
 from capturador import CapturadorInformados
-from constantes import FALLA_NO_ESTABLECIDA,COLOR_ITEMS_LISTADO_SELECCIONADO,COLOR_ITEMS_LISTADO_NO_SELECCIONADO,\
-ESTILO_BOTON_DEFAULT_OPCIONES_MENU, ESTILO_BOTON_DEFAULT_PRESIONADO,ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW
+from constantes import FALLA_NO_ESTABLECIDA,ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,\
+                          ESTILO_BOTON_SELECCIONADO_LIST_VIEW
 
 from screenredimensionable import ScreenRedimensionable
+
+from customwidgets import MyListItemButton
+
+
 
 #class CapturarFallaInformadaScreen(Screen):
 class CapturarFallaInformadaScreen(ScreenRedimensionable):
@@ -101,34 +105,27 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
       return {
         'size_hint_y': None,
         'height': 32,
-        'cls_dicts': [{'cls': ListItemButton,
+        'cls_dicts': [{'cls': MyListItemButton,
                        'kwargs': {
                                   'text': "{0}".format(an_obj.getEstado().getId()),
-                                  'background_color': [1,1,1,1],
-                                  'deselected_color': [1,1,1,0],
-                                  #'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
-
-                                  #'selected_color': [0,0,1,1],
-
-                                  #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU
-                                  #'background_down': ESTILO_BOTON_DEFAULT_PRESIONADO
+                                  #'background_normal': ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+                                  'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                  'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
                                   }
                       }
                       ,{
-                           'cls': ListItemButton,
+                           'cls': MyListItemButton,
                            'kwargs': {
-                               'text': "{0}".format(an_obj.getEstado().getCalle()),
-                               #'deselected_color': [0.,0,1,1],
-                               #'background_color': [0,1,0,1]
-                               'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
-                               ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
+                                'text': "{0}".format(an_obj.getEstado().getCalle()),
+                                'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
                                 }
                       },
                       {
-                           'cls': ListItemButton,
-                           'kwargs': { 'text': "{0}".format(an_obj.getEstado().getAltura()),
-                                        'deselected_color': COLOR_ITEMS_LISTADO_NO_SELECCIONADO
-                                        ,'selected_color': COLOR_ITEMS_LISTADO_SELECCIONADO
+                           'cls': MyListItemButton,
+                           'kwargs': {  'text': "{0}".format(an_obj.getEstado().getAltura()),
+                                        'background_normal': ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW,
+                                        'background_down': ESTILO_BOTON_SELECCIONADO_LIST_VIEW
                                       }
 
                       }]
