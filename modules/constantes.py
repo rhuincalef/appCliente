@@ -685,7 +685,8 @@ ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
 
 #Estilos de los items que se muestran en los listview de capturarfallainformada y subirfalla
 #
-ESTILO_BOTON_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_seleccionado'
+#ESTILO_BOTON_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_seleccionado'
+ESTILO_BOTON_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_seleccionado2'
 ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_no_seleccionado'
 
 
