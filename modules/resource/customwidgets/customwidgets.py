@@ -179,7 +179,9 @@ class CustomDropDown(TreeView):
     #Refresca el contorno de un elemento seleccionado
     def refreshContornoElemSeleccionado(self,width,height,x):
         #print "Cambio tamanio ventana! Redibujando elemento seleccionado\n"
-        if self.selected_node is not None:
+        if (self.selected_node is not None) and\
+            self.root.is_selected:
+            print "Elemento seleccionado: self.root.text= %s\n" % self.root.text
             self.redibujarContorno()
 
 
@@ -462,20 +464,11 @@ class CustomDropDown(TreeView):
                                             filtrarPorSeparador = filtrarPorSeparador)
 
 
-    #Este metodo retorna las criticidades para los baches y las grietas
-    # implementadas para la tesina
-    @staticmethod
-    def getCriticidadesHabilitadas():
-        #TODO: Esta linea significa una peticion al servidor de todas las criticidades
-        criticidades = CRITICIDADES 
-        for elem in criticidades:
-            elem["estaHabilitada"] = False
-            if elem["id"] in IDS_CRITICIDADES_HABILITADAS:
-                elem["estaHabilitada"] = True
-        return criticidades
-
     def reestablecer(self):
         self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
+        print "self.root.parent: %s\n" % type(self.root.parent)
+        print "self.root.parent.parent: %s\n" % type(self.root.parent.parent)
+        #self.root.parent.deselect_node()
         self.limpiarSeleccion() 
 
 

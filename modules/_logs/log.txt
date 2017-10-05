@@ -718,15 +718,15 @@ Comenzando nueva BD, deshabilitando los elementos del menu!
 
 Inicializada por Defecto BD Local de muestras...
 
-En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_04-10-2017.json
+En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_05-10-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9992d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9a31ad0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9b39590>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4ef0071f30>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf80c5e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf81d6bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf82d1670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0d28613050>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -748,13 +748,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9992d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9a31ad0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9b39590>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4ef0071f30>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf80c5e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf81d6bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf82d1670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0d28613050>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -853,7 +853,7 @@ screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScree
 tipoFalla.getValor(): grietas
  ; tipoFalla.estaHabilitada(): True
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0df30>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1050>
 
 w.id: None
 
@@ -881,7 +881,7 @@ creada opcion dropdown!
 
 Esta deshabilitado pavimento rígido: False 
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0df30>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1050>
 
 w.id: None
 
@@ -1009,7 +1009,7 @@ recorriendo elemento.id: subLayoutTipoFalla
 deshabilitado: subLayoutTipoFalla !
 
 
-/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:250: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:252: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
   label.parent_node.text = label.text
 /usr/lib/python2.7/dist-packages/kivy/core/text/__init__.py:675: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
   if text != self._text:
@@ -1081,23 +1081,178 @@ self.pos: [0, 180]; self.size: [800, 100]
 
 self.root.height: 33.0
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9992d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9a31ad0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9b39590>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4ef0071f30>]
+En _obtenerWidgetPorId()..
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+En subLayout.id: None..
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+En subLayout.id: subLayoutTipoCriticidad..
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: grietas
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cad final: medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm 
+
+filtrando por separador...
+
+cadena filtrada por separador final: medio
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: pavimento rígido
+
+props leidas: grietas, pavimento rígido, medio 
+
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+TipoFalla.root.is_selected?: False
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas/propstipofalla/propstipofalla.py:329: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  (self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas/propstipofalla/propstipofalla.py:330: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  (self._obtenerWidgetPorId("subLayoutTipoMaterial","TipoMaterial").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN):
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+En dialogopropscaptura.getData(): -1
+
+controlador.getData('idFalla') > 0 ? False
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf80c5e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf81d6bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf82d1670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0d28613050>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
 Iterando elemento: None
 
 Iterando elemento: subLayoutTipoCriticidad
 
-/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:478: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:468: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
   self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
 Iterando elemento: subLayoutTipoMaterial
 
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
 Iterando elemento: subLayoutTipoFalla
+
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
 
 LLamando al screen de captura de fallas...
 
@@ -1115,13 +1270,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9992d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9a31ad0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9b39590>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4ef0071f30>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf80c5e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf81d6bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf82d1670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0d28613050>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -1144,6 +1299,311 @@ iterando... <class 'kivy.uix.button.Button'>
 iterando... <class 'kivy.uix.button.Button'>
 
 iterando... <class 'kivy.uix.button.Button'>
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 1301, 744!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 1301, 744!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: grietas
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cad final: medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm 
+
+filtrando por separador...
+
+cadena filtrada por separador final: medio
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: pavimento rígido
+
+props leidas: grietas, pavimento rígido, medio 
+
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+TipoFalla.root.is_selected?: False
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
 type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
 
@@ -1203,7 +1663,7 @@ recorriendo elemento.id: subLayoutTipoFalla
 
 redibujando contorno!
 
-self.pos: [0, 740]; self.size: [800, 100] 
+self.pos: [0, 740]; self.size: [1301, 100] 
 
 self.root.height: 33.0
 
@@ -1218,7 +1678,7 @@ screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScree
 tipoFalla.getValor(): baches
  ; tipoFalla.estaHabilitada(): True
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0df30>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1050>
 
 w.id: None
 
@@ -1246,7 +1706,7 @@ creada opcion dropdown!
 
 Esta deshabilitado pavimento rígido: False 
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0df30>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1050>
 
 w.id: None
 
@@ -1376,7 +1836,7 @@ deshabilitado: subLayoutTipoFalla !
 
 redibujando contorno!
 
-self.pos: [0, 460]; self.size: [800, 100] 
+self.pos: [0, 460]; self.size: [1301, 100] 
 
 self.root.height: 33.0
 
@@ -1438,1409 +1898,934 @@ deshabilitado: subLayoutTipoFalla !
 
 redibujando contorno!
 
-self.pos: [0, 180]; self.size: [800, 100] 
+self.pos: [0, 180]; self.size: [1301, 100] 
 
 self.root.height: 33.0
 
-redibujando contorno!
+En _obtenerWidgetPorId()..
 
-self.pos: [0, 180]; self.size: [800, 100] 
+En subLayout.id: None..
 
-self.root.height: 43.0
+En subLayout.id: subLayoutTipoCriticidad..
 
-redibujando contorno!
+En subLayout.id: subLayoutTipoMaterial..
 
-self.pos: [0, 460]; self.size: [800, 100] 
+En subLayout.id: subLayoutTipoFalla..
 
-self.root.height: 37.0
+encontrado sublayout: subLayoutTipoFalla
 
-redibujando contorno!
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
 
-self.pos: [0, 180]; self.size: [800, 100] 
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-self.root.height: 33.0
+Existen nodos seleccionados!
 
-redibujando contorno!
+en filtrarContenidoOpcion()...
 
-self.pos: [0, 740]; self.size: [800, 100] 
+cadena final: baches
 
-self.root.height: 37.0
+En _obtenerWidgetPorId()..
 
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+En subLayout.id: None..
 
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 804, 600!
+En subLayout.id: subLayoutTipoCriticidad..
 
-nombreMenu: dialogopropscaptura
+encontrado sublayout: subLayoutTipoCriticidad
 
-screen: <Screen name='dialogopropscaptura'>
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
 
-nombreMenu: capturarFallaInformada
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-screen: <Screen name='capturarFallaInformada'>
+Existen nodos seleccionados!
 
-nombreMenu: propsFallaConfirmada
+en filtrarContenidoOpcion()...
 
-screen: <Screen name='propsFallaConfirmada'>
+cad final: medio: Se determina por cantidad de baches y dimensiones 
 
-nombreMenu: fileFilter
+filtrando por separador...
 
-screen: <Screen name='fileFilter'>
+cadena filtrada por separador final: medio
 
-nombreMenu: resultadosFiltrados
+En _obtenerWidgetPorId()..
 
-screen: <Screen name='resultadosFiltrados'>
+En subLayout.id: None..
 
-nombreMenu: obtenerinformadas
+En subLayout.id: subLayoutTipoCriticidad..
 
-screen: <Screen name='obtenerinformadas'>
+En subLayout.id: subLayoutTipoMaterial..
 
-nombreMenu: capturaKinect
+encontrado sublayout: subLayoutTipoMaterial
 
-screen: <Screen name='capturaKinect'>
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
 
-nombreMenu: subircapturasservidor
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-screen: <Screen name='subircapturasservidor'>
+Existen nodos seleccionados!
 
-retornando todas las screens...
+en filtrarContenidoOpcion()...
 
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+cadena final: pavimento rígido
 
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
+props leidas: baches, pavimento rígido, medio 
 
-En redimensionarFooter()...
 
-modificado el spacing y layout en footer!
+En _obtenerWidgetPorId()..
 
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+En subLayout.id: None..
 
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
+En subLayout.id: subLayoutTipoCriticidad..
 
-En redimensionarFooter()...
+En subLayout.id: subLayoutTipoMaterial..
 
-modificado el spacing y layout en footer!
+En subLayout.id: subLayoutTipoFalla..
 
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+encontrado sublayout: subLayoutTipoFalla
 
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
 
-En redimensionarFooter()...
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-modificado el spacing y layout en footer!
+TipoFalla.root.is_selected?: False
 
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+En _obtenerWidgetPorId()..
 
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
+En subLayout.id: None..
 
-En redimensionarFooter()...
+En subLayout.id: subLayoutTipoCriticidad..
 
-modificado el spacing y layout en footer!
+En subLayout.id: subLayoutTipoMaterial..
 
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+En subLayout.id: subLayoutTipoFalla..
 
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
+encontrado sublayout: subLayoutTipoFalla
 
-En redimensionarFooter()...
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
 
-modificado el spacing y layout en footer!
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+En _obtenerWidgetPorId()..
 
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
+En subLayout.id: None..
 
-En redimensionarFooter()...
+En subLayout.id: subLayoutTipoCriticidad..
 
-modificado el spacing y layout en footer!
+encontrado sublayout: subLayoutTipoCriticidad
 
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
 
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-En redimensionarFooter()...
+En _obtenerWidgetPorId()..
 
-modificado el spacing y layout en footer!
+En subLayout.id: None..
 
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+En subLayout.id: subLayoutTipoCriticidad..
 
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
+En subLayout.id: subLayoutTipoMaterial..
 
-En redimensionarFooter()...
+encontrado sublayout: subLayoutTipoMaterial
 
-modificado el spacing y layout en footer!
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
 
-redibujando contorno!
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
-self.pos: [0, 180]; self.size: [804, 100] 
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 
-self.root.height: 43.0
+PRE-ENTER!!
+La seleccion es:  []
 
-redibujando contorno!
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 
-self.pos: [0, 460]; self.size: [804, 100] 
+En dialogopropscaptura.getData(): -1
 
-self.root.height: 37.0
+controlador.getData('idFalla') > 0 ? False
 
-redibujando contorno!
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf80c5e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf81d6bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf82d1670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0d28613050>]
 
-self.pos: [0, 180]; self.size: [800, 100] 
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-self.root.height: 33.0
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [804, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 872, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [872, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [872, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [872, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 911, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [911, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [911, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [911, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 960, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [960, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [960, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [960, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 988, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [988, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [988, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [988, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 993, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [993, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [993, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [993, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 997, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [997, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [997, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [997, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 1003, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [1003, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [1003, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [1003, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 1005, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [1005, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [1005, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [1005, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 1006, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [1006, 100] 
-
-self.root.height: 43.0
-
-redibujando contorno!
-
-self.pos: [0, 460]; self.size: [1006, 100] 
-
-self.root.height: 37.0
-
-redibujando contorno!
-
-self.pos: [0, 180]; self.size: [800, 100] 
-
-self.root.height: 33.0
-
-redibujando contorno!
-
-self.pos: [0, 740]; self.size: [1006, 100] 
-
-self.root.height: 37.0
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f4efdbf8e50>, 1006, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d00>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15980>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8ed3b40>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3e50>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f4ee8e152f0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3bb0>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8ed3de0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ee8ed3c20>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8e15910>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ee8ed3c90>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8e158a0>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8ed3d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39210>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b39910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9b398a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9b39830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9b39280>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9b39520>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f4eb9c0dd70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef36fe1a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39cb210>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39cb280>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef39cb2f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef0071980>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071e50>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef003e8a0>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef0071d00>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f4ef0071d70>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8210>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ef39e81a0>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4ef39e8130>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e8360>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ef39e8280>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ef39e82f0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9c0d6e0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d590>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d830>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9c0d7c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9c0d750>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d670>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9c0d600>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017f30>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f4ee8017fa0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f4ee8017e50>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017c90>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f4ee8017de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017ec0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4ee8017d70>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f4ee8017d00>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31600>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a316e0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a318a0>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f4eb9a31750>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31de0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f4eb9a31d70>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31980>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4eb9a31e50>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a319f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31670>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f4eb9a31830>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f4eb9a31a60>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a317c0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f4eb9a31910>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9992d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9a31ad0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4eb9b39590>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4ef0071f30>]
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
-
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4ef53642f0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
 
 Iterando elemento: None
 
 Iterando elemento: subLayoutTipoCriticidad
 
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
 Iterando elemento: subLayoutTipoMaterial
 
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
 Iterando elemento: subLayoutTipoFalla
+
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 800, 600!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 800, 600!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+LLamando al screen de captura de fallas...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf80c5e50>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf81d6bb0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0cf82d1670>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f0d28613050>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f0d33aaf3d0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 800, 628!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 1301, 744!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 1301, 744!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 800, 600!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
+
+nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f0d3c34be50>, 800, 600!
+
+nombreMenu: dialogopropscaptura
+
+screen: <Screen name='dialogopropscaptura'>
+
+nombreMenu: capturarFallaInformada
+
+screen: <Screen name='capturarFallaInformada'>
+
+nombreMenu: propsFallaConfirmada
+
+screen: <Screen name='propsFallaConfirmada'>
+
+nombreMenu: fileFilter
+
+screen: <Screen name='fileFilter'>
+
+nombreMenu: resultadosFiltrados
+
+screen: <Screen name='resultadosFiltrados'>
+
+nombreMenu: obtenerinformadas
+
+screen: <Screen name='obtenerinformadas'>
+
+nombreMenu: capturaKinect
+
+screen: <Screen name='capturaKinect'>
+
+nombreMenu: subircapturasservidor
+
+screen: <Screen name='subircapturasservidor'>
+
+retornando todas las screens...
+
+iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
+
+ screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613de0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28560a60>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28613c20>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613f30>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f0d285603d0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613c90>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d28613ec0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d28613d00>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d285609f0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d28613d70>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d28560980>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d28613e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d12f0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d19f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf82d1980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf82d1910>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf82d1360>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf82d1600>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+ screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f0cf8325e50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
+
+ screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d31e48280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3211c2f0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3211c360>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d3211c3d0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdfa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d300bda60>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdf30>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3008c980>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d300bdde0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f0d300bde50>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
+
+ screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b2f0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d3213b280>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0d3213b210>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b440>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d3213b360>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0d3213b3d0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
+
+ screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf83257c0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325670>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325910>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83258a0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf8325830>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf8325750>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf83256e0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
+
+ screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf8325050>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf83250c0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f0d18013f30>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013d70>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f0d18013ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013fa0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0d18013e50>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f0d18013de0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
+
+iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
+
+ screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d66e0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d67c0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6980>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f0cf81d6830>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6ec0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f0cf81d6e50>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6a60>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f0cf81d6f30>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6ad0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d6750>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f0cf81d6910>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f0cf81d6b40>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d68a0>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f0cf81d69f0>>}
+
+En redimensionarFooter()...
+
+modificado el spacing y layout en footer!
 

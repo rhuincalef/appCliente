@@ -304,6 +304,7 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 	
 	
 	def aceptar(self,evt):
+
 		#Se envian los datos de la falla
 		controlador = App.get_running_app()
 		screen = self.manager.get_screen('dialogopropscaptura')
@@ -320,6 +321,18 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 												text="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
 												)			
 			return
+
+
+		#AGREGADOOO
+		print "TipoFalla.root.is_selected?: %s\n" % self._obtenerWidgetPorId("subLayoutTipoFalla","TipoFallaDropdown").root.is_selected
+		if (self._obtenerWidgetPorId("subLayoutTipoFalla","TipoFallaDropdown").root.text == CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
+			(self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
+			(self._obtenerWidgetPorId("subLayoutTipoMaterial","TipoMaterial").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN):
+				controlador.mostrarDialogoMensaje(title="Error de propiedades",
+					text="Debe seleccionar tipo de reparacion y tipo de material\n antes de continuar con la captura de fallas nuevas."
+					)
+				return
+
 
 		controlador.agregarData("tipoFalla",tipoFalla)
 		controlador.agregarData("tipoMaterial",tipoMaterial)
