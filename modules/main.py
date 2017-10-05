@@ -720,6 +720,9 @@ class MainApp(App,EventDispatcher):
 		register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 		print "En build()\n"
 		self.title = TITULO_APP
+		
+		#AGREGADO RODRIGO
+		Builder.load_string(ESTILO_TREE_VIEW)
 
 		#self.lockPropsConfirmadas = threading.Condition()
 		#popup = self.mostrarDialogoEspera(title="Carga de propiedades",

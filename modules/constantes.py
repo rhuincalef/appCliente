@@ -739,6 +739,26 @@ COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO = [ 5,152,255 ]
 #INCREMENTO PARA LLEGAR A CELESTE CLARO
 COLOR_PRUEBA_LISTVIEW_ITEM_SELECCIONADO = [ 4,106,119 ]
 
+ESTILO_TREE_VIEW = '''
+<TreeViewNode>:
+    canvas.before:
+        Color:
+            rgba: self.color_selected if self.is_selected else self.odd_color if self.odd else self.even_color
+        Rectangle:
+            pos: [self.parent.x, self.y] if self.parent else [0, 0]
+            size: [self.parent.width, self.height] if self.parent else [1, 1]
+        Color:
+            rgba: 1, 1, 1, int(not self.is_leaf)
+        Rectangle:
+            source: 'atlas://customAppCliente/tree_%s' % ('opened' if self.is_open else 'closed')
+            #size: 16, 16
+            size: 21, 21
+            pos: self.x - 20, self.center_y - 8
+    canvas.after:
+        Color:
+            rgba: .5, .5, .5, .2
+        Line:
+            points: [self.parent.x, self.y, self.parent.right, self.y] if self.parent else []'''
 
 
 

@@ -22,6 +22,7 @@ from customwidgets import CustomDropDown
 
 from screenredimensionable import ScreenRedimensionable
 
+
 class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 	def __init__(self,**kwargs):

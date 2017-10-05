@@ -151,6 +151,9 @@ class OpcionDropDown(TreeViewLabel):
 
 from kivy.core.window import Window
 
+#ARCHIVO CON LOS ESTILOS POR DEFECTO 'tree_closed|tree_opened'-->
+#/usr/lib/python2.7/dist-packages/kivy/data/style.kv
+
 class CustomDropDown(TreeView):
 
     ICONO_DEFAULT_DROPDOWN = "%s"% icon('fa-plus',TAMANIO_PLUS_ICON_DROPDOWN)
@@ -159,7 +162,8 @@ class CustomDropDown(TreeView):
                         'text': ICONO_DEFAULT_DROPDOWN,
                         'markup': True,
                         'font_size':TAMANIO_PLUS_ICON_DROPDOWN,
-                        'color_selected': COLOR_DROPDOWN_ROW_SELECCIONADO
+                        'color_selected': COLOR_DROPDOWN_ROW_SELECCIONADO,
+                        #'tree_closed': 'atlas://customAppCliente/tree_closed'
                         #,'opened': 'atlas://customAppCliente/tree_closed'
                     }
 
@@ -179,9 +183,11 @@ class CustomDropDown(TreeView):
     #Refresca el contorno de un elemento seleccionado
     def refreshContornoElemSeleccionado(self,width,height,x):
         #print "Cambio tamanio ventana! Redibujando elemento seleccionado\n"
-        if (self.selected_node is not None) and\
-            self.root.is_selected:
-            print "Elemento seleccionado: self.root.text= %s\n" % self.root.text
+        #if (self.selected_node is not None) and\
+        #    self.root.is_selected:
+        if (self.selected_node is not None) and \
+            self.root.text != CustomDropDown.ICONO_DEFAULT_DROPDOWN:
+            print "Elemento seleccionado: self.root.text\n"
             self.redibujarContorno()
 
 
