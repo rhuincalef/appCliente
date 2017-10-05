@@ -222,15 +222,12 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 #################### Constantes para comunicacion con el  servidor ##########################
 #############################################################################################
 
-#Servidor local rodrigo
-#URL_SERVIDOR_LOCAL = "http://localhost/repoProyectoBacheo/web/"
 
 #Servidor local rodrigo
 URL_SERVIDOR_LOCAL = "http://localhost/web/"
 
 #Servidor Guille
 #URL_SERVIDOR_LOCAL = "http://192.168.2.54/web/"
-
 
 
 #URL donde se verificara si la falla se encuentra dada de alta, si es asi se da el
@@ -347,8 +344,8 @@ TIMEOUT_FOR_KILLING_PROCESS = 10
 ######################## CONSTANTES PARA LOS ICONOS Y SPINNERS DE LA APP########################
 ################################################################################################ 
 TAMANIO_ICONOS = 32
-#TAMANIO_CUSTOM_ICONOS = 45
-TAMANIO_CUSTOM_ICONOS = 55
+#TAMANIO_CUSTOM_ICONOS = 55
+TAMANIO_CUSTOM_ICONOS = 65
 
 TAMANIO_SPINNER = 40
 COLOR_SPINNER = "'5729ff'"
@@ -559,7 +556,8 @@ TIPO_SCREEN = "screen"
 # Constantes para el tamanio de los iconos en screen "propsTipoFalla" (solicitado en 
 # modulo customwidgets)
 
-TAMANIO_PLUS_ICON_DROPDOWN = 17
+#TAMANIO_PLUS_ICON_DROPDOWN = 17
+TAMANIO_PLUS_ICON_DROPDOWN = 22
 TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN = '18sp' 
 PREFIJO_LABEL_DROPDOWN = "label"
 

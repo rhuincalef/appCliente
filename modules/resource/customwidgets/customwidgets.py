@@ -149,7 +149,7 @@ class OpcionDropDown(TreeViewLabel):
     #        Rectangle(pos=self.pos, size=self.size)
 
 
-
+from kivy.core.window import Window
 
 class CustomDropDown(TreeView):
 
@@ -170,7 +170,18 @@ class CustomDropDown(TreeView):
         self.bind(on_node_collapse = self.mostrarLabels)
         self.screen = screen
         print "creado customdropdown con self.root: %s\n" % type(self.root)
-        
+
+        #Bindeados ejemplos de maximizacion y restauracion de ventana
+        # para el contorno coloreado de la opcion seleccionada
+        Window.bind(on_resize=self.refreshContornoElemSeleccionado)
+
+
+    #Refresca el contorno de un elemento seleccionado
+    def refreshContornoElemSeleccionado(self,width,height,x):
+        #print "Cambio tamanio ventana! Redibujando elemento seleccionado\n"
+        if self.selected_node is not None:
+            self.redibujarContorno()
+
 
     #Evento usado para ocular los labels que se encuentran detras del customdropdown
     def ocultarLabels(self,customDropdown,treeViewLabel):
@@ -194,20 +205,6 @@ class CustomDropDown(TreeView):
             if (elemento.id is not None) and not (elemento.id == customDropdown.parent.id):
                 elemento.disabled = estanDeshabilitadosWidgets
                 print "deshabilitado: %s !\n\n" % elemento.id
-
-
-
-    # BACKUP!!
-    #Este metodo al habilitarse un dropdown, deshabilita el resto y sus lables asociados
-    #def _toggleGUI(self,customDropdown,estanDeshabilitadosWidgets):
-    #    print "type (dropdown):%s,  dropdown.id: %s\n" % (type(customDropdown),customDropdown.id)
-    #    for elemento in self.parent.children:
-    #        print "recorriendo elemento: %s\n" % type(elemento)
-    #        print "recorriendo elemento.id: %s\n" % elemento.id
-    #        if (elemento.id is not None) and not (elemento.id == customDropdown.id) \
-    #                                    and not (elemento.id == PREFIJO_LABEL_DROPDOWN+customDropdown.id):
-    #            elemento.disabled = estanDeshabilitadosWidgets
-    #            print "deshabilitado: %s !\n\n" % elemento.id
 
 
     @staticmethod
@@ -256,13 +253,17 @@ class CustomDropDown(TreeView):
         self.redibujarContorno()
 
 
+    def limpiarSeleccion(self):
+        self.root.canvas.after.clear()
+
     # Se dibuja el contorno del TreeviewLabel parent que contiene 
     # a las opciones en el dropdown
     def redibujarContorno(self):
         print "redibujando contorno!\n"
         #label.parent_node.canvas.before.clear()
         #with label.parent_node.canvas.before:
-        self.root.canvas.after.clear()
+        self.limpiarSeleccion()
+        #self.root.canvas.after.clear()
         with self.root.canvas.after:
             print "self.pos: %s; self.size: %s \n" % (self.pos,self.size)
             print "self.root.height: %s\n" % self.root.height
@@ -474,7 +475,8 @@ class CustomDropDown(TreeView):
         return criticidades
 
     def reestablecer(self):
-        self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN 
+        self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
+        self.limpiarSeleccion() 
 
 
 

@@ -21,7 +21,7 @@ from constantes import *
 from customwidgets import CustomDropDown
 
 from screenredimensionable import ScreenRedimensionable
-#class PropsFallaConfirmadaScreen(Screen):
+
 class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 	def __init__(self,**kwargs):
@@ -82,30 +82,16 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 							color = COLOR_TEXTOS)
 		
 		print "En inicializarDropDownPrincipal()... \n"
-		#controlador = App.get_running_app()
-		#dicNombres = controlador.getPropsConfirmados()
-		#cantMaximaOpcionesDropwdown = 0
-		#print "type(todasPropsConfirmadas): %s\n" % type(dicNombres)
-		#print "todas las propiedades confirmadas: %s\n" % dicNombres
 
 		self.inicializarTipoFalla(label = None)
-		#longitud = len(dicNombres)
-		#print "LONGITUD: %s\n" % longitud
 
 		self.inicializarTipoMaterial()
-		#cantOpcTipoMaterial = todasPropsConfirmadas.getCantPropsTipoFalla("tipoMaterial") 
-		#if cantMaximaOpcionesDropwdown < cantOpcTipoMaterial:
-		#	cantMaximaOpcionesDropwdown = cantOpcTipoMaterial
 
 		self.inicializarTipoCriticidad()
-		#cantOpcCriticidad = todasPropsConfirmadas.getCantPropsTipoFalla("criticidad") 
-		#if cantMaximaOpcionesDropwdown < cantOpcCriticidad:
-		#	cantMaximaOpcionesDropwdown = cantOpcCriticidad
 		
 		self.inicializarFooter()
 		self.ids.main_scroll_view.add_widget(self.layout_principal)
-		#print "valor final cantMaximaOpcionesDropwdown: %s\n" % cantMaximaOpcionesDropwdown
-		#self.calcularSpacingEntreLayouts(cantMaximaOpcionesDropwdown)
+
 		self.calcularSpacingEntreLayouts(6)
 	
 
@@ -120,7 +106,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
 							text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_CUSTOM_ICONOS)) ,
-							#text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
@@ -182,7 +167,8 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 			subLayout.add_widget(label)
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoCriticidad",
-							text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)) ,
+							text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_CUSTOM_ICONOS)) ,
+							#text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
