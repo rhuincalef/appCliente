@@ -224,11 +224,11 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 
 
 #Servidor local rodrigo(Ultima version localhost:80)
-#URL_SERVIDOR_LOCAL = "http://localhost/web/"
-URL_SERVIDOR_LOCAL = "http://localhost:81/web/"
+URL_SERVIDOR_LOCAL = "http://localhost/web/"
+#URL_SERVIDOR_LOCAL = "http://localhost:81/web/"
 
 #Servidor Guille
-#URL_SERVIDOR_LOCAL = "http://192.168.2.54/web/"
+#URL_SERVIDOR_LOCAL = "http://192.168.0.104/web/"
 
 
 #URL donde se verificara si la falla se encuentra dada de alta, si es asi se da el
@@ -560,6 +560,7 @@ TIPO_SCREEN = "screen"
 TAMANIO_PLUS_ICON_DROPDOWN = 22
 TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN = '18sp' 
 PREFIJO_LABEL_DROPDOWN = "label"
+TAMANIO_TEXTO_LABELS_DROPDOWN = '24sp'
 
 #Espacio que se reserva horizontalmente por opcion de cada CustomDropdown
 PADDING_POR_WIDGET = 36

@@ -107,6 +107,7 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoFallaDropdown",
 							text='%s Seleccione el tipo de falla' % (icon('cf-bache', TAMANIO_CUSTOM_ICONOS)) ,
+							font_size= TAMANIO_TEXTO_LABELS_DROPDOWN,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
@@ -145,6 +146,7 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoMaterial",
 							#text='%s Seleccione el tipo de material' % (icon('cf-tipomaterial', TAMANIO_ICONOS)) ,
 							text='%s Seleccione el tipo de material' % (icon('cf-tipomaterial', TAMANIO_CUSTOM_ICONOS)) ,
+							font_size= TAMANIO_TEXTO_LABELS_DROPDOWN,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
@@ -169,6 +171,7 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoCriticidad",
 							text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_CUSTOM_ICONOS)) ,
+							font_size= TAMANIO_TEXTO_LABELS_DROPDOWN,
 							#text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
