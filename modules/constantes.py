@@ -223,8 +223,9 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 #############################################################################################
 
 
-#Servidor local rodrigo
-URL_SERVIDOR_LOCAL = "http://localhost/web/"
+#Servidor local rodrigo(Ultima version localhost:80)
+#URL_SERVIDOR_LOCAL = "http://localhost/web/"
+URL_SERVIDOR_LOCAL = "http://localhost:81/web/"
 
 #Servidor Guille
 #URL_SERVIDOR_LOCAL = "http://192.168.2.54/web/"
@@ -247,8 +248,7 @@ URL_INFORMADOS  = URL_SERVIDOR_LOCAL + "restapi/obtener_informados/calle/"
 URL_GET_DIRECCION = URL_SERVIDOR_LOCAL + "restapi/obtener_datos_direccion/"
 
 
-# http://localhost/repoProyectoBacheo/web/restapi/obtener_props_confirmadas
-# http://192.168.0.102/web/restapi/obtener_props_confirmadas
+# http://localhost:81/web/restapi/obtener_props_confirmadas
 URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirmadas" 
 
 
@@ -587,17 +587,18 @@ PONDERACION_CRITICIDAD_ALTA = 1.5
 
 
 #COLOR DE LAS CRITICIDADES EN RGB(Capturar falla confirmada)
-#AZUL MARINO CLARO -->
-#COLOR_PONDERACION_BAJA = '21C3E8'
 
-#AZUL OSCURO -->
-COLOR_PONDERACION_BAJA = '1710EC'
-
-#VERDE OSCURO -->
-#COLOR_PONDERACION_BAJA = '009900'
-
-COLOR_PONDERACION_MEDIA = 'F2F939'
+#AMARILLO BAJA -->
+COLOR_PONDERACION_BAJA = 'F2F939'
+#NARANJA MEDIA -->
+COLOR_PONDERACION_MEDIA = 'ff890b'
+#ALTA ROJO -->
 COLOR_PONDERACION_ALTA = 'FF0000'
+
+#BACKUP!
+#COLOR_PONDERACION_BAJA = '1710EC'
+#COLOR_PONDERACION_MEDIA = 'F2F939'
+#COLOR_PONDERACION_ALTA = 'FF0000'
 
 
 # Patrones para usar con regex.
@@ -700,25 +701,35 @@ COLOR_SEPARADOR_POPUPS = [1,1,1,1]
 
 
 #Constantes para el texto en cada Label del CustomDropDown
-#COLOR_DROPDOWN_TEXTO_DESHABILITADO = (1, 1, 1,0.5)
 COLOR_DROPDOWN_TEXTO_DESHABILITADO = (94.0/255, 94.0/255, 94.0/255,0.4)
 
 #Constantes para el row del CustomDropDown
 #
-COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
-COLOR_ROW_PAR_DROPDOWN = (251/255.0,224/255.0,0/255.0,0.6) 
+COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 255.0/255.0,0.3)
+COLOR_ROW_PAR_DROPDOWN = (0.0/255.0,0.0/255.0,255/255.0,0.6) 
 COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
+
+#Estilo que representa el color del treeviewlabel "root" cuando se
+# selecciona una opcion.
+ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_DROPDOWN_ROW_SELECCIONADO[0],
+										COLOR_DROPDOWN_ROW_SELECCIONADO[1],
+										COLOR_DROPDOWN_ROW_SELECCIONADO[2],
+										0.50)
+
+#BACKUP!!
+#Constantes para el row del CustomDropDown
+#
+#COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
+#COLOR_ROW_PAR_DROPDOWN = (251/255.0,224/255.0,0/255.0,0.6) 
+#COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
 
 #Estilo que representa el color del treeviewlabel "root" cuando se
 # selecciona una opcion.
 #ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_ROW_PAR_DROPDOWN[0],
 #										COLOR_ROW_PAR_DROPDOWN[1],
 #										COLOR_ROW_PAR_DROPDOWN[2],
-#										0.20)
-ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_ROW_PAR_DROPDOWN[0],
-										COLOR_ROW_PAR_DROPDOWN[1],
-										COLOR_ROW_PAR_DROPDOWN[2],
-										0.50)
+#										0.50)
+
 
 # Estilos que se usan para los botones del listado en los screens
 # "capturarfallainformada" y "subirfalla".  

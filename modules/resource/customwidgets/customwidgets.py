@@ -182,9 +182,6 @@ class CustomDropDown(TreeView):
 
     #Refresca el contorno de un elemento seleccionado
     def refreshContornoElemSeleccionado(self,width,height,x):
-        #print "Cambio tamanio ventana! Redibujando elemento seleccionado\n"
-        #if (self.selected_node is not None) and\
-        #    self.root.is_selected:
         if (self.selected_node is not None) and \
             self.root.text != CustomDropDown.ICONO_DEFAULT_DROPDOWN:
             print "Elemento seleccionado: self.root.text\n"
