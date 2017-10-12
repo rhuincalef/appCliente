@@ -129,19 +129,48 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 
 		
 	def _existenFallasSeleccionadas(self):
-		existenFallas = False
+		existenFallas = existenCapsInconsistentes =  False
 		for falla in self.listado_capturas.adapter.data:
 			if falla.is_selected:
 				existenFallas = True
-				break
+
+			# Se verifica que todos los archivos .pcd asociados a las capturas
+			# se encuentren aun en el disco al momento del envio, y se marcan
+			# aquellos que contienen inconsistencias.
+			falla.comprobarConsistencia()
+
 		print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
 				existenFallas
+		controlador = App.get_running_app()
 		if not existenFallas:
-			controlador = App.get_running_app()
-			controlador.mostrarDialogoMensaje( title="Seleccion de fallas",
+			controlador.mostrarDialogoMensaje( title="Selección de fallas",
 												text = "Se debe seleccionar al menos una falla\n del listado para realizar un envio al servidor.")
+		elif existenCapsInconsistentes:
+			popup = controlador.mostrarDialogoMensaje(title="Envío de fallas al servidor",
+											text = "Existen fallas que contienen capturas \n inconsistentes que se ignorarán.Se subirán\n solo aquellas que se encuentren inconsistentes.")
+			popup.bind(on_dismiss = self._comenzarEnvioArchivos)
 		else:
 			self.manager.current = 'enviocapturasserver'
+
+	def _comenzarEnvioArchivos(self,popup):
+		self.manager.current = 'enviocapturasserver'
+
+
+# BACKUP!
+#	def _existenFallasSeleccionadas(self):
+#		existenFallas = False
+#		for falla in self.listado_capturas.adapter.data:
+#			if falla.is_selected:
+#				existenFallas = True
+#				break
+#		print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
+#				existenFallas
+#		if not existenFallas:
+#			controlador = App.get_running_app()
+##			controlador.mostrarDialogoMensaje( title="Seleccion de fallas",
+#												text = "Se debe seleccionar al menos una falla\n del listado para realizar un envio al servidor.")
+#		else:
+#			self.manager.current = 'enviocapturasserver'
 
 
 	def volver(self):

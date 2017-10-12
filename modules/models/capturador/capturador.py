@@ -424,9 +424,6 @@ class ItemFalla(SelectableDataItem,Persistent):
         # para seguir preparando las proximas peticiones.
         #
         
-        #BACKUP!
-        #nombreArchCsv = self.colCapturas[i].getFullPathCapturaConv()
-        #capturasConvertidas.append(nombreArchCsv) 
         
         nombreArchCsv = self.colCapturas[i].getFullPathCapturaConv()
         capturasConvertidas.append(nombreArchCsv) 
@@ -443,12 +440,6 @@ class ItemFalla(SelectableDataItem,Persistent):
         if bytes_actuales_col + bytes_actuales_cap >= MAX_POST_REQUEST_SIZE or \
                     len(capturasConvertidas) == MAX_FILE_UPLOADS_FOR_REQUEST or \
                       cantCapturasAEnviar == 0:
-          #print "bytes_actuales_col: %s ; MAX_POST_SIZE: %s\n" %\
-              #(bytes_actuales_col,MAX_POST_REQUEST_SIZE)          
-          #print "len(capturasConvertidas)= %s ; MAX_FILE_UPLOADS_FOR_REQUEST= %s" %\
-            #(len(capturasConvertidas),MAX_FILE_UPLOADS_FOR_REQUEST)
-          #print "cantCapturasAEnviar = %s\n" % cantCapturasAEnviar
-
           #Se piden lso campos formateados para el envio a la falla
           falla_formateada = self.getDicFalla()
           #print "Enviando la peticion: %s\n " % falla_formateada
@@ -594,13 +585,27 @@ class ItemFalla(SelectableDataItem,Persistent):
     print "Fin itemfalla.descartar()\n"
 
 
+  #Comprueba la consistencia de los archivos .pcd en disco con respecto a los
+  # objetos "Captura" en memoria, asociados a cada falla.
+  def comprobarConsistencia(self):
+    existenCapsInconsistentes = False
+    print "Comprobando consistencia del item falla:     %s\n\n" % self
+    for cap in self.colCapturas:
+      if not cap.existeEnDisco():
+        cap.marcarComoInconsistente()
+        existenCapsInconsistentes = True
+        print "captura inconsistente encontrada!\n"
+    print "fin de comprobacion ...\n"
+    return existenCapsInconsistentes
+
+
 
 class Capturador(object):
   def __init__(self,apiclientComun,BDLocal=None,**kwargs):		
     #NOTA: Tanto colCapturasTotales como colCapturasConfirmadas 
     # contienen elementos "ItemFalla", que tienen objetos "Captura" asociados. 
     self.colCapturasTotales = [] #Todas las capturas hechas informadas y confirmadas.
-    self.colCapturasConfirmadas = [] # Aquellas seleccionadas para enviar al servidor 
+    self.colCapturasConfirmadas = [] # Aquellas fallas "confirmadas"(seleccionadas) para enviar al servidor 
     self.apiClient = apiclientComun
     # self.apiClient = ApiClientApp()
     self.estrategia = EstrategiaConfirmados()
@@ -741,6 +746,7 @@ class Capturador(object):
     print "En capturador.enviarCapturas()\n"
     controlador = App.get_running_app()
     bytes_leidos = 0
+    #Se obtienen las fallas confirmadas para envio
     for falla in self.getColCapturasConfirmadas():
       print "\nEnviando falla= %s; falla.is_selected=%s)\n" % (falla,falla.is_selected)
       if falla.is_selected:

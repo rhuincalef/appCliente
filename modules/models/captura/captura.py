@@ -36,6 +36,29 @@ class Captura(Persistent):
 		self.nombreArchivoCaptura = None #Nombre del archivo de captura completo.Ej."NUEVOSCONFIRMADOS_1.pcd"
 		self.estaSubidaAlServidor = False # determina si una captura se subio
 										#completamente al servidor.
+		#AGREGADO RODRIGO
+		self.consistente = True  # Determina si tanto la captura en memoria como en disco 
+								 # existen al momento de subirse al servidor,
+								 # si no es asi, no se la considera 
+								 # para enviarse al servidor.
+
+
+	# Este metodo verifica si el archivo existe en disco antes de realizar
+	# el envio al servidor. Retorna True si el archivo existe en disco,
+	# y False de otro modo.
+	#
+	def existeEnDisco(self):
+		print "comprobando captura: %s\n" % self.getFullPathCaptura()
+		return path.isfile(self.getFullPathCaptura())
+ 	
+ 	
+ 	def esConsistente(self):
+ 		return self.consistente
+
+	#Marca la captura como inconsistente
+	def marcarComoInconsistente(self):
+		self.consistente = False
+
 
 
 	#Retorna el nombre del archivo+SUBFIJO+ID_INCREMENTAL+ EXTENSION_SUBIDA_DEFAULT
