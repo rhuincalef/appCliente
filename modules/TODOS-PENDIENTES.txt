@@ -116,8 +116,9 @@ En documento formal tesina:
 
 
 -Ver problema de latitudesFalsas.json con un "}" extra al final. Solo a veces.
--Ver problema de capturas ilegibles desde sensor.Solo a veces.
--Ver problema crear y borrar carpeta varias veces.
+-Ver problema de capturas ilegibles desde sensor.Solo a veces. -->OK.
+-Ver problema crear y borrar carpeta varias veces. -->OK
+-Ver problema borrar directorio con capturas que aun se encuentran referenciadas en la coleccion de itemfalla.
 
 
 

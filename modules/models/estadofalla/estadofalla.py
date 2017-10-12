@@ -327,7 +327,9 @@ class Informada(Estado):
 
 	#Informada.comparar()
 	def comparar(self,other):
-		self_id = self.getEstado().getId()  
+		#self_id = self.getEstado().getId()  
+		#other_id = other.getEstado().getId()
+		self_id = self.getId()  
 		other_id = other.getEstado().getId()
 		print "En __cmp__() estado Informada con self_id: %s y other_id: %s\n" % (self_id,other_id)
 		if self_id > other_id:

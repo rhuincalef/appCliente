@@ -122,7 +122,8 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 	#Se leen los datos ingresados por el usuario y se envian a la sigueinte
 	#screen.
 	def menu_falla_nueva(self):
-		nombre_captura = self.nombre_cap.text
+		#nombre_captura = self.nombre_cap.text
+		nombre_captura = self.ids.nombre_captura_txt.text
 		es_nombre_valido = es_dir_valido = False
 		#print "Archivo captura seleccionado: %s\n" % nombre_captura
 		#print strip(nombre_captura)

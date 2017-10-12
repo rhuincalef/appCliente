@@ -720,17 +720,559 @@ Inicializada por Defecto BD Local de muestras...
 
 En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_12-10-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
 type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de obtener fallas inforamadas...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(m)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/m/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre', u'Michael Jones', u'Michael D. Jones']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre', u'Michael Jones', u'Michael D. Jones']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+type(label): <class 'kivy.uix.button.Button'>
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(Mitre)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/Mitre/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+Enviando peticion al servidor calle: Mitre
+
+instanciado dialogo espera...
+
+Inicio de solicitarInformados()...
+
+Obteniendo baches sobre calle:Mitre
+ 
+peticion -->
+http://localhost/web/restapi/obtener_informados/calle/Mitre
+La respuesta en formato json es: 
+{u'codigo': 200, u'datos': {u'1': {u'calle': u'Mitre', u'id': u'1', u'altura': u'334'}, u'5': {u'calle': u'Mitre', u'id': u'5', u'altura': u'520'}}}
+dic. valores parseados: {u'1': {'calle': 'Mitre', 'id': 1, 'altura': 334}, u'5': {'calle': 'Mitre', 'id': 5, 'altura': 520}}
+
+Cambiado el estado de la falla a : Informada; id: 1 - calle: Mitre - altura: 334 
+
+Falla con id 1 no esta en colBachesInformados, agregando!
+
+Cambiado el estado de la falla a : Informada; id: 5 - calle: Mitre - altura: 520 
+
+Falla con id 5 no esta en colBachesInformados, agregando!
+
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Mostrando la coleccion despues de solicitarInformados()...
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Id falla:  1 ; Calle: Mitre ; Altura: 
+334
+Id falla:  5 ; Calle: Mitre ; Altura: 
+520
+---------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Fin de muestra de la coleccion solicitarInformados()...
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cerrado popup!
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+LLamando al screen de capturar falla informada...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Actualizando listado de fallas...
+tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fec285f4b18>, <capturador.ItemFalla object at 0x7fec285f49b0>]
+
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Actualizado listado!
+row_index actual:  0
+
+En MyListItemButton con args -->
+{'text': '1', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': '334', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+row_index actual:  1
+
+En MyListItemButton con args -->
+{'text': '5', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': '520', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+button.select_from_composite(): 334
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() 1!
+
+button.deselect_from_composite(): 334
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 1!
+
+button.select_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() 5!
+
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fec285f4b18>, <capturador.ItemFalla object at 0x7fec285f49b0>]
+
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+recorriendo falla informada 1 falla.estaSeleccionado: False
+
+recorriendo falla informada 5 falla.estaSeleccionado: True
+
+Existen fallas seleccionadas
+Agregando falla informada para ser capturada: 
+Id:  5
+
+id_falla_seleccionada: 5
+
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+Creando directorio!!
+
+tipo instance: <class 'kivy.uix.textinput.TextInput'>; tipo evt: <class 'kivy.input.providers.mouse.MouseMotionEvent'>
+
+limpiado txtinput!
+
+En self._create_dir(): /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+
+CAMBIO DE DIRECTORIO!
+selection : ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados']
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+
+Data SETEADA!!! con: nombre_cap =  capInfo ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla 5
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+Llamando al manejador!
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (240854,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+En main.capturar(): getData()? 5
+ 
+En main.capturar(): id_falla? 5
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  5 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+
+
+Seleccionando capturadorInformados...
+
+tipo capturador: <class 'capturador.CapturadorInformados'>
+Inicio asociarFalla() para id_falla:  5
+
+Encontrado ItemFalla(%s):  5
+Cantidad de archivos .pcd con el nombre  capInfo es :  1
+
+En registrar fallaInformada!
+item_falla: <class 'capturador.ItemFalla'>
+capturador: <class 'capturador.CapturadorInformados'>
+captura: <class 'captura.Captura'>
+ItemFalla no encontrado: id=  5
+Agregada captura a falla!
+Falla (5) tiene las capturas:  
+Item_falla no tiene capturas!!!!
+Falla (5) tiene las capturas:  
+Item_falla no tiene capturas!!!!
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd'}
+
+Abierto visualizador
+
+keycode[0] : 113
+keycode[1] : q
+keycode[0] : 113
+keycode[1] : q
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd'}] en disco!
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla 5
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (241008,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+En main.capturar(): getData()? 5
+ 
+En main.capturar(): id_falla? 5
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  5 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados
+
+
+Seleccionando capturadorInformados...
+
+tipo capturador: <class 'capturador.CapturadorInformados'>
+Inicio asociarFalla() para id_falla:  5
+
+Encontrado ItemFalla(%s):  5
+Cantidad de archivos .pcd con el nombre  capInfo es :  2
+
+En registrar fallaInformada!
+item_falla: <class 'capturador.ItemFalla'>
+capturador: <class 'capturador.CapturadorInformados'>
+captura: <class 'captura.Captura'>
+Comparando item_falla_id(5) vs f_id(5)
+
+Encontrado item_falla (5)
+
+Agregada captura a falla!
+Falla (5) tiene las capturas:  
+Item_falla no tiene capturas!!!!
+Falla (5) tiene las capturas:  
+Item_falla no tiene capturas!!!!
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+keycode[0] : 1073741824
+keycode[1] : 
+keycode[0] : 1073741824
+keycode[1] : 
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd'}
+
+Abierto visualizador
+
+keycode[0] : 113
+keycode[1] : q
+keycode[0] : 113
+keycode[1] : q
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd'}] en disco!
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+DesBindeada SPACEBAR!!
+
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+En dialogopropscaptura.getData(): 5
+
+controlador.getData('idFalla') > 0 ? True
+
+Actualizando listado de fallas...
+tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fec285f4b18>, <capturador.ItemFalla object at 0x7fec285f49b0>]
+
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+Actualizado listado!
+En main.desSeleccionarInformados()...
+
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7fec285f4b18>, <capturador.ItemFalla object at 0x7fec285f49b0>]
+
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+Deseleccionando falla informada: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Deseleccionando falla informada: -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Fin desSeleccionarFalla!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
 LLamando al screen de captura de fallas...
 
@@ -748,13 +1290,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -853,7 +1395,7 @@ screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScree
 tipoFalla.getValor(): grietas
  ; tipoFalla.estaHabilitada(): True
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f6e7050e210>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7fec2add2210>
 
 w.id: None
 
@@ -881,7 +1423,7 @@ creada opcion dropdown!
 
 Esta deshabilitado pavimento rígido: False 
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f6e7050e210>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7fec2add2210>
 
 w.id: None
 
@@ -1216,22 +1758,75 @@ Entre al filechooser
 El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 
 PRE-ENTER!!
+Creando directorio!!
+
+tipo instance: <class 'kivy.uix.textinput.TextInput'>; tipo evt: <class 'kivy.input.providers.mouse.MouseMotionEvent'>
+
+limpiado txtinput!
+
+En self._create_dir(): /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
+
+CAMBIO DE DIRECTORIO!
+selection : ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
 La seleccion es:  []
 
 CAMBIO DE DIRECTORIO!
 selection : []
 
-La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno']
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados']
 
 Seleccion actual -->
-['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno']
-Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados']
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados']
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados']
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 es_nombre_valido:  True
 es_dir_valido:  True
 
-Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 
-Data SETEADA!!! con: nombre_cap =  mis_capturas ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+Data SETEADA!!! con: nombre_cap =  capConfi ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 Sensor LISTO? : True...
 
 Bindeado SPACEBAR!!
@@ -1261,9 +1856,9 @@ Llamando al manejador!
 
 LLENADA dataNube! con shape: (307200,4) 
 
-CONVERTIDA dataNube2 con shape: (236037,4)
+CONVERTIDA dataNube2 con shape: (240202,4)
 
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 En main.capturar(): getData()? -1
  
 En main.capturar(): id_falla? -1
@@ -1272,7 +1867,7 @@ instanciado dialogo espera...
 
 threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
 
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 
 
 Seleccionando capturarFallaNueva...
@@ -1281,52 +1876,52 @@ tipo capturador: <class 'capturador.Capturador'>
 En capturador FALLA NUEVA!!!
 
 
-self.posCoordenadaActual + 1: 9
+self.posCoordenadaActual + 1: 13
 
 len(self.colCoordenadas): 14
 
-self.posCoordenadaActual: 9
+self.posCoordenadaActual: 13
 
 
-retornando la siguiente coordenada: { nombreCalle: Ameguino[699-799] y Sobernia Nacional, latitud: -43.25916,  longitud -65.311438 }
+retornando la siguiente coordenada: { nombreCalle: Gales y Marconi, latitud: -43.252548,  longitud -65.318417 }
 
 
-fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 9}
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 13}
 
 dumpeado objeto a archivo!
 
-retornando coordenada calle: Ameguino[699-799] y Sobernia Nacional
+retornando coordenada calle: Gales y Marconi
 
-Cambiado el estado de la falla a : Confirmada; latitud: -43.25916 - longitud: -65.311438 
+Cambiado el estado de la falla a : Confirmada; latitud: -43.252548 - longitud: -65.318417 
 
 Asignadas propiedades al estado de falla confirmada!
 tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
 
 En capturador.capturar()
 
-dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados ; nombre_captura: capConfi
 
-Cantidad de archivos .pcd con el nombre  mis_capturas es :  1
+Cantidad de archivos .pcd con el nombre  capConfi es :  1
 
 En capturador.registrar()...
 
 Appeandeada la captura!
 
 En estado.registrar()
-Falla (lat:-43.25916,long:-65.311438) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+Falla (lat:-43.252548,long:-65.318417) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados) - formato(pcd) - extension(.pcd)
 
-Falla (lat:-43.25916,long:-65.311438) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+Falla (lat:-43.252548,long:-65.318417) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados) - formato(pcd) - extension(.pcd)
 
-Captura realizada con exito! Agregada:  mis_capturas_1.pcd
+Captura realizada con exito! Agregada:  capConfi_1.pcd
 
 BD actualizada con elementos: 
-[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}]
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir/cap_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir_dos/cap_1.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir_dos/cap_2.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir/cap_2.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir/cap_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir/cap_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir_dos/cap_1.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir_dos/cap_2.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd', u'longitud': -65.318417}]
 -----------------------------------------------------
 Guardado archivo .pcd en BD_JSON!
 
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
 
 CERRADO EL POPUP CAPTURA!!!
 
@@ -1334,11 +1929,11 @@ MOSTRADO DIALOGO DE VISUALIZACION!!
 
 Si desea visualizar!!
 
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}]...
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd'}]...
 
 PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
 
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd'}
 
 Abierto visualizador
 
@@ -1348,7 +1943,7 @@ keycode[0] : 113
 keycode[1] : q
 Si desea conservar la captura
 
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}] en disco!
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd'}] en disco!
 keycode[0] : 32
 keycode[1] : spacebar
 Presione SPACE!!!!
@@ -1372,9 +1967,9 @@ alto:307200 ; ancho:3
 
 LLENADA dataNube! con shape: (307200,4) 
 
-CONVERTIDA dataNube2 con shape: (87976,4)
+CONVERTIDA dataNube2 con shape: (240448,4)
 
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 En main.capturar(): getData()? -1
  
 En main.capturar(): id_falla? -1
@@ -1383,7 +1978,7 @@ instanciado dialogo espera...
 
 threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
 
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 
 
 Seleccionando capturarFallaNueva...
@@ -1392,52 +1987,54 @@ tipo capturador: <class 'capturador.Capturador'>
 En capturador FALLA NUEVA!!!
 
 
-self.posCoordenadaActual + 1: 10
+self.posCoordenadaActual + 1: 14
 
 len(self.colCoordenadas): 14
 
-self.posCoordenadaActual: 10
+se llego a fin!
+
+self.posCoordenadaActual: 0
 
 
-retornando la siguiente coordenada: { nombreCalle: San Martin y Rivadavia, latitud: -43.253469,  longitud -65.308611 }
+retornando la siguiente coordenada: { nombreCalle: Rivadavia y Ecuador, latitud: -43.249282,  longitud -65.310902 }
 
 
-fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 10}
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 0}
 
 dumpeado objeto a archivo!
 
-retornando coordenada calle: San Martin y Rivadavia
+retornando coordenada calle: Rivadavia y Ecuador
 
-Cambiado el estado de la falla a : Confirmada; latitud: -43.253469 - longitud: -65.308611 
+Cambiado el estado de la falla a : Confirmada; latitud: -43.249282 - longitud: -65.310902 
 
 Asignadas propiedades al estado de falla confirmada!
 tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
 
 En capturador.capturar()
 
-dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados ; nombre_captura: capConfi
 
-Cantidad de archivos .pcd con el nombre  mis_capturas es :  2
+Cantidad de archivos .pcd con el nombre  capConfi es :  2
 
 En capturador.registrar()...
 
 Appeandeada la captura!
 
 En estado.registrar()
-Falla (lat:-43.253469,long:-65.308611) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+Falla (lat:-43.249282,long:-65.310902) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados) - formato(pcd) - extension(.pcd)
 
-Falla (lat:-43.253469,long:-65.308611) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+Falla (lat:-43.249282,long:-65.310902) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados) - formato(pcd) - extension(.pcd)
 
-Captura realizada con exito! Agregada:  mis_capturas_2.pcd
+Captura realizada con exito! Agregada:  capConfi_2.pcd
 
 BD actualizada con elementos: 
-[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}]
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir/cap_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir_dos/cap_1.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir_dos/cap_2.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir/cap_2.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir/cap_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir/cap_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir_dos/cap_1.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir_dos/cap_2.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd', u'longitud': -65.310902}]
 -----------------------------------------------------
 Guardado archivo .pcd en BD_JSON!
 
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
 
 CERRADO EL POPUP CAPTURA!!!
 
@@ -1445,122 +2042,11 @@ MOSTRADO DIALOGO DE VISUALIZACION!!
 
 Si desea visualizar!!
 
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}]...
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}]...
 
 PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
 
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}
-
-Abierto visualizador
-
-keycode[0] : 113
-keycode[1] : q
-keycode[0] : 113
-keycode[1] : q
-Si desea conservar la captura
-
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}] en disco!
-keycode[0] : 32
-keycode[1] : spacebar
-Presione SPACE!!!!
-
-En Kinectviewer.capturar()...con idFalla -1
-
-En getDatosSensor()...
-
-Existen frames obtenidos desde el sensor Kinect!
-
-rgbSinCod.shape: (480,640)
-
-rgbSinCod.size: 921600
-
-len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
-
-len(self.depths2) = 2
-
-La forma de la matriz xyz antes de filtrar en calibkinect es:
-alto:307200 ; ancho:3
-
-LLENADA dataNube! con shape: (307200,4) 
-
-CONVERTIDA dataNube2 con shape: (88091,4)
-
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
-En main.capturar(): getData()? -1
- 
-En main.capturar(): id_falla? -1
- 
-instanciado dialogo espera...
-
-threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
-
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
-
-
-Seleccionando capturarFallaNueva...
-
-tipo capturador: <class 'capturador.Capturador'>
-En capturador FALLA NUEVA!!!
-
-
-self.posCoordenadaActual + 1: 11
-
-len(self.colCoordenadas): 14
-
-self.posCoordenadaActual: 11
-
-
-retornando la siguiente coordenada: { nombreCalle: Av. Rawson y Bell A.P., latitud: -43.252091,  longitud -65.313846 }
-
-
-fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 11}
-
-dumpeado objeto a archivo!
-
-retornando coordenada calle: Av. Rawson y Bell A.P.
-
-Cambiado el estado de la falla a : Confirmada; latitud: -43.252091 - longitud: -65.313846 
-
-Asignadas propiedades al estado de falla confirmada!
-tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
-
-En capturador.capturar()
-
-dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
-
-Cantidad de archivos .pcd con el nombre  mis_capturas es :  3
-
-En capturador.registrar()...
-
-Appeandeada la captura!
-
-En estado.registrar()
-Falla (lat:-43.252091,long:-65.313846) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
-
-Falla (lat:-43.252091,long:-65.313846) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
-
-Captura realizada con exito! Agregada:  mis_capturas_3.pcd
-
-BD actualizada con elementos: 
-[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}]
------------------------------------------------------
-Guardado archivo .pcd en BD_JSON!
-
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
-
-CERRADO EL POPUP CAPTURA!!!
-
-MOSTRADO DIALOGO DE VISUALIZACION!! 
-
-Si desea visualizar!!
-
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}]...
-
-PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
-
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}
 
 Abierto visualizador
 
@@ -1571,35 +2057,28 @@ keycode[1] : q
 NO desea conservar la captura
 
 En descartar()...
-Las capturas recibidas son :['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd']
+Las capturas recibidas son :['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd']
 
 Inicio de capturador.descartar()
 
 verificando long. capturas de itemfalla: 
 
- -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+ -->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
 En itemfalla.descartar()
 
 verificando long. capturas de itemfalla: 
 
- -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+ -->{ 'estado': { Confirmada; latitud: -43.249282 - longitud: -65.310902  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
 En itemfalla.descartar()
 
-verificando long. capturas de itemfalla: 
-
- -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+Captura encontrada! en: ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'] con itemFalla: -->{ 'estado': { Confirmada; latitud: -43.249282 - longitud: -65.310902  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
-En itemfalla.descartar()
-
-Captura encontrada! en: ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'] con itemFalla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
-] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
-
-Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd
+Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd
 
 Eliminando captura de memoria...
 
@@ -1617,53 +2096,41 @@ Fin mostrarCapturas()
 
 len(itemFalla.getColCapturas()): 0
  
-Se eliminara de la coleccion itemFalla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+Se eliminara de la coleccion itemFalla: -->{ 'estado': { Confirmada; latitud: -43.249282 - longitud: -65.310902  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
 colItemsFallaADescartar -->:
 
 
-miFalla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+miFalla: -->{ 'estado': { Confirmada; latitud: -43.249282 - longitud: -65.310902  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
 En Capturador.descartarFallaSinCaps()!
 
 Inicio de mostrarColItemFalla() con capturador.colCapturasTotales ---> 
 
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+falla: -->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
-] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
-
-
-falla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+falla: -->{ 'estado': { Confirmada; latitud: -43.249282 - longitud: -65.310902  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
 
 Fin de mostrarColItemFalla() con capturador.colCapturasTotales 
 
-len(self.colCapturasTotales) antes: 3
+len(self.colCapturasTotales) antes: 2
 
-Descartando captura: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
-
-Son del mismo estado!
-
-En __cmp__() estado Confirmada con self.latitud: -43.25916 y self.longitud: -65.311438
+Descartando captura: -->{ 'estado': { Confirmada; latitud: -43.249282 - longitud: -65.310902  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
 Son del mismo estado!
 
-En __cmp__() estado Confirmada con self.latitud: -43.253469 y self.longitud: -65.308611
+En __cmp__() estado Confirmada con self.latitud: -43.252548 y self.longitud: -65.318417
 
-len(self.colCapturasTotales) despues: 2
+len(self.colCapturasTotales) despues: 1
 
 Inicio de mostrarColItemFalla() con capturador.colCapturasTotales ---> 
 
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
-] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
-
-
-falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+falla: -->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
 
 
@@ -1694,9 +2161,9 @@ alto:307200 ; ancho:3
 
 LLENADA dataNube! con shape: (307200,4) 
 
-CONVERTIDA dataNube2 con shape: (240397,4)
+CONVERTIDA dataNube2 con shape: (240547,4)
 
-El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 En main.capturar(): getData()? -1
  
 En main.capturar(): id_falla? -1
@@ -1705,7 +2172,7 @@ instanciado dialogo espera...
 
 threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
 
-dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados
 
 
 Seleccionando capturarFallaNueva...
@@ -1714,52 +2181,52 @@ tipo capturador: <class 'capturador.Capturador'>
 En capturador FALLA NUEVA!!!
 
 
-self.posCoordenadaActual + 1: 12
+self.posCoordenadaActual + 1: 1
 
 len(self.colCoordenadas): 14
 
-self.posCoordenadaActual: 12
+self.posCoordenadaActual: 1
 
 
-retornando la siguiente coordenada: { nombreCalle: Pecoraro y Ecuador, latitud: -43.251478,  longitud -65.317677 }
+retornando la siguiente coordenada: { nombreCalle: Pelegrini[700-798] y Moreteau, latitud: -43.259135,  longitud -65.308193 }
 
 
-fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 12}
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 1}
 
 dumpeado objeto a archivo!
 
-retornando coordenada calle: Pecoraro y Ecuador
+retornando coordenada calle: Pelegrini[700-798] y Moreteau
 
-Cambiado el estado de la falla a : Confirmada; latitud: -43.251478 - longitud: -65.317677 
+Cambiado el estado de la falla a : Confirmada; latitud: -43.259135 - longitud: -65.308193 
 
 Asignadas propiedades al estado de falla confirmada!
 tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
 
 En capturador.capturar()
 
-dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados ; nombre_captura: capConfi
 
-Cantidad de archivos .pcd con el nombre  mis_capturas es :  3
+Cantidad de archivos .pcd con el nombre  capConfi es :  2
 
 En capturador.registrar()...
 
 Appeandeada la captura!
 
 En estado.registrar()
-Falla (lat:-43.251478,long:-65.317677) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+Falla (lat:-43.259135,long:-65.308193) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados) - formato(pcd) - extension(.pcd)
 
-Falla (lat:-43.251478,long:-65.317677) tiene las capturas:  
-Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+Falla (lat:-43.259135,long:-65.308193) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados) - formato(pcd) - extension(.pcd)
 
-Captura realizada con exito! Agregada:  mis_capturas_3.pcd
+Captura realizada con exito! Agregada:  capConfi_2.pcd
 
 BD actualizada con elementos: 
-[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}]
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir/cap_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir_dos/cap_1.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir_dos/cap_2.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevo_dir/cap_2.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir/cap_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir/cap_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir_dos/cap_1.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/nuevooo_dir_dos/cap_2.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd', u'longitud': -65.308193}]
 -----------------------------------------------------
 Guardado archivo .pcd en BD_JSON!
 
-En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
 
 CERRADO EL POPUP CAPTURA!!!
 
@@ -1767,17 +2234,21 @@ MOSTRADO DIALOGO DE VISUALIZACION!!
 
 Si desea visualizar!!
 
-Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}]...
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}]...
 
 PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
 
-caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}
 
 Abierto visualizador
 
+keycode[0] : 113
+keycode[1] : q
+keycode[0] : 113
+keycode[1] : q
 Si desea conservar la captura
 
-Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}] en disco!
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd'}] en disco!
 Screen encontrada y removida!
 SCreen agregada al mananger
 Las screens actuales de screenmanager luego de switch_to son: 
@@ -1803,13 +2274,13 @@ En dialogopropscaptura.getData(): -1
 
 controlador.getData('idFalla') > 0 ? False
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
 Iterando elemento: None
 
@@ -1853,13 +2324,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -1883,44 +2354,31 @@ Refrescando vista!!!!
 instanciado dialogo espera...
 
 Iniciando thread-filtrado de capturas
-{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'791', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
-calle casteada: Ameghino
+{u'rangoEstimado1': u'790', u'calle': u'Gales', u'rangoEstimado2': None, u'calleSecundariaA': u'Gales', u'calleSecundariaB': u'Marconi', u'estado': 0}
+calle casteada: Gales
 
-results_json[rangoEstimado1]: 699
-
-results_json[rangoEstimado2]: 791
-
-En finally...
-
-rangoEstimado1: 699
-
-rangoEstimado2: 791
-
-{u'rangoEstimado1': u'200', u'calle': u'San Mart\xedn', u'rangoEstimado2': u'260', u'calleSecundariaA': u'San Mart\xedn', u'calleSecundariaB': u'Rivadavia', u'estado': 0}
-calle casteada: San Martín
-
-results_json[rangoEstimado1]: 200
-
-results_json[rangoEstimado2]: 260
-
-En finally...
-
-rangoEstimado1: 200
-
-rangoEstimado2: 260
-
-{u'rangoEstimado1': u'76', u'calle': u'Pecoraro', u'rangoEstimado2': None, u'calleSecundariaA': u'Pecoraro', u'calleSecundariaB': u'Ecuador', u'estado': 0}
-calle casteada: Pecoraro
-
-results_json[rangoEstimado1]: 76
+results_json[rangoEstimado1]: 790
 
 results_json[rangoEstimado2]: None
 
 En finally...
 
-rangoEstimado1: 76
+rangoEstimado1: 790
 
 rangoEstimado2: -1
+
+{u'rangoEstimado1': u'740', u'calle': u'Pellegrini', u'rangoEstimado2': u'758', u'calleSecundariaA': u'Pellegrini', u'calleSecundariaB': u'Ing. J. Moreteau', u'estado': 0}
+calle casteada: Pellegrini
+
+results_json[rangoEstimado1]: 740
+
+results_json[rangoEstimado2]: 758
+
+En finally...
+
+rangoEstimado1: 740
+
+rangoEstimado2: 758
 
 Finalizado thread-FiltradoCapturas...
 
@@ -1928,10 +2386,10 @@ En subircapturasservidor.args_converter()...
 
 row_index actual: 0
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+falla: -->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-791(-65.311438)']
+Los attrEstado son: ['No asignado', 'Gales(-43.252548)', '790-790(-65.318417)']
 
 >...............................................<
 
@@ -1940,19 +2398,19 @@ En MyListItemButton con args -->
 {'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
 
 En MyListItemButton con args -->
-{'text': 'Ameghino(-43.25916)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+{'text': 'Gales(-43.252548)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
 
 En MyListItemButton con args -->
-{'text': '699-791(-65.311438)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+{'text': '790-790(-65.318417)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
 
 En subircapturasservidor.args_converter()...
 
 row_index actual: 1
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+falla: -->{ 'estado': { Confirmada; latitud: -43.259135 - longitud: -65.308193  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Los attrEstado son: ['No asignado', 'San Mart\xc3\xadn(-43.253469)', '200-260(-65.308611)']
+Los attrEstado son: ['No asignado', 'Pellegrini(-43.259135)', '740-758(-65.308193)']
 
 >...............................................<
 
@@ -1961,31 +2419,34 @@ En MyListItemButton con args -->
 {'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
 
 En MyListItemButton con args -->
-{'text': 'San Mart\xc3\xadn(-43.253469)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+{'text': 'Pellegrini(-43.259135)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
 
 En MyListItemButton con args -->
-{'text': '200-260(-65.308611)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+{'text': '740-758(-65.308193)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
 
 En subircapturasservidor.args_converter()...
 
 row_index actual: 2
 
-falla: -->{ 'estado': { Confirmada; latitud: -43.251478 - longitud: -65.317677  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+falla: -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
 ] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
 
-Los attrEstado son: ['No asignado', 'Pecoraro(-43.251478)', '76-76(-65.317677)']
+lista informado.getAttributos() es: [5, 'Mitre', 520]
+
+Los attrEstado son: [5, 'Mitre', 520]
 
 >...............................................<
 
 
 En MyListItemButton con args -->
-{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+{'text': '5', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
 
 En MyListItemButton con args -->
-{'text': 'Pecoraro(-43.251478)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
 
 En MyListItemButton con args -->
-{'text': '76-76(-65.317677)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+{'text': '520', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
 
 Vaciadas capturas!
 Desmarcando elementos ...
@@ -1993,7 +2454,7 @@ Desmarcando elementos ...
 
 En marcarCapturas con activo: False
 
-self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f6e68815140>, <capturador.ItemFalla object at 0x7f6e702781b8>, <capturador.ItemFalla object at 0x7f6e70278230>]
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7fec285f4b90>, <capturador.ItemFalla object at 0x7fec285f4ed8>, <capturador.ItemFalla object at 0x7fec285f49b0>]
 
 self.ids.listado.adapter.selection: []
 
@@ -2006,7 +2467,45 @@ DesSeleccionado elementos!
 
 iterando botones...
 
-button.deselect_from_composite(): Pecoraro(-43.251478)
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): 5
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 520!
+
+button.deselect_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): 5
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Mitre!
+
+button.deselect_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 5!
+
+iterando botones...
+
+button.deselect_from_composite(): Pellegrini(-43.259135)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2016,9 +2515,9 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 76-76(-65.317677)!
+en button.deselect() 740-758(-65.308193)!
 
-button.deselect_from_composite(): 76-76(-65.317677)
+button.deselect_from_composite(): 740-758(-65.308193)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2028,14 +2527,14 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() Pecoraro(-43.251478)!
+en button.deselect() Pellegrini(-43.259135)!
 
-button.deselect_from_composite(): 76-76(-65.317677)
+button.deselect_from_composite(): 740-758(-65.308193)
 
 colores: self.background_color = [1, 1, 1, 1]
 
 
-button.deselect_from_composite(): Pecoraro(-43.251478)
+button.deselect_from_composite(): Pellegrini(-43.259135)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2044,7 +2543,7 @@ en button.deselect() No asignado!
 
 iterando botones...
 
-button.deselect_from_composite(): San Martín(-43.253469)
+button.deselect_from_composite(): Gales(-43.252548)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2054,35 +2553,9 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 200-260(-65.308611)!
+en button.deselect() 790-790(-65.318417)!
 
-button.deselect_from_composite(): 200-260(-65.308611)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): No asignado
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-en button.deselect() San Martín(-43.253469)!
-
-button.deselect_from_composite(): 200-260(-65.308611)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): San Martín(-43.253469)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-en button.deselect() No asignado!
-
-iterando botones...
-
-button.deselect_from_composite(): Ameghino(-43.25916)
+button.deselect_from_composite(): 790-790(-65.318417)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2092,26 +2565,14 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 699-791(-65.311438)!
+en button.deselect() Gales(-43.252548)!
 
-button.deselect_from_composite(): 699-791(-65.311438)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): No asignado
+button.deselect_from_composite(): 790-790(-65.318417)
 
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() Ameghino(-43.25916)!
-
-button.deselect_from_composite(): 699-791(-65.311438)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): Ameghino(-43.25916)
+button.deselect_from_composite(): Gales(-43.252548)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2127,7 +2588,45 @@ DesSeleccionado elementos!
 
 iterando botones...
 
-button.deselect_from_composite(): Pecoraro(-43.251478)
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): 5
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 520!
+
+button.deselect_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): 5
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Mitre!
+
+button.deselect_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 5!
+
+iterando botones...
+
+button.deselect_from_composite(): Pellegrini(-43.259135)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2137,9 +2636,9 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 76-76(-65.317677)!
+en button.deselect() 740-758(-65.308193)!
 
-button.deselect_from_composite(): 76-76(-65.317677)
+button.deselect_from_composite(): 740-758(-65.308193)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2149,14 +2648,14 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() Pecoraro(-43.251478)!
+en button.deselect() Pellegrini(-43.259135)!
 
-button.deselect_from_composite(): 76-76(-65.317677)
+button.deselect_from_composite(): 740-758(-65.308193)
 
 colores: self.background_color = [1, 1, 1, 1]
 
 
-button.deselect_from_composite(): Pecoraro(-43.251478)
+button.deselect_from_composite(): Pellegrini(-43.259135)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2165,7 +2664,7 @@ en button.deselect() No asignado!
 
 iterando botones...
 
-button.deselect_from_composite(): San Martín(-43.253469)
+button.deselect_from_composite(): Gales(-43.252548)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2175,35 +2674,9 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 200-260(-65.308611)!
+en button.deselect() 790-790(-65.318417)!
 
-button.deselect_from_composite(): 200-260(-65.308611)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): No asignado
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-en button.deselect() San Martín(-43.253469)!
-
-button.deselect_from_composite(): 200-260(-65.308611)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): San Martín(-43.253469)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-en button.deselect() No asignado!
-
-iterando botones...
-
-button.deselect_from_composite(): Ameghino(-43.25916)
+button.deselect_from_composite(): 790-790(-65.318417)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2213,26 +2686,14 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 699-791(-65.311438)!
+en button.deselect() Gales(-43.252548)!
 
-button.deselect_from_composite(): 699-791(-65.311438)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): No asignado
+button.deselect_from_composite(): 790-790(-65.318417)
 
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() Ameghino(-43.25916)!
-
-button.deselect_from_composite(): 699-791(-65.311438)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): Ameghino(-43.25916)
+button.deselect_from_composite(): Gales(-43.252548)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2248,7 +2709,45 @@ DesSeleccionado elementos!
 
 iterando botones...
 
-button.deselect_from_composite(): Pecoraro(-43.251478)
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): 5
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 520!
+
+button.deselect_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): 5
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Mitre!
+
+button.deselect_from_composite(): 520
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Mitre
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 5!
+
+iterando botones...
+
+button.deselect_from_composite(): Pellegrini(-43.259135)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2258,9 +2757,9 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 76-76(-65.317677)!
+en button.deselect() 740-758(-65.308193)!
 
-button.deselect_from_composite(): 76-76(-65.317677)
+button.deselect_from_composite(): 740-758(-65.308193)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2270,14 +2769,14 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() Pecoraro(-43.251478)!
+en button.deselect() Pellegrini(-43.259135)!
 
-button.deselect_from_composite(): 76-76(-65.317677)
+button.deselect_from_composite(): 740-758(-65.308193)
 
 colores: self.background_color = [1, 1, 1, 1]
 
 
-button.deselect_from_composite(): Pecoraro(-43.251478)
+button.deselect_from_composite(): Pellegrini(-43.259135)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2286,7 +2785,7 @@ en button.deselect() No asignado!
 
 iterando botones...
 
-button.deselect_from_composite(): San Martín(-43.253469)
+button.deselect_from_composite(): Gales(-43.252548)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2296,35 +2795,9 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 200-260(-65.308611)!
+en button.deselect() 790-790(-65.318417)!
 
-button.deselect_from_composite(): 200-260(-65.308611)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): No asignado
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-en button.deselect() San Martín(-43.253469)!
-
-button.deselect_from_composite(): 200-260(-65.308611)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): San Martín(-43.253469)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-en button.deselect() No asignado!
-
-iterando botones...
-
-button.deselect_from_composite(): Ameghino(-43.25916)
+button.deselect_from_composite(): 790-790(-65.318417)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2334,26 +2807,14 @@ button.deselect_from_composite(): No asignado
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() 699-791(-65.311438)!
+en button.deselect() Gales(-43.252548)!
 
-button.deselect_from_composite(): 699-791(-65.311438)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): No asignado
+button.deselect_from_composite(): 790-790(-65.318417)
 
 colores: self.background_color = [1, 1, 1, 1]
 
 
-en button.deselect() Ameghino(-43.25916)!
-
-button.deselect_from_composite(): 699-791(-65.311438)
-
-colores: self.background_color = [1, 1, 1, 1]
-
-
-button.deselect_from_composite(): Ameghino(-43.25916)
+button.deselect_from_composite(): Gales(-43.252548)
 
 colores: self.background_color = [1, 1, 1, 1]
 
@@ -2362,7 +2823,7 @@ en button.deselect() No asignado!
 
 Colecciones actualizadas ...
 
-self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f6e68815140>, <capturador.ItemFalla object at 0x7f6e702781b8>, <capturador.ItemFalla object at 0x7f6e70278230>]
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7fec285f4b90>, <capturador.ItemFalla object at 0x7fec285f4ed8>, <capturador.ItemFalla object at 0x7fec285f49b0>]
 
 self.ids.listado.adapter.selection: []
 
@@ -2371,11 +2832,275 @@ Fin de marcarCapturas()! %s
 
 Desmarcados todos los elementos!
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de guardar recorrido...
+
+Cargado dialogo guardado de fallas...
+
+nameBD final: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/MIRECORRIDO.rec
+
+nameBD ingresado es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/MIRECORRIDO.rec
+
+En persistirFallas()
+ nameBD: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/MIRECORRIDO.rec ...
+
+Mostrando la coleccion de fallas persistidas...
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Mostrando itemfallas con estado Confirmado: 
+
+-->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.259135 - longitud: -65.308193  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+
+-------------------------------------------
+
+Mostrando itemfallas con estado Informado: 
+
+-->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+En Capturador.persistirFallas()...
+
+Inicio con name_db: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/MIRECORRIDO.rec
+
+Cerrando conexion!
+
+Guardadas las fallas!
+
+Fin de persistirFallas()
+
+Persistidas las fallas!
+
+LLamando al screen de cargar recorrido...
+
+Cargado dialogo carga de fallas
+
+Cargando recorrido en archivo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/MIRECORRIDO.rec
+
+Obteniendo recorrido...
+
+En obtenerRecorrido...
+
+En obtenerRecorrido...
+
+Obtenido el recorrido con las capturas!
+
+Cerrando conexion!
+
+Validando capturas...
+
+================================================
+
+En filtrarCapturas consistentes!
+
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_1.pcd ; path.exists(pathCsv):True 
+
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados/capInfo_2.pcd ; path.exists(pathCsv):True 
+
+Validando capturas...
+
+================================================
+
+En filtrarCapturas consistentes!
+
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_1.pcd ; path.exists(pathCsv):True 
+
+En filtrarCapturas consistentes!
+
+Leyendo captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados/capConfi_2.pcd ; path.exists(pathCsv):True 
+
+
+Mostrando la coleccion de fallas cargadas: 
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Mostrando itemfallas con estado Confirmado: 
+
+-->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+-->{ 'estado': { Confirmada; latitud: -43.259135 - longitud: -65.308193  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+
+-------------------------------------------
+
+Mostrando itemfallas con estado Informado: 
+
+-->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Se cargo correctamente el archivo con las capturas
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2ab8a050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2acc1d70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec2add2830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7fec640821a0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7fec6657b520>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'790', u'calle': u'Gales', u'rangoEstimado2': None, u'calleSecundariaA': u'Gales', u'calleSecundariaB': u'Marconi', u'estado': 0}
+calle casteada: Gales
+
+results_json[rangoEstimado1]: 790
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 790
+
+rangoEstimado2: -1
+
+{u'rangoEstimado1': u'740', u'calle': u'Pellegrini', u'rangoEstimado2': u'758', u'calleSecundariaA': u'Pellegrini', u'calleSecundariaB': u'Ing. J. Moreteau', u'estado': 0}
+calle casteada: Pellegrini
+
+results_json[rangoEstimado1]: 740
+
+results_json[rangoEstimado2]: 758
+
+En finally...
+
+rangoEstimado1: 740
+
+rangoEstimado2: 758
+
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 0
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.252548 - longitud: -65.318417  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Gales(-43.252548)', '790-790(-65.318417)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': 'Gales(-43.252548)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': '790-790(-65.318417)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 1
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.259135 - longitud: -65.308193  }, 'capturas':  [Captura: nombreArchivoCaptura=capConfi_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/confirmados , nombreCaptura= capConfi;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Pellegrini(-43.259135)', '740-758(-65.308193)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': 'Pellegrini(-43.259135)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': '740-758(-65.308193)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 2
+
+falla: -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [Captura: nombreArchivoCaptura=capInfo_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+, Captura: nombreArchivoCaptura=capInfo_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/informados , nombreCaptura= capInfo;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+lista informado.getAttributos() es: [5, 'Mitre', 520]
+
+Los attrEstado son: [5, 'Mitre', 520]
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': '5', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+
+En MyListItemButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+
+En MyListItemButton con args -->
+{'text': '520', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
 
