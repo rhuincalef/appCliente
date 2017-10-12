@@ -670,26 +670,21 @@ class MainApp(App,EventDispatcher):
 			self.descartar(popup)
 			
 
-	#AGREGADO RODRIGO
+	#main.descartar()
 	def descartar(self,popup):
 		print "En descartar()..."
 		dicCaps = popup.args
 		capturas = list() 
 		capturas.append(dicCaps[0]['pcdFile'])
-		#capturas.append(dicCaps[1]['csvFile'])
 		print "Las capturas recibidas son :%s\n" % capturas
 		estaDescartada = self.capturador.descartar(capturas)
 		if not estaDescartada:
 			self.capturadorInformados.descartar(capturas)
 			print "Captura descartada en self.capturador: %s ; self.capturadorInformados: %s\n" % (estaDescartada,estaDescartada)
 
-
-	#AGREGADO RODRIGO
 	def conservar(self,popup):
 		print "Se conserva la captura %s en disco!" % popup.args
 	
-
-	#AGREGADO RODRIGO
 	def mostrarCaptura(self,caps):
 		print "Visualizando captura %s...\n" % caps
 		try:

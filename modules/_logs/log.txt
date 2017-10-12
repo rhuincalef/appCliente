@@ -627,21 +627,9 @@ inicializando el screen de propsTipoFallaConfirmada!
 
 En inicializarDropDownPrincipal()... 
 
-Treeview.__dict__: {'_trigger_layout': <ClockEvent callback=<bound method CustomDropDown._do_layout of <customwidgets.CustomDropDown object at 0x7f458850cc90>>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f45880f3770>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}}
-
-Treeview.tvlabel.__dict__: {'_proxy_ref': <WeakProxy to <kivy.uix.treeview.TreeViewLabel object at 0x7f458850cc20>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f45880f6cc8>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}, '_trigger_texture': <ClockEvent callback=<bound method TreeViewLabel.texture_update of <kivy.uix.treeview.TreeViewLabel object at 0x7f458850cc20>>>, '_label': <kivy.core.text.markup.MarkupLabel object at 0x7f45880d1bf0>}
-
 creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
 
-Treeview.__dict__: {'_trigger_layout': <ClockEvent callback=<bound method CustomDropDown._do_layout of <customwidgets.CustomDropDown object at 0x7f458850cde0>>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f4582d50b98>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}}
-
-Treeview.tvlabel.__dict__: {'_proxy_ref': <WeakProxy to <kivy.uix.treeview.TreeViewLabel object at 0x7f458850cec0>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f458807e180>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}, '_trigger_texture': <ClockEvent callback=<bound method TreeViewLabel.texture_update of <kivy.uix.treeview.TreeViewLabel object at 0x7f458850cec0>>>, '_label': <kivy.core.text.markup.MarkupLabel object at 0x7f45880d1dd0>}
-
 creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
-
-Treeview.__dict__: {'_trigger_layout': <ClockEvent callback=<bound method CustomDropDown._do_layout of <customwidgets.CustomDropDown object at 0x7f4588099050>>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f4582cd1050>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}}
-
-Treeview.tvlabel.__dict__: {'_proxy_ref': <WeakProxy to <kivy.uix.treeview.TreeViewLabel object at 0x7f4588099130>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f4582cd55a8>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}, '_trigger_texture': <ClockEvent callback=<bound method TreeViewLabel.texture_update of <kivy.uix.treeview.TreeViewLabel object at 0x7f4588099130>>>, '_label': <kivy.core.text.markup.MarkupLabel object at 0x7f45880d1fb0>}
 
 creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
 
@@ -730,15 +718,15 @@ Comenzando nueva BD, deshabilitando los elementos del menu!
 
 Inicializada por Defecto BD Local de muestras...
 
-En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_05-10-2017.json
+En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_12-10-2017.json
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4588586f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45a80c5c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b808d750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b8344130>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
 Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -760,13 +748,13 @@ iterando... <class 'kivy.uix.scrollview.ScrollView'>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4588586f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45a80c5c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b808d750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b8344130>]
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
 iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
@@ -865,7 +853,7 @@ screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScree
 tipoFalla.getValor(): grietas
  ; tipoFalla.estaHabilitada(): True
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f45b808d130>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f6e7050e210>
 
 w.id: None
 
@@ -876,10 +864,6 @@ w.id: subLayoutTipoMaterial
 ENCONTRADO Y REMOVIDO DROP!!!
 
 w.id: subLayoutTipoFalla
-
-Treeview.__dict__: {'_trigger_layout': <ClockEvent callback=<bound method CustomDropDown._do_layout of <customwidgets.CustomDropDown object at 0x7f4581672050>>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f4581674e90>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}}
-
-Treeview.tvlabel.__dict__: {'_proxy_ref': <WeakProxy to <kivy.uix.treeview.TreeViewLabel object at 0x7f45816720c0>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f458167b478>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}, '_trigger_texture': <ClockEvent callback=<bound method TreeViewLabel.texture_update of <kivy.uix.treeview.TreeViewLabel object at 0x7f45816720c0>>>, '_label': <kivy.core.text.markup.MarkupLabel object at 0x7f4581bba830>}
 
 creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
 
@@ -897,7 +881,7 @@ creada opcion dropdown!
 
 Esta deshabilitado pavimento rígido: False 
 
-self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f45b808d130>
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f6e7050e210>
 
 w.id: None
 
@@ -908,10 +892,6 @@ ENCONTRADO Y REMOVIDO DROP!!!
 w.id: subLayoutTipoMaterial
 
 w.id: subLayoutTipoFalla
-
-Treeview.__dict__: {'_trigger_layout': <ClockEvent callback=<bound method CustomDropDown._do_layout of <customwidgets.CustomDropDown object at 0x7f4581672210>>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f4581697770>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}}
-
-Treeview.tvlabel.__dict__: {'_proxy_ref': <WeakProxy to <kivy.uix.treeview.TreeViewLabel object at 0x7f45816721a0>>, 'canvas': <kivy.graphics.instructions.Canvas object at 0x7f458169dcc8>, '_context': {'ExceptionManager': <kivy.base.ExceptionManagerBase instance at 0x7f45d8ec84d0>, 'Builder': <kivy.lang.BuilderBase object at 0x7f45d89d1c90>, 'Clock': <kivy.clock.ClockBase object at 0x7f45d93638d8>}, '_trigger_texture': <ClockEvent callback=<bound method TreeViewLabel.texture_update of <kivy.uix.treeview.TreeViewLabel object at 0x7f45816721a0>>>, '_label': <kivy.core.text.markup.MarkupLabel object at 0x7f4581bbab30>}
 
 creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
 
@@ -931,11 +911,11 @@ propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'i
 
 recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}
 
-agregando cadOpcion generada: [color=1710EC][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible
+agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible
 
 creada opcion dropdown!
 
-Esta deshabilitado [color=1710EC][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible: False 
+Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible: False 
 
 prop.getClave(): criticidad
 
@@ -949,11 +929,11 @@ propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'i
 
 recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}
 
-agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm
+agregando cadOpcion generada: [color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm
 
 creada opcion dropdown!
 
-Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm: False 
+Esta deshabilitado [color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm: False 
 
 prop.getClave(): criticidad
 
@@ -1029,7 +1009,7 @@ recorriendo elemento.id: subLayoutTipoFalla
 deshabilitado: subLayoutTipoFalla !
 
 
-/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:258: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:255: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
   label.parent_node.text = label.text
 /usr/lib/python2.7/dist-packages/kivy/core/text/__init__.py:675: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
   if text != self._text:
@@ -1039,489 +1019,67 @@ self.pos: [0, 460]; self.size: [800, 100]
 
 self.root.height: 33.0
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4588586f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45a80c5c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b808d750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b8344130>]
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-Iterando elemento: None
+recorriendo elemento.id: None
 
-Iterando elemento: subLayoutTipoCriticidad
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-self.root.parent: <class 'customwidgets.CustomDropDown'>
+recorriendo elemento.id: subLayoutTipoCriticidad
 
-self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-Iterando elemento: subLayoutTipoMaterial
+recorriendo elemento.id: subLayoutTipoMaterial
 
-/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:474: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
-  self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
-self.root.parent: <class 'customwidgets.CustomDropDown'>
+deshabilitado: subLayoutTipoMaterial !
 
-self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
 
-Iterando elemento: subLayoutTipoFalla
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-self.root.parent: <class 'customwidgets.CustomDropDown'>
+recorriendo elemento.id: subLayoutTipoFalla
 
-self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+deshabilitado: subLayoutTipoFalla !
 
-LLamando al screen de captura de fallas...
 
-en tabbedpanel.desHabilitarOpciones()
+Presione una propiedad del tipo de falla en el tree! [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible
 
-iterando... <class 'customwidgets.MyTabbedPanel'>
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
 
-iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
 
-iterando... <class 'kivy.uix.widget.Widget'>
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-iterando... <class 'kivy.uix.widget.Widget'>
+recorriendo elemento.id: None
 
-iterando... <class 'kivy.uix.scrollview.ScrollView'>
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+recorriendo elemento.id: subLayoutTipoCriticidad
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4588586f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45a80c5c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b808d750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b8344130>]
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+recorriendo elemento.id: subLayoutTipoMaterial
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+deshabilitado: subLayoutTipoMaterial !
 
-deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+recorriendo elemento.id: subLayoutTipoFalla
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+deshabilitado: subLayoutTipoFalla !
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
 
-iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+redibujando contorno!
 
-iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+self.pos: [0, 180]; self.size: [800, 100] 
 
-iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
-
-iterando... <class 'kivy.uix.gridlayout.GridLayout'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-iterando... <class 'kivy.uix.button.Button'>
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f45cc817ec0>, 1301, 744!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344ec0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222b40>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8344d00>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8222050>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f45b82224b0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344d70>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344fa0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b8344de0>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222ad0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45b8344e50>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8222a60>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d3d0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808dad0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808da60>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d9f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b808d440>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45b808d6e0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f45b814ef30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c2313360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c25e93d0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c25e9440>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c25e94b0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b83440c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c0078b40>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344050>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c004ca60>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c0078ec0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c0078f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26083d0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c2608360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26082f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c2608520>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c2608440>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c26084b0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b814e8a0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e750>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e9f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e910>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e7c0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e130>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e1a0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f45b814e050>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7e50>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f45b81a7fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e0c0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7f30>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b81a7ec0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c57c0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c58a0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5a60>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f45a80c5910>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f45a80c5fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5f30>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5b40>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4588586050>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5bb0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5830>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c59f0>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45a80c5c20>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5980>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5ad0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f45cc817ec0>, 1301, 744!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344ec0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222b40>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8344d00>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8222050>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f45b82224b0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344d70>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344fa0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b8344de0>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222ad0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45b8344e50>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8222a60>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d3d0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808dad0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808da60>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d9f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b808d440>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45b808d6e0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f45b814ef30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c2313360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c25e93d0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c25e9440>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c25e94b0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b83440c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c0078b40>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344050>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c004ca60>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c0078ec0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c0078f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26083d0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c2608360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26082f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c2608520>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c2608440>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c26084b0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b814e8a0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e750>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e9f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e910>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e7c0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e130>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e1a0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f45b814e050>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7e50>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f45b81a7fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e0c0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7f30>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b81a7ec0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c57c0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c58a0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5a60>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f45a80c5910>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f45a80c5fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5f30>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5b40>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4588586050>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5bb0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5830>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c59f0>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45a80c5c20>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5980>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5ad0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f45cc817ec0>, 800, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344ec0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222b40>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8344d00>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8222050>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f45b82224b0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344d70>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344fa0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b8344de0>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222ad0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45b8344e50>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8222a60>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d3d0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808dad0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808da60>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d9f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b808d440>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45b808d6e0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f45b814ef30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c2313360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c25e93d0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c25e9440>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c25e94b0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b83440c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c0078b40>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344050>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c004ca60>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c0078ec0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c0078f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26083d0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c2608360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26082f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c2608520>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c2608440>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c26084b0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b814e8a0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e750>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e9f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e910>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e7c0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e130>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e1a0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f45b814e050>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7e50>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f45b81a7fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e0c0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7f30>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b81a7ec0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c57c0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c58a0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5a60>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f45a80c5910>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f45a80c5fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5f30>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5b40>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4588586050>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5bb0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5830>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c59f0>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45a80c5c20>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5980>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5ad0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-Ventana cambio tamanio <class 'kivy.core.window.window_sdl2.WindowSDL'>, <type 'int'>, <type 'int'>!
-
-nuevo tamanio <kivy.core.window.window_sdl2.WindowSDL object at 0x7f45cc817ec0>, 800, 600!
-
-nombreMenu: dialogopropscaptura
-
-screen: <Screen name='dialogopropscaptura'>
-
-nombreMenu: capturarFallaInformada
-
-screen: <Screen name='capturarFallaInformada'>
-
-nombreMenu: propsFallaConfirmada
-
-screen: <Screen name='propsFallaConfirmada'>
-
-nombreMenu: fileFilter
-
-screen: <Screen name='fileFilter'>
-
-nombreMenu: resultadosFiltrados
-
-screen: <Screen name='resultadosFiltrados'>
-
-nombreMenu: obtenerinformadas
-
-screen: <Screen name='obtenerinformadas'>
-
-nombreMenu: capturaKinect
-
-screen: <Screen name='capturaKinect'>
-
-nombreMenu: subircapturasservidor
-
-screen: <Screen name='subircapturasservidor'>
-
-retornando todas las screens...
-
-iterando screen <class 'dialogopropscaptura.dialogopropscaptura.DialogoPropsCapturaScreen'>
-
- screen.ids: {'btn_crear_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344ec0>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222b40>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8344d00>>, 'dir_seleccionado_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8222050>>, 'file_chooser': <WeakProxy to <kivy.uix.filechooser.FileChooserIconView object at 0x7f45b82224b0>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344d70>>, 'my_label_1': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b8344fa0>>, 'controls_bar': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b8344de0>>, 'boton_continuar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8222ad0>>, 'nombre_captura_txt': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45b8344e50>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b8222a60>>, 'btn_borrar_dir': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d3d0>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808dad0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b808da60>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b808d9f0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b808d440>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45b808d6e0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
-
- screen.ids: {'main_scroll_view': <WeakProxy to <kivy.uix.scrollview.ScrollView object at 0x7f45b814ef30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'filefilter.filefilter.FileFilterScreen'>
-
- screen.ids: {'layout_dirs_busqueda': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c2313360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c25e93d0>>, 'label_text_input': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c25e9440>>, 'text_input_patron': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c25e94b0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b83440c0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c0078b40>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b8344050>>, 'label_x_folder': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c004ca60>>, 'boton_x_folder': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c0078ec0>>, 'text_input_lista_directorios': <WeakProxy to <kivy.uix.textinput.TextInput object at 0x7f45c0078f30>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'resultadosfiltrados.resultadosfiltrados.ResultadosFiltradosScreen'>
-
- screen.ids: {'layout_elementos_filtrados': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26083d0>>, 'label_resultados': <WeakProxy to <kivy.uix.label.Label object at 0x7f45c2608360>>, 'main_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45c26082f0>>, 'btn_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c2608520>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45c2608440>>, 'btn_aceptar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45c26084b0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'obtenerinformadas.obtenerinformadas.ObtenerInformadasScreen'>
-
- screen.ids: {'container_autocomplete': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45b814e8a0>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e750>>, 'bt_volver': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e9f0>>, 'bt_capturar_fallas': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e980>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e910>>, 'calle_lbl': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e830>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b814e7c0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'capturakinect.capturakinect.KinectScreen'>
-
- screen.ids: {'boton_capturar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e130>>, 'boton_cancelar': <WeakProxy to <kivy.uix.button.Button object at 0x7f45b814e1a0>>, 'imagen_grises': <WeakProxy to <capturakinect.capturakinect.KinectViewerGreyScale object at 0x7f45b814e050>>, 'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7e50>>, 'imagen_rgb': <WeakProxy to <capturakinect.capturakinect.KinectViewer object at 0x7f45b81a7fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b814e0c0>>, 'layout_kinect': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45b81a7f30>>, 'my_label': <WeakProxy to <kivy.uix.label.Label object at 0x7f45b81a7ec0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
-
-iterando screen <class 'subircapturasservidor.subircapturasservidor.SubirCapturasServidorScreen'>
-
- screen.ids: {'layout_principal': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c57c0>>, 'layout_seleccionar_todo': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c58a0>>, 'layout_labels': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5a60>>, 'check_box_seleccionar_todo': <WeakProxy to <kivy.uix.checkbox.CheckBox object at 0x7f45a80c5910>>, 'bt_subir_archivos': <WeakProxy to <kivy.uix.button.Button object at 0x7f45a80c5fa0>>, 'footer_layout': <WeakProxy to <kivy.uix.gridlayout.GridLayout object at 0x7f45a80c5f30>>, 'calle_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5b40>>, 'bt_salir': <WeakProxy to <kivy.uix.button.Button object at 0x7f4588586050>>, 'altura_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5bb0>>, 'titulo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5830>>, 'filler_layout': <WeakProxy to <kivy.uix.boxlayout.BoxLayout object at 0x7f45a80c59f0>>, 'listado': <WeakProxy to <kivy.uix.listview.ListView object at 0x7f45a80c5c20>>, 'label_seleccionar_todo': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5980>>, 'id_falla_col': <WeakProxy to <kivy.uix.label.Label object at 0x7f45a80c5ad0>>}
-
-En redimensionarFooter()...
-
-modificado el spacing y layout en footer!
+self.root.height: 33.0
 
 En _obtenerWidgetPorId()..
 
@@ -1557,6 +1115,16 @@ En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
 
 Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
 
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cad final: bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible 
+
+filtrando por separador...
+
+cadena filtrada por separador final: bajo
+
 En _obtenerWidgetPorId()..
 
 En subLayout.id: None..
@@ -1577,21 +1145,678 @@ en filtrarContenidoOpcion()...
 
 cadena final: pavimento rígido
 
-props leidas: grietas, pavimento rígido, None 
+props leidas: grietas, pavimento rígido, bajo 
 
 
-hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4588586f30>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45a80c5c90>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b808d750>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f45b8344130>]
+En _obtenerWidgetPorId()..
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+En subLayout.id: None..
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+En subLayout.id: subLayoutTipoCriticidad..
 
-habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f45c3f764b0>
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+TipoFalla.root.is_selected?: False
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas/propstipofalla/propstipofalla.py:333: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  (self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas/propstipofalla/propstipofalla.py:334: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  (self._obtenerWidgetPorId("subLayoutTipoMaterial","TipoMaterial").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN):
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno']
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+
+Data SETEADA!!! con: nombre_cap =  mis_capturas ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+Llamando al manejador!
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (236037,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 9
+
+len(self.colCoordenadas): 14
+
+self.posCoordenadaActual: 9
+
+
+retornando la siguiente coordenada: { nombreCalle: Ameguino[699-799] y Sobernia Nacional, latitud: -43.25916,  longitud -65.311438 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 9}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Ameguino[699-799] y Sobernia Nacional
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.25916 - longitud: -65.311438 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+
+Cantidad de archivos .pcd con el nombre  mis_capturas es :  1
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.25916,long:-65.311438) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Falla (lat:-43.25916,long:-65.311438) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  mis_capturas_1.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}
+
+Abierto visualizador
+
+keycode[0] : 113
+keycode[1] : q
+keycode[0] : 113
+keycode[1] : q
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd'}] en disco!
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (87976,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 10
+
+len(self.colCoordenadas): 14
+
+self.posCoordenadaActual: 10
+
+
+retornando la siguiente coordenada: { nombreCalle: San Martin y Rivadavia, latitud: -43.253469,  longitud -65.308611 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 10}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: San Martin y Rivadavia
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.253469 - longitud: -65.308611 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+
+Cantidad de archivos .pcd con el nombre  mis_capturas es :  2
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.253469,long:-65.308611) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Falla (lat:-43.253469,long:-65.308611) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  mis_capturas_2.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}
+
+Abierto visualizador
+
+keycode[0] : 113
+keycode[1] : q
+keycode[0] : 113
+keycode[1] : q
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd'}] en disco!
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (88091,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 11
+
+len(self.colCoordenadas): 14
+
+self.posCoordenadaActual: 11
+
+
+retornando la siguiente coordenada: { nombreCalle: Av. Rawson y Bell A.P., latitud: -43.252091,  longitud -65.313846 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 11}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Av. Rawson y Bell A.P.
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.252091 - longitud: -65.313846 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+
+Cantidad de archivos .pcd con el nombre  mis_capturas es :  3
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.252091,long:-65.313846) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Falla (lat:-43.252091,long:-65.313846) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  mis_capturas_3.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}
+
+Abierto visualizador
+
+keycode[0] : 113
+keycode[1] : q
+keycode[0] : 113
+keycode[1] : q
+NO desea conservar la captura
+
+En descartar()...
+Las capturas recibidas son :['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd']
+
+Inicio de capturador.descartar()
+
+verificando long. capturas de itemfalla: 
+
+ -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+En itemfalla.descartar()
+
+verificando long. capturas de itemfalla: 
+
+ -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+En itemfalla.descartar()
+
+verificando long. capturas de itemfalla: 
+
+ -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+En itemfalla.descartar()
+
+Captura encontrada! en: ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'] con itemFalla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd
+
+Eliminando captura de memoria...
+
+Mostrando la coleccion desde captura
+
+En mostrarCapturas()
+
+Fin mostrarCapturas()
+
+Descartada correctamente! 
+
+En mostrarCapturas()
+
+Fin mostrarCapturas()
+
+len(itemFalla.getColCapturas()): 0
+ 
+Se eliminara de la coleccion itemFalla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+colItemsFallaADescartar -->:
+
+
+miFalla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+En Capturador.descartarFallaSinCaps()!
+
+Inicio de mostrarColItemFalla() con capturador.colCapturasTotales ---> 
+
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+
+Fin de mostrarColItemFalla() con capturador.colCapturasTotales 
+
+len(self.colCapturasTotales) antes: 3
+
+Descartando captura: -->{ 'estado': { Confirmada; latitud: -43.252091 - longitud: -65.313846  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Son del mismo estado!
+
+En __cmp__() estado Confirmada con self.latitud: -43.25916 y self.longitud: -65.311438
+
+Son del mismo estado!
+
+En __cmp__() estado Confirmada con self.latitud: -43.253469 y self.longitud: -65.308611
+
+len(self.colCapturasTotales) despues: 2
+
+Inicio de mostrarColItemFalla() con capturador.colCapturasTotales ---> 
+
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     
+
+
+Fin de mostrarColItemFalla() con capturador.colCapturasTotales 
+
+Fin de capturador.descartar()
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (240397,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 12
+
+len(self.colCoordenadas): 14
+
+self.posCoordenadaActual: 12
+
+
+retornando la siguiente coordenada: { nombreCalle: Pecoraro y Ecuador, latitud: -43.251478,  longitud -65.317677 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pelegrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 12}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Pecoraro y Ecuador
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.251478 - longitud: -65.317677 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: grietas; tipoReparacion: bajo; tipoMaterial: pavimento rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno ; nombre_captura: mis_capturas
+
+Cantidad de archivos .pcd con el nombre  mis_capturas es :  3
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.251478,long:-65.317677) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Falla (lat:-43.251478,long:-65.317677) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  mis_capturas_3.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_10.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_11.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_9.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_5.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_6.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_7.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_8.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.317677}, {u'latitud': -43.252548, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.318417}, {u'latitud': -43.249282, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.310902}, {u'latitud': -43.259135, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.308193}, {u'latitud': -43.260601, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.307328}, {u'latitud': -43.262326, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.305917}, {u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.2952564}, {u'latitud': -43.259956, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.29862}, {u'latitud': -43.258991, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.299255}, {u'latitud': -43.257496, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.297679}, {u'latitud': -43.256882, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_4.pcd', u'longitud': -65.299047}, {u'latitud': -43.25916, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_1.pcd', u'longitud': -65.311438}, {u'latitud': -43.253469, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_2.pcd', u'longitud': -65.308611}, {u'latitud': -43.252091, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.313846}, {u'latitud': -43.251478, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd', u'longitud': -65.317677}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}
+
+Abierto visualizador
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno/mis_capturas_3.pcd'}] en disco!
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
+Entre al filechooser
+El directorio actual seleccionado es:  []
+
+PRE-ENTER!!
+DesBindeada SPACEBAR!!
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+En dialogopropscaptura.getData(): -1
+
+controlador.getData('idFalla') > 0 ? False
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 
 Iterando elemento: None
 
 Iterando elemento: subLayoutTipoCriticidad
 
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:471: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
 self.root.parent: <class 'customwidgets.CustomDropDown'>
 
 self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
@@ -1607,4 +1832,550 @@ Iterando elemento: subLayoutTipoFalla
 self.root.parent: <class 'customwidgets.CustomDropDown'>
 
 self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+{u'rangoEstimado1': u'699', u'calle': u'Ameghino', u'rangoEstimado2': u'791', u'calleSecundariaA': u'Ameghino', u'calleSecundariaB': u'Soberania Nacional', u'estado': 0}
+calle casteada: Ameghino
+
+results_json[rangoEstimado1]: 699
+
+results_json[rangoEstimado2]: 791
+
+En finally...
+
+rangoEstimado1: 699
+
+rangoEstimado2: 791
+
+{u'rangoEstimado1': u'200', u'calle': u'San Mart\xedn', u'rangoEstimado2': u'260', u'calleSecundariaA': u'San Mart\xedn', u'calleSecundariaB': u'Rivadavia', u'estado': 0}
+calle casteada: San Martín
+
+results_json[rangoEstimado1]: 200
+
+results_json[rangoEstimado2]: 260
+
+En finally...
+
+rangoEstimado1: 200
+
+rangoEstimado2: 260
+
+{u'rangoEstimado1': u'76', u'calle': u'Pecoraro', u'rangoEstimado2': None, u'calleSecundariaA': u'Pecoraro', u'calleSecundariaB': u'Ecuador', u'estado': 0}
+calle casteada: Pecoraro
+
+results_json[rangoEstimado1]: 76
+
+results_json[rangoEstimado2]: None
+
+En finally...
+
+rangoEstimado1: 76
+
+rangoEstimado2: -1
+
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 0
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.25916 - longitud: -65.311438  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Ameghino(-43.25916)', '699-791(-65.311438)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': 'Ameghino(-43.25916)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': '699-791(-65.311438)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 1
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.253469 - longitud: -65.308611  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_2.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'San Mart\xc3\xadn(-43.253469)', '200-260(-65.308611)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': 'San Mart\xc3\xadn(-43.253469)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': '200-260(-65.308611)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 2
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.251478 - longitud: -65.317677  }, 'capturas':  [Captura: nombreArchivoCaptura=mis_capturas_3.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/test_uno , nombreCaptura= mis_capturas;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'Pecoraro(-43.251478)', '76-76(-65.317677)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+
+En MyListItemButton con args -->
+{'text': 'Pecoraro(-43.251478)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+
+En MyListItemButton con args -->
+{'text': '76-76(-65.317677)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 2}
+
+Vaciadas capturas!
+Desmarcando elementos ...
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f6e68815140>, <capturador.ItemFalla object at 0x7f6e702781b8>, <capturador.ItemFalla object at 0x7f6e70278230>]
+
+self.ids.listado.adapter.selection: []
+
+
+
+ iteracion 0---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+button.deselect_from_composite(): Pecoraro(-43.251478)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 76-76(-65.317677)!
+
+button.deselect_from_composite(): 76-76(-65.317677)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Pecoraro(-43.251478)!
+
+button.deselect_from_composite(): 76-76(-65.317677)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Pecoraro(-43.251478)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 200-260(-65.308611)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() San Martín(-43.253469)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 699-791(-65.311438)!
+
+button.deselect_from_composite(): 699-791(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Ameghino(-43.25916)!
+
+button.deselect_from_composite(): 699-791(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+
+
+ iteracion 1---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+button.deselect_from_composite(): Pecoraro(-43.251478)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 76-76(-65.317677)!
+
+button.deselect_from_composite(): 76-76(-65.317677)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Pecoraro(-43.251478)!
+
+button.deselect_from_composite(): 76-76(-65.317677)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Pecoraro(-43.251478)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 200-260(-65.308611)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() San Martín(-43.253469)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 699-791(-65.311438)!
+
+button.deselect_from_composite(): 699-791(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Ameghino(-43.25916)!
+
+button.deselect_from_composite(): 699-791(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+
+
+ iteracion 2---->type(colItemFalla[index]): <class 'capturador.ItemFalla'>
+
+
+DesSeleccionado elementos!
+
+iterando botones...
+
+button.deselect_from_composite(): Pecoraro(-43.251478)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 76-76(-65.317677)!
+
+button.deselect_from_composite(): 76-76(-65.317677)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Pecoraro(-43.251478)!
+
+button.deselect_from_composite(): 76-76(-65.317677)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Pecoraro(-43.251478)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 200-260(-65.308611)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() San Martín(-43.253469)!
+
+button.deselect_from_composite(): 200-260(-65.308611)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): San Martín(-43.253469)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+iterando botones...
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() 699-791(-65.311438)!
+
+button.deselect_from_composite(): 699-791(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): No asignado
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() Ameghino(-43.25916)!
+
+button.deselect_from_composite(): 699-791(-65.311438)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.deselect_from_composite(): Ameghino(-43.25916)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.deselect() No asignado!
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: [<capturador.ItemFalla object at 0x7f6e68815140>, <capturador.ItemFalla object at 0x7f6e702781b8>, <capturador.ItemFalla object at 0x7f6e70278230>]
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Desmarcados todos los elementos!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e702c6050>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e703fdd70>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6e7050e830>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f6ea80a61a0>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f6eaac8f520>
 

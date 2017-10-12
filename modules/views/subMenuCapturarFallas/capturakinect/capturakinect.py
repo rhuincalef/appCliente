@@ -64,6 +64,11 @@ import pygame
 from kivy.properties import ObjectProperty
 from kivy.uix.image import Image
 
+# Excepcion empleada para cuando no se recolectan frames desde el sensor.
+class ExcepcionSinFrames(Exception):
+    pass
+
+
 
 fragment_header = '''
 #ifdef GL_ES
@@ -218,12 +223,30 @@ class KinectDepth(Thread):
         self.queueGreyImg2 = deque()
         print "Se vaciaron todas las colas!!!\n"
 
+    def hayFrames(self):
+        print "len(self.depths) = %s; (self.depths.shape[0]=%s,self.depths.shape[1]): %s\n" % (len(self.depths),
+                                                                                                self.depths.shape[0],
+                                                                                                self.depths.shape[1])
+        print "len(self.depths2) = %s\n" % len(self.depths2)
+        return len(self.depths) > 0
+
+    #Kinect.get_depths()
     def get_depths(self):
+        #if not self.kinect.hayFrames():
+        if not self.hayFrames():
+            msg = "No existen frames obtenidos desde el sensor.\nInténtelo de nuevo."
+            print msg
+            raise ExcepcionSinFrames(msg)
         return self.depths
 
-    def hayFrames(self):
-        print "len(self.queueVideo) = %s\n" % len(self.queueVideo)
-        return len(self.queueVideo)>0
+
+#BACKUP!
+#    def get_depths(self):
+#        return self.depths
+
+#    def hayFrames(self):
+#        print "len(self.queueVideo) = %s\n" % len(self.queueVideo)
+#        return len(self.queueVideo)>0
 
 
 
@@ -280,9 +303,10 @@ class KinectViewer(Image):
     # 
     def getDatosSensor(self,formato=PCD_XYZ_RGB_FORMAT):
         print "En getDatosSensor()...\n"
+        print "Existen frames obtenidos desde el sensor Kinect!\n"
         if formato == PCD_XYZ_RGB_FORMAT:
             rgbConCod = list()
-            self.kinect.hayFrames()
+            #self.kinect.hayFrames()
             rgbSinCod = get_video2()
             print "rgbSinCod.shape: (%s,%s)\n" % (rgbSinCod.shape[0],rgbSinCod.shape[1]) 
             print "rgbSinCod.size: %s\n" % rgbSinCod.size
@@ -302,18 +326,25 @@ class KinectViewer(Image):
             for index in xrange(0,len(rgbAplanado)-1):
                 dataNube[index,:] = np.append(npXyzCoords[index],rgbAplanado[index])
 
-            print "LLENADA dataNube! tipo: %s \n" % dataNube.dtype
-
+            print "LLENADA dataNube! con shape: (%s,%s) \n" % (
+                                                                dataNube.shape[0],
+                                                                dataNube.shape[1]
+                                                                )
             #Se elmina el elemento Z (indice 2) que es menor a cero(Incluido en la funcion
             #original depth2xyzuv que hace el filtrado de los elementos que estan detras de la camara). 
             dataNube2 = np.asarray([x for x in dataNube if x[2]<0 ],dtype=np.float32)
+            print "CONVERTIDA dataNube2 con shape: (%s,%s)\n" % (
+                                                                dataNube2.shape[0],
+                                                                dataNube2.shape[1]
+                                                                )
             return dataNube2
+
         else:
             xyz, uv = depth2xyzuv(self.kinect.get_depths())
             data = xyz.astype(np.float32)
             return data
 
-        
+
 import numpy as np
 import io
 from io import BytesIO
@@ -663,12 +694,18 @@ class KinectScreen(ScreenRedimensionable):
                                         title = "Error de conexion con el sensor")
             return
         
-        data = self.kinect_rgb.getDatosSensor()
-
         controlador = App.get_running_app()
-        print "El dir_trabajo para guardar la falla es: %s" % self.dir_trabajo
-        controlador.capturar(data,self.dir_trabajo,self.nombre_captura,
+        try:
+            data = self.kinect_rgb.getDatosSensor()
+            print "El dir_trabajo para guardar la falla es: %s" % self.dir_trabajo
+            controlador.capturar(data,self.dir_trabajo,self.nombre_captura,
                                controlador.getData("idFalla") )
+        except ExcepcionSinFrames as e:
+            controlador.mostrarDialogoMensaje(text= e.message,
+                                        title = "Error de datos en el sensor")
+            return
+        
+        
         
     #Actualiza el screen que tiene el listado de capturas
     def actualizar_vista_archivos(self,nombre_screen):

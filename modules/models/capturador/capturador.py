@@ -269,7 +269,7 @@ class ItemFalla(SelectableDataItem,Persistent):
     #NOTA: is_selected se modifica cuando el usuario selecciona una itemFalla para subir al servidor. 
     super(ItemFalla, self).__init__(is_selected=is_selected, **kwargs)
     self.estado = None
-    # Coleccion de objetos Captura
+    # Coleccion de objetos "Captura" asociados a la falla
     self.colCapturas = []
     #self.is_selected = False
     self.estaSubidaAlServidor = False # Flag que indica si se subio o no una falla
@@ -282,15 +282,24 @@ class ItemFalla(SelectableDataItem,Persistent):
     return cad
 
   def __cmp__(self,other):
-    self_id = self.getEstado().getId()  
-    other_id = other.getEstado().getId()
-    print "En __cmp__() con self_id: %s y other_id: %s\n" % (self_id,other_id)
-    if self_id > other_id:
-      return 1
-    elif self_id == other_id:
-      return 0
+    if isinstance(self.estado,other.getEstado().__class__):
+      print "Son del mismo estado!\n"
+      return self.estado.comparar(other)
     else:
+      print "Son de distinto estado!\n"
       return -1
+
+  #BACKUP!
+  #def __cmp__(self,other):
+  #  self_id = self.getEstado().getId()  
+  #  other_id = other.getEstado().getId()
+  #  print "En __cmp__() con self_id: %s y other_id: %s\n" % (self_id,other_id)
+  #  if self_id > other_id:
+  #    return 1
+  #  elif self_id == other_id:
+  #    return 0
+  #  else:
+  #    return -1
 
 
   def desSeleccionar(self):
@@ -495,13 +504,13 @@ class ItemFalla(SelectableDataItem,Persistent):
   #
   # itemfalla.descartar()
   #  
-  def descartar(self,colItemFallasSubidos):
-    print "En itemFalla.descartar()...\n"
-    print "La coleccion antes de descartar el itemfalla con sus capturas tiene:%s\n"
-    ItemFalla.mostrarColItemFalla(colItemFallasSubidos)
-    for captura in self.colCapturas:
-      captura.descartar(self.colCapturas)
-    print "Fin de itemFalla.descartar()\n"
+  #def descartar(self,colItemFallasSubidos):
+  #  print "En itemFalla.descartar()...\n"
+  #  print "La coleccion antes de descartar el itemfalla con sus capturas tiene:%s\n"
+  #  ItemFalla.mostrarColItemFalla(colItemFallasSubidos)
+  #  for captura in self.colCapturas:
+  #    captura.descartar(self.colCapturas)
+  #  print "Fin de itemFalla.descartar()\n"
 
 
   # Valida las capturas asociadas a una falla, comprobando que existan en
@@ -555,6 +564,35 @@ class ItemFalla(SelectableDataItem,Persistent):
     print "----------------------------------------------------------\n"
     print "Fin de itemfalla.mostrarColItemFalla()...\n"
     print "----------------------------------------------------------\n"
+
+
+  #AGREGADO RODRIGO
+  #ItemFalla.descartar()
+  # Se descartan las capturas (col con los paths de las capturas)
+  # solo si estas estan en la coleccion de capturas de la falla.
+  def descartar(self,capturas):
+    print "En itemfalla.descartar()\n"
+    capEstaDescartada = False
+    #Por cada captura de cada itemFalla...
+    for cap in self.colCapturas:
+      if cap.getFullPathCaptura() in capturas:
+        print "Captura encontrada! en: %s con itemFalla: %s \n" % (capturas,self)
+        cap.descartar(self.colCapturas)
+        capEstaDescartada = True
+        print "Descartada correctamente! \n"
+        Capturador.mostrarCapturas(self.colCapturas)
+        break
+    
+    if len(self.colCapturas) == 0:
+      print "len(itemFalla.getColCapturas()): %s\n " % len(self.colCapturas)
+      #colItemsFallaADescartar.append(itemFalla)
+      return (self,capEstaDescartada)
+      print "descartando itemFalla...\n"
+    else:
+      return (None,capEstaDescartada)
+
+    print "Fin itemfalla.descartar()\n"
+
 
 
 class Capturador(object):
@@ -671,12 +709,10 @@ class Capturador(object):
 
     print "Captura realizada con exito! Agregada: ",str(cap)
     print ""
-    #BACKUP!
     #self.api_geo.almacenarCapturaLocal(latitud,longitud,cap.getFullPathCaptura())
     self.bdLocalMuestras.agregar(latitud,longitud,cap.getFullPathCaptura())
     print "Guardado archivo .pcd en BD_JSON!"
     print ""
-    #AGREGADO RODRIGO
     return cap.getFullPathCaptura(),cap.getFullPathCapturaConv()
 
 
@@ -724,51 +760,6 @@ class Capturador(object):
 
 
 
-
-
-
-#BACKUP!
-  # Este metodo descarta la captura de memora y de disco(.pcd y .csv)
-  # Capturador.descartar()
-  #
-#  def descartar(self,capturas):
-#    print "Inicio de capturador.descartar()\n"
-#    colItemFalla = self.colCapturasTotales
-#    capEstaDescartada = False
-    #AGREGADO RODRIGO
-#    colItemsFallaADescartar = list()
-
-#    for itemFalla in colItemFalla:
-      #Por cada captura de cada itemFalla...
- #     colCaps = itemFalla.getColCapturas()
-#      for cap in colCaps:
-#        if cap.getFullPathCaptura() in capturas:
-#          print "Captura encontrada! en: %s \n" % capturas
-##          cap.descartar(colCaps)
-#          capEstaDescartada = True
-#          print "Descartada correctamente! \n"
-#          Capturador.mostrarCapturas(colCaps)
-#          break
-#      print "verificando long. capturas de itemfalla...\n" 
-#      if len(itemFalla.getColCapturas()) == 0:
-#        print "len(itemFalla.getColCapturas()): %s\n " % len(itemFalla.getColCapturas())
-#        colItemsFallaADescartar.append(itemFalla)
-
-    # NOTA IMPORTANTE: Se recorren todas las las FALLAS CONFIRMADAS que no tienen al menos una captura,
-    # y se borran del capturador. Para las FALLAS INFORMADAS, se debe
-    # mantener el ITEMFALLA en la coleccion del capturador Informados.
-    # 
-#    for falla in colItemsFallaADescartar:
-#      print "Descartando captura: %s\n" % falla
-#      self.colCapturasTotales.remove(falla)
-
-#    print "Fin de capturador.descartar()\n"
-#    return capEstaDescartada
-
-
-
-
-
   # Este metodo descarta la captura de memora y de disco(.pcd y .csv)
   # Capturador.descartar()
   #
@@ -779,24 +770,56 @@ class Capturador(object):
     colItemsFallaADescartar = list()
 
     for itemFalla in colItemFalla:
-      #Por cada captura de cada itemFalla...
-      colCaps = itemFalla.getColCapturas()
-      for cap in colCaps:
-        if cap.getFullPathCaptura() in capturas:
-          print "Captura encontrada! en: %s \n" % capturas
-          cap.descartar(colCaps)
-          capEstaDescartada = True
-          print "Descartada correctamente! \n"
-          Capturador.mostrarCapturas(colCaps)
-          break
-      print "verificando long. capturas de itemfalla...\n" 
-      if len(itemFalla.getColCapturas()) == 0:
-        print "len(itemFalla.getColCapturas()): %s\n " % len(itemFalla.getColCapturas())
-        colItemsFallaADescartar.append(itemFalla)
+      print "verificando long. capturas de itemfalla: \n\n %s \n" % itemFalla 
+      #Descarta la captura en itemFalla solo si esta en su coleccion
+      tuplaResultado = itemFalla.descartar(capturas)
+      capEstaDescartada = tuplaResultado[1]
+      #Si no es None el resultado, se debe descartar itemFalla
+      if tuplaResultado[0] is not None:
+        print "Se eliminara de la coleccion itemFalla: %s\n" % tuplaResultado[0]
+        colItemsFallaADescartar.append(tuplaResultado[0])
+        #break        
+      
+    print "colItemsFallaADescartar -->:\n\n"
+    for miFalla in colItemsFallaADescartar:
+      print "miFalla: %s \n" % miFalla
 
     self.descartarFallaSinCaps(colItemsFallaADescartar)
     print "Fin de capturador.descartar()\n"
     return capEstaDescartada
+
+
+
+  # Este metodo descarta la captura de memora y de disco(.pcd y .csv)
+  # Capturador.descartar()
+  #
+  #def descartar(self,capturas):
+  #  print "Inicio de capturador.descartar()\n"
+  #  colItemFalla = self.colCapturasTotales
+  #  capEstaDescartada = False
+  #  colItemsFallaADescartar = list()
+
+  #  for itemFalla in colItemFalla:
+  #    print "verificando long. capturas de itemfalla: \n\n %s \n" % itemFalla 
+  #    #Por cada captura de cada itemFalla...
+  #    colCaps = itemFalla.getColCapturas()
+  #    for cap in colCaps:
+  #      if cap.getFullPathCaptura() in capturas:
+  #        print "Captura encontrada! en: %s \n" % capturas
+  #        cap.descartar(colCaps)
+  #        capEstaDescartada = True
+  #        print "Descartada correctamente! \n"
+  #        Capturador.mostrarCapturas(colCaps)
+  #        break
+  #    if len(itemFalla.getColCapturas()) == 0:
+  #      print "len(itemFalla.getColCapturas()): %s\n " % len(itemFalla.getColCapturas())
+  #      colItemsFallaADescartar.append(itemFalla)
+  #      print "descartando itemFalla...\n"
+  #  print "colItemsFallaADescartar: \n\n %s \n" % colItemsFallaADescartar  
+  #  self.descartarFallaSinCaps(colItemsFallaADescartar)
+  #  print "Fin de capturador.descartar()\n"
+  #  return capEstaDescartada
+
 
   # Este metodo elimina aquellos itemFalla que no tienen al menos una 
   # captura asociada. Se sobreescribe en esta clase ya que solo se usa para
@@ -811,13 +834,22 @@ class Capturador(object):
     # y se borran del capturador. Para las FALLAS INFORMADAS, se debe
     # mantener el ITEMFALLA en la coleccion del capturador Informados.
     # 
+    self.mostrarColItemFalla()
+    print "len(self.colCapturasTotales) antes: %s\n" % len(self.colCapturasTotales)
     for falla in colItemsFallaADescartar:
       print "Descartando captura: %s\n" % falla
       self.colCapturasTotales.remove(falla)
+    print "len(self.colCapturasTotales) despues: %s\n" % len(self.colCapturasTotales)
+    self.mostrarColItemFalla()
 
 
 
-
+  def mostrarColItemFalla(self):
+    print "Inicio de mostrarColItemFalla() con capturador.colCapturasTotales ---> \n\n"
+    for falla in self.colCapturasTotales:
+      print "falla: %s \n\n" % falla
+    print "Fin de mostrarColItemFalla() con capturador.colCapturasTotales \n"
+    
 
   		
   @staticmethod

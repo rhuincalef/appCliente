@@ -34,6 +34,9 @@ class Estado(Persistent):
 	def getDicFallaEncoded(self):
 		raise Exception("Error este metodo se debe implementar en subclases")
 
+	def comparar(self,other):
+		raise Exception("Error este metodo se debe implementar en subclases")
+		
 
 
 class Confirmada(Estado):
@@ -213,6 +216,21 @@ class Confirmada(Estado):
 		}
 		
 
+	#Confirmada.comparar()
+	def comparar(self,other):
+		print "En __cmp__() estado Confirmada con self.latitud: %s y self.longitud: %s\n" % (self.latitud,
+																					self.longitud)
+		if (self.latitud > other.getEstado().getLatitud()) and \
+				(self.longitud > other.getEstado().getLongitud()):
+			return 1
+		elif (self.latitud == other.getEstado().getLatitud()) and \
+				(self.longitud == other.getEstado().getLongitud()):
+			return 0
+		else:
+			return -1
+
+
+
 class Informada(Estado):
 
 	""" Estado para las fallas informadas se obtuvieron del servidor"""
@@ -306,6 +324,21 @@ class Informada(Estado):
 			'calle':str(self.calle).encode("utf-8"),
 			'altura': str(self.altura).encode("utf-8")
 		}
+
+	#Informada.comparar()
+	def comparar(self,other):
+		self_id = self.getEstado().getId()  
+		other_id = other.getEstado().getId()
+		print "En __cmp__() estado Informada con self_id: %s y other_id: %s\n" % (self_id,other_id)
+		if self_id > other_id:
+			return 1
+		elif self_id == other_id:
+			return 0
+		else:
+			return -1
+
+		
+
 
 
 
