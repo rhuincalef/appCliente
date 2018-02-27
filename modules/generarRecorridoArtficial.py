@@ -5,8 +5,12 @@
 # previamente capturadas. Empleado para la subida de fallas clasificables al servidor
 # en la demostracion.
 
+
+
 # Ejemplo de invocación -->
 # $ python generarRecorridoArtficial.py -- --path_archivos "lala.pcd"
+
+
 
 import sys, os
 import argparse
@@ -53,7 +57,10 @@ for pcd in colPathPcds:
 	print "iterando elemento: %s, spliteado: %s\n" % (pcd, nombrePcd)
 	item1 = ItemFalla()
 	#Se crea el estado asociado a los atributos con los datos que emplea el servidor
-	est = Confirmada(-33432122,44212112)
+	#Coordenada fake -->
+	#est = Confirmada(-33432122,44212112)
+	#Coordenada real -->
+	est = Confirmada(-43.252563,-65.326809)
 	est.setTipoFalla("baches")
 	est.setCriticidad("bajo")
 	est.setTipoMaterial("pavimento flexible")

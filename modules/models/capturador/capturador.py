@@ -282,6 +282,8 @@ class ItemFalla(SelectableDataItem,Persistent):
     return cad
 
   def __cmp__(self,other):
+    print "En __cmp__() de itemfalla, con self: %s; other: %s; valor other: %s\n" % \
+        (type(self),type(other), other)
     if isinstance(self.estado,other.getEstado().__class__):
       print "Son del mismo estado!\n"
       return self.estado.comparar(other)
@@ -585,15 +587,28 @@ class ItemFalla(SelectableDataItem,Persistent):
 
   #AGREGADO RODRIGO
   #ItemFalla.descartar()
-  # Se descartan las capturas (col con los paths de las capturas)
+  # Se descartan las capturas (col. con los paths de las capturas)
   # solo si estas estan en la coleccion de capturas de la falla.
-  def descartar(self,capturas):
+  def descartar(self,colItemsFalla):
     print "En itemfalla.descartar()\n"
     capEstaDescartada = False
     #Por cada captura de cada itemFalla...
+    print "La coleccion 'colItemsFalla' tiene: \n"
+    for e in colItemsFalla:
+      print "tipo: %s; elemento: %s\n" % (type(e),e)
+
+    print "La coleccion 'self.colCapturas' tiene: \n"
+    for e in self.colCapturas:
+      print "tipo: %s; elemento: %s\n" % (type(e),e)
+      
+    colTotalObjCaptura = list()
+    for i in colItemsFalla:
+      colTotalObjCaptura += i.getColCapturas()
+
     for cap in self.colCapturas:
-      if cap.getFullPathCaptura() in capturas:
-        print "Captura encontrada! en: %s con itemFalla: %s \n" % (capturas,self)
+      #if cap.getFullPathCaptura() in colItemsFalla:
+      if cap in colTotalObjCaptura:
+        print "Captura encontrada! en: %s con itemFalla: %s \n" % (colTotalObjCaptura,self)
         cap.descartar(self.colCapturas)
         capEstaDescartada = True
         print "Descartada correctamente! \n"
