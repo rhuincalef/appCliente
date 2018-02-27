@@ -224,11 +224,11 @@ CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacena
 
 
 #Servidor local rodrigo(Ultima version localhost:80)
-URL_SERVIDOR_LOCAL = "http://localhost/web/"
 #URL_SERVIDOR_LOCAL = "http://localhost:81/web/"
+URL_SERVIDOR_LOCAL = "http://localhost/web/"
 
-#Servidor Guille
-#URL_SERVIDOR_LOCAL = "http://192.168.0.104/web/"
+#Servidor Externo
+#URL_SERVIDOR_LOCAL = "http://192.168.0.105/web/"
 
 
 #URL donde se verificara si la falla se encuentra dada de alta, si es asi se da el

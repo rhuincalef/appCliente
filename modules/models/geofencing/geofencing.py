@@ -137,7 +137,7 @@ class GeofencingAPI(object):
 
 		# Si no es el gps real no se accede al dispositivo y se inicializa
 		# solo la BD de coordenadas
-		if not (controlador.args.gps == OPCIONES_GPS[0]):
+		if (controlador is not None) and ( not (controlador.args.gps == OPCIONES_GPS[0]) ):
 			self.session = gps.gps()
 			self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
 

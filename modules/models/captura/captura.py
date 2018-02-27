@@ -83,6 +83,7 @@ class Captura(Persistent):
 	def getNombreArchivo(self):
 		return self.nombreCaptura
 
+	
 
 	#NOTA: Este es el archivo de captura final con el nombre+SUBFIJO+ID_INCREMENTAL.pcd
 	def getNombreArchivoCaptura(self):
@@ -96,6 +97,11 @@ class Captura(Persistent):
 
 	def getExtension(self):
 		return self.extension
+
+	# AGREGADO PARA LA GENERACION DE RECORRIDOS ARTIFICIALES.
+	def setNombreArchivoCaptura(self, archivo_salida):
+		self.nombreArchivoCaptura = archivo_salida 
+
 
 
 	def __repr__(self):

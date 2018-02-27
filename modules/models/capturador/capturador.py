@@ -349,9 +349,23 @@ class ItemFalla(SelectableDataItem,Persistent):
     print "Cambiado el estado de la falla a : %s" % (estado)
     print ""
 
+  # AGREGADO RODRIGO
+  # Retorna una lista con las capturas consistentes 
+  def obtenerCapturasConsistentes(self):
+    miColCapturas = list()
+    for cap in self.colCapturas:
+      print "Iterando captura: %s\n" % cap
+      if cap.esConsistente():
+        miColCapturas.append(cap)
+        print "agregando captura consistente: %s\n" % cap
+    return miColCapturas
+
+  
+
   # Retorna la lista de capturas asociadas a una falla
   def getColCapturas(self):
     return self.colCapturas
+
 
   # Registra la captura en disco,la convierte a .csv,
   # la agrega a la coleccion de ItemFalla y registra la falla. 
@@ -359,12 +373,7 @@ class ItemFalla(SelectableDataItem,Persistent):
     controlador = App.get_running_app()
     cap.almacenarLocalmente(dataSensor,capturador,controlador.args.tipoCaptura)
     self.estado.registrar(self,capturador,cap)
-
-    #BACKUP!
-    #nombreArchCsv = cap.convertir()
-    #print "Convertida con nombre de archivo %s \n" % nombreArchCsv
     self.getEstado().mostrar_capturas_asociadas(self)
-
 
 
 
@@ -404,17 +413,20 @@ class ItemFalla(SelectableDataItem,Persistent):
     controlador = App.get_running_app()
     #Agregado Rodrigo
     logger = utils.instanciarLogger(LOG_FILE_CAPTURAS_INFO_SERVER)
-
-    if self.is_selected:
+    coleccionCapturas = self.obtenerCapturasConsistentes()
+    #if self.is_selected:
+    if self.is_selected and len(coleccionCapturas):
       # Se convierte cada captura en un csv y luego se envia la falla en 
       # formato JSON al servidor.
       capturasConvertidas = []
-      cantCapturasAEnviar = len(self.colCapturas)
+      #cantCapturasAEnviar = len(self.colCapturas)
+      cantCapturasAEnviar = len(coleccionCapturas)
 
       #Se marca el itemfalla como subido al servidor
       self.marcarComoSubida()
 
-      for i in xrange(0,len(self.colCapturas)):
+      #for i in xrange(0,len(self.colCapturas)):
+      for i in xrange(0,len(coleccionCapturas)):
         #print "Iterando captura de itemfalla con controlador.canceladaSubidaArchivos:%s y cantCapturasAEnviar: %s...\n" %\
         #  (controlador.canceladaSubidaArchivos,cantCapturasAEnviar)
 
@@ -425,16 +437,17 @@ class ItemFalla(SelectableDataItem,Persistent):
         #
         
         
-        nombreArchCsv = self.colCapturas[i].getFullPathCapturaConv()
+        #nombreArchCsv = self.colCapturas[i].getFullPathCapturaConv()
+        nombreArchCsv = coleccionCapturas[i].getFullPathCapturaConv()
         capturasConvertidas.append(nombreArchCsv) 
         cantCapturasAEnviar -= 1
 
         # Si los bytes_actuales de la colecccion de capturas + el tamanio de la captura actual
         # superan el MAX_POST_SIZE se invoca al api_client para su envio.
         # Sino, se continuan agregando mas capturas para enviar.
-        #bytes_actuales_cap = calcularTamanio([self.colCapturas[i].getFullPathCapturaConv()])
-        #bytes_actuales_col = calcularTamanio(capturasConvertidas)
-        bytes_actuales_cap = utils.calcularTamanio([self.colCapturas[i].getFullPathCapturaConv()])
+        #
+        #bytes_actuales_cap = utils.calcularTamanio([self.colCapturas[i].getFullPathCapturaConv()])
+        bytes_actuales_cap = utils.calcularTamanio([coleccionCapturas[i].getFullPathCapturaConv()])
         bytes_actuales_col = utils.calcularTamanio(capturasConvertidas)
 
         if bytes_actuales_col + bytes_actuales_cap >= MAX_POST_REQUEST_SIZE or \
@@ -469,11 +482,24 @@ class ItemFalla(SelectableDataItem,Persistent):
     mybytes = 0
     nombres_capturas = []
     for captura in self.colCapturas:
-      arch_csv = captura.getFullPathCapturaConv()
-      nombres_capturas.append(arch_csv)
-    #mybytes = calcularTamanio(nombres_capturas)
+      #AGREGADO RODRIGO
+      if captura.esConsistente():
+        arch_csv = captura.getFullPathCapturaConv()
+        nombres_capturas.append(arch_csv)
     mybytes = utils.calcularTamanio(nombres_capturas)
     return mybytes
+
+  # Retorna el tamanio en bytes de los ".csv "asociados a una captura.
+  # Se invoca para actualizacion de la progressbar y el label con 
+  # los bytes enviados/totales.
+  #def calcularTamanio(self):
+  #  mybytes = 0
+  #  nombres_capturas = []
+  #  for captura in self.colCapturas:
+  #    arch_csv = captura.getFullPathCapturaConv()
+  #    nombres_capturas.append(arch_csv)
+  #  mybytes = utils.calcularTamanio(nombres_capturas)
+  #  return mybytes
 
 
   def setCalleEstimada(self,calle):
@@ -655,6 +681,7 @@ class Capturador(object):
 
   def getColCapturasConfirmadas(self):
     return self.colCapturasConfirmadas
+
 
   # Retorna la cantidad de archivos que tienen un nombre dado
   # en el directorio de trabajo especificado. Se detecta la

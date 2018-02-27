@@ -137,7 +137,7 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 			# Se verifica que todos los archivos .pcd asociados a las capturas
 			# se encuentren aun en el disco al momento del envio, y se marcan
 			# aquellos que contienen inconsistencias.
-			falla.comprobarConsistencia()
+			existenCapsInconsistentes = falla.comprobarConsistencia()
 
 		print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
 				existenFallas

@@ -966,7 +966,7 @@ class MainApp(App,EventDispatcher):
 										text=msg)
 
 
-	# GuardarRecorrido en menu principal.
+	# GuardarRecorrido en menu principal (AlmacenarRecorrido() ).
 	# Guarda en un recorrido las fallas (en un archivo .rec) confirmadas e informados de los capturadores
 	# y vacia las colecciones de los dos capturadores.
 	# "nameBD" es el nombre del archivo de fallas que se guarda en disco. 
