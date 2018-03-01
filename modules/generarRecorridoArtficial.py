@@ -89,8 +89,12 @@ for pcd in colPathPcds:
 	#Se crea el estado asociado a los atributos con los datos que emplea el servidor
 	#Coordenada fake -->
 	#est = Confirmada(-33432122,44212112)
-	#Coordenada real -->
-	est = Confirmada(-43.252563,-65.326809)
+
+	#Coordenada real bache (Entre Rios)-->
+	#est = Confirmada(-43.252563,-65.326809)
+	
+	#Coordenada real grieta -->
+	est = Confirmada(-43.247030,-65.308603)
 	est.setTipoFalla("baches")
 	est.setCriticidad("bajo")
 	est.setTipoMaterial("pavimento flexible")
