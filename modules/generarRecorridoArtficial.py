@@ -10,6 +10,8 @@
 # Ejemplo de invocación -->
 # $ python generarRecorridoArtficial.py -- --path_archivos "lala.pcd"
 
+# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/bache/rec_bache.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/bache/baches_9.pcd" 2>&1 | tee generador.txt
+# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/grieta_1.pcd" 2>&1 | tee generador.txt
 
 
 import sys, os
@@ -23,8 +25,9 @@ from captura import *
 #from estadofalla import *
 
 
-def procesarArgumentos():
+def procesarCapturas():
 	parser = argparse.ArgumentParser(prog ="generarRecorridoArtificial.py", description="Generacion de recorridos artificiales con pcds propios")
+	parser.add_argument('--arch_salida', metavar='Archivo-Recorrido-Salida',help='Ruta completa del archivo de recorrido de salida')
 	parser.add_argument('--path_archivos', nargs='+', metavar='Ruta-Archivo-PCD',help='Ruta del el/los archivo/s .PCD a ser agregados en el recorrido')
 	args = parser.parse_args()
 	if args.path_archivos is None:
@@ -34,21 +37,48 @@ def procesarArgumentos():
 		except Exception as e:
 			pass
 	diccArgs = vars(args)
-	return [elemento for elem in diccArgs.itervalues() for elemento in elem ]
+	#lista = [elemento for elem in diccArgs.itervalues() for elemento in elem ]
+	lista = []
+	for e in diccArgs.itervalues():
+		print "elemento: %s\n" % e
+		if type(e) is list:
+			print "armada lista!\n"
+			lista = [myelem for myelem in e]
+		
+	print "lista: %s" % lista
+	print "arch_salida: %s\n" % args.arch_salida
+	#try:
+	#	print "Saliendo...\n"
+	#	sys.exit(1)
+	#except Exception as e:
+	#	pass
 
-
+	if args.arch_salida is None:
+		print "Error no existen un archivo de salida para el recorrido!!!"
+		try:
+			sys.exit(1)
+		except Exception as e:
+			pass
+	salida = args.arch_salida
+	return (lista,salida)
 
 
 ##################################  Main  ###########################################
 
-colPathPcds = procesarArgumentos()
+tupla = procesarCapturas()
+colPathPcds = tupla[0]
+nombreArchivoRec = tupla[1] 
+print "Nombre de colPathPcds: %s\n" % colPathPcds
+print "Nombre de archivo de recorrido: %s\n" % nombreArchivoRec
+
+
 cargarConfiguraciones()
 print "colPathPcds -->%s" % colPathPcds
 
 apiClientComun = ApiClientApp()
 bdLocalMuestrasComun = BDLocal(fullPathBD = None)
 capturador = Capturador(apiClientComun,bdLocalMuestrasComun)
-nombreArchivoRec = "recorrido_artificial.rec"
+#nombreArchivoRec = "recorrido_artificial.rec"
 
 
 colItems = list() # Lista de objetos ItemFalla
