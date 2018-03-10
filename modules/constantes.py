@@ -7,7 +7,7 @@ import logging
 
 from kivy.core.window import Window
 
-
+   
 # Constante para controlar cuantos niveles puede subir el usuario en 
 # el sist. de archivos
 #ROOT_PCD_FOLDER = "../"
