@@ -6,7 +6,7 @@ from  kivy.uix.popup import Popup
 from kivy.animation import Animation
 import numpy
 import kivy
-#import pcl
+
 import pypcd
 import utils
 import os,sys
@@ -36,44 +36,6 @@ import logging,time
 import freenect
 
 import re
-
-#Crea un csv para enviar al servidor.
-def generarDataCsv(nombreArchivoCaptura,dirLocal,nombreCaptura):
-	#pathFile = dirLocal + "/" + nombreArchivoCaptura
-	pathFile = dirLocal + path.sep + nombreArchivoCaptura
-
-	#nube_numpy1 = pcl.load(pathFile).to_array()
-	#Se convierte la nube de puntos a un numpy array con shape (LONG_NUBE,3)
-	nubeObj = pypcd.PointCloud.from_path(pathFile)
-	vacia = map(lambda x:  [x[0],x[1],x[2]] ,nubeObj.pc_data)
-	nube_numpy1 = numpy.asarray(vacia)
-	
-
-	rows_originales = nube_numpy1.shape[0]
-	cols_originales = nube_numpy1.shape[1]
-	nube_aplanada = nube_numpy1.flatten()
-	# nube_numpy = numpy.asarray(map(lambda x: round(x,2),nube_aplanada))
-	my_array = map(lambda x: round(x,2),nube_aplanada)
-	nube_numpy = numpy.array(map(lambda x: float(round(x,2)),nube_aplanada))
-	nube_dimension_ajustada = nube_numpy.reshape(rows_originales,cols_originales)
-	
-	#archSalida = nombreCaptura + ".csv"
-	archSalida = nombreCaptura + path.extsep +"csv"
-	dirCsv = dirLocal + path.sep + CSV_TMP_DIR
-	try:
-		makedirs(dirCsv)
-	except OSError as e:
-		if not path.exists(dirCsv):
-			#print "Excepcion en OsError: %s\n" % e	
-			dirCsv = dirLocal + path.sep 
-	finally:
-		arch_salida = dirCsv + archSalida
-		#print "Guardando csv: %s" % arch_salida
-		numpy.savetxt(arch_salida, nube_dimension_ajustada ,fmt="%4.6f", delimiter=",")
-		#print "CSV Data generada correctamente: %s" % arch_salida
-	return arch_salida	
-# generarDataCsv("nueva_1.pcd",".","nueva_1")
-
 
 # Retorna el tamanio en bytes de un arreglo de archivos.
 # Ej. ["1.pcd","2.pcd"]
@@ -113,7 +75,6 @@ def genenerFontDict(nombreCss,nombreFontD):
 
 ######################## Funciones para la monitorizacion del sensor ###############################
 
-
 #Librerias para monitoreo usb asincrono -->
 from pyudev import Context, Monitor, MonitorObserver
 import usb
@@ -151,12 +112,7 @@ def estaSensorListo():
 			if idDev == ID_USB_HUB:
 				print "HUB detectado!\n"
 				HUB_OK = True
-	return CAMERA_OK and MOTOR_OK and AUDIO_OK and HUB_OK 
-
-
-
-
-
+	return CAMERA_OK and MOTOR_OK and AUDIO_OK and HUB_OK
 
 # Configura y retorna una instancia de Logger para el archivo .info.
 def instanciarLogger(logFile,logLevel=LOGGING_DEFAULT_LEVEL,appLogging=APP_NAME_LOGGING):
@@ -182,14 +138,8 @@ def loggearMensaje(logger,msg):
 
 # URL CONFIRMADAS -->
 # s = "http://localhost/repoProyectoBacheo/restapi/obtener_props_confirmadas"
-#
 
 # Retorna la propiedad con caracteres unicode convertidos a string
-#
-#def adaptarPropiedadConfirmada(elementoDic):
-#	nuevoElem = {}
-##	nuevoElem = 
-#	return nuevoElem
 def convertirJson(url):
 	from json import JSONDecoder
 	JSONDecoder(object_hook=adaptarPropiedadConfirmada).decode()
@@ -258,9 +208,6 @@ def convertirJson(url):
 #In [74]: json.loads(cad2)
 #Out[74]: {u'clave': u'tipoReparacion', u'valor': u'Cement\xe1r'}
 
-
-
-
 # Recibe un diccionario de propiedades y retorna una cadena de las propiedades
 # codificadas en unicode (con caracteres especiales convertidos), lista para
 # leer como json. 
@@ -294,7 +241,6 @@ def escaparCaracteresEspeciales(propiedad):
 	dic['clave'] = unicode(propiedad['clave'],encoding="utf8")
 	dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
 	dic['id'] = unicode(propiedad['id'],encoding="utf8")
-	#AGREGADO RODRIGO
 	dic['colPropsAsociadas'] = []
 	for prop in propiedad['colPropsAsociadas']:
 		print "iterando subpropiedad: %s\n" % prop
@@ -303,20 +249,10 @@ def escaparCaracteresEspeciales(propiedad):
 		nuevoDic['valor'] = prop['valor']
 		dic['colPropsAsociadas'].append(nuevoDic)
 
-	#print "dic nuevo: %s\n" % dic 
 	# Se reemplazan las comillas, se eliminan las 'u' de la cadena final("u" de codificacion unicode) 
 	# y se reemplazan los \x por \u00 para que cumplan con el estandar de JSON.
 	codificada = str(dic).replace("'",'"')
-	#print "codificada inicial: %s\n" % codificada
-	#print "type(codificada): %s\n" % type(codificada)
 	codificada = re.sub(":.u",":",codificada)
-	#print "\n\ncodificada intermedia: %s\n\n" % codificada
 	codificada = codificada.replace("\\x","\\u00")
 	print "codificada final: %s\n" % codificada
 	return codificada 
-
-
-
-
-
-

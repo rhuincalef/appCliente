@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# import kivy
 # kivy.require('1.0.5')
 
 from kivy.app import App
@@ -11,15 +10,12 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.graphics.instructions import InstructionGroup
 from kivy.graphics import Color,Rectangle
-
 from kivy.core.window import Window
 
 from utils import *
 from iconfonts import *
 from constantes import *
-
 from customwidgets import CustomDropDown
-
 from screenredimensionable import ScreenRedimensionable
 
 
@@ -35,19 +31,13 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 											size_hint_y = None,
 											orientation = 'vertical')
 		self.layout_principal.setter('height')
-		#self.layout_principal.bind(minimum_height = self.layout_principal.setter('height'))
 		self.layout_principal.bind(minimum_height = self.calcular_height )
-		#BACKUP!
-		#self.inicializarDropDownPrincipal()
 		self.layoutFooter = None
-
-
 
 	# Este metodo establece la altura maxima del layout, lo que determina
 	# hasta que punto el usuario puede scrollear sobre este.
 	def calcular_height(self,instance,value):
 		self.layout_principal.height = 940
-
 
 	# Calcula el espacio reservado para cada una de las opciones de los customdropdown
 	def calcularSpacingEntreLayouts(self,cantidadCriticidades):
@@ -57,7 +47,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 			contador += PADDING_POR_WIDGET
 			print "contador actual: %s\n" % contador 
 		self.layout_principal.spacing = [0, contador]
-
 
 	def on_enter(self):
 		controlador = App.get_running_app()
@@ -95,7 +84,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 		self.calcularSpacingEntreLayouts(6)
 	
-
 	def inicializarTipoFalla(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoFalla",
 					cols = 1,
@@ -122,18 +110,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		subLayout.add_widget(self.dropdownTipoFalla)
 		self.layout_principal.add_widget(subLayout)
 
-		#with self.layout_principal.canvas:
-		#	print "canvas: posicion= %s; tamanio=%s\n" % (self.pos,self.size)
-		#	print "sublayout: posicion= %s; tamanio=%s\n" % (subLayout.pos,subLayout.size)
-		#	Color((1,0,0,1))
-		#	#Rectangle(pos= self.pos,size = self.size)
-		#	Rectangle(pos= self.pos,size = self.size)
-
-
-
-
-
-
 	def inicializarTipoMaterial(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoMaterial",
 					cols = 1,
@@ -144,7 +120,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 			subLayout.add_widget(label)
 
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoMaterial",
-							#text='%s Seleccione el tipo de material' % (icon('cf-tipomaterial', TAMANIO_ICONOS)) ,
 							text='%s Seleccione el tipo de material' % (icon('cf-tipomaterial', TAMANIO_CUSTOM_ICONOS)) ,
 							font_size= TAMANIO_TEXTO_LABELS_DROPDOWN,
 							markup=True,
@@ -159,7 +134,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		subLayout.add_widget(self.dropdownTipoMaterial)
 		self.layout_principal.add_widget(subLayout)
 
-
 	def inicializarTipoCriticidad(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoCriticidad",
 					cols = 1,
@@ -172,7 +146,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		labReparacion = Label(id= PREFIJO_LABEL_DROPDOWN + "TipoCriticidad",
 							text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_CUSTOM_ICONOS)) ,
 							font_size= TAMANIO_TEXTO_LABELS_DROPDOWN,
-							#text='%s Seleccione la criticidad' % (icon('fa-exclamation-triangle', TAMANIO_ICONOS)) ,
 							markup=True,
 							size_hint_y = None,
 							size_hint_x = 1,
@@ -182,11 +155,8 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		self.dropdownCriticidad = CustomDropDown(self,id="TipoCriticidad",
 												size_hint_y = None,
 												size_hint_x = 1)
-												#,load_func = CustomDropDown.callbackCargaOpciones)
 		subLayout.add_widget(self.dropdownCriticidad)
 		self.layout_principal.add_widget(subLayout)
-		#return len(CustomDropDown.getCriticidadesHabilitadas())
-
 
 	def inicializarFooter(self):
 		layout = GridLayout(
@@ -221,17 +191,14 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		#Se inicaliza el layout que contiene al footer
 		self.layoutFooter = layout
 
-
 	def getFooterLayout(self):
 		return self.layoutFooter
 
 	def actualizar_btn_mat(self,drop,btnNombre):
 		setattr(self.mainButtonMaterial, 'text', btnNombre)
 
-
 	def actualizar_btn_rep(self,drop,btnNombre):
 		setattr(self.mainButtonReparacion, 'text', btnNombre)
-
 
 	# Este metodo cambia el tipo de falla seleccionado en el dropdown
 	# y cambia los atributos de los dropdownTipoMaterial y dropdownTipoReparacion
@@ -252,8 +219,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		for elem in atributos:
 			print "Iterando elemento.getClave(): %s\n" % elem.getClave()
 			print "Iterando elem.getValor(): %s\n" % elem.getValor()
-			#BACKUP!
-			#btn = Button(text = str(elem.getValor()),size_hint_y=None, height=44)
 			btn = Button(text = str(elem.getValor()),size_hint_y=None, height=44)
 			if elem.getClave() == 'tipoReparacion':
 				btn.bind(on_release=lambda btn: self.dropdownTipoReparacion.select(btn.text))
@@ -265,15 +230,11 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		#Se reestablecen los valores del boton principal que contiene al dropdown
 		setattr(self.mainButtonMaterial, 'text', "Seleccione el tipo de material")
 		setattr(self.mainButtonReparacion, 'text', "Seleccione el tipo de reparación")
-		#setattr(self.mainButtonReparacion, 'text', "Seleccione el tipo de reparacion")
 		print "Cambiados attrs de tiposFalla...\n"
-
-
 
 	# Al seleccionar un tipo de falla se carga el tipo de material y 
 	# el tipo de reparacion. Al seleccionar se envia como argumento la
-	# propiedad tipo de falla.
-	# 
+	# propiedad tipo de falla. 
 	def on_select(self,tipoFallaProp):
 		print "Ingrese en on_select()...\n"
 		print "ELiminando widgets viejos\n"
@@ -290,7 +251,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 				btn.bind(on_release = lambda elem: dropdownTipoMaterial.select(p))
 				dropdownTipoMaterial.add_widget(btn)
 
-
 	# Este metodo busca dentro de los sublayouts del layout principal un sublayout
 	# con un nombre dado y, dentro de este, un widget con un nombre especificado.
 	def _obtenerWidgetPorId(self,nombreSubLayout,nombreWidget):
@@ -305,10 +265,8 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 						print "Encontrado widget!:%s..\n" % type(widget)
 						return widget
 		return None
-	
-	
+		
 	def aceptar(self,evt):
-
 		#Se envian los datos de la falla
 		controlador = App.get_running_app()
 		screen = self.manager.get_screen('dialogopropscaptura')
@@ -326,8 +284,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 												)			
 			return
 
-
-		#AGREGADOOO
 		print "TipoFalla.root.is_selected?: %s\n" % self._obtenerWidgetPorId("subLayoutTipoFalla","TipoFallaDropdown").root.is_selected
 		if (self._obtenerWidgetPorId("subLayoutTipoFalla","TipoFallaDropdown").root.text == CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
 			(self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
@@ -337,13 +293,10 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 					)
 				return
 
-
 		controlador.agregarData("tipoFalla",tipoFalla)
 		controlador.agregarData("tipoMaterial",tipoMaterial)
 		controlador.agregarData("criticidad",criticidad)
 		self.manager.current = 'dialogopropscaptura'
-
-
 
 	#Reestablece el contenido sin seleccionar de todos los dropdowns
 	def reestablecerDropDowns(self):
@@ -377,8 +330,6 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 			controlador.borrarData("tipoMaterial")
 		except (KeyError,Exception) as e:
 			print "Clave tipoMaterial en controlador inexistente!\n"
-
-
 
 	def cancelar(self,evt):
 		self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()

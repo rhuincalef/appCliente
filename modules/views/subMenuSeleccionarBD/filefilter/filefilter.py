@@ -8,7 +8,6 @@ import re
 from notification import XLoading, XConfirmation, XMessage
 import threading
 
-#from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA,SUBFIJO_ARCHIVOS_BD_CONFIRMADAS
 from constantes import REGEX_FORMATO_FECHA,PATH_ICONO_LUPA,PATRON_SUBFIJO_ARCHIVOS_BD_CONFIRMADAS
 import datetime
 import os
@@ -16,7 +15,6 @@ from kivy.event import EventDispatcher
 
 from screenredimensionable import ScreenRedimensionable
 
-#class FileFilterScreen(Screen,EventDispatcher):
 class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
 
     def __init__(self,**kwargs):
@@ -41,11 +39,7 @@ class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
         print "\n\nDATOS PARSEADOS CORRECTAMENTE!!! \n"
         print "patronArchivo: %s\n" % patronArchivo
         print "directoriosBusqueda: %s\n\n" % directoriosBusqueda
-        #self.manager.current = "resultadosFiltrados"
         return True
-
-
-
 
     def esFechaValida(self,patronArchivo):
         print "en es fecha valida!\n"
@@ -134,8 +128,6 @@ class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
 
         self.dispatch('on_fin_busqueda_archivos',archivosFiltrados)
 
-
-
     # Si existen resultados encontrados se carga el screen que tiene una lista
     # de resultados; Sino, se muestra un dialogo indicando que no se encontraron 
     # archivos con ese nombre.
@@ -153,10 +145,6 @@ class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
         print "agregadosArchivosFiltrados()!\n"
         self.manager.current = "resultadosFiltrados"
 
-
-
-        
-
     #Se llama desde todos los lugares donde es necesario mostrar
     # un dialogo de carga
     def mostrarDialogoEspera(self,title="",content="",gif = PATH_ICONO_LUPA):
@@ -168,7 +156,6 @@ class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
                             size_hint_y = 0.4)
         dialogo.open()
         return dialogo
-
 
     #Este metodo debe abrir el XFolder para navegar los archivos.
     def onXFolderSeleccionado(self):
@@ -190,7 +177,6 @@ class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
         print "\nLa strSeleccion es: %s\n" % strSeleccion
         self.ids.text_input_lista_directorios.text = strSeleccion
 
-
     def cancelar(self):
         print "cancelar seleccion!\n"
         self.archSeleccionados = []
@@ -198,7 +184,6 @@ class FileFilterScreen(ScreenRedimensionable,EventDispatcher):
         self.ids.text_input_patron.text = ''
         self.ids.text_input_lista_directorios.text = ''
         self.habilitarMenuPrincipal()
-
 
     #Se rehabilitan las opciones del menu principal del tabbedpanel
     def habilitarMenuPrincipal(self):

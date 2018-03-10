@@ -13,7 +13,7 @@ class JSONizable(object):
 
 
 class CoordenadaFalsa(JSONizable):
-	""" Clase que representa una coordenada falsa """
+	""" Clase que representa una coordenada falsa con nombre de calle, latitud y longitud. """
 
 	def __init__(self,latitud,longitud,nombreCalle):
 		self.latitud = latitud
@@ -33,12 +33,15 @@ class CoordenadaFalsa(JSONizable):
 		return "{ nombreCalle: %s, latitud: %s,  longitud %s }\n" % \
 					(self.nombreCalle, self.latitud, self.longitud)
 
-
-
 class FakeGPS(JSONizable):
-	""" Clase que simula ser un gps proporciona una secuencia de coordenadas GPS,
+	""" Clase que simula ser un gps proporciona una secuencia circular de varias coordenadas GPS,
 		partiendo de un JSON. Esto permite que las ubicaciones no se superpongan en
-		el mapa si no se dispone de un gps para probarlas."""
+		el mapa si no se dispone de un gps para probarlas.
+
+		Las latitudes y longitudes se encuentran en constantes.py en PATH_ARCH_UBICACIONES_FALSAS(latitudesFalsas.json por defecto),
+		y este puede ser modificado para agregar o eliminar el listado de latitudes 
+		que la clase simula proporcionar."""
+
 	def __init__(self):
 		self.posCoordenadaActual = 0
 		self.colCoordenadas = []
@@ -46,7 +49,6 @@ class FakeGPS(JSONizable):
 
 	def setColCoordenadas(self,col):
 		self.colCoordenadas = col
-
 
 	def instanciarCoordenadaFalsa(self,dicElem):
 		""" Este metodo instancia un objeto coordenada falsa dado un elemento del diccionario"""
@@ -64,7 +66,6 @@ class FakeGPS(JSONizable):
 			return self
 		else:
 			raise ExcepcionArchCoordInvalido("Archivo de coordenadas invalido")
-
 
 	def inicializarGPS(self):
 		""" Inicializa el objeto FakeGPS cargando el json desde disco"""
@@ -100,29 +101,14 @@ class FakeGPS(JSONizable):
 			return True
 		return False
 
-
 	def toJson(self):
 		return {
 				"posCoordenadaActual": self.posCoordenadaActual,
 				"colCoordenadas": [ elem.toJson() for elem in self.colCoordenadas]
 		}
 
-
 	def persistirUbicaciones(self):
 		print "fakegps.toJson(): %s\n" % self.toJson()
 		self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"w")
 		json.dump(self.toJson(),self.f,indent=4)
 		print "dumpeado objeto a archivo!\n"
-
-
-
-#if __name__ == '__main__':
-#	gps = FakeGPS()
-#	gps.inicializarGPS()
-#	gps.getCoordenada()
-#	gps.persistirUbicaciones()
-
-
-
-
-

@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-# Clase que realiza la comunicacion con el servidor para obtener los baches
-#  y subir archivos al servidor
 import kivy
 kivy.require('1.0.5')
 
@@ -11,25 +9,23 @@ from requests.exceptions import ConnectionError
 import requests
 from json import JSONDecoder	
 from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncoderMonitor
-#from clint.textui.progress import Bar as ProgressBar
-
 import utils
 import threading
-
 import urllib
 
 
-# Clase para un getInformados vacio! 
+# 
 class ExcepcionSinInformados(Exception):
+	"""Clase para un getInformados vacio. """
 	pass
 
-#Excepcion para un error en una peticion Ajax.
 class ExcepcionAjax(Exception):
+	"""Excepcion para un error en una peticion Ajax al servidor. """
 	pass
-# Instalar requests con pip y toolbelt request
-# sudo pip install requests-toolbelt
 
 class ApiClientApp(object):
+	"""Clase que realiza la comunicacion con el servidor para obtener los baches y 
+		subir archivos al servidor."""
 	def __init__(self):
 		self.conexionServer = requests
 		self.bytes_leidos = 0
@@ -39,6 +35,7 @@ class ApiClientApp(object):
 		self.bytes_acumulados = 0
 
 	def getInformados(self,calle1):
+		""" Metodo para la obtencion de fallas informadas desde el servidor web. """
 		calle = urllib.quote_plus(calle1).encode('utf-8')
 		print "Obteniendo baches sobre calle:%s\n " % calle
 		try:
@@ -70,8 +67,8 @@ class ApiClientApp(object):
 			raise ExcepcionSinInformados("No hay fallas registradas sobre la calle ingresada")
 		return self.parsear_inf(results_json["datos"])
 
-	#Metodo de parseo para el diccionario de baches informados.
 	def parsear_inf(self,dic):
+		"""Metodo de parseo para el diccionario de baches informados."""
 		valores = dict()
 		for key,tupla in dic.iteritems():
 			valores[key] = dict(id=int(tupla["id"]),
@@ -81,9 +78,7 @@ class ApiClientApp(object):
 		return valores
 
 
-
 	def postCapturas(self,url,dic_envio,nombreCapturas,bytes_leidos,logger):
-		#self.bytes_leidos =  bytes_leidos
 		self.bytes_leidos =  0
 		#Crea el objeto encoder para el multipart/form-data con el dic_envio de la 
 		# peticion correspondiente a la falla actual.
@@ -94,14 +89,13 @@ class ApiClientApp(object):
 			r.status_code, r.reason
 		))
 
-
 		# Se lee la respuesta como un dic con strings unicode y se loguea 
 		# el resultado en disco.
-		#
 		print "Registrando la respuesta...\n"
 		dicRespuesta = r.json()
 		infolog = str(dicRespuesta["respuesta"]) 
 		utils.loggearMensaje(logger,infolog)
+
 		# Si ocurre un 500 Error se lanza una excepcion.
 		if (r.status_code != requests.codes.ok) or ( int(dicRespuesta["estadoGeocoding"]) in CODIGOS_ERROR_GEOCODING):
 			raise ExcepcionAjax("Error de servidor subiendo las fallas.\nMás información en %s%s" %\
@@ -109,58 +103,50 @@ class ApiClientApp(object):
 
 		return self.bytes_leidos
 
-	# Actualiza los datos que se muestran respecto del nombre del archivo actual
-	#  y la cantidad de bytes enviados/cantidad bytes totales.
+
+	
 	def actualizar_datos_callback(self,monitor):
+		"""Actualiza los datos que se muestran respecto del nombre del archivo actual
+			y la cantidad de bytes enviados/cantidad bytes totales. """
 		controlador = App.get_running_app()
 		# Se incrementa el contador solamente si termino y no se actualizo
 		# previamente.
 		self.bytes_acumulados += monitor.bytes_read - self.bytes_leidos
 		self.bytes_leidos = monitor.bytes_read
-		#self.bytes_acumulados += 8192
 
 		# NOTA: monitor.encoder.finished es llamado cada vez que un archivo
 		# termina de subirse.
 		#print "En apiclient.actualizar_datos_callback() con self.bytes_leidos: %s ; monitor.bytes_read: %s; self.bytes_acumulados: %s\n" %\
 		#			(self.bytes_leidos,monitor.bytes_read,self.bytes_acumulados)
 
-	# Retorna el objeto MultipartEncoder.Obtiene los datos del dic_envio
-	# para la falla actual.
-	def create_upload(self,dic_envio,nombreCapturas):
-		#dic_envio = {
-		#				#TODO: Cambiar esto por el idFalla real cuando este subido.
-						#'id': str(4).encode("utf-8"),
-		#				'id': str(dic_falla["id"]).encode("utf-8"),
-		#				'calle': str(dic_falla["calle"]).encode("utf-8"),
-		#				'altura': str(dic_falla["altura"]).encode("utf-8")
-		#			}
-		#for capturaCsv in dic_falla["data_capturas"]:
-		#	dic_envio[capturaCsv] = (capturaCsv,open(capturaCsv,'rb'),'csv')
 
+
+	def create_upload(self,dic_envio,nombreCapturas):
+		"""Retorna el objeto MultipartEncoder.Obtiene los datos del dic_envio para la falla actual.
+
+		El formato de los archivos subidos recibido en dic_envio es el siguiente:
+		dic_envio = {
+						'id': str(4).encode("utf-8"),
+						'id': str(dic_falla["id"]).encode("utf-8"),
+						'calle': str(dic_falla["calle"]).encode("utf-8"),
+						'altura': str(dic_falla["altura"]).encode("utf-8")
+					}.
+
+		"""
 		#NOTA: Los archivos que se envien al server deben estar indexados
 		# por el nombre del archivo de captura (sin extension) para que 
 		# funcione la subida.
-		#for capturaCsv in dic_envio["data_capturas"]:
-		#	dic_envio[capturaCsv] = (capturaCsv,open(capturaCsv,'rb'),'csv')
-
 		for capturaCsv in nombreCapturas:
 			dic_envio[capturaCsv] = (capturaCsv,open(capturaCsv,'rb'),'csv')
-
-		#print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-		#print "dic_envio contiene -->"
-		#print dic_envio
-		#print "++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-		#print ""
 		encoder = MultipartEncoder(dic_envio)
 		return encoder
 
-	#Obtiene la direccion(calle,altura) estimada dada una lat,long
 	def obtenerDirEstimada(self,latitud,longitud):
+		"""Obtiene la direccion(calle,altura) estimada dado la latitud y longitud. """
 		results_json = {}
 		peticion = URL_GET_DIRECCION +'latitud/'+ str(latitud) +'/longitud/'+str(longitud) 
 		response = self.conexionServer.get(peticion)
 		calle = "No disponible"
-		#altura = -1
 		rangoEstimado1 =rangoEstimado2= -1
 		try:
 			#Problema con el json enviado desde el server
@@ -181,16 +167,9 @@ class ApiClientApp(object):
 				if results_json["rangoEstimado2"] is not None:
 					rangoEstimado2 = int(results_json["rangoEstimado2"] )
 
-
-
-				#rangoEstimado1 = int(results_json["rangoEstimado1"] )
-				#rangoEstimado2 = int(results_json["rangoEstimado2"] )
-
 		except ConnectionError, e:
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
 			print msg
-			#raise ExcepcionAjax(msg)
-
 		except ValueError,e:
 			msg = "Error parseando la peticion a formato JSON.Peticion impresa en la linea de comandos."
 			print msg
@@ -204,26 +183,29 @@ class ApiClientApp(object):
 			print "En finally...\n"
 			print "rangoEstimado1: %s\n" % rangoEstimado1
 			print "rangoEstimado2: %s\n" % rangoEstimado2
-			#return (calle,altura)
 			return (calle,rangoEstimado1,rangoEstimado2)
 
-
-#FORMATO A PARSEAR -->
-#listadoTiposFalla = [
-# 	{
-# 	"clave": "tipoFalla",
-# 	"valor": "Bache",
-# 	"colPropsAsociadas": [
-#			 		{"clave": "tipoReparacion", "valor":"Sellado"},
-#			 		{"clave": "tipoReparacion", "valor":"Cementado"},
-#			 		{"clave": "tipoMaterial", "valor":"Pavimento asfaltico"]},
-#			 		{"clave": "tipoMaterial", "valor":"Cemento"},
-#			 		...
-#					]
-#	},
-# 	...	
-#]
+	
 	def parsearDatosConfirmados(self,dic):
+		"""Realiza el parseo de propiedades confirmadas obtenidas desde el servidor.
+
+		Formato que parsea desde el servidor el metodo parsearDatosConfirmados():
+
+		listadoTiposFalla = [
+			{
+			"clave": "tipoFalla",
+			"valor": "Bache",
+			"colPropsAsociadas": [
+					 		{"clave": "tipoReparacion", "valor":"Sellado"},
+					 		{"clave": "tipoReparacion", "valor":"Cementado"},
+					 		{"clave": "tipoMaterial", "valor":"Pavimento asfaltico"]},
+					 		{"clave": "tipoMaterial", "valor":"Cemento"},
+					 		...
+							]
+			},
+			...	
+		].
+		"""
 		listaTFalla = []
 		print "4...\n"
 		for tipoFalla in dic:
@@ -239,7 +221,6 @@ class ApiClientApp(object):
 				d["clave"] = str(prop["clave"].encode("utf-8"))
 				d["valor"] = str(prop["valor"].encode("utf-8"))
 				d["id"] = str(prop["id"].encode("utf-8"))
-				#AGREGADO RODRIGO
 				#Si la subpropiedad tiene propiedades asociadas se las asocia.
 				#Esta parte se emplea para la "ponderacion" que se asocia a la criticidad.
 				d["colPropsAsociadas"] = []
@@ -258,10 +239,10 @@ class ApiClientApp(object):
 		print "listaTFalla:\n %s \n" % listaTFalla
 		return listaTFalla
 
-
 	def getPropsConfirmados(self):
+		"""Realiza la obtencion de propiedades confirmadas al servidor. """
 		results_json = {} 
-		print "EN getPropsCOnfirmadas()...\n"
+		print "EN getPropsConfirmadas()...\n"
 		try:
 			response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS)
 			if response.status_code == 200:
@@ -273,23 +254,21 @@ class ApiClientApp(object):
 		except ValueError,e:
 			print "Value error en getProspConfirmada()!\n"
 			msg = "ValueError: Error parseando la peticion a formato JSON (response.text = %s)\n" % response.text
-			#print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
-			#print "Cuerpo de la peticion: \n %s" % response.text 
-			#print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 			raise ExcepcionAjax(msg)
 
 		except ConnectionError, e:
 			print "ConnectionError en getPropsConfirmados()!\n"
-			#msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea.Buscando BD con\n atributos de tipos de fallas en disco."
 			msg = "Error al establecer conexion con el servidor.\n (Excepcion ConnectionError: %s)" % e.message
 			raise ExcepcionAjax(msg)
 		print "3...\n"
 		return self.parsearDatosConfirmados(results_json)
 
 
-
-	#Metodo empleado en el autcompletar para la busqueda de fallas sobre una calle
+	
 	def solicitarSugerencias(self,nombreCalle,cantMaximaSugerencias):
+		"""Metodo empleado en el autcompletar para la busqueda de fallas sobre una calle, dado un nombre de calle
+			y una cantidad maxima de sugerencias (configurada en constantes.py). """
+
 		#2. Se hace una peticion ajax al servidor al controlador.Se envian la cadena y
 		# la cantidad al servidor para obtener solamente esa cantidad como maximo.
 		# controlador.obtenerSugerenciasCalles(myCalle,CANT_SUGERENCIAS) y se obtienen
@@ -315,21 +294,20 @@ class ApiClientApp(object):
 			else:
 				msg = "Error en peticion del servidor. Codigo: %s" % response.status_code
 				print "\n%s\n\n" % msg
-				#raise ExcepcionAjax(msg)
 
 		except ValueError,e:
 			msg = "Error parseando la peticion a formato JSON.Peticion impresa en la linea de comandos."
 			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 			print "Cuerpo de la peticion: \n %s" % response.text 
 			print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
-			#raise ExcepcionAjax(msg)
+			
 		except ConnectionError, e:
 			print "ConnectionError: %s\n" % e
 			msg = "Error al establecer conexion con el servidor.\nServidor fuera de linea."
-			#raise ExcepcionAjax(msg)
+			
 		except Exception, e:
 			print "Excepcion desconocida en solicitarSugerencias(): %s\n" % e
 			msg = "Excepcion desconocida en solicitarSugerencias(): %s\n" % e
+
 		finally:
 			return sugerenciasObtenidas
-

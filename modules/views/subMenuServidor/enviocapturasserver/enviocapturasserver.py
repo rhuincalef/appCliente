@@ -19,7 +19,6 @@ class EnvioCapturasServerScreen(Screen):
 		self.t2 = 0
 		self.barra_progreso.value = 0
 		self.cant_bytes_actuales = 0
-		# self.bytes_acumulados = 0
 
 	def completarBarraProg(self):
 		self.barra_progreso.value = self.barra_progreso.max
@@ -53,15 +52,6 @@ class EnvioCapturasServerScreen(Screen):
 								( (self.barra_progreso.value/DIVISOR_EN_MB),
 									(self.barra_progreso.max / DIVISOR_EN_MB))
 		#print "self.barra_progreso.value actualizado tiene: %s\n" % self.barra_progreso.value 
-
-
-	# Actualiza la barra de progreso con un porcentaje deducido del total
-	# de las capturas a subir.
-	# def actualizar_barra_progreso(self,bytes_actuales_enviados):
-	# 	self.barra_progreso.value += int(bytes_actuales_enviados)
-	# 	print "Actualizada progress_bar! con bytes_actuales_enviados: %s valor actual: %s" %\
-	# 			(bytes_actuales_enviados,self.barra_progreso.value)
-	# 	print ""
 
 	def cancelar_subida(self):
 		print "Cancelado subida al servidor!"

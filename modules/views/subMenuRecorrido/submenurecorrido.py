@@ -6,14 +6,10 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 
-
 #Imports y layouts para el popup de carga de elementos 
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
-
-#import loadsavedialog
-#from loadsavedialog import *
 from kivy.uix.popup import Popup
 
 import os
@@ -24,7 +20,6 @@ from file import XFileOpen, XFileSave
 from submenuscreen import *
 from capturador import ExcepcionRecorridoVacio
 from constantes import EXTENSION_RECORRIDO_DEFAULT,ESTILO_BACKGROUND_MODAL_XBASE,COLOR_SEPARADOR_POPUPS
-
 import re
 
 class RecorridoScreen(SubMenuScreen):
@@ -33,19 +28,13 @@ class RecorridoScreen(SubMenuScreen):
         super(RecorridoScreen,self).__init__(tabbedPanel,**kwargs)
         self._popup = None
 
-
     def guardar_recorrido(self):
         print "LLamando al screen de guardar recorrido...\n"
-        #self.deshabilitarOpciones()
         self.guardarRecorrido()
 
     def cargar_recorrido(self):
         print "LLamando al screen de cargar recorrido...\n"
-        #self.deshabilitarOpciones()
         self.cargarRecorrido()
-
-
-
 
     def guardarRecorrido(self):
         print "Cargado dialogo guardado de fallas...\n"
@@ -57,14 +46,11 @@ class RecorridoScreen(SubMenuScreen):
         else:
             XFileSave(on_dismiss=self._fileSaveCallback,
                         title = "Guardar recorrido con fallas",
-                        #path=expanduser(u'~'))
                         path=os.getcwd(),
                         background = ESTILO_BACKGROUND_MODAL_XBASE,
                         separator_color = COLOR_SEPARADOR_POPUPS
                         )
         
-
-
     def contieneExtensionPorDefecto(self,nameBD):
         patron = ".*\%s$" % EXTENSION_RECORRIDO_DEFAULT
         regex = re.compile(patron)
@@ -72,7 +58,6 @@ class RecorridoScreen(SubMenuScreen):
             return True
         return False
     
-
     def _fileSaveCallback(self, instance):
         if instance.is_canceled():
             return
@@ -101,26 +86,22 @@ class RecorridoScreen(SubMenuScreen):
             return
         self._crearArchivoRecorrido(instance.args[0])
 
-
     def _crearArchivoRecorrido(self,nameBD):
         controlador = App.get_running_app()
         print "nameBD ingresado es: %s\n" % nameBD
         controlador.persistirFallas(nameBD)
         print "Persistidas las fallas!\n"
 
-
     #Carga los objetos itemFalla en su respectivo capturador
     def cargarRecorrido(self):
         print "Cargado dialogo carga de fallas\n"        
         XFileOpen(on_dismiss=self._callbackCargarRecorrido,
                     title = "Cargar recorrido en memoria",
-                    #path=expanduser(u'~'),
                     path=os.getcwd(),
                     multiselect=False,
                     background = ESTILO_BACKGROUND_MODAL_XBASE,
                     separator_color = COLOR_SEPARADOR_POPUPS
                     )
-
 
     def _callbackCargarRecorrido(self,instance):
         if instance.is_canceled():
@@ -145,7 +126,6 @@ class RecorridoScreen(SubMenuScreen):
             controlador.mostrarDialogoMensaje(title = title,
                                         text = msg)
 
-
     def dismiss_popup(self):
         print "Cerrando dialog..."
         self._popup.dismiss()
@@ -155,7 +135,6 @@ class RecorridoScreen(SubMenuScreen):
         controlador = App.get_running_app()
         try:
             with open(os.path.join(path, filename[0])) as stream:
-                # self.text_input.text = stream.read()
                 controlador.leerFallas(stream)
         except IOError, e:
             controlador.mostrarDialogoMensaje(title="Error al leer el archivo de  fallas de disco",
@@ -192,5 +171,3 @@ class RecorridoScreen(SubMenuScreen):
                                                 text=e.message)
 
         self.dismiss_popup()
-
-

@@ -16,9 +16,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.popup import Popup
 import os
 from constantes import *
-
 from os.path import join, isdir
-
 from kivy.adapters.dictadapter import ListAdapter
 from kivy.uix.listview import ListItemButton, ListItemLabel, \
         CompositeListItem, ListView
@@ -27,10 +25,8 @@ from kivy.adapters import dictadapter
 import threading
 
 from screenredimensionable import ScreenRedimensionable
-
 from customwidgets import MyListItemButton
 
-#class SubirCapturasServidorScreen(Screen):
 class SubirCapturasServidorScreen(ScreenRedimensionable):
 	
 	def __init__(self,**kwargs):
@@ -39,14 +35,10 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 		self.listado_capturas.adapter.bind(on_selection_change = self.cambio_seleccion)
 		print "Bindeados elementos en subircapturasservidor!\n"
 
-
-
-
 	#Recorre todos los elementos del listview y los marca segun el parametro
 	# "activos".
 	def marcarCapturas(self,activo):
 		print "\nEn marcarCapturas con activo: %s\n" % activo
-		#print "\nself.ids.listado.adapter: %s\n\n" % self.ids.listado.adapter.__dict__
 		colItemFalla = self.ids.listado.adapter.data
 		print "self.ids.listado.adapter.data: %s\n" % self.ids.listado.adapter.data
 		print "self.ids.listado.adapter.selection: %s\n" % self.ids.listado.adapter.selection
@@ -83,16 +75,12 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 					self.ids.check_box_seleccionar_todo.active 
 		self.marcarCapturas(activo = self.ids.check_box_seleccionar_todo.active)
 
-
-	
 	#Se desmarcan los elementos seleccionados antes al salir de la vista
 	def desMarcarElementos(self):
 		print "Desmarcando elementos ...\n" 
 		self.marcarCapturas(activo=False)
 		self.ids.check_box_seleccionar_todo.active = False
 		print "Desmarcados todos los elementos!\n"
-
-
 
 	#Se deseleccionan los elementos cunado adapter.selection<2 porque
 	# sino se cambia el estado del primer elemento en la lista a
@@ -105,28 +93,20 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 		print "\n*****************************************\n"
 		print "Fin de cambio_seleccion"
 
-
-
 	def refrescar_vista(self,listview):
 		print "Refrescando vista!!!! "
 		controlador = App.get_running_app()
 		controlador.filtrarCapturas()
 		
-
 	def actualizarListaCaps(self,fallasFiltradas):
 		self.listado_capturas.adapter.data = fallasFiltradas
 
-
-
-
-	#Envia las capturas adaptadas para el envio al servidor,
-	#
+	#Envia las capturas adaptadas para el envio al servidor
 	def enviar_capturas(self):
 		t = threading.Thread(name="thread-existenFallasSeleccionadas",
 								target=self._existenFallasSeleccionadas)
 		t.setDaemon(True)
 		t.start()
-
 		
 	def _existenFallasSeleccionadas(self):
 		existenFallas = existenCapsInconsistentes =  False
@@ -155,31 +135,11 @@ class SubirCapturasServidorScreen(ScreenRedimensionable):
 	def _comenzarEnvioArchivos(self,popup):
 		self.manager.current = 'enviocapturasserver'
 
-
-# BACKUP!
-#	def _existenFallasSeleccionadas(self):
-#		existenFallas = False
-#		for falla in self.listado_capturas.adapter.data:
-#			if falla.is_selected:
-#				existenFallas = True
-#				break
-#		print "Resultado de controlador.existenFallasSeleccionadas()? %s\n" %\
-#				existenFallas
-#		if not existenFallas:
-#			controlador = App.get_running_app()
-##			controlador.mostrarDialogoMensaje( title="Seleccion de fallas",
-#												text = "Se debe seleccionar al menos una falla\n del listado para realizar un envio al servidor.")
-#		else:
-#			self.manager.current = 'enviocapturasserver'
-
-
 	def volver(self):
 		#Limpiar el ListView y volver
 		print "Vaciadas capturas!"
 		self.desMarcarElementos()
 		self.listado_capturas.adapter.data = []
-
-		#self.manager.current = 'menu'
 		self.manager.get_screen("subMenuServidor").habilitarOpciones()  
 		self.manager.current = 'subMenuServidor'
 

@@ -10,7 +10,6 @@ from kivy.core.window import Window
    
 # Constante para controlar cuantos niveles puede subir el usuario en 
 # el sist. de archivos
-#ROOT_PCD_FOLDER = "../"
 ROOT_PCD_FOLDER = path.pardir + path.sep
 
 TITULO_APP = "Aplicacion de captura de fallas"
@@ -146,85 +145,12 @@ FALLA_NO_ESTABLECIDA = -1
 
 PATH_ARCH_UBICACIONES_FALSAS = "latitudesFalsas.json"
 
-#DICCIONARIO_FAKE_GPS = {
-#						1: {
-#							"nombreCalle": "Michael Jones[1-99] y Av. Hipolito Irigoyen",
-#							"latitud":-43.2612999,
-#							"longitud":-65.2952564
-#						},
-						
-#						2: {
-#							"nombreCalle": "Condarco [1150-1198] y Fray Luis Beltran",
-#							"latitud": -43.2599560,
-#							"longitud":-65.2986200
-#						}
-
-						#,3: {
-						#	"nombreCalle": "Cabot[1-98] y Condarco",
-						#	"latitud": -43.2589910,
-						#	"longitud":-65.2992550
-						#},
-
-						#4: {
-						#	"nombreCalle": "Moreno[999-1099] y Cutillo",
-						#	"latitud": -43.2574960,
-					#		"longitud":-65.2976790
-					#	},
-						#5: {
-						#	"nombreCalle": "Muzio-j [1-99] y Moreno",
-						#	"latitud": -43.2568820,
-						#	"longitud":-65.2990470
-						#},
-						#6: {
-						#	"nombreCalle": "Ameguino[699-799] y Sobernia Nacional",
-						#	"latitud": -43.2591600,
-						#	"longitud":-65.3114380
-						#},
-						#7: {
-						#	"nombreCalle": "Pelegrini[700-798] y Moreteau",
-						#	"latitud": -43.2591350,
-						#	"longitud":-65.3081930
-						#},
-						#8: {
-						#	"nombreCalle": "San Martin y Rivadavia",
-						#	"latitud": -43.253469,
-						#	"longitud":-65.308611
-						#},
-						#9: {
-						#	"nombreCalle": "Av. Rawson y Bell A.P.",
-						#	"latitud":-43.252091 ,
-						#	"longitud":-65.313846
-						#},
-						#10: {
-						#	"nombreCalle": "Pecoraro y Ecuador",
-						#	"latitud": -43.251478,
-						#	"longitud": -65.317677
-						#},
-						#11: {
-						#	"nombreCalle": "Gales y Marconi",
-						#	"latitud": -43.252548,
-						#	"longitud": -65.318417
-						#},
-						#12: {
-						#	"nombreCalle": "Rivadavia y Ecuador",
-						#	"latitud": -43.249282,
-						#	"longitud": -65.310902
-						#}
-#}
-
-
-
-
-CSV_TMP_DIR = "csv" + path.sep #Directorio a parte de los .pcd donde se almacenan
-					# los .csv convertidos y que se subiran al servidor
-
 #############################################################################################
 #################### Constantes para comunicacion con el  servidor ##########################
 #############################################################################################
 
 
 #Servidor local rodrigo(Ultima version localhost:80)
-#URL_SERVIDOR_LOCAL = "http://localhost:81/web/"
 URL_SERVIDOR_LOCAL = "http://localhost/web/"
 
 #Servidor Externo
@@ -239,14 +165,10 @@ URL_CHECK_FALLA =  URL_SERVIDOR_LOCAL + "restapi/verificar_falla"
 # URL donde el usuario subira las capturas en .pcd
 URL_UPLOAD_SERVER = URL_SERVIDOR_LOCAL + "restapi/upload_pcd"
 
-# URL para obtener los baches informados
-#URL_INFORMADOS  = "http://localhost:8080/api/falla/get/informados"
-
 # http://localhost/repoProyectoBacheo/web/restapi/obtener_informados/calle/belgrano
 URL_INFORMADOS  = URL_SERVIDOR_LOCAL + "restapi/obtener_informados/calle/"
 
 URL_GET_DIRECCION = URL_SERVIDOR_LOCAL + "restapi/obtener_datos_direccion/"
-
 
 # http://localhost:81/web/restapi/obtener_props_confirmadas
 URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirmadas" 
@@ -257,12 +179,7 @@ URL_GET_PROPS_CONFIRMADAS = URL_SERVIDOR_LOCAL + "restapi/obtener_props_confirma
 # http://localhost/repoProyectoBacheo/web/restapi/obtener_sugerencias_calle/calle/ca/cantmaxsugerencias/4
 
 #http://localhost/repoProyectoBacheo/web/restapi/obtener_sugerencias_calle/calle/ca/cantmaxsugerencias/4
-#URL_RAIZ = "http://localhost/repoProyectoBacheo/web"
-#URL_OBTENER_SUGERENCIAS_CALLES = URL_SERVIDOR_LOCAL + "/restapi/obtener_sugerencias_calle"
 URL_OBTENER_SUGERENCIAS_CALLES = URL_SERVIDOR_LOCAL + "restapi/obtener_sugerencias_calle"
-
-
-
 
 DIVISOR_EN_MB = 1000000.0
 
@@ -281,17 +198,15 @@ MAX_FILE_UPLOADS_FOR_REQUEST = 20
 
 
 # Constante que define el IdFalla(invalido para la BD) para las fallas de la calle,
-# con el que se dara de alta en el sistema.  
-#
+# con el que se dara de alta en el sistema.
+
 ID_FALLA_NUEVA_DEFECTO = -1
-
-
-
 
 
 ####################################################################################
 ######################## CONSTANTES PARA FALLAS CONFIRMADAS ########################
 ####################################################################################
+
 ID_TIPO_MATERIAL_DEFECTO = 1
 ID_TIPO_FALLA_DEFECTO = 1
 ID_TIPO_ESTADO_CONFIRMADO = 2
@@ -304,37 +219,26 @@ ID_USUARIO_CALLEJERO = 1 #Se carga en la BD un usuario que sea el usuario recole
 
 LOCAL_BD_PROPS_CONFIRMADAS = "./DB_CONFIRMADAS.json" 
 
-
-
 ####################################################################################
 ############################### CONSTANTES PARA LA DB LOCAL DE CAPTURAS ############
 ####################################################################################
-#LOCAL_DB_JSON_NAME = './DB_MUESTRAS_LOCALES_30-03-2017.json'
+
 LOCAL_DB_JSON_NAME = './DB_MUESTRAS_LOCALES_'
 
-#EXTENSION_LOCAL_BD_JSON_NAME = '.json'
 EXTENSION_LOCAL_BD_JSON_NAME = path.extsep + 'json'
-
-
 
 #Tiempo maximo de espera en segundos para obtener una latitud y longitud
 MAX_TIMEOUT_SEGS = 6
 INVALID_LAT_LONG = -1
 DEVICE_GPS_DEFAULT = "/dev/rfcomm1"
 
-
-
-
 #PATH AL SCRIPT DE VISUALIZACION
 PATH_VIEW_PCD_FILE_SCRIPT = "./see_capture.sh"
 REMOVE_COMMAND = "rm"
 
-
-
 #Constantes de los tipos de formato de almacenamiento de la captura PCD
 PCD_XYZ_FORMAT = "XYZ"
 PCD_XYZ_RGB_FORMAT = "XYZRGB"
-#RGB_CAPTURADOR_PATH = "capturador_RGB/openniViewer"
 RGB_CAPTURADOR_PATH = "capturador_RGB" + path.sep + "openniViewer"
 
 #Expresado en seg.
@@ -343,21 +247,16 @@ TIMEOUT_FOR_KILLING_PROCESS = 10
 ################################################################################################
 ######################## CONSTANTES PARA LOS ICONOS Y SPINNERS DE LA APP########################
 ################################################################################################ 
-TAMANIO_ICONOS = 32
-#TAMANIO_CUSTOM_ICONOS = 55
-TAMANIO_CUSTOM_ICONOS = 65
 
+TAMANIO_ICONOS = 32
+TAMANIO_CUSTOM_ICONOS = 65
 TAMANIO_SPINNER = 40
 COLOR_SPINNER = "'5729ff'"
 NOMBRE_FONT_TTF = 'resource'+ path.sep + 'fonts' + path.sep + 'font-awesome' + path.extsep + 'ttf'
 NOMBRE_FONT_DICT = 'resource'+ path.sep + 'fonts'+ path.sep +'font-awesome' + path.extsep + 'fontd'
-
 TAMANIO_ICONOS_CTRL_BAR = 18
-
-
 BTN_BORRAR_SELECTED_COLOR = [1,0,0,1]
 BTN_BORRAR_UNSELECTED_COLOR = [1,1,1,1]
-
 
 SPINNER_LABEL = """
 #: import icon iconfonts.icon
@@ -383,36 +282,35 @@ Label:
 ###########################################################################################################
 ########################## CONSTANTES PARA LOS ARGUMENTOS POR LINEA DE COMANDOS  ##########################
 ###########################################################################################################
+
 OPCIONES_GPS = ['fakegps','realgps']
 OPCIONES_CAPTURA = ['xyz_rgb','xyz']
 
 TIPO_GPS_DEFAULT = OPCIONES_GPS[0]  #Alternativa 'realgps'
 TIPO_CAPTURA_DEFAULT = OPCIONES_CAPTURA[0] # Alternativa 'xyz'
 
-
 # Timeout para cerrar la aplicacion porque no se reciben datos del sensor Kinect.
 TIMEOUT_KINECT_SEG = 2
-
 
 # CONSTANTES PARA LOGGING EN ARCHIVO
 APP_NAME_LOGGING = "appCliente"
 
 #Archivo con capturas corruptas.
-LOGS_DEFAULT_DIR = "_logs/"
 
+LOGS_DEFAULT_DIR = "_logs/"
 LOG_FILE_CAPTURAS_CORRUPTAS_DEFAULT = "capturasCorruptas.log"
 LOG_FILE_CAPTURAS_INFO_SERVER = "infoServidor.log"
 LOG_FILE_CAPTURAS_PROPS_CONFIRMADA = "infoCargaPropiedades.log"
-#Usado para el metodo subir_archivos que llama a filtrarCapturas()
-LOG_FILE_FILTRADO_CAPS = "infoFiltradoCaps.log"
 
+#Usado para el metodo subir_archivos que llama a filtrarCapturas()
+
+LOG_FILE_FILTRADO_CAPS = "infoFiltradoCaps.log"
 LOGGING_DEFAULT_LEVEL = logging.INFO
 
 ###########################################################################################################
 ########################## CONSTANTES DE CODIGOS DE ERROR DE GEOCODING DEL SERVIDOR  ##########################
 ###########################################################################################################
 #NOTA: Estas constantes se encuentran definidas en la webapp en application/config/constants.php
-#
 
 DIRECCION_PHP_DIRECCION_NO_RETORNADA = -1
 DIRECCION_PHP_PETICION_SIN_RESULTADOS = -2
@@ -442,66 +340,19 @@ FALLA_PHP_CALLE_NO_DISPONIBLE,
 DIRECCION_PHP_LAT_LONG_FUERA_CIUDAD,
 FALLA_INVALIDA ]
 
-
-
-
-
 ############################################################################################
 ################################ CONSTANTES DE AUTOCOMPLETE ################################
 ############################################################################################
-#
 
 #Autocomplete (Obtener fallas del servidor)
 CANT_SUGERENCIAS = 3
-
-
-#Diccionario de criticidades que se va a obtener del server
-
-CRITICIDADES = [
-				{
-					"id":1,
-					"nombre":"Alta Bache", 
-					"descripcion":"Para baches entre x e y"
-				},
-				{
-					"id":2,
-					"nombre":"Media Bache", 
-					"descripcion":"Para baches entre x e y"
-				},
-				{
-					"id":3,
-					"nombre":"Baja Bache", 
-					"descripcion":"Para baches entre x e y"
-				},
-				{
-					"id":4,
-					"nombre":"Adicional Bache", 
-					"descripcion":"Para baches entre x e y"
-				},
-				{
-					"id":5,
-					"nombre":"Adicional Bache", 
-					"descripcion":"Para baches entre x e y"
-				},
-				{
-					"id":6,
-					"nombre":"Adicional Bache", 
-					"descripcion":"Para baches entre x e y"
-				}
-]
-
-# Criticidades habilitadas para seleccionar en el menu 
-#IDS_CRITICIDADES_HABILITADAS = [1,2,3,4,5]
-
 
 # Archivos modificados en servidor -->
 # -config/routes.php
 # -controllers/api_rest.php
 # -models/calle.php
 #
-#REGEX_FORMATO_FECHA = '.*(\d{1,2}-\d{1,2}-\d{1,2}).*'
 REGEX_FORMATO_FECHA = '.*\d+-\d+-\d+.*'
-#SUBFIJO_ARCHIVOS_BD_CONFIRMADAS = ".json"
 PATRON_SUBFIJO_ARCHIVOS_BD_CONFIRMADAS = ".*\.json$"
 
 #CONSTANTES PARA LA CARGA DE SUBMENUS CON SCREENMANAGERS INDEPENDIENTES
@@ -551,12 +402,9 @@ LISTADO_SUB_MENUS = [
 # Constante para identificar el tipo de elemento de los archivos de configuracion
 TIPO_SUB_MENU = "subMenu"
 TIPO_SCREEN = "screen"
-#TIPO_SCREEN_CONCURRENTE = "screenconcurrente"
 
 # Constantes para el tamanio de los iconos en screen "propsTipoFalla" (solicitado en 
 # modulo customwidgets)
-
-#TAMANIO_PLUS_ICON_DROPDOWN = 17
 TAMANIO_PLUS_ICON_DROPDOWN = 22
 TAMANIO_ELEMENTOS_CUSTOM_DROPDOWN = '18sp' 
 PREFIJO_LABEL_DROPDOWN = "label"
@@ -565,22 +413,16 @@ TAMANIO_TEXTO_LABELS_DROPDOWN = '24sp'
 #Espacio que se reserva horizontalmente por opcion de cada CustomDropdown
 PADDING_POR_WIDGET = 36
 
-
 #Ponderaciones para los tipos de criticidad de las fallas
 PONDERACION_BAJA_CRITICIDAD = 1
 PONDERACION_MEDIA_CRITICIDAD = 1.15
 PONDERACION_ALTA_CRITICIDAD = 1.5
-
-
 ESTADO_POR_DEFAULT_SUBIDA_CAPTURAS = "Confirmado"
 
 # Estos son los IDs que se emplean para indicar los tipos de falla y sus respectivos
 # tipos de material y criticidades habilitados. Estos IDS se corresponden con los de 
 # la tabla "TipoFallaModelo".
-#IDS_TIPOS_FALLA_HABILITADOS = [1,2]
 IDS_TIPOS_FALLA_HABILITADOS = [2,3]
-
-
 
 PONDERACION_CRITICIDAD_BAJA = 1
 PONDERACION_CRITICIDAD_MEDIA = 1.15
@@ -596,15 +438,10 @@ COLOR_PONDERACION_MEDIA = 'ff890b'
 #ALTA ROJO -->
 COLOR_PONDERACION_ALTA = 'FF0000'
 
-#BACKUP!
-#COLOR_PONDERACION_BAJA = '1710EC'
-#COLOR_PONDERACION_MEDIA = 'F2F939'
-#COLOR_PONDERACION_ALTA = 'FF0000'
-
-
 # Patrones para usar con regex.
 # Patron para detectar texto con etiquetas de marcado 
 PATRON_ICONO_DROPDOWN = ".*\[/\color\].*"
+
 # Patron para detectar la separacion de propiedades por ":".
 # Si el nombre y la descripcion de una propiedad de la falla se separa por ":", entonces
 # se procede a filtrar solamente el nombre. Este caso se aplica a la criticidad de una falla 
@@ -637,110 +474,56 @@ DEFAULT_SPACING = [( Window.width * ESCALA_SPACING_VERTICAL ),0]
 # aparecen en los submenus de appCliente.
 # 
 ESTILO_BOTON_DEFAULT_OPCIONES_MENU = 'atlas://customAppCliente/button'
-
 ESTILO_BOTON_DEFAULT_PRESIONADO = 'atlas://customAppCliente/button_pressed'
-
-
-
-
-
 ESTILO_CHECKBOX_DESSELECCIONADO = 'atlas://customAppCliente/checkbox_off'
 ESTILO_CHECKBOX_SELECCIONADO = 'atlas://customAppCliente/checkbox_on'
 
 #Estilos para el strip del tabbedpanel principal
 ESTILO_TABBED_PANEL_PRESIONADO = 'atlas://customAppCliente/tab_btn_pressed'
 ESTILO_TABBED_PANEL_NORMAL = 'atlas://customAppCliente/tab_btn'
-
 ESTILO_AUTOCOMPLETE_OPCIONES = 'atlas://customAppCliente/autocomplete_normal'
 
-
-#Estilo principal de los tabbedpanelItem que contienen a los screens
-#Color gris
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv1'
-
-#Mapa
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv2'
-
-#Logo UNPSJB
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv3'
-
-
-#Color amarillo
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv5'
-
-#Otro Mapa
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv4'
-
 #Mapa con zoom-out mayor
-#ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv7'
 
-
-#Mapa con zoom-out mayor
 ESTILO_FONDO_TABBED_PANEL = 'atlas://customAppCliente/tabv8'
 
-
 #Estilo de los dialogos que se invocan con controlador.mostrarDialogo()
+
 ESTILO_BACKGROUND_MODAL_XBASE = 'atlas://customAppCliente/modalview-background'
 
-
 #Estilos de los items que se muestran en los listview de capturarfallainformada y subirfalla
-#
+
 #ESTILO_BOTON_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_seleccionado'
 ESTILO_BOTON_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_seleccionado2'
 ESTILO_BOTON_NO_SELECCIONADO_LIST_VIEW = 'atlas://customAppCliente/button_listview_no_seleccionado'
 
-
-
-
-
-
-
-
-
-
 COLOR_SEPARADOR_POPUPS = [1,1,1,1]
 
-
 #Constantes para el texto en cada Label del CustomDropDown
+
 COLOR_DROPDOWN_TEXTO_DESHABILITADO = (94.0/255, 94.0/255, 94.0/255,0.4)
 
 #Constantes para el row del CustomDropDown
-#
+
 COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 255.0/255.0,0.3)
 COLOR_ROW_PAR_DROPDOWN = (0.0/255.0,0.0/255.0,255/255.0,0.6) 
 COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
 
 #Estilo que representa el color del treeviewlabel "root" cuando se
 # selecciona una opcion.
+
 ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_DROPDOWN_ROW_SELECCIONADO[0],
 										COLOR_DROPDOWN_ROW_SELECCIONADO[1],
 										COLOR_DROPDOWN_ROW_SELECCIONADO[2],
 										0.50)
 
-#BACKUP!!
-#Constantes para el row del CustomDropDown
-#
-#COLOR_DROPDOWN_ROW_SELECCIONADO = (25.0/255.0, 152.0/255.0, 229.0/255.0,0.3)
-#COLOR_ROW_PAR_DROPDOWN = (251/255.0,224/255.0,0/255.0,0.6) 
-#COLOR_ROW_IMPAR_DROPDOWN = COLOR_ROW_PAR_DROPDOWN
-
-#Estilo que representa el color del treeviewlabel "root" cuando se
-# selecciona una opcion.
-#ESTILO_ROOT_TREELABEL_SELECCIONADO = (COLOR_ROW_PAR_DROPDOWN[0],
-#										COLOR_ROW_PAR_DROPDOWN[1],
-#										COLOR_ROW_PAR_DROPDOWN[2],
-#										0.50)
-
-
 # Estilos que se usan para los botones del listado en los screens
-# "capturarfallainformada" y "subirfalla".  
+# "capturarfallainformada" y "subirfalla".
+
 COLOR_ITEMS_LISTADO_NO_SELECCIONADO = [ 35/255.0, 235/255.0, 237/255.0, 1]
 COLOR_ITEMS_LISTADO_SELECCIONADO = [25/255.0, 105/255.0, 204/255.0, 1]
 
-
 PATH_LOG_PRINCIPAL = "_logs/log.txt"
-
-
 
 #AZUL OSCURO
 COLOR_PRUEBA_LISTVIEW_ITEM_NO_SELECCIONADO = [ 1,46,136 ] 
@@ -771,11 +554,3 @@ ESTILO_TREE_VIEW = '''
             rgba: .5, .5, .5, .2
         Line:
             points: [self.parent.x, self.y, self.parent.right, self.y] if self.parent else []'''
-
-
-
-
-
-
-
-

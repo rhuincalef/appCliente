@@ -2,12 +2,11 @@
 import kivy
 kivy.require('1.0.5')
 
-
 from kivy.uix.floatlayout import FloatLayout
 from kivy.app import App
 from kivy.properties import ObjectProperty, StringProperty
 
-#IMports de Kinect
+#Imports de Kinect
 import freenect
 from time import sleep
 from threading import Thread
@@ -23,8 +22,6 @@ from kivy.uix.slider import Slider
 from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 
-
-#import the necessary modules
 import numpy as np
 
 from calibkinect import depth2xyzuv,xyz_complete_matrix
@@ -143,7 +140,6 @@ class KinectDepth(Thread):
     def __init__(self, *largs, **kwargs):
         super(KinectDepth, self).__init__(*largs, **kwargs)
         self.daemon = True
-        #self.queue = deque()
         self.queueVideo = deque()
         self.queueGreyImg = deque()
         self.queueGreyImg2 = deque()
@@ -151,7 +147,6 @@ class KinectDepth(Thread):
         self.index = 0
         self.depths = None
         self.depths2 = None
-        #AGREGADO RODRIGO
         self.detenido = False
         self.recibiendoDatos = False # La primera vez que se crea alguna de las texturas 
                                     # este flag se pone en True.Sirve para determinar
@@ -188,7 +183,6 @@ class KinectDepth(Thread):
                 qGreyImg.appendleft(self.depths)
                 qGreyImg2.appendleft(self.depths2)
                 self.marcarRecepcionDatos()
-                #print "Appendeando data a las colecciones!\n"
 
             except TypeError, e:
                 print "Excepcion typeError en thread KinectDepth!!!\n"
@@ -203,16 +197,11 @@ class KinectDepth(Thread):
                 print "%s" % e
                 print "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 
-
-
-                 
     def popVideo(self):
         return self.queueVideo.pop()
 
-
     def popGreyImg(self):
         return self.queueGreyImg.pop()
-
 
     def popGreyImg2(self):
         return self.queueGreyImg2.pop()
@@ -232,24 +221,11 @@ class KinectDepth(Thread):
 
     #Kinect.get_depths()
     def get_depths(self):
-        #if not self.kinect.hayFrames():
         if not self.hayFrames():
             msg = "No existen frames obtenidos desde el sensor.\nInténtelo de nuevo."
             print msg
             raise ExcepcionSinFrames(msg)
         return self.depths
-
-
-#BACKUP!
-#    def get_depths(self):
-#        return self.depths
-
-#    def hayFrames(self):
-#        print "len(self.queueVideo) = %s\n" % len(self.queueVideo)
-#        return len(self.queueVideo)>0
-
-
-
 
 
 import pypcd
@@ -261,29 +237,21 @@ class KinectViewer(Image):
     def __init__(self,**kwargs):
         self.kinect = None
         self.controlador = App.get_running_app()
-        
-        # parent init
         super(KinectViewer, self).__init__(**kwargs)  
-        #Clock.schedule_interval(self.actualizar_imagen, 1.0/30.0)
         print "El tamanio de la ventana es: %s,%s \n" % (Window.size[0],Window.size[1])
     
-
     def iniciarSensado(self,depthThread):
         from kivy.core.window import Window
         self.kinect = depthThread
         Clock.schedule_interval(self.actualizar_imagen, 1.0/30.0)
         print "Planificado el inicioSensado RGB! \n"
 
-    #AGREGADO RODRIGO
     #KinectViewer.detenerSensado()
     def detenerSensado(self):
         Clock.unschedule(self.actualizar_imagen)
         print "Desplanificada RGB IMG!\n"
 
-
     def actualizar_imagen(self, dt):
-        #print "\n--------------------------------------------\n\n"
-        #print "En KinectViewer.actualizar_imagen() !\n"
         try:
             value = self.kinect.popVideo()
         except Exception as e:
@@ -293,20 +261,16 @@ class KinectViewer(Image):
                                     colorfmt='rgb')
         texture1.flip_vertical()
         texture1.blit_buffer(value.tostring(), colorfmt='rgb')
-        self.texture = texture1
-        #print "Creada textura: %s\n" % self.texture
-        #print "\n--------------------------------------------\n\n"
-    
+        self.texture = texture1    
 
-    # Prepara los datos del sensor, empaquetando el rgb del video al formato de PCL
-    # con las coordenadas,obtenidas de la profundidad .
-    # 
+    
     def getDatosSensor(self,formato=PCD_XYZ_RGB_FORMAT):
+        """Prepara los datos del sensor, empaquetando el rgb del video al formato de PCL
+            con las coordenadas,obtenidas de la profundidad ."""
         print "En getDatosSensor()...\n"
         print "Existen frames obtenidos desde el sensor Kinect!\n"
         if formato == PCD_XYZ_RGB_FORMAT:
             rgbConCod = list()
-            #self.kinect.hayFrames()
             rgbSinCod = get_video2()
             print "rgbSinCod.shape: (%s,%s)\n" % (rgbSinCod.shape[0],rgbSinCod.shape[1]) 
             print "rgbSinCod.size: %s\n" % rgbSinCod.size
@@ -344,7 +308,6 @@ class KinectViewer(Image):
             data = xyz.astype(np.float32)
             return data
 
-
 import numpy as np
 import io
 from io import BytesIO
@@ -352,21 +315,14 @@ from PIL import Image as PILImage
 from numpy import random
 from kivy.graphics.texture import Texture
 
-
-
-
 from kivy.uix.effectwidget import EffectWidget
 from kivy.uix.effectwidget import InvertEffect,HorizontalBlurEffect
 
 from kivy.properties import NumericProperty, StringProperty
 from kivy.graphics import RenderContext, Color, Rectangle
-
 from kivy.uix.boxlayout import BoxLayout
 from time import sleep
-
 from kivy.core.window import Window
-
-
 
 fragment_header = '''
 #ifdef GL_ES
@@ -511,11 +467,8 @@ class KinectViewerGreyScale(Image):
         self.kinect = None
         self.imagen_kv = None
         self.controlador = App.get_running_app()
-        
-        # parent init
         super(KinectViewerGreyScale, self).__init__(**kwargs)  
         print "Llamada a la superclase de kinectViewer greyscale OK!...\n"
-
         self.canvas = None
         self.canvas = RenderContext()
         #self.canvas.shader.fs = hsv_kinect
@@ -525,8 +478,6 @@ class KinectViewerGreyScale(Image):
             size=(640, 480), colorfmt='luminance', bufferfmt='ushort')
         self.texture.flip_vertical()
         print "Creada kinectViewer greyscale!\n"
-
-
 
     def on_index(self, instance, value):
         self.kinect.index = value
@@ -539,14 +490,11 @@ class KinectViewerGreyScale(Image):
         elif value == 'points':
             self.canvas.shader.fs = points_kinect
 
-
     def iniciarSensado(self,depthThread):
         from kivy.core.window import Window
         self.kinect = depthThread
         Clock.schedule_interval(self.actualizar_imagen, 0)
 
-
-    #AGREGADO RODRIGO
     #KinectViewerGreyScale.detenerSensado()
     def detenerSensado(self):
         Clock.unschedule(self.actualizar_imagen)
@@ -595,17 +543,8 @@ class KinectScreen(ScreenRedimensionable):
         print "Obtenido teclado...\n"
         self.dir_trabajo = "."
         
-
-    #AGREGADO RODRIGO
-    # Obtiene una referencia al thread que interactua con el sensor para obtener
-    # los datos.
-    #def getThreadCapturaSensor(self):
-    #    return self.depthThread
-
-    #AGREGADO RODRIGO
     def recibiendoDatosKinect(self):
         return self.depthThread.recibiendoDatos    
-
 
     def on_pre_enter(self):
         controlador = App.get_running_app()
@@ -621,17 +560,14 @@ class KinectScreen(ScreenRedimensionable):
                                                 text='No se pueden realizar capturas hasta que\n el sensor se encuentre conectado.\nConecte el sensor y reinicie la aplicacion.')
             popup.bind(on_dismiss=self.cancelarCaptura)
 
-
-    # Establece una alarma para monitorear si se estan alamcenando frames
-    # en el thread que mantiene el sensor en ejecucion.Si no es asi,
-    # se muestra un dialog informando al usuario que debe reiniciar la app.
     def _iniciarMonitorDatosKinect(self):
+        """Establece una alarma para monitorear si se estan almacenando frames
+            en el thread que mantiene el sensor en ejecucion.Si no es asi,
+            se muestra un dialog informando al usuario que debe reiniciar la app."""
         signal.signal(signal.SIGALRM,self._handlerTimeout)
         signal.alarm(TIMEOUT_KINECT_SEG)
         
-
     def _handlerTimeout(self,signum, frame):
-        #raise ExcepcionTimeout("Error al abrir el dispositivo.\n Dispositivo ocupado\n")
         print 'Llamando al manejador!\n'
         if not self.depthThread.recibiendoDatos:
             signal.alarm(0) # Disable the alarm
@@ -649,13 +585,10 @@ class KinectScreen(ScreenRedimensionable):
         controlador = App.get_running_app()
         controlador.stop()
         self.volver()
-
     
     def on_leave(self):
         print "DesBindeada SPACEBAR!!\n"
         self._keyboard.unbind(on_key_down=self.tecla_presionada)
-
-    
 
     #Metodo que inicializa las imagenes para visualizar en Kinect.
     def inicializar_imagenes_kinect(self,depthThread):
@@ -663,13 +596,10 @@ class KinectScreen(ScreenRedimensionable):
         self.kinect_rgb.iniciarSensado(depthThread)
         self.kinect_grey.iniciarSensado(depthThread)
 
-
     def detener_imagenes_kinect(self):
         print "Deteniendo imagenes_kinect!!\n"
         self.kinect_rgb.detenerSensado()
         self.kinect_grey.detenerSensado()
-
-
 
     def tecla_presionada(self,keyboard,keycode,text,modifiers):
         print "keycode[0] : %s" % keycode[0]
@@ -680,11 +610,9 @@ class KinectScreen(ScreenRedimensionable):
             return True
         return False
 
-    #def setDatosCaptura(self,nombre_captura,dir_trabajo,id_falla):
     def setDatosCaptura(self,nombre_captura,dir_trabajo):
         self.nombre_captura = nombre_captura 
         self.dir_trabajo = dir_trabajo
-
 
     def capturar(self):
         controlador = App.get_running_app()
@@ -704,11 +632,9 @@ class KinectScreen(ScreenRedimensionable):
             controlador.mostrarDialogoMensaje(text= e.message,
                                         title = "Error de datos en el sensor")
             return
-        
-        
-        
-    #Actualiza el screen que tiene el listado de capturas
+
     def actualizar_vista_archivos(self,nombre_screen):
+        """Actualiza el screen que tiene el listado de capturas."""
         #Se instancia de vuelta el dialogopropscaptura
         my_screen = None
         for s in self.manager.screens:

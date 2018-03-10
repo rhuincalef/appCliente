@@ -14,8 +14,7 @@
 # python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/grieta_1.pcd" 2>&1 | tee generador.txt
 
 #NUEVA PRUEBA -->
-# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/bachePav113.pcd" 2>&1 | tee generador.txt
-# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/ba.pcd" 2>&1 | tee generador.txt
+# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/baches_trelew_1.pcd" 2>&1 | tee generador.txt
 
 
 import sys, os

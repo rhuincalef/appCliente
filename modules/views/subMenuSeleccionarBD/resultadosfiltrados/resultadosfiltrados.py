@@ -4,7 +4,6 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.event import EventDispatcher
 from kivy.uix.button import Button
-#from kivy.uix.label import Label
 from kivy.event import EventDispatcher
 from kivy.uix.button import Button
 from kivy.uix.label import Label
@@ -12,10 +11,8 @@ from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.checkbox import CheckBox
 
-
 # Este widget es un box layout que agrupa un CheckBox y un label que indica la opcion
 # que se selecciono.
-
 class RadioGroup(BoxLayout):
 
     def __init__(self,text="",**kwargs):
@@ -23,14 +20,10 @@ class RadioGroup(BoxLayout):
         self.orientation = 'horizontal'
         self.cb = CheckBox(group='1')
         self.cb.size_hint = (0.1,1)
-        #self.cb.bind(active = self.on_checkbox_active)
         self.add_widget(self.cb)
         self.contenido = Label(text = text)
         self.contenido.size_hint = (0.9,1)
-
         self.add_widget(self.contenido)
-
-        #self.bind(on_touch_down = self.on_checkbox_active)
 
     def estaSeleccionado(self):
         print "\n\ncheckbox con contenido %s activo: %s\n" % \
@@ -54,10 +47,8 @@ class ContainerRadioGroup(BoxLayout):
             radio1.getCheckBox().bind(active = self.on_checkbox_active)
             self.add_widget(radio1)
 
-
     def on_checkbox_active(self,checkbox, value):
         if value:
-            #print('The checkbox', checkbox, 'is active')
             print "\n\nEl contenido seleccionado es: %s\n" % \
                                     self.obtenerContenidoSeleccionado()
 
@@ -71,10 +62,8 @@ class ContainerRadioGroup(BoxLayout):
                     break
         return result
 
-
 from notification import XMessage
 from os import path
-
 from screenredimensionable import ScreenRedimensionable
 
 class ResultadosFiltradosScreen(ScreenRedimensionable):
@@ -111,4 +100,3 @@ class ResultadosFiltradosScreen(ScreenRedimensionable):
                                             text = 'BD de Muestras locales %s \n cargada exitosamente!' % \
                                             archivoBD)
         self.manager.current = "subMenuSeleccionarBD"
-

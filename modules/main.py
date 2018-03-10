@@ -23,8 +23,6 @@ from kivy.uix.tabbedpanel import TabbedPanel,TabbedPanelHeader,TabbedPanelStrip,
 import utils
 from utils import *
 
-#cargarConfiguraciones()
-
 #Se importan los iconfonts para los iconos y spinners
 from iconfonts import *
 
@@ -1029,8 +1027,6 @@ class MainApp(App,EventDispatcher):
 			args.tipoCaptura = TIPO_CAPTURA_DEFAULT
 		print "Los argumentos enviados por consola son: %s\n" % args
 		return args
-
-
 
 #Ejemplo de la ejecucion del programa para enviar los comandos parseados por argparse:
 #

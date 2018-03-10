@@ -1,16 +1,7 @@
-# +Captura
-# 		-NombreCaptura
-# 		-DirLocal
-# 		-Formato
-# 		+convertir() //Se utilizara json para el envio al servidor.
-
-
-#import pcl
 import pypcd
 import numpy as np
 from constantes import *
-#from utils import generarDataCsv,REMOVE_COMMAND
-#from utils import REMOVE_COMMAND
+
 import os
 from os import path
 import subprocess
@@ -19,7 +10,6 @@ import threading
 import sys
 
 from constantes import EXTENSION_SUBIDA_SERVER_DEFAULT
-from constantes import CSV_TMP_DIR
 
 import utils
 from utils import *
@@ -28,6 +18,7 @@ from kivy.app import App
 from persistent import Persistent
 
 class Captura(Persistent):
+
 	def __init__(self,nombre,dirLocal,formatoArchivo,extensionArchivo):
 		self.nombreCaptura = nombre #Nombre sin extension.Ej:  "NUEVOSCONFIRMADOS"
 		self.dirLocal = dirLocal #Directorio local donde se guardan los archivos de captura.
@@ -36,54 +27,41 @@ class Captura(Persistent):
 		self.nombreArchivoCaptura = None #Nombre del archivo de captura completo.Ej."NUEVOSCONFIRMADOS_1.pcd"
 		self.estaSubidaAlServidor = False # determina si una captura se subio
 										#completamente al servidor.
-		#AGREGADO RODRIGO
 		self.consistente = True  # Determina si tanto la captura en memoria como en disco 
 								 # existen al momento de subirse al servidor,
 								 # si no es asi, no se la considera 
 								 # para enviarse al servidor.
 
-
-	# Este metodo verifica si el archivo existe en disco antes de realizar
-	# el envio al servidor. Retorna True si el archivo existe en disco,
-	# y False de otro modo.
-	#
 	def existeEnDisco(self):
+		""" Este metodo verifica si el archivo existe en disco antes de realizar
+			el envio al servidor. Retorna True si el archivo existe en disco y 
+			False en caso contrario."""
 		print "comprobando captura: %s\n" % self.getFullPathCaptura()
 		return path.isfile(self.getFullPathCaptura())
- 	
- 	
+ 	 	
  	def esConsistente(self):
  		return self.consistente
 
-	#Marca la captura como inconsistente
 	def marcarComoInconsistente(self):
+		"""Marca la captura como inconsistente."""
 		self.consistente = False
 
-
-
-	#Retorna el nombre del archivo+SUBFIJO+ID_INCREMENTAL+ EXTENSION_SUBIDA_DEFAULT
-	# (puede ser .pcd o .csv)
-	#
 	def getNombreCapturaConvertida(self):
+		"""Retorna el nombre del archivo + SUBFIJO + ID_INCREMENTAL + EXTENSION_SUBIDA_DEFAULT
+		(puede ser .pcd o .csv)."""
 		archivo_csv_salida = os.path.splitext(self.nombreArchivoCaptura)[0] 
 		return archivo_csv_salida + EXTENSION_SUBIDA_SERVER_DEFAULT
 	
-
-	#Retorna la ruta completa al archivo .csv convertido asociado a la captura
 	def getFullPathCapturaConv(self):
-		#return self.dirLocal + path.sep + CSV_TMP_DIR + self.getNombreCapturaConvertida() 
+		"""Retorna la ruta completa al archivo asociado a la captura. """
 		return self.dirLocal + path.sep + self.getNombreCapturaConvertida() 
-
 
 	#Retorna la ruta completa al archivo .pcd asociado con la captura
 	def getFullPathCaptura(self):
 		return self.dirLocal + path.sep + self.nombreArchivoCaptura 
 
-
 	def getNombreArchivo(self):
 		return self.nombreCaptura
-
-	
 
 	#NOTA: Este es el archivo de captura final con el nombre+SUBFIJO+ID_INCREMENTAL.pcd
 	def getNombreArchivoCaptura(self):
@@ -98,42 +76,30 @@ class Captura(Persistent):
 	def getExtension(self):
 		return self.extension
 
-	# AGREGADO PARA LA GENERACION DE RECORRIDOS ARTIFICIALES.
 	def setNombreArchivoCaptura(self, archivo_salida):
 		self.nombreArchivoCaptura = archivo_salida 
-
-
 
 	def __repr__(self):
 		return "Captura: nombreArchivoCaptura=%s , dirLocal = %s , nombreCaptura= %s;\n" %\
 					(self.nombreArchivoCaptura,self.dirLocal,self.nombreCaptura)
 
-	#Usado para el almacenamiento en formato json
 	def __str__(self):
+		""" Usado para el almacenamiento en formato json."""
 		cadena = ""
 		if self.nombreArchivoCaptura is not None:
 			cadena = self.nombreArchivoCaptura
 		return cadena
 
-	#Conversion a de los archivos .pcd a csv para enviar dentro del json de la falla
-	def convertir(self):
-		#os.path.splitext() divide el nombre de un archivo de la extension del mismo.
-		archivo_csv_salida = os.path.splitext(self.nombreArchivoCaptura)[0] 
-		nombreArchCsvNube = utils.generarDataCsv(self.nombreArchivoCaptura,
-									self.dirLocal,archivo_csv_salida)
-		return nombreArchCsvNube
-
-
 	# Usado por capturador.registrarCaptura(). Almacena el .pcd en disco.
 	#def almacenarLocalmente(self,data1,capturador, modo = PCD_XYZ_FORMAT):
 	def almacenarLocalmente(self,data1,capturador,modo):
+		"""Almacena el archivo de nube de puntos en disco en formado pcd. """
 		data = np.asarray(data1,dtype=np.float32)
 		instanciar_pointcloud = pypcd.make_xyz_point_cloud
 		if modo == TIPO_CAPTURA_DEFAULT:
 			instanciar_pointcloud = pypcd.make_xyz_rgb_point_cloud
 
 		pc = instanciar_pointcloud(data)
-		
 		# Se obtiene la cantidad de archivos con un nombre dentro
 		# en un dir. de prueba dado
 		try:
@@ -143,9 +109,7 @@ class Captura(Persistent):
 		                    + self.extension
 
 		  path_out = self.dirLocal + path.sep + archivo_salida 
-		  #print "El path_out generado para captura es: %s\n" % path_out
 		  pc.save_pcd(path_out)
-		  #print "Salvada captura XYZ! en: %s\n" % path_out
 		  self.nombreArchivoCaptura = archivo_salida
 		  return archivo_salida
 		except OSError as e:
@@ -154,10 +118,10 @@ class Captura(Persistent):
 		  sys.exit(1)
 
 
-	# Descarta la captura de disco,borrando el .pcd y .csv y, borrandose
-	# de la coleccion de capturas
 	# captura.descartar()
 	def descartar(self,colCaps):
+		"""Descarta la captura de disco, borrando el .pcd y borrandose
+		de la coleccion de capturas."""
 		try:
 			subprocess.check_call([REMOVE_COMMAND,self.getFullPathCaptura()])
 			print "Borrada captura de disco! %s\n" % self.getFullPathCaptura()

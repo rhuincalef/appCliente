@@ -30,7 +30,7 @@ import gps
 
 
 class GeofencingAPI1(object):
-	""" API para obtener la calle y altura de una falla confirmada,
+	"""API para obtener la calle y altura de una falla confirmada,
 		dada su latitud y longitud. """
 
 	def __init__(self):
@@ -55,11 +55,6 @@ class GeofencingAPI1(object):
 	def obtenerAltura(self,latitud,longitud):
 		pass
 
-	# TODO: Obtiene la latidud y longitud del GPS.
-	#def getLatLong(self):
-	#	return (LAT_PRUEBA,LONG_PRUEBA)
-
-
 	def getLatLong(self):
 		"""Obtiene la latidud y longitud ficticias de un objeto FakeGPS que simula
 			obtener distintas ubicaciones falsas."""
@@ -72,9 +67,9 @@ class GeofencingAPI1(object):
 		return coord.getLatitud(),coord.getLongitud()
 
 
-	#Obtiene la latidud y longitud para una captura y lo alamcena
-	# en la BD local junto con el nombre de la captura.
 	def obtenerLatitudLongitud(self,nombre_archivo="test_file_default.pcd"):
+		"""Obtiene la latitud y longitud para una captura y lo alamcena
+			en la BD local junto con el nombre de la captura."""
 		t1 = time.time()
 		latitude = longitude = INVALID_LAT_LONG
 		estanObtenidas = False
@@ -114,15 +109,9 @@ class GeofencingAPI1(object):
 		finally:
 			if not estanObtenidas:
 				print "No se pudieron obtener las coordenadas!\n"
-			#self.bd_json.agregar(latitude,longitude,nombre_archivo)		
 		return (latitude,longitude)
 
 
-
-# Clase que almacena en una TinyBD la latidud, longitud,
-# y el nombre del archivo de captura .pcd.
-# https://tinydb.readthedocs.io/en/latest/getting-started.html#basic-usage
-#
 from tinydb import TinyDB, Query
 from fakegps import *
 
@@ -134,16 +123,14 @@ class GeofencingAPI(object):
 		controlador = App.get_running_app()
 		self.fakeGPS = FakeGPS()
 		self.fakeGPS.inicializarGPS()
-
 		# Si no es el gps real no se accede al dispositivo y se inicializa
 		# solo la BD de coordenadas
 		if (controlador is not None) and ( not (controlador.args.gps == OPCIONES_GPS[0]) ):
 			self.session = gps.gps()
 			self.session.stream(gps.WATCH_ENABLE|gps.WATCH_NEWSTYLE)
 
-		
-
 	def obtenerLatitudLongitud(self,nombre_archivo="test_file_default.pcd"):
+		"""Obtiene la latidud y longitud reales desde el dispositivo GPS."""
 		t1 = time.time()
 		latitude = longitude = INVALID_LAT_LONG
 		estanObtenidas = False
@@ -168,10 +155,8 @@ class GeofencingAPI(object):
 					print "Espera sin conseguir lat y longitud: %s" % (t2-t1)
 					break
 				t1 = t2
-			
 		return (latitude,longitude)
 
-	
 	def getLatLong(self):
 		"""Obtiene la latidud y longitud ficticias de un objeto FakeGPS que simula
 			obtener distintas ubicaciones falsas."""
@@ -185,6 +170,8 @@ class GeofencingAPI(object):
 
 
 class BDLocal(object):
+	"""Base de datos de debugging para asociar los archivos .pcd, latitud y longitud y
+		fecha de captura de las mismas."""
 
 	def __init__(self,fullPathBD=None):
 		controlador = App.get_running_app()
@@ -195,9 +182,9 @@ class BDLocal(object):
 		print "BDLocal en json tiene: %s\n" % self.bd_json
 
 
-	# Inicializa una BD Local con una fecha dada. Si no se especifica nada
-	# se considera por defecto la fecha actual. 
 	def inicializar(self,fullPathBD = None ):
+		"""Inicializa una BD Local con una fecha dada. Si no se especifica nada
+			se considera por defecto la fecha actual. """
 		if fullPathBD is not None:
 			self.bd_json = TinyDB(fullPathBD)
 			self.rutaBDLocal = fullPathBD
@@ -211,21 +198,17 @@ class BDLocal(object):
 		self.rutaBDLocal = bdPath
 		print "Inicializada por Defecto BD Local de muestras...\n"
 
-
-
-	#Retorna True si la BD se encuentra inicializada con una instancia a TinyDB
 	def estaInicializada(self):
+		"""Retorna True si la BD se encuentra inicializada con una instancia a TinyDB."""
 		return self.bd_json is not None
 
-
-	#Retorna el nombre de archivo de la BD Muestras Locales
 	def getNombreBDLocal(self):
+		"""Retorna el nombre de archivo de la BD Muestras Locales."""
 		nombreArch = ""
 		if self.estaInicializada():
 			print "En getNombreBDLocal() con self.rutaBDLocal: %s\n" % self.rutaBDLocal
 			nombreArch = path.basename(self.rutaBDLocal)
 		return nombreArch
-
 
 	def agregar(self,latitud,longitud,nombrePcd):
 		my_dic = {
@@ -236,12 +219,3 @@ class BDLocal(object):
 		print "BD actualizada con elementos: "
 		print self.bd_json.all()
 		print "-----------------------------------------------------"
-
-
-
-#if __name__ == '__main__':
-#	g = GeofencingAPI()
-#	lat,longitud = g.obtenerLatitudLongitud()
-#	print "Latitud leida: %s ; Longitud leida: %s\n" % (lat,longitud)
-#	print "----------------------------------------------------\n"
-

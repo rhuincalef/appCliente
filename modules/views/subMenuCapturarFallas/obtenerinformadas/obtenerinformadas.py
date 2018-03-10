@@ -26,28 +26,13 @@ import re
 from apiclient1 import ExcepcionAjax,ExcepcionSinInformados
 from customwidgets import AutoCompleteTextInput
 
-
 from screenredimensionable import ScreenRedimensionable
-#class ObtenerInformadasScreen(Screen):
 class ObtenerInformadasScreen(ScreenRedimensionable):
    
     def __init__(self, **kwargs):
-      # cap = CapturadorInformados()      
-      #TODO: Agregar a cap.solicitarInformados() la calle y la altura
-      # para traer la falla desde el servidor.
-      # self.fallas_dict = cap.solicitarInformados()
       super(Screen, self).__init__(**kwargs)
       self.calle = None
       self.ids.container_autocomplete.add_widget(AutoCompleteTextInput())
-
-    
-    #def limpiar(self,cad):
-    #  cad2 = cad.strip()
-    #  cadnueva = ""
-    #  for word in cad2.split(" "):
-    #    if word != " ":
-    #      cadnueva += word
-    #  return cadnueva
 
     # Valida que el string tenga solo caracteres alfanumericos y 
     # underscore.
@@ -57,7 +42,6 @@ class ObtenerInformadasScreen(ScreenRedimensionable):
       return True
 
     def enviar_peticion(self):
-      #self.calle = calle
       self.calle = self.ids.container_autocomplete.children[0].getOpcionSeleccionada()
       print "Enviando peticion al servidor calle: %s\n" % self.calle
       controlador = App.get_running_app()
@@ -82,7 +66,6 @@ class ObtenerInformadasScreen(ScreenRedimensionable):
 
     #Llamado al abrir el pop_up en enviar_peticion().
     def threadObtenerInformadas(self,popup):
-      #calle = self.ids.calle_input_txt.text
       calle = self.ids.container_autocomplete.children[0].getOpcionSeleccionada()
       controlador = App.get_running_app()
       try:
@@ -97,15 +80,7 @@ class ObtenerInformadasScreen(ScreenRedimensionable):
       finally:
         popup.dismiss()
       
-
-
     def volver(self):
-      #self.ids.calle_input_txt.text = ""
       self.ids.container_autocomplete.children[0].limpiar()
       self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()  
       self.manager.current = 'subMenuCapturarFalla'
-
-
-
-
-

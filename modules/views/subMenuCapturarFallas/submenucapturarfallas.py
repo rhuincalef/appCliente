@@ -12,7 +12,6 @@ class CapturarFallasScreen(SubMenuScreen):
 
     def capturar_falla_nueva(self):
         controlador = App.get_running_app()
-        #AGREGADO RODRIGO
         # Se compueba que exista una BD local seleccionada antes de redirigir a los
         # submenus de captura.
         if not controlador.getBDLocalMuestras().estaInicializada():
@@ -22,20 +21,15 @@ class CapturarFallasScreen(SubMenuScreen):
 
         print "LLamando al screen de captura de fallas...\n"
         self.deshabilitarOpciones()
-        #self.manager.current = "seleccionarTipoFalla"
         self.manager.current = 'propsFallaConfirmada'
         
-
-
     def obtener_fallas_informadas(self):
         print "LLamando al screen de obtener fallas inforamadas...\n"
         self.deshabilitarOpciones()
-        #self.manager.current = "filtradoDirecciones"
         self.manager.current = 'obtenerinformadas'
 
     def capturar_falla_informada(self):
         controlador = App.get_running_app()
-        #AGREGADO RODRIGO
         # Se compueba que exista una BD local seleccionada antes de redirigir a los
         # submenus de captura.
         if not controlador.getBDLocalMuestras().estaInicializada():
@@ -46,5 +40,4 @@ class CapturarFallasScreen(SubMenuScreen):
         print "LLamando al screen de capturar falla informada...\n"
         self.deshabilitarOpciones()
         self.manager.current = 'capturarFallaInformada'
-
         

@@ -17,28 +17,13 @@ from constantes import FALLA_NO_ESTABLECIDA,ESTILO_BOTON_NO_SELECCIONADO_LIST_VI
                           ESTILO_BOTON_SELECCIONADO_LIST_VIEW
 
 from screenredimensionable import ScreenRedimensionable
-
 from customwidgets import MyListItemButton
 
-
-
-#class CapturarFallaInformadaScreen(Screen):
 class CapturarFallaInformadaScreen(ScreenRedimensionable):
    
     def __init__(self, **kwargs):
       super(Screen, self).__init__(**kwargs)
       self.bind(on_enter = self.refrescar_vista)
-
-    #def cambioSeleccion(self,adapter):
-    #  print "\ncambio la seleccion! len(adapter.selection) = %s\n\n" % len(adapter.selection)
-    #  itemButton = adapter.selection[0]
-    #  print "seleccion actual: %s\n" % len(adapter.selection)  
-
-    #def on_enter(self):
-    #  controlador = App.get_running_app()
-    #  controlador.desSeleccionarInformados()
-
-  
 
     def buscarFallaSeleccionada(self,fallas_dict):
       # Se carga el dialogopropsscreen con el id_falla de la falla seleccionada
@@ -52,7 +37,6 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
           break
       return id_falla_seleccionada 
 
-
     def obtener_fallas(self):
       controlador = App.get_running_app()
 
@@ -60,9 +44,7 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
       # seleccionan los baches).
       id_falla_seleccionada = -1
       fallas_dict = controlador.getCapturadorInformados().getColBachesInformados()
-
       if len(fallas_dict) == 0:
-        #print "Coleccion vacia de fallas!\n"
         controlador.mostrarDialogoMensaje(title="Captura de falla informada", 
                                             text="No existen fallas informadas asociadas a la calle")
         return
@@ -93,13 +75,9 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
       self.listado1.adapter.data = fallas_dic
       print "Actualizado listado!"
 
-    # This is quite an involved args_converter, so we should go through the
-    # details. A CompositeListItem instance is made with the args
-    # returned by this converter. The first three, text, size_hint_y,
-    # height are arguments for CompositeListItem. The cls_dicts list
-    # contains argument sets for each of the member widgets for this
-    # composite: ListItemButton and ListItemLabel.
     def args_converter(self,row_index, an_obj):
+      """Este metodo es empleado para realizar el parseo y modificacion de la informacion 
+      que se mostrara en cada uno de los elementos de CompositeListItem. """
       print "row_index actual: ",row_index
       print ""
       return {
@@ -136,7 +114,6 @@ class CapturarFallaInformadaScreen(ScreenRedimensionable):
     def volver(self):
       controlador = App.get_running_app()
       controlador.agregarData("idFalla",FALLA_NO_ESTABLECIDA)
-      #controlador.desSeleccionarFallas()
       controlador.desSeleccionarInformados()
       self.manager.get_screen("subMenuCapturarFalla").habilitarOpciones()
       self.manager.current = 'subMenuCapturarFalla'
