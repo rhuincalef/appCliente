@@ -13,6 +13,10 @@
 # python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/bache/rec_bache.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/bache/baches_9.pcd" 2>&1 | tee generador.txt
 # python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/grieta_1.pcd" 2>&1 | tee generador.txt
 
+#NUEVA PRUEBA -->
+# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/bachePav113.pcd" 2>&1 | tee generador.txt
+# python generarRecorridoArtficial.py -- --arch_salida "RECORRIDOS_TESTING_CLASIFICADOR/grieta/rec_grieta.rec" --path_archivos "RECORRIDOS_TESTING_CLASIFICADOR/grieta/ba.pcd" 2>&1 | tee generador.txt
+
 
 import sys, os
 import argparse
@@ -92,8 +96,8 @@ for pcd in colPathPcds:
 
 	#Coordenada real bache (Entre Rios)-->
 	#est = Confirmada(-43.252563,-65.326809)
-	
-	#Coordenada real grieta -->
+
+	#Coordenada real grieta (Edwing Rorberts)-->
 	est = Confirmada(-43.247030,-65.308603)
 	est.setTipoFalla("baches")
 	est.setCriticidad("bajo")
