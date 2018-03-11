@@ -152,6 +152,8 @@ PATH_ARCH_UBICACIONES_FALSAS = "latitudesFalsas.json"
 
 #Servidor local rodrigo(Ultima version localhost:80)
 URL_SERVIDOR_LOCAL = "http://localhost/web/"
+#URL_SERVIDOR_LOCAL = "http://localhost/web111/"
+
 
 #Servidor Externo
 #URL_SERVIDOR_LOCAL = "http://192.168.0.105/web/"

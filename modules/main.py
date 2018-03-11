@@ -28,20 +28,10 @@ from iconfonts import *
 
 #Configuracion de los paths de las views en archivo .cfg
 from utilscfg import *
-
-#Views que se cargan despues -->
-#from kinectviewer import KinectScreen
-#from kinectviewer import *
-#from menu import *
-#from settingscreen import *
-#from subircapturasservidor import *
-
 import importlib
 from apiclient1 import *
 from capturador import *
 from captura import *
-
-#from customwidgets import MyTabbedPanel
 from customwidgets import *
 
 import time
@@ -49,7 +39,6 @@ from kivy.event import EventDispatcher
 
 #Se importan los dialogos de la libreria xpopup 
 from notification import XLoading, XConfirmation, XMessage
-
 
 #Librerias para monitoreo usb asincrono -->
 from pyudev import Context, Monitor, MonitorObserver
@@ -79,7 +68,6 @@ class MainApp(App,EventDispatcher):
 		self.register_event_type('on_fin_solicitud_prop_confirmada')
 
 		#Evento producido en el AutoComplete.
-		#self.register_event_type('on_fin_obtencion_direcciones')
 		self.register_event_type('on_fin_obtencion_sugerencias')
 		super(MainApp, self).__init__(**kwargs)
 
@@ -107,7 +95,6 @@ class MainApp(App,EventDispatcher):
 		#Este campo es modificado cada vez que se conecta o desconecta el kinect.
 		#La monitorizacion y ejecucion del callback se realiza por medio del thread
 		# daemon que se lanza en inicializarMonitorKinect()
-		
 		self.sensorConectado = estaSensorListo()
 		print "Valor de self.sensorConectado: %s\n" % self.sensorConectado
 		self.inicializarMonitorKinect()
@@ -127,7 +114,6 @@ class MainApp(App,EventDispatcher):
 
 	# Realiza las redicciones de stderr y stdout al mismo tiempo, envia los
 	# registros a la linea de comandos.
-	#
 	def configurarLoggingPrincipal(self):
 		from constantes import PATH_LOG_PRINCIPAL
 		sys.stdout = sys.stderr = open(PATH_LOG_PRINCIPAL,"w")
@@ -135,9 +121,6 @@ class MainApp(App,EventDispatcher):
 		os.dup2(tee.stdin.fileno(), sys.stdout.fileno())
 		os.dup2(tee.stdin.fileno(), sys.stderr.fileno())
 		print "configurado el logging principal"
-
-
-
 
 	def getBDLocalMuestras(self):
 		return self.capturador.getBDLocalMuestras()
@@ -161,7 +144,6 @@ class MainApp(App,EventDispatcher):
 	def solicitarSugerencias(self,nombreCalle,cantMaximaSugerencias):
 		sugerencias = []
 		try:
-			#sugerencias = self.modelo.solicitarSugerencias(nombreCalle,cantMaximaSugerencias)
 			sugerencias = self.capturador.apiClient.solicitarSugerencias(nombreCalle,cantMaximaSugerencias)
 		except Exception as e:
 			print "\n\n Excepcion ocurrida al solicitar las sugerencias desde el servidor (%s)\n\n " %\
@@ -171,12 +153,9 @@ class MainApp(App,EventDispatcher):
 			#self.dispatch('on_fin_obtencion_direcciones',sugerencias)
 			self.dispatch('on_fin_obtencion_sugerencias',sugerencias)
 
-
-
 	#controlador.conexionSensorEstablecida()
 	def conexionSensorEstablecida(self):
 		return self.sensorConectado
-
 
 	#Inicializa el thread que monitoriza y llama a handlerSensorConectado()
 	# cuando ocurre un campo de estado en los puertos usb
@@ -201,8 +180,6 @@ class MainApp(App,EventDispatcher):
 		else:
 			print "Modificado controlador.sensorListo() a False!\n"
 
-
-
 	def agregarData(self,clave,valor):
 		self.dataViews[clave] = valor 
 
@@ -212,7 +189,6 @@ class MainApp(App,EventDispatcher):
 	def getData(self,clave):
 		return self.dataViews[clave]
 
-
 	#Handler por default requerido por Kivy
 	def on_fin_obtencion_direcciones(self,*args):
 		pass
@@ -221,15 +197,12 @@ class MainApp(App,EventDispatcher):
 	def on_finalizada_captura(self,*args):
 		pass
 
-
 	def on_fin_solicitud_prop_confirmada(self,*args):
 		pass
-
 
 	# Metodo invocado al instanciar la aplicacion. Se muestran los
 	# mensajes de problema de conexion con el sensor, falta de 
 	# propiedades para los tipos de falla.
-	#
 	def instanciada_app(self,app):
 		print "instanciada la app!\n"
 		if not self.conexionSensorEstablecida():
@@ -255,18 +228,15 @@ class MainApp(App,EventDispatcher):
 	def obtenerInformados(self,calle):
 		return self.capturadorInformados.solicitarInformados(calle)
 		
-
 	#Lee el archivo .json a partir del stream
 	def leerFallas(self,stream):
 		self.capturador.leerFallas(stream)
 		self.capturadorInformados.leerFallas(stream)
 
-
 	#Guarda el archivo .json a partir del stream
 	def guardarFallas(self,stream):
 		self.capturador.guardarFallas(stream)
 		self.capturadorInformados.guardarFallas(stream)
-
 
 	#Se llama desde todos los lugares donde es necesario mostrar
 	# un dialogo de carga
@@ -309,12 +279,10 @@ class MainApp(App,EventDispatcher):
 			colCapturas = []
 			colCapturas = self.capturador.getColCapturasConfirmadas() + \
 				self.capturadorInformados.getColCapturasConfirmadas()
-			#screenCapturas = self.screen_manager.get_screen('subircapturasservidor')
 			screenCapturas = self.tabbedPanel.getSubMenuPorNombre('subircapturasservidor')
 			screenCapturas.actualizarListaCaps(colCapturas)
 			print "Finalizado thread-FiltradoCapturas...\n"
-		
-		#except ExcepcionAjax as e:
+
 		except ConnectionError as e:
 			print "ConnectionError en controlador.threadFiltradoCapturas()...\n"
 			errMsg = "ConnectionError (%s)" % e.message
@@ -329,21 +297,9 @@ class MainApp(App,EventDispatcher):
 			# de carga
 			self.dispatch('on_fin_obtencion_direcciones')
 
-
 	# Regresa al menu principal
 	def _regresarAMainMenu(self,instance):
 		print "En _regresarAMainMenu()...\n"
-		#self.screen_manager.current = "menu"
-
-
-	#BACKUP!
-	#Este elemento establece el campo is_selected como FALSE de las fallas
-	# informadas al regresar de esa vista
-	#def desSeleccionarInformados(self):
-	#	for falla in self.capturadorInformados.getColBachesInformados():
-	#		falla.is_selected = False
-	#		print "Deseleccionando falla informada: %s\n" % falla
-	#	print "Fin desSeleccionarFalla!\n"
 
 	def desSeleccionarInformados(self):
 		print "En main.desSeleccionarInformados()...\n"
@@ -353,9 +309,6 @@ class MainApp(App,EventDispatcher):
 			print "Deseleccionando falla informada: %s\n" % falla
 		print "Fin desSeleccionarFalla!\n"
 	
-	
-
-
 	#Envia las capturas filtradas al servidor con POST
 	def subir_capturas(self):
 		#print "Enviando fallas nuevas ..."
@@ -384,8 +337,6 @@ class MainApp(App,EventDispatcher):
 		#Se configura el envio de los archivos como un proceso demonio.
 		t.setDaemon(True)
 		t.start()
-
-			
 
 	# Metodo que paraleliza el envio al servidor de los objetos
 	def threadSubidaCapturas(self,bytes_totales_a_enviar,lista_capturadores,candadoFinSubidas):
@@ -450,104 +401,7 @@ class MainApp(App,EventDispatcher):
 									title = "Conservar capturas enviadas",
 									content = "¿Desea conservar las capturas enviadas al servidor en disco?",
 									callback = self._callbackConservarCapsSubidas)
-		#self.canceladaSubidaArchivos = False
-
-
-
-
-
-	#BACKUP!
-	#Envia las capturas filtradas al servidor con POST
-	#def subir_capturas(self):
-	#	#print "Enviando fallas nuevas ..."
-	#	bytes_totales_a_enviar = 0
-	#	bytes_totales_a_enviar = self.capturador.calcularTamanioCapturas()+\
-	#						self.capturadorInformados.calcularTamanioCapturas()
-#
-#		#print "Los bytes_totales_a_enviar son : %s" % bytes_totales_a_enviar
-	#	#print ""
-	#	lista_capturadores = [self.capturador,self.capturadorInformados]
-	#	print "\nlista_capturadores desde subir_capturas: %s\n" % len(lista_capturadores)
-	#	#Este candado es adqurido por threadSubidaCapturas al iniciar y cuando 
-	#	# se termine o se cancele la subida de archivos, se libera desde ese thread
-	##	# y es adquirido por mostrarDialogoConservar
-	#	candadoFinSubidas = threading.Lock()
-	#	t = threading.Thread(name = "thread-subir_capturas",
-	##							target=self.threadSubidaCapturas, 
-	#							args=(bytes_totales_a_enviar,
-	#								lista_capturadores,
-	#								candadoFinSubidas,)
-	#						)
-	#	#Se configura el envio de los archivos como un proceso demonio.
-	#	t.setDaemon(True)
-	#	t.start()
-
 		
-	#BACKUP!
-	# Metodo que paraleliza el envio al servidor de los objetos
-	#def threadSubidaCapturas(self,bytes_totales_a_enviar,lista_capturadores,candadoFinSubidas):
-	#	print "En threadSubidaCapturas...\n"
-	#
-	#	# Se actualiza el valor maximo de la progressbar con los bytes totales
-	#	# de la peticion
-	#	#screen_upload = self.screen_manager.get_screen('enviocapturasserver')
-	#	screenManager = self.tabbedPanel.getSubMenuPorNombre('subMenuServidor').manager
-	#	screen_upload = screenManager.get_screen('enviocapturasserver')
-	#	screen_upload.setMaxBarraProgreso(bytes_totales_a_enviar)
-	#	
-	#	#Se adquiere el control y se inicia el thread del dialgo de pregunta
-	#	# para caps subidas
-	#	candadoFinSubidas.acquire()
-	#	t = threading.Thread(name = "thread-conservarCapsSubidas",
-	#						target=self.threadConservarCapsSubidas, 
-	#						args=(screen_upload,
-	#							candadoFinSubidas,
-	#							lista_capturadores,)
-	#						)
-	#	#Se configura el envio de los archivos como un proceso demonio.
-	#	t.setDaemon(True)
-	##	t.start()
-
-	#	#Se planifica la actualizacion del reloj a espacios de tiempo regulares
-	#	Clock.schedule_interval(self.actualizar_datos,0.0005)
-	#	try:
-	#		print "Iterando lista de capturadores...\n"
-	#		print "Lista capturadores: %s\n" % lista_capturadores
-	##		for capturador in lista_capturadores:
-	#			print "Iterando capturador %s\n" % type(capturador)
-	#			capturador.enviarCapturas(URL_UPLOAD_SERVER)
-	#			if self.canceladaSubidaArchivos:
-	#				print "Cancelada la subida de archivos desde main.threadSubidaCapturas\n"
-	#				break
-	#	except ExcepcionAjax, e:
-	#		self.mostrarDialogoMensaje( title="Problema en la subida de archivos",
-	#									text=e.message
-	#									)
-	#	finally:
-	#		print "Desplanificando el callback de actualizacion del screen!\n"
-	#		Clock.unschedule(self.actualizar_datos)
-	#		print "Liberando el lock!\n"
-	#		candadoFinSubidas.release()
-
-
-	#BACKUP!
-	#Invocado desde threadSubirCapturas
-	#def threadConservarCapsSubidas(self,screen_upload,candadoFinSubidas,lista_capturadores):
-	#	candadoFinSubidas.acquire()
-	#	print "Liberado el candadoFinSubidas\n"
-	#	self.mostrarDialogoMensaje( title= "Subida de capturas",
-	#								text = "La operacion de subida de archivos ha finalizado")
-	#
-	#	controlador = App.get_running_app()
-	#	conservarDialogo = controlador.mostrarDialogoConfirmacion(
-	#								title = "Conservar capturas enviadas",
-	##								content = "¿Desea conservar las capturas enviadas al servidor en disco?",
-	#								callback = self._callbackConservarCapsSubidas)
-	#	self.canceladaSubidaArchivos = False
-
-
-
-
 	def _callbackConservarCapsSubidas(self,instance):
 		if instance.is_confirmed():
 			print "Si conservar las capturas subidas en disco!\n"
@@ -563,8 +417,6 @@ class MainApp(App,EventDispatcher):
 	# Actualiza los labels de cantidad de bytes subidos
 	# en la pantalla enviocapturasservidor
 	def actualizar_datos(self,dt):
-		#BACKUP!
-		#screen_upload = self.tabbedPanel.get_screen('enviocapturasserver')
 		screenManager = self.tabbedPanel.getSubMenuPorNombre('subMenuServidor').manager
 		screen_upload = screenManager.get_screen('enviocapturasserver')
 		bytes_read = self.capturador.apiClient.bytes_acumulados
@@ -588,7 +440,6 @@ class MainApp(App,EventDispatcher):
 		t.setDaemon(True)
 		t.start()
 
-	
 	def finalizadaCaptura(self,origenEvt,pcdNombre,csvNombre,popup):
 		print "En main.finalizadaCaptura() con: pcd=%s; csv=%s; popup=%s; origenEvt=%s;\n" %\
 				(pcdNombre,csvNombre,type(popup),type(origenEvt))
@@ -623,11 +474,8 @@ class MainApp(App,EventDispatcher):
 		# pcd y csv 
 		self.dispatch('on_finalizada_captura',pathPcd,pathCsv,popup)
 		
-
-
 	def getCapturadorInformados(self):
 		return self.capturadorInformados
-
 
 	def mostrar_dialogo_visualizacion(self,pathCapturaPcd,pathCapturaCsv):
 		#NOTA: Se retrasa levemente el dibujado del dialogo_visualizacion para
@@ -666,7 +514,6 @@ class MainApp(App,EventDispatcher):
 		else:
 			print "NO desea conservar la captura\n"
 			self.descartar(popup)
-			
 
 	#main.descartar()
 	def descartar(self,popup):
@@ -698,12 +545,9 @@ class MainApp(App,EventDispatcher):
 			self.mostrarDialogoMensaje( title="Error al visualizar captura",
 										text=err						
 										)
-			
-	#AGREGADO RODRIGO
+
 	def noMostrarCaptura(self,caps):
 		print "No se visualizara la captura %s...\n" % caps
-
-
 
 	#Construir aca las instancias del modelo que son usadas por la App.
 	# NOTA: Emplear el metodo App.get_running_app() para obtener la instancia
@@ -713,8 +557,6 @@ class MainApp(App,EventDispatcher):
 		register('default_font',NOMBRE_FONT_TTF, NOMBRE_FONT_DICT)
 		print "En build()\n"
 		self.title = TITULO_APP
-		
-		#AGREGADO RODRIGO
 		Builder.load_string(ESTILO_TREE_VIEW)
 
 		#self.lockPropsConfirmadas = threading.Condition()
@@ -740,13 +582,10 @@ class MainApp(App,EventDispatcher):
 		#							tab_height= 40,
 		#							tab_width = 170)
 		#self.tabbedPanel = tb_panel
-
 		#self.tabbedPanel.inHabilitarSubMenus([PREFIJO_ID_TP_ITEM + "subMenuSeleccionarBD"])
 		Window.bind(on_resize=self.ventanaCambioTamanio)
 		print "bindeados eventos\n"
-		#self.comprobarConexionSensor()
 		return self.tabbedPanel
-
 
 	#Handler de ventana
 	def ventanaCambioTamanio(self,window,width,height):
@@ -756,12 +595,6 @@ class MainApp(App,EventDispatcher):
 		print "nuevo tamanio %s, %s, %s!\n" % (window,
 														width,
 														height)
-		
-		#print "self.tabbedPanel.getScreensRedimensionables():\n%s\n" % \
-		#		self.tabbedPanel.getScreensRedimensionables()
-		#print "self.tabbedPanel.getScreensRedimensionables()[0]:\n%s\n" % \
-		#		self.tabbedPanel.getScreensRedimensionables()[0].ids.footer_layout
-
 		# Se modifica el padding y spacing de todas los screens de la app que tienen footer
 		for screen in self.tabbedPanel.getScreensRedimensionables():
 			print "iterando screen %s\n" % type(screen)
@@ -779,8 +612,6 @@ class MainApp(App,EventDispatcher):
 	# un msg indicando que se conecte a internet para obtener las
 	# propiedades de los tipos de falla confirmadas y se retorna
 	# al screen principal.
-
-	
 	#def threadGetPropsConfirmadas(self,popup,lockPropsConfirmadas):
 	def threadGetPropsConfirmadas(self,popup):
 		resultPeticion = {
@@ -814,6 +645,7 @@ class MainApp(App,EventDispatcher):
 					(LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_PROPS_CONFIRMADA)
 				errMsg = "ExcepcionSinDatosTiposFalla ocurrio:\n %s" % e.message
 				utils.loggearMensaje(logger,errMsg)
+				self.dataViews["esErrorFatal"] = True
 
 			except ExcepcionTipoFallaIncompleta as e:
 				msg = " Error en la carga atributos locales.\n Más información en %s%s" %\
@@ -828,7 +660,6 @@ class MainApp(App,EventDispatcher):
 			utils.loggearMensaje(logger,errMsg)
 
 		finally:
-			#resultPeticion["msg"] = msg + msg2 
 			resultPeticion["msg"] = msg 
 			print msg
 			popup.bind(on_dismiss = self.desvanecidoPopupConfirmadas)
@@ -853,11 +684,8 @@ class MainApp(App,EventDispatcher):
 								text= dicInfo["msg"],
 								title = dicInfo["titulo"])
 
-		#AGREGADO RODRIGO
 		dialogoPeticionProps.bind(on_dismiss = self.comprobarConexionSensor)
 
-
-	#AGREGADO RODRIGO
 	# Muestra un dialogo de espera donde se comprueba la conexion con el sensor. 
 	#def comprobarConexionSensor(self):
 	def comprobarConexionSensor(self,instance):
@@ -872,7 +700,6 @@ class MainApp(App,EventDispatcher):
 		t.setDaemon(True)
 		t.start()
 
-	#AGREGADO RODRIGO
 	def threadComprobarConexionSensor(self,popup):
 		time.sleep(1)
 		print "En threadComprobarConexionSensor() \n"
@@ -883,9 +710,11 @@ class MainApp(App,EventDispatcher):
 									content = "No se estan recibiendo datos del sensor, si desea capturar debe reconectarlo.\n¿Desea continuar ejecutando la aplicación?",
 									callback = self._callbackContinuarSensor)
 		popup.dismiss()
+		print "Luego de threadCOnexionSensor: %s\n" % self.dataViews["esErrorFatal"]
+		if self.dataViews["esErrorFatal"]:
+			print "Error fatal: Sin atributos para tipos de fallas confirmadas...\n"
+			self.stop()
 
-
-	#AGREGADO RODRIGO
 	def _callbackContinuarSensor(self,instance):
 		print "En _callbackContinuarSensor() \n"
 		if instance.is_confirmed():
@@ -893,8 +722,6 @@ class MainApp(App,EventDispatcher):
 			return
 		print "Matando la aplicacion...\n"
 		App.stop(App.get_running_app())
-
-
 
 	def _defaultDialogoMensajeHandler(self,instance):
 		pass
@@ -933,11 +760,6 @@ class MainApp(App,EventDispatcher):
 	def getAtributosAsociados(self,nombreTipoFalla):
 		return self.capturador.getAtributosAsociados(nombreTipoFalla)
 
-	#Invoca a capturador para determinar si son atributos validos para
-	# el tipo de falla seleccionado(valida si no dejo sin seleccionar 
-	# el tipoReparacion y tipoMaterial)
-	#def sonPropiedadesValidas(self,tipoFalla,tipoMaterial,criticidad):
-	#	return self.capturador.sonPropiedadesValidas(tipoFalla,tipoMaterial,criticidad)
 
 	#Llamado desde menu.py (menu principal de la app)
 	#main.cargarRecorrido().
@@ -967,8 +789,7 @@ class MainApp(App,EventDispatcher):
 	# GuardarRecorrido en menu principal (AlmacenarRecorrido() ).
 	# Guarda en un recorrido las fallas (en un archivo .rec) confirmadas e informados de los capturadores
 	# y vacia las colecciones de los dos capturadores.
-	# "nameBD" es el nombre del archivo de fallas que se guarda en disco. 
-	#
+	# "nameBD" es el nombre del archivo de fallas que se guarda en disco.
 	def persistirFallas(self,nameBD):
 		print "En persistirFallas()\n nameBD: %s ...\n" % nameBD
 		print "Mostrando la coleccion de fallas persistidas...\n"
