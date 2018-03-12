@@ -56,7 +56,8 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 			controlador.mostrarDialogoMensaje(title="Error de propiedades TipoFalla",
 												text="No se pueden capturar fallas nuevas hasta descargar\nlos tipos de propiedades desde el servidor.\nConectese a internet e inicie la aplicacion nuevamente \npara obtener una copia de los \natributos necesarios de los tipos de falla."
 											)
-			self.manager.current = 'menutiposfalla'
+			#self.manager.current = 'menutiposfalla'
+			self.manager.current = 'subMenuCapturarFalla'
 			return
 		#Se establece el idFalla como una falla no establecida
 		controlador.agregarData("idFalla",FALLA_NO_ESTABLECIDA)
