@@ -1,0 +1,2484 @@
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_18-05-19_1.txt
+[[1;32mINFO[0m   ] [Kivy        ] v1.9.1
+[[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 20 2017, 18:23:56) 
+[GCC 5.4.0 20160609]
+[[1;32mINFO[0m   ] [Factory     ] 179 symbols loaded
+[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_sdl2, img_pil (img_ffpyplayer ignored)
+[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
+[[1;32mINFO[0m   ] [Window      ] Provider: sdl2(['window_egl_rpi'] ignored)
+[[1;32mINFO[0m   ] [GL          ] OpenGL version <3.0 Mesa 11.2.0>
+[[1;32mINFO[0m   ] [GL          ] OpenGL vendor <Intel Open Source Technology Center>
+[[1;32mINFO[0m   ] [GL          ] OpenGL renderer <Mesa DRI Intel(R) Ivybridge Mobile >
+[[1;32mINFO[0m   ] [GL          ] OpenGL parsed version: 3, 0
+[[1;32mINFO[0m   ] [GL          ] Shading version <1.30>
+[[1;32mINFO[0m   ] [GL          ] Texture max size <8192>
+[[1;32mINFO[0m   ] [GL          ] Texture max units <16>
+[[1;32mINFO[0m   ] [Window      ] auto add sdl2 input provider
+[[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
+[[1;32mINFO[0m   ] [Text        ] Provider: sdl2
+[[1;33mWARNING[0m] [IOError     ] [Errno 2] No such file or directory: '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs/xpopup.mo'. Switch to the defaults.
+[[1;32mINFO[0m   ] [Clipboard   ] Provider: gtk3(['clipboard_dbusklipper'] ignored)
+xclip version 0.12
+Copyright (C) 2001-2008 Kim Saunders et al.
+Distributed under the terms of the GNU GPL
+[[1;32mINFO[0m   ] [Cutbuffer   ] Provider: xclip
+[[1;32mINFO[0m   ] [CutBuffer   ] cut buffer support enabled
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/config
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/captura
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/apiclient
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/capturador
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/estadofalla
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/geofencing
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/estrategia
+
+configuraciones de directorios cargadas!
+
+Registrando elemento default_font
+Los argumentos enviados por consola son: Namespace(gps='fakegps', tipoCaptura='xyz_rgb')
+
+BDLocal en json tiene: None
+
+Inicializado Capturador
+Inicializado Capturador
+Camara detectada!
+
+Motor detectada!
+
+Audio detectada!
+
+HUB detectado!
+
+Valor de self.sensorConectado: True
+
+INiciado thread de monitorizacion del sensor kinect...
+
+dirRaizModulo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuSeleccionarBD
+
+
+
+Inicializando subscreen: {'titulo': 'Seleccionar BD', 'dirRaizModulo': 'views/subMenuSeleccionarBD', 'pathConfig': 'views/subMenuSeleccionarBD/config/subMenuSeleccionarBD.cfg'}
+
+
+
+Leyendo listaVistas: {'1': {'nombre_menu': 'subMenuSeleccionarBD', 'clase': 'SeleccionarBDScreen', 'modulo': 'submenuseleccionarbd', 'ruta_kv': 'views/subMenuSeleccionarBD/submenuseleccionarbdscreen.kv', 'tipo': 'subMenu'}, '3': {'nombre_menu': 'resultadosFiltrados', 'clase': 'ResultadosFiltradosScreen', 'modulo': 'resultadosfiltrados', 'ruta_kv': 'views/subMenuSeleccionarBD/resultadosfiltrados/resultadosfiltradosscreen.kv', 'tipo': 'screen'}, '2': {'nombre_menu': 'fileFilter', 'clase': 'FileFilterScreen', 'modulo': 'filefilter', 'ruta_kv': 'views/subMenuSeleccionarBD/filefilter/filefilterscreen.kv', 'tipo': 'screen'}}
+
+Leyendo clase: SeleccionarBDScreen de tipo: subMenu
+
+
+Leyendo clase: ResultadosFiltradosScreen de tipo: screen
+
+
+Leyendo clase: FileFilterScreen de tipo: screen
+
+
+dirRaizModulo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas
+
+
+
+Inicializando subscreen: {'titulo': 'Captura de fallas', 'dirRaizModulo': 'views/subMenuCapturarFallas', 'pathConfig': 'views/subMenuCapturarFallas/config/subMenuCapturarFallas.cfg'}
+
+
+
+Leyendo listaVistas: {'1': {'nombre_menu': 'subMenuCapturarFalla', 'clase': 'CapturarFallasScreen', 'modulo': 'submenucapturarfallas', 'ruta_kv': 'views/subMenuCapturarFallas/submenucapturarfallasscreen.kv', 'tipo': 'subMenu'}, '3': {'nombre_menu': 'dialogopropscaptura', 'clase': 'DialogoPropsCapturaScreen', 'modulo': 'dialogopropscaptura', 'ruta_kv': 'views/subMenuCapturarFallas/dialogopropscaptura/dialogopropscapturascreen.kv', 'tipo': 'screen'}, '2': {'nombre_menu': 'capturaKinect', 'clase': 'KinectScreen', 'modulo': 'capturakinect', 'ruta_kv': 'views/subMenuCapturarFallas/capturakinect/kinectscreen.kv', 'tipo': 'screen'}, '5': {'nombre_menu': 'obtenerinformadas', 'clase': 'ObtenerInformadasScreen', 'modulo': 'obtenerinformadas', 'ruta_kv': 'views/subMenuCapturarFallas/obtenerinformadas/obtenerinformadasscreen.kv', 'tipo': 'screen'}, '4': {'nombre_menu': 'propsFallaConfirmada', 'clase': 'PropsFallaConfirmadaScreen', 'modulo': 'propstipofalla', 'ruta_kv': 'views/subMenuCapturarFallas/propstipofalla/propsFallaConfirmadaScreen.kv', 'tipo': 'screen'}, '6': {'nombre_menu': 'capturarFallaInformada', 'clase': 'CapturarFallaInformadaScreen', 'modulo': 'capturarfallainformada', 'ruta_kv': 'views/subMenuCapturarFallas/capturarfallainformada/capturarfallainformadascreen.kv', 'tipo': 'screen'}}
+
+Leyendo clase: CapturarFallasScreen de tipo: subMenu
+
+
+Leyendo clase: DialogoPropsCapturaScreen de tipo: screen
+
+
+Leyendo clase: KinectScreen de tipo: screen
+
+
+En KinectScreen!!
+Inicializado el depthThread!
+
+El tamanio de la v[[1;32mINFO[0m   ] [GL          ] NPOT texture support is available
+configurado el logging principal
+Inicializado MainApp!
+Registrando elemento default_font
+En build()
+
+bindeados eventos
+
+instanciada la app!
+
+instanciado dialogo espera...
+
+Iniciando threadGetPropsConfirmadas()...
+
+EN getPropsConfirmadas()...
+
+2...
+
+3...
+
+4...
+
+5...
+
+listaTFalla:
+ [{'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'}, {'colPropsAsociadas': [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}] 
+
+En crearListaProps()...
+
+tipoFalla['id']: 1
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"1", "valor":"bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"2", "valor":"medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"3", "valor":"alto: longitud con deficiencias de sellado > 25% de la longitud de la junta"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+
+en constructor propiedad!
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}]
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"1", "valor":"bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'1'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
+
+s['clave']: ponderacion
+
+s['valor']: 1
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'1', 'valor': 'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"2", "valor":"medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'2'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.15
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'2', 'valor': 'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"3", "valor":"alto: longitud con deficiencias de sellado > 25% de la longitud de la junta"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'3'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.3
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'3', 'valor': 'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'pavimento r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\xc3\xadgido'} ...
+
+tipoFalla['id']: 3
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"7", "valor":"bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"8", "valor":"medio: 3 \u2264ancho grieta\u2264 10 mm \u00f3 c/ resaltos de ancho < 50 mm \u00f3 escalonamiento < 15 mm"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"9", "valor":"alto: ancho 10 mm \u00f3 resaltos de ancho 50 mm \u00f3 escalonamiento 15 mm"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+
+en constructor propiedad!
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}]
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"7", "valor":"bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'7'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
+
+s['clave']: ponderacion
+
+s['valor']: 1
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"8", "valor":"medio: 3 \u2264ancho grieta\u2264 10 mm \u00f3 c/ resaltos de ancho < 50 mm \u00f3 escalonamiento < 15 mm"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'medio: 3 \u2264ancho grieta\u2264 10 mm \xf3 c/ resaltos de ancho < 50 mm \xf3 escalonamiento < 15 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'8'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.15
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"9", "valor":"alto: ancho 10 mm \u00f3 resaltos de ancho 50 mm \u00f3 escalonamiento 15 mm"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'alto: ancho 10 mm \xf3 resaltos de ancho 50 mm \xf3 escalonamiento 15 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'9'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.3
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'pavimento r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\xc3\xadgido'} ...
+
+tipoFalla['id']: 4
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"10", "valor":"bajo: profundidad m\u00e1xima del ahuellamiento es inferior a los 20 mm"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"11", "valor":"medio: profundidad m\u00e1xima es mayor a 20 mm pero inferior a 40 mm"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"12", "valor":"alto: profundidad m\u00e1xima superior a 40 mm"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"pavimento flexible"}
+
+en constructor propiedad!
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}]
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"10", "valor":"bajo: profundidad m\u00e1xima del ahuellamiento es inferior a los 20 mm"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'bajo: profundidad m\xe1xima del ahuellamiento es inferior a los 20 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'10'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
+
+s['clave']: ponderacion
+
+s['valor']: 1
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'10', 'valor': 'bajo: profundidad m\xc3\xa1xima del ahuellamiento es inferior a los 20 mm'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"11", "valor":"medio: profundidad m\u00e1xima es mayor a 20 mm pero inferior a 40 mm"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'medio: profundidad m\xe1xima es mayor a 20 mm pero inferior a 40 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'11'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.15
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'11', 'valor': 'medio: profundidad m\xc3\xa1xima es mayor a 20 mm pero inferior a 40 mm'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"12", "valor":"alto: profundidad m\u00e1xima superior a 40 mm"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'alto: profundidad m\xe1xima superior a 40 mm', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'12'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.3
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'12', 'valor': 'alto: profundidad m\xc3\xa1xima superior a 40 mm'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '2', 'valor': 'pavimento flexible'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"2", "valor":"pavimento flexible"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'pavimento flexible', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'2'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'} ...
+
+tipoFalla['id']: 2
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"4", "valor":"bajo: Se determina por cantidad de baches y dimensiones"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"5", "valor":"medio: Se determina por cantidad de baches y dimensiones"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"6", "valor":"alto: Se determina por cantidad de baches y dimensiones"}
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+
+en constructor propiedad!
+asociando props a subpropiedades: [{'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}, {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}]
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1'}], 'clave': 'criticidad', 'id': '4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1"}], "clave":"criticidad", "id":"4", "valor":"bajo: Se determina por cantidad de baches y dimensiones"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'bajo: Se determina por cantidad de baches y dimensiones', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1'}], u'id': u'4'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1'}
+
+s['clave']: ponderacion
+
+s['valor']: 1
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'4', 'valor': 'bajo: Se determina por cantidad de baches y dimensiones'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.15'}], 'clave': 'criticidad', 'id': '5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.15'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.15"}], "clave":"criticidad", "id":"5", "valor":"medio: Se determina por cantidad de baches y dimensiones"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'medio: Se determina por cantidad de baches y dimensiones', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.15'}], u'id': u'5'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.15'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.15
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'5', 'valor': 'medio: Se determina por cantidad de baches y dimensiones'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [{'clave': 'ponderacion', 'valor': u'1.3'}], 'clave': 'criticidad', 'id': '6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'}
+
+iterando subpropiedad: {'clave': 'ponderacion', 'valor': u'1.3'}
+
+codificada final: {"colPropsAsociadas": [{"clave":"ponderacion", "valor":"1.3"}], "clave":"criticidad", "id":"6", "valor":"alto: Se determina por cantidad de baches y dimensiones"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'alto: Se determina por cantidad de baches y dimensiones', u'clave': u'criticidad', u'colPropsAsociadas': [{u'clave': u'ponderacion', u'valor': u'1.3'}], u'id': u'6'}
+
+
+
+La criticidad tiene propiedades!
+
+subpropiedad de la criticidad: {u'clave': u'ponderacion', u'valor': u'1.3'}
+
+s['clave']: ponderacion
+
+s['valor']: 1.3
+
+en constructor propiedad!
+instanciada!
+
+asociada!
+
+propiedad.colPropsAsociadas: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+
+Creada propiedad asociada: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'6', 'valor': 'alto: Se determina por cantidad de baches y dimensiones'} ...
+
+en escaparCaracteresEspeciales()...
+
+con propiedad: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': '1', 'valor': 'pavimento r\xc3\xadgido'}
+
+codificada final: {"colPropsAsociadas": [], "clave":"tipoMaterial", "id":"1", "valor":"pavimento r\u00edgido"}
+
+en constructor propiedad!
+leidas propiedades principales falla!
+
+prop: {u'valor': u'pavimento r\xedgido', u'clave': u'tipoMaterial', u'colPropsAsociadas': [], u'id': u'1'}
+
+
+
+Creada propiedad asociada: {'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\xc3\xadgido'} ...
+
+Fin de crearListaProps()...
+
+self.propsConfirmados tiene: 
+
+ - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colProp[[1;32mINFO[0m   ] [Base        ] Start application main loop
+sAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}
+
+Despues de capturador.obtenerPropsConfirmadas()
+
+Inicio tinydb!!!
+
+Creado un resplado de las propiedades de las fallas confirmadas!
+
+Tipos de falla obtenidos correctamente desde servidor!
+SE DESVANECIO EL POPUPCONFIRMADAS!
+
+inicializando el screen de propsTipoFallaConfirmada!
+
+En inicializarDropDownPrincipal()... 
+
+creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
+
+creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
+
+creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
+
+Iterando valor i:1
+
+contador actual: 36
+
+Iterando valor i:2
+
+contador actual: 72
+
+Iterando valor i:3
+
+contador actual: 108
+
+Iterando valor i:4
+
+contador actual: 144
+
+Iterando valor i:5
+
+contador actual: 180
+
+incializada el screen de propsTipoFallaConfirmada!
+
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': [Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic b056
+[Stream 70] Invalid magic 6c8d
+[Stream 70] Invalid magic 50ca
+[Stream 70] Invalid magic 4829
+[Stream 70] Invalid magic 4648
+[Stream 70] Invalid magic f65e
+[Stream 70] Invalid magic 2cb5
+[Stream 70] Invalid magic 9b34
+[Stream 70] Invalid magic a1b4
+[Stream 70] Invalid magic d1fa
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic f0be
+[Stream 70] Invalid magic 584b
+[Stream 70] Invalid magic 9672
+[Stream 70] Invalid magic 4268
+[Stream 70] Invalid magic 2404
+[Stream 70] Invalid magic 2323
+[Stream 70] Invalid magic 7a2f
+[Stream 70] Invalid magic 166a
+[Stream 70] Invalid magic f99f
+[Stream 70] Invalid magic d05a
+[Stream 70] Invalid magic 37ff
+[Stream 70] Invalid magic 36ff
+[Stream 70] Invalid magic a1b4
+[Stream 70] Invalid magic d1fa
+[Stream 70] Invalid magic 8d91
+[Stream 70] Invalid magic b556
+[Stream 70] Invalid magic da3a
+[Stream 70] Invalid magic ffff
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 36ff
+[Stream 70] Invalid magic 6bad
+[Stream 70] Invalid magic 18b3
+[Stream 70] Invalid magic f7ff
+[Stream 70] Invalid magic 9452
+[Stream 70] Invalid magic 8190
+[Stream 70] Invalid magic d25a
+[Stream 70] Invalid magic 892d
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic 37ff
+[Stream 70] Invalid magic 37ff
+[Stream 70] Invalid magic 37ff
+[Stream 70] Invalid magic 5e4b
+[Stream 70] Invalid magic 05a0
+[Stream 70] Invalid magic 8c35
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic c5f6
+[Stream 70] Invalid magic c258
+[Stream 70] Invalid magic b306
+[Stream 70] Invalid magic 3345
+[Stream 70] Invalid magic 2224
+[Stream 70] Invalid magic d93b
+[Stream 70] Invalid magic e57c
+[Stream 70] Invalid magic b016
+[Stream 70] Invalid magic acd9
+[Stream 70] Invalid magic 84d0
+[Stream 70] Lost too many packets, resyncing...
+[Stream 70] Invalid magic 2264
+[Stream 70] Invalid magic b386
+[Stream 70] Invalid magic 5a4b
+[Stream 70] Invalid magic 96b2
+[Stream 70] Invalid magic 97f2
+[Stream 70] Invalid magic 1962
+[Stream 70] Invalid magic c9d9
+[Stream 70] Invalid magic 38ff
+[Stream 70] Invalid magic 9292
+[Stream 70] Expected max 1748 data bytes, but got 1908. Dropping...
+[Stream 70] Invalid magic 38ff
+[Stream 70] Invalid magic 31b6
+[Stream 70] Invalid magic 6aed
+[Stream 70] Invalid magic 6e2d
+[Stream 70] Invalid magic 9692
+[Stream 70] Invalid magic 8950
+[Stream 70] Invalid magic ffff
+[Stream 70] Invalid magic 6c69
+[Stream 70] Invalid magic d6ba
+[Stream 70] Invalid magic 5e2b
+[Stream 70] Lost too many packets, resyncing...
+\'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: True
+
+elem.estaHabilitada(): False
+
+creada opcion dropdown!
+
+Propiedad deshabilitada deficiencia de sellado: True
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+elem.estaHabilitada(): True
+
+creada opcion dropdown!
+
+Propiedad deshabilitada grietas: False
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: True
+
+elem.estaHabilitada(): False
+
+creada opcion dropdown!
+
+Propiedad deshabilitada ahuellamiento y depresiones: True
+
+customwidgets dropdown type(elem): <class 'capturador.Propiedad'>
+
+estaDeshabilitada: False
+
+elem.estaHabilitada(): True
+
+creada opcion dropdown!
+
+Propiedad deshabilitada baches: False
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+MOSTRANDO EL RESULTADO DE LA PETICION...
+
+En comprobarConexionSensor().
+
+/usr/lib/python2.7/dist-packages/kivy/uix/widget.py:312: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  super(Widget, self).__init__(**kwargs)
+instanciado dialogo espera...
+
+En threadComprobarConexionSensor() 
+
+Luego de threadCOnexionSensor: False
+
+Comenzando nueva BD, deshabilitando los elementos del menu!
+
+Inicializada por Defecto BD Local de muestras...
+
+En getNombreBDLocal() con self.rutaBDLocal: ./DB_MUESTRAS_LOCALES_19-05-2018.json
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de captura de fallas...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+En existenPropsCargadas(): 4
+
+En callbackCargaTiposFalla con dicNombres propiedades tiene:  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoFalla
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+Presione un elemento tipo falla en el tree! grietas
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoFallaDropdown
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoFalla
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+redibujando contorno!
+
+self.pos: [0, 740]; self.size: [800, 100] 
+
+self.root.height: 33.0
+
+En cargarPropsAsociadas()...
+
+controlador.getPropsConfirmados():  - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'1\', \'valor\': \'bajo: longitud con deficiencias de sellado < 5% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'2\', \'valor\': \'medio: 5% longitud con deficiencias de sellado 25% de la longitud de la junta\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'3\', \'valor\': \'alto: longitud con deficiencias de sellado > 25% de la longitud de la junta\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '1', 'valor': 'deficiencia de sellado'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'7\', \'valor\': \'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'8\', \'valor\': \'medio: 3 \\xe2\\x89\\xa4ancho grieta\\xe2\\x89\\xa4 10 mm \\xc3\\xb3 c/ resaltos de ancho < 50 mm \\xc3\\xb3 escalonamiento < 15 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'9\', \'valor\': \'alto: ancho 10 mm \\xc3\\xb3 resaltos de ancho 50 mm \\xc3\\xb3 escalonamiento 15 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '3', 'valor': 'grietas'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'10\', \'valor\': \'bajo: profundidad m\\xc3\\xa1xima del ahuellamiento es inferior a los 20 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'11\', \'valor\': \'medio: profundidad m\\xc3\\xa1xima es mayor a 20 mm pero inferior a 40 mm\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'12\', \'valor\': \'alto: profundidad m\\xc3\\xa1xima superior a 40 mm\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'2', 'valor': 'pavimento flexible'}"], 'clave': 'tipoFalla', 'id': '4', 'valor': 'ahuellamiento y depresiones'} - {'colPropsAsociadas': ['{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1\'}"], \'clave\': \'criticidad\', \'id\': u\'4\', \'valor\': \'bajo: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.15\'}"], \'clave\': \'criticidad\', \'id\': u\'5\', \'valor\': \'medio: Se determina por cantidad de baches y dimensiones\'}', '{\'colPropsAsociadas\': ["{\'colPropsAsociadas\': [], \'clave\': \'ponderacion\', \'id\': 1, \'valor\': \'1.3\'}"], \'clave\': \'criticidad\', \'id\': u\'6\', \'valor\': \'alto: Se determina por cantidad de baches y dimensiones\'}', "{'colPropsAsociadas': [], 'clave': 'tipoMaterial', 'id': u'1', 'valor': 'pavimento r\\xc3\\xadgido'}"], 'clave': 'tipoFalla', 'id': '2', 'valor': 'baches'}...
+
+len(controlador.getPropsConfirmados()): 4...
+
+screen obtenido: <class 'propstipofalla.propstipofalla.PropsFallaConfirmadaScreen'>
+
+tipoFalla.getValor(): grietas
+ ; tipoFalla.estaHabilitada(): True
+
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4a440166e0>
+
+w.id: None
+
+w.id: subLayoutTipoCriticidad
+
+w.id: subLayoutTipoMaterial
+
+ENCONTRADO Y REMOVIDO DROP!!!
+
+w.id: subLayoutTipoFalla
+
+creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
+
+Agregado dropdown tipo material de nuevo!
+
+En cargarOpciones()...
+
+prop.getClave(): tipoMaterial
+
+prop.getValor(): pavimento rígido
+
+agregando cadOpcion generada: pavimento rígido
+
+creada opcion dropdown!
+
+Esta deshabilitado pavimento rígido: False 
+
+self.screen.layout_principal:<kivy.uix.gridlayout.GridLayout object at 0x7f4a440166e0>
+
+w.id: None
+
+w.id: subLayoutTipoCriticidad
+
+ENCONTRADO Y REMOVIDO DROP!!!
+
+w.id: subLayoutTipoMaterial
+
+w.id: subLayoutTipoFalla
+
+creado customdropdown con self.root: <class 'kivy.uix.treeview.TreeViewLabel'>
+
+Agregado dropdown criticidad de nuevo!
+
+En cargarOpciones()...
+
+prop.getClave(): criticidad
+
+prop.getValor(): bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}"], 'clave': 'criticidad', 'id': u'7', 'valor': 'bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1'}
+
+agregando cadOpcion generada: [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible
+
+creada opcion dropdown!
+
+Esta deshabilitado [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible: False 
+
+prop.getClave(): criticidad
+
+prop.getValor(): medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}"], 'clave': 'criticidad', 'id': u'8', 'valor': 'medio: 3 \xe2\x89\xa4ancho grieta\xe2\x89\xa4 10 mm \xc3\xb3 c/ resaltos de ancho < 50 mm \xc3\xb3 escalonamiento < 15 mm'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.15'}
+
+agregando cadOpcion generada: [color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm
+
+creada opcion dropdown!
+
+Esta deshabilitado [color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm: False 
+
+prop.getClave(): criticidad
+
+prop.getValor(): alto: ancho 10 mm ó resaltos de ancho 50 mm ó escalonamiento 15 mm
+
+entre a generarSTRIconos()!
+
+propiedad: {'colPropsAsociadas': ["{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}"], 'clave': 'criticidad', 'id': u'9', 'valor': 'alto: ancho 10 mm \xc3\xb3 resaltos de ancho 50 mm \xc3\xb3 escalonamiento 15 mm'}
+
+propiedades de criticidad: [{'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}]
+
+recorriendo propiedades asociadas: {'colPropsAsociadas': [], 'clave': 'ponderacion', 'id': 1, 'valor': '1.3'}
+
+agregando cadOpcion generada: [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] alto: ancho 10 mm ó resaltos de ancho 50 mm ó escalonamiento 15 mm
+
+creada opcion dropdown!
+
+Esta deshabilitado [color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=FF0000][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] alto: ancho 10 mm ó resaltos de ancho 50 mm ó escalonamiento 15 mm: False 
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! pavimento rígido
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoMaterial
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+deshabilitado: subLayoutTipoCriticidad !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:255: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  label.parent_node.text = label.text
+/usr/lib/python2.7/dist-packages/kivy/core/text/__init__.py:675: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if text != self._text:
+redibujando contorno!
+
+self.pos: [0, 460]; self.size: [800, 100] 
+
+self.root.height: 33.0
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! [color=F2F939][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] bajo: ancho < 3 mm, sin saltaduras y escalonamiento imperceptible
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+redibujando contorno!
+
+self.pos: [0, 180]; self.size: [800, 100] 
+
+self.root.height: 33.0
+
+type(self.parent): <class 'kivy.uix.gridlayout.GridLayout'>, id: layout_principal
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+Presione una propiedad del tipo de falla en el tree! [color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color][color=ff890b][size=32][font=resource/fonts/font-awesome.ttf][/font][/size][/color] medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm
+
+type (customDropdown):<class 'customwidgets.CustomDropDown'>,  customDropdown.id: TipoCriticidad
+
+type (customDropdown.parent.id):<type 'str'>,  customDropdown.parent.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: None
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoCriticidad
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoMaterial
+
+deshabilitado: subLayoutTipoMaterial !
+
+
+recorriendo elemento: <class 'kivy.uix.gridlayout.GridLayout'>
+
+recorriendo elemento.id: subLayoutTipoFalla
+
+deshabilitado: subLayoutTipoFalla !
+
+
+redibujando contorno!
+
+self.pos: [0, 180]; self.size: [800, 100] 
+
+self.root.height: 43.0
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: grietas
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cad final: medio: 3 ≤ancho grieta≤ 10 mm ó c/ resaltos de ancho < 50 mm ó escalonamiento < 15 mm 
+
+filtrando por separador...
+
+cadena filtrada por separador final: medio
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+Existen nodos seleccionados!
+
+en filtrarContenidoOpcion()...
+
+cadena final: pavimento rígido
+
+props leidas: grietas, pavimento rígido, medio 
+
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+TipoFalla.root.is_selected?: False
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+En subLayout.id: subLayoutTipoFalla..
+
+encontrado sublayout: subLayoutTipoFalla
+
+En widget.id: TipoFallaDropdown , nombreWidget:TipoFallaDropdown..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+encontrado sublayout: subLayoutTipoCriticidad
+
+En widget.id: TipoCriticidad , nombreWidget:TipoCriticidad..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas/propstipofalla/propstipofalla.py:290: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  (self._obtenerWidgetPorId("subLayoutTipoCriticidad","TipoCriticidad").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN) or\
+En _obtenerWidgetPorId()..
+
+En subLayout.id: None..
+
+En subLayout.id: subLayoutTipoCriticidad..
+
+En subLayout.id: subLayoutTipoMaterial..
+
+encontrado sublayout: subLayoutTipoMaterial
+
+En widget.id: TipoMaterial , nombreWidget:TipoMaterial..
+
+Encontrado widget!:<class 'customwidgets.CustomDropDown'>..
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuCapturarFallas/propstipofalla/propstipofalla.py:291: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  (self._obtenerWidgetPorId("subLayoutTipoMaterial","TipoMaterial").root.text ==CustomDropDown.ICONO_DEFAULT_DROPDOWN):
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+Creando directorio!!
+
+tipo instance: <class 'kivy.uix.textinput.TextInput'>; tipo evt: <class 'kivy.input.providers.mouse.MouseMotionEvent'>
+
+limpiado txtinput!
+
+En self._create_dir(): /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+
+CAMBIO DE DIRECTORIO!
+selection : ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1']
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+
+Data SETEADA!!! con: nombre_cap =  falla_confirmada ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla -1
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+Llamando al manejador!
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (236541,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+En main.capturar(): getData()? -1
+ 
+En main.capturar(): id_falla? -1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  -1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+
+
+Seleccionando capturarFallaNueva...
+
+tipo capturador: <class 'capturador.Capturador'>
+En capturador FALLA NUEVA!!!
+
+
+self.posCoordenadaActual + 1: 4
+
+len(self.colCoordenadas): 14
+
+self.posCoordenadaActual: 4
+
+
+retornando la siguiente coordenada: { nombreCalle: Michael Jones[1-99] y Av. Hipolito Irigoyen, latitud: -43.2612999,  longitud -65.2952564 }
+
+
+fakegps.toJson(): {'colCoordenadas': [{'latitud': -43.259135, 'longitud': -65.308193, 'nombreCalle': u'Pele[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+[0;m[done, [0;36m359[0;m[0;m ms : [0;36m236541[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;mgrini[700-798] y Moreteau'}, {'latitud': -43.260601, 'longitud': -65.307328, 'nombreCalle': u'Pellegrini y Libertad'}, {'latitud': -43.262326, 'longitud': -65.305917, 'nombreCalle': u'Pellegrini y Rondeau'}, {'latitud': -43.2612999, 'longitud': -65.2952564, 'nombreCalle': u'Michael Jones[1-99] y Av. Hipolito Irigoyen'}, {'latitud': -43.259956, 'longitud': -65.29862, 'nombreCalle': u'Condarco [1150-1198] y Fray Luis Beltran'}, {'latitud': -43.258991, 'longitud': -65.299255, 'nombreCalle': u'Cabot[1-98] y Condarco'}, {'latitud': -43.257496, 'longitud': -65.297679, 'nombreCalle': u'Moreno[999-1099] y Cutillo'}, {'latitud': -43.256882, 'longitud': -65.299047, 'nombreCalle': u'Muzio-j [1-99] y Moreno'}, {'latitud': -43.25916, 'longitud': -65.311438, 'nombreCalle': u'Ameguino[699-799] y Sobernia Nacional'}, {'latitud': -43.253469, 'longitud': -65.308611, 'nombreCalle': u'San Martin y Rivadavia'}, {'latitud': -43.252091, 'longitud': -65.313846, 'nombreCalle': u'Av. Rawson y Bell A.P.'}, {'latitud': -43.251478, 'longitud': -65.317677, 'nombreCalle': u'Pecoraro y Ecuador'}, {'latitud': -43.252548, 'longitud': -65.318417, 'nombreCalle': u'Gales y Marconi'}, {'latitud': -43.249282, 'longitud': -65.310902, 'nombreCalle': u'Rivadavia y Ecuador'}], 'posCoordenadaActual': 4}
+
+dumpeado objeto a archivo!
+
+retornando coordenada calle: Michael Jones[1-99] y Av. Hipolito Irigoyen
+
+Cambiado el estado de la falla a : Confirmada; latitud: -43.2612999 - longitud: -65.2952564 
+
+Asignadas propiedades al estado de falla confirmada!
+tipoFalla: grietas; tipoReparacion: medio; tipoMaterial: pavimento rígido
+
+En capturador.capturar()
+
+dir_trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 ; nombre_captura: falla_confirmada
+
+Cantidad de archivos .pcd con el nombre  falla_confirmada es :  1
+
+En capturador.registrar()...
+
+Appeandeada la captura!
+
+En estado.registrar()
+Falla (lat:-43.2612999,long:-65.2952564) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1) - formato(pcd) - extension(.pcd)
+
+Falla (lat:-43.2612999,long:-65.2952564) tiene las capturas:  
+Captura: nombreAchivo(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd) - dirLocal(/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1) - formato(pcd) - extension(.pcd)
+
+Captura realizada con exito! Agregada:  falla_confirmada_1.pcd
+
+BD actualizada con elementos: 
+[{u'latitud': -43.2612999, u'nombrePcd': u'/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd', u'longitud': -65.2952564}]
+-----------------------------------------------------
+Guardado archivo .pcd en BD_JSON!
+
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd'}
+
+Abierto visualizador
+
+Si desea conservar la captura
+
+Se conserva la captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd'}] en disco!
+Screen encontrada y removida!
+SCreen agregada al mananger
+Las screens actuales de screenmanager luego de switch_to son: 
+['subMenuCapturarFalla', 'capturaKinect', 'obtenerinformadas', 'propsFallaConfirmada', 'capturarFallaInformada', 'dialogopropscaptura']
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+DesBindeada SPACEBAR!!
+
+La seleccion es:  []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+En dialogopropscaptura.getData(): -1
+
+controlador.getData('idFalla') > 0 ? False
+
+En existenPropsCargadas(): 4
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+Iterando elemento: None
+
+Iterando elemento: subLayoutTipoCriticidad
+
+/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets/customwidgets.py:471: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.root.text = CustomDropDown.ICONO_DEFAULT_DROPDOWN
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
+Iterando elemento: subLayoutTipoMaterial
+
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
+Iterando elemento: subLayoutTipoFalla
+
+self.root.parent: <class 'customwidgets.CustomDropDown'>
+
+self.root.parent.parent: <class 'kivy.uix.gridlayout.GridLayout'>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de SUBIR FALLAS...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenuservidor.ServidorScreen'>
+
+iterando... <class 'kivy.uix.boxlayout.BoxLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+{u'msg': u'No se pudieron resolver los datos de la direccion asociada a las coordenadas proporcionadas', u'estado': -1}
+En finally...
+
+rangoEstimado1: -1
+
+rangoEstimado2: -1
+
+Finalizado thread-FiltradoCapturas...
+
+En subircapturasservidor.args_converter()...
+
+row_index actual: 0
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Los attrEstado son: ['No asignado', 'No disponible(-43.2612999)', '---(-65.2952564)']
+
+>...............................................<
+
+
+En MyListItemButton con args -->
+{'text': 'No asignado', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': 'No disponible(-43.2612999)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': '---(-65.2952564)', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+button.select_from_composite(): ---(-65.2952564)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): No disponible(-43.2612999)
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() No asignado!
+
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+-->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Comprobando consistencia del item falla:     -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+
+comprobando captura: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd
+
+fin de comprobacion ...
+
+Resultado de controlador.existenFallasSeleccionadas()? True
+
+
+lista_capturadores desde subir_capturas: 2
+
+Reseteando flag de subida archivos...
+
+En threadSubidaCapturas...
+
+Iterando lista de capturadores para subir...
+
+tipo: <class '__main__.MainApp'>; controlador.canceladaSubidaArchivos: False
+
+tipo: <class '__main__.MainApp'>; self.canceladaSubidaArchivos: False
+
+Lista capturadores: [<capturador.Capturador object at 0x7f4a5ffe9c90>, <capturador.CapturadorInformados object at 0x7f4a5ffe9d50>]
+
+Iterando capturador <class 'capturador.Capturador'>
+
+En capturador.enviarCapturas()
+
+
+Enviando falla= -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    ; falla.is_selected=True)
+
+Inicio ItemFalla.enviar() para la falla:
+ -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+Iterando captura: falla_confirmada_1.pcd
+
+agregando captura consistente: falla_confirmada_1.pcd
+
+En getDicFallaEncoded()...
+
+Criticidad: medio
+
+
+Upload finished! (Returned status 200 OK)
+Registrando la respuesta...
+
+Llamado loggearMensaje...
+
+Fin de capturador.enviarCapturas()!
+
+Iterando capturador <class 'capturador.CapturadorInformados'>
+
+En capturador.enviarCapturas()
+
+Fin de capturador.enviarCapturas()!
+
+Desplanificando el callback de actualizacion del screen!
+
+Liberando el lock!
+
+Liberado el candadoFinSubidas
+
+Eliminando las capturas subidas de disco...
+
+Iterando desde capturador.descartarCapsSubidas()
+
+falla: -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+
+En itemfalla.descartar()
+
+La coleccion 'colItemsFalla' tiene: 
+
+tipo: <class 'capturador.ItemFalla'>; elemento: -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+
+La coleccion 'self.colCapturas' tiene: 
+
+tipo: <class 'captura.Captura'>; elemento: falla_confirmada_1.pcd
+
+Captura encontrada! en: [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] con itemFalla: -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [Captura: nombreArchivoCaptura=falla_confirmada_1.pcd , dirLocal = /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1 , nombreCaptura= falla_confirmada;
+] , 'is_selected': True , 'estaSubidaAlServidor': True }<--     
+
+Borrada captura de disco! /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_confirmada_1.pcd
+
+Eliminando captura de memoria...
+
+Mostrando la coleccion desde captura
+
+En mostrarCapturas()
+
+Fin mostrarCapturas()
+
+Descartada correctamente! 
+
+En mostrarCapturas()
+
+Fin mostrarCapturas()
+
+len(itemFalla.getColCapturas()): 0
+ 
+
+
+Mostrando la coleccion colItemFalla despues de borrar una falla subida:
+%s
+
+----------------------------------------------------------
+
+En itemfalla.mostrarColItemFalla()...
+
+----------------------------------------------------------
+
+-->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': True }<--    
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+----------------------------------------------------------
+
+Fin de itemfalla.mostrarColItemFalla()...
+
+----------------------------------------------------------
+
+----------------------------------------------------------
+
+En itemfalla.mostrarColItemFalla()...
+
+----------------------------------------------------------
+
+----------------------------------------------------------
+
+Fin de itemfalla.mostrarColItemFalla()...
+
+----------------------------------------------------------
+
+Eliminadas todas las capturas subidas!
+
+main.canceladaSubidaArchivos: False
+
+Cancelado subida al servidor!
+
+Refrescando vista!!!! 
+instanciado dialogo espera...
+
+Iniciando thread-filtrado de capturas
+Cambio la seleccion!
+
+El estado de las fallas es: 
+
+
+*****************************************
+
+Fin de cambio_seleccion
+Finalizado thread-FiltradoCapturas...
+
+Vaciadas capturas!
+Desmarcando elementos ...
+
+
+En marcarCapturas con activo: False
+
+self.ids.listado.adapter.data: []
+
+self.ids.listado.adapter.selection: []
+
+Colecciones actualizadas ...
+
+self.ids.listado.adapter.data: []
+
+self.ids.listado.adapter.selection: []
+
+
+Fin de marcarCapturas()! %s
+
+Desmarcados todos los elementos!
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+Se presiono panelBD!!type(instancia): <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+type(instancia.content): <class 'kivy.uix.screenmanager.ScreenManager'>
+
+LLamando al screen de obtener fallas inforamadas...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(M)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/M/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre', u'Michael Jones', u'Michael D. Jones']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre', u'Michael Jones', u'Michael D. Jones']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(Mi)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/Mi/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre', u'Michael Jones', u'Michael D. Jones']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre', u'Michael Jones', u'Michael D. Jones']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(Mit)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/Mit/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+type(label): <class 'kivy.uix.button.Button'>
+
+En solicitarSugerencias()!!!
+
+
+calleCodificada(Mitre)!!!
+
+
+peticion enviada:
+
+ http://localhost/web/restapi/obtener_sugerencias_calle/calle/Mitre/cantmaxsugerencias/3 
+
+La respuesta en formato json de solicitarSugerencias() es: 
+[u'Mitre']
+produciendo evento on_fin_obtencion_sugerencias con sugerencias: [u'Mitre']
+
+Handler de on_fin_obtencion_sugerencias ejecutado!
+
+type(label): <class 'kivy.uix.button.Button'>
+
+Enviando peticion al servidor calle: Mitre
+
+instanciado dialogo espera...
+
+Inicio de solicitarInformados()...
+
+Obteniendo baches sobre calle:Mitre
+ 
+peticion -->
+http://localhost/web/restapi/obtener_informados/calle/Mitre
+La respuesta en formato json es: 
+{u'codigo': 200, u'datos': {u'1': {u'calle': u'Mitre', u'id': u'1', u'altura': u'334'}, u'5': {u'calle': u'Mitre', u'id': u'5', u'altura': u'520'}}}
+dic. valores parseados: {u'1': {'calle': 'Mitre', 'id': 1, 'altura': 334}, u'5': {'calle': 'Mitre', 'id': 5, 'altura': 520}}
+
+Cambiado el estado de la falla a : Informada; id: 1 - calle: Mitre - altura: 334 
+
+Falla con id 1 no esta en colBachesInformados, agregando!
+
+Cambiado el estado de la falla a : Informada; id: 5 - calle: Mitre - altura: 520 
+
+Falla con id 5 no esta en colBachesInformados, agregando!
+
+En __cmp__() de itemfalla, con self: <class 'capturador.ItemFalla'>; other: <class 'capturador.ItemFalla'>; valor other: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Mostrando la coleccion despues de solicitarInformados()...
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Id falla:  1 ; Calle: Mitre ; Altura: 
+334
+Id falla:  5 ; Calle: Mitre ; Altura: 
+520
+---------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Fin de muestra de la coleccion solicitarInformados()...
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cerrado popup!
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+habilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+LLamando al screen de capturar falla informada...
+
+en tabbedpanel.desHabilitarOpciones()
+
+iterando... <class 'customwidgets.MyTabbedPanel'>
+
+iterando... <class 'kivy.uix.tabbedpanel.StripLayout'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.widget.Widget'>
+
+iterando... <class 'kivy.uix.scrollview.ScrollView'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelStrip'>
+
+hijos: [<kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff054b0>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a1ff85210>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a44016d00>, <kivy.uix.tabbedpanel.TabbedPanelItem object at 0x7f4a544ee670>]
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+deshabilitando elemento: <kivy.uix.tabbedpanel.TabbedPanelStrip object at 0x7f4a600009f0>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelItem'>
+
+iterando... <class 'kivy.uix.tabbedpanel.TabbedPanelContent'>
+
+iterando... <class 'kivy.uix.screenmanager.ScreenManager'>
+
+iterando... <class 'submenucapturarfallas.CapturarFallasScreen'>
+
+iterando... <class 'kivy.uix.gridlayout.GridLayout'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+iterando... <class 'kivy.uix.button.Button'>
+
+Actualizando listado de fallas...
+tipo:  <class 'capturarfallainformada.capturarfallainformada.CapturarFallaInformadaScreen'>
+En __cmp__() de itemfalla, con self: <class 'capturador.ItemFalla'>; other: <class 'capturador.ItemFalla'>; valor other: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f4a240779b0>, <capturador.ItemFalla object at 0x7f4a1cd41e60>]
+
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+Actualizado listado!
+row_index actual:  0
+
+En MyListItemButton con args -->
+{'text': '1', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+En MyListItemButton con args -->
+{'text': '334', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 0}
+
+row_index actual:  1
+
+En MyListItemButton con args -->
+{'text': '5', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': 'Mitre', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+En MyListItemButton con args -->
+{'text': '520', 'background_normal': 'atlas://customAppCliente/button_listview_no_seleccionado', 'background_down': 'atlas://customAppCliente/button_listview_seleccionado2', 'index': 1}
+
+button.select_from_composite(): 334
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+button.select_from_composite(): 1
+
+colores: self.background_color = [1, 1, 1, 1]
+
+
+en button.select() Mitre!
+
+En __cmp__() de itemfalla, con self: <class 'capturador.ItemFalla'>; other: <class 'capturador.ItemFalla'>; valor other: -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--    
+
+Son del mismo estado!
+
+En __cmp__() estado Informada con self_id: 5 y other_id: 1
+
+sorted(self.colBachesInformados): [<capturador.ItemFalla object at 0x7f4a240779b0>, <capturador.ItemFalla object at 0x7f4a1cd41e60>]
+
+self.colBachesInformados:  - -->{ 'estado': { Informada; id: 1 - calle: Mitre - altura: 334  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': False }<--     - -->{ 'estado': { Informada; id: 5 - calle: Mitre - altura: 520  }, 'capturas':  [] , 'is_selected': False , 'estaSubidaAlServidor': False }<--    
+
+recorriendo falla informada 1 falla.estaSeleccionado: True
+
+Existen fallas seleccionadas
+Agregando falla informada para ser capturada: 
+Id:  1
+
+id_falla_seleccionada: 1
+
+Entre al filechooser
+El directorio actual seleccionado es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules']
+
+PRE-ENTER!!
+La seleccion es:  []
+
+CAMBIO DE DIRECTORIO!
+selection : []
+
+La seleccion es:  ['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1']
+
+Seleccion actual -->
+['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1']
+Dir. seleccionado:  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+es_nombre_valido:  True
+es_dir_valido:  True
+
+Dir. de trabajo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+
+Data SETEADA!!! con: nombre_cap =  falla_informada ; dir_trabajo =  /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+Sensor LISTO? : True...
+
+Bindeado SPACEBAR!!
+
+Llamando al manejador!
+
+keycode[0] : 32
+keycode[1] : spacebar
+Presione SPACE!!!!
+
+En Kinectviewer.capturar()...con idFalla 1
+
+En getDatosSensor()...
+
+Existen frames obtenidos desde el sensor Kinect!
+
+rgbSinCod.shape: (480,640)
+
+rgbSinCod.size: 921600
+
+len(self.depths) = 480; (self.depths.shape[0]=480,self.depths.shape[1]): 640
+
+len(self.depths2) = 2
+
+La forma de la matriz xyz antes de filtrar en calibkinect es:
+alto:307200 ; ancho:3
+
+LLENADA dataNube! con shape: (307200,4) 
+
+CONVERTIDA dataNube2 con shape: (236121,4)
+
+El dir_trabajo para guardar la falla es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+En main.capturar(): getData()? 1
+ 
+En main.capturar(): id_falla? 1
+ 
+instanciado dialogo espera...
+
+threadCapturarFalla id_falla:  1 ; FALLA_NO_ESTABLECIDA: -1
+
+dir_trabajo desde kinectviewer es: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1
+
+
+Seleccionando capturadorInformados...
+
+tipo capturador: <class 'capturador.CapturadorInformados'>
+Inicio asociarFalla() para id_falla:  1
+
+Encontrado ItemFalla(%s):  1
+Cantidad de archivos .pcd con el nombre  falla_informada es :  1
+
+En registrar fallaInformada!
+item_fall[1;32m> [0;mLoading [0;36m/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd [0;m[0;mThe viewer window provides interactive commands; for help, press 'h' or 'H' from within the window.
+[0;m[done, [0;36m76[0;m[0;m ms : [0;36m236121[0;m[0;m points]
+[0;mAvailable dimensions: [0;36mx y z rgb
+[0;m[[1;32mINFO[0m   ] [Base        ] Leaving application in progress...
+entana es: 800,600 
+
+Creando kinectViewer greyscale...
+
+Llamada a la superclase de kinectViewer greyscale OK!...
+
+Creada kinectViewer greyscale!
+
+En inicializar_imagenes_kinect() ...
+
+Planificado el inicioSensado RGB! 
+
+Obtenido teclado...
+
+Leyendo clase: ObtenerInformadasScreen de tipo: screen
+
+
+Leyendo clase: PropsFallaConfirmadaScreen de tipo: screen
+
+
+Leyendo clase: CapturarFallaInformadaScreen de tipo: screen
+
+
+sorted(self.colBachesInformados): []
+
+self.colBachesInformados: 
+
+dirRaizModulo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuServidor
+
+
+
+Inicializando subscreen: {'titulo': 'Subida archivos', 'dirRaizModulo': 'views/subMenuServidor', 'pathConfig': 'views/subMenuServidor/config/subMenuServidor.cfg'}
+
+
+
+Leyendo listaVistas: {'1': {'nombre_menu': 'subMenuServidor', 'clase': 'ServidorScreen', 'modulo': 'submenuservidor', 'ruta_kv': 'views/subMenuServidor/submenuservidorscreen.kv', 'tipo': 'subMenu'}, '3': {'nombre_menu': 'enviocapturasserver', 'clase': 'EnvioCapturasServerScreen', 'modulo': 'enviocapturasserver', 'ruta_kv': 'views/subMenuServidor/enviocapturasserver/enviocapturasserverscreen.kv', 'tipo': 'screen'}, '2': {'nombre_menu': 'subircapturasservidor', 'clase': 'SubirCapturasServidorScreen', 'modulo': 'subircapturasservidor', 'ruta_kv': 'views/subMenuServidor/subircapturasservidor/subircapturasservidorscreen.kv', 'tipo': 'screen'}}
+
+Leyendo clase: ServidorScreen de tipo: subMenu
+
+
+Leyendo clase: EnvioCapturasServerScreen de tipo: screen
+
+
+Leyendo clase: SubirCapturasServidorScreen de tipo: screen
+
+
+Bindeados elementos en subircapturasservidor!
+
+dirRaizModulo: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/subMenuRecorrido
+
+
+
+Inicializando subscreen: {'titulo': 'Almacenar recorrido', 'dirRaizModulo': 'views/subMenuRecorrido', 'pathConfig': 'views/subMenuRecorrido/config/subMenuRecorrido.cfg'}
+
+
+
+Leyendo listaVistas: {'1': {'nombre_menu': 'subMenuRecorrido', 'clase': 'RecorridoScreen', 'modulo': 'submenurecorrido', 'ruta_kv': 'views/subMenuRecorrido/submenurecorridoscreen.kv', 'tipo': 'subMenu'}}
+
+Leyendo clase: RecorridoScreen de tipo: subMenu
+
+
+despues de inicializar...
+
+a: <class 'capturador.ItemFalla'>
+capturador: <class 'capturador.CapturadorInformados'>
+captura: <class 'captura.Captura'>
+ItemFalla no encontrado: id=  1
+Agregada captura a falla!
+Falla (1) tiene las capturas:  
+Item_falla no tiene capturas!!!!
+Falla (1) tiene las capturas:  
+Item_falla no tiene capturas!!!!
+En main.finalizadaCaptura() con: pcd=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd; csv=/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd; popup=<class 'notification.XLoading'>; origenEvt=<class '__main__.MainApp'>;
+
+CERRADO EL POPUP CAPTURA!!!
+
+MOSTRADO DIALOGO DE VISUALIZACION!! 
+
+Si desea visualizar!!
+
+Visualizando captura [{'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd'}, {'csvFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd'}]...
+
+PATH_VIEW_PCD_FILE_SCRIPT: ./see_capture.sh
+
+caps[0]: {'pcdFile': '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd'}
+
+Abierto visualizador
+
+NO desea conservar la captura
+
+En descartar()...
+Las capturas recibidas son :['/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd']
+
+Inicio de capturador.descartar()
+
+verificando long. capturas de itemfalla: 
+
+ -->{ 'estado': { Confirmada; latitud: -43.2612999 - longitud: -65.2952564  }, 'capturas':  [] , 'is_selected': True , 'estaSubidaAlServidor': True }<--     
+
+En itemfalla.descartar()
+
+La coleccion 'colItemsFalla' tiene: 
+
+tipo: <type 'str'>; elemento: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/TEST1/falla_informada_1.pcd
+
+La coleccion 'self.colCapturas' tiene: 
+
+Traceback (most recent call last):
+  File "main.py", line 860, in <module>
+    MainApp().run()
+  File "/usr/lib/python2.7/dist-packages/kivy/app.py", line 828, in run
+    runTouchApp()
+  File "/usr/lib/python2.7/dist-packages/kivy/base.py", line 487, in runTouchApp
+    EventLoop.window.mainloop()
+  File "/usr/lib/python2.7/dist-packages/kivy/core/window/window_sdl2.py", line 619, in mainloop
+    self._mainloop()
+  File "/usr/lib/python2.7/dist-packages/kivy/core/window/window_sdl2.py", line 362, in _mainloop
+    EventLoop.idle()
+  File "/usr/lib/python2.7/dist-packages/kivy/base.py", line 330, in idle
+    self.dispatch_input()
+  File "/usr/lib/python2.7/dist-packages/kivy/base.py", line 315, in dispatch_input
+    post_dispatch_input(*pop(0))
+  File "/usr/lib/python2.7/dist-packages/kivy/base.py", line 281, in post_dispatch_input
+    wid.dispatch('on_touch_up', me)
+  File "kivy/_event.pyx", line 718, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7699)
+  File "/usr/lib/python2.7/dist-packages/kivy/uix/behaviors/button.py", line 138, in on_touch_up
+    self.dispatch('on_release')
+  File "kivy/_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7654)
+  File "kivy/_event.pyx", line 1224, in kivy._event.EventObservers.dispatch (kivy/_event.c:13497)
+  File "kivy/_event.pyx", line 1148, in kivy._event.EventObservers._dispatch (kivy/_event.c:13023)
+  File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs/xbase.py", line 137, in _on_click
+    self.dismiss()
+  File "/usr/lib/python2.7/dist-packages/kivy/uix/modalview.py", line 216, in dismiss
+    if self.dispatch('on_dismiss') is True:
+  File "kivy/_event.pyx", line 714, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7654)
+  File "kivy/_event.pyx", line 1224, in kivy._event.EventObservers.dispatch (kivy/_event.c:13497)
+  File "kivy/_event.pyx", line 1148, in kivy._event.EventObservers._dispatch (kivy/_event.c:13023)
+  File "main.py", line 516, in desvanecidoConservar
+    self.descartar(popup)
+  File "main.py", line 525, in descartar
+    estaDescartada = self.capturador.descartar(capturas)
+  File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/capturador/capturador.py", line 670, in descartar
+    tuplaResultado = itemFalla.descartar(capturas)
+  File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/capturador/capturador.py", line 479, in descartar
+    colTotalObjCaptura += i.getColCapturas()
+AttributeError: 'str' object has no attribute 'getColCapturas'

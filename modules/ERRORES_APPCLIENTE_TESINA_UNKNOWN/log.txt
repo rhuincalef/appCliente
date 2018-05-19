@@ -1,0 +1,62 @@
+[[1;32mINFO[0m   ] [Logger      ] Record log in /home/rodrigo/.kivy/logs/kivy_18-05-19_10.txt
+[[1;32mINFO[0m   ] [Kivy        ] v1.9.1
+[[1;32mINFO[0m   ] [Python      ] v2.7.12 (default, Nov 20 2017, 18:23:56) 
+[GCC 5.4.0 20160609]
+[[1;32mINFO[0m   ] [Factory     ] 179 symbols loaded
+[[1;32mINFO[0m   ] [Image       ] Providers: img_tex, img_dds, img_gif, img_sdl2, img_pil (img_ffpyplayer ignored)
+[[1;32mINFO[0m   ] [OSC         ] using <multiprocessing> for socket
+[[1;32mINFO[0m   ] [Window      ] Provider: sdl2(['window_egl_rpi'] ignored)
+[[1;32mINFO[0m   ] [GL          ] OpenGL version <3.0 Mesa 11.2.0>
+[[1;32mINFO[0m   ] [GL          ] OpenGL vendor <Intel Open Source Technology Center>
+[[1;32mINFO[0m   ] [GL          ] OpenGL renderer <Mesa DRI Intel(R) Ivybridge Mobile >
+[[1;32mINFO[0m   ] [GL          ] OpenGL parsed version: 3, 0
+[[1;32mINFO[0m   ] [GL          ] Shading version <1.30>
+[[1;32mINFO[0m   ] [GL          ] Texture max size <8192>
+[[1;32mINFO[0m   ] [GL          ] Texture max units <16>
+[[1;32mINFO[0m   ] [Window      ] auto add sdl2 input provider
+[[1;32mINFO[0m   ] [Window      ] virtual keyboard not allowed, single mode, not docked
+[[1;32mINFO[0m   ] [Text        ] Provider: sdl2
+[[1;33mWARNING[0m] [IOError     ] [Errno 2] No such file or directory: '/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs/xpopup.mo'. Switch to the defaults.
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/customwidgets
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/resource/libs
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/views/config
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/captura
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/apiclient
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/capturador
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/estadofalla
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/geofencing
+
+agregando al path: /home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/estrategia
+
+configuraciones de directorios cargadas!
+
+Registrando elemento default_font
+Los argumentos enviados por consola son: Namespace(gps='fakegps', tipoCaptura='xyz_rgb')
+
+BDLocal en json tiene: None
+
+ Traceback (most recent call last):
+   File "main.py", line 866, in <module>
+     MainApp().run()
+   File "main.py", line 78, in __init__
+     self.capturador = Capturador(apiClientComun,bdLocalMuestrasComun)
+   File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/capturador/capturador.py", line 538, in __init__
+     self.api_geo = GeofencingAPI()
+   File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/geofencing/geofencing.py", line 125, in __init__
+     self.fakeGPS.inicializarGPS()
+   File "/home/rodrigo/TESINA-2016-KINECT/appCliente/modules/models/geofencing/fakegps.py", line 76, in inicializarGPS
+     dicObj = json.load(self.f,object_hook = self.instanciarCoordenadaFalsa)
+   File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+     **kw)
+   File "/usr/lib/python2.7/json/__init__.py", line 352, in loads
+     return cls(encoding=encoding, **kw).decode(s)
+   File "/usr/lib/python2.7/json/decoder.py", line 367, in decode
+     raise ValueError(errmsg("Extra data", s, end, len(s)))
+ ValueError: Extra data: line 75 column 2 - line 75 column 3 (char 2169 - 2170)

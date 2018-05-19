@@ -118,8 +118,9 @@ class Captura(Persistent):
 		  sys.exit(1)
 
 
-	# captura.descartar()
-	def descartar(self,colCaps):
+	# Captura.descartar()
+	#def descartar(self,colCaps):
+	def descartar(self, itemFalla):
 		"""Descarta la captura de disco, borrando el .pcd y borrandose
 		de la coleccion de capturas."""
 		try:
@@ -135,10 +136,13 @@ class Captura(Persistent):
 											text=err
 											)
 		finally:
-			print "Eliminando captura de memoria...\n"
-			colCaps.remove(self)
+			#print "Eliminando captura de memoria...\n"
+			#colCaps.remove(self)
+			c = itemFalla.getColCapturas()
+			c.remove(self)
+			itemFalla.setColCapturas(c)
 			print "Mostrando la coleccion desde captura\n"
-			self.mostrarCapturas(colCaps)
+			self.mostrarCapturas(itemFalla.getColCapturas())
 
 	def mostrarCapturas(self,colCaps):
 		print "En mostrarCapturas()\n"

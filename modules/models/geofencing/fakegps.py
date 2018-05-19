@@ -73,7 +73,17 @@ class FakeGPS(JSONizable):
 		#Se adjunta un metodo de parseo de json personalizado.
 		# json.load() carga primero los nodos del json mas anidados,
 		# y luego los nodos mas externos.
-		dicObj = json.load(self.f,object_hook = self.instanciarCoordenadaFalsa)
+		try:
+			dicObj = json.load(self.f,object_hook = self.instanciarCoordenadaFalsa)
+		except Exception as e:
+			print "Error desconocido en fakegps: %s\n" % e.message
+		finally:
+			try:
+				print "Cerrando la aplicacion...\n"
+				sys.exit(1)
+			except Exception as e:
+				pass
+
 
 
 	def getCoordenada(self):

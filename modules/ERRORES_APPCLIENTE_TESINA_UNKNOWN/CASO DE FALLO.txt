@@ -1,0 +1,13 @@
+1. Falla nueva (criticidad media)--> Crear una carpeta, ingresar a ésta, dar nombre a la falla "falla_confirmada".
+2. Capturar una falla y conservar la primera captura.
+3. Subir la falla confirmada al servidor y verificar.
+4. Obtener fallas informadas --> Mitre. Seleccionar ID 1 (Mitre 334)
+5. Entrar a la carpeta creada en 1), ingresar nombre "falla_informada"
+6. Capturar una falla y descartar la captura. Realizar otra captura y conservar. FALLA ACA!
+...
+
+
+-No debe haber NINGUNA falla confirmada en el "Capturador" luego de haberla subido y descartado.
+
+
+

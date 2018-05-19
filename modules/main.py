@@ -440,16 +440,16 @@ class MainApp(App,EventDispatcher):
 		t.setDaemon(True)
 		t.start()
 
-	def finalizadaCaptura(self,origenEvt,pcdNombre,csvNombre,popup):
-		print "En main.finalizadaCaptura() con: pcd=%s; csv=%s; popup=%s; origenEvt=%s;\n" %\
-				(pcdNombre,csvNombre,type(popup),type(origenEvt))
+	#def finalizadaCaptura(self,origenEvt,pcdNombre,csvNombre,popup):
+	def finalizadaCaptura(self,origenEvt,pcdNombre,popup):
+		print "En main.finalizadaCaptura() con: pcd=%s; popup=%s; origenEvt=%s;\n" %\
+				(pcdNombre,type(popup),type(origenEvt))
 
-		popup.bind(on_dismiss=self.cerradoPopupCaptura)
+		popup.bind(on_dismiss = self.cerradoPopupCaptura)
 		popup.dismiss()
 		#Se pregunta al usuario si quiere visualizar la captura		
 		controlador = App.get_running_app()
-		controlador.mostrar_dialogo_visualizacion(pcdNombre,
-												csvNombre)
+		controlador.mostrar_dialogo_visualizacion(pcdNombre)
 
 	def cerradoPopupCaptura(self,evt):
 		print "CERRADO EL POPUP CAPTURA!!!\n"
@@ -468,16 +468,18 @@ class MainApp(App,EventDispatcher):
 			print "Seleccionando capturarFallaNueva...\n"
 
 		print "tipo capturador: %s" % type(capturador_a_usar) 
-		pathPcd, pathCsv = capturador_a_usar.asociarFalla(data, dir_trabajo, nombre_captura,id_falla,
+		pathPcd = capturador_a_usar.asociarFalla(data, dir_trabajo, nombre_captura,id_falla,
 															self.args.gps)
 		#Se dispara el evento 'on_finalizada_captura' con los nombres de archivos
 		# pcd y csv 
-		self.dispatch('on_finalizada_captura',pathPcd,pathCsv,popup)
+		#self.dispatch('on_finalizada_captura',pathPcd,pathCsv,popup)
+		self.dispatch('on_finalizada_captura',pathPcd,popup)
 		
 	def getCapturadorInformados(self):
 		return self.capturadorInformados
 
-	def mostrar_dialogo_visualizacion(self,pathCapturaPcd,pathCapturaCsv):
+	#def mostrar_dialogo_visualizacion(self,pathCapturaPcd,pathCapturaCsv):
+	def mostrar_dialogo_visualizacion(self, pathCapturaPcd):
 		#NOTA: Se retrasa levemente el dibujado del dialogo_visualizacion para
 		# darle tiempo al popup a que se cierre y no hayan problemas de 
 		# redibujado con el dialogo.
@@ -485,9 +487,9 @@ class MainApp(App,EventDispatcher):
 		print "MOSTRADO DIALOGO DE VISUALIZACION!! \n"
 		# NOTA: El nombre de la captura .pcd y .csv  son enviados desde el metodo capturador.capturar()
 		# en appCliente
-		args = [ {"pcdFile":pathCapturaPcd},
-				{"csvFile":pathCapturaCsv} ]
-
+		#args = [ {"pcdFile":pathCapturaPcd},
+		#		{"csvFile":pathCapturaCsv} ]
+		args = [ { "pcdFile": pathCapturaPcd} ]
 		popupVisualizar = self.mostrarDialogoConfirmacion(title="Visualizacion de captura",
 															content = "¿Desea visualizar la captura?",
 															callback = self.desvanecidoVisualizar,
@@ -515,6 +517,8 @@ class MainApp(App,EventDispatcher):
 			print "NO desea conservar la captura\n"
 			self.descartar(popup)
 
+
+
 	#main.descartar()
 	def descartar(self,popup):
 		print "En descartar()..."
@@ -526,6 +530,8 @@ class MainApp(App,EventDispatcher):
 		if not estaDescartada:
 			self.capturadorInformados.descartar(capturas)
 			print "Captura descartada en self.capturador: %s ; self.capturadorInformados: %s\n" % (estaDescartada,estaDescartada)
+
+
 
 	def conservar(self,popup):
 		print "Se conserva la captura %s en disco!" % popup.args
@@ -629,6 +635,9 @@ class MainApp(App,EventDispatcher):
 			print "Despues de capturador.obtenerPropsConfirmadas()\n"
 			self.capturador.crearBackupConfirmados()
 			msg = "Tipos de falla obtenidos correctamente desde servidor!"
+
+			self.dataViews["esErrorFatal"] = False
+		
 		except (ExcepcionTipoFallaIncompleta,ExcepcionAjax) as e:
 
 			utils.loggearMensaje(logger,str(e.message))

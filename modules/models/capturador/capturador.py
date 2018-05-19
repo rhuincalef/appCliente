@@ -315,8 +315,14 @@ class ItemFalla(SelectableDataItem,Persistent):
     return miColCapturas
 
   def getColCapturas(self):
-    """Retorna la lista de capturas asociadas a una falla."""
+    """Retorna la lista de capturas asociadas a un ItemFalla."""
     return self.colCapturas
+
+
+  def setColCapturas(self,col):
+    """Setea la coleccion de capturas asociadas a un ItemFalla"""
+    self.colCapturas = col
+
 
   def registrarCaptura(self,dataSensor,cap,capturador):
     """Registra la captura en disco, la agrega a la coleccion del elemento ItemFalla actual y registra la falla."""
@@ -459,30 +465,37 @@ class ItemFalla(SelectableDataItem,Persistent):
     print "Fin de itemfalla.mostrarColItemFalla()...\n"
     print "----------------------------------------------------------\n"
 
+
   #ItemFalla.descartar()
-  def descartar(self,colItemsFalla):
-    """Se descartan las capturas (col. con los paths de las capturas)
-        solo si estas estan en la coleccion de capturas de la falla."""
+  # Recibe una coleccion de nombres de las capturas (pcds) que contienen los objetos
+  # "Captura" asociados a los objetos "ItemFalla".
+  #def descartar(self,colItemsFalla):
+  def descartar(self,colNombresCapturasPcd):
+    """Se descartan los objetos 'Captura' asociados al objeto 'Itemfalla' actual
+        solo si los pcds asociados a cada 'Captura' se encuentran en colNombresCapturasPcd"""
     print "En itemfalla.descartar()\n"
     capEstaDescartada = False
     #Por cada captura de cada itemFalla...
-    print "La coleccion 'colItemsFalla' tiene: \n"
-    for e in colItemsFalla:
+    print "La coleccion 'colNombresCapturasPcd' tiene: \n"
+    for e in colNombresCapturasPcd:
       print "tipo: %s; elemento: %s\n" % (type(e),e)
 
     print "La coleccion 'self.colCapturas' tiene: \n"
     for e in self.colCapturas:
       print "tipo: %s; elemento: %s\n" % (type(e),e)
       
-    colTotalObjCaptura = list()
-    for i in colItemsFalla:
-      colTotalObjCaptura += i.getColCapturas()
+    #colTotalObjCaptura = list()
+    #for i in colNombresCapturasPcd:
+    #  colTotalObjCaptura += i.getColCapturas()
 
+    # Se iteran todos los objetos Captura asociados al ItemFalla actual y
+    # se los descarta
     for cap in self.colCapturas:
-      #if cap.getFullPathCaptura() in colItemsFalla:
-      if cap in colTotalObjCaptura:
-        print "Captura encontrada! en: %s con itemFalla: %s \n" % (colTotalObjCaptura,self)
-        cap.descartar(self.colCapturas)
+      #if cap in colTotalObjCaptura:
+      if cap.getFullPathCaptura() in colNombresCapturasPcd:
+        print "Iterando Captura con path: %s\n" % cap.getFullPathCaptura() 
+        print "Captura encontrada! en: %s con itemFalla: %s \n" % (self.colCapturas,self)
+        cap.descartar(self)
         capEstaDescartada = True
         print "Descartada correctamente! \n"
         Capturador.mostrarCapturas(self.colCapturas)
@@ -615,7 +628,7 @@ class Capturador(object):
     self.bdLocalMuestras.agregar(latitud,longitud,cap.getFullPathCaptura())
     print "Guardado archivo .pcd en BD_JSON!"
     print ""
-    return cap.getFullPathCaptura(),cap.getFullPathCapturaConv()
+    return cap.getFullPathCaptura()
 
   def filtrarCapturas(self):
     """Filtra las colCapturasTotales y agrega solamente las capturas seleccionadas en el listview
@@ -656,17 +669,19 @@ class Capturador(object):
         bytesEnviar += falla.calcularTamanio()
     return bytesEnviar
 
-  # Capturador.descartar()
+  # Capturador.descartar(capturas)
+  # Recibe una lista de strings con los nombres de archivos de captura para descartar
+  # iterando todos los objetos ItemFalla y descartando los objetos captura necesarios
+  # asociadas a estas
   def descartar(self,capturas):
     """Este metodo descarta la captura de memoria y de disco. """
-    print "Inicio de capturador.descartar()\n"
-    colItemFalla = self.colCapturasTotales
+    print "Inicio de capturador.descartar()\n" 
     capEstaDescartada = False
     colItemsFallaADescartar = list()
 
-    for itemFalla in colItemFalla:
+    for itemFalla in self.colCapturasTotales:
       print "verificando long. capturas de itemfalla: \n\n %s \n" % itemFalla 
-      #Descarta la captura en itemFalla solo si esta en su coleccion
+      #Descarta la Captura en itemFalla solo si esta en su coleccion
       tuplaResultado = itemFalla.descartar(capturas)
       capEstaDescartada = tuplaResultado[1]
       #Si no es None el resultado, se debe descartar itemFalla
@@ -677,9 +692,12 @@ class Capturador(object):
     print "colItemsFallaADescartar -->:\n\n"
     for miFalla in colItemsFallaADescartar:
       print "miFalla: %s \n" % miFalla
+
+    #Se descartan las fallas que no contienen capturas
     self.descartarFallaSinCaps(colItemsFallaADescartar)
     print "Fin de capturador.descartar()\n"
     return capEstaDescartada
+
 
   # Capturador.descartarFallaSinCaps()
   def descartarFallaSinCaps(self,colItemsFallaADescartar):
@@ -713,18 +731,26 @@ class Capturador(object):
       print "captura asociada a la falla: %s \n" % c.getFullPathCaptura()
     print "Fin mostrarCapturas()\n"
 
-  # Invocado desde main.noConservarCapsLuegoSubida().
-  # capturador.descartarCapsSubidas()
+  # Invocado desde main._callbackConservarCapsSubidas().
+  # Capturador.descartarCapsSubidas()
   def descartarCapsSubidas(self):
     """Elimina los itemFalla de la colCapturasConfirmadas
         luego de haberlas registrado en el servidor."""
     colItemFalla = self.colCapturasConfirmadas
-    for f in colItemFalla:
+    #Se obtienen los nombres de los pcds asociados a los objetos "Captura"
+    colNombresCapturasPcd = []
+    for itemFalla in colItemFalla:
+      for cap in itemFalla.getColCapturas():
+        colNombresCapturasPcd.append(cap.getFullPathCaptura())
+
+    for f in self.colCapturasConfirmadas:
       print "Iterando desde capturador.descartarCapsSubidas()\n"
       print "falla: %s\n" % f
       if f.is_selected and f.estaSubida():
-        f.descartar(colItemFalla)
+        #f.descartar(colItemFalla)
+        f.descartar(colNombresCapturasPcd)
         print "\n\nMostrando la coleccion colItemFalla despues de borrar una falla subida:\n%s\n"
+    
     # Se obtienen las capturasConfirmadas no subidas (no seleccionadas) y
     # se actualiza la lista de capturas confirmadas con esas fallas.
     fallasNoDescartadas = self._filtrarCapturasConservadas(colItemFalla)
@@ -747,10 +773,11 @@ class Capturador(object):
   def crearBackupConfirmados(self):
     """Vacia la BD Confirmadas y la actualiza con los datos
         que leyo del servidor."""
+    print  "Inicio tinydb!!!\n"
     tinydb = TinyDB(LOCAL_BD_PROPS_CONFIRMADAS)
-    if len(tinydb.all())>0:
-      tinydb.purge()
-    self.propsConfirmados.guardar(tinydb)
+    #if len(tinydb.all())>0:
+    #  tinydb.purge()
+    #self.propsConfirmados.guardar(tinydb)
     print "Creado un resplado de las propiedades de las fallas confirmadas!\n"
 
   def crearListaProps(self,listaProps):
@@ -871,6 +898,7 @@ class Capturador(object):
   def existenPropsCargadas(self):
     """Retorna True si existen propiedades cargadsa en la coleccion
         de propiedades del capturador. """
+    print "En existenPropsCargadas(): %s\n" % len(self.propsConfirmados)
     return len(self.propsConfirmados) > 0 
 
 
@@ -1062,7 +1090,8 @@ class CapturadorInformados(Capturador):
   def capturar(self,dataSensor, dir_trabajo, nombre_captura,item_falla):
     cap = Captura(nombre_captura,dir_trabajo,FORMATO_CAPTURA, EXTENSION_ARCHIVO)
     item_falla.registrarCaptura(dataSensor,cap,self)
-    return cap.getFullPathCaptura(),cap.getFullPathCapturaConv()
+    #return cap.getFullPathCaptura(),cap.getFullPathCapturaConv()
+    return cap.getFullPathCaptura()
 
   # CapturadorInformados.descartarFallaSinCaps()
   def descartarFallaSinCaps(self,colItemsFallaADescartar):
