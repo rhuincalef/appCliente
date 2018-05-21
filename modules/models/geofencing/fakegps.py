@@ -45,7 +45,8 @@ class FakeGPS(JSONizable):
 	def __init__(self):
 		self.posCoordenadaActual = 0
 		self.colCoordenadas = []
-		self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"r") 
+		#self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"r") 
+		self.f = None
 
 	def setColCoordenadas(self,col):
 		self.colCoordenadas = col
@@ -59,6 +60,8 @@ class FakeGPS(JSONizable):
 									dicElem['longitud'],
 									dicElem['nombreCalle']
 					)
+			print "Agregada coordenada falsa a la lista: %s - Longitud: %s\n" % \
+				(objeto, len(self.colCoordenadas))
 			self.colCoordenadas.append(objeto)
 			return objeto
 		elif dicElem.has_key('posCoordenadaActual'):
@@ -74,17 +77,19 @@ class FakeGPS(JSONizable):
 		# json.load() carga primero los nodos del json mas anidados,
 		# y luego los nodos mas externos.
 		try:
+			self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"r") 
+			print "Inicializando FakeGPS -->\n"
 			dicObj = json.load(self.f,object_hook = self.instanciarCoordenadaFalsa)
 		except Exception as e:
 			print "Error desconocido en fakegps: %s\n" % e.message
+			print "Cerrando la aplicacion, problema con BD latitudesFalsas.json...\n"
+			controlador = App.get_running_app()
+			controlador.stop()
 		finally:
-			try:
-				print "Cerrando la aplicacion...\n"
-				sys.exit(1)
-			except Exception as e:
-				pass
-
-
+			print "Fin de agregado de coordenadas falsas!\n"
+			print "Cerrando descriptor...\n"
+			self.f.close()
+			
 
 	def getCoordenada(self):
 		""" Obtiene la coordenada actual en la coleccion y aumenta 
@@ -119,6 +124,13 @@ class FakeGPS(JSONizable):
 
 	def persistirUbicaciones(self):
 		print "fakegps.toJson(): %s\n" % self.toJson()
-		self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"w")
-		json.dump(self.toJson(),self.f,indent=4)
-		print "dumpeado objeto a archivo!\n"
+		try:
+			self.f = open(PATH_ARCH_UBICACIONES_FALSAS,"w")
+			json.dump(self.toJson(),self.f,indent=4)
+			print "dumpeado objeto a archivo!\n"
+		except Exception as e:
+			print "Error en el dumping de latitudesFalsas.json a disco: %s\n" % e.message
+		finally:
+			print "Cerrando descriptor...\n"
+			self.f.close()
+		

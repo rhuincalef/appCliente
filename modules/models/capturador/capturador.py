@@ -537,7 +537,7 @@ class Capturador(object):
     self.estrategia = EstrategiaConfirmados()
     self.api_geo = GeofencingAPI()
     self.bdLocalMuestras = BDLocal
-    print "Inicializado Capturador"
+    print "Inicializado %s" % self.__class__.__name__
     self.propsConfirmados = ListadoPropiedades() #Listado de objetos que se asocian
                                                   # con los atrigbutos de un tipoFalla confirmada
                                                   # y que son obligatorios(tipo reparacion y 
@@ -591,7 +591,7 @@ class Capturador(object):
     os.chdir(dir_actual)
     return contador_arch
 
-  # capturador.asociarFalla()
+  # Capturador.asociarFalla()
   def asociarFalla(self,data, dir_trabajo, nombre_captura,id_falla,gps):
     """Asocia el ItemFalla con la captura recien realizada,
       se cambia el estado de la falla a Confirmada, y se utiliza
