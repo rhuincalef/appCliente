@@ -12,6 +12,8 @@
 
     #IDs para el borrado dinamico de carpetas
     ctl_bar: controls_bar
+    boton_crear_dir: btn_crear_dir 
+    boton_borrar_dir: btn_borrar_dir
 
 
     GridLayout:
@@ -47,6 +49,27 @@
                 write_tab: False
                 multiline: False
                 on_text_validate: root.validar1(nombre_captura_txt.text)
+
+            Button:
+                id: btn_crear_dir
+                markup: True
+                size_hint:(0.20,1)
+                text: "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR))
+                #on_press: root.crearDir(btn_crear_dir)
+
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
+
+
+            Button:
+                id: btn_borrar_dir
+                markup: True
+                size_hint:(0.20,1)
+                text: "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR))
+                #on_press: root.borrarDir(btn_borrar_dir)
+
+                background_normal: const.ESTILO_BOTON_DEFAULT_OPCIONES_MENU
+                background_down: const.ESTILO_BOTON_DEFAULT_PRESIONADO
 
 
 

@@ -33,6 +33,43 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		super(DialogoPropsCapturaScreen, self).__init__(**kwargs)
 		self.dir_chooser.path = os.getcwd()
 		self.dir_chooser.rootpath = ROOT_PCD_FOLDER
+		#Bindeo de los botones de crear y borrar dir
+		#self.boton_crear_dir.bind(on_press= self.crearDir)
+		#self.boton_borrar_dir.bind(on_press= self.borrarDir)
+
+		# Se crean los botones y se agregan al widget
+		crearDirBtn = Button(
+			id="btn_crear_dir",
+			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR)),
+			markup=True,
+			size_hint = (0.20,1),
+			on_press = self._borrarSeleccion,
+			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
+		)
+		self.ctl_bar.add_widget(crearDirBtn)
+		self.crearDirBtn = crearDirBtn
+		self.crearDirBtnUID = crearDirBtn.fbind('on_press', self.crearDir)
+		if not self.crearDirBtnUID:
+			print "ERROR BINDEANDO boton CrearDir!\n"
+
+		borrarDirBtn = Button(
+			id="btn_borrar_dir",
+			text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+			markup=True,
+			size_hint = (0.20,1),
+			on_press = self._borrarSeleccion,
+			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
+		)
+		self.ctl_bar.add_widget(borrarDirBtn)
+		self.borrarDirBtn = borrarDirBtn
+		self.borrarDirBtnUID = borrarDirBtn.fbind('on_press', self.borrarDir)
+		if not self.crearDirBtnUID:
+			print "ERROR BINDEANDO boton BorrrarDir!\n"
+
+		print "Bindeados botones creacion y borrado dialogopropscaptura!\n"
+
 
 	def validar(self):
 		pass
@@ -50,6 +87,11 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		print "PRE-ENTER!!"
 
 	def esDirValido(self,dirChooser):
+		#Si es el mismo dir que el dir de ejecucion de la app
+		# se no se borra 
+		if os.getcwd() == self.dir_chooser.selection[0]:
+			print "Dir. invalido, es el mismo dir que el dir de ejecucion!\n"
+			return False
 		if len(dirChooser.selection) > 0:
 			dirName = dirChooser.selection[0]	
 		  	return self.dir_chooser.file_system.is_dir(dirName)
@@ -150,7 +192,7 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		
 	def borrarDir(self,componente):
 		dirSeleccionado = self.dir_chooser.selection[0]
-		print "En borrarDir con dirSeleccionado: %s\n" % dirSeleccionado
+		print "En borrarDir handler...\n"
 		#Se habilita la seleccion de directorios
 		self.dir_chooser.dirselect = True
 		
@@ -159,40 +201,90 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 
 	#Agrega las opciones de "Borrar" y "Cancelar borrado" en donde estan 
 	# las opciones de "Crear carpeta" y "Borrar carpeta".
-	def cargarOpcionesBorrado(self):
+	#def cargarOpcionesBorrado(self):
 		#Se guardan los elementos que tiene el layout para crear y borrar
 		# carpeta y se agregan los mismos elementos
+	#	print "En cargarOpcionesBorrado()....\n"
+	#	self.ctl_bar.clear_widgets()
+	#	borrar = Button(
+	#			id="BorrarBtn",
+     #           text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR)),
+	#			markup=True,
+     #           size_hint = (0.20,1),
+    #            on_press = self._borrarSeleccion,
+	#			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+    #            background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
+	#		)
+	#	self.ctl_bar.add_widget(borrar)
+	#	cancelar = Button(
+    #            text = "%sCancelar borrado" % (icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+	#			markup=True,
+    #            size_hint = (0.20,1),
+    #            on_press = self._cancelarSeleccion,
+    #            background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+    #            background_down = ESTILO_BOTON_DEFAULT_PRESIONADO                
+	#		)
+	#	self.ctl_bar.add_widget(cancelar)
+
+	#Agrega las opciones de "Borrar" y "Cancelar borrado" en donde estan 
+	# las opciones de "Crear carpeta" y "Borrar carpeta".
+	def cargarOpcionesBorrado(self):
+		#Se cambia el texto de los botones y se bindean de nuevo con las nuevas acciones
+		# relacionadas con el borrado de carpetas
 		print "En cargarOpcionesBorrado()....\n"
-		self.ctl_bar.clear_widgets()
-		borrar = Button(
-				id="BorrarBtn",
-                text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR)),
-				markup=True,
-                size_hint = (0.20,1),
-                on_press = self._borrarSeleccion,
-				background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
-			)
-		self.ctl_bar.add_widget(borrar)
-		cancelar = Button(
-                text = "%sCancelar borrado" % (icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
-				markup=True,
-                size_hint = (0.20,1),
-                on_press = self._cancelarSeleccion,
-                background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO                
-			)
-		self.ctl_bar.add_widget(cancelar)
+
+		observers = self.crearDirBtn.get_property_observers('on_press')
+		print '\n\nlist of observers before unbinding: {}\n'.format(observers)
+		print 'list of observers before unbinding: {}\n'.format(observers)
+
+		self.crearDirBtn.unbind_uid('on_press', self.crearDirBtnUID)
+		self.borrarDirBtn.unbind_uid('on_press', self.borrarDirBtnUID)
+
+		self.crearDirBtn.text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
+		self.crearDirBtn.fbind('on_press', self._borrarSeleccion)
+		#self.borrarDirBtn.funbind('on_press',self.crearDir)
+		print "Desbindeado self.borrarDirBtn...\n"
+		
+
+		self.borrarDirBtn.text = "%sCancelar borrado" % (icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR))
+		self.borrarDirBtn.fbind('on_press', self._cancelarSeleccion)
+		#self.borrarDirBtn.funbind('on_press',self.borrarDir)
+
+		
+		print '\n\nlist of observers after unbinding: {}\n'.format(self.crearDirBtn.get_property_observers('on_press'))
+		print 'list of observers after unbinding: {}\n\n'.format(self.crearDirBtn.get_property_observers('on_press'))
+		
+		print "Desbindeado self.crearDirBtn...\n"
+
+		# LINk --> https://stackoverflow.com/questions/17501122/how-to-unbind-a-property-automatically-binded-in-kivy-language
+		#observers = self.boton_crear_dir.get_property_observers('pos')
+		#print 'list of observers before unbinding: {}'.format(observers)
+		#for observer in observers:
+		#	self.boton_crear_dir.unbind(pos=observer)
+		#print 'list of observers after unbinding: {}'.format(self.boton_crear_dir.get_property_observers('pos'))
+		#
+		#self.boton_crear_dir.text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
+		#self.ids['btn_crear_dir'].text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
+		#self.ids['btn_crear_dir'].unbind()
+		#self.ids['btn_crear_dir'].bind(on_press = self._borrarSeleccion)
+
+		#self.ids['btn_borrar_dir'].text = "%sCancelar borrado" % (icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR))
+		#self.ids['btn_borrar_dir'].unbind()
+		#self.ids['btn_borrar_dir'].bind(on_press = self._cancelarSeleccion)
+
+
 
 	#Borrado de los directorios que se seleccionaron 
 	def _borrarSeleccion(self,componente):
 		print "En _borrarSeleccion()...\n"
 		if self.esDirValido(self.dir_chooser):
 			dirABorrar = self.dir_chooser.selection[0]
-			print "Borrando el dir: %s\n" % dirABorrar
-			shutil.rmtree(dirABorrar,onerror = self.deleteError)
+			print "Borrando dir: %s\n" % dirABorrar
+			print "Borrando dir: %s\n" % dirABorrar
+			print "Borrando dir: %s\n" % dirABorrar
+			#shutil.rmtree(dirABorrar,onerror = self.deleteError)
 			print "Borrado correctamente!\n"
-			self._reestablecerGUI()
+			#self._reestablecerGUI()
 		
 	#Cancelar la seleccion para borrar
 	def _cancelarSeleccion(self,boton):
@@ -203,42 +295,64 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 	#  y "Borrar carpeta".
 	def _reestablecerGUI(self):
 		print "Reestableciendo GUI! ...\n"
-		self.ctl_bar.clear_widgets()
-		
-		searchBar = TextInput(
-							id= "nombre_captura_txt",
-							size_hint=(0.6,1),
-							write_tab= False,
-							multiline = False)
-		searchBar.bind(on_text_validate=self.validar1)
-		self.ctl_bar.add_widget(searchBar)
-		btn_crear_dir = Button(
-							id="btn_crear_dir",
-							markup = True,
-                			size_hint = (0.20,1),
-                			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR)),
-                			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-                			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
-                			)
 
-		btn_crear_dir.bind(on_press = self.crearDir)
-		self.ctl_bar.add_widget(btn_crear_dir)
-		btn_borrar_dir = Button(
-							id = "btn_borrar_dir",
-							markup = True,
-							size_hint = (0.20,1),
-							text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
-							background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
-			                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
-							 )
-		btn_borrar_dir.bind(on_press = self.borrarDir)
-		self.ctl_bar.add_widget(btn_borrar_dir)
+		#self.ids['btn_crear_dir'].text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR))
+		#self.ids['btn_crear_dir'].unbind()
+		#self.ids['btn_crear_dir'].bind(on_press = self.crearDir)
+
+		#self.ids['btn_borrar_dir'].text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR))
+		#self.ids['btn_borrar_dir'].unbind()
+		#self.ids['btn_borrar_dir'].bind(on_press = self.borrarDir)
 		
 		#Se refresca el directorio de trabajo al crear un dir nuevo
 		self.dir_chooser.dirselect = False
 		print "Update_files antes\n"
 		self.dir_chooser._update_files()
 		print "Update_files despues!!\n"
+
+
+
+	#Agrega nuevamente las opciones anteriores para "Crear carpeta"
+	#  y "Borrar carpeta".
+	#def _reestablecerGUI(self):
+	#	print "Reestableciendo GUI! ...\n"
+	#	self.ctl_bar.clear_widgets()
+		
+	#	searchBar = TextInput(
+	#						id= "nombre_captura_txt",
+	#						size_hint=(0.6,1),
+	#						write_tab= False,
+	#						multiline = False)
+	#	searchBar.bind(on_text_validate=self.validar1)
+	#	self.ctl_bar.add_widget(searchBar)
+	#	btn_crear_dir = Button(
+	#						id="btn_crear_dir",
+	#						markup = True,
+     #           			size_hint = (0.20,1),
+     #           			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR)),
+     #           			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+    #            			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
+    #            			)
+
+	#	btn_crear_dir.bind(on_press = self.crearDir)
+	#	self.ctl_bar.add_widget(btn_crear_dir)
+	#	btn_borrar_dir = Button(
+	#						id = "btn_borrar_dir",
+	#						markup = True,
+	##						size_hint = (0.20,1),
+	#						text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+	#						background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
+	#		                background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
+	#						 )
+	#	btn_borrar_dir.bind(on_press = self.borrarDir)
+	#	self.ctl_bar.add_widget(btn_borrar_dir)
+		
+		#Se refresca el directorio de trabajo al crear un dir nuevo
+	#	self.dir_chooser.dirselect = False
+	#	print "Update_files antes\n"
+	#	self.dir_chooser._update_files()
+	#	print "Update_files despues!!\n"
+
 
 	def _noBorrarDir(self):
 		print "No se borra el dir"
