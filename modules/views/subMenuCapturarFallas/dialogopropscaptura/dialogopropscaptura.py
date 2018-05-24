@@ -40,49 +40,53 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 			text = "%s Crear carpeta"%(icon('fa-clone',TAMANIO_ICONOS_CTRL_BAR)),
 			markup=True,
 			#size_hint = (0.20,1),
-			size_hint = (0.10,1),
+			size_hint = (0.15,1),
 			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
 			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 		)
 		self.ctl_bar.add_widget(self.crearDirBtn)
-		
+		#self.crearDirBtn.disabled = True
 		self.crearDirBtnUID = self.crearDirBtn.fbind('on_press', self.crearDir)
 		if not self.crearDirBtnUID:
 			print "ERROR BINDEANDO boton CrearDir!\n"
 
 		self.botonBorrado = Button(
 			id="boton1",
-			text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+			#text = "%s Borrar carpeta"%(icon('fa-window-close',TAMANIO_ICONOS_CTRL_BAR)),
+			text = "-",
 			markup=True,
 			#size_hint = (0.20,1),
-			size_hint = (0.10,1),
+			size_hint = (0.15,1),
 			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
 			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 		)
 		self.ctl_bar.add_widget(self.botonBorrado)
+		self.borrarUID = None
 		#self.borrarUID = self.botonBorrado.fbind('on_press', self.eliminarDirectorio)
-		self.borrarUID = self.botonBorrado.fbind('on_press', self.eliminarDirectorio)
-		if not self.borrarUID:
-			print "ERROR BINDEANDO boton BorrrarDir!\n"
+		#self.botonBorrado.disabled = True
+		#if not self.borrarUID:
+		#	print "ERROR BINDEANDO boton BorrrarDir!\n"
 
 		#Tercer boton para desvincular los otros dos. 
 		#NOTA: La libreria no permite desasociar un boton
-		self.botonModo = Button(
+		self.botonBorrarCarpetas = Button(
 			id="boton2",
-			text = "Modo Borrado: OFF",
+			text = "Borrar carpetas",
 			markup=True,
 			#size_hint = (0.20,1),
-			size_hint = (0.10,1),
+			size_hint = (0.15,1),
 			background_normal = ESTILO_BOTON_DEFAULT_OPCIONES_MENU,
 			background_down = ESTILO_BOTON_DEFAULT_PRESIONADO
 		)
-		self.ctl_bar.add_widget(self.botonModo)
-		self.botonModoUID = self.botonModo.fbind('on_press', self.eliminarDirectorio)
-		if not self.botonModoUID:
+		self.ctl_bar.add_widget(self.botonBorrarCarpetas)
+		self.botonBorrarCarpetasUID = self.botonBorrarCarpetas.fbind('on_press', self.eliminarDirectorio)
+		if not self.botonBorrarCarpetasUID:
 			print "ERROR BINDEANDO boton Modo!\n"
 
 		#print "self.borrarUID tiene: %s\n" % self.borrarUID
 		self.borrarSeleccionUID = self.cancelarSeleccionUID = None
+		#Flag empleado para detectar si esta activa la opcion de "borrado de carpetas"
+		self.estaEnModoBorrado = False
 		print "Bindeados botones creacion y borrado dialogopropscaptura!\n"
 
 
@@ -204,9 +208,19 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		self.dir_chooser._update_files()
 		return
 		
+
+	# Este metodo se llama desde la opcion "Borrar Carpetas" y permite 
+	# acceder al borrado de carpetas individuales.
 	def eliminarDirectorio(self, componente):
-		dirSeleccionado = self.dir_chooser.selection[0]
 		print "En eliminarDirectorio handler...\n"
+		if self.estaEnModoBorrado:
+			print "Estoy en modo de borrado, reestablecendo GUI\n"
+			self._reestablecerGUI()
+			return
+		
+		print "Segui...\n"
+		self.estaEnModoBorrado = True
+		dirSeleccionado = self.dir_chooser.selection[0]
 		#Se habilita la seleccion de directorios
 		self.dir_chooser.dirselect = True
 		#Se agrega dinamicamente dos botones para borrar y cancelar el borrado
@@ -218,19 +232,19 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		#Se cambia el texto de los botones y se bindean de nuevo con las nuevas acciones
 		# relacionadas con el borrado de carpetas
 		print "En cargarOpcionesBorrado()....\n"
-		observers = self.crearDirBtn.get_property_observers('on_press')
-		print "\nObservadores de self.crearDirBtn --->\n\n"
-		print '\n\nlist of observers before unbinding: {}\n'.format(observers)
-		print 'list of observers before unbinding: {}\n'.format(observers)
+		#observers = self.crearDirBtn.get_property_observers('on_press')
+		#print "\nObservadores de self.crearDirBtn --->\n\n"
+		#print '\n\nlist of observers before unbinding: {}\n'.format(observers)
+		#print 'list of observers before unbinding: {}\n'.format(observers)
 		
-		self.crearDirBtn.unbind_uid('on_press', self.crearDirBtnUID)
-		self.crearDirBtn.text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
-		self.borrarSeleccionUID = self.crearDirBtn.fbind('on_press', self._borrarSeleccion)
+		#self.crearDirBtn.unbind_uid('on_press', self.crearDirBtnUID)
+		#self.crearDirBtn.text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
+		#self.borrarSeleccionUID = self.crearDirBtn.fbind('on_press', self._borrarSeleccion)
 
-		print "\nObservadores de self.crearDirBtn luego de unbinding --->\n\n"
-		print '\n\nlist of observers after unbinding: {}\n'.format(self.crearDirBtn.get_property_observers('on_press'))
-		print 'list of observers after unbinding: {}\n\n'.format(self.crearDirBtn.get_property_observers('on_press'))
-		print "Desbindeado self.crearDirBtn...\n"
+		#print "\nObservadores de self.crearDirBtn luego de unbinding --->\n\n"
+		#print '\n\nlist of observers after unbinding: {}\n'.format(self.crearDirBtn.get_property_observers('on_press'))
+		#print 'list of observers after unbinding: {}\n\n'.format(self.crearDirBtn.get_property_observers('on_press'))
+		#print "Desbindeado self.crearDirBtn...\n"
 
 
 		observers = self.botonBorrado.get_property_observers('on_press')
@@ -238,19 +252,16 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		print '\n\nlist of observers before unbinding: {}\n'.format(observers)
 		print 'list of observers before unbinding: {}\n\n'.format(observers)
 		
-		print "UID de borrarDir --> %s\n" % self.borrarUID
-		self.botonBorrado.unbind_uid('on_press', self.borrarUID)
-		self.botonBorrado.text = "%sCancelar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
-		self.cancelarSeleccionUID = self.botonBorrado.fbind('on_press', self._cancelarSeleccion)
+		#print "UID de borrarDir --> %s\n" % self.borrarUID
+		#self.botonBorrado.unbind_uid('on_press', self.borrarUID)
+		self.botonBorrado.text = "%sBorrar!" % (icon('fa-check-square-o',TAMANIO_ICONOS_CTRL_BAR))
+		self.borrarSeleccionUID = self.botonBorrado.fbind('on_press', self._borrarSeleccion)
+
+		self.botonBorrarCarpetas.text = "Cancelar"		
 
 		print "\nObservadores de self.botonBorrado luego de unbinding --->\n\n"
 		print '\n\nlist of observers after unbinding: {}\n'.format(self.botonBorrado.get_property_observers('on_press'))
 		print 'list of observers after unbinding: {}\n\n'.format(self.botonBorrado.get_property_observers('on_press'))
-		print "Desbindeado self.botonBorrado...\n"
-
-
-
-
 
 	#Borrado de los directorios que se seleccionaron 
 	def _borrarSeleccion(self,componente):
@@ -262,17 +273,24 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 			print "Borrando dir: %s\n" % dirABorrar
 			#shutil.rmtree(dirABorrar,onerror = self.deleteError)
 			print "Borrado correctamente!\n"
-			#self._reestablecerGUI()
 		
 	#Cancelar la seleccion para borrar
-	def _cancelarSeleccion(self,boton):
-		print "No se borra el dir...%s\n" % type(boton)
+	#def _cancelarSeleccion(self,boton):
+	#	print "No se borra el dir...%s\n" % type(boton)
 		#self._reestablecerGUI()
 
 	#Agrega nuevamente las opciones anteriores para "Crear carpeta"
 	#  y "Borrar carpeta".
 	def _reestablecerGUI(self):
-		print "Reestableciendo GUI! ...\n"		
+		print "Reestableciendo GUI! ...\n"
+		#Se reestablece el boton de "Borrar carpetas" y el boton del medio
+		self.botonBorrarCarpetas.text = "Borrar carpetas"
+		self.estaEnModoBorrado = False
+
+		self.botonBorrado.unbind_uid('on_press', self.borrarSeleccionUID)
+		print "Desbindeado self.botonBorrado de borrado!\n"
+		self.botonBorrado.text = "-"
+
 		#Se refresca el directorio de trabajo al crear un dir nuevo
 		self.dir_chooser.dirselect = False
 		print "Update_files antes\n"

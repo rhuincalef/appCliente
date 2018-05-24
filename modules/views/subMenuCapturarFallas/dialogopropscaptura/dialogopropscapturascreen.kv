@@ -33,17 +33,17 @@
                     size: self.size
                     
 
-        #Barra de herramietas para introducir el nombre del archivo
+        #Barra de herramietas para introducir el nombre del archivo y los botones
+        # para la creacion y borrado de carpetas
         BoxLayout:
             id: controls_bar
             orientation: 'horizontal'
-            #size_hint: (1,0.05)
             size_hint: (1,0.06)
 
             #TextInput para el nombre del archivo de captura        
             TextInput:
                 id: nombre_captura_txt
-                size_hint:(0.6,1)
+                size_hint:(0.3,1)
                 write_tab: False
                 multiline: False
                 on_text_validate: root.validar1(nombre_captura_txt.text)
