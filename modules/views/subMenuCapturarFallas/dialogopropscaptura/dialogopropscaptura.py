@@ -259,6 +259,8 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 
 		self.botonBorrarCarpetas.text = "Cancelar"		
 
+		self.crearDirBtn.disabled = True
+
 		print "\nObservadores de self.botonBorrado luego de unbinding --->\n\n"
 		print '\n\nlist of observers after unbinding: {}\n'.format(self.botonBorrado.get_property_observers('on_press'))
 		print 'list of observers after unbinding: {}\n\n'.format(self.botonBorrado.get_property_observers('on_press'))
@@ -269,10 +271,12 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		if self.esDirValido(self.dir_chooser):
 			dirABorrar = self.dir_chooser.selection[0]
 			print "Borrando dir: %s\n" % dirABorrar
-			print "Borrando dir: %s\n" % dirABorrar
-			print "Borrando dir: %s\n" % dirABorrar
-			#shutil.rmtree(dirABorrar,onerror = self.deleteError)
+			shutil.rmtree(dirABorrar,onerror = self.deleteError)
 			print "Borrado correctamente!\n"
+			print "Update_files antes\n"
+			self.dir_chooser._update_files()
+			print "Update_files despues!!\n"
+
 		
 	#Cancelar la seleccion para borrar
 	#def _cancelarSeleccion(self,boton):
@@ -291,12 +295,11 @@ class DialogoPropsCapturaScreen(ScreenRedimensionable):
 		print "Desbindeado self.botonBorrado de borrado!\n"
 		self.botonBorrado.text = "-"
 
-		#Se refresca el directorio de trabajo al crear un dir nuevo
+		# Se modifica el modo de seleccion de directorios y se habilita
+		# la creacion de directorios
 		self.dir_chooser.dirselect = False
-		print "Update_files antes\n"
-		self.dir_chooser._update_files()
-		print "Update_files despues!!\n"
-
+		self.crearDirBtn.disabled = False
+		
 
 	def _noBorrarDir(self):
 		print "No se borra el dir"
