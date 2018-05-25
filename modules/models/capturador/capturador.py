@@ -767,7 +767,8 @@ class Capturador(object):
     
   #Invocado desde main.threadGetPropsConfirmadas()
   def obtenerPropsConfirmadas(self):
-    dicPropsConfirmados = self.apiClient.getPropsConfirmados() 
+    dicPropsConfirmados = self.apiClient.getPropsConfirmados()
+    print "type(dicPropsConfirmados): %s\n" % type(dicPropsConfirmados)
     self.crearListaProps(dicPropsConfirmados)
 
   def crearBackupConfirmados(self):
@@ -775,9 +776,11 @@ class Capturador(object):
         que leyo del servidor."""
     print  "Inicio tinydb!!!\n"
     tinydb = TinyDB(LOCAL_BD_PROPS_CONFIRMADAS)
-    #if len(tinydb.all())>0:
-    #  tinydb.purge()
-    #self.propsConfirmados.guardar(tinydb)
+    if len(tinydb.all())>0:
+      print "Vaciando BD TinyDB antigua...\n"
+      tinydb.purge()
+    print "Guardando elementos desde BD en BD_CONFIRMADA.json ...\n"
+    self.propsConfirmados.guardar(tinydb)
     print "Creado un resplado de las propiedades de las fallas confirmadas!\n"
 
   def crearListaProps(self,listaProps):
@@ -817,6 +820,7 @@ class Capturador(object):
       if int(tipoFalla["id"]) in IDS_TIPOS_FALLA_HABILITADOS:
         estaTipoFallaHabilitada = True
 
+      print "Validando propiedades...\n"
       self.validarPropsDeTipoFalla(tipoFalla)
       falla = Propiedad(tipoFalla["id"],tipoFalla["clave"],tipoFalla["valor"],
                           estaTipoFallaHabilitada)
@@ -824,6 +828,8 @@ class Capturador(object):
 
       #Se asocian las propiedades que pueda tener la propiedad del tipo de falla
       for p in tipoFalla["colPropsAsociadas"]:
+        print "Iterando colPropsAsociadas...\n"
+        print "type(p): %s\n" % type(p)
         prop = json.loads(utils.escaparCaracteresEspeciales(p))        
         propiedad = Propiedad(  prop["id"],
                                 str(prop["clave"].encode("utf-8")),
@@ -848,7 +854,6 @@ class Capturador(object):
         print "Creada propiedad asociada: %s ...\n" % propiedad
         falla.asociarPropiedad(propiedad)
       self.propsConfirmados.append(falla)
-
     print "Fin de crearListaProps()...\n"
     print "self.propsConfirmados tiene: \n\n%s\n" % self.propsConfirmados
 
@@ -856,6 +861,8 @@ class Capturador(object):
     """Valida el atributo "colPropsAsociadas" para que contenga
         al menos un tipo de material y un tipo de reparacion."""
     propiedades = tipoFalla["colPropsAsociadas"]
+    print "type(propiedades): %s\n" % type(propiedades)
+    print "propiedades: %s\n" % propiedades
     if len(propiedades) == 0:
       msg = "Atributos insuficientes para tipo de falla:\n %s" % tipoFalla["valor"]
       raise ExcepcionTipoFallaIncompleta(msg)
@@ -863,8 +870,11 @@ class Capturador(object):
     contieneCriticidad = False
     contieneTipoMaterial = False
     for p in propiedades:
+      print "p tiene: %s\n" % p
+      #TODO: EL PROBLEMA ES EN escaparCaracteresEspeciales!!!!!!!!
       #print "Propiedad actual antes: %s\n" % p
       cadenaProp = utils.escaparCaracteresEspeciales(p)
+      print "analizado p correctamente!\n"
       prop = json.loads(cadenaProp)
       if prop["clave"] == "criticidad":
         contieneCriticidad = True

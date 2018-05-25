@@ -244,7 +244,8 @@ class ApiClientApp(object):
 		results_json = {} 
 		print "EN getPropsConfirmadas()...\n"
 		try:
-			response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS)
+			response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS,timeout = 5)
+			print "Respuesta servidor: %s\n" % response
 			if response.status_code == 200:
 				results_json = response.json()
 			else:
@@ -258,7 +259,9 @@ class ApiClientApp(object):
 
 		except ConnectionError, e:
 			print "ConnectionError en getPropsConfirmados()!\n"
-			msg = "Error al establecer conexion con el servidor.\n (Excepcion ConnectionError: %s)" % e.message
+			#msg = "Error al establecer conexion con el servidor.\n (Excepcion ConnectionError: %s)" % e.message
+			msg = "Error al establecer conexion con el servidor.Inaccesible."
+			print msg
 			raise ExcepcionAjax(msg)
 		print "3...\n"
 		return self.parsearDatosConfirmados(results_json)
