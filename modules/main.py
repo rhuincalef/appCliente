@@ -639,7 +639,7 @@ class MainApp(App,EventDispatcher):
 			self.dataViews["esErrorFatal"] = False
 		
 		except (ExcepcionTipoFallaIncompleta,ExcepcionAjax) as e:
-
+			print "Hu\n"
 			utils.loggearMensaje(logger,str(e.message))
 			# Si no se puede conectar con el servidor se intenta
 			# cargar un respaldo de los atributos de los tipos de falla

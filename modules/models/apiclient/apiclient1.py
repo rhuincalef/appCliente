@@ -248,6 +248,7 @@ class ApiClientApp(object):
 			print "Respuesta servidor: %s\n" % response
 			if response.status_code == 200:
 				results_json = response.json()
+				print "type(results_json): %s\n" % results_json
 			else:
 				msg = "Error en peticion del servidor. Codigo: %s" % response.status_code
 				raise ExcepcionAjax(msg)

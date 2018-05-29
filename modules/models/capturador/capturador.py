@@ -15,6 +15,7 @@ from geofencing import *
 from estrategia import *
 
 from json import JSONEncoder,JSONDecoder
+import json
 
 #Borrado de capturas de una falla en disco
 import subprocess
@@ -768,7 +769,8 @@ class Capturador(object):
   #Invocado desde main.threadGetPropsConfirmadas()
   def obtenerPropsConfirmadas(self):
     dicPropsConfirmados = self.apiClient.getPropsConfirmados()
-    print "type(dicPropsConfirmados): %s\n" % type(dicPropsConfirmados)
+    print "Obtenidas las propiedades confirmadas!\n\n"
+    print dicPropsConfirmados
     self.crearListaProps(dicPropsConfirmados)
 
   def crearBackupConfirmados(self):
@@ -815,13 +817,13 @@ class Capturador(object):
 
     # Si la falla es valida, Se la crea y se asocian las propidades a la misma.
     for tipoFalla in listaProps:
-      print "tipoFalla['id']: %s\n" % tipoFalla["id"]
       estaTipoFallaHabilitada = False
       if int(tipoFalla["id"]) in IDS_TIPOS_FALLA_HABILITADOS:
         estaTipoFallaHabilitada = True
 
       print "Validando propiedades...\n"
       self.validarPropsDeTipoFalla(tipoFalla)
+
       falla = Propiedad(tipoFalla["id"],tipoFalla["clave"],tipoFalla["valor"],
                           estaTipoFallaHabilitada)
       print "asociando props a subpropiedades: %s\n" % tipoFalla["colPropsAsociadas"]
@@ -840,7 +842,7 @@ class Capturador(object):
         print "prop: %s\n\n\n" % prop
         if prop.has_key("colPropsAsociadas") and (len(prop["colPropsAsociadas"]) > 0):
           print "La criticidad tiene propiedades!\n"
-          
+         
           for s in prop["colPropsAsociadas"]:
             print "subpropiedad de la criticidad: %s\n" % s
             print "s['clave']: %s\n" % s["clave"]
@@ -870,12 +872,12 @@ class Capturador(object):
     contieneCriticidad = False
     contieneTipoMaterial = False
     for p in propiedades:
-      print "p tiene: %s\n" % p
       #TODO: EL PROBLEMA ES EN escaparCaracteresEspeciales!!!!!!!!
       #print "Propiedad actual antes: %s\n" % p
       cadenaProp = utils.escaparCaracteresEspeciales(p)
       print "analizado p correctamente!\n"
       prop = json.loads(cadenaProp)
+      print "prop cargado!"
       if prop["clave"] == "criticidad":
         contieneCriticidad = True
       if prop["clave"] == "tipoMaterial":
@@ -902,7 +904,60 @@ class Capturador(object):
       raise ExcepcionSinDatosTiposFalla(msg)
     # Se crea la lista de propiedades y se guarda una copia local
     # en disco
-    self.crearListaProps(listaElems)
+    
+    print "Los atributos leidos desde tinydb son: %s\n" % listaElems
+    print type(listaElems)
+    #for tipoFalla in listaElems:
+      #Clase de tipoFalla al leer desde tinydb <class 'tinydb.database.Element'>
+      #print "tipoFalla: %s; %s\n\n" % (tipoFalla,type(tipoFalla))
+
+    dicElementos = self._convertirElementosAJSON(listaElems)
+    print "El listado de dicElementos es --->\n\n"
+    for e in dicElementos:
+      print "%s; \n" % e
+    self.crearListaProps(dicElementos)
+    #TODO: DESCOMENTAR ESTO! 
+    #self.crearListaProps(listaElems)
+
+
+  def _convertirElementosAJSON(self, listaElems):
+    """ Metodo interno para convertir los objetos de la clase tinydb.database.Element
+    a un diccionario .JSON con strings. Necesario para la lectura de un archivo local
+    JSON con tinydb."""
+    listadoFinal = []
+    for elemento in listaElems:
+      dicStrings = {}
+      #Se itera cada elemento "Element" y se produce un diccionario 
+      print "Iterando elemento de tipo: %s\n" % type(elemento)
+      print "Valor del elemento -->\n\n%s\n" % elemento
+      for key,value in elemento.iteritems():
+        print "key: %s; value: %s, type(value): %s\n" % (key,value,type(value))
+        #dicStrings[key] = value
+        clave = str(key.encode("utf-8"))
+        print "clave: %s\n" % clave
+        if type(value) is list:
+          print "Codificando listado...\n"
+          colPropsAsociadas1 = []
+          for e in value:
+            print "elemento del listado: %s; %s\n" % (e,type(e))
+            print str(e.encode("utf-8"))
+            print "\n\n-------------------------------------------->"
+            colPropsAsociadas1.append(str(e.encode("utf-8")))
+            
+          print "ColPropsAsociadas1: %s\n" % colPropsAsociadas1
+          dicStrings[clave] = colPropsAsociadas1  
+          #json.loads(e,object_hook = self._decodifPropsJSON)
+        else:
+          valor = str(value.encode("utf-8"))
+          dicStrings[clave] = valor
+
+      listadoFinal.append(dicStrings)
+    return listadoFinal
+
+  #def _decodifPropsJSON(self,dic):
+  #  print "diccionario -->\n"
+  #  print dic
+  #  print type(dic)
 
   # Invocado desde main al cambiar al screen de "Capturar falla nueva.
   def existenPropsCargadas(self):
