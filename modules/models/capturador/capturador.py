@@ -774,7 +774,7 @@ class Capturador(object):
     dicPropsConfirmados = self.apiClient.getPropsConfirmados()
     print "Obtenidas las propiedades confirmadas!\n\n"
     print dicPropsConfirmados
-    self.crearListaProps(dicPropsConfirmados)
+    self.crearListaProps(dicPropsConfirmados,escaparCaracteres = True)
 
   def crearBackupConfirmados(self):
     """Vacia la BD Confirmadas y la actualiza con los datos
@@ -788,7 +788,7 @@ class Capturador(object):
     self.propsConfirmados.guardar(tinydb)
     print "Creado un resplado de las propiedades de las fallas confirmadas!\n"
 
-  def crearListaProps(self,listaProps):
+  def crearListaProps(self,listaProps,escaparCaracteres = False):
     """Retorna una lista de objetos "Propiedad" consistentes con los requerimientos para dar de alta
    un tipo de falla confirmada.
   
@@ -835,10 +835,16 @@ class Capturador(object):
       for p in tipoFalla["colPropsAsociadas"]:
         print "Iterando colPropsAsociadas...\n"
         print "type(p): %s\n" % type(p)
-
         #TODO: DESCOMENTAR ESTO!
-        #prop = json.loads(utils.escaparCaracteresEspeciales(p))        
-        prop = p
+        #prop = json.loads(utils.escaparCaracteresEspeciales(p))
+        prop = {}
+        if escaparCaracteres:
+          print "Escapando caracteres especiales desde servidor!\n"
+          prop = json.loads(utils.escaparCaracteresEspeciales(p))
+        else:
+          print "No es necesario escapar. Props cargadas localmente...\n"
+          prop = p
+
         propiedad = Propiedad(  prop["id"],
                                 str(prop["clave"].encode("utf-8")),
                                 str(prop["valor"].encode("utf-8")),
@@ -925,7 +931,7 @@ class Capturador(object):
       print "%s; \n" % e
     #self.crearListaProps(dicElementos)
     #TODO: DESCOMENTAR ESTO! 
-    self.crearListaProps(listaElems)
+    self.crearListaProps(listaElems,escaparCaracteres = False)
 
 
   def _convertirElementosAJSON(self, listaElems):
