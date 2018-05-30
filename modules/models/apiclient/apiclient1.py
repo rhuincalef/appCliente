@@ -244,7 +244,8 @@ class ApiClientApp(object):
 		results_json = {} 
 		print "EN getPropsConfirmadas()...\n"
 		try:
-			response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS,timeout = 5)
+			response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS,timeout = 8)
+			#response = self.conexionServer.get(URL_GET_PROPS_CONFIRMADAS)
 			print "Respuesta servidor: %s\n" % response
 			if response.status_code == 200:
 				results_json = response.json()

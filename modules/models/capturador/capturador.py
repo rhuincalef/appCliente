@@ -192,7 +192,10 @@ class Propiedad(object):
     dic = {"id": self.id,"clave": self.clave,"valor": self.valor,
             "colPropsAsociadas": []}
     for e in self.colPropsAsociadas:
-      dic["colPropsAsociadas"].append(str(e))
+      #dic["colPropsAsociadas"].append(str(e))
+      dic["colPropsAsociadas"].append(e.toDict())
+      print "Agregado elemento para backup propiedades: %s; type(e): %s\n" % (e,type(e))
+      print "diccionario de la propiedad: %s; type(dic): %s\n" % (e.toDict(),type(e.toDict()))
     return dic
 
   def serializar(self):
@@ -832,7 +835,10 @@ class Capturador(object):
       for p in tipoFalla["colPropsAsociadas"]:
         print "Iterando colPropsAsociadas...\n"
         print "type(p): %s\n" % type(p)
-        prop = json.loads(utils.escaparCaracteresEspeciales(p))        
+
+        #TODO: DESCOMENTAR ESTO!
+        #prop = json.loads(utils.escaparCaracteresEspeciales(p))        
+        prop = p
         propiedad = Propiedad(  prop["id"],
                                 str(prop["clave"].encode("utf-8")),
                                 str(prop["valor"].encode("utf-8")),
@@ -872,11 +878,12 @@ class Capturador(object):
     contieneCriticidad = False
     contieneTipoMaterial = False
     for p in propiedades:
-      #TODO: EL PROBLEMA ES EN escaparCaracteresEspeciales!!!!!!!!
-      #print "Propiedad actual antes: %s\n" % p
-      cadenaProp = utils.escaparCaracteresEspeciales(p)
-      print "analizado p correctamente!\n"
-      prop = json.loads(cadenaProp)
+      # TODO: DESCOMENTAR ESTO!
+      #cadenaProp = utils.escaparCaracteresEspeciales(p)
+      #print "analizado p correctamente!\n"
+      #prop = json.loads(cadenaProp)
+      #prop = json.loads(cadenaProp)
+      prop = p
       print "prop cargado!"
       if prop["clave"] == "criticidad":
         contieneCriticidad = True
@@ -911,13 +918,14 @@ class Capturador(object):
       #Clase de tipoFalla al leer desde tinydb <class 'tinydb.database.Element'>
       #print "tipoFalla: %s; %s\n\n" % (tipoFalla,type(tipoFalla))
 
-    dicElementos = self._convertirElementosAJSON(listaElems)
+    #dicElementos = self._convertirElementosAJSON(listaElems)
+    dicElementos = listaElems
     print "El listado de dicElementos es --->\n\n"
     for e in dicElementos:
       print "%s; \n" % e
-    self.crearListaProps(dicElementos)
+    #self.crearListaProps(dicElementos)
     #TODO: DESCOMENTAR ESTO! 
-    #self.crearListaProps(listaElems)
+    self.crearListaProps(listaElems)
 
 
   def _convertirElementosAJSON(self, listaElems):
