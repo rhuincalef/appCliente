@@ -151,6 +151,8 @@ class OpcionDropDown(TreeViewLabel):
 
 from kivy.core.window import Window
 
+from capturador import ListadoPropiedades
+import time
 #ARCHIVO CON LOS ESTILOS POR DEFECTO 'tree_closed|tree_opened'-->
 #/usr/lib/python2.7/dist-packages/kivy/data/style.kv
 
@@ -215,10 +217,19 @@ class CustomDropDown(TreeView):
     @staticmethod
     def callbackCargaTiposFalla(treeview, node):
         controlador = App.get_running_app()
-        #dicNombres = controlador.capturador.getPropsConfirmados()
-        dicNombres = controlador.getPropsConfirmados()
+        dicNombres = controlador.capturador.getPropsConfirmados()
+
+        #TODO: LISTADO VACIO DE PROPIEDADES TIENE QUE MOSTRAR ERROR.
+        #dicNombres = ListadoPropiedades()
+        #controlador.capturador.setPropsConfirmados(dicNombres)
         print "En callbackCargaTiposFalla con dicNombres propiedades tiene: %s\n" % \
                                                                         dicNombres
+        while len(dicNombres) <= 0:
+            print "Esperando carga de propiedades...\n"
+            time.sleep(1)
+            dicNombres = controlador.capturador.getPropsConfirmados()            
+
+        print "len(dicNombres): %s\n" % len(dicNombres)
         if len(treeview.children) <= 0:
             for elem in dicNombres:
                 estaDeshabilitada = True

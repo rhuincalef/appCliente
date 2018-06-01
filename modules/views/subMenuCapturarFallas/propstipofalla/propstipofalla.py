@@ -18,6 +18,9 @@ from constantes import *
 from customwidgets import CustomDropDown
 from screenredimensionable import ScreenRedimensionable
 
+from capturador import ListadoPropiedades
+
+import threading
 
 class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
@@ -33,6 +36,8 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		self.layout_principal.setter('height')
 		self.layout_principal.bind(minimum_height = self.calcular_height )
 		self.layoutFooter = None
+		#AGREGADO RODRIGO
+		self.inicializadoElementosWidget = False
 
 	# Este metodo establece la altura maxima del layout, lo que determina
 	# hasta que punto el usuario puede scrollear sobre este.
@@ -59,6 +64,15 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 			#self.manager.current = 'menutiposfalla'
 			self.manager.current = 'subMenuCapturarFalla'
 			return
+
+		#AGREGADO RODRIGO
+		if not self.inicializadoElementosWidget:
+			controlador.mostrarDialogoMensaje(title="Error de propiedades TipoFalla",
+												text="Aun cargando propiedades de los tipos de fallas,\n intente mas tarde."
+											)
+			self.manager.current = 'subMenuCapturarFalla'
+			return
+
 		#Se establece el idFalla como una falla no establecida
 		controlador.agregarData("idFalla",FALLA_NO_ESTABLECIDA)
 		
@@ -76,14 +90,15 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 
 		self.inicializarTipoFalla(label = None)
 
-		self.inicializarTipoMaterial()
+		#BACKUP!
+		#self.inicializarTipoMaterial()
 
-		self.inicializarTipoCriticidad()
+		#self.inicializarTipoCriticidad()
 		
-		self.inicializarFooter()
-		self.ids.main_scroll_view.add_widget(self.layout_principal)
+		#self.inicializarFooter()
+		#self.ids.main_scroll_view.add_widget(self.layout_principal)
 
-		self.calcularSpacingEntreLayouts(6)
+		#self.calcularSpacingEntreLayouts(6)
 	
 	def inicializarTipoFalla(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoFalla",
@@ -104,12 +119,71 @@ class PropsFallaConfirmadaScreen(ScreenRedimensionable):
 		
 		subLayout.add_widget(labReparacion)
 
+		print "Inicializando tipos de falla..\n"
+		#TODO: COMENTAR ESTO! Solo para propositos de debugging
+		#t2 = threading.Thread(name = "thread-demorarCargaPropsTipoFalla",
+		#						target = self._demorarCargaPropsTipoFalla)
+		#t2.setDaemon(True)
+		#t2.start()
+
+		
+		print "Iniciando thread de carga de cargarPropsTipoFalla...\n"
+		t = threading.Thread(name = "thread-cargarPropsTipoFalla",
+								target = self._threadCargarPropsTipoFalla, 
+								args = (subLayout,) 
+							)
+		t.setDaemon(True)
+		t.start()
+
+
+		#BACKUP!
+		#self.dropdownTipoFalla = CustomDropDown(self,id="TipoFallaDropdown",
+		#										size_hint_y = None,
+		#										size_hint_x = 1,
+		#										load_func = CustomDropDown.callbackCargaTiposFalla)
+		#subLayout.add_widget(self.dropdownTipoFalla)
+		#self.layout_principal.add_widget(subLayout)
+
+
+	#NOTA: Este metodo simula la demora de la carga de las propiedades.
+	# Borra las propsTipoFalla en el controlador. SOLO PARA DEBUGGING.
+	def _demorarCargaPropsTipoFalla(self):
+		print "en thread-demorarCargaPropsTipoFalla()...\n"
+		controlador = App.get_running_app()
+		backupProps = controlador.capturador.getPropsConfirmados()
+
+		dicNombres = ListadoPropiedades()
+		controlador.capturador.setPropsConfirmados(dicNombres)
+		import time
+		time.sleep(5)
+		
+		controlador.capturador.setPropsConfirmados(backupProps)
+		print "controlador.capturador.getPropsConfirmados(): %s\n" % len(controlador.capturador.getPropsConfirmados())
+		print "Desbloqueadas propiedades tipo falla!!!\n"
+
+
+	def _threadCargarPropsTipoFalla(self,subLayout):
+		print "En cargarPropsTipoFalla() %s...\n" % type(subLayout)
 		self.dropdownTipoFalla = CustomDropDown(self,id="TipoFallaDropdown",
 												size_hint_y = None,
 												size_hint_x = 1,
 												load_func = CustomDropDown.callbackCargaTiposFalla)
 		subLayout.add_widget(self.dropdownTipoFalla)
 		self.layout_principal.add_widget(subLayout)
+		#TODO: AGREGADO RODRIGO
+		self.inicializadoElementosWidget = True
+
+		#Se continua con la inicializacion del resto de los dropdowns
+		self.inicializarTipoMaterial()
+
+		self.inicializarTipoCriticidad()
+		
+		self.inicializarFooter()
+		self.ids.main_scroll_view.add_widget(self.layout_principal)
+
+		self.calcularSpacingEntreLayouts(6)
+
+
 
 	def inicializarTipoMaterial(self,label=None):
 		subLayout = GridLayout(id="subLayoutTipoMaterial",

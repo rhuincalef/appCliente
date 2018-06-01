@@ -563,6 +563,10 @@ class Capturador(object):
     """Retorna los tiposFalla con todas sus propiedades."""
     return self.propsConfirmados
 
+  def setPropsConfirmados(self,p):
+    """Retorna los tiposFalla con todas sus propiedades."""
+    self.propsConfirmados = p
+
   def reestablecerApiClient(self):
     """Reestablece el contador de bytes totales a enviar a cero."""
     self.apiClient.reestablecerApiClient()
