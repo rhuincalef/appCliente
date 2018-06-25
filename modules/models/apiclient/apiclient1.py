@@ -106,7 +106,7 @@ class ApiClientApp(object):
 				raise ExcepcionAjax("Error de servidor subiendo las fallas.\nMás información en %s%s" %\
 				 (LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_INFO_SERVER ))
 
-			#return self.bytes_leidos
+			return self.bytes_leidos
 		except ConnectionError as e:
 			msgError = "Error de conexion con el servidor.\n Servidor Offline."
 			print msgError

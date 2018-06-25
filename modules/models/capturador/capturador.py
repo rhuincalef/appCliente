@@ -390,21 +390,23 @@ class ItemFalla(SelectableDataItem,Persistent):
                                                 capturasConvertidas,
                                                 bytes_leidos,
                                                 logger)
+            capturasConvertidas = []
+
+            print "Despues de enviar bytes!!\n"
+            # NOTA: Se retorna de la funcion unicamente cuando se han enviado todos los 
+            # objetos captura asociados a la falla
+            if controlador.canceladaSubidaArchivos and cantCapturasAEnviar == 0:
+              print "Cancelada la subida de archivos desde itemFalla.enviar()...\n"
+              return      
+            #Se marca el itemfalla como subido al servidor
+            self.marcarComoSubida()
+
           except ExcepcionDesconexion as e:
             print "Atrape la ExcepcionDesconexion!!!\n"
             raise ExcepcionDesconexion(e.message)
-          
-          capturasConvertidas = []
-          print "Despues de enviar bytes!!\n"
+            print "Luego de lanzar excepcion desconocida...\n"
 
-        # NOTA: Se retorna de la funcion unicamente cuando se han enviado todos los 
-        # objetos captura asociados a la falla
-        if controlador.canceladaSubidaArchivos and cantCapturasAEnviar == 0:
-          print "Cancelada la subida de archivos desde itemFalla.enviar()...\n"
-          return 
-      
-      #Se marca el itemfalla como subido al servidor
-      self.marcarComoSubida()
+    print "Retornando bytes leidos: %s...\n" % bytes_leidos
     return bytes_leidos
 
   def calcularTamanio(self):
