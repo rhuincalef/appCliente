@@ -36,7 +36,7 @@ from multiprocessing import Process, Pipe, Queue
 import ZEO
 import copy
 from os import path
-
+from apiclient1 import *
 
 
 class ExcepcionTipoFallaIncompleta(Exception):
@@ -360,8 +360,9 @@ class ItemFalla(SelectableDataItem,Persistent):
       capturasConvertidas = []
       cantCapturasAEnviar = len(coleccionCapturas)
 
+      #BACKUP!
       #Se marca el itemfalla como subido al servidor
-      self.marcarComoSubida()
+      #self.marcarComoSubida()
       for i in xrange(0,len(coleccionCapturas)):
         #Si se supera el tamanio maximo de una peticion POST o si se supera
         # la cantidad de archivos permitida por peticion, se envia la peticion 
@@ -383,18 +384,27 @@ class ItemFalla(SelectableDataItem,Persistent):
                       cantCapturasAEnviar == 0:
           #Se piden lso campos formateados para el envio a la falla
           falla_formateada = self.getDicFalla()
-          bytes_leidos = api_client.postCapturas(url_server,
+          try:
+            bytes_leidos = api_client.postCapturas(url_server,
                                                 falla_formateada,
                                                 capturasConvertidas,
                                                 bytes_leidos,
                                                 logger)
+          except ExcepcionDesconexion as e:
+            print "Atrape la ExcepcionDesconexion!!!\n"
+            raise ExcepcionDesconexion(e.message)
+          
           capturasConvertidas = []
+          print "Despues de enviar bytes!!\n"
 
         # NOTA: Se retorna de la funcion unicamente cuando se han enviado todos los 
         # objetos captura asociados a la falla
         if controlador.canceladaSubidaArchivos and cantCapturasAEnviar == 0:
           print "Cancelada la subida de archivos desde itemFalla.enviar()...\n"
           return 
+      
+      #Se marca el itemfalla como subido al servidor
+      self.marcarComoSubida()
     return bytes_leidos
 
   def calcularTamanio(self):
@@ -660,13 +670,16 @@ class Capturador(object):
     print "En capturador.enviarCapturas()\n"
     controlador = App.get_running_app()
     bytes_leidos = 0
+    msgError = ""
     #Se obtienen las fallas confirmadas para envio
     for falla in self.getColCapturasConfirmadas():
       print "\nEnviando falla= %s; falla.is_selected=%s)\n" % (falla,falla.is_selected)
       if falla.is_selected:
         bytes_leidos += falla.enviar(URL_UPLOAD_SERVER,self.apiClient,bytes_leidos)
-
+    
     print "Fin de capturador.enviarCapturas()!\n"
+    
+
 
   def calcularTamanioCapturas(self):
     """Calcula el tamanio de las capturas asociadas a cada una de las fallas

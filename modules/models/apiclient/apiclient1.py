@@ -23,6 +23,10 @@ class ExcepcionAjax(Exception):
 	"""Excepcion para un error en una peticion Ajax al servidor. """
 	pass
 
+class ExcepcionDesconexion(Exception):
+	""" Excepcion por desconexion con el servidor. """
+	pass
+
 class ApiClientApp(object):
 	"""Clase que realiza la comunicacion con el servidor para obtener los baches y 
 		subir archivos al servidor."""
@@ -80,28 +84,39 @@ class ApiClientApp(object):
 
 	def postCapturas(self,url,dic_envio,nombreCapturas,bytes_leidos,logger):
 		self.bytes_leidos =  0
-		#Crea el objeto encoder para el multipart/form-data con el dic_envio de la 
-		# peticion correspondiente a la falla actual.
-		encoder = self.create_upload(dic_envio,nombreCapturas)
-		monitor = MultipartEncoderMonitor(encoder, self.actualizar_datos_callback)
-		r = requests.post(url, data=monitor,headers={'Content-Type': monitor.content_type})
-		print('\nUpload finished! (Returned status {0} {1})'.format(
-			r.status_code, r.reason
-		))
+		try:
+			#Crea el objeto encoder para el multipart/form-data con el dic_envio de la 
+			# peticion correspondiente a la falla actual.
+			encoder = self.create_upload(dic_envio,nombreCapturas)
+			monitor = MultipartEncoderMonitor(encoder, self.actualizar_datos_callback)
+			r = requests.post(url, data=monitor,headers={'Content-Type': monitor.content_type})
+			print('\nUpload finished! (Returned status {0} {1})'.format(
+				r.status_code, r.reason
+			))
 
-		# Se lee la respuesta como un dic con strings unicode y se loguea 
-		# el resultado en disco.
-		print "Registrando la respuesta...\n"
-		dicRespuesta = r.json()
-		infolog = str(dicRespuesta["respuesta"]) 
-		utils.loggearMensaje(logger,infolog)
+			# Se lee la respuesta como un dic con strings unicode y se loguea 
+			# el resultado en disco.
+			print "Registrando la respuesta...\n"
+			dicRespuesta = r.json()
+			infolog = str(dicRespuesta["respuesta"]) 
+			utils.loggearMensaje(logger,infolog)
 
-		# Si ocurre un 500 Error se lanza una excepcion.
-		if (r.status_code != requests.codes.ok) or ( int(dicRespuesta["estadoGeocoding"]) in CODIGOS_ERROR_GEOCODING):
-			raise ExcepcionAjax("Error de servidor subiendo las fallas.\nMás información en %s%s" %\
-			 (LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_INFO_SERVER ))
+			# Si ocurre un 500 Error se lanza una excepcion.
+			if (r.status_code != requests.codes.ok) or ( int(dicRespuesta["estadoGeocoding"]) in CODIGOS_ERROR_GEOCODING):
+				raise ExcepcionAjax("Error de servidor subiendo las fallas.\nMás información en %s%s" %\
+				 (LOGS_DEFAULT_DIR,LOG_FILE_CAPTURAS_INFO_SERVER ))
 
-		return self.bytes_leidos
+			#return self.bytes_leidos
+		except ConnectionError as e:
+			msgError = "Error de conexion con el servidor.\n Servidor Offline."
+			print msgError
+			raise ExcepcionDesconexion(msgError)
+	
+		#except Exception as e:
+		#	msgError = "Error desconocido al intentar enviar capturas al servidor(%s)" % e
+		#	raise ExcepcionDesconexion(msgError)
+		#finally:
+		#	print msgError
 
 
 	

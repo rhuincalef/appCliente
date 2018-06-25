@@ -349,18 +349,20 @@ class MainApp(App,EventDispatcher):
 		screen_upload = screenManager.get_screen('enviocapturasserver')
 		screen_upload.setMaxBarraProgreso(bytes_totales_a_enviar)
 		
+		hayErrorConServidor = False
+
 		#Se adquiere el control y se inicia el thread del dialgo de pregunta
 		# para caps subidas
 		candadoFinSubidas.acquire()
-		t = threading.Thread(name = "thread-conservarCapsSubidas",
-							target=self.threadConservarCapsSubidas, 
-							args=(screen_upload,
-								candadoFinSubidas,
-								lista_capturadores,)
-							)
+		#t = threading.Thread(name = "thread-conservarCapsSubidas",
+		#					target=self.threadConservarCapsSubidas, 
+		#					args=(screen_upload,
+		#						candadoFinSubidas,
+		#						lista_capturadores,)
+		#					)
 		#Se configura el envio de los archivos como un proceso demonio.
-		t.setDaemon(True)
-		t.start()
+		#t.setDaemon(True)
+		#t.start()
 
 		#Se planifica la actualizacion del reloj a espacios de tiempo regulares
 		Clock.schedule_interval(self.actualizar_datos,0.0005)
@@ -379,15 +381,41 @@ class MainApp(App,EventDispatcher):
 				if self.canceladaSubidaArchivos:
 					print "Cancelada la subida de archivos desde main.threadSubidaCapturas\n"
 					break
+
 		except ExcepcionAjax, e:
 			self.mostrarDialogoMensaje( title="Problema en la subida de archivos",
 										text=e.message
 										)
+			hayErrorConServidor = True
+
+		except ExcepcionDesconexion as e:
+			print "Entre por ExcepcionDesconexion...\n"
+			self.mostrarDialogoMensaje( title="Problema de conexion con servidor",
+										text=e.message
+										)
+			hayErrorConServidor = True
+			print "hayErrorConServidor: %s\n" % hayErrorConServidor
+
 		finally:
+			if not hayErrorConServidor:
+				print "No hay error en la subida de archivos al servidor!\n"
+				t = threading.Thread(name = "thread-conservarCapsSubidas",
+								target=self.threadConservarCapsSubidas, 
+								args=(screen_upload,
+									candadoFinSubidas,
+									lista_capturadores,)
+								)
+				#Se configura el envio de los archivos como un proceso demonio.
+				t.setDaemon(True)
+				t.start()
+			else:
+				print "Ocurrio error con el servidor...\n"
+
 			print "Desplanificando el callback de actualizacion del screen!\n"
 			Clock.unschedule(self.actualizar_datos)
 			print "Liberando el lock!\n"
 			candadoFinSubidas.release()
+
 
 	#Invocado desde threadSubirCapturas
 	def threadConservarCapsSubidas(self,screen_upload,candadoFinSubidas,lista_capturadores):

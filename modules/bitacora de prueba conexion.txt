@@ -1,0 +1,21 @@
+
+CASOS DE DESCONEXIÓN CON FALLAS INFORMADAS -->
+
+	- Aplicación cliente y servidor desconectadas de internet: Funcionando OK la subida de los archivos.
+
+	-Servidor inaccesible desde el inicio: Se incia la appCliente, ésta lee las propiedades desde (.json local). Funcionando OK.  
+
+	-Servidor se desconecta luego de iniciar aplicación y antes de obtener fallas informadas: Al intentar obtener fallas informadas se muestra mensaje de error de servidor offline. Funcionando OK.
+
+	-Servidor se desconecta luego de obtener fallas informadas, capturar una y antes de intentar subir una falla accediendo a "Subir Falla": En este caso, al seleccionar la falla informada, no se muestra ningun mensaje que indique que el servidor esta offline y no es atajado en el thread-subida_fallas la excepción "ConnectionError". TODO: AGREGAR ESTA COMPROBACION Y UN MENSAJE EN ESTE CASO. 
+
+
+CASOS DE DESCONEXIÓN CON FALLAS CONFIRMADAS -->
+
+	- Se inicia la aplicación y el servidor se desconecta antes de acceder a "Subir falla": 
+
+	-
+
+
+
+
