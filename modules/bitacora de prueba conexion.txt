@@ -7,14 +7,22 @@ CASOS DE DESCONEXIÓN CON FALLAS INFORMADAS -->
 
 	-Servidor se desconecta luego de iniciar aplicación y antes de obtener fallas informadas: Al intentar obtener fallas informadas se muestra mensaje de error de servidor offline. Funcionando OK.
 
-	-Servidor se desconecta luego de obtener fallas informadas, capturar una y antes de intentar subir una falla accediendo a "Subir Falla": En este caso, al seleccionar la falla informada, no se muestra ningun mensaje que indique que el servidor esta offline y no es atajado en el thread-subida_fallas la excepción "ConnectionError". TODO: AGREGAR ESTA COMPROBACION Y UN MENSAJE EN ESTE CASO. 
+	-Servidor se desconecta luego de obtener fallas informadas, capturar una y antes de intentar subir una falla accediendo a "Subir Falla": En este caso, al seleccionar la falla informada, no se muestra ningun mensaje que indique que el servidor esta offline y no es atajado en el thread-subida_fallas la excepción "ConnectionError". AGREGADO CORRECTAMENTE MENSAJE! 
 
 
 CASOS DE DESCONEXIÓN CON FALLAS CONFIRMADAS -->
 
-	- Se inicia la aplicación y el servidor se desconecta antes de acceder a "Subir falla": 
+	- Se inicia la aplicación y el servidor se desconecta antes de acceder a "Subir falla": Funciona OK. Se muestra mensaje de ERROR indicando que no se cuenta con conexion al servidor.
 
-	-
+	- Se inicia la aplicacion sin conexión a Internet, se captura una falla y se intenta subir al servidor: La subida desde appCliente --> appWeb funciona bien, solo que en el campo "Dirección" hay que el string que se muestra cuando no se puede computar la misma por falta de conexión a Internet, ya que aparece: "No tenemos como obtenerlo!!! - -11" 
+
+	- Se intenta almacenar una captura Confirmada en disco sin conexión a Internet: Se almacena correctamente y puede subirse luego. Funciona OK.(RECO_PRUEBA.rec).
+
+
+	- Sin conexión a Internet, se captura una falla Confirmada, se sube al servidor, se conserva en memoria y disco y se guarda en disco. Se lee posteriormente (para re-subirla) y se muestra mensaje: "No existen fallas registradas en el archivo cargado ". VER ESTO!. 
+		----> Esto ocurre porque se arma una colección con fallas informadas y confirmadas que no se hayan subido y al haberse subido la unica falla se crea el .rec pero sin ninguna falla y al querer leerlo posteriormente, no se puede cargar. TODO: CORREGIR POR EL LADO DE main.persistirFallas(). Funciona OK.
+
+	- 
 
 
 

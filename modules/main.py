@@ -834,8 +834,17 @@ class MainApp(App,EventDispatcher):
 		
 		fallas = self.capturador.obtenerCapturasNoSubidas() +\
 			self.capturadorInformados.obtenerCapturasNoSubidas()
-		Capturador.persistirFallas(nameBD,fallas)
+
 		
+		if len(fallas) == 0:
+			print "No existen fallas no subidas para almacenar en recorrido!\n"
+			self.mostrarDialogoMensaje( title='Sin fallas no subidas',
+										text='No existen fallas (no subidas) para \nalmacenar en un recorrido.'
+										)
+			return
+
+		print "Existe al menos una falla no subida para almacenar, continuando...\n"
+		Capturador.persistirFallas(nameBD,fallas)
 		# Se vacian las colecciones de los capturadores al
 		# guardar el recorrido.
 		self.capturador.setColCapturasTotales([])
