@@ -11,6 +11,9 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 import sys,os
 
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 import subprocess
 
 from kivy.animation import Animation
@@ -47,8 +50,8 @@ from kivy.base import EventLoop
 EventLoop.ensure_window()
 
 #Import agregado para eliminar el warning
-import gi
-gi.require_version('Gtk','3.0')
+#import gi
+#gi.require_version('Gtk','3.0')
 
 from kivy.clock import Clock
 

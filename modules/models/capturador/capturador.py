@@ -859,7 +859,8 @@ class Capturador(object):
         prop = {}
         if escaparCaracteres:
           print "Escapando caracteres especiales desde servidor!\n"
-          prop = json.loads(utils.escaparCaracteresEspeciales(p))
+          #prop = json.loads(utils.escaparCaracteresEspeciales(p))
+          prop = p
         else:
           print "No es necesario escapar. Props cargadas localmente...\n"
           prop = p

@@ -25,7 +25,7 @@ from kivy.lang import Builder
 import numpy as np
 
 from calibkinect import depth2xyzuv,xyz_complete_matrix
-import pcl
+#import pcl
 import sys,getopt
 import re
 

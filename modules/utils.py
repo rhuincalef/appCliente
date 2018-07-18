@@ -241,7 +241,8 @@ def escaparCaracteresEspeciales(propiedad):
 	print "con propiedad: %s \n" % propiedad
 	dic = {}
 	dic['clave'] = propiedad['clave']
-	print "clave: %s\n" % clave
+	#print "clave: %s\n" % clave
+	print "clave: %s\n" % dic['clave']
 	#dic['valor'] = unicode(propiedad['valor'],encoding="utf8")
 	#dic['id'] = unicode(propiedad['id'],encoding="utf8")
 	#dic['colPropsAsociadas'] = []
