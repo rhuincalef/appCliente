@@ -1,20 +1,26 @@
 
 CASOS DE DESCONEXIÓN CON FALLAS INFORMADAS -->
 
-	- Aplicación cliente y servidor desconectadas de internet: Funcionando OK la subida de los archivos.
+	- Aplicación cliente y servidor desconectadas de internet: Funcionando OK la subida de los archivos. (OK)
 
-	-Servidor inaccesible desde el inicio: Se incia la appCliente, ésta lee las propiedades desde (.json local). Funcionando OK.  
+	-Servidor inaccesible desde el inicio: Se incia la appCliente, ésta lee las propiedades desde (.json local). Funcionando OK.  (OK)
 
-	-Servidor se desconecta luego de iniciar aplicación y antes de obtener fallas informadas: Al intentar obtener fallas informadas se muestra mensaje de error de servidor offline. Funcionando OK.
+	-Servidor se desconecta luego de iniciar aplicación y antes de obtener fallas informadas: Al intentar obtener fallas informadas se muestra mensaje de error de servidor offline. Funcionando OK. (OK)
 
-	-Servidor se desconecta luego de obtener fallas informadas, capturar una y antes de intentar subir una falla accediendo a "Subir Falla": En este caso, al seleccionar la falla informada, no se muestra ningun mensaje que indique que el servidor esta offline y no es atajado en el thread-subida_fallas la excepción "ConnectionError". AGREGADO CORRECTAMENTE MENSAJE! 
+	-Servidor se desconecta luego de iniciar aplicación y antes de obtener fallas informadas: Al intentar obtener fallas informadas se muestra mensaje de error de servidor offline. Además, se vuelve a levantar el servidor on la appCliente ejecutándose, pidiéndose nuevamente las fallas informadas al servidor. Funcionando OK. (Probar)
+
+	-Servidor se desconecta luego de obtener fallas informadas, capturar una y antes de intentar subir una falla accediendo a "Subir Falla": En este caso, al seleccionar la falla informada, no se muestra ningun mensaje que indique que el servidor esta offline y no es atajado en el thread-subida_fallas la excepción "ConnectionError". AGREGADO CORRECTAMENTE MENSAJE! (OK)
+
+	- Idem paso anterior pero levantando el servidor después del mensaje de error e intentado subir nuevamenta la falla informada. Falla subida con éxito. (PROBAR)
 
 
 CASOS DE DESCONEXIÓN CON FALLAS CONFIRMADAS -->
 
-	- Se inicia la aplicación y el servidor se desconecta antes de acceder a "Subir falla": Funciona OK. Se muestra mensaje de ERROR indicando que no se cuenta con conexion al servidor.
+	- Se inicia la aplicación y el servidor se desconecta antes de acceder a "Subir falla": Funciona OK. Se muestra mensaje de ERROR indicando que no se cuenta con conexion al servidor. (OK)
 
-	- Se inicia la aplicacion sin conexión a Internet, se captura una falla y se intenta subir al servidor: La subida desde appCliente --> appWeb funciona bien, solo que en el campo "Dirección" hay que el string que se muestra cuando no se puede computar la misma por falta de conexión a Internet, ya que aparece: "No tenemos como obtenerlo!!! - -11" 
+	- Idem anterior pero levantando servidor para volver a subir a las fallas. Falla subida con éxito. (PROBAR)
+
+	- Se inicia la aplicacion (sin conexión a Internet), se captura una falla e intenta subir al servidor: La subida desde appCliente --> appWeb funciona bien, sólo que en el campo "Dirección" hay que el string que se muestra cuando no se puede computar la misma por falta de conexión a Internet, ya que aparece: "No tenemos como obtenerlo!!! - -11". (OK)
 
 	- Se intenta almacenar una captura Confirmada en disco sin conexión a Internet: Se almacena correctamente y puede subirse luego. Funciona OK.(RECO_PRUEBA.rec).
 
